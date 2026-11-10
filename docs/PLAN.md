@@ -2,7 +2,9 @@
 
 - 시작일: 2026-11-09
 - 대상 기능: F-01 (F-11은 자리만)
-- 상태: 진행 중 (사용자 검토 → 구현 허락 대기, `AGENTS.md` 3.1)
+- 상태: 진행 중 (구현 중)
+- 브랜치: plan/2026-11-09_skeleton-login
+- PR: (계획을 끝낼 때 링크)
 
 ## 목표
 - `frontend/`(Next.js)와 `backend/`(FastAPI) 프로젝트를 만들고, `AGENTS.md` 5.2의 검사 9개(백엔드 4, 프론트 5)가 모두 실행·통과하는 상태를 만든다.
@@ -23,7 +25,7 @@
 - `.env.sample`을 뺀 `.env*` 파일은 읽지도 고치지도 않는다. 값이 필요하면 사용자에게 요청한다 (`AGENTS.md` 4.3).
 - 테스트에서 원격 Supabase와 카카오를 호출하지 않는다 (`AGENTS.md` 5.4).
 - 원격 Supabase에 마이그레이션을 적용하기 전에 사용자 확인을 받는다 (`AGENTS.md` 3.2).
-- 커밋은 사용자가 요청할 때만 한다.
+- Git 흐름은 `AGENTS.md` 3.8: 이 계획의 브랜치에서 단계별로 커밋·푸시하고, 끝나면 PR → 사용자 확인 → 머지.
 
 ## 설계 (이번 계획에서 정하는 것)
 
@@ -99,6 +101,8 @@
   - Next.js가 만든 `frontend/AGENTS.md`를 `AGENTS.md` 문서 지도에 추가.
 - 2026-11-10: 검수 추가 발견: lockfile을 pnpm 12로 다시 만들 때 pnpm이 `pnpm-workspace.yaml`에 공급망 정책 예외(`minimumReleaseAgeExclude`)를 자동으로 추가함. 대상: `next@16.4.6`(공개 약 5시간), `eslint-config-next@16.4.6`, `@vitejs/plugin-react@6.3.0`(공개 약 19시간). 예외를 지우고 공개 1일이 지난 `next@16.4.5`, `eslint-config-next@16.4.5`, `@vitejs/plugin-react@6.2.1`로 고정해 다시 설치. 프론트 검사 5개 재통과.
 - 2026-11-10: 발견: 3단계 진행 중(10:36) nvm Node 24 `bin/`에 Corepack의 `pnpm`·`pnpx` 바로가기가 생겨 사용자의 pnpm 12(`~/Library/pnpm`)를 가림. 프로젝트 밖 변경이라 되돌리기 전에 사용자 확인 필요.
+
+- 2026-11-10: 1~3단계와 문서를 `main`에 첫 커밋(`2e7ae93`)으로 올림 (브랜치 규칙 도입 전). 4단계부터 `plan/2026-11-09_skeleton-login` 브랜치에서 진행.
 
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
