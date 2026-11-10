@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Concept(BaseModel):
@@ -105,15 +105,18 @@ class Grading(BaseModel):
 
 class ConceptResult(BaseModel):
     concept_id: str
+    name: str | None = None
     score: float | None
     stage: str
-    misconception_ids: list[str]
+    deep_not_attempted: bool = False
+    misconception_ids: list[str] = Field(default_factory=list)
 
 
 class ReportInput(BaseModel):
     unit_score: float | None
-    unit_stage: str
+    unit_stage: str | None = None
     concepts: list[ConceptResult]
+    misconception_ids: list[str] = Field(default_factory=list)
 
 
 class ReportText(BaseModel):

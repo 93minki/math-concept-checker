@@ -71,6 +71,7 @@
 - 용도별로 다른 제공사를 고를 수 있게 할지, 하나로 통일할지
 
 ## 진행 메모
+- 2026-11-10: 사용자 승인: probe 범위(제공사마다 객관식 1문제 생성+검사, 서술형 채점 1회, 리포트 1회)로 실제 호출. 상한 `--max-cost-usd 0.50`으로 실행 예정.
 - 2026-11-10: 2~4단계 완료 (Codex) + Claude 검수. `google-genai` 3.0.0, `openai` 3.48.0, 프론트 `katex`. 백엔드 pytest 38.
   - 검수에서 고친 것: Codex가 `katex`를 0.16.22(2025-04)로 넣음 → `DESIGN.md` 수식 렌더링 시험에서 쓴 0.16.47로 맞춤. 검사 스크립트가 `\overparen`만 거부하는 것 확인.
   - 실제 호출 전 확인할 것 (8단계 첫 호출에서): Gemini `response_format`의 `schema_` 키(SDK TypedDict 이름)가 실제로 스키마로 전달되는지, Gemini `total_output_tokens`에 생각 토큰이 포함되는지(코드는 별도로 보고 더함 — `total_tokens`와 비교해 이중 계산 여부 확인).
