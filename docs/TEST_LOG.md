@@ -71,3 +71,17 @@
 - 원인 분류: 테스트 오류
 - 원인: 새 Supabase JS 의존성의 자체 키 형식 검사 코드(`GoTrueAdminApi.ts`, `FunctionsClient.ts`, `fetch.ts`)가 빌드 산출물에 포함되어 일반 문자열 검사에 걸림. 실제 키 값 노출 증거는 없음
 - 해결: 사용자 승인 후, 고유 가짜 secret을 E2E webServer 환경에 넣고 `.next` 전체에서 그 값이 없는지 검사. 라이브러리의 일반 문자열은 검사 대상에서 제외
+
+### 2026-11-10 — backend/app/ai/compare.py:probe --fake
+- 작업: PLAN 7단계 AI 제공사 비교 실행 명령, F-05·F-07·F-08
+- 증상: 평가 자료를 읽는 단계에서 `question.explanation`, `question.choices` 필수 필드 누락으로 Pydantic ValidationError
+- 원인 분류: 타입·데이터 형식
+- 원인: 승인된 고정 서술형 평가 자료는 생성용 `Question` 모델과 달리 해설·객관식 보기 필드를 생략했는데, 실행 명령이 그대로 `Question`으로 검증함
+- 해결: 평가 자료 로더에서 생략된 해설은 빈 문자열, 보기는 빈 목록으로 채운 뒤 `Question`으로 검증
+
+### 2026-11-10 — backend/tests/test_ai_compare.py:test_prompt_loading
+- 작업: AI 제공사 비교 계획, probe 후 프롬프트 v2 (F-05, F-07, F-08)
+- 증상: `assert prompt.version == "v1"` 실패 (실제 `v2`)
+- 원인 분류: 테스트 오류
+- 원인: 기본 프롬프트 버전을 의도적으로 v2로 바꿨는데 테스트가 v1을 고정값으로 확인하고 있었다
+- 해결: 기본값은 `PROMPT_VERSION`(v2)과 비교하고, v1도 명시하면 계속 불러와지는지 확인하도록 테스트를 바꿈 (이전 실행 재현용)

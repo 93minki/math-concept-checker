@@ -162,6 +162,7 @@
 - 프론트엔드 **Next.js**, 백엔드 **FastAPI (Python)**
 - **Supabase 클라우드**: 인증(Auth)과 데이터베이스(PostgreSQL)
 - 수식 렌더링 **KaTeX**
+- AI: OpenAI **`gpt-6.1-terra`** (문제 생성·검사·채점·리포트 모두)
 - 검사 도구: 백엔드 uv·Ruff·mypy·pytest, 프론트엔드 ESLint·TypeScript·Vitest·Playwright (5.2)
 - 근거는 `docs/DESIGN.md`. 나머지는 미정이다. 확정되면 `docs/DESIGN.md`에 결정과 근거를 적고 이 목록에 한 줄로 추가한다.
 
