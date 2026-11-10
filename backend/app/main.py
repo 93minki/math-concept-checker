@@ -13,6 +13,26 @@ from app.profiles import ProfilesRepository, get_profiles
 from app.settings import get_settings
 
 
+def configure_app_logging() -> logging.Logger:
+    """Send the app's INFO logs (AI call model, tokens, cost) to stderr.
+
+    Uvicorn only configures its own loggers, so without this the app's INFO
+    lines are dropped. Log lines carry IDs and counts only, never answer text.
+    """
+    app_logger = logging.getLogger("app")
+    app_logger.setLevel(logging.INFO)
+    if not app_logger.handlers:
+        handler = logging.StreamHandler()
+        handler.setFormatter(
+            logging.Formatter("%(levelname)s:     %(name)s - %(message)s")
+        )
+        app_logger.addHandler(handler)
+    return app_logger
+
+
+configure_app_logging()
+
+
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
     if get_settings().ai_mode == "fake":
