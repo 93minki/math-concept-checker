@@ -1,11 +1,13 @@
 import json
 import re
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import Protocol
 
 from pydantic import BaseModel
 
+from app.ai.hard import render_hard_conditions
 from app.ai.pricing import cost_usd
 from app.ai.prompts import Prompt, load_prompt
 from app.ai.providers.base import StructuredProvider, StructuredResult
@@ -139,11 +141,28 @@ def _record(
         hooks.record(entry)
 
 
+def _declared_hard_condition(question: Question) -> str:
+    if question.difficulty == "hard":
+        code = question.hard_condition or ""
+        reason = question.hard_condition_reason or ""
+        return f"`{code}` — {reason}"
+    return "없음 (일반 문제)"
+
+
 def _context(
-    concept: ConceptData, item: AssessmentItem, difficulty: str
+    concept: ConceptData,
+    item: AssessmentItem,
+    difficulty: str,
+    avoid_bodies: Sequence[str] = (),
 ) -> dict[str, str]:
     concept_name = next(c.name for c in concept.concepts if c.id == item.concept_id)
     related = [m for m in concept.misconceptions if item.concept_id in m.concept_ids]
+    if avoid_bodies:
+        existing_variants = "\n".join(
+            f"{index}. {body}" for index, body in enumerate(avoid_bodies, start=1)
+        )
+    else:
+        existing_variants = "없음"
     return {
         "standard_code": concept.standard_code,
         "standard_text": concept.standard_text,
@@ -163,6 +182,8 @@ def _context(
         "formal_terms": ", ".join(concept.terms.formal),
         "teaching_only_terms": ", ".join(concept.terms.teaching_only),
         "not_yet_learned_terms": ", ".join(concept.terms.not_yet_learned),
+        "hard_conditions": render_hard_conditions(item.level, difficulty),
+        "existing_variants": existing_variants,
     }
 
 
@@ -172,13 +193,14 @@ def generate_question(
     item_id: str,
     difficulty: str,
     *,
+    avoid_bodies: Sequence[str] = (),
     max_attempts: int = 3,
     hooks: CallHooks | None = None,
 ) -> GenerationOutcome:
     item = next((item for item in concept.assessment_items if item.id == item_id), None)
     if item is None or difficulty not in ("normal", "hard") or max_attempts < 1:
         raise ValueError("Invalid assessment item, difficulty, or attempt count")
-    context = _context(concept, item, difficulty)
+    context = _context(concept, item, difficulty, avoid_bodies)
     attempts: list[Attempt] = []
     for number in range(1, max_attempts + 1):
         prompt = load_prompt("generate_question", context)
@@ -203,6 +225,12 @@ def generate_question(
             choices=draft.choices,
             model_answer=draft.model_answer,
             rubric=draft.rubric,
+            # A normal question has no hard condition by definition; drop stray
+            # values instead of spending a retry on them.
+            hard_condition=draft.hard_condition if difficulty == "hard" else None,
+            hard_condition_reason=(
+                draft.hard_condition_reason if difficulty == "hard" else None
+            ),
         )
         entry["assembled_question"] = question.model_dump()
         checks = validate_question(question, concept)
@@ -213,7 +241,11 @@ def generate_question(
             continue
         review_prompt = load_prompt(
             "review_question",
-            {**context, "question_json": question.model_dump_json()},
+            {
+                **context,
+                "question_json": question.model_dump_json(),
+                "declared_hard_condition": _declared_hard_condition(question),
+            },
         )
         try:
             reviewed, review_entry = _invoke(
@@ -232,6 +264,8 @@ def generate_question(
             review_errors.append("conditions_sufficient: false")
         if not review.measures_intended_level:
             review_errors.append("measures_intended_level: false")
+        if not review.meets_hard_condition:
+            review_errors.append("meets_hard_condition: false")
         _record(hooks, review_entry, review_errors)
         attempts.append(Attempt(number, review_errors))
         if not review_errors:

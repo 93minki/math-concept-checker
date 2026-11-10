@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
 
+from app.ai.hard import HARD_CONDITIONS
 from app.ai.schemas import ConceptData, Question
 
 KATEX_SCRIPT = (
@@ -126,4 +127,22 @@ def validate_question(
             add("not_yet_learned", f"Term not yet learned: {term}")
     formulas = [match for value in texts for match in FORMULA.findall(value)]
     issues.extend((checker or KatexChecker()).check(formulas))
+
+    if question.difficulty == "hard":
+        allowed = {
+            condition.code for condition in HARD_CONDITIONS.get(question.level, ())
+        }
+        if (
+            question.hard_condition not in allowed
+            or not question.hard_condition_reason
+            or not question.hard_condition_reason.strip()
+        ):
+            add("hard_condition", "Invalid or missing hard condition declaration")
+    elif question.difficulty == "normal":
+        if (
+            question.hard_condition is not None
+            or question.hard_condition_reason is not None
+        ):
+            add("hard_condition", "Normal question must not declare hard condition")
+
     return issues

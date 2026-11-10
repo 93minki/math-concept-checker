@@ -84,6 +84,8 @@ class Question(BaseModel):
     choices: list[Choice]
     model_answer: str | None
     rubric: list[RubricElement]
+    hard_condition: str | None = None
+    hard_condition_reason: str | None = None
 
 
 class QuestionDraft(BaseModel):
@@ -92,12 +94,15 @@ class QuestionDraft(BaseModel):
     choices: list[Choice]
     model_answer: str | None
     rubric: list[RubricElement]
+    hard_condition: str | None
+    hard_condition_reason: str | None
 
 
 class Review(BaseModel):
     single_correct_answer: bool
     conditions_sufficient: bool
     measures_intended_level: bool
+    meets_hard_condition: bool
     issues: list[str]
 
 

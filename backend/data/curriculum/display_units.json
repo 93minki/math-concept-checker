@@ -1,0 +1,272 @@
+{
+  "_source": "docs/DESIGN.md 표시 단원 연결표 (사용자 승인 2026-11-09). 단원 23개(중1 8, 중2 8, 중3 7)",
+  "display_units": [
+    {
+      "grade": "중1",
+      "number": 1,
+      "name": "소인수분해",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수01-01",
+        "9수01-02"
+      ]
+    },
+    {
+      "grade": "중1",
+      "number": 2,
+      "name": "정수와 유리수",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수01-03",
+        "9수01-04",
+        "9수01-05"
+      ]
+    },
+    {
+      "grade": "중1",
+      "number": 3,
+      "name": "문자의 사용과 식",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수02-01",
+        "9수02-02",
+        "9수02-03",
+        "9수02-04"
+      ]
+    },
+    {
+      "grade": "중1",
+      "number": 4,
+      "name": "좌표평면과 그래프",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수02-05",
+        "9수02-06",
+        "9수02-07"
+      ]
+    },
+    {
+      "grade": "중1",
+      "number": 5,
+      "name": "기본 도형과 작도",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수03-01",
+        "9수03-02",
+        "9수03-03",
+        "9수03-04"
+      ]
+    },
+    {
+      "grade": "중1",
+      "number": 6,
+      "name": "평면도형의 성질",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수03-05",
+        "9수03-06"
+      ]
+    },
+    {
+      "grade": "중1",
+      "number": 7,
+      "name": "입체도형의 성질",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수03-07",
+        "9수03-08"
+      ]
+    },
+    {
+      "grade": "중1",
+      "number": 8,
+      "name": "자료의 정리와 해석",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수04-01",
+        "9수04-02",
+        "9수04-03",
+        "9수04-04"
+      ]
+    },
+    {
+      "grade": "중2",
+      "number": 1,
+      "name": "유리수와 순환소수",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수01-06"
+      ]
+    },
+    {
+      "grade": "중2",
+      "number": 2,
+      "name": "식의 계산",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수02-08",
+        "9수02-09",
+        "9수02-10"
+      ]
+    },
+    {
+      "grade": "중2",
+      "number": 3,
+      "name": "부등식과 연립방정식",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수02-11",
+        "9수02-12",
+        "9수02-13"
+      ]
+    },
+    {
+      "grade": "중2",
+      "number": 4,
+      "name": "일차함수와 그래프",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수02-14",
+        "9수02-15",
+        "9수02-16",
+        "9수02-17",
+        "9수02-18"
+      ]
+    },
+    {
+      "grade": "중2",
+      "number": 5,
+      "name": "삼각형의 성질",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수03-09",
+        "9수03-10"
+      ]
+    },
+    {
+      "grade": "중2",
+      "number": 6,
+      "name": "사각형의 성질",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수03-11"
+      ]
+    },
+    {
+      "grade": "중2",
+      "number": 7,
+      "name": "도형의 닮음과 피타고라스 정리",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수03-12",
+        "9수03-13",
+        "9수03-14",
+        "9수03-15"
+      ]
+    },
+    {
+      "grade": "중2",
+      "number": 8,
+      "name": "경우의 수와 확률",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수04-05",
+        "9수04-06"
+      ]
+    },
+    {
+      "grade": "중3",
+      "number": 1,
+      "name": "제곱근과 실수",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수01-07",
+        "9수01-08",
+        "9수01-09",
+        "9수01-10"
+      ]
+    },
+    {
+      "grade": "중3",
+      "number": 2,
+      "name": "다항식의 곱셈과 인수분해",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수02-19"
+      ]
+    },
+    {
+      "grade": "중3",
+      "number": 3,
+      "name": "이차방정식",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수02-20"
+      ]
+    },
+    {
+      "grade": "중3",
+      "number": 4,
+      "name": "이차함수와 그래프",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수02-21",
+        "9수02-22"
+      ]
+    },
+    {
+      "grade": "중3",
+      "number": 5,
+      "name": "삼각비",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수03-16",
+        "9수03-17"
+      ]
+    },
+    {
+      "grade": "중3",
+      "number": 6,
+      "name": "원의 성질",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수03-18",
+        "9수03-19"
+      ]
+    },
+    {
+      "grade": "중3",
+      "number": 7,
+      "name": "자료의 분포와 관계",
+      "publisher": "동아출판",
+      "aliases": [],
+      "standards": [
+        "9수04-07",
+        "9수04-08",
+        "9수04-09"
+      ]
+    }
+  ]
+}
