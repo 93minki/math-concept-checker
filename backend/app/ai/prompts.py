@@ -13,7 +13,12 @@ class Prompt:
     user: str
 
 
-def load_prompt(name: str, values: dict[str, str], version: str = "v1") -> Prompt:
+PROMPT_VERSION = "v2"
+
+
+def load_prompt(
+    name: str, values: dict[str, str], version: str = PROMPT_VERSION
+) -> Prompt:
     if not re.fullmatch(r"[a-z_]+", name) or not re.fullmatch(r"v\d+", version):
         raise ValueError("Invalid prompt name or version")
     source = (PROMPTS / version / f"{name}.md").read_text(encoding="utf-8")

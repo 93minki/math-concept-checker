@@ -44,6 +44,7 @@ class ConceptData(BaseModel):
     area: str
     topic: str
     display_unit: DisplayUnit
+    scope_note: str
     concepts: list[Concept]
     assessment_items: list[AssessmentItem]
     misconceptions: list[Misconception]

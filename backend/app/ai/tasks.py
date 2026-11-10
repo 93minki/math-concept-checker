@@ -150,6 +150,8 @@ def _context(
         "concept_id": item.concept_id,
         "concept_name": concept_name,
         "level": item.level,
+        "item_basis": item.basis,
+        "scope_note": concept.scope_note,
         "question_type": item.type,
         "difficulty": difficulty,
         "misconceptions": json.dumps(
@@ -321,6 +323,14 @@ def write_report(
             "grade": concept.display_unit.grade,
             "display_unit": concept.display_unit.name,
             "not_yet_learned_terms": ", ".join(concept.terms.not_yet_learned),
+            "misconceptions": json.dumps(
+                [
+                    {"id": m.id, "text": m.text}
+                    for m in concept.misconceptions
+                    if m.id in report_input.misconception_ids
+                ],
+                ensure_ascii=False,
+            ),
             "report_input_json": report_input.model_dump_json(),
         },
     )

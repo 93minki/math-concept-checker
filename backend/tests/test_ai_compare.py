@@ -7,7 +7,7 @@ import pytest
 from pydantic import BaseModel
 
 from app.ai.compare import FakeProvider, Recorder, load_fixture, make_summary, run
-from app.ai.prompts import load_prompt
+from app.ai.prompts import PROMPT_VERSION, load_prompt
 from app.ai.providers.base import StructuredResult
 from app.ai.schemas import Grading, Question, ReportText, Review, load_concept
 from app.ai.scoring import score_choice, score_written
@@ -37,7 +37,9 @@ def test_prompt_loading() -> None:
         "student_answer": "student",
     }
     prompt = load_prompt("grade_written", values)
-    assert prompt.version == "v1"
+    assert prompt.version == PROMPT_VERSION == "v2"
+    # Older versions stay loadable so earlier runs can be reproduced.
+    assert load_prompt("grade_written", values, version="v1").version == "v1"
     assert "<!--" not in prompt.system + prompt.user
     assert "{{" not in prompt.system + prompt.user
     assert "student" in prompt.user
