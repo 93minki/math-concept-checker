@@ -28,6 +28,7 @@ from app.diagnoses.schemas import (
     RubricRow,
     StandardLink,
 )
+from app.diagnoses.service import student_description
 from app.main import app
 from app.profiles import get_profiles
 
@@ -492,3 +493,17 @@ def test_answer_changed_during_aborted_report_returns_conflict(
     assert response.json()["detail"] == {"code": "answers_changed"}
     assert hard_id not in repo.grade_rows
     assert UUID(did) not in repo.report_rows
+
+
+@pytest.mark.parametrize(
+    ("raw", "shown"),
+    [
+        ("필수: 양변에 같은 수를 더한다", "양변에 같은 수를 더한다"),
+        ("필수 : 등호의 뜻", "등호의 뜻"),
+        ("(필수) 이유를 쓴다", "이유를 쓴다"),
+        ("[필수] 이유를 쓴다", "이유를 쓴다"),
+        ("등호 양쪽이 같다 (필수: 아님)", "등호 양쪽이 같다 (필수: 아님)"),
+    ],
+)
+def test_student_description_drops_required_label(raw: str, shown: str) -> None:
+    assert student_description(raw) == shown

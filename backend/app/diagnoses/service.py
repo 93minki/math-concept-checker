@@ -1,4 +1,5 @@
 import random
+import re
 from dataclasses import asdict
 from datetime import datetime
 from uuid import UUID
@@ -175,6 +176,17 @@ def payload(
     ]
 
 
+REQUIRED_PREFIX = re.compile(r"^\s*(?:\(필수\)|\[필수\]|필수\s*:)\s*")
+
+
+def student_description(description: str) -> str:
+    """Drop the "필수:" label some generated rubric texts start with.
+
+    Approved questions are immutable, so the label is removed when shown.
+    """
+    return REQUIRED_PREFIX.sub("", description, count=1)
+
+
 def result_data(
     repo: DiagnosesRepository, item: Item, question: Question, grade: GradingRow | None
 ) -> dict[str, object] | None:
@@ -199,7 +211,7 @@ def result_data(
         }
         result["elements"] = [
             {
-                "description": r.description,
+                "description": student_description(r.description),
                 "met": results[r.no].met,
                 "reason": results[r.no].reason,
             }

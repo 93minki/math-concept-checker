@@ -175,6 +175,8 @@
 - 2026-11-10: 2단계 완료 (Codex 마이그레이션, Opus 로컬 Postgres 17 확인): 제출·채점·2단계 출제/완료 한 번에, 잘못된 채점·2단계 문제 거부, 2단계 잠금·만료, 리포트 한 번만, 2단계 도중 중단 채점, 백엔드도 채점·리포트 수정·삭제 불가, 학생 자기 것 읽기만. 원격 적용은 5단계 뒤.
 - 2026-11-10: 3단계 완료 (Cursor 구현, Opus 검수). 개념 정렬을 "성취기준 → 개념 번호"로 고침 (지시서가 번호만 적어 여러 성취기준 단원에서 섞일 수 있었음).
 - 2026-11-10: 4·5단계 완료 (Codex 구현, Opus 검수). Codex 질문 2건: (1) `test_no_ai_import` 범위를 `selection.py`로 좁히고 "진단 시작은 AI 0회" 동작 테스트 추가, (2) 채점 중 답안이 바뀌는 경쟁 상태 → 아직 원격 미적용인 같은 마이그레이션에 `answer_updated_at` 비교 추가, 바뀌면 409 `answers_changed` (로컬 Postgres 17 확인). 검수에서 추가: 채점·리포트 실패 시 로그(`logger.exception`, 진단 ID만), `playwright.dev.config.ts` 백엔드 `AI_MODE=fake` (7단계 것을 앞당김: 실제 AI 호출 방지). pytest 110, Vitest 40. Codex 샌드박스 E2E 포트 실패 3번째 기록 → 지시서에 "E2E 실행 금지" 명시.
+- 2026-11-10: 원격 적용 (사용자). 원격 읽기 전용 조회: `gradings`·`reports` RLS 켜짐, 정책 select·authenticated, 권한 authenticated S / service_role S·I / anon 없음, 함수 4개 service_role만, 이전 2인자 제출 함수 삭제됨, `stage2_submitted_at` 있음.
+- 2026-11-10: 6·7단계 완료 (Codex 구현, Opus 검수·실행). 검사 9개 통과 (pytest 110, Vitest 46, Playwright 16), `test:e2e:dev` 3개 통과 (가짜 AI, 2단계 경로 포함). 검수에서 발견: 승인 문제 채점 요소 14개 중 10개가 "필수:"로 시작해 문제별 결과에 학생에게 보임 → 승인 문제는 못 고치므로 학생용 응답에서만 앞의 "필수:" 표시를 뗀다 (`student_description`, 테스트 5개). pytest 115.
 
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
