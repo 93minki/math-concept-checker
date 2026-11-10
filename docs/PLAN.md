@@ -116,6 +116,12 @@
   - 적용 후 읽기 전용 조회로 확인: RLS 켜짐, 정책 `profiles_select_own`(authenticated, `(select auth.uid()) = id`), 권한 anon 없음 / authenticated SELECT만 / service_role SELECT·INSERT·UPDATE.
   - "다른 사용자의 행을 읽을 수 없음"을 실제 계정 두 개로 확인하는 것은 가입 화면이 생긴 뒤 10단계 수동 확인에 포함한다.
 
+- 2026-11-10: 6단계 완료 (Codex) + Claude 검수. 이 프로젝트 토큰은 ES256 비대칭 서명(공개 JWKS 확인)이라 백엔드가 공개 키로 직접 검증한다. 테스트 29개(자체 EC 키, 가짜 저장소).
+  - 검수에서 고친 것: `get_profiles`가 요청마다 Supabase 클라이언트를 새로 만들던 것을 프로세스당 하나로 캐시.
+  - 검수에서 확인한 것: supabase-py 2.34.1이 새 Secret key(`sb_secret_`)로 동작함 (원격 `profiles` 읽기 전용 조회 1회, 값 출력 없음). 실행 중인 서버에서 `/health` 200, 토큰 없음·잘못된 토큰 401, CORS는 `http://localhost:3000`만 허용.
+  - 남은 위험: 실제 저장소(`SupabaseProfiles`)의 쓰기 경로(insert·update)는 자동 테스트가 없다 (원격 호출 금지). 10단계 수동 확인에서 가입 후 `profiles` 상태로 확인한다. JWKS를 못 받을 때도 401로 응답한다(503 아님).
+  - F-11 자리: `backend/app/profiles.py`의 `check_signup_requirements` (가입 완료 직전 호출).
+
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
 - 끝내지 못한 일:
