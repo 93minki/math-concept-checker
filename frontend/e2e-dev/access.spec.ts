@@ -2,7 +2,7 @@ import { expect, test, type APIRequestContext } from "@playwright/test";
 import { requiredEnv, tokenFor, unitName } from "./helpers";
 
 type Unit = { id: number; name: string };
-type Item = { id: number; question_type: "multiple_choice" | "written"; choices: { no: number }[] };
+type Item = { id: number; stage: number; question_type: "multiple_choice" | "written"; choices: { no: number }[] };
 type Diagnosis = { id: string; started_at: string; items: Item[] };
 
 const api = () => requiredEnv("NEXT_PUBLIC_API_BASE_URL").replace(/\/$/, "");
@@ -73,4 +73,38 @@ test("다른 계정의 진단과 문제 은행에 접근할 수 없다", async (
     const result = await a.client.from(table).select("*").limit(1);
     expect(result.error !== null || result.data?.length === 0).toBe(true);
   }
+  // B의 시험 진단을 완료해 실제 채점·리포트 행에 대한 접근 권한을 확인한다.
+  for (const item of diagnosis.items.filter(value => value.stage === 1)) {
+    const saved = await request.put(`${api()}/diagnoses/${diagnosis.id}/items/${item.id}/answer`, { headers: headers(b.accessToken), data: answerFor(item) });
+    expect(saved.status()).toBe(200);
+  }
+  const firstSubmit = await request.post(`${api()}/diagnoses/${diagnosis.id}/stages/1/submit`, { headers: headers(b.accessToken) });
+  expect(firstSubmit.status()).toBe(200);
+  const firstResult = await firstSubmit.json() as { status: "stage2" | "completed" };
+  let completedItems = diagnosis.items;
+  if (firstResult.status === "stage2") {
+    const stageTwo = await request.get(`${api()}/diagnoses/${diagnosis.id}`, { headers: headers(b.accessToken) });
+    expect(stageTwo.status()).toBe(200);
+    completedItems = (await stageTwo.json() as Diagnosis).items;
+    for (const item of completedItems.filter(value => value.stage === 2)) {
+      const saved = await request.put(`${api()}/diagnoses/${diagnosis.id}/items/${item.id}/answer`, { headers: headers(b.accessToken), data: answerFor(item) });
+      expect(saved.status()).toBe(200);
+    }
+    const secondSubmit = await request.post(`${api()}/diagnoses/${diagnosis.id}/stages/2/submit`, { headers: headers(b.accessToken) });
+    expect(secondSubmit.status()).toBe(200);
+    expect((await secondSubmit.json() as { status: string }).status).toBe("completed");
+  } else expect(firstResult.status).toBe("completed");
+  expect((await request.get(`${api()}/diagnoses/${diagnosis.id}/report`, { headers: headers(b.accessToken) })).status()).toBe(200);
+  expect((await request.get(`${api()}/diagnoses/${diagnosis.id}/report`, { headers: headers(a.accessToken) })).status()).toBe(404);
+  const otherGradings = await a.client.from("gradings").select("diagnosis_item_id").in("diagnosis_item_id", completedItems.map(item => item.id));
+  expect(otherGradings.error).toBeNull();
+  expect(otherGradings.data).toHaveLength(0);
+  const otherReports = await a.client.from("reports").select("diagnosis_id").eq("diagnosis_id", diagnosis.id);
+  expect(otherReports.error).toBeNull();
+  expect(otherReports.data).toHaveLength(0);
+  const gradingInsert = await a.client.from("gradings").insert({ diagnosis_item_id: first.id, user_id: b.userId, score: 1, passed: true });
+  expect(gradingInsert.error?.code).toBe("42501");
+  const reportInsert = await a.client.from("reports").insert({ diagnosis_id: diagnosis.id, user_id: b.userId, concepts: [], text: {}, ai_model: "fake", prompt_version: "v5" });
+  expect(reportInsert.error?.code).toBe("42501");
+
 });

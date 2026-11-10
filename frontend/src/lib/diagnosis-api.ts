@@ -4,7 +4,9 @@ import { createClient } from "@/lib/supabase/client";
 export type Unit = { id: number; grade: "중1" | "중2" | "중3"; number: number; name: string; publisher: string; aliases: string[]; status: "full" | "partial" | "unavailable"; in_progress_diagnosis_id: string | null };
 export type Answer = { selected_choice: number | null; written_text: string | null; updated_at: string };
 export type AnswerInput = { selected_choice: number } | { written_text: string };
-export type Item = { id: number; stage: number; position: number; question_type: "multiple_choice" | "written"; body: string; choices: { no: number; text: string }[]; answer: Answer | null };
+export type ItemResult = { passed: boolean; explanation: string; correct_choice?: number; model_answer?: string | null; elements?: { description: string; met: boolean; reason: string }[] };
+export type Report = { unit_stage: string | null; concepts: { name: string; stage: string | null; not_measured: boolean; deep_not_attempted: boolean; deep_not_measured: boolean; misconceptions: string[] }[]; text: { not_understood: string; misconception_explanations: string; next_steps: string } };
+export type Item = { result?: ItemResult | null; id: number; stage: number; position: number; question_type: "multiple_choice" | "written"; body: string; choices: { no: number; text: string }[]; answer: Answer | null };
 export type Diagnosis = { id: string; status: "stage1" | "stage2" | "completed" | "aborted"; abort_reason: "expired" | "restarted" | null; started_at: string; stage1_submitted_at: string | null; unit: Pick<Unit, "id" | "grade" | "name" | "publisher" | "status">; items: Item[] };
 
 export class ApiError extends Error {
@@ -29,7 +31,8 @@ export const getUnits = () => request<Unit[]>("/units");
 export const startDiagnosis = (display_unit_id: number, restart: boolean) => request<{ diagnosis_id: string }>("/diagnoses", { method: "POST", body: JSON.stringify({ display_unit_id, restart }) });
 export const getDiagnosis = (id: string) => request<Diagnosis>(`/diagnoses/${encodeURIComponent(id)}`);
 export const saveAnswer = (id: string, itemId: number, answer: AnswerInput, keepalive = false) => request<Answer>(`/diagnoses/${encodeURIComponent(id)}/items/${itemId}/answer`, { method: "PUT", body: JSON.stringify(answer), keepalive });
-export const submitDiagnosis = (id: string) => request<{ stage1_submitted_at: string }>(`/diagnoses/${encodeURIComponent(id)}/stages/1/submit`, { method: "POST" });
+export const submitStage = (id: string, stage: 1 | 2) => request<{ status: "stage2" | "completed"; report_ready: boolean }>(`/diagnoses/${encodeURIComponent(id)}/stages/${stage}/submit`, { method: "POST" });
+export const getReport = (id: string) => request<Report>(`/diagnoses/${encodeURIComponent(id)}/report`);
 export function authRedirect(error: unknown, push: (path: string) => void): boolean {
   if (error instanceof ApiError && (error.status === 401 || error.status === 403)) { push(error.status === 401 ? "/login" : "/signup/complete"); return true; }
   return false;
