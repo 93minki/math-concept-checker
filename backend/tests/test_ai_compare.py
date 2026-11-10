@@ -1,3 +1,4 @@
+import html
 import json
 from decimal import Decimal
 from pathlib import Path
@@ -19,6 +20,7 @@ from app.ai.compare import (
 )
 from app.ai.prompts import PROMPT_VERSION, load_prompt
 from app.ai.providers.base import StructuredResult
+from app.ai.report_html import render_report_html
 from app.ai.schemas import (
     Grading,
     GradingDraft,
@@ -373,6 +375,15 @@ def test_fake_runs(mode: str, tmp_path: Path) -> None:
         assert generation["within_three_pass_rate"] == 1
         grading = cast(dict[str, object], data["grading"])
         assert grading["whole_agreement"] == 1
+    report_html = (out / "report.html").read_text(encoding="utf-8")
+    assert report_html.count('data-question-card="1"') == sum(
+        call["call_type"] == "generate" for call in calls
+    )
+    assert report_html.count('data-grade-row="1"') == sum(
+        call["call_type"] == "grade" for call in calls
+    )
+    assert "katex@0.16.47/dist/katex.min.js" in report_html
+    assert "katex@0.16.47/dist/contrib/auto-render.min.js" in report_html
 
 
 def test_budget_stops_before_next_call(tmp_path: Path) -> None:
@@ -381,6 +392,7 @@ def test_budget_stops_before_next_call(tmp_path: Path) -> None:
     assert summary["stopped_at_cost_limit"] is True
     assert len((out / "calls.jsonl").read_text().splitlines()) == 1
     assert (out / "summary.md").is_file()
+    assert (out / "report.html").is_file()
 
 
 class CapturingProvider(FakeProvider):
@@ -393,6 +405,96 @@ class CapturingProvider(FakeProvider):
     ) -> StructuredResult[T]:
         self.users.append(user)
         return super().generate_structured(system, user, schema)
+
+
+def test_report_html_escapes_untrusted_text() -> None:
+    payload = "<script>alert(1)</script>"
+    fixture = load_fixture()
+    calls: list[dict[str, object]] = [
+        {
+            "provider": "openai",
+            "call_type": "generate",
+            "target_id": "9수02-03-C4-이유설명",
+            "attempt": 1,
+            "parsed_success": True,
+            "error": None,
+            "validation": [],
+            "parsed_output": {
+                "body": payload,
+                "explanation": payload,
+                "choices": [
+                    {
+                        "no": 1,
+                        "text": payload,
+                        "is_correct": True,
+                        "misconception_id": payload,
+                    }
+                ],
+                "model_answer": payload,
+                "rubric": [
+                    {
+                        "no": 1,
+                        "description": payload,
+                        "points": 2,
+                        "required": True,
+                        "related_misconception_ids": [],
+                    }
+                ],
+            },
+        },
+        {
+            "provider": "openai",
+            "call_type": "review",
+            "target_id": "9수02-03-C4-이유설명",
+            "attempt": 1,
+            "parsed_success": True,
+            "error": None,
+            "validation": [payload],
+            "parsed_output": {"issues": [payload]},
+        },
+        {
+            "provider": "openai",
+            "call_type": "grade",
+            "target_id": "A01",
+            "attempt": 1,
+            "parsed_success": True,
+            "error": None,
+            "validation": [f"evidence_not_in_answer: {payload}"],
+            "detected_misconception_ids": [payload],
+            "parsed_output": {
+                "element_results": [{"no": 1, "met": False, "reason": payload}],
+            },
+        },
+        {
+            "provider": "openai",
+            "call_type": "report",
+            "target_id": "R1",
+            "attempt": 1,
+            "parsed_success": True,
+            "error": None,
+            "validation": [payload],
+            "parsed_output": {
+                "not_understood": payload,
+                "misconception_explanations": payload,
+                "next_steps": payload,
+            },
+        },
+    ]
+    page = render_report_html(
+        calls,
+        fixture,
+        {
+            "mode": "full",
+            "fake": True,
+            "total_cost_usd": "0",
+            "providers": {"openai": {"model": "gpt-6.1-terra", "total_cost_usd": "0"}},
+        },
+    )
+    assert payload not in page
+    assert page.count(html.escape(payload)) >= 8
+    assert page.count('data-question-card="1"') == 1
+    assert page.count('data-grade-row="1"') == 1
+    assert 'data-mismatch="1"' in page
 
 
 def test_report_prompt_hides_scores() -> None:

@@ -13,6 +13,7 @@ from app.ai import prompts
 from app.ai.providers.base import StructuredResult
 from app.ai.providers.gemini import GeminiProvider
 from app.ai.providers.openai import OpenAIProvider
+from app.ai.report_html import render_report_html
 from app.ai.schemas import (
     GradingDraft,
     Question,
@@ -43,6 +44,7 @@ FAKE_PROMPTS = Path(__file__).resolve().parents[2] / "tests" / "fixtures" / "ai_
 
 class AnswerCase(BaseModel):
     id: str
+    kind: str = ""
     text: str
     expected: dict[str, bool]
     expected_misconceptions: list[str]
@@ -665,6 +667,10 @@ def _run(
         providers, mode, recorder, generations, grades, reports, fixture, stopped, fake
     )
     write_summary(out, summary)
+    (out / "report.html").write_text(
+        render_report_html(recorder.entries, fixture, summary),
+        encoding="utf-8",
+    )
     return summary
 
 
@@ -687,7 +693,10 @@ def main() -> None:
     args = parser.parse_args()
     names = [name.strip() for name in args.providers.split(",")]
     summary = run(names, args.mode, args.max_cost_usd, args.out, args.fake)
-    print(f"결과: {args.out / 'summary.md'} | 비용: ${summary['total_cost_usd']}")
+    print(
+        f"결과: {args.out / 'summary.md'} | {args.out / 'report.html'} | "
+        f"비용: ${summary['total_cost_usd']}"
+    )
 
 
 if __name__ == "__main__":
