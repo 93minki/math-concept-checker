@@ -233,6 +233,43 @@
 - 쓰기를 모두 백엔드에서 하는 이유: 제출 시점·단계 진행·채점 결과 조작 방지 (`AGENTS.md` 4.3).
 - 정책 작성: 작업(select·insert·update·delete)마다 정책을 따로 두고 `to authenticated`, `(select auth.uid()) = user_id` 형태로 쓰며 `user_id`에 인덱스를 둔다. ([Supabase Row Level Security](https://supabase.com/docs/guides/database/postgres/row-level-security))
 
+## 실행 환경 분리 (사용자 결정, 2026-11-10)
+
+- Supabase 프로젝트를 2개로 나눈다 (방식 A).
+  - **개발·테스트용**: 지금 프로젝트 `math-concept-checker` (ref `nhbtyedxsjxiybtusnbt`, 서울). 회원가입 시험 등 개발 중 모든 원격 확인은 여기서 한다.
+  - **운영용**: 실제 배포 직전(M3 Docker 배포 또는 M4 학생 공개 준비)에 새로 만든다. 지금 만들지 않는 이유: 무료 요금제의 일주일 비활동 일시정지 때문에 관리 대상만 늘어난다 ([무료 프로젝트 일시정지](https://supabase.com/kb/faqs/platform/free-project-pausing)).
+- 무료 요금제는 활성 프로젝트 2개까지 쓸 수 있다 ([무료 Postgres 안내](https://supabase.com/kb/faqs/platform/free-postgres-for-side-projects)).
+- 마이그레이션은 개발 프로젝트에 먼저 적용해 확인한 뒤 운영에 적용한다. 원격 적용은 매번 사용자 확인 (`AGENTS.md` 3.2).
+- 개발·운영은 서로 다른 환경 변수 값을 쓴다 (`AGENTS.md` 4.1). 운영용 카카오 설정(Redirect URI)은 운영 프로젝트를 만들 때 따로 등록한다. 카카오 테스트 앱(앱당 최대 5개, 비즈 앱 필요)도 개발용으로 쓸 수 있다.
+
+## 인증 (F-01)
+
+`docs/plans/2026-11-09_skeleton-login.md`에서 구현하며 정한 것.
+
+### 흐름
+- 가입·로그인: 이메일 + 비밀번호, 카카오 (Supabase Auth). 두 방식 모두 `/auth/callback` → `/signup/complete` → 백엔드 `POST /signup/complete`를 거친다.
+- **F-11 자리**: 백엔드 `backend/app/profiles.py`의 `check_signup_requirements` (가입 완료 직전 호출, 지금은 그대로 통과). 연령 확인·보호자 동의는 여기에 넣는다.
+
+### 프론트엔드
+- `@supabase/ssr`로 서버·브라우저 클라이언트 ([Supabase SSR](https://supabase.com/docs/guides/auth/server-side/creating-a-client)). 서버 코드는 `getClaims()`로 확인하고 `getSession()`을 믿지 않는다.
+- 보호 규칙 두 겹
+  - `src/proxy.ts` (Next.js 16): 로그인 여부만. 응답에 `Cache-Control: private, no-store` (갱신된 세션 쿠키가 공유 캐시로 다른 사용자에게 가지 않게, 같은 문서).
+  - `src/app/(protected)/layout.tsx`: 자기 `profiles` 행(RLS)으로 가입 완료 여부 확인, 미완료면 `/signup/complete`.
+
+### 백엔드
+- 토큰 검증: 프로젝트가 ES256 비대칭 서명을 쓴다 (`/auth/v1/.well-known/jwks.json` 확인). PyJWT `PyJWKClient`로 공개 키를 받아 직접 검증한다. ES256만, `aud=authenticated`, `iss=<SUPABASE_URL>/auth/v1`, `exp`·`sub` 필수 ([JWT Signing Keys](https://supabase.com/docs/guides/auth/signing-keys)).
+- DB 쓰기: supabase-py + Secret key(`sb_secret_`). 클라이언트는 프로세스당 하나.
+- CORS: `FRONTEND_ORIGIN`만 허용, 끝 `/` 제거(`Settings.cors_origin`), 쿠키 미사용.
+
+### 카카오 로그인 설정
+- Supabase는 카카오에 항상 `account_email profile_image profile_nickname`을 요청한다 (2026-11-10 Supabase 인가 주소에서 확인). 카카오 동의항목에서 이 세 항목을 모두 켜지 않으면 KOE205 에러가 난다.
+- `account_email`은 비즈 앱에서만 켤 수 있다. 개인 개발자는 앱 아이콘 등록 + 본인인증 + 카카오비즈니스 약관 동의로 비즈 앱 전환이 가능하다 (사용자 확인).
+- 이메일·프로필 사진은 **선택 동의**로 둔다 (`AGENTS.md` 4.3 최소 수집). 동의한 값은 Supabase Auth 사용자 정보에 저장되므로 개인정보 처리방침에 포함해야 한다 (`docs/PROGRESS.md` 공개 전 필수 항목).
+
+### Supabase CLI
+- v3.1.0. `supabase link`는 DB 비밀번호 대신 로그인 토큰으로 임시 접속 역할을 만든다.
+- 원격 적용: `supabase db push --remote` (미리보기 `--dry-run`). 조회는 `supabase db query --remote --read-only`. 에이전트 실행에서 쓰기는 `--yes`가 필요하며, 사용자 승인 후에만 붙인다.
+
 ## 서술형 답안 입력
 - 일반 텍스트로 입력받는다. 수식 입력기와 손글씨 사진 업로드는 쓰지 않는다.
   - 근거: 사용자 결정 (2026-11-09)
