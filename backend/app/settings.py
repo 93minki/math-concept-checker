@@ -16,6 +16,15 @@ class Settings(BaseSettings):
     supabase_url: HttpUrl = Field(validation_alias="SUPABASE_URL")
     supabase_secret_key: SecretStr = Field(validation_alias="SUPABASE_SECRET_KEY")
     frontend_origin: AnyHttpUrl = Field(validation_alias="FRONTEND_ORIGIN")
+    gemini_api_key: SecretStr | None = Field(
+        default=None, validation_alias="GEMINI_API_KEY"
+    )
+    openai_api_key: SecretStr | None = Field(
+        default=None, validation_alias="OPENAI_API_KEY"
+    )
+    anthropic_api_key: SecretStr | None = Field(
+        default=None, validation_alias="ANTHROPIC_API_KEY"
+    )
 
     @property
     def cors_origin(self) -> str:

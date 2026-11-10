@@ -71,6 +71,16 @@
 - 용도별로 다른 제공사를 고를 수 있게 할지, 하나로 통일할지
 
 ## 진행 메모
+- 2026-11-10: 2~4단계 완료 (Codex) + Claude 검수. `google-genai` 3.0.0, `openai` 3.48.0, 프론트 `katex`. 백엔드 pytest 38.
+  - 검수에서 고친 것: Codex가 `katex`를 0.16.22(2025-04)로 넣음 → `DESIGN.md` 수식 렌더링 시험에서 쓴 0.16.47로 맞춤. 검사 스크립트가 `\overparen`만 거부하는 것 확인.
+  - 실제 호출 전 확인할 것 (8단계 첫 호출에서): Gemini `response_format`의 `schema_` 키(SDK TypedDict 이름)가 실제로 스키마로 전달되는지, Gemini `total_output_tokens`에 생각 토큰이 포함되는지(코드는 별도로 보고 더함 — `total_tokens`와 비교해 이중 계산 여부 확인).
+- 2026-11-10: 5단계 프롬프트 v1(`backend/prompts/v1/`)·6단계 채점 시험 재료(`backend/data/eval/grading_9수02-03.json`) 사용자 확인·승인. "해 보고 부족하면 보완" (사용자는 수학 전문가가 아님 → 기대 판정은 전문가 검토 대상으로 유지).
+- 2026-11-10: 1단계 조사 완료 → 사용자 결정: **중간 등급 모델로 먼저 시험**, 필요하면 나중에 상위 모델 (이유: 상위 모델은 비싸고, 프롬프트와 데이터를 잘 주면 중간 등급으로 충분할 수 있음).
+  - 시험 모델: `gemini-3.8-flash` (입력 $0.75 / 출력 $3.75, 2026-12-31까지 할인 → 2027-01-01부터 $1.50 / $7.50), `gpt-6.1-terra` (입력 $1 / 출력 $5). 100만 토큰당, 생각(추론) 토큰은 출력으로 청구. 근거: [Gemini 가격](https://ai.google.dev/gemini-api/docs/pricing), [gpt-6.1-terra](https://developers.openai.com/api/docs/models/gpt-6.1-terra).
+  - 구조화 출력: Gemini는 `client.interactions.create(..., response_format={"type": "text", "mime_type": "application/json", "schema": ...})` ([Gemini 구조화 출력](https://ai.google.dev/gemini-api/docs/structured-output)), OpenAI는 `client.responses.parse(..., text_format=PydanticModel)` ([OpenAI 구조화 출력](https://developers.openai.com/api/docs/guides/structured-outputs)).
+  - 생각 정도: Gemini `thinking_level`(3.8 Flash: low·medium·high, 기본 medium), OpenAI `reasoning.effort`(Terra: none~max, 기본 medium). 시험은 기본값.
+  - 비용 비교는 할인 종료 후 표준 가격으로 한다. Gemini 무료 등급은 입력이 제품 개선에 쓰이므로 실제 서비스는 유료 등급.
+  - 개념 데이터를 프로그램용 `backend/data/concepts/9수02-03.json`으로 옮김 (원본: `docs/concepts/9수02-03.md`). "아직 배우지 않은 용어" 목록 추가 (교육과정 용어 목록 + 표시 단원 순서, 에이전트 추론).
 - 2026-11-10: 사용자 승인 ("그대로 진행"). 시험 규모는 초안대로. 사용자 요청: 전체 실행 전에 제공사마다 **한 문제씩 먼저 실제 생성**해 비용을 추정하고, 그 추정으로 전체 실행 승인을 받는다.
 - 2026-11-10: 초안 작성. `.env.sample`에 AI 키 자리(GEMINI_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY) 추가 (승인 후 이 계획 브랜치의 첫 커밋에 포함). 사용자가 `backend/.env`에 키 입력 완료 (사용자 보고).
 
