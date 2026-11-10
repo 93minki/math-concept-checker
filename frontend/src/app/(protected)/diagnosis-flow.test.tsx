@@ -31,7 +31,8 @@ test('진행 중 충돌이면 계속 또는 새로 시작을 고른다', async (
   mocks.startDiagnosis.mockRejectedValueOnce(new ApiError(409, { code: 'in_progress', diagnosis_id: 'old' })).mockResolvedValueOnce({ diagnosis_id: 'new' });
   render(<UnitSelection />);
   fireEvent.click(await screen.findByRole('button', { name: '진단 시작하기' }));
-  expect(await screen.findByRole('dialog')).toBeTruthy();
+  const dialog = await screen.findByRole('dialog');
+  expect(screen.getByRole('heading', { name: '1. 문자와 식' }).closest('article')?.contains(dialog)).toBe(true);
   fireEvent.click(screen.getByRole('button', { name: '새로 시작하기' }));
   await waitFor(() => expect(mocks.startDiagnosis).toHaveBeenCalledWith(1, true));
   expect(mocks.push).toHaveBeenCalledWith('/diagnoses/new');

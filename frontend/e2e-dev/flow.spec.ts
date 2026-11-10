@@ -13,6 +13,7 @@ async function start(page: Page, expectConflict = false) {
   if (response.status() === 409) {
     const dialog = page.getByRole("dialog", { name: "진행 중인 진단" });
     await expect(dialog).toBeVisible();
+    await expect(dialog).toBeInViewport();
     await dialog.getByRole("button", { name: "새로 시작하기" }).click();
   } else {
     expect(response.status()).toBe(201);
