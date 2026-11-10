@@ -84,3 +84,11 @@ test("로그아웃 실패 시 쉬운 안내를 보여 준다", async () => {
   fireEvent.click(screen.getByRole("button", { name: "로그아웃" }));
   expect(await screen.findByRole("alert")).toHaveProperty("textContent", "로그아웃하지 못했어요. 다시 시도해 주세요.");
 });
+
+test.each([
+  ["로그인", () => <LoginPage />],
+  ["회원가입", () => <SignupPage />],
+])("%s 폼은 POST라서 기본 전송이 일어나도 비밀번호가 주소에 붙지 않는다", (_, page) => {
+  const { container } = render(page());
+  expect(container.querySelector("form")?.getAttribute("method")).toBe("post");
+});
