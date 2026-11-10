@@ -5,7 +5,7 @@
 - 상태: 완료
 - 이슈: #11 (https://github.com/93minki/math-concept-checker/issues/11)
 - 브랜치: plan/2026-11-10_grading-report
-- PR: (계획을 끝낼 때 링크)
+- PR: #12 (https://github.com/93minki/math-concept-checker/pull/12)
 - 마일스톤: M2 문제 은행·진단 (F-07), M3 리포트·기록 (F-08)
 
 ## 목표
