@@ -99,3 +99,17 @@
 - 원인 분류: 환경·설정
 - 원인: 실행 샌드박스가 테스트 서버의 포트 바인딩을 거부함.
 - 해결: Codex 샌드박스 밖(Opus 실행 환경)에서 `pnpm test:e2e` 재실행, 10개 통과 (2026-11-10). 코드 문제 아님. 위임 지시서에 "E2E는 샌드박스에서 포트를 열 수 없으면 Opus가 실행"을 적는다.
+
+### 2026-11-10 — frontend/src/app/(protected)/diagnosis-flow.test.tsx:답안 제출·중단 진단
+- 작업: PLAN #9 4~6단계, F-04·F-06
+- 증상: 답을 입력해도 제출 버튼이 비활성이고 중단된 진단의 라디오 disabled 속성 검사가 실패함
+- 원인 분류: 테스트 오류
+- 원인: router 가짜가 매 렌더마다 새 객체를 반환해 진단을 다시 불러오며 답을 초기화했고, 라디오는 상위 fieldset의 disabled를 상속하므로 자신의 disabled 속성만 확인해서는 실제 비활성 상태가 나타나지 않음.
+- 해결: 안정적인 router 가짜를 반환하고 상속된 비활성 상태를 :disabled로 확인.
+
+### 2026-11-10 — frontend Playwright webServer 시작
+- 작업: PLAN #9 4~6단계, F-04·F-06
+- 증상: `pnpm test:e2e`가 `listen EPERM: operation not permitted 0.0.0.0:3000`으로 서버 시작 전 중단됨.
+- 원인 분류: 환경·설정
+- 원인: 현재 샌드박스가 Playwright의 Next.js 서버가 포트 3000을 열지 못하게 막음.
+- 해결: Codex 샌드박스 밖(Opus 실행 환경)에서 `pnpm test:e2e` 재실행, 12개 통과 (2026-11-10). 코드 문제 아님 (2026-11-09 기록과 같은 원인 반복).
