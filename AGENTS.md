@@ -167,6 +167,9 @@
 
 ### 4.3 보안·데이터
 - 비밀값(AI API 키, Supabase 키 등)은 환경 변수로만 다루고 저장소에 넣지 않는다.
+- **가짜 값이라도 실제 키처럼 생긴 값을 저장소에 넣지 않는다.** (2026-11-10, GitGuardian이 테스트용 가짜 값 `sb_secret_e2e_canary_...`를 비밀값으로 탐지한 일로 추가)
+  - 테스트에 비밀값 형태가 필요하면 실행할 때 생성한다 (예: `frontend/e2e/secret-canary.ts`). 문서·샘플의 예시는 `sb_secret_REPLACE_ME`처럼 누가 봐도 자리표시인 값만 쓴다.
+  - 커밋 전에 스테이징한 변경에서 비밀값 형태(`sb_secret_`, `sb_publishable_` 뒤 긴 문자열, `eyJ`로 시작하는 긴 문자열 등)를 검사한다.
 - **에이전트는 실제 환경 변수 파일을 절대 읽거나 고치지 않는다.** (사용자 지시, 2026-11-10)
   - 대상: `.env`, `.env.local`, `frontend/.env.local`, `backend/.env` 등 `.env.sample`을 뺀 모든 `.env*` 파일
   - 금지: 열기(`cat`, `head`, `grep`, 편집기, 읽기 도구 등), 수정·생성·삭제·복사, 값 출력(`printenv`, `echo $VAR` 등으로 비밀값 표시)

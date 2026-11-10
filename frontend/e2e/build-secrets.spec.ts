@@ -1,11 +1,11 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { expect, test } from "@playwright/test";
-import { SECRET_CANARY } from "./secret-canary";
+import { secretCanary } from "./secret-canary";
 
 // Supabase JS ships these generic key-name/prefix strings in its own source.
 // Scan every build artifact for the unique fake secret passed to webServer instead.
-const forbiddenStrings = [SECRET_CANARY] as const;
+const forbiddenStrings = [secretCanary()] as const;
 
 function isEnvFile(filePath: string): boolean {
   return path.basename(filePath).startsWith(".env");
