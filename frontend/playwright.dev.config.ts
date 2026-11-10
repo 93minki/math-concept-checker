@@ -8,6 +8,8 @@ for (const path of [".env.e2e", ".env.local"]) {
   }
 }
 
+process.env.NEXT_PUBLIC_API_BASE_URL = "http://localhost:8000";
+
 const required = [
   "E2E_USER_A_EMAIL", "E2E_USER_A_PASSWORD", "E2E_USER_B_EMAIL", "E2E_USER_B_PASSWORD",
   "NEXT_PUBLIC_SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", "NEXT_PUBLIC_API_BASE_URL",
@@ -23,7 +25,7 @@ export default defineConfig({
   use: { baseURL: "http://localhost:3000" },
   webServer: [
     { command: "uv run uvicorn app.main:app --port 8000", cwd: "../backend", url: "http://localhost:8000/health", reuseExistingServer: false, timeout: 180_000 },
-    { command: "pnpm build && pnpm start --port 3000", url: "http://localhost:3000/login", reuseExistingServer: false, timeout: 180_000 },
+    { command: "pnpm build && pnpm start --port 3000", url: "http://localhost:3000/login", reuseExistingServer: false, timeout: 180_000, env: { ...process.env, NEXT_PUBLIC_API_BASE_URL: "http://localhost:8000" } },
   ],
   projects: [
     { name: "desktop", testMatch: /flow\.spec\.ts/, use: { browserName: "chromium", viewport: { width: 1280, height: 800 } } },

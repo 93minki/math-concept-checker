@@ -22,7 +22,7 @@ class ConfiguredCORSMiddleware(CORSMiddleware):
     def __init__(self, app: ASGIApp) -> None:
         super().__init__(
             app,
-            allow_origins=[get_settings().cors_origin],
+            allow_origins=get_settings().cors_origins,
             allow_methods=["GET", "POST", "PUT"],
             allow_headers=["Authorization", "Content-Type"],
             allow_credentials=False,

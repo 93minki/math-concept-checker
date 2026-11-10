@@ -17,6 +17,7 @@ from app.settings import Settings, get_settings
 USER_ID = uuid4()
 ISSUER = "https://example.supabase.co/auth/v1"
 ORIGIN = "http://localhost:3000"
+LAN_ORIGIN = "http://192.0.2.10:3000"
 
 
 class FakeProfiles:
@@ -44,7 +45,7 @@ def client(
         _env_file=None,
         SUPABASE_URL="https://example.supabase.co",
         SUPABASE_SECRET_KEY="sb_secret_test-only",
-        FRONTEND_ORIGIN=ORIGIN,
+        FRONTEND_ORIGIN=f"{ORIGIN}, {LAN_ORIGIN}/",
     )
     private_key = ec.generate_private_key(ec.SECP256R1())
     jwk = json.loads(jwt.algorithms.ECAlgorithm.to_jwk(private_key.public_key()))
@@ -156,7 +157,7 @@ def test_me_and_complete_signup(
     assert completed.json() == {"id": str(USER_ID), "signup_status": "completed"}
 
 
-@pytest.mark.parametrize("origin", [ORIGIN, "https://other.invalid"])
+@pytest.mark.parametrize("origin", [ORIGIN, LAN_ORIGIN, "https://other.invalid"])
 def test_cors_preflight(
     client: tuple[TestClient, ec.EllipticCurvePrivateKey], origin: str
 ) -> None:
@@ -169,7 +170,7 @@ def test_cors_preflight(
             "Access-Control-Request-Headers": "Authorization",
         },
     )
-    if origin == ORIGIN:
-        assert response.headers["access-control-allow-origin"] == ORIGIN
+    if origin in (ORIGIN, LAN_ORIGIN):
+        assert response.headers["access-control-allow-origin"] == origin
     else:
         assert "access-control-allow-origin" not in response.headers

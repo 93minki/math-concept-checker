@@ -1,7 +1,15 @@
 from functools import lru_cache
 from pathlib import Path
 
-from pydantic import AnyHttpUrl, Field, HttpUrl, SecretStr, field_validator
+from pydantic import (
+    AnyHttpUrl,
+    Field,
+    HttpUrl,
+    SecretStr,
+    TypeAdapter,
+    ValidationError,
+    field_validator,
+)
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # backend/.env, resolved from this file so the server can start from any directory.
@@ -15,7 +23,7 @@ class Settings(BaseSettings):
 
     supabase_url: HttpUrl = Field(validation_alias="SUPABASE_URL")
     supabase_secret_key: SecretStr = Field(validation_alias="SUPABASE_SECRET_KEY")
-    frontend_origin: AnyHttpUrl = Field(validation_alias="FRONTEND_ORIGIN")
+    frontend_origin: str = Field(validation_alias="FRONTEND_ORIGIN")
     gemini_api_key: SecretStr | None = Field(
         default=None, validation_alias="GEMINI_API_KEY"
     )
@@ -27,9 +35,27 @@ class Settings(BaseSettings):
     )
 
     @property
-    def cors_origin(self) -> str:
-        """FRONTEND_ORIGIN as sent in the Origin header (no trailing slash)."""
-        return str(self.frontend_origin).rstrip("/")
+    def cors_origins(self) -> list[str]:
+        """Allowed origins without trailing slashes."""
+        return self.frontend_origin.split(",")
+
+    @field_validator("frontend_origin")
+    @classmethod
+    def validate_frontend_origins(cls, value: str) -> str:
+        adapter = TypeAdapter(AnyHttpUrl)
+        origins = value.split(",")
+        normalized: list[str] = []
+        for origin in origins:
+            origin = origin.strip()
+            if not origin:
+                raise ValueError("FRONTEND_ORIGIN contains an empty entry")
+            try:
+                normalized.append(str(adapter.validate_python(origin)).rstrip("/"))
+            except ValidationError:
+                raise ValueError(
+                    "FRONTEND_ORIGIN must contain HTTP or HTTPS URLs"
+                ) from None
+        return ",".join(normalized)
 
     @field_validator("supabase_url")
     @classmethod

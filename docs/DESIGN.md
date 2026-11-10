@@ -478,7 +478,18 @@
 ### 백엔드
 - 토큰 검증: 프로젝트가 ES256 비대칭 서명을 쓴다 (`/auth/v1/.well-known/jwks.json` 확인). PyJWT `PyJWKClient`로 공개 키를 받아 직접 검증한다. ES256만, `aud=authenticated`, `iss=<SUPABASE_URL>/auth/v1`, `exp`·`sub` 필수 ([JWT Signing Keys](https://supabase.com/docs/guides/auth/signing-keys)).
 - DB 쓰기: supabase-py + Secret key(`sb_secret_`). 클라이언트는 프로세스당 하나.
-- CORS: `FRONTEND_ORIGIN`만 허용, 끝 `/` 제거(`Settings.cors_origin`), 쿠키 미사용.
+- CORS: `FRONTEND_ORIGIN`에 적은 주소만 허용(쉼표로 여러 개, 각 끝 `/` 제거, `Settings.cors_origins`), 쿠키 미사용.
+
+### 개발 중 같은 와이파이의 폰에서 접속 (사용자 결정, 2026-11-10)
+- 개발용이다. 이메일 + 비밀번호 로그인만 대상이고 카카오 로그인은 뺀다 (사용자 지시). Supabase 설정은 바꾸지 않는다.
+- 막히던 곳과 설정
+  | 막히던 곳 | 설정 |
+  |---|---|
+  | Next.js 개발 서버가 `localhost` 밖에서 오는 개발 자원 요청을 막음 ([allowedDevOrigins](https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins)) | `frontend/.env.local`의 `DEV_ALLOWED_ORIGINS`에 PC IP (호스트 이름만) → `next.config.ts`가 `allowedDevOrigins`로 읽는다 |
+  | 프론트가 부르는 백엔드 주소 `localhost`는 폰 자신 | `NEXT_PUBLIC_API_BASE_URL=http://<PC IP>:8000` |
+  | 백엔드가 `127.0.0.1`에서만 받음 | 백엔드를 `--host 0.0.0.0`으로 실행 (같은 와이파이의 다른 기기에도 열린다) |
+  | CORS가 주소 하나만 허용 | `backend/.env`의 `FRONTEND_ORIGIN=http://localhost:3000,http://<PC IP>:3000` |
+- `pnpm test:e2e:dev`는 백엔드 주소를 `http://localhost:8000`으로 고정해 이 설정과 상관없이 돈다 (`frontend/playwright.dev.config.ts`).
 
 ### 카카오 로그인 설정
 - Supabase는 카카오에 항상 `account_email profile_image profile_nickname`을 요청한다 (2026-11-10 Supabase 인가 주소에서 확인). 카카오 동의항목에서 이 세 항목을 모두 켜지 않으면 KOE205 에러가 난다.
