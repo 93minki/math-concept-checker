@@ -43,3 +43,10 @@
 - 원인: pytest 실행 경로에 `backend/`가 없어 `app` 패키지를 찾지 못함
 - 해결: `backend/pyproject.toml`의 `[tool.pytest.ini_options]`에 `pythonpath = ["."]` 추가
 - 비고: Codex가 지시서의 "backend/ 밖 변경 금지" 때문에 기록을 생략했고, 검수 단계에서 Claude가 대신 기록했다. 다음 지시서부터 TEST_LOG 기록은 예외로 허용한다.
+
+### 2026-11-10 — backend/tests/test_settings.py:test_url_format
+- 작업: PLAN 4단계 백엔드 환경 변수 읽기, F-01 준비
+- 증상: `https://` 입력값 비노출 검사에서 Pydantic 오류 문서 URL의 같은 문자열까지 입력값으로 판정
+- 원인 분류: 테스트 오류
+- 원인: 오류 문서 링크에 포함되는 일반 문자열 `https://`를 비밀 입력값으로 사용해 검사 범위가 겹침
+- 해결: 문서 URL과 겹치지 않는 고유한 잘못된 URL(`https://bad host`)로 검사

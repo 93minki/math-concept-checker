@@ -3,6 +3,7 @@
 - 시작일: 2026-11-09
 - 대상 기능: F-01 (F-11은 자리만)
 - 상태: 진행 중 (구현 중)
+- 이슈: #1 (https://github.com/93minki/math-concept-checker/issues/1)
 - 브랜치: plan/2026-11-09_skeleton-login
 - PR: (계획을 끝낼 때 링크)
 
@@ -103,6 +104,13 @@
 - 2026-11-10: 발견: 3단계 진행 중(10:36) nvm Node 24 `bin/`에 Corepack의 `pnpm`·`pnpx` 바로가기가 생겨 사용자의 pnpm 12(`~/Library/pnpm`)를 가림. 프로젝트 밖 변경이라 되돌리기 전에 사용자 확인 필요.
 
 - 2026-11-10: 1~3단계와 문서를 `main`에 첫 커밋(`2e7ae93`)으로 올림 (브랜치 규칙 도입 전). 4단계부터 `plan/2026-11-09_skeleton-login` 브랜치에서 진행.
+
+- 2026-11-10: 이슈 #1 생성 (라벨 `plan`, `F-01`, `F-11`, 마일스톤 `M1 기반·로그인`). 계획 승인 → 이슈 → 이슈에서 브랜치 규칙은 다음 계획부터 적용.
+- 2026-11-10: 4단계 완료. 백엔드(Codex) `pydantic-settings` 설정·`python -m app.check_settings`, 프론트(Cursor) `src/lib/env.ts`·빌드 결과물 비밀 문자열 검사. Claude 검수에서 고친 것:
+  - 백엔드 `.env` 경로가 실행 위치 기준이라 저장소 루트에서 실행하면 `backend/.env`를 못 읽음 → `backend/` 기준 절대 경로로 변경
+  - `FRONTEND_ORIGIN`이 `http://localhost:3000/`처럼 끝에 `/`가 붙어 6단계 CORS가 모든 요청을 거부했을 문제 → `cors_origin`(끝 `/` 제거) 추가, 기존 테스트가 이 잘못된 동작을 고정하고 있어 수정
+  - 사용자의 실제 `backend/.env`, `frontend/.env.local` 모두 검증 통과 (값은 출력하지 않음)
+  - 참고: Playwright 웹 서버가 `pnpm`을 PATH에서 찾으므로 PATH에 `~/Library/pnpm/bin`이 있어야 한다 (사용자 터미널은 `~/.zshrc`로 설정됨)
 
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:

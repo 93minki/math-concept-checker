@@ -132,12 +132,19 @@
 
 
 ### 3.8 Git 작업 흐름 (사용자 결정, 2026-11-10)
-- `main`에 직접 커밋하지 않는다. 계획(`docs/PLAN.md`) 하나마다 브랜치 하나를 만든다.
-  - 브랜치 이름: `plan/YYYY-MM-DD_주제` (계획 시작일, `docs/plans/` 보관 파일 이름과 같은 주제)
-- 계획 브랜치 안에서는 단계를 마치고 검수(3.7, 5.3)를 통과할 때마다 커밋하고 원격에 푸시해도 된다.
-- 계획이 끝나면 GitHub에 `main`으로 가는 PR을 만든다. PR 본문: 대상 `F-xx`, 한 일, 검사 결과(5.2), 사용자가 수동으로 확인할 것.
-- PR은 **사용자 확인을 받은 뒤** `main`에 머지한다. 머지 후 브랜치는 정리한다.
+- `main`에 직접 커밋하지 않는다. 계획 하나는 다음 순서로 진행한다.
+  1. 에이전트가 새 `docs/PLAN.md` 초안을 쓰고 사용자에게 보여 준다. (아직 커밋하지 않는다)
+  2. **사용자가 검토하고 승인**한다. 승인 전에는 이슈·브랜치를 만들지 않고 구현도 하지 않는다.
+  3. 승인된 계획으로 GitHub 이슈를 만든다: 제목 `[PLAN] 주제`, 본문에 목표·대상 `F-xx`·단계 체크리스트. 라벨은 대상 기능(`F-xx`)과 `plan`, 마일스톤은 해당 진행 단계(아래).
+  4. 이슈에서 브랜치를 만들고, 승인된 `PLAN.md`를 그 브랜치의 첫 커밋으로 올린다. 브랜치 생성: `gh issue develop <이슈 번호> --name plan/YYYY-MM-DD_주제 --base main --checkout` ([gh issue develop](https://cli.github.com/manual/gh_issue_develop))
+     - 브랜치 이름: `plan/YYYY-MM-DD_주제` (계획 시작일, `docs/plans/` 보관 파일 이름과 같은 주제)
+  5. 계획 브랜치 안에서는 단계를 마치고 검수(3.7, 5.3)를 통과할 때마다 커밋하고 원격에 푸시해도 된다.
+  6. 계획이 끝나면 GitHub에 `main`으로 가는 PR을 만든다. PR 본문: `Closes #<이슈 번호>`, 대상 `F-xx`, 한 일, 검사 결과(5.2), 사용자가 수동으로 확인할 것. (`Closes`로 머지 때 이슈가 자동으로 닫힌다: [Linking a pull request to an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue))
+  7. PR은 **사용자 확인을 받은 뒤** `main`에 머지한다. 머지 후 브랜치는 정리한다.
 - 계획 종료 절차(`docs/plans/README.md`)의 문서 정리도 같은 브랜치에서 커밋해 PR에 포함한다.
+- 라벨과 마일스톤 (사용자 결정, 2026-11-10)
+  - 라벨: 기능 `F-01` ~ `F-11`, 계획 이슈 `plan`. 이슈·PR 하나에 여러 개 붙일 수 있다.
+  - 마일스톤 (진행 단계): `M1 기반·로그인`, `M2 문제 은행·진단`, `M3 리포트·기록`, `M4 학생 공개 준비`. 범위는 GitHub 마일스톤 설명에 적는다.
 
 ---
 
