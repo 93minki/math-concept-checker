@@ -5,15 +5,19 @@ from datetime import datetime
 from decimal import Decimal
 from pathlib import Path
 from typing import Literal, cast
+from unittest.mock import patch
 
 from pydantic import BaseModel
 
+from app.ai import prompts
 from app.ai.providers.base import StructuredResult
 from app.ai.providers.gemini import GeminiProvider
 from app.ai.providers.openai import OpenAIProvider
+from app.ai.report_html import render_report_html
 from app.ai.schemas import (
-    Grading,
+    GradingDraft,
     Question,
+    QuestionDraft,
     ReportInput,
     ReportText,
     Review,
@@ -35,10 +39,12 @@ EVAL_FILE = (
     Path(__file__).resolve().parents[2] / "data" / "eval" / "grading_9수02-03.json"
 )
 PROVIDER_MODELS = {"gemini": "gemini-3.8-flash", "openai": "gpt-6.1-terra"}
+FAKE_PROMPTS = Path(__file__).resolve().parents[2] / "tests" / "fixtures" / "ai_prompts"
 
 
 class AnswerCase(BaseModel):
     id: str
+    kind: str = ""
     text: str
     expected: dict[str, bool]
     expected_misconceptions: list[str]
@@ -80,7 +86,7 @@ class FakeProvider:
     def generate_structured[T: BaseModel](
         self, system: str, user: str, schema: type[T]
     ) -> StructuredResult[T]:
-        if schema is Question:
+        if schema is QuestionDraft:
             item_id = user.split("평가 항목 ID: ", 1)[1].splitlines()[0]
             difficulty = user.split("난이도: ", 1)[1].splitlines()[0]
             item = next(
@@ -128,16 +134,35 @@ class FakeProvider:
                     "issues": [],
                 }
             )
-        elif schema is Grading:
-            answer = user.split("## 학생 답안\n", 1)[1].split("\n", 1)[0]
-            case = next(case for case in self.fixture.answers if case.text == answer)
+        elif schema is GradingDraft:
+            case = next(
+                case
+                for case in sorted(
+                    self.fixture.answers, key=lambda item: len(item.text), reverse=True
+                )
+                if case.text in user
+            )
+            related_ids = {
+                identifier
+                for element in self.fixture.question.rubric
+                for identifier in element.related_misconception_ids
+            }
             parsed = schema.model_validate(
                 {
                     "element_results": [
                         {"no": int(number), "met": met, "reason": "가짜 판정"}
                         for number, met in case.expected.items()
                     ],
-                    "detected_misconception_ids": case.expected_misconceptions,
+                    "misconception_checks": [
+                        {
+                            "id": identifier,
+                            "present": identifier in case.expected_misconceptions,
+                            "evidence": case.text[:15]
+                            if identifier in case.expected_misconceptions
+                            else "",
+                        }
+                        for identifier in sorted(related_ids)
+                    ],
                 }
             )
         elif schema is ReportText:
@@ -184,6 +209,95 @@ class Recorder(CallHooks):
 
 def _average(values: list[float]) -> float | None:
     return round(sum(values) / len(values), 9) if values else None
+
+
+def misconception_criteria(
+    grades: list[tuple[str, GradedAnswer]], fixture: EvalFixture
+) -> dict[str, object]:
+    by_id: dict[str, list[GradedAnswer]] = defaultdict(list)
+    for answer_id, result in grades:
+        by_id[answer_id].append(result)
+
+    a05 = by_id["A05"]
+    a05_hits = sum("M2" in result.grading.detected_misconception_ids for result in a05)
+    baseline = [
+        case
+        for case in fixture.answers
+        if int(case.id[1:]) <= 10 and not case.expected_misconceptions
+    ]
+    baseline_runs = [result for case in baseline for result in by_id[case.id]]
+    false_positives = sum(
+        bool(result.grading.detected_misconception_ids) for result in baseline_runs
+    )
+    preserved = [
+        ("A03", "M3"),
+        ("A08", "M6"),
+    ]
+    preserved_runs = [
+        (misconception_id, result)
+        for answer_id, misconception_id in preserved
+        for result in by_id[answer_id]
+    ]
+    preserved_hits = sum(
+        misconception_id in result.grading.detected_misconception_ids
+        for misconception_id, result in preserved_runs
+    )
+    additional = [case for case in fixture.answers if int(case.id[1:]) >= 11]
+    extra_expected = sum(len(case.expected_misconceptions) * 3 for case in additional)
+    extra_evaluated = sum(
+        len(by_id[case.id]) * len(case.expected_misconceptions) for case in additional
+    )
+    extra_hits = sum(
+        misconception_id in result.grading.detected_misconception_ids
+        for case in additional
+        for result in by_id[case.id]
+        for misconception_id in case.expected_misconceptions
+    )
+    rejected = sum(
+        issue.code == "evidence_not_in_answer"
+        for _, result in grades
+        for issue in result.issues
+    )
+    return {
+        "a05_m2": {
+            "detected": a05_hits,
+            "evaluated": len(a05),
+            "target": 3,
+            "status": "미평가"
+            if not a05
+            else "통과"
+            if len(a05) == 3 and a05_hits == 3
+            else "미달",
+        },
+        "false_positive": {
+            "count": false_positives,
+            "evaluated": len(baseline_runs),
+            "target_evaluated": len(baseline) * 3,
+            "status": "미평가"
+            if not baseline_runs
+            else "통과"
+            if len(baseline_runs) == len(baseline) * 3 and false_positives == 0
+            else "미달",
+        },
+        "preserved_a03_a08": {
+            "detected": preserved_hits,
+            "evaluated": len(preserved_runs),
+            "target": 6,
+            "status": "미평가"
+            if not preserved_runs
+            else "통과"
+            if len(preserved_runs) == 6 and preserved_hits == 6
+            else "미달",
+        },
+        "additional_a11_plus": {
+            "detected": extra_hits,
+            "evaluated": extra_evaluated,
+            "expected": extra_expected,
+            "rate": extra_hits / extra_evaluated if extra_evaluated else None,
+            "status": "참고 지표" if additional else "자료 없음",
+        },
+        "evidence_rejected_count": rejected,
+    }
 
 
 def make_summary(
@@ -322,6 +436,7 @@ def make_summary(
                 "misconception_agreement": misconception_hits / len(grade)
                 if grade
                 else None,
+                "misconception_criteria": misconception_criteria(grade, fixture),
             },
             "report": {
                 "count": len(reports[name]),
@@ -342,11 +457,11 @@ def make_summary(
             data["full_cost_estimate_usd"] = {
                 "no_retries": 12 * averages["generate"]
                 + 12 * averages["review"]
-                + 30 * averages["grade"]
+                + len(fixture.answers) * 3 * averages["grade"]
                 + 3 * averages["report"],
                 "avg_1_5_attempts": 18 * averages["generate"]
                 + 18 * averages["review"]
-                + 30 * averages["grade"]
+                + len(fixture.answers) * 3 * averages["grade"]
                 + 3 * averages["report"],
             }
         by_provider[name] = data
@@ -397,6 +512,7 @@ def write_summary(out: Path, summary: dict[str, object]) -> None:
             f"전체 일치 {grading['whole_agreement']}",
             f"3회 일관성: {grading['three_run_consistency']}; "
             f"오개념 일치: {grading['misconception_agreement']}",
+            f"오개념 탐지 기준: {grading['misconception_criteria']}",
             f"리포트 코드 검사: {report['code_passed']}/{report['count']} "
             f"({report['code_pass_rate']})",
             "",
@@ -438,6 +554,21 @@ def run(
     max_cost: Decimal,
     out: Path,
     fake: bool,
+    skip_grading: bool = False,
+) -> dict[str, object]:
+    if fake and not (prompts.PROMPTS / "v3").is_dir():
+        with patch.object(prompts, "PROMPTS", FAKE_PROMPTS):
+            return _run(providers, mode, max_cost, out, fake, skip_grading)
+    return _run(providers, mode, max_cost, out, fake, skip_grading)
+
+
+def _run(
+    providers: list[str],
+    mode: Literal["probe", "full"],
+    max_cost: Decimal,
+    out: Path,
+    fake: bool,
+    skip_grading: bool = False,
 ) -> dict[str, object]:
     if not providers or any(name not in PROVIDER_MODELS for name in providers):
         raise ValueError("Providers must be gemini,openai")
@@ -446,8 +577,16 @@ def run(
     fixture = load_fixture()
     concept = load_concept("9수02-03")
     settings = get_settings()
-    expected_calls = len(providers) * (4 if mode == "probe" else 57)
-    maximum_calls = len(providers) * (4 if mode == "probe" else 105)
+    # skip_grading reruns only generation and reports (e.g. after a prompt
+    # change that does not touch grading).
+    full_grades = 0 if skip_grading else len(fixture.answers) * 3
+    probe_calls = 3 if skip_grading else 4
+    expected_calls = len(providers) * (
+        probe_calls if mode == "probe" else 27 + full_grades
+    )
+    maximum_calls = len(providers) * (
+        probe_calls if mode == "probe" else 75 + full_grades
+    )
     print(
         f"제공사: {','.join(providers)} | 모드: {mode} | "
         f"예상 호출: {expected_calls}~{maximum_calls} | 표준가 상한: ${max_cost}"
@@ -500,7 +639,13 @@ def run(
                         hooks=recorder,
                     )
                     generations[name].append(outcome)
-            answers = fixture.answers[:1] if mode == "probe" else fixture.answers
+            answers = (
+                []
+                if skip_grading
+                else fixture.answers[:1]
+                if mode == "probe"
+                else fixture.answers
+            )
             for case in answers:
                 for attempt in range(1 if mode == "probe" else 3):
                     try:
@@ -537,6 +682,10 @@ def run(
         providers, mode, recorder, generations, grades, reports, fixture, stopped, fake
     )
     write_summary(out, summary)
+    (out / "report.html").write_text(
+        render_report_html(recorder.entries, fixture, summary),
+        encoding="utf-8",
+    )
     return summary
 
 
@@ -549,6 +698,11 @@ def main() -> None:
     parser.add_argument("--max-cost-usd", type=Decimal, default=Decimal("10"))
     parser.add_argument("--fake", action="store_true")
     parser.add_argument(
+        "--skip-grading",
+        action="store_true",
+        help="Run only question generation and reports",
+    )
+    parser.add_argument(
         "--out",
         type=Path,
         default=ROOT
@@ -558,8 +712,13 @@ def main() -> None:
     )
     args = parser.parse_args()
     names = [name.strip() for name in args.providers.split(",")]
-    summary = run(names, args.mode, args.max_cost_usd, args.out, args.fake)
-    print(f"결과: {args.out / 'summary.md'} | 비용: ${summary['total_cost_usd']}")
+    summary = run(
+        names, args.mode, args.max_cost_usd, args.out, args.fake, args.skip_grading
+    )
+    print(
+        f"결과: {args.out / 'summary.md'} | {args.out / 'report.html'} | "
+        f"비용: ${summary['total_cost_usd']}"
+    )
 
 
 if __name__ == "__main__":

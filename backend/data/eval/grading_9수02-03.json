@@ -1,5 +1,5 @@
 {
-  "_status": "Claude 초안, 사용자 승인 (2026-11-10, 시험 기준으로 사용). 출처 없음 — 기대 판정은 수학 교육 전문가 검토가 필요하다.",
+  "_status": "Claude 초안, 사용자 승인 (2026-11-10, 시험 기준으로 사용). 출처 없음 — 기대 판정은 수학 교육 전문가 검토가 필요하다. A11~A15는 2026-11-10 프롬프트 v3 계획에서 추가 (오개념이 들어간 답안 보강), 사용자 승인 (2026-11-10).",
   "_purpose": "서술형 채점 비교 시험(AI 비교 계획 6단계). 두 제공사가 같은 고정 문항·답안을 채점하게 해 기대 판정과의 일치율과 3회 일관성을 잰다.",
   "question": {
     "assessment_item_id": "9수02-03-C4-이유설명",
@@ -15,21 +15,29 @@
         "description": "(가) 단계의 이유로, 등식의 양변에서 같은 수를 빼도 등식이 성립한다는 성질을 든다.",
         "points": 2,
         "required": true,
-        "related_misconception_ids": ["M2", "M3"]
+        "related_misconception_ids": [
+          "M2",
+          "M3"
+        ]
       },
       {
         "no": 2,
         "description": "(나) 단계의 이유로, 등식의 양변을 같은 수로 나누어도 등식이 성립한다는 성질을 든다.",
         "points": 2,
         "required": true,
-        "related_misconception_ids": ["M2", "M3"]
+        "related_misconception_ids": [
+          "M2",
+          "M3"
+        ]
       },
       {
         "no": 3,
         "description": "나누는 수가 0이 아니어야 한다는 조건을 언급한다.",
         "points": 1,
         "required": false,
-        "related_misconception_ids": ["M6"]
+        "related_misconception_ids": [
+          "M6"
+        ]
       }
     ]
   },
@@ -38,49 +46,81 @@
       "id": "A01",
       "kind": "완전한 답",
       "text": "(가)에서는 등식의 양변에서 같은 수 3을 빼도 등식이 성립하기 때문이다. (나)에서는 양변을 0이 아닌 같은 수 2로 나누어도 등식이 성립하기 때문이다.",
-      "expected": { "1": true, "2": true, "3": true },
+      "expected": {
+        "1": true,
+        "2": true,
+        "3": true
+      },
       "expected_misconceptions": []
     },
     {
       "id": "A02",
       "kind": "0 조건 빠짐",
       "text": "양변에서 똑같이 3을 빼도 등식은 그대로 성립하고, 양변을 똑같이 2로 나누어도 등식은 성립한다.",
-      "expected": { "1": true, "2": true, "3": false },
+      "expected": {
+        "1": true,
+        "2": true,
+        "3": false
+      },
       "expected_misconceptions": []
     },
     {
       "id": "A03",
       "kind": "이항 규칙만",
       "text": "3을 오른쪽으로 넘기면 -3이 되니까 2x = 8이 되고, 2를 오른쪽으로 넘기면 나누기가 되니까 x = 4이다.",
-      "expected": { "1": false, "2": false, "3": false },
-      "expected_misconceptions": ["M3"]
+      "expected": {
+        "1": false,
+        "2": false,
+        "3": false
+      },
+      "expected_misconceptions": [
+        "M3"
+      ]
     },
     {
       "id": "A04",
       "kind": "한 단계만 설명",
       "text": "(가) 양변에서 같은 수를 빼도 등식은 성립한다. (나) 계산하면 x = 4가 나온다.",
-      "expected": { "1": true, "2": false, "3": false },
+      "expected": {
+        "1": true,
+        "2": false,
+        "3": false
+      },
       "expected_misconceptions": []
     },
     {
       "id": "A05",
       "kind": "한쪽 변만 연산",
       "text": "(가) 왼쪽 2x + 3에서 3을 빼면 2x가 남으니까 2x = 8이다. (나) 양변을 2로 나누면 등식이 성립하므로 x = 4이다.",
-      "expected": { "1": false, "2": true, "3": false },
-      "expected_misconceptions": ["M2"]
+      "expected": {
+        "1": false,
+        "2": true,
+        "3": false
+      },
+      "expected_misconceptions": [
+        "M2"
+      ]
     },
     {
       "id": "A06",
       "kind": "답만",
       "text": "x = 4",
-      "expected": { "1": false, "2": false, "3": false },
+      "expected": {
+        "1": false,
+        "2": false,
+        "3": false
+      },
       "expected_misconceptions": []
     },
     {
       "id": "A07",
       "kind": "일반 성질만 나열",
       "text": "등식의 양변에 같은 수를 더하거나, 빼거나, 곱하거나, 나누어도 등식은 성립하기 때문이다.",
-      "expected": { "1": true, "2": true, "3": false },
+      "expected": {
+        "1": true,
+        "2": true,
+        "3": false
+      },
       "expected_misconceptions": [],
       "note": "단계와 연결하지 않고 성질만 나열. 요소 1·2를 충족으로 볼지 판단이 갈릴 수 있는 경계 사례 (전문가 검토 필요)."
     },
@@ -88,23 +128,109 @@
       "id": "A08",
       "kind": "0으로 나누기 오개념",
       "text": "(가) 양변에서 3을 빼도 등식이 성립한다. (나) 양변을 같은 수로 나누면 등식이 성립한다. 같은 수라면 0으로 나누어도 등식은 성립한다.",
-      "expected": { "1": true, "2": true, "3": false },
-      "expected_misconceptions": ["M6"]
+      "expected": {
+        "1": true,
+        "2": true,
+        "3": false
+      },
+      "expected_misconceptions": [
+        "M6"
+      ]
     },
     {
       "id": "A09",
       "kind": "무관한 답",
       "text": "잘 모르겠다.",
-      "expected": { "1": false, "2": false, "3": false },
+      "expected": {
+        "1": false,
+        "2": false,
+        "3": false
+      },
       "expected_misconceptions": []
     },
     {
       "id": "A10",
       "kind": "이유는 맞고 계산 실수",
       "text": "(가) 양변에서 3을 빼도 등식이 성립하므로 2x = 14이다. (나) 양변을 0이 아닌 2로 나누어도 등식이 성립하므로 x = 7이다.",
-      "expected": { "1": true, "2": true, "3": true },
+      "expected": {
+        "1": true,
+        "2": true,
+        "3": true
+      },
       "expected_misconceptions": [],
       "note": "채점 요소는 이유만 묻는다. 계산 실수를 요소 밖에서 감점하지 않는지 보는 사례."
+    },
+    {
+      "id": "A11",
+      "kind": "양변에 서로 다른 연산",
+      "text": "(가) 왼쪽에서는 3을 빼고 오른쪽에는 3을 더해도 균형이 맞으니까 2x = 8이다. (나) 양변을 2로 나누어도 등식이 성립하므로 x = 4이다.",
+      "expected": {
+        "1": false,
+        "2": true,
+        "3": false
+      },
+      "expected_misconceptions": [
+        "M2"
+      ],
+      "added": "2026-11-10 plan prompt-v3"
+    },
+    {
+      "id": "A12",
+      "kind": "이항 규칙만 (다른 표현)",
+      "text": "(가) +3을 이항하면 -3이 되어서 2x = 11 - 3 = 8이다. (나) 2를 이항하면 나누기 2가 되니까 x = 8 ÷ 2 = 4이다.",
+      "expected": {
+        "1": false,
+        "2": false,
+        "3": false
+      },
+      "expected_misconceptions": [
+        "M3"
+      ],
+      "added": "2026-11-10 plan prompt-v3"
+    },
+    {
+      "id": "A13",
+      "kind": "어떤 수로든 나누어도 된다",
+      "text": "(가) 양변에서 3을 빼도 등식이 성립한다. (나) 양변을 2로 나누어도 등식이 성립한다. 등식은 양변을 어떤 수로 나누어도 항상 성립하기 때문이다.",
+      "expected": {
+        "1": true,
+        "2": true,
+        "3": false
+      },
+      "expected_misconceptions": [
+        "M6"
+      ],
+      "added": "2026-11-10 plan prompt-v3",
+      "note": "'어떤 수로 나누어도 항상'은 0으로 나누는 것을 허용하는 진술로 보고 M6로 판정. 경계 사례 (전문가 검토 필요)."
+    },
+    {
+      "id": "A14",
+      "kind": "한쪽 변만 나눔",
+      "text": "(가) 양변에서 3을 빼면 2x = 8이다. (나) 2x를 2로 나누면 x만 남으니까 x = 4이다.",
+      "expected": {
+        "1": false,
+        "2": false,
+        "3": false
+      },
+      "expected_misconceptions": [
+        "M2"
+      ],
+      "added": "2026-11-10 plan prompt-v3",
+      "note": "(나)에서 왼쪽 2x만 나눈다고 설명. 오른쪽 8도 나눈다는 말이 없다. 2026-11-10 수정: 요소 ①도 미충족으로 변경. (가)에서 한 일과 결과(\"양변에서 3을 빼면 2x = 8이다\")만 쓰고 등식이 성립하는 이유(등식의 성질)는 쓰지 않았기 때문 (A04와 비교). v3 재시험 결과(GPT 3회 모두 미충족)를 본 뒤 에이전트가 재검토하고 사용자가 승인해 수정함. 전문가 검토 필요."
+    },
+    {
+      "id": "A15",
+      "kind": "한 단계는 성질, 한 단계는 이항 규칙",
+      "text": "(가) 등식의 양변에서 같은 수를 빼도 등식이 성립하므로 양변에서 3을 뺀다. (나) 곱하기 2를 오른쪽으로 넘기면 나누기 2로 바뀌는 규칙 때문이다.",
+      "expected": {
+        "1": true,
+        "2": false,
+        "3": false
+      },
+      "expected_misconceptions": [
+        "M3"
+      ],
+      "added": "2026-11-10 plan prompt-v3"
     }
   ],
   "report_inputs": [
@@ -142,7 +268,10 @@
           "deep_not_attempted": false
         }
       ],
-      "misconception_ids": ["M3", "M4"]
+      "misconception_ids": [
+        "M3",
+        "M4"
+      ]
     },
     {
       "id": "R2",
@@ -178,7 +307,9 @@
           "deep_not_attempted": false
         }
       ],
-      "misconception_ids": ["M6"]
+      "misconception_ids": [
+        "M6"
+      ]
     },
     {
       "id": "R3",

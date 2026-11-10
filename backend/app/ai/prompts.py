@@ -13,7 +13,8 @@ class Prompt:
     user: str
 
 
-PROMPT_VERSION = "v2"
+# v1/v2 stay archived; their output schemas are incompatible with current tasks.
+PROMPT_VERSION = "v4"
 
 
 def load_prompt(
