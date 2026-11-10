@@ -554,11 +554,12 @@ def run(
     max_cost: Decimal,
     out: Path,
     fake: bool,
+    skip_grading: bool = False,
 ) -> dict[str, object]:
     if fake and not (prompts.PROMPTS / "v3").is_dir():
         with patch.object(prompts, "PROMPTS", FAKE_PROMPTS):
-            return _run(providers, mode, max_cost, out, fake)
-    return _run(providers, mode, max_cost, out, fake)
+            return _run(providers, mode, max_cost, out, fake, skip_grading)
+    return _run(providers, mode, max_cost, out, fake, skip_grading)
 
 
 def _run(
@@ -567,6 +568,7 @@ def _run(
     max_cost: Decimal,
     out: Path,
     fake: bool,
+    skip_grading: bool = False,
 ) -> dict[str, object]:
     if not providers or any(name not in PROVIDER_MODELS for name in providers):
         raise ValueError("Providers must be gemini,openai")
@@ -575,9 +577,16 @@ def _run(
     fixture = load_fixture()
     concept = load_concept("9수02-03")
     settings = get_settings()
-    full_grades = len(fixture.answers) * 3
-    expected_calls = len(providers) * (4 if mode == "probe" else 27 + full_grades)
-    maximum_calls = len(providers) * (4 if mode == "probe" else 75 + full_grades)
+    # skip_grading reruns only generation and reports (e.g. after a prompt
+    # change that does not touch grading).
+    full_grades = 0 if skip_grading else len(fixture.answers) * 3
+    probe_calls = 3 if skip_grading else 4
+    expected_calls = len(providers) * (
+        probe_calls if mode == "probe" else 27 + full_grades
+    )
+    maximum_calls = len(providers) * (
+        probe_calls if mode == "probe" else 75 + full_grades
+    )
     print(
         f"제공사: {','.join(providers)} | 모드: {mode} | "
         f"예상 호출: {expected_calls}~{maximum_calls} | 표준가 상한: ${max_cost}"
@@ -630,7 +639,13 @@ def _run(
                         hooks=recorder,
                     )
                     generations[name].append(outcome)
-            answers = fixture.answers[:1] if mode == "probe" else fixture.answers
+            answers = (
+                []
+                if skip_grading
+                else fixture.answers[:1]
+                if mode == "probe"
+                else fixture.answers
+            )
             for case in answers:
                 for attempt in range(1 if mode == "probe" else 3):
                     try:
@@ -683,6 +698,11 @@ def main() -> None:
     parser.add_argument("--max-cost-usd", type=Decimal, default=Decimal("10"))
     parser.add_argument("--fake", action="store_true")
     parser.add_argument(
+        "--skip-grading",
+        action="store_true",
+        help="Run only question generation and reports",
+    )
+    parser.add_argument(
         "--out",
         type=Path,
         default=ROOT
@@ -692,7 +712,9 @@ def main() -> None:
     )
     args = parser.parse_args()
     names = [name.strip() for name in args.providers.split(",")]
-    summary = run(names, args.mode, args.max_cost_usd, args.out, args.fake)
+    summary = run(
+        names, args.mode, args.max_cost_usd, args.out, args.fake, args.skip_grading
+    )
     print(
         f"결과: {args.out / 'summary.md'} | {args.out / 'report.html'} | "
         f"비용: ${summary['total_cost_usd']}"

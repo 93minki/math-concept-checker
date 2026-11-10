@@ -64,7 +64,7 @@ def test_prompt_loading(monkeypatch: pytest.MonkeyPatch) -> None:
         "student_answer": "student",
     }
     prompt = load_prompt("grade_written", values)
-    assert prompt.version == PROMPT_VERSION == "v3"
+    assert prompt.version == PROMPT_VERSION == "v4"
     assert "<!--" not in prompt.system + prompt.user
     assert "{{" not in prompt.system + prompt.user
     assert "student" in prompt.user
@@ -306,10 +306,15 @@ def test_report_validation() -> None:
         issue.code
         for issue in validate_report(report, report_input, load_concept("9수02-03"))
     }
-    assert codes == {"not_yet_learned", "unknown_misconception", "unknown_concept"}
+    assert codes == {
+        "not_yet_learned",
+        "unknown_misconception",
+        "unknown_concept",
+        "report_internal_id",
+    }
     good = ReportText(
         not_understood="등식을 살펴보세요.",
-        misconception_explanations="M6일 수 있어요.",
+        misconception_explanations="0으로 나누어도 된다고 생각할 수 있어요.",
         next_steps="양변을 확인하세요.",
     )
     assert validate_report(good, report_input, load_concept("9수02-03")) == []
@@ -509,3 +514,35 @@ def test_report_prompt_hides_scores() -> None:
         assert concept.stage in sent
         if concept.score not in (None, 0.0, 1.0):
             assert str(concept.score) not in sent
+
+
+def test_report_flags_internal_ids() -> None:
+    fixture = load_fixture()
+    concept = load_concept("9수02-03")
+    report_input = fixture.report_inputs[0]
+    flagged = ReportText(
+        not_understood="등식의 뜻은 기본 이해 단계예요.",
+        misconception_explanations="M3: 이항을 규칙으로만 알 수 있어요.",
+        next_steps="x+3=7을 풀어 보세요.",
+    )
+    clean = flagged.model_copy(
+        update={"misconception_explanations": "이항을 규칙으로만 알 수 있어요."}
+    )
+    assert "report_internal_id" in {
+        issue.code for issue in validate_report(flagged, report_input, concept)
+    }
+    assert "report_internal_id" not in {
+        issue.code for issue in validate_report(clean, report_input, concept)
+    }
+
+
+def test_skip_grading_runs_only_generation_and_reports(tmp_path: Path) -> None:
+    run(["openai"], "full", Decimal("10"), tmp_path / "out", True, skip_grading=True)
+    calls = [
+        json.loads(line)
+        for line in (tmp_path / "out" / "calls.jsonl").read_text().splitlines()
+    ]
+    kinds = {call["call_type"] for call in calls}
+    assert "grade" not in kinds
+    assert {"generate", "review", "report"} <= kinds
+    assert (tmp_path / "out" / "report.html").exists()

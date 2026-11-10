@@ -342,6 +342,10 @@ def validate_report(
         ValidationIssue("unknown_concept", identifier)
         for identifier in set(re.findall(r"9수\d{2}-\d{2}-C\d+", text)) - allowed_c
     )
+    if re.search(r"(?<![A-Za-z0-9])M\d+(?![0-9])|9수\d{2}-\d{2}", text):
+        issues.append(
+            ValidationIssue("report_internal_id", "Internal id shown to students")
+        )
     if re.search(r"\d+\.\d+|\d+\s*%|\d+\s*점", text):
         issues.append(ValidationIssue("report_number", "Student-facing number"))
     return issues
