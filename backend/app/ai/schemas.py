@@ -86,6 +86,14 @@ class Question(BaseModel):
     rubric: list[RubricElement]
 
 
+class QuestionDraft(BaseModel):
+    body: str
+    explanation: str
+    choices: list[Choice]
+    model_answer: str | None
+    rubric: list[RubricElement]
+
+
 class Review(BaseModel):
     single_correct_answer: bool
     conditions_sufficient: bool
@@ -97,6 +105,17 @@ class ElementResult(BaseModel):
     no: int
     met: bool
     reason: str
+
+
+class MisconceptionCheck(BaseModel):
+    id: str
+    present: bool
+    evidence: str
+
+
+class GradingDraft(BaseModel):
+    element_results: list[ElementResult]
+    misconception_checks: list[MisconceptionCheck]
 
 
 class Grading(BaseModel):

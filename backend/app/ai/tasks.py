@@ -13,7 +13,9 @@ from app.ai.schemas import (
     AssessmentItem,
     ConceptData,
     Grading,
+    GradingDraft,
     Question,
+    QuestionDraft,
     ReportInput,
     ReportText,
     Review,
@@ -58,6 +60,7 @@ class GenerationOutcome:
 class GradedAnswer:
     grading: Grading
     score: Score
+    issues: list[ValidationIssue]
 
 
 @dataclass(frozen=True)
@@ -181,14 +184,27 @@ def generate_question(
         prompt = load_prompt("generate_question", context)
         try:
             generated, entry = _invoke(
-                provider, prompt, Question, hooks, "generate", item_id, number
+                provider, prompt, QuestionDraft, hooks, "generate", item_id, number
             )
         except BudgetExceeded:
             raise
         except Exception as exc:
             attempts.append(Attempt(number, [f"generate: {type(exc).__name__}"]))
             continue
-        question = generated.parsed
+        draft = generated.parsed
+        question = Question(
+            assessment_item_id=item.id,
+            concept_id=item.concept_id,
+            level=item.level,
+            type=item.type,
+            difficulty=difficulty,
+            body=draft.body,
+            explanation=draft.explanation,
+            choices=draft.choices,
+            model_answer=draft.model_answer,
+            rubric=draft.rubric,
+        )
+        entry["assembled_question"] = question.model_dump()
         checks = validate_question(question, concept)
         errors = [f"{issue.code}: {issue.message}" for issue in checks]
         _record(hooks, entry, errors)
@@ -256,13 +272,13 @@ def grade_written(
         },
     )
     result, entry = _invoke(
-        provider, prompt, Grading, hooks, "grade", target_id, attempt
+        provider, prompt, GradingDraft, hooks, "grade", target_id, attempt
     )
     allowed = {m.id for m in related}
     errors = [
-        identifier
-        for identifier in result.parsed.detected_misconception_ids
-        if identifier not in allowed
+        check.id
+        for check in result.parsed.misconception_checks
+        if check.id not in allowed
     ]
     if errors:
         _record(
@@ -271,13 +287,35 @@ def grade_written(
             [f"Unknown misconception: {identifier}" for identifier in errors],
         )
         raise ValueError("Grading contains unknown misconception")
+    normalized_answer = " ".join(answer.split())
+    issues = [
+        ValidationIssue("evidence_not_in_answer", check.id)
+        for check in result.parsed.misconception_checks
+        if check.present
+        and (
+            not check.evidence.strip()
+            or " ".join(check.evidence.split()) not in normalized_answer
+        )
+    ]
+    rejected = {issue.message for issue in issues}
+    grading = Grading(
+        element_results=result.parsed.element_results,
+        detected_misconception_ids=list(
+            dict.fromkeys(
+                check.id
+                for check in result.parsed.misconception_checks
+                if check.present and check.id not in rejected
+            )
+        ),
+    )
+    entry["detected_misconception_ids"] = grading.detected_misconception_ids
     try:
-        score = score_written(rubric, result.parsed)
+        score = score_written(rubric, grading)
     except ValueError as exc:
         _record(hooks, entry, [str(exc)])
         raise
-    _record(hooks, entry, [])
-    return GradedAnswer(result.parsed, score)
+    _record(hooks, entry, [f"{issue.code}: {issue.message}" for issue in issues])
+    return GradedAnswer(grading, score, issues)
 
 
 def validate_report(
@@ -304,6 +342,8 @@ def validate_report(
         ValidationIssue("unknown_concept", identifier)
         for identifier in set(re.findall(r"9수\d{2}-\d{2}-C\d+", text)) - allowed_c
     )
+    if re.search(r"\d+\.\d+|\d+\s*%|\d+\s*점", text):
+        issues.append(ValidationIssue("report_number", "Student-facing number"))
     return issues
 
 
@@ -331,7 +371,11 @@ def write_report(
                 ],
                 ensure_ascii=False,
             ),
-            "report_input_json": report_input.model_dump_json(),
+            # Scores stay in code; the model only sees stages, so it cannot
+            # print numbers to students (docs/SCORING.md section 5).
+            "report_input_json": report_input.model_dump_json(
+                exclude={"unit_score": True, "concepts": {"__all__": {"score"}}}
+            ),
         },
     )
     result, entry = _invoke(provider, prompt, ReportText, hooks, "report", target_id, 1)
