@@ -1,0 +1,36 @@
+# Environment files (never commit real values; .env.sample is the only tracked one)
+.env
+.env.*
+!.env.sample
+
+# OS / tools
+.DS_Store
+.herdr-web-ui/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+next-env.d.ts
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Supabase CLI local state
+supabase/.branches/
+supabase/.temp/
+
+# Agent task instructions (local only)
+.agent-tasks/
+
+# Local experiments (not part of the project)
+experiments/
