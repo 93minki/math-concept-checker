@@ -112,6 +112,10 @@
   - 사용자의 실제 `backend/.env`, `frontend/.env.local` 모두 검증 통과 (값은 출력하지 않음)
   - 참고: Playwright 웹 서버가 `pnpm`을 PATH에서 찾으므로 PATH에 `~/Library/pnpm/bin`이 있어야 한다 (사용자 터미널은 `~/.zshrc`로 설정됨)
 
+- 2026-11-10: 5단계 원격 적용 완료 (사용자 승인 후 `supabase db push --remote`). Supabase CLI v3.1.0은 DB 비밀번호 대신 로그인 토큰으로 임시 접속 역할을 만들어 접속한다 (`link` 때 비밀번호를 묻지 않음).
+  - 적용 후 읽기 전용 조회로 확인: RLS 켜짐, 정책 `profiles_select_own`(authenticated, `(select auth.uid()) = id`), 권한 anon 없음 / authenticated SELECT만 / service_role SELECT·INSERT·UPDATE.
+  - "다른 사용자의 행을 읽을 수 없음"을 실제 계정 두 개로 확인하는 것은 가입 화면이 생긴 뒤 10단계 수동 확인에 포함한다.
+
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
 - 끝내지 못한 일:
