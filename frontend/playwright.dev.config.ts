@@ -24,7 +24,8 @@ export default defineConfig({
   timeout: 180_000,
   use: { baseURL: "http://localhost:3000" },
   webServer: [
-    { command: "uv run uvicorn app.main:app --port 8000", cwd: "../backend", url: "http://localhost:8000/health", reuseExistingServer: false, timeout: 180_000 },
+    // AI_MODE=fake: this suite must never call the real AI (AGENTS.md 5.4).
+    { command: "uv run uvicorn app.main:app --port 8000", cwd: "../backend", url: "http://localhost:8000/health", reuseExistingServer: false, timeout: 180_000, env: { ...process.env, AI_MODE: "fake" } },
     { command: "pnpm build && pnpm start --port 3000", url: "http://localhost:3000/login", reuseExistingServer: false, timeout: 180_000, env: { ...process.env, NEXT_PUBLIC_API_BASE_URL: "http://localhost:8000" } },
   ],
   projects: [

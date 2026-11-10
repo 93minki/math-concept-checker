@@ -69,6 +69,20 @@ begin
   if not found then return 'not_found'; end if;
   if current_status <> 'stage1' then return 'not_in_progress'; end if;
   if submitted_at is not null then return 'already_submitted'; end if;
+  if jsonb_typeof(p_gradings) is distinct from 'array' then
+    raise exception 'gradings must be an array';
+  end if;
+  -- 채점에 사용한 답안이 잠금 이전에 변경됐다면 아무것도 저장하지 않는다.
+  if exists (
+    select 1 from jsonb_array_elements(p_gradings) as input(value)
+    left join public.answers as a
+      on a.diagnosis_item_id = (input.value->>'diagnosis_item_id')::bigint
+      and a.user_id = p_user_id
+    where a.updated_at is null
+      or input.value->>'answer_updated_at' is null
+      or a.updated_at is distinct from (input.value->>'answer_updated_at')::timestamptz
+  ) then return 'answers_changed'; end if;
+
   if exists (
     select 1 from public.diagnosis_items as i
     left join public.answers as a on a.diagnosis_item_id = i.id
@@ -76,9 +90,6 @@ begin
       and a.selected_choice is null and coalesce(btrim(a.written_text), '') = ''
   ) then return 'unanswered'; end if;
 
-  if jsonb_typeof(p_gradings) is distinct from 'array' then
-    raise exception 'gradings must be an array';
-  end if;
   if jsonb_array_length(p_gradings) <> (
     select count(*) from public.diagnosis_items where diagnosis_id = p_diagnosis_id and stage = 1
   ) or jsonb_array_length(p_gradings) <> (
@@ -150,6 +161,20 @@ begin
   where id = p_diagnosis_id and user_id = p_user_id for update;
   if not found then return 'not_found'; end if;
   if current_status <> 'stage2' then return 'not_in_progress'; end if;
+  if jsonb_typeof(p_gradings) is distinct from 'array' then
+    raise exception 'gradings must be an array';
+  end if;
+  -- 채점에 사용한 답안이 잠금 이전에 변경됐다면 아무것도 저장하지 않는다.
+  if exists (
+    select 1 from jsonb_array_elements(p_gradings) as input(value)
+    left join public.answers as a
+      on a.diagnosis_item_id = (input.value->>'diagnosis_item_id')::bigint
+      and a.user_id = p_user_id
+    where a.updated_at is null
+      or input.value->>'answer_updated_at' is null
+      or a.updated_at is distinct from (input.value->>'answer_updated_at')::timestamptz
+  ) then return 'answers_changed'; end if;
+
   if exists (
     select 1 from public.diagnosis_items as i
     left join public.answers as a on a.diagnosis_item_id = i.id
@@ -157,9 +182,6 @@ begin
       and a.selected_choice is null and coalesce(btrim(a.written_text), '') = ''
   ) then return 'unanswered'; end if;
 
-  if jsonb_typeof(p_gradings) is distinct from 'array' then
-    raise exception 'gradings must be an array';
-  end if;
   if jsonb_array_length(p_gradings) <> (
     select count(*) from public.diagnosis_items where diagnosis_id = p_diagnosis_id and stage = 2
   ) or jsonb_array_length(p_gradings) <> (
@@ -215,6 +237,17 @@ begin
   if jsonb_typeof(p_gradings) is distinct from 'array' then
     raise exception 'gradings must be an array';
   end if;
+  -- 채점에 사용한 답안이 잠금 이전에 변경됐다면 아무것도 저장하지 않는다.
+  if exists (
+    select 1 from jsonb_array_elements(p_gradings) as input(value)
+    left join public.answers as a
+      on a.diagnosis_item_id = (input.value->>'diagnosis_item_id')::bigint
+      and a.user_id = p_user_id
+    where a.updated_at is null
+      or input.value->>'answer_updated_at' is null
+      or a.updated_at is distinct from (input.value->>'answer_updated_at')::timestamptz
+  ) then return 'answers_changed'; end if;
+
   if current_status = 'completed' then
     if jsonb_array_length(p_gradings) <> 0 then
       raise exception 'completed diagnosis cannot receive additional gradings';

@@ -1,3 +1,4 @@
+import logging
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from typing import Annotated
@@ -14,7 +15,10 @@ from app.settings import get_settings
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
-    get_settings()
+    if get_settings().ai_mode == "fake":
+        logging.getLogger(__name__).warning(
+            "AI_MODE=fake: simulated AI responses enabled"
+        )
     yield
 
 

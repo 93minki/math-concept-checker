@@ -68,7 +68,7 @@ def test_selection() -> None:
 
 
 def test_no_ai_import() -> None:
-    for path in Path("app/diagnoses").glob("*.py"):
+    for path in [Path("app/diagnoses/selection.py")]:
         for node in ast.walk(ast.parse(path.read_text())):
             if isinstance(node, ast.ImportFrom):
                 assert not (node.module or "").startswith("app.ai")

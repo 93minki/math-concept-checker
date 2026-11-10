@@ -1,5 +1,6 @@
 from functools import lru_cache
 from pathlib import Path
+from typing import Literal
 
 from pydantic import (
     AnyHttpUrl,
@@ -24,6 +25,7 @@ class Settings(BaseSettings):
     supabase_url: HttpUrl = Field(validation_alias="SUPABASE_URL")
     supabase_secret_key: SecretStr = Field(validation_alias="SUPABASE_SECRET_KEY")
     frontend_origin: str = Field(validation_alias="FRONTEND_ORIGIN")
+    ai_mode: Literal["real", "fake"] = Field(default="real", validation_alias="AI_MODE")
     gemini_api_key: SecretStr | None = Field(
         default=None, validation_alias="GEMINI_API_KEY"
     )
