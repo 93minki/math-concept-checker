@@ -121,6 +121,8 @@
   - Opus가 6문제를 직접 풀어 확인: 정답 오류·범위 위반 없음. 사용한 조건: definition-a 2, application-a 1, application-c 1, misconception-b 1, explanation-c 1.
   - 주의: `C4-성질적용` hard("각 단계에서 쓴 등식의 성질 고르기")는 v4에서 "쉽다"로 거절된 문제와 비슷한 형태다. 새 기준은 계산량이 아니라 조건 충족으로 판단하므로 통과한다. 일반 문제와 충분히 구별되는지는 7단계 개발자 검토에서 본다.
 - 2026-11-10: 3단계 원격 적용 시도 → `supabase db push --remote --yes`를 Claude Code 자동 모드 분류기가 거부. 사용자 직접 실행 요청.
+- 2026-11-10: **3단계 완료.** 사용자가 직접 `supabase db push --remote --yes` 실행 (개발 프로젝트). Opus가 원격 읽기 전용 조회로 확인: 새 표 12개 모두 RLS 켜짐, `anon`·`authenticated` select·insert·update·delete 권한 없음, `bank_insert_question`은 `service_role`만 실행 가능. 기존 `profiles`는 그대로(authenticated select).
+- 2026-11-10: **4단계 완료.** `load-curriculum` 실행. 원격 행 수: 성취기준 60, 표시 단원 23, 단원 연결 60(서로 다른 성취기준 60), 개념 4, 평가 항목 6, 오개념 6, 오개념-개념 연결 7. 한 번 더 실행해도 행 수 같음.
 
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
