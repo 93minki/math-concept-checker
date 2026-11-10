@@ -82,4 +82,5 @@
 
 | 종료일 | 파일 | 대상 기능 | 결과 | 한 줄 요약 |
 |---|---|---|---|---|
+| 2026-11-10 | [2026-11-10_ai-provider-compare.md](2026-11-10_ai-provider-compare.md) | F-05, F-07, F-08 | 완료 | Gemini 3.8 Flash vs GPT-6.1 Terra 비교 시험 → 모두 gpt-6.1-terra로 결정, 제공사 연결·검증기·실행 명령·프롬프트 v2 |
 | 2026-11-10 | [2026-11-09_skeleton-login.md](2026-11-09_skeleton-login.md) | F-01 (F-11 자리) | 완료 | 프로젝트 뼈대, 검사 9개, profiles·RLS, 이메일·카카오 로그인, 가입 완료 단계 |
