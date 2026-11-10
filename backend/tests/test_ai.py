@@ -7,6 +7,7 @@ from google import genai
 from openai import OpenAI
 from pydantic import BaseModel
 
+from app.ai.hard import render_hard_conditions
 from app.ai.pricing import cost_usd
 from app.ai.providers.anthropic import AnthropicProvider
 from app.ai.providers.gemini import GeminiProvider
@@ -255,3 +256,33 @@ def test_real_katex() -> None:
     assert [issue.code for issue in KatexChecker().check([r"\overparen{AB}"])] == [
         "invalid_tex"
     ]
+
+
+def test_render_hard_conditions() -> None:
+    hard = render_hard_conditions("정의 이해", "hard")
+    assert hard.startswith("   - `definition-a`:")
+    normal = render_hard_conditions("성질 적용", "normal")
+    assert normal == "   - (일반 문제: 해당 없음)"
+    with pytest.raises(ValueError):
+        render_hard_conditions("없는 수준", "hard")
+
+
+def test_hard_condition_validation() -> None:
+    q = good_question().model_copy(
+        update={
+            "difficulty": "hard",
+            "hard_condition": "definition-a",
+            "hard_condition_reason": "경계 등식을 묻는다.",
+        }
+    )
+    assert "hard_condition" not in codes(q)
+    assert "hard_condition" in codes(q.model_copy(update={"hard_condition": None}))
+    assert "hard_condition" in codes(
+        q.model_copy(update={"hard_condition": "application-a"})
+    )
+    assert "hard_condition" in codes(q.model_copy(update={"hard_condition_reason": ""}))
+    normal = good_question()
+    assert "hard_condition" not in codes(normal)
+    assert "hard_condition" in codes(
+        normal.model_copy(update={"hard_condition": "definition-a"})
+    )

@@ -16,8 +16,10 @@ from app.ai.compare import (
     load_fixture,
     make_summary,
     misconception_criteria,
+    parse_difficulties,
     run,
 )
+from app.ai.hard import HARD_CONDITIONS
 from app.ai.prompts import PROMPT_VERSION, load_prompt
 from app.ai.providers.base import StructuredResult
 from app.ai.report_html import render_report_html
@@ -64,7 +66,7 @@ def test_prompt_loading(monkeypatch: pytest.MonkeyPatch) -> None:
         "student_answer": "student",
     }
     prompt = load_prompt("grade_written", values)
-    assert prompt.version == PROMPT_VERSION == "v4"
+    assert prompt.version == PROMPT_VERSION == "v5"
     assert "<!--" not in prompt.system + prompt.user
     assert "{{" not in prompt.system + prompt.user
     assert "student" in prompt.user
@@ -116,6 +118,7 @@ class RejectingProvider(FakeProvider):
                     "single_correct_answer": False,
                     "conditions_sufficient": True,
                     "measures_intended_level": True,
+                    "meets_hard_condition": True,
                     "issues": ["복수 정답"],
                 }
             )
@@ -176,6 +179,8 @@ def test_question_draft_metadata_from_code(monkeypatch: pytest.MonkeyPatch) -> N
         "choices",
         "model_answer",
         "rubric",
+        "hard_condition",
+        "hard_condition_reason",
     }
     concept = load_concept("9수02-03")
     outcome = generate_question(
@@ -536,6 +541,131 @@ def test_report_flags_internal_ids() -> None:
     }
 
 
+class HardRejectingProvider(FakeProvider):
+    def generate_structured[T: BaseModel](
+        self, system: str, user: str, schema: type[T]
+    ) -> StructuredResult[T]:
+        result = super().generate_structured(system, user, schema)
+        if schema is Review:
+            bad = schema.model_validate(
+                {
+                    "single_correct_answer": True,
+                    "conditions_sufficient": True,
+                    "measures_intended_level": True,
+                    "meets_hard_condition": False,
+                    "issues": [],
+                }
+            )
+            return StructuredResult(
+                parsed=bad,
+                model=result.model,
+                input_tokens=result.input_tokens,
+                output_tokens=result.output_tokens,
+                reasoning_tokens=result.reasoning_tokens,
+                latency_ms=result.latency_ms,
+                raw_text=bad.model_dump_json(),
+            )
+        return result
+
+
+def test_meets_hard_condition_rejects(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr("app.ai.prompts.PROMPTS", FAKE_PROMPTS)
+    concept = load_concept("9수02-03")
+    outcome = generate_question(
+        HardRejectingProvider("gpt-6.1-terra", load_fixture()),
+        concept,
+        "9수02-03-C2-성질적용",
+        "hard",
+        max_attempts=1,
+    )
+    assert outcome.excluded
+    assert outcome.attempts[0].issues == ["meets_hard_condition: false"]
+
+
+def test_avoid_bodies_in_prompt(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr("app.ai.prompts.PROMPTS", FAKE_PROMPTS)
+    concept = load_concept("9수02-03")
+    provider = CapturingProvider("gpt-6.1-terra", load_fixture())
+    generate_question(
+        provider,
+        concept,
+        "9수02-03-C2-성질적용",
+        "normal",
+        avoid_bodies=["첫 변형", "둘째 변형"],
+        max_attempts=1,
+    )
+    assert "1. 첫 변형" in provider.users[0]
+    assert "2. 둘째 변형" in provider.users[0]
+    generate_question(
+        provider,
+        concept,
+        "9수02-03-C2-성질적용",
+        "normal",
+        max_attempts=1,
+    )
+    assert "없음" in provider.users[1]
+
+
+def test_v5_real_prompts_fill_context() -> None:
+    from app.ai.tasks import _context, _declared_hard_condition
+
+    concept = load_concept("9수02-03")
+    fixture = load_fixture()
+    item = next(i for i in concept.assessment_items if i.id == "9수02-03-C2-성질적용")
+    fake = FakeProvider("gpt-6.1-terra", fixture)
+    for difficulty in ("normal", "hard"):
+        context = _context(concept, item, difficulty, ["기존 본문"])
+        prompt = load_prompt("generate_question", context)
+        assert "{{" not in prompt.system + prompt.user
+        draft = fake.generate_structured(
+            "",
+            f"평가 항목 ID: {item.id}\n난이도: {difficulty}\n",
+            QuestionDraft,
+        ).parsed
+        assembled = fixture.question.model_copy(
+            update={
+                "assessment_item_id": item.id,
+                "concept_id": item.concept_id,
+                "level": item.level,
+                "type": item.type,
+                "difficulty": difficulty,
+                "hard_condition": draft.hard_condition,
+                "hard_condition_reason": draft.hard_condition_reason,
+            }
+        )
+        review_values = {
+            **context,
+            "question_json": assembled.model_dump_json(),
+            "declared_hard_condition": _declared_hard_condition(assembled),
+        }
+        review = load_prompt("review_question", review_values)
+        assert "{{" not in review.system + review.user
+
+
+def test_hard_conditions_cover_concept_levels() -> None:
+    levels = {item.level for item in load_concept("9수02-03").assessment_items}
+    assert levels <= set(HARD_CONDITIONS)
+
+
+def test_compare_difficulties_hard_only(tmp_path: Path) -> None:
+    run(
+        ["openai"],
+        "probe",
+        Decimal("10"),
+        tmp_path / "hard-only",
+        True,
+        skip_grading=True,
+        difficulties="hard",
+    )
+    calls = [
+        json.loads(line)
+        for line in (tmp_path / "hard-only" / "calls.jsonl").read_text().splitlines()
+    ]
+    generates = [call for call in calls if call["call_type"] == "generate"]
+    assert len(generates) == 1
+    assert all(call["assembled_question"]["difficulty"] == "hard" for call in generates)
+
+
 def test_skip_grading_runs_only_generation_and_reports(tmp_path: Path) -> None:
     run(["openai"], "full", Decimal("10"), tmp_path / "out", True, skip_grading=True)
     calls = [
@@ -546,3 +676,54 @@ def test_skip_grading_runs_only_generation_and_reports(tmp_path: Path) -> None:
     assert "grade" not in kinds
     assert {"generate", "review", "report"} <= kinds
     assert (tmp_path / "out" / "report.html").exists()
+
+
+def test_parse_difficulties() -> None:
+    assert parse_difficulties("hard, normal,hard") == ("hard", "normal")
+    with pytest.raises(ValueError):
+        parse_difficulties("easy")
+    with pytest.raises(ValueError):
+        parse_difficulties(" , ")
+
+
+class StrayHardConditionProvider(FakeProvider):
+    """Returns a hard condition even for normal questions."""
+
+    def generate_structured[T: BaseModel](
+        self, system: str, user: str, schema: type[T]
+    ) -> StructuredResult[T]:
+        result = super().generate_structured(system, user, schema)
+        if schema is QuestionDraft:
+            stray = schema.model_validate(
+                {
+                    **result.parsed.model_dump(),
+                    "hard_condition": "application-a",
+                    "hard_condition_reason": "잘못 채운 값",
+                }
+            )
+            return StructuredResult(
+                parsed=stray,
+                model=result.model,
+                input_tokens=result.input_tokens,
+                output_tokens=result.output_tokens,
+                reasoning_tokens=result.reasoning_tokens,
+                latency_ms=result.latency_ms,
+                raw_text=stray.model_dump_json(),
+            )
+        return result
+
+
+def test_normal_question_drops_stray_hard_condition(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setattr("app.ai.prompts.PROMPTS", FAKE_PROMPTS)
+    outcome = generate_question(
+        StrayHardConditionProvider("gpt-6.1-terra", load_fixture()),
+        load_concept("9수02-03"),
+        "9수02-03-C2-성질적용",
+        "normal",
+        max_attempts=1,
+    )
+    assert outcome.question is not None
+    assert outcome.question.hard_condition is None
+    assert outcome.question.hard_condition_reason is None

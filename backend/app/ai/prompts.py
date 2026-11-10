@@ -14,7 +14,8 @@ class Prompt:
 
 
 # v1/v2 stay archived; their output schemas are incompatible with current tasks.
-PROMPT_VERSION = "v4"
+# v3/v4 stay for records; active version is v5.
+PROMPT_VERSION = "v5"
 
 
 def load_prompt(

@@ -10,6 +10,7 @@ from unittest.mock import patch
 from pydantic import BaseModel
 
 from app.ai import prompts
+from app.ai.hard import HARD_CONDITIONS
 from app.ai.providers.base import StructuredResult
 from app.ai.providers.gemini import GeminiProvider
 from app.ai.providers.openai import OpenAIProvider
@@ -92,10 +93,20 @@ class FakeProvider:
             item = next(
                 item for item in self.concept.assessment_items if item.id == item_id
             )
+            hard_codes = HARD_CONDITIONS[item.level]
+            if difficulty == "hard":
+                hard_condition = hard_codes[0].code
+                hard_condition_reason = "가짜 검증: 본문에 조건 반영."
+            else:
+                hard_condition = None
+                hard_condition_reason = None
             if item.type == "written":
-                question = self.fixture.question.model_copy(
-                    update={"difficulty": difficulty}
-                )
+                written_update: dict[str, object] = {
+                    "difficulty": difficulty,
+                    "hard_condition": hard_condition,
+                    "hard_condition_reason": hard_condition_reason,
+                }
+                question = self.fixture.question.model_copy(update=written_update)
             else:
                 misconception = next(
                     m.id
@@ -122,6 +133,8 @@ class FakeProvider:
                         ],
                         "model_answer": None,
                         "rubric": [],
+                        "hard_condition": hard_condition,
+                        "hard_condition_reason": hard_condition_reason,
                     }
                 )
             parsed = schema.model_validate(question.model_dump())
@@ -131,6 +144,7 @@ class FakeProvider:
                     "single_correct_answer": True,
                     "conditions_sufficient": True,
                     "measures_intended_level": True,
+                    "meets_hard_condition": True,
                     "issues": [],
                 }
             )
@@ -548,6 +562,16 @@ def write_summary(out: Path, summary: dict[str, object]) -> None:
     (out / "summary.md").write_text("\n".join(lines), encoding="utf-8")
 
 
+def parse_difficulties(raw: str) -> tuple[str, ...]:
+    parts = [part.strip() for part in raw.split(",") if part.strip()]
+    if not parts:
+        raise ValueError("At least one difficulty required")
+    invalid = [part for part in parts if part not in ("normal", "hard")]
+    if invalid:
+        raise ValueError(f"Invalid difficulties: {', '.join(invalid)}")
+    return tuple(dict.fromkeys(parts))
+
+
 def run(
     providers: list[str],
     mode: Literal["probe", "full"],
@@ -555,11 +579,16 @@ def run(
     out: Path,
     fake: bool,
     skip_grading: bool = False,
+    difficulties: str | None = None,
 ) -> dict[str, object]:
+    # Default keeps the old behavior: probe = normal only, full = normal + hard.
+    if difficulties is None:
+        difficulties = "normal" if mode == "probe" else "normal,hard"
+    selected = parse_difficulties(difficulties)
     if fake and not (prompts.PROMPTS / "v3").is_dir():
         with patch.object(prompts, "PROMPTS", FAKE_PROMPTS):
-            return _run(providers, mode, max_cost, out, fake, skip_grading)
-    return _run(providers, mode, max_cost, out, fake, skip_grading)
+            return _run(providers, mode, max_cost, out, fake, skip_grading, selected)
+    return _run(providers, mode, max_cost, out, fake, skip_grading, selected)
 
 
 def _run(
@@ -569,6 +598,7 @@ def _run(
     out: Path,
     fake: bool,
     skip_grading: bool = False,
+    difficulties: tuple[str, ...] = ("normal", "hard"),
 ) -> dict[str, object]:
     if not providers or any(name not in PROVIDER_MODELS for name in providers):
         raise ValueError("Providers must be gemini,openai")
@@ -627,7 +657,6 @@ def _run(
                 if mode == "probe"
                 else concept.assessment_items
             )
-            difficulties = ("normal",) if mode == "probe" else ("normal", "hard")
             for item in items:
                 for difficulty in difficulties:
                     outcome = generate_question(
@@ -703,6 +732,12 @@ def main() -> None:
         help="Run only question generation and reports",
     )
     parser.add_argument(
+        "--difficulties",
+        default=None,
+        help="Comma-separated difficulties to generate (normal, hard). "
+        "Default: normal for probe, normal,hard for full",
+    )
+    parser.add_argument(
         "--out",
         type=Path,
         default=ROOT
@@ -713,7 +748,13 @@ def main() -> None:
     args = parser.parse_args()
     names = [name.strip() for name in args.providers.split(",")]
     summary = run(
-        names, args.mode, args.max_cost_usd, args.out, args.fake, args.skip_grading
+        names,
+        args.mode,
+        args.max_cost_usd,
+        args.out,
+        args.fake,
+        args.skip_grading,
+        args.difficulties,
     )
     print(
         f"결과: {args.out / 'summary.md'} | {args.out / 'report.html'} | "
