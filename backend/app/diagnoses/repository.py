@@ -16,8 +16,13 @@ from app.diagnoses.schemas import (
     Choice,
     Concept,
     Diagnosis,
+    GradingRow,
     Item,
+    MisconceptionRow,
     Question,
+    QuestionChoice,
+    ReportRow,
+    RubricRow,
     StandardLink,
     StartResult,
     Unit,
@@ -51,7 +56,26 @@ class DiagnosesRepository(Protocol):
     def save_answer(
         self, user_id: UUID, item_id: int, answer: AnswerInput
     ) -> Answer: ...
-    def submit(self, user_id: UUID, diagnosis_id: UUID) -> str: ...
+    def question_choices(self, question_id: UUID) -> list[QuestionChoice]: ...
+    def rubric(self, question_id: UUID) -> list[RubricRow]: ...
+    def misconceptions(self) -> list[MisconceptionRow]: ...
+    def gradings(self, user_id: UUID, item_ids: list[int]) -> list[GradingRow]: ...
+    def report(self, user_id: UUID, diagnosis_id: UUID) -> ReportRow | None: ...
+    def submit_stage(
+        self,
+        user_id: UUID,
+        diagnosis_id: UUID,
+        stage: int,
+        gradings: list[dict[str, object]],
+        question_ids: list[UUID],
+    ) -> str: ...
+    def create_report(
+        self,
+        user_id: UUID,
+        diagnosis_id: UUID,
+        gradings: list[dict[str, object]],
+        report: dict[str, object],
+    ) -> str: ...
 
 
 class SupabaseDiagnoses:
@@ -99,7 +123,9 @@ class SupabaseDiagnoses:
         )
 
     def concepts(self) -> list[Concept]:
-        return self._pages("concepts", "id,standard_code", TypeAdapter(list[Concept]))
+        return self._pages(
+            "concepts", "id,standard_code,name", TypeAdapter(list[Concept])
+        )
 
     def assessments(self) -> list[Assessment]:
         return self._pages(
@@ -111,7 +137,7 @@ class SupabaseDiagnoses:
     def questions(self) -> list[Question]:
         return self._pages(
             "questions",
-            "id,assessment_item_id,variant,question_type,body,difficulty,status",
+            "id,assessment_item_id,variant,question_type,body,explanation,model_answer,hard_condition,hard_condition_reason,difficulty,status",
             TypeAdapter(list[Question]),
         )
 
@@ -230,10 +256,121 @@ class SupabaseDiagnoses:
             raise
         return Answer.model_validate(response.data[0])
 
-    def submit(self, user_id: UUID, diagnosis_id: UUID) -> str:
+    def question_choices(self, question_id: UUID) -> list[QuestionChoice]:
+        response = (
+            self.client.table("question_choices")
+            .select("no,text,is_correct,misconception_id")
+            .eq("question_id", str(question_id))
+            .order("no")
+            .execute()
+        )
+        return TypeAdapter(list[QuestionChoice]).validate_python(response.data)
+
+    def rubric(self, question_id: UUID) -> list[RubricRow]:
+        rows = TypeAdapter(list[RubricRow]).validate_python(
+            self.client.table("rubric_elements")
+            .select("id,no,description,points,required")
+            .eq("question_id", str(question_id))
+            .order("no")
+            .execute()
+            .data
+        )
+        if rows:
+            links = TypeAdapter(list[dict[str, object]]).validate_python(
+                self.client.table("rubric_element_misconceptions")
+                .select("rubric_element_id,misconception_id")
+                .in_("rubric_element_id", [r.id for r in rows])
+                .execute()
+                .data
+            )
+            for row in rows:
+                row.related_misconception_ids = [
+                    str(link["misconception_id"])
+                    for link in links
+                    if link["rubric_element_id"] == row.id
+                ]
+        return rows
+
+    def misconceptions(self) -> list[MisconceptionRow]:
+        rows = self._pages(
+            "misconceptions",
+            "id,standard_code,local_id,content",
+            TypeAdapter(list[MisconceptionRow]),
+        )
+        links = TypeAdapter(list[dict[str, str]]).validate_python(
+            self.client.table("misconception_concepts")
+            .select("misconception_id,concept_id")
+            .execute()
+            .data
+        )
+        for row in rows:
+            row.concept_ids = [
+                link["concept_id"]
+                for link in links
+                if link["misconception_id"] == row.id
+            ]
+        return rows
+
+    def gradings(self, user_id: UUID, item_ids: list[int]) -> list[GradingRow]:
+        if not item_ids:
+            return []
+        response = (
+            self.client.table("gradings")
+            .select(
+                "diagnosis_item_id,score,passed,selected_misconception_id,element_results,detected_misconception_ids,ai_model,prompt_version"
+            )
+            .eq("user_id", str(user_id))
+            .in_("diagnosis_item_id", item_ids)
+            .execute()
+        )
+        return TypeAdapter(list[GradingRow]).validate_python(response.data)
+
+    def report(self, user_id: UUID, diagnosis_id: UUID) -> ReportRow | None:
+        response = (
+            self.client.table("reports")
+            .select(
+                "unit_score,unit_stage,concepts,misconception_ids,text,ai_model,prompt_version"
+            )
+            .eq("user_id", str(user_id))
+            .eq("diagnosis_id", str(diagnosis_id))
+            .execute()
+        )
+        rows = TypeAdapter(list[ReportRow]).validate_python(response.data)
+        return rows[0] if rows else None
+
+    def submit_stage(
+        self,
+        user_id: UUID,
+        diagnosis_id: UUID,
+        stage: int,
+        gradings: list[dict[str, object]],
+        question_ids: list[UUID],
+    ) -> str:
+        params: dict[str, object] = {
+            "p_user_id": str(user_id),
+            "p_diagnosis_id": str(diagnosis_id),
+            "p_gradings": gradings,
+        }
+        if stage == 1:
+            params["p_stage2_question_ids"] = [str(q) for q in question_ids]
+        response = self.client.rpc(f"diagnosis_submit_stage{stage}", params).execute()
+        return TypeAdapter(str).validate_python(response.data)
+
+    def create_report(
+        self,
+        user_id: UUID,
+        diagnosis_id: UUID,
+        gradings: list[dict[str, object]],
+        report: dict[str, object],
+    ) -> str:
         response = self.client.rpc(
-            "diagnosis_submit_stage1",
-            {"p_user_id": str(user_id), "p_diagnosis_id": str(diagnosis_id)},
+            "report_create",
+            {
+                "p_user_id": str(user_id),
+                "p_diagnosis_id": str(diagnosis_id),
+                "p_gradings": gradings,
+                "p_report": report,
+            },
         ).execute()
         return TypeAdapter(str).validate_python(response.data)
 

@@ -25,6 +25,7 @@ class StandardLink(BaseModel):
 class Concept(BaseModel):
     id: str
     standard_code: str
+    name: str = ""
 
 
 class Assessment(BaseModel):
@@ -40,6 +41,10 @@ class Question(BaseModel):
     variant: int
     question_type: QuestionType
     body: str
+    explanation: str = ""
+    model_answer: str | None = None
+    hard_condition: str | None = None
+    hard_condition_reason: str | None = None
     difficulty: str
     status: str
 
@@ -52,6 +57,7 @@ class Diagnosis(BaseModel):
     abort_reason: Literal["expired", "restarted"] | None
     started_at: datetime
     stage1_submitted_at: datetime | None
+    stage2_submitted_at: datetime | None = None
 
 
 class Item(BaseModel):
@@ -101,3 +107,46 @@ class StartInput(BaseModel):
 class StartResult(BaseModel):
     result: Literal["created", "in_progress", "unit_not_found"]
     diagnosis_id: UUID | None = None
+
+
+class QuestionChoice(Choice):
+    is_correct: bool
+    misconception_id: str | None
+
+
+class RubricRow(BaseModel):
+    id: int
+    no: int
+    description: str
+    points: float
+    required: bool
+    related_misconception_ids: list[str] = []
+
+
+class MisconceptionRow(BaseModel):
+    id: str
+    standard_code: str
+    local_id: str
+    content: str
+    concept_ids: list[str] = []
+
+
+class GradingRow(BaseModel):
+    diagnosis_item_id: int
+    score: float
+    passed: bool
+    selected_misconception_id: str | None = None
+    element_results: list[dict[str, object]] | None = None
+    detected_misconception_ids: list[str] = []
+    ai_model: str | None = None
+    prompt_version: str | None = None
+
+
+class ReportRow(BaseModel):
+    unit_score: float | None
+    unit_stage: str | None
+    concepts: list[dict[str, object]]
+    misconception_ids: list[str]
+    text: dict[str, str]
+    ai_model: str
+    prompt_version: str

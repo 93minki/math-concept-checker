@@ -1,3 +1,4 @@
+import logging
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from typing import Annotated
@@ -12,9 +13,32 @@ from app.profiles import ProfilesRepository, get_profiles
 from app.settings import get_settings
 
 
+def configure_app_logging() -> logging.Logger:
+    """Send the app's INFO logs (AI call model, tokens, cost) to stderr.
+
+    Uvicorn only configures its own loggers, so without this the app's INFO
+    lines are dropped. Log lines carry IDs and counts only, never answer text.
+    """
+    app_logger = logging.getLogger("app")
+    app_logger.setLevel(logging.INFO)
+    if not app_logger.handlers:
+        handler = logging.StreamHandler()
+        handler.setFormatter(
+            logging.Formatter("%(levelname)s:     %(name)s - %(message)s")
+        )
+        app_logger.addHandler(handler)
+    return app_logger
+
+
+configure_app_logging()
+
+
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
-    get_settings()
+    if get_settings().ai_mode == "fake":
+        logging.getLogger(__name__).warning(
+            "AI_MODE=fake: simulated AI responses enabled"
+        )
     yield
 
 
@@ -22,7 +46,7 @@ class ConfiguredCORSMiddleware(CORSMiddleware):
     def __init__(self, app: ASGIApp) -> None:
         super().__init__(
             app,
-            allow_origins=[get_settings().cors_origin],
+            allow_origins=get_settings().cors_origins,
             allow_methods=["GET", "POST", "PUT"],
             allow_headers=["Authorization", "Content-Type"],
             allow_credentials=False,

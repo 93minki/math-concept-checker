@@ -3,9 +3,11 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MathText } from "@/components/math-text";
-import { ApiError, authRedirect, getDiagnosis, saveAnswer, submitDiagnosis, type AnswerInput, type Diagnosis, type Item } from "@/lib/diagnosis-api";
+import { ApiError, authRedirect, getDiagnosis, saveAnswer, submitStage, type AnswerInput, type Diagnosis, type Item } from "@/lib/diagnosis-api";
 import { publicEnv } from "@/lib/env";
 import { createClient } from "@/lib/supabase/client";
+import Notice from "./notice";
+import ReportView from "./report-view";
 
 type SaveState = "idle" | "saving" | "saved" | "error";
 const initialAnswer = (item: Item): AnswerInput => item.question_type === "multiple_choice" ? { selected_choice: item.answer?.selected_choice ?? 0 } : { written_text: item.answer?.written_text ?? "" };
@@ -25,20 +27,29 @@ export default function DiagnosisView({ id }: { id: string }) {
   const [error, setError] = useState("");
   const [confirm, setConfirm] = useState(false);
   const [busy, setBusy] = useState(false);
-  const readonly = !!diagnosis && (diagnosis.status === "aborted" || !!diagnosis.stage1_submitted_at || diagnosis.status !== "stage1");
+  const [stageNotice, setStageNotice] = useState(false);
+  const readonly = !!diagnosis && diagnosis.status !== "stage1" && diagnosis.status !== "stage2";
+  const stage = diagnosis?.status === "stage2" ? 2 : 1;
+  const stageItems = diagnosis?.items.filter(item => item.stage === stage) ?? [];
+  const finished = !!diagnosis && (diagnosis.status === "completed" || (diagnosis.status === "aborted" && diagnosis.stage1_submitted_at !== null));
+  const applyDiagnosis = useCallback((data: Diagnosis) => {
+    const values = Object.fromEntries(data.items.map(item => [item.id, initialAnswer(item)]));
+    latest.current = values; saved.current = Object.fromEntries(data.items.map(item => [item.id, JSON.stringify(values[item.id])]));
+    setAnswers(values); setDiagnosis(data); setStates({});
+    writable.current = data.status === "stage1" || data.status === "stage2";
+    const activeItems = data.items.filter(item => item.stage === (data.status === "stage2" ? 2 : 1));
+    const first = activeItems.findIndex(item => !answered(values[item.id])); setIndex(first < 0 ? 0 : first);
+  }, []);
   const writable = useRef(false);
   useEffect(() => {
     let active = true;
     void createClient().auth.getSession().then(({ data }) => { token.current = data.session?.access_token ?? null; });
     getDiagnosis(id).then(data => {
       if (!active) return;
-      const values = Object.fromEntries(data.items.map(item => [item.id, initialAnswer(item)]));
-      latest.current = values; saved.current = Object.fromEntries(data.items.map(item => [item.id, JSON.stringify(values[item.id])]));
-      setAnswers(values); setDiagnosis(data); writable.current = data.status === "stage1" && !data.stage1_submitted_at;
-      const first = data.items.findIndex(item => !answered(values[item.id])); setIndex(first < 0 ? 0 : first);
+      applyDiagnosis(data);
     }).catch(e => { if (active && !authRedirect(e, router.push)) setError(e instanceof ApiError && e.status === 404 ? "진단을 찾을 수 없어요" : "진단을 불러오지 못했어요. 새로고침해 주세요."); });
     return () => { active = false; };
-  }, [id, router]);
+  }, [id, router, applyDiagnosis]);
   const save = useCallback((itemId: number): Promise<boolean> => {
     clearTimeout(timers.current[itemId]);
     const input = latest.current[itemId];
@@ -80,37 +91,50 @@ export default function DiagnosisView({ id }: { id: string }) {
   }
   async function move(next: number) {
     if (!diagnosis) return;
-    const current = diagnosis.items[index];
+    const current = stageItems[index];
     if (!readonly && current) await save(current.id);
     setIndex(next);
   }
   async function submit() {
     if (!diagnosis) return;
-    setBusy(true); setError("");
+    setBusy(true); setError(""); setStageNotice(false);
     try {
-      const results = await Promise.all(diagnosis.items.map(item => save(item.id)));
+      const results = await Promise.all(stageItems.map(item => save(item.id)));
       if (results.some(result => !result)) { setError("답안을 저장하지 못했어요. 다시 시도해 주세요."); return; }
-      const result = await submitDiagnosis(id); writable.current = false;
-      setDiagnosis({ ...diagnosis, stage1_submitted_at: result.stage1_submitted_at }); setConfirm(false);
-    } catch (e) { if (!authRedirect(e, router.push)) setError("제출하지 못했어요. 다시 시도해 주세요."); }
+      const result = await submitStage(id, stage);
+      setConfirm(false);
+      const updated = await getDiagnosis(id);
+      applyDiagnosis(updated);
+      if (result.status === "stage2") setStageNotice(true);
+    } catch (e) {
+      setConfirm(false);
+      if (authRedirect(e, router.push)) return;
+      if (e instanceof ApiError && e.status === 409 && e.detail && typeof e.detail === "object" && "code" in e.detail && e.detail.code === "answers_changed") {
+        try { applyDiagnosis(await getDiagnosis(id)); setError("답이 바뀌었어요. 다시 제출해 주세요"); }
+        catch (reloadError) { if (!authRedirect(reloadError, router.push)) setError("답을 다시 불러오지 못했어요. 새로고침해 주세요."); }
+      } else if (e instanceof ApiError && e.status === 503) setError("채점을 하지 못했어요. 잠시 후 다시 제출해 주세요");
+      else setError("제출하지 못했어요. 다시 시도해 주세요.");
+    }
     finally { setBusy(false); }
   }
-  const item = diagnosis?.items[index];
+  const item = stageItems[index];
   const answer = item ? answers[item.id] : undefined;
-  const canSubmit = !!diagnosis?.items.length && diagnosis.items.every(value => answers[value.id] && answered(answers[value.id])) && !readonly;
+  const canSubmit = stageItems.length > 0 && stageItems.every(value => answers[value.id] && answered(answers[value.id])) && !readonly;
   return <div className="stack"><Link className="study-link" href="/">← 단원 선택으로</Link>
-    {error && <p role="alert">{error}</p>}{!diagnosis && !error && <p>진단을 불러오고 있어요.</p>}
+    {error && <Notice role="alert">{error}</Notice>}{!diagnosis && !error && <p>진단을 불러오고 있어요.</p>}
     {diagnosis && <><h1>{diagnosis.unit.name}</h1>
       {diagnosis.status === "aborted" && <p role="status">{diagnosis.abort_reason === "expired" ? "기간이 지나 중단된 진단이에요" : "새로 시작해서 중단된 진단이에요"}</p>}
-      {diagnosis.stage1_submitted_at && <p role="status">제출했어요. 채점 기능은 준비 중이에요</p>}
-      {item && answer && <section className="stack"><p>{index + 1} / {diagnosis.items.length}</p><div className="question"><MathText text={item.body} /></div>
+      {finished && <ReportView diagnosis={diagnosis} />}
+      {stageNotice && !readonly && <Notice>기본 문제를 잘 풀었어요. 심화 문제 {stageItems.length}개를 풀어 볼까요?</Notice>}
+      {busy && <Notice>채점하고 있어요</Notice>}
+      {!readonly && item && answer && <section className="stack"><h2>{stage === 1 ? "기본 문제" : "심화 문제"}</h2><p>{index + 1} / {stageItems.length}</p><div className="question"><MathText text={item.body} /></div>
         {item.question_type === "multiple_choice" && <fieldset className="stack" disabled={readonly || busy}><legend>답을 골라요</legend>{item.choices.map(choice => <label key={choice.no} className="choice"><input type="radio" name={`item-${item.id}`} checked={"selected_choice" in answer && answer.selected_choice === choice.no} onChange={() => update(item, { selected_choice: choice.no })} /><MathText text={`${choice.no}. ${choice.text}`} /></label>)}</fieldset>}
         {item.question_type === "written" && "written_text" in answer && <><label htmlFor="answer">풀이와 답</label><textarea id="answer" maxLength={1000} value={answer.written_text} disabled={readonly || busy} onChange={e => update(item, { written_text: e.target.value })} /><p>{answer.written_text.length} / 1000자</p></>}
-        {!readonly && states[item.id] === "saving" && <p role="status">저장하고 있어요</p>}{!readonly && states[item.id] === "saved" && <p role="status">저장했어요</p>}{!readonly && states[item.id] === "error" && <div role="alert">저장하지 못했어요 <button onClick={() => void save(item.id)}>다시 시도</button></div>}
-        <div className="button-row"><button disabled={index === 0 || busy} onClick={() => void move(index - 1)}>이전</button><button disabled={index === diagnosis.items.length - 1 || busy} onClick={() => void move(index + 1)}>다음</button></div>
+        {!readonly && states[item.id] === "saving" && <p role="status">저장하고 있어요</p>}{!readonly && states[item.id] === "saved" && <p role="status">저장했어요</p>}{!readonly && states[item.id] === "error" && <div role="alert">저장하지 못했어요 <button disabled={busy} onClick={() => void save(item.id)}>다시 시도</button></div>}
+        <div className="button-row"><button disabled={index === 0 || busy} onClick={() => void move(index - 1)}>이전</button><button disabled={index === stageItems.length - 1 || busy} onClick={() => void move(index + 1)}>다음</button></div>
       </section>}
       {!readonly && <button disabled={!canSubmit || busy} onClick={() => setConfirm(true)}>제출하기</button>}
-      {confirm && !readonly && <div role="dialog" aria-label="제출 확인" className="unit-card stack"><p>답안을 제출할까요? 제출하면 고칠 수 없어요.</p><button disabled={busy} onClick={() => void submit()}>제출할게요</button><button disabled={busy} onClick={() => setConfirm(false)}>돌아가기</button></div>}
+      {confirm && !readonly && <Notice role="dialog" label="제출 확인"><p>답안을 제출할까요? 제출하면 고칠 수 없어요.</p><button disabled={busy} onClick={() => void submit()}>제출할게요</button><button disabled={busy} onClick={() => setConfirm(false)}>돌아가기</button></Notice>}
     </>}
   </div>;
 }

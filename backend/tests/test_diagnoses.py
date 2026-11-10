@@ -14,8 +14,13 @@ from app.diagnoses.schemas import (
     Choice,
     Concept,
     Diagnosis,
+    GradingRow,
     Item,
+    MisconceptionRow,
     Question,
+    QuestionChoice,
+    ReportRow,
+    RubricRow,
     StandardLink,
     StartResult,
     Unit,
@@ -37,6 +42,8 @@ class FakeDiagnoses:
         self.events: list[str] = []
         self.conflict = False
         self.written = False
+        self.grade_rows: dict[int, GradingRow] = {}
+        self.report_rows: dict[UUID, ReportRow] = {}
 
     def expire(self, user_id: UUID) -> None:
         self.events.append("expire")
@@ -169,18 +176,93 @@ class FakeDiagnoses:
         self.answer_rows[item_id] = row
         return Answer.model_validate(row.model_dump())
 
-    def submit(self, user_id: UUID, diagnosis_id: UUID) -> str:
+    def question_choices(self, question_id: UUID) -> list[QuestionChoice]:
+        return [
+            QuestionChoice(no=1, text="가", is_correct=True, misconception_id=None),
+            QuestionChoice(no=2, text="나", is_correct=False, misconception_id=None),
+        ]
+
+    def rubric(self, question_id: UUID) -> list[RubricRow]:
+        return [RubricRow(id=1, no=1, description="설명", points=1, required=True)]
+
+    def misconceptions(self) -> list[MisconceptionRow]:
+        return []
+
+    def gradings(self, user_id: UUID, item_ids: list[int]) -> list[GradingRow]:
+        return [g for key, g in self.grade_rows.items() if key in item_ids]
+
+    def report(self, user_id: UUID, diagnosis_id: UUID) -> ReportRow | None:
+        return self.report_rows.get(diagnosis_id)
+
+    def answers_changed(self, gradings: list[dict[str, object]]) -> bool:
+        for grade in gradings:
+            item = GradingRow.model_validate(grade)
+            current = self.answer_rows.get(item.diagnosis_item_id)
+            value = grade.get("answer_updated_at")
+            if not current or not isinstance(value, str):
+                return True
+            if current.updated_at != datetime.fromisoformat(value):
+                return True
+        return False
+
+    def create_report(
+        self,
+        user_id: UUID,
+        diagnosis_id: UUID,
+        gradings: list[dict[str, object]],
+        report: dict[str, object],
+    ) -> str:
+        if diagnosis_id in self.report_rows:
+            return "exists"
+        if self.answers_changed(gradings):
+            return "answers_changed"
+        for grade in gradings:
+            row = GradingRow.model_validate(grade)
+            self.grade_rows[row.diagnosis_item_id] = row
+        self.report_rows[diagnosis_id] = ReportRow.model_validate(report)
+        return "created"
+
+    def submit_stage(
+        self,
+        user_id: UUID,
+        diagnosis_id: UUID,
+        stage: int,
+        gradings: list[dict[str, object]],
+        question_ids: list[UUID],
+    ) -> str:
         self.events.append("submit")
         d = self.diagnosis(user_id, diagnosis_id)
         if d is None:
             return "not_found"
-        if d.stage1_submitted_at:
-            return "already_submitted"
-        if d.status != "stage1":
+        if d.status != f"stage{stage}":
             return "not_in_progress"
-        if any(i.id not in self.answer_rows for i in self.items(user_id, diagnosis_id)):
+        if self.answers_changed(gradings):
+            return "answers_changed"
+        if any(
+            i.id not in self.answer_rows
+            for i in self.items(user_id, diagnosis_id)
+            if i.stage == stage
+        ):
             return "unanswered"
-        d.stage1_submitted_at = NOW
+        for grade in gradings:
+            row = GradingRow.model_validate(grade)
+            self.grade_rows[row.diagnosis_item_id] = row
+        if stage == 1:
+            d.stage1_submitted_at = NOW
+        d.status = "stage2" if question_ids else "completed"
+        for position, qid in enumerate(question_ids, 1):
+            question = next(q for q in self.questions() if q.id == qid)
+            self.item_rows.append(
+                Item(
+                    id=len(self.item_rows) + 1,
+                    diagnosis_id=diagnosis_id,
+                    user_id=user_id,
+                    stage=2,
+                    position=position,
+                    question_id=qid,
+                    assessment_item_id=question.assessment_item_id,
+                )
+            )
         return "submitted"
 
 
@@ -256,7 +338,7 @@ def test_api(client: tuple[TestClient, ec.EllipticCurvePrivateKey]) -> None:
         tc.post(f"/diagnoses/{did}/stages/1/submit", headers=headers).json()["detail"][
             "code"
         ]
-        == "already_submitted"
+        == "not_in_progress"
     )
     repo.rows[UUID(did)].user_id = uuid4()
     for method, url in [

@@ -4,7 +4,7 @@ import UnitSelection from "./unit-selection";
 import DiagnosisView from "./diagnoses/[id]/diagnosis-view";
 import { ApiError, type Diagnosis, type Unit } from "@/lib/diagnosis-api";
 
-const mocks = vi.hoisted(() => ({ getUnits: vi.fn(), startDiagnosis: vi.fn(), getDiagnosis: vi.fn(), saveAnswer: vi.fn(), submitDiagnosis: vi.fn(), push: vi.fn() }));
+const mocks = vi.hoisted(() => ({ getUnits: vi.fn(), startDiagnosis: vi.fn(), getDiagnosis: vi.fn(), saveAnswer: vi.fn(), submitStage: vi.fn(), getReport: vi.fn(), push: vi.fn() }));
 vi.mock("next/navigation", () => { const router = { push: mocks.push }; return { useRouter: () => router }; });
 vi.mock("@/lib/supabase/client", () => ({ createClient: () => ({ auth: { getSession: async () => ({ data: { session: { access_token: 'test' } } }) } }) }));
 vi.mock("@/lib/diagnosis-api", async importOriginal => ({ ...await importOriginal<typeof import('@/lib/diagnosis-api')>(), ...mocks }));
@@ -16,7 +16,7 @@ const diagnosis: Diagnosis = { id: 'd', status: 'stage1', abort_reason: null, st
   { id: 1, stage: 1, position: 1, question_type: 'multiple_choice', body: '$x$', choices: [{ no: 1, text: '하나' }, { no: 2, text: '둘' }], answer: null },
   { id: 2, stage: 1, position: 2, question_type: 'written', body: '설명해요', choices: [], answer: null },
 ] };
-beforeEach(() => { vi.clearAllMocks(); mocks.getUnits.mockResolvedValue(units); mocks.getDiagnosis.mockResolvedValue(diagnosis); mocks.saveAnswer.mockResolvedValue({}); });
+beforeEach(() => { vi.resetAllMocks(); mocks.getUnits.mockResolvedValue(units); mocks.getDiagnosis.mockResolvedValue(diagnosis); mocks.saveAnswer.mockResolvedValue({}); });
 afterEach(cleanup);
 test('학년과 상태를 표시하고 별칭으로 검색한다', async () => {
   render(<UnitSelection />);
@@ -49,16 +49,19 @@ test('답을 저장하고 모두 답해야 제출한다', async () => {
   expect((submit as HTMLButtonElement).disabled).toBe(true);
   fireEvent.change(input, { target: { value: '답이에요' } });
   expect((submit as HTMLButtonElement).disabled).toBe(false);
-  mocks.submitDiagnosis.mockResolvedValue({ stage1_submitted_at: 'now' });
+  mocks.submitStage.mockResolvedValue({ status: 'stage2', report_ready: false });
+  mocks.getDiagnosis.mockResolvedValue({ ...diagnosis, status: 'stage2', stage1_submitted_at: 'now', items: [...diagnosis.items, { ...diagnosis.items[0], id: 3, stage: 2, body: '심화 문제' }] });
   fireEvent.click(submit); fireEvent.click(screen.getByRole('button', { name: '제출할게요' }));
-  expect(await screen.findByText('제출했어요. 채점 기능은 준비 중이에요')).toBeTruthy();
-  expect((screen.getByLabelText('풀이와 답') as HTMLTextAreaElement).disabled).toBe(true);
+  expect(await screen.findByText('기본 문제를 잘 풀었어요. 심화 문제 1개를 풀어 볼까요?')).toBeTruthy();
+  expect(screen.getByText('심화 문제', { selector: '.question span span' })).toBeTruthy();
+  expect(mocks.submitStage).toHaveBeenCalledWith('d', 1);
 });
 test('중단된 진단은 수정할 수 없다', async () => {
   mocks.getDiagnosis.mockResolvedValue({ ...diagnosis, status: 'aborted', abort_reason: 'expired' });
   render(<DiagnosisView id="d" />);
   expect(await screen.findByText('기간이 지나 중단된 진단이에요')).toBeTruthy();
-  expect(screen.getByRole('radio', { name: /하나/ }).matches(':disabled')).toBe(true);
+  expect(screen.queryByRole('radio')).toBeNull();
+  expect(mocks.getReport).not.toHaveBeenCalled();
 });
 test('저장에 실패하면 다시 시도할 수 있다', async () => {
   mocks.saveAnswer.mockRejectedValueOnce(new Error('offline')).mockResolvedValueOnce({});
@@ -75,4 +78,78 @@ test('저장된 답은 이어서 보여 주고 답하지 않은 첫 문제에서
   render(<DiagnosisView id="d" />);
   expect(await screen.findByText('2 / 2')).toBeTruthy();
   expect(screen.getByLabelText('풀이와 답')).toBeTruthy();
+});
+
+
+const report = { unit_stage: "기본 이해", concepts: [{ name: "등식", stage: "기본 이해", not_measured: false, deep_not_attempted: false, deep_not_measured: true, misconceptions: ["한쪽에만 $x$를 더했을 수 있어요"] }], text: { not_understood: "등식을 살펴봐요", misconception_explanations: "헷갈릴 수 있어요", next_steps: "다시 연습해요" } };
+const completed: Diagnosis = { ...diagnosis, status: "completed", stage1_submitted_at: "now", items: [{ ...diagnosis.items[0], answer: { selected_choice: 1, written_text: null, updated_at: "now" }, result: { passed: true, explanation: "풀이 설명", correct_choice: 1 } }, { ...diagnosis.items[1], result: null }] };
+
+test('완료된 진단은 리포트와 문제별 결과를 표시한다', async () => {
+  mocks.getDiagnosis.mockResolvedValue(completed); mocks.getReport.mockResolvedValue(report);
+  render(<DiagnosisView id="d" />);
+  expect(await screen.findByRole('heading', { name: '이해도 리포트' })).toBeTruthy();
+  expect(await screen.findByText('심화 문제는 아직 준비 중이에요')).toBeTruthy();
+  expect(screen.getByText('등식을 살펴봐요')).toBeTruthy();
+  expect(screen.getByText('맞았어요')).toBeTruthy();
+  expect(screen.getByText('풀지 않은 문제')).toBeTruthy();
+  expect(screen.queryByText(/\d+\s*(점|%)/)).toBeNull();
+});
+
+test('채점 실패는 답을 유지하며 안내한다', async () => {
+  mocks.submitStage.mockRejectedValue(new ApiError(503, { code: 'grading_failed' }));
+  mocks.getDiagnosis.mockResolvedValue({ ...diagnosis, items: [diagnosis.items[0]] });
+  render(<DiagnosisView id="d" />);
+  fireEvent.click(await screen.findByRole('radio', { name: /하나/ }));
+  fireEvent.click(screen.getByRole('button', { name: '제출하기' }));
+  fireEvent.click(screen.getByRole('button', { name: '제출할게요' }));
+  expect(await screen.findByText('채점을 하지 못했어요. 잠시 후 다시 제출해 주세요')).toBeTruthy();
+  expect((screen.getByRole('radio', { name: /하나/ }) as HTMLInputElement).checked).toBe(true);
+});
+
+test('답안 충돌이면 최신 답을 다시 읽는다', async () => {
+  const updated = { ...diagnosis, items: [{ ...diagnosis.items[0], answer: { selected_choice: 2, written_text: null, updated_at: 'later' } }] };
+  mocks.getDiagnosis.mockResolvedValueOnce({ ...diagnosis, items: [diagnosis.items[0]] }).mockResolvedValueOnce(updated);
+  mocks.submitStage.mockRejectedValue(new ApiError(409, { code: 'answers_changed' }));
+  render(<DiagnosisView id="d" />);
+  fireEvent.click(await screen.findByRole('radio', { name: /하나/ }));
+  fireEvent.click(screen.getByRole('button', { name: '제출하기' }));
+  fireEvent.click(screen.getByRole('button', { name: '제출할게요' }));
+  expect(await screen.findByText('답이 바뀌었어요. 다시 제출해 주세요')).toBeTruthy();
+  expect((screen.getByRole('radio', { name: /둘/ }) as HTMLInputElement).checked).toBe(true);
+});
+
+test('리포트 오류 후 다시 불러올 수 있다', async () => {
+  mocks.getDiagnosis.mockResolvedValue(completed);
+  mocks.getReport.mockRejectedValueOnce(new ApiError(503)).mockResolvedValueOnce(report);
+  render(<DiagnosisView id="d" />);
+  fireEvent.click(await screen.findByRole('button', { name: '다시 시도' }));
+  expect(await screen.findByText('등식을 살펴봐요')).toBeTruthy();
+  expect(mocks.getReport).toHaveBeenCalledTimes(2);
+});
+
+
+test('심화 제출 중 입력을 막고 완료되면 리포트를 연다', async () => {
+  const stage2: Diagnosis = { ...diagnosis, status: 'stage2', stage1_submitted_at: 'now', items: [...diagnosis.items, { ...diagnosis.items[0], id: 3, stage: 2, body: '심화 문제' }] };
+  mocks.getDiagnosis.mockResolvedValueOnce(stage2).mockResolvedValueOnce(completed);
+  mocks.getReport.mockResolvedValue(report);
+  let resolveSubmit: (value: { status: string; report_ready: boolean }) => void = () => {};
+  mocks.submitStage.mockImplementation(() => new Promise(resolve => { resolveSubmit = resolve; }));
+  render(<DiagnosisView id="d" />);
+  fireEvent.click(await screen.findByRole('radio', { name: /하나/ }));
+  fireEvent.click(screen.getByRole('button', { name: '제출하기' }));
+  fireEvent.click(screen.getByRole('button', { name: '제출할게요' }));
+  expect(await screen.findByText('채점하고 있어요')).toBeTruthy();
+  expect(screen.getByRole('radio', { name: /하나/ }).matches(':disabled')).toBe(true);
+  resolveSubmit({ status: 'completed', report_ready: true });
+  expect(await screen.findByText('등식을 살펴봐요')).toBeTruthy();
+  expect(mocks.submitStage).toHaveBeenCalledWith('d', 2);
+});
+
+test('2단계 중단 리포트 생성 뒤 갱신된 문제 결과를 보여 준다', async () => {
+  const aborted: Diagnosis = { ...diagnosis, status: 'aborted', abort_reason: 'expired', stage1_submitted_at: 'now', items: [{ ...diagnosis.items[0], stage: 2, result: null }] };
+  const updated: Diagnosis = { ...aborted, items: [{ ...aborted.items[0], answer: { selected_choice: 1, written_text: null, updated_at: 'now' }, result: { passed: true, explanation: '풀이 설명', correct_choice: 1 } }] };
+  mocks.getDiagnosis.mockResolvedValueOnce(aborted).mockResolvedValueOnce(updated); mocks.getReport.mockResolvedValue(report);
+  render(<DiagnosisView id="d" />);
+  expect(await screen.findByText('맞았어요')).toBeTruthy();
+  expect(screen.getByText('기간이 지나 중단된 진단이에요')).toBeTruthy();
 });

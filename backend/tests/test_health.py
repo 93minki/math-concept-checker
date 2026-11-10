@@ -39,3 +39,15 @@ def test_invalid_settings_stop_startup(monkeypatch: MonkeyPatch) -> None:
 
     with raises(ValidationError), TestClient(app):
         pass
+
+
+def test_app_info_logs_are_emitted() -> None:
+    import logging
+
+    from app.main import configure_app_logging
+
+    app_logger = configure_app_logging()
+    assert logging.getLogger("app.diagnoses.ai").isEnabledFor(logging.INFO)
+    assert len(app_logger.handlers) == 1
+    configure_app_logging()
+    assert len(app_logger.handlers) == 1

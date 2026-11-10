@@ -23,7 +23,7 @@ def test_valid_settings() -> None:
     settings = Settings(_env_file=None)
 
     assert str(settings.supabase_url) == VALID["SUPABASE_URL"] + "/"
-    assert settings.cors_origin == VALID["FRONTEND_ORIGIN"]
+    assert settings.cors_origins == [VALID["FRONTEND_ORIGIN"]]
     assert VALID["SUPABASE_SECRET_KEY"] not in repr(settings)
     assert VALID["SUPABASE_SECRET_KEY"] not in str(settings.supabase_secret_key)
 
@@ -70,10 +70,40 @@ def test_url_format(key: str, invalid: str, monkeypatch: pytest.MonkeyPatch) -> 
     assert invalid not in str(exc_info.value)
 
 
-def test_cors_origin_has_no_trailing_slash(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("FRONTEND_ORIGIN", "http://localhost:3000/")
+def test_cors_origins_are_trimmed_and_normalized(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv(
+        "FRONTEND_ORIGIN", "  http://localhost:3000/ , https://example.test:3000/  "
+    )
 
-    assert Settings(_env_file=None).cors_origin == "http://localhost:3000"
+    assert Settings(_env_file=None).cors_origins == [
+        "http://localhost:3000",
+        "https://example.test:3000",
+    ]
+
+
+@pytest.mark.parametrize(
+    "invalid",
+    [
+        "",
+        " ",
+        ",http://localhost:3000",
+        "http://localhost:3000,",
+        "http://localhost:3000, ,https://example.test",
+        "http://localhost:3000,ftp://bad.test",
+        "http://localhost:3000,not a url",
+    ],
+)
+def test_invalid_cors_origins_are_not_exposed(
+    invalid: str, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setenv("FRONTEND_ORIGIN", invalid)
+    with pytest.raises(ValidationError) as exc_info:
+        Settings(_env_file=None)
+    assert "FRONTEND_ORIGIN" in str(exc_info.value)
+    if invalid.strip():
+        assert invalid not in str(exc_info.value)
 
 
 def test_env_file_is_inside_backend_folder() -> None:

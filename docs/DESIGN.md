@@ -80,12 +80,14 @@
   - 이미 떠 있는 서버는 다시 쓰지 않는다. 포트를 쓰는 중이면 실패하므로 사용자 개발 서버를 끄고 실행한다
   - 브라우저 주소는 `http://localhost:3000`이다. 백엔드 CORS가 `FRONTEND_ORIGIN`만 허용하기 때문이다 (`docs/DESIGN.md` "인증 (F-01)")
 - 시험 계정: 설정 파일이 `process.loadEnvFile('.env.e2e')`로 읽는다 (Node.js 내장, [Node.js process.loadEnvFile](https://nodejs.org/api/process.html#processloadenvfilepath)). 값이 없으면 바로 실패한다.
+- 백엔드 webServer는 `AI_MODE=fake`로 띄운다. 실제 AI를 부르지 않는다 (`AGENTS.md` 5.4).
 - 시험 내용
   1. 로그인 (`profiles`가 없으면 가입 완료 단계를 거친다)
   2. 단원 선택 → 시작 → 풀이 → 다른 화면에 갔다가 돌아와 답 확인 → 제출
   3. 같은 단원을 다시 시작하면 직전 진단과 다른 문제가 나온다
   4. 1280px·360px 가로 넘침 없음
-  5. 교차 접근: 계정 B의 진단을 계정 A가 백엔드 API로 열거나 답을 쓰면 404. Supabase에 직접 요청해도 읽으면 0행, 쓰면 거부
+  5. 1단계 → (통과 항목이 있으면) 2단계 → 리포트·문제별 결과, 다시 열어도 같은 리포트 (AI 재호출 없음)
+  6. 교차 접근 (`gradings`·`reports` 포함): 계정 B의 진단을 계정 A가 백엔드 API로 열거나 답을 쓰면 404. Supabase에 직접 요청해도 읽으면 0행, 쓰면 거부
 - 삭제는 시도하지 않는다 (2026-11-10). 테스트가 원격 데이터를 지울 수 있는 경로를 만들지 않기 위해서다. 아무 역할에도 삭제 권한이 없다는 것은 원격 권한 조회(`has_table_privilege`)로 확인했다.
 - `frontend/vitest.config.mts`는 `e2e/**`와 같은 이유로 `e2e-dev/**`를 제외한다 (Playwright 파일).
 - 시험 기록 정리: **지우지 않는다.**
@@ -319,7 +321,7 @@
 - 단계 제출 시각을 `answers`가 아니라 `diagnoses`에 둔다. 단계 제출은 진단 단위로 한 번 일어나기 때문이다.
 - `diagnosis_items`와 `answers`에 `user_id`를 둔다. Supabase RLS 문서가 정책을 `(select auth.uid()) = user_id`로 쓰고 `user_id`에 인덱스를 두라고 안내한다 ([Row Level Security](https://supabase.com/docs/guides/database/postgres/row-level-security)). 다른 표를 거치는 정책보다 단순하다.
   - 진단의 사용자와 항목의 사용자가 다를 수 없게, 복합 외래 키 `(diagnosis_id, user_id) → diagnoses (id, user_id)`로 묶는다.
-- `gradings`와 `reports`는 다음 계획(F-07, F-08)에서 만든다.
+- `gradings`·`reports`는 아래에 있다 (2026-11-09 승인 초안, 2026-11-10 상세 승인).
 
 **`diagnoses`**
 | 열 | 내용 |
@@ -331,16 +333,14 @@
 | `status` | `stage1`(1단계 진행) / `stage2`(2단계 진행) / `completed`(완료) / `aborted`(중단) |
 | `abort_reason` | `expired`(기간 만료) / `restarted`(새로 시작). 중단일 때만 |
 | `started_at` | 시작 시각 |
-| `stage1_submitted_at` | 1단계 제출 시각. 2단계 제출 시각은 다음 계획에서 추가한다 |
+| `stage1_submitted_at`, `stage2_submitted_at` | 단계별 제출 시각 |
 | `completed_at`, `aborted_at` | 완료·중단 시각 |
 
 - 제약
   - 중단 ⇔ `abort_reason`·`aborted_at` 있음
   - 완료 ⇔ `completed_at` 있음
   - (사용자, 단원)마다 진행 중(`stage1`, `stage2`) 진단은 하나만 (부분 유일 인덱스)
-- 1단계 제출 뒤 상태
-  - 이번 계획에서는 `stage1`에 `stage1_submitted_at`이 있는 상태로 남는다. 다음 계획에서는 제출과 동시에 채점해 `stage2` 또는 `completed`로 바꾼다.
-  - 이 상태를 3일 자동 중단에서 빼는 이유: 제출한 진단을 "1단계 도중 중단"으로 바꾸면 리포트를 만들지 못한다 (F-06).
+- 단계 제출은 채점과 한 번에 처리한다. 제출하면 바로 `stage2` 또는 `completed`가 된다 (아래 "채점·2단계·리포트" DB 규칙). 2026-11-10 진단 1단계 계획에서 잠시 있던 "제출했지만 `stage1`" 상태와 그 만료 제외 규칙은 없앤다.
 
 **`diagnosis_items`**
 | 열 | 내용 |
@@ -353,6 +353,36 @@
 | `assessment_item_id` | 평가 항목 |
 
 - 유일 제약: (진단, 단계, 순서), (진단, 단계, 평가 항목)
+
+
+**`gradings`** — 출제 항목 하나에 채점 하나. 2026-11-09 승인 초안("점수, 통과 여부, 고른 보기의 오개념, 서술형 요소별 판단과 근거, 채점 AI 정보")을 열로 풀었다.
+| 열 | 내용 |
+|---|---|
+| `diagnosis_item_id`, `user_id` | 출제 항목과 사용자. 복합 외래 키로 항목의 사용자와 같게 묶는다 (`answers`와 같은 방식) |
+| `score` | 0~1 (`docs/SCORING.md` 1절) |
+| `passed` | 통과 여부 (2절) |
+| `selected_misconception_id` | 객관식에서 고른 보기에 연결된 오개념. 일반 오답이나 정답이면 비어 있다 |
+| `element_results` | 서술형만: 요소별 `{no, met, reason}` (jsonb) |
+| `detected_misconception_ids` | 서술형만: AI가 찾고 답안 인용이 확인된 오개념 |
+| `ai_model`, `prompt_version` | 서술형만: 채점 AI 정보 |
+| `graded_at` | 채점 시각 |
+
+- 한 번 저장하면 고치지 않는다. 학생은 자기 것 읽기만, 백엔드는 읽기·추가만 (수정·삭제 없음).
+
+**`reports`** — 진단 하나에 리포트 하나. 승인 초안("단원 이해도, 개념별 이해도와 단계, 추정 오개념, 리포트 문장, 작성 AI 정보")을 열로 풀었다.
+| 열 | 내용 |
+|---|---|
+| `diagnosis_id`, `user_id` | 진단과 사용자 (복합 외래 키) |
+| `unit_score`, `unit_stage` | 단원 이해도(0~1)와 단계. 측정한 개념이 없으면 비어 있다 |
+| `concepts` | 개념별 `{concept_id, name, score, stage, deep_not_attempted, deep_not_measured, not_measured, misconception_ids}` (jsonb) |
+| `misconception_ids` | 추정 오개념 전체 |
+| `text` | AI 문장 `{not_understood, misconception_explanations, next_steps}` (jsonb) |
+| `ai_model`, `prompt_version`, `created_at` | 작성 AI 정보 |
+
+- 리포트 행은 AI 문장이 있을 때만 만든다. AI가 실패하면 행이 없고, 화면을 열 때 다시 만든다 (사용자 결정 2026-11-10).
+- 권한은 `gradings`와 같다.
+
+
 
 **`answers`**
 | 열 | 내용 |
@@ -376,7 +406,8 @@
 **접근 권한**: 아래 "접근 권한 (RLS)"을 그대로 따른다
 | 대상 | 학생 (`authenticated`) | 백엔드 (`service_role`) |
 |---|---|---|
-| 세 표 모두 | 자기 행 읽기만 | 읽기·추가·수정 |
+| `diagnoses`, `diagnosis_items`, `answers` | 자기 행 읽기만 | 읽기·추가·수정 |
+| `gradings`, `reports` | 자기 행 읽기만 | 읽기·추가 (한 번 저장하면 고치지 않음) |
 
 - 학생이 `diagnosis_items`를 읽어도 정답은 보이지 않는다. 문제 은행 표(정답 여부가 있는 `question_choices`)는 여전히 학생이 읽을 수 없다.
 - 삭제 권한은 아무에게도 주지 않는다. 사용자를 지울 때만 연쇄로 지워진다. 탈퇴 방식(F-02)은 결정 대기다.
@@ -452,6 +483,83 @@
 - `$$` 별도 줄 수식은 지금 데이터에 없다. 지원하지 않고, 나오면 렌더 오류로 처리한다. 쓰게 되면 `docs/DESIGN.md` "수식 렌더링"의 줄바꿈 CSS와 함께 추가한다.
 - 승인 문제 렌더 확인은 일회성 실행으로 하고, 문제 원문을 저장소에 넣지 않는다.
 
+## 채점·2단계·리포트 (F-05 2단계, F-06, F-07, F-08, F-09. 사용자 승인 2026-11-10)
+
+결정 (사용자 결정 2026-11-10, 모두 에이전트 추천 채택): 제출 요청 안에서 바로 채점하고 AI 실패 시 아무것도 기록하지 않는다 / 2단계는 1단계와 같은 출제 규칙 / 리포트는 진단이 끝날 때 만들고 실패하면 열 때 다시 / 2단계 도중 중단 리포트는 처음 열 때 / 리포트의 배우지 않은 용어는 JSON, 나머지는 DB / E2E는 `AI_MODE=fake` / 사용자별 AI 호출 제한은 학생 공개 전 / 끝난 진단은 같은 주소에서 리포트와 문제별 결과.
+
+### DB 규칙 (함수 하나가 한 트랜잭션으로 처리, `service_role`만 실행)
+- `diagnosis_submit_stage1(user, diagnosis, gradings jsonb, stage2_question_ids uuid[])` — 기존 함수를 바꾼다.
+  1. 진단 행을 잠근다. 진행 중이 아니거나 답하지 않은 문제가 있으면 지금처럼 결과 코드를 돌려준다.
+  2. 1단계 항목 **모두**에 채점을 넣는다. 빠지거나 남는 항목이 있으면 전체를 취소한다.
+  3. 2단계 문제가 있으면:
+     - 각 문제가 승인된 고난이도이고, **1단계에서 통과한 평가 항목**의 문제인지 확인한다. 아니면 전체를 취소한다.
+     - 2단계 항목을 넣고 `stage2`로 바꾼다.
+  4. 2단계 문제가 없으면 `completed`로 바꾼다.
+- `diagnosis_submit_stage2(user, diagnosis, gradings jsonb)`: 2단계 항목 모두에 채점을 넣고, `stage2_submitted_at`을 기록하고, `completed`로 바꾼다.
+- `report_create(user, diagnosis, gradings jsonb, report jsonb)`
+  - 2단계 도중 중단된 진단이면, 2단계에서 답한 문제의 채점을 함께 넣는다 (F-06 "답한 문제까지로 채점").
+  - 1단계 도중 중단된 진단과 진행 중인 진단에는 리포트를 만들지 않는다.
+  - 이미 리포트가 있으면 아무것도 바꾸지 않는다.
+- 만료: 시작 후 3일이 지난 `stage1`·`stage2` 진단을 중단으로 바꾼다.
+  - 지난 계획에서 넣은 "1단계 제출한 진단 제외"는 뺀다. 이제 제출과 채점이 한 번에 처리되므로, 제출했는데 `stage1`로 남는 상태가 없다.
+- `answers_guard`는 바꾸지 않는다. 2단계를 제출하면 `completed`가 되므로 지금 규칙으로 막힌다.
+
+### 채점·이해도 계산 (`backend/app/diagnoses/scoring.py`, AI 없음)
+- `docs/SCORING.md` 1~6절을 그대로 따른다. 서술형 점수와 통과 여부는 기존 `score_written`을 쓰고, 객관식은 `score_choice`를 쓴다.
+- 평가 항목 점수에 경우 두 가지를 더한다.
+  - **사용자 결정 2026-11-10 "통과했지만 승인된 고난이도 문제가 없음":** 0.5, "기본 이해", `deep_not_measured` 표시. 3절 "2단계 미응답"과 점수는 같고 표시가 다르다. 이 경우를 `docs/SCORING.md` 3절 표에 한 줄로 추가한다.
+  - **2단계 도중 중단, 답한 고난이도:** 그 채점을 쓴다. 답하지 않았으면 3절 "고난이도 미응답"(0.5, `deep_not_attempted`)이다.
+- 표시 단계: 0.5 미만이면 아직 이해 못 함, 0.8 미만이면 기본 이해, 나머지는 깊이 이해.
+- 개념 이름은 DB `concepts.name`, 오개념 내용은 DB `misconceptions.content`에서 읽는다.
+
+### AI 연결
+- 설정 `AI_MODE`: `real`(기본) 또는 `fake`. 사용자 결정 2026-11-10
+  - `fake`는 서버 시작 로그에 경고를 남긴다.
+  - 가짜 채점은 모든 요소를 충족으로 보고 오개념은 없다고 돌려준다. 가짜 리포트는 정해진 문장이다.
+- 의존성 `get_ai`로 주입한다. 테스트는 `dependency_overrides`로 바꾼다 (`AGENTS.md` 5.4).
+- 서술형 채점 (`grade_written` 재사용)
+  - 문제, 모범 답안, 채점 요소, 관련 오개념을 DB에서 넘긴다 (사용자 결정 2026-11-10). 지금 JSON을 읽는 부분을 DB 데이터를 받게 바꾼다.
+  - "인용이 답안에 없으면 탐지 제외" 규칙은 그대로 둔다.
+- 리포트 (`write_report`, `validate_report` 재사용)
+  - "아직 배우지 않은 용어"는 `backend/data/concepts/*.json`에서 읽는다 (사용자 결정 2026-11-10).
+  - 검증에서 문제(숫자, 내부 ID, 배우지 않은 용어)가 나오면 한 번 다시 쓰게 한다. 두 번째도 문제가 있으면 실패로 처리한다 (사용자 결정 2026-11-10: 리포트 없음, 열 때 다시 시도). 근거 없음 (재시도 횟수).
+- 실제 AI 호출 비용과 토큰은 서버 로그에 남긴다. 값에는 답안 원문을 넣지 않는다.
+
+### API
+| 요청 | 하는 일 | 실패 |
+|---|---|---|
+| `POST /diagnoses/{id}/stages/1/submit` | 채점 → 2단계 출제 또는 완료(+리포트 시도) → `{status: 'stage2' \| 'completed'}` | 기존 코드 + **503 `grading_failed`** (AI 실패, 아무것도 기록되지 않음) |
+| `POST /diagnoses/{id}/stages/2/submit` | 2단계 채점 → 완료 → 리포트 시도 → `{status: 'completed'}` | 404, 409, 503 |
+| `GET /diagnoses/{id}` | 지금처럼 하되, 2단계 문제를 포함한다. 진단이 끝났으면(완료, 또는 2단계에서 중단) 문제마다 결과를 붙인다: 맞음/틀림·통과, 객관식 정답 번호, 해설, 서술형 모범 답안과 요소별 충족 이유 | — |
+| `GET /diagnoses/{id}/report` | 있으면 돌려주고, 없으면 만든다 (2단계 도중 중단 채점 포함) | 404, 409 `no_report`(1단계 도중 중단·진행 중), 503 `report_failed` |
+
+- **리포트 응답:** 단원 단계, 개념별(이름·단계·표시·추정 오개념 내용), 리포트 문장.
+  - 이해도 숫자와 내부 ID(개념·오개념 ID)는 응답에 넣지 않는다 (`docs/SCORING.md` 5절).
+  - 단계 기준을 정하는 데 숫자가 필요하면 서버에서만 쓴다.
+- 문제별 결과도 진단이 끝난 뒤에만 준다. 진행 중에는 정답·해설을 지금처럼 내려 주지 않는다.
+
+### 화면 (`/diagnoses/[id]`, 기존 풀이 화면 확장)
+- **제출 중:** "채점하고 있어요"를 보이고 버튼을 막는다.
+- **2단계로 넘어갈 때:** "기본 문제를 잘 풀었어요. 심화 문제 N개를 풀어 볼까요?" 안내 후, 2단계 문제를 같은 방식(한 문제씩, 자동 저장, 제출)으로 푼다.
+- **503일 때:** "채점을 하지 못했어요. 잠시 후 다시 제출해 주세요" (답은 그대로).
+- **완료 뒤:**
+  - 리포트를 보인다: 단원 단계, 개념별 단계, 이해하지 못한 부분, 추정 오개념("~일 수 있어요"), 다음 학습 방향.
+  - 아래에 문제별 결과를 보인다: 내 답, 맞음/틀림, 해설.
+  - 리포트를 만드는 동안 "리포트를 쓰고 있어요"를 보인다. 실패하면 "다시 시도" 버튼을 둔다.
+- 안내와 버튼은 화면 안에 보인다 (`toBeInViewport`).
+
+### 구현하며 정한 것 (2026-11-10, `docs/plans/2026-11-10_grading-report.md`)
+- **채점 중 답안 변경:** 채점(AI 약 4초) 사이에 답이 바뀌면 저장한 채점과 답이 어긋난다 (F-09 "당시 내용 그대로").
+  - 채점 결과마다 채점에 쓴 답안의 `answer_updated_at`을 DB 함수에 넘긴다.
+  - 세 함수(`diagnosis_submit_stage1`, `diagnosis_submit_stage2`, `report_create`)가 진단 행을 잠근 뒤 지금 `answers.updated_at`과 비교한다. 다르면 아무것도 쓰지 않고 `answers_changed`를 돌려준다.
+  - 백엔드는 409 `answers_changed`, 화면은 "답이 바뀌었어요. 다시 제출해 주세요"를 보이고 진단을 다시 읽는다.
+- **"필수:" 표시:** 승인 문제 채점 요소 14개 중 10개가 "필수:"로 시작한다 (생성 프롬프트 문제, `docs/PROGRESS.md`). 승인된 문제는 고치지 않으므로 학생용 응답에서만 앞의 "필수:", "(필수)", "[필수]"를 뗀다 (`student_description`).
+- **로그:** uvicorn은 자기 로거만 설정하므로, 앱 시작 때 `app` 로거의 INFO를 표준 오류로 내보낸다 (`configure_app_logging`).
+  - AI 호출 로그: 모델, 토큰, 지연, 비용, 성공 여부만 남긴다. 답안·리포트 문장은 남기지 않는다.
+  - 채점·리포트 실패: 진단 ID와 예외만 남긴다.
+  - `AI_MODE=fake`면 시작 때 경고를 남긴다.
+- **"출제할 때 AI를 호출하지 않는다" 확인 방법 (F-05):** 진단 패키지에 AI 채점이 들어오면서, import 금지 검사는 출제 코드(`selection.py`)로 좁혔다. 대신 "진단 시작 요청은 AI를 0번 부른다"는 동작 테스트를 둔다.
+
 ## 실행 환경 분리 (사용자 결정, 2026-11-10)
 
 - Supabase 프로젝트를 2개로 나눈다 (방식 A).
@@ -478,7 +586,18 @@
 ### 백엔드
 - 토큰 검증: 프로젝트가 ES256 비대칭 서명을 쓴다 (`/auth/v1/.well-known/jwks.json` 확인). PyJWT `PyJWKClient`로 공개 키를 받아 직접 검증한다. ES256만, `aud=authenticated`, `iss=<SUPABASE_URL>/auth/v1`, `exp`·`sub` 필수 ([JWT Signing Keys](https://supabase.com/docs/guides/auth/signing-keys)).
 - DB 쓰기: supabase-py + Secret key(`sb_secret_`). 클라이언트는 프로세스당 하나.
-- CORS: `FRONTEND_ORIGIN`만 허용, 끝 `/` 제거(`Settings.cors_origin`), 쿠키 미사용.
+- CORS: `FRONTEND_ORIGIN`에 적은 주소만 허용(쉼표로 여러 개, 각 끝 `/` 제거, `Settings.cors_origins`), 쿠키 미사용.
+
+### 개발 중 같은 와이파이의 폰에서 접속 (사용자 결정, 2026-11-10)
+- 개발용이다. 이메일 + 비밀번호 로그인만 대상이고 카카오 로그인은 뺀다 (사용자 지시). Supabase 설정은 바꾸지 않는다.
+- 막히던 곳과 설정
+  | 막히던 곳 | 설정 |
+  |---|---|
+  | Next.js 개발 서버가 `localhost` 밖에서 오는 개발 자원 요청을 막음 ([allowedDevOrigins](https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins)) | `frontend/.env.local`의 `DEV_ALLOWED_ORIGINS`에 PC IP (호스트 이름만) → `next.config.ts`가 `allowedDevOrigins`로 읽는다 |
+  | 프론트가 부르는 백엔드 주소 `localhost`는 폰 자신 | `NEXT_PUBLIC_API_BASE_URL=http://<PC IP>:8000` |
+  | 백엔드가 `127.0.0.1`에서만 받음 | 백엔드를 `--host 0.0.0.0`으로 실행 (같은 와이파이의 다른 기기에도 열린다) |
+  | CORS가 주소 하나만 허용 | `backend/.env`의 `FRONTEND_ORIGIN=http://localhost:3000,http://<PC IP>:3000` |
+- `pnpm test:e2e:dev`는 백엔드 주소를 `http://localhost:8000`으로 고정해 이 설정과 상관없이 돈다 (`frontend/playwright.dev.config.ts`).
 
 ### 카카오 로그인 설정
 - Supabase는 카카오에 항상 `account_email profile_image profile_nickname`을 요청한다 (2026-11-10 Supabase 인가 주소에서 확인). 카카오 동의항목에서 이 세 항목을 모두 켜지 않으면 KOE205 에러가 난다.

@@ -16,6 +16,7 @@ from app.ai.schemas import (
     ConceptData,
     Grading,
     GradingDraft,
+    Misconception,
     Question,
     QuestionDraft,
     ReportInput,
@@ -286,11 +287,15 @@ def grade_written(
     target_id: str = "",
     attempt: int = 1,
     hooks: CallHooks | None = None,
+    misconceptions: list[Misconception] | None = None,
 ) -> GradedAnswer:
-    concept = load_concept(question.concept_id.split("-C")[0])
-    related = [
-        m for m in concept.misconceptions if question.concept_id in m.concept_ids
-    ]
+    if misconceptions is None:
+        concept = load_concept(question.concept_id.split("-C")[0])
+        related = [
+            m for m in concept.misconceptions if question.concept_id in m.concept_ids
+        ]
+    else:
+        related = misconceptions
     prompt = load_prompt(
         "grade_written",
         {
@@ -391,10 +396,14 @@ def write_report(
     *,
     target_id: str = "",
     hooks: CallHooks | None = None,
+    concept_data: ConceptData | None = None,
+    attempt: int = 1,
 ) -> WrittenReport:
     if not report_input.concepts:
         raise ValueError("Report input needs concepts")
-    concept = load_concept(report_input.concepts[0].concept_id.split("-C")[0])
+    concept = concept_data or load_concept(
+        report_input.concepts[0].concept_id.split("-C")[0]
+    )
     prompt = load_prompt(
         "write_report",
         {
@@ -416,7 +425,9 @@ def write_report(
             ),
         },
     )
-    result, entry = _invoke(provider, prompt, ReportText, hooks, "report", target_id, 1)
+    result, entry = _invoke(
+        provider, prompt, ReportText, hooks, "report", target_id, attempt
+    )
     issues = validate_report(result.parsed, report_input, concept)
     _record(hooks, entry, [f"{issue.code}: {issue.message}" for issue in issues])
     return WrittenReport(result.parsed, issues)
