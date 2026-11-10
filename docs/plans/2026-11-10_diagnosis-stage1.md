@@ -3,9 +3,9 @@
 - 시작일: 2026-11-10
 - 대상 기능: F-04, F-05 (진단 출제 부분), F-06, F-09 (저장 부분)
 - 상태: 완료
-- 이슈: #9
+- 이슈: #9 (https://github.com/93minki/math-concept-checker/issues/9)
 - 브랜치: plan/2026-11-10_diagnosis-stage1
-- PR: (계획을 끝낼 때 링크)
+- PR: #10 (https://github.com/93minki/math-concept-checker/pull/10)
 - 마일스톤: M2 문제 은행·진단
 
 ## 목표
