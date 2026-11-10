@@ -50,3 +50,24 @@
 - 원인 분류: 테스트 오류
 - 원인: 오류 문서 링크에 포함되는 일반 문자열 `https://`를 비밀 입력값으로 사용해 검사 범위가 겹침
 - 해결: 문서 URL과 겹치지 않는 고유한 잘못된 URL(`https://bad host`)로 검사
+
+### 2026-11-10 — frontend/src/app/auth-pages.test.tsx:카카오·회원가입
+- 작업: PLAN 7~9단계 프론트엔드 인증, F-01
+- 증상: 앞 테스트의 화면이 남아 카카오 버튼이 중복되고, 회원가입 입력이 다른 폼에 들어감
+- 원인 분류: 테스트 오류
+- 원인: Vitest 환경에서 React Testing Library 정리가 자동 실행되지 않아 테스트 간 DOM이 공유됨
+- 해결: 각 테스트 뒤 `cleanup()` 실행
+
+### 2026-11-10 — frontend/src/app/signup/complete/complete-signup.test.tsx:다시 시도
+- 작업: PLAN 7~9단계 프론트엔드 인증, F-01
+- 증상: 재시도 테스트에서 백엔드 가짜 호출 2회 예상 대신 3회 발생
+- 원인 분류: 테스트 오류
+- 원인: 이전 테스트의 화면이 남고 router mock이 렌더마다 새 객체를 반환해 effect가 재실행됨
+- 해결: 각 테스트 뒤 `cleanup()` 실행, 안정적인 router 메서드를 effect 의존성으로 사용
+
+### 2026-11-10 — frontend/e2e/build-secrets.spec.ts:빌드 결과물에 비밀 키 문자열이 없다
+- 작업: PLAN 7~9단계 프론트엔드 인증, F-01
+- 증상: E2E 데스크톱·모바일에서 `SUPABASE_SECRET_KEY`, `sb_secret_` 문자열 발견
+- 원인 분류: 테스트 오류
+- 원인: 새 Supabase JS 의존성의 자체 키 형식 검사 코드(`GoTrueAdminApi.ts`, `FunctionsClient.ts`, `fetch.ts`)가 빌드 산출물에 포함되어 일반 문자열 검사에 걸림. 실제 키 값 노출 증거는 없음
+- 해결: 사용자 승인 후, 고유 가짜 secret을 E2E webServer 환경에 넣고 `.next` 전체에서 그 값이 없는지 검사. 라이브러리의 일반 문자열은 검사 대상에서 제외

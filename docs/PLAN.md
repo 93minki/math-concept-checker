@@ -122,6 +122,12 @@
   - 남은 위험: 실제 저장소(`SupabaseProfiles`)의 쓰기 경로(insert·update)는 자동 테스트가 없다 (원격 호출 금지). 10단계 수동 확인에서 가입 후 `profiles` 상태로 확인한다. JWKS를 못 받을 때도 401로 응답한다(503 아님).
   - F-11 자리: `backend/app/profiles.py`의 `check_signup_requirements` (가입 완료 직전 호출).
 
+- 2026-11-10: 7~9단계 완료 (Codex, 한 번에) + Claude 검수. `@supabase/ssr` 0.12.7, `@supabase/supabase-js` 2.119.0 (공급망 예외 없음).
+  - 보호 규칙 두 겹: `src/proxy.ts`는 로그인 여부만(`getClaims`), `src/app/(protected)/layout.tsx`가 자기 `profiles` 행으로 가입 완료 여부 확인.
+  - 진행 중 Codex 질문: Supabase JS 라이브러리 자체에 `sb_secret_`·`SUPABASE_SECRET_KEY` 문자열이 있어 4단계 빌드 비밀 검사가 실패. Claude가 라이브러리 코드에서 직접 확인 후, 검사를 "고유 가짜 secret 값(canary)을 빌드 환경에 넣고 그 값이 `.next`에 없는지"로 바꾸도록 승인 (AGENTS.md 3.7).
+  - 검수에서 고친 것: proxy 응답에 `Cache-Control: private, no-store` 추가 (Supabase SSR 가이드: 갱신된 세션 쿠키가 공유 캐시로 다른 사용자에게 가지 않게) + E2E 확인. 로그인 성공 시 매번 `/signup/complete`를 거쳐 백엔드를 다시 부르던 것을 `/`로 보내고 보호 레이아웃이 필요할 때만 보내도록 변경 + 성공 경로 단위 테스트 추가.
+  - 검사: 프론트 Vitest 27, Playwright 10 (1280·360), 백엔드 pytest 29, 나머지 검사 모두 통과.
+
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
 - 끝내지 못한 일:

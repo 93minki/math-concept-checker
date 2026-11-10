@@ -28,6 +28,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
 }
 
 * {
@@ -45,4 +48,31 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.auth-card {
+  width: min(100%, 420px);
+  display: grid;
+  gap: 16px;
+}
+
+.auth-card form {
+  display: grid;
+  gap: 10px;
+}
+
+.auth-card input,
+.auth-card button {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.auth-card button {
+  cursor: pointer;
+}
+
+.auth-card p {
+  line-height: 1.5;
 }
