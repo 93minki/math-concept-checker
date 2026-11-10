@@ -225,6 +225,7 @@
 | 4 | 빌드 | `pnpm build` | `next build` |
 | 5 | E2E·화면 테스트 | `pnpm test:e2e` | `playwright test` (데스크톱 1280px, 모바일 360px 두 가지로 실행) |
 
+- 로그인 흐름 E2E `pnpm test:e2e:dev` (프론트엔드)는 개발 Supabase 프로젝트를 쓴다. 5.3 루프에는 넣지 않고, 화면을 바꾼 단계를 마칠 때와 계획을 끝낼 때 실행한다. 설계는 `docs/DESIGN.md` "로그인 흐름 E2E".
 - 바꾼 쪽만이 아니라 **백엔드와 프론트엔드 검사를 모두** 실행한다. 한쪽 변경이 다른 쪽을 깨뜨릴 수 있다.
 - 검사 설정(`pyproject.toml`의 ruff·mypy 설정, `eslint.config.mjs`, `tsconfig.json`, `vitest`·`playwright` 설정)을 느슨하게 바꾸는 것은 3.7의 "검사를 통과시키려고 하지 않는 일"에 해당한다.
 
@@ -247,6 +248,7 @@
   - 비동기 서버 컴포넌트는 Vitest로 테스트할 수 없으므로 Playwright로 테스트한다. (근거: Next.js 테스트 가이드, `docs/DESIGN.md` "검사 도구")
   - 화면이 있는 기능은 Playwright로 360px에서 페이지 가로 넘침이 없는지 검사한다 (4.1).
 - 테스트에서 실제 AI API와 원격 Supabase를 호출하지 않는다. FastAPI `dependency_overrides` 등으로 가짜로 바꾼다. (외부 호출은 비용이 들고 3.2의 확인 대상이다.)
+  - 예외 (사용자 결정, 2026-11-10): 로그인 흐름 E2E(`pnpm test:e2e:dev`)만 개발 Supabase 프로젝트의 시험 계정 A·B로 원격에 접속한다. 운영 프로젝트와 실제 AI는 부르지 않는다.
 - 코드 스타일, 세부 폴더 구조는 프로젝트를 만들 때 추가한다.
 
 ---

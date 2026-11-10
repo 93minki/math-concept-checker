@@ -32,3 +32,8 @@ test("proxy 응답은 공유 캐시에 저장되지 않는다", async ({ request
   expect(redirect.status()).toBeLessThan(400);
   expect(redirect.headers()["cache-control"]).toContain("no-store");
 });
+
+test("로그아웃 사용자는 진단 화면에서 로그인으로 이동한다", async ({ page }) => {
+  await page.goto("/diagnoses/00000000-0000-4000-8000-000000000000");
+  await expect(page).toHaveURL(/\/login$/);
+});

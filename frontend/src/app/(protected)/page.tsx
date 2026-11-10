@@ -1,11 +1,6 @@
 import HomeActions from "./home-actions";
+import UnitSelection from "./unit-selection";
 
 export default function Home() {
-  return (
-    <main className="auth-card">
-      <h1>수학 개념 체커</h1>
-      <p>로그인했어요.</p>
-      <HomeActions />
-    </main>
-  );
+  return <main className="study-page"><h1>수학 개념 체커</h1><HomeActions /><UnitSelection /></main>;
 }

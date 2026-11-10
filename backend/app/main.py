@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.types import ASGIApp
 
 from app.auth import AuthUser, get_current_user
+from app.diagnoses.router import router as diagnoses_router
 from app.profiles import ProfilesRepository, get_profiles
 from app.settings import get_settings
 
@@ -22,7 +23,7 @@ class ConfiguredCORSMiddleware(CORSMiddleware):
         super().__init__(
             app,
             allow_origins=[get_settings().cors_origin],
-            allow_methods=["GET", "POST"],
+            allow_methods=["GET", "POST", "PUT"],
             allow_headers=["Authorization", "Content-Type"],
             allow_credentials=False,
         )
@@ -30,6 +31,7 @@ class ConfiguredCORSMiddleware(CORSMiddleware):
 
 app = FastAPI(lifespan=lifespan)
 app.add_middleware(ConfiguredCORSMiddleware)
+app.include_router(diagnoses_router)
 
 
 @app.get("/health")
