@@ -15,6 +15,7 @@ class BankRepository(Protocol):
     def insert(self, table: str, row: Row) -> None: ...
     def update(self, table: str, row: Row, filters: Row) -> list[Row]: ...
     def insert_question(self, payload: Row) -> None: ...
+    def import_question(self, payload: Row) -> None: ...
 
 
 class SupabaseBank:
@@ -51,6 +52,9 @@ class SupabaseBank:
 
     def insert_question(self, payload: Row) -> None:
         self.client.rpc("bank_insert_question", {"payload": payload}).execute()
+
+    def import_question(self, payload: Row) -> None:
+        self.client.rpc("bank_import_question", {"payload": payload}).execute()
 
 
 @lru_cache
