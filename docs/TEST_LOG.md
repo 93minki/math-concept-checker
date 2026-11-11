@@ -183,3 +183,10 @@
 - 원인 분류: 기타 (화면 CSS)
 - 원인: 모달 `<dialog>`에 `stack` 클래스(`display: grid`)를 붙여, 닫힌 dialog의 기본 `display: none`을 덮어썼다. 닫힌 모달이 화면 위에 떠서 다른 링크·버튼을 가렸다. Vitest(jsdom)는 레이아웃을 계산하지 않아 잡지 못했다.
 - 해결: `stack`을 빼고 `.submit-dialog[open]`일 때만 flex로 배치.
+
+### 2026-11-11 — frontend/e2e-dev/flow.spec.ts:진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는다 [mobile]
+- 작업: 중2 전체, F-06 (문제 은행 확장 중 계획 종료 검사)
+- 증상: `flow.spec.ts:81` `expect((await forward.boundingBox())?.y).toBe(navBefore)` 실패. Expected 995.28, Received 732.28. 2단계(심화) 첫 문제, 360×800 화면.
+- 원인 분류: 테스트 오류
+- 원인: "답할 때 이동 줄이 움직이지 않는다" 검사가 화면 기준 좌표(`boundingBox().y`)를 비교한다. 2단계 안내 문구와 긴 문장제 때문에 "다음" 버튼이 처음부터 화면 아래(y=995 > 화면 높이 800)에 있었고, `radio.check()`가 보기를 누르려고 화면을 263px 스크롤해 좌표가 바뀌었다. 이동 줄은 문서 안에서 움직이지 않았다. 지금까지는 짧은 문제만 걸려 스크롤이 생기지 않아 드러나지 않았다. 이 계획에서는 프론트엔드 코드를 바꾸지 않았다.
+- 해결: 사용자 허락(2026-11-11)으로 테스트를 문서 기준 위치(`boundingBox().y + window.scrollY`) 비교로 고침 (`documentY`, Cursor 위임, Opus 검수). 비교는 `toBe` 그대로. 위치를 못 읽으면 실패하게 함 (예전에는 `undefined === undefined`로 통과할 수 있었음). 재실행: 5.2 검사 모두 통과, `pnpm test:e2e:dev` 3개 통과.
