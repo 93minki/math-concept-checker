@@ -14,7 +14,10 @@ describe("decideRedirect", () => {
     ["/signup", true, "/"],
     ["/auth/callback", true, null],
   ];
-  it.each(cases)("%s with login=%s redirects to %s", (path, loggedIn, target) => {
-    expect(decideRedirect(path, loggedIn)).toBe(target);
-  });
+  it.each(cases)(
+    "%s with login=%s redirects to %s",
+    (path, loggedIn, target) => {
+      expect(decideRedirect(path, loggedIn)).toBe(target);
+    },
+  );
 });

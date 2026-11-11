@@ -20,8 +20,10 @@ export default function HomeActions() {
     }
   }
 
-  return <>
-    <button onClick={signOut}>로그아웃</button>
-    {error && <p role="alert">{error}</p>}
-  </>;
+  return (
+    <>
+      <button onClick={signOut}>로그아웃</button>
+      {error && <p role="alert">{error}</p>}
+    </>
+  );
 }

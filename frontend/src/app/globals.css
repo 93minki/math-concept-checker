@@ -77,20 +77,86 @@ a {
   line-height: 1.5;
 }
 
-.study-page { width: min(100%, 700px); display: grid; gap: 20px; overflow-wrap: anywhere; }
-.stack { display: grid; gap: 12px; min-width: 0; }
-.unit-card { border: 1px solid #888; border-radius: 12px; padding: 16px; }
-.study-page button, .study-page input, .study-page textarea, .study-link { min-height: 44px; padding: 10px 12px; font: inherit; }
-.study-page button { cursor: pointer; }
-.study-page button:disabled { cursor: default; }
-.study-link { display: inline-flex; align-items: center; text-decoration: underline; }
-.study-page textarea { width: 100%; min-height: 140px; resize: vertical; }
-.study-page fieldset { border: 0; }
-.choice { display: flex; gap: 10px; align-items: center; min-height: 44px; border: 1px solid #888; border-radius: 8px; padding: 8px; cursor: pointer; }
-.choice input { min-height: 0; width: 20px; height: 20px; flex: none; }
-.button-row { display: flex; gap: 12px; }
-.button-row button { flex: 1; }
-.math-text { white-space: pre-line; overflow-wrap: anywhere; }
-.katex-display > .katex { white-space: normal; }
-.question { line-height: 1.6; min-width: 0; overflow-wrap: anywhere; }
-.question, .choice > .math-text { min-width: 0; overflow-x: auto; }
+.study-page {
+  width: min(100%, 700px);
+  display: grid;
+  gap: 20px;
+  overflow-wrap: anywhere;
+}
+.stack {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.unit-card {
+  border: 1px solid #888;
+  border-radius: 12px;
+  padding: 16px;
+}
+.study-page button,
+.study-page input,
+.study-page textarea,
+.study-link {
+  min-height: 44px;
+  padding: 10px 12px;
+  font: inherit;
+}
+.study-page button {
+  cursor: pointer;
+}
+.study-page button:disabled {
+  cursor: default;
+}
+.study-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: underline;
+}
+.study-page textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+}
+.study-page fieldset {
+  border: 0;
+}
+.choice {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 44px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+.choice input {
+  min-height: 0;
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+.button-row {
+  display: flex;
+  gap: 12px;
+}
+.button-row button {
+  flex: 1;
+}
+.math-text {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.katex-display > .katex {
+  white-space: normal;
+}
+.question {
+  line-height: 1.6;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.question,
+.choice > .math-text {
+  min-width: 0;
+  overflow-x: auto;
+}

@@ -1,9 +1,5 @@
 import { expect, test } from "vitest";
-import {
-  parsePublicEnv,
-  PublicEnvError,
-  type RawPublicEnv,
-} from "./env";
+import { parsePublicEnv, PublicEnvError, type RawPublicEnv } from "./env";
 
 const validRaw: RawPublicEnv = {
   NEXT_PUBLIC_SUPABASE_URL: "https://abcdefghijklmnopqrst.supabase.co",

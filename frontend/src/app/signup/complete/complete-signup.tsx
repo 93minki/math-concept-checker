@@ -12,13 +12,18 @@ export default function CompleteSignup() {
 
   const complete = useCallback(async () => {
     try {
-      const { data: { session } } = await createClient().auth.getSession();
+      const {
+        data: { session },
+      } = await createClient().auth.getSession();
       if (!session) throw new Error("No session");
       // F-11: 연령 확인·보호자 동의 단계는 여기(백엔드 check_signup_requirements)에 들어간다.
-      const response = await fetch(`${publicEnv.NEXT_PUBLIC_API_BASE_URL}/signup/complete`, {
-        method: "POST",
-        headers: { Authorization: `Bearer ${session.access_token}` },
-      });
+      const response = await fetch(
+        `${publicEnv.NEXT_PUBLIC_API_BASE_URL}/signup/complete`,
+        {
+          method: "POST",
+          headers: { Authorization: `Bearer ${session.access_token}` },
+        },
+      );
       if (!response.ok) throw new Error("Signup incomplete");
       push("/");
       refresh();
@@ -40,11 +45,16 @@ export default function CompleteSignup() {
       {error && (
         <>
           <p role="alert">가입을 마무리하지 못했어요. 다시 시도해 주세요.</p>
-          <button type="button" onClick={() => {
-            setBusy(true);
-            setError(false);
-            void complete();
-          }}>다시 시도</button>
+          <button
+            type="button"
+            onClick={() => {
+              setBusy(true);
+              setError(false);
+              void complete();
+            }}
+          >
+            다시 시도
+          </button>
         </>
       )}
     </main>

@@ -15,16 +15,36 @@ export async function login(page: Page, email: string, password: string) {
   await page.getByLabel("비밀번호").fill(password);
   await page.getByRole("button", { name: "로그인", exact: true }).click();
   await expect(page).toHaveURL("http://localhost:3000/", { timeout: 30_000 });
-  await expect(page.getByRole("heading", { name: "진단할 단원을 골라요" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "진단할 단원을 골라요" }),
+  ).toBeVisible();
 }
 
 export async function tokenFor(email: string, password: string) {
-  const client = createClient(requiredEnv("NEXT_PUBLIC_SUPABASE_URL"), requiredEnv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY"), { auth: { persistSession: false, autoRefreshToken: false } });
-  const { data, error } = await client.auth.signInWithPassword({ email, password });
-  if (error || !data.session || !data.user) throw new Error("시험 계정 로그인 실패");
-  return { client, accessToken: data.session.access_token, userId: data.user.id };
+  const client = createClient(
+    requiredEnv("NEXT_PUBLIC_SUPABASE_URL"),
+    requiredEnv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY"),
+    { auth: { persistSession: false, autoRefreshToken: false } },
+  );
+  const { data, error } = await client.auth.signInWithPassword({
+    email,
+    password,
+  });
+  if (error || !data.session || !data.user)
+    throw new Error("시험 계정 로그인 실패");
+  return {
+    client,
+    accessToken: data.session.access_token,
+    userId: data.user.id,
+  };
 }
 
 export async function noHorizontalOverflow(page: Page) {
-  expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(0);
+  expect(
+    await page.evaluate(
+      () =>
+        document.documentElement.scrollWidth -
+        document.documentElement.clientWidth,
+    ),
+  ).toBeLessThanOrEqual(0);
 }
