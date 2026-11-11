@@ -1,0 +1,3550 @@
+{
+  "_source": "docs/[별책8] 수학과 교육과정.pdf 각 영역의 '용어와 기호로 ~를 다룬다'와 '~ 용어는 교수·학습 상황에서 사용할 수 있다'. page는 PDF 쪽(인쇄 쪽 아님). 기호와 'x좌표·y좌표·x축·y축'(문장에서 $x$좌표처럼 수식과 붙어 쓰여 '좌표'·'좌표축'으로 검사)은 뺐다. 기호는 PDF 글자 추출이 깨졌다(금지 표기는 개념 데이터 forbidden_notation). 중학교 용어의 standard는 원문에 없는 연결로 에이전트 추론이다(사용자 승인 필요). note가 있는 연결은 근거가 약하다.",
+  "_rules": "docs/DESIGN.md '교육과정 용어표와 금지 목록'. 같은 용어가 초등에도 있으면 항상 허용, 중학과 고등에 모두 있으면 중학 연결을 따른다. check=false면 코드 검사에서 빼고 프롬프트로만 피하게 한다.",
+  "elementary": [
+    {
+      "term": "덧셈",
+      "area": "1~2학년 수와 연산",
+      "page": 17
+    },
+    {
+      "term": "뺄셈",
+      "area": "1~2학년 수와 연산",
+      "page": 17
+    },
+    {
+      "term": "곱셈",
+      "area": "1~2학년 수와 연산",
+      "page": 17
+    },
+    {
+      "term": "짝수",
+      "area": "1~2학년 수와 연산",
+      "page": 17
+    },
+    {
+      "term": "홀수",
+      "area": "1~2학년 수와 연산",
+      "page": 17
+    },
+    {
+      "term": "삼각형",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "사각형",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "원",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "꼭짓점",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "변",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "시",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "분",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "약",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "cm",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "m",
+      "area": "1~2학년 도형과 측정",
+      "page": 20
+    },
+    {
+      "term": "표",
+      "area": "1~2학년 자료와 가능성",
+      "page": 22
+    },
+    {
+      "term": "그래프",
+      "area": "1~2학년 자료와 가능성",
+      "page": 22
+    },
+    {
+      "term": "나눗셈",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "몫",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "나머지",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "나누어떨어진다",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "분수",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "분모",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "분자",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "단위분수",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "진분수",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "가분수",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "대분수",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "자연수",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "소수",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "소수점",
+      "area": "3~4학년 수와 연산",
+      "page": 24
+    },
+    {
+      "term": "직선",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "선분",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "반직선",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "각",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "직각",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "예각",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "둔각",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "수직",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "수선",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "평행",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "평행선",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "원의 중심",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "반지름",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "지름",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "이등변삼각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "정삼각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "직각삼각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "예각삼각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "둔각삼각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "직사각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "정사각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "사다리꼴",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "평행사변형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "마름모",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "다각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "정다각형",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "대각선",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "초",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "도",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "mm",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "km",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "L",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "mL",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "g",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "kg",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "t",
+      "area": "3~4학년 도형과 측정",
+      "page": 28
+    },
+    {
+      "term": "그림그래프",
+      "area": "3~4학년 자료와 가능성",
+      "page": 29
+    },
+    {
+      "term": "막대그래프",
+      "area": "3~4학년 자료와 가능성",
+      "page": 29
+    },
+    {
+      "term": "꺾은선그래프",
+      "area": "3~4학년 자료와 가능성",
+      "page": 29
+    },
+    {
+      "term": "이상",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "이하",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "초과",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "미만",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "올림",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "버림",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "반올림",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "약수",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "공약수",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "최대공약수",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "배수",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "공배수",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "최소공배수",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "약분",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "통분",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "기약분수",
+      "area": "5~6학년 수와 연산",
+      "page": 32
+    },
+    {
+      "term": "비",
+      "area": "5~6학년 변화와 관계",
+      "page": 33
+    },
+    {
+      "term": "기준량",
+      "area": "5~6학년 변화와 관계",
+      "page": 33
+    },
+    {
+      "term": "비교하는 양",
+      "area": "5~6학년 변화와 관계",
+      "page": 33
+    },
+    {
+      "term": "비율",
+      "area": "5~6학년 변화와 관계",
+      "page": 33
+    },
+    {
+      "term": "백분율",
+      "area": "5~6학년 변화와 관계",
+      "page": 33
+    },
+    {
+      "term": "비례식",
+      "area": "5~6학년 변화와 관계",
+      "page": 33
+    },
+    {
+      "term": "비례배분",
+      "area": "5~6학년 변화와 관계",
+      "page": 33
+    },
+    {
+      "term": "합동",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "대칭",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "대응점",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "대응변",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "대응각",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "선대칭도형",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "점대칭도형",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "대칭축",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "대칭의 중심",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "직육면체",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "정육면체",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "면",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "모서리",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "밑면",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "옆면",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "겨냥도",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "전개도",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "각기둥",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "각뿔",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "원기둥",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "원뿔",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "구",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "모선",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "가로",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "세로",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "밑변",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "높이",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "원주",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "원주율",
+      "area": "5~6학년 도형과 측정",
+      "page": 35
+    },
+    {
+      "term": "평균",
+      "area": "5~6학년 자료와 가능성",
+      "page": 37
+    },
+    {
+      "term": "띠그래프",
+      "area": "5~6학년 자료와 가능성",
+      "page": 37
+    },
+    {
+      "term": "원그래프",
+      "area": "5~6학년 자료와 가능성",
+      "page": 37
+    },
+    {
+      "term": "가능성",
+      "area": "5~6학년 자료와 가능성",
+      "page": 37
+    }
+  ],
+  "middle": [
+    {
+      "term": "소수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-01",
+      "teaching_only": false,
+      "check": true,
+      "note": "초등 '소수'(소수점 수)와 글자가 같아 초등 허용이 우선"
+    },
+    {
+      "term": "합성수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "거듭제곱",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "지수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "밑",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-01",
+      "teaching_only": false,
+      "check": false,
+      "exclude_reason": "한 글자"
+    },
+    {
+      "term": "소인수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "소인수분해",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "서로소",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "양수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "음수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "양의 정수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "음의 정수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "정수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "양의 유리수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "음의 유리수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "유리수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "양의 부호",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "음의 부호",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "수직선",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "절댓값",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-04",
+      "teaching_only": false,
+      "check": true,
+      "note": "대소 관계 판단에 쓰여 9수01-04로 둠. 9수01-03일 수도 있음"
+    },
+    {
+      "term": "교환법칙",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "결합법칙",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "분배법칙",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "역수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "유한소수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-06",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "무한소수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-06",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "순환소수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-06",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "순환마디",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-06",
+      "teaching_only": false,
+      "check": true,
+      "note": "원문 '순환 마디'"
+    },
+    {
+      "term": "제곱근",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "근호",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "무리수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-08",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "실수",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-08",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "분모의 유리화",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-10",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "유리화",
+      "area": "수와 연산",
+      "page": 40,
+      "standard": "9수01-10",
+      "teaching_only": false,
+      "check": true,
+      "note": "'분모의 유리화'의 줄임 ('유리화하면' 같은 문장을 잡기 위해 추가, 에이전트 추가)"
+    },
+    {
+      "term": "대입",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "다항식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "항",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-02",
+      "teaching_only": false,
+      "check": false,
+      "exclude_reason": "한 글자, 중학 정식 용어"
+    },
+    {
+      "term": "단항식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "상수항",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "계수",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "차수",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "일차식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "동류항",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "등식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "방정식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "미지수",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "해",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-03",
+      "teaching_only": false,
+      "check": false,
+      "exclude_reason": "한 글자, 중학 정식 용어"
+    },
+    {
+      "term": "근",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-03",
+      "teaching_only": false,
+      "check": false,
+      "exclude_reason": "한 글자, 중학 정식 용어"
+    },
+    {
+      "term": "항등식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "이항",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-03",
+      "teaching_only": false,
+      "check": true,
+      "note": "승인된 9수02-03 개념 데이터의 정식 용어와 맞춤 (9수02-04일 수도 있음)"
+    },
+    {
+      "term": "일차방정식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-04",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "좌표",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "순서쌍",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "원점",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "좌표축",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "좌표평면",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "제1사분면",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "제2사분면",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "제3사분면",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "제4사분면",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "그래프",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-06",
+      "teaching_only": false,
+      "check": true,
+      "note": "초등 용어이기도 해 항상 허용"
+    },
+    {
+      "term": "정비례",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "반비례",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "전개",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-10",
+      "teaching_only": false,
+      "check": true,
+      "note": "'(단항식)×(다항식)'에서 처음 쓴다고 봄. 9수02-19일 수도 있음"
+    },
+    {
+      "term": "부등식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-11",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "일차부등식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-12",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "연립방정식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-13",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "변수",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-14",
+      "teaching_only": false,
+      "check": true,
+      "note": "함수 개념과 함께 다룬다고 봄. 9수02-01일 수도 있음"
+    },
+    {
+      "term": "함수",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-14",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "함숫값",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-14",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "일차함수",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-15",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "평행이동",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-15",
+      "teaching_only": false,
+      "check": true,
+      "note": "일차함수 그래프를 그릴 때 쓴다고 봄"
+    },
+    {
+      "term": "기울기",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-16",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "절편",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-16",
+      "teaching_only": false,
+      "check": true,
+      "note": "원문 'x절편, y절편'. 문장에서는 $x$절편처럼 수식과 붙어 쓰여 '절편'으로 검사한다"
+    },
+    {
+      "term": "직선의 방정식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-17",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "인수",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-19",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "인수분해",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-19",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "완전제곱식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-19",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "이차방정식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-20",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "중근",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-20",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "근의 공식",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-20",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "이차함수",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-21",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "포물선",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-22",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "축",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-22",
+      "teaching_only": false,
+      "check": false,
+      "exclude_reason": "한 글자"
+    },
+    {
+      "term": "꼭짓점",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-22",
+      "teaching_only": false,
+      "check": true,
+      "note": "초등 용어이기도 해 항상 허용"
+    },
+    {
+      "term": "최댓값",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-22",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "최솟값",
+      "area": "변화와 관계",
+      "page": 42,
+      "standard": "9수02-22",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "교점",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "교선",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "두 점 사이의 거리",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "중점",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "수직이등분선",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "꼬인 위치",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "교각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "맞꼭지각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "평각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "직교",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "수선의 발",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "엇각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "동위각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "작도",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "대변",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-04",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "대각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-04",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "삼각형의 합동 조건",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-04",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "내각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "외각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-05",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "부채꼴",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-06",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "중심각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-06",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "호",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-06",
+      "teaching_only": false,
+      "check": false,
+      "exclude_reason": "한 글자"
+    },
+    {
+      "term": "현",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-06",
+      "teaching_only": false,
+      "check": false,
+      "exclude_reason": "한 글자"
+    },
+    {
+      "term": "활꼴",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-06",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "할선",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-06",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "다면체",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "각뿔대",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "정다면체",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "회전체",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "회전축",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "원뿔대",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "증명",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-09",
+      "teaching_only": false,
+      "check": true,
+      "note": "'정당화'가 처음 나오는 성취기준"
+    },
+    {
+      "term": "외심",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-10",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "외접",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-10",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "외접원",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-10",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "내심",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-10",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "내접",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-10",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "내접원",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-10",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "닮음",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-12",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "닮음비",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-12",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "삼각형의 닮음 조건",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-13",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "중선",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-14",
+      "teaching_only": false,
+      "check": true,
+      "note": "평행선과 선분의 비에서 다룬다고 봄"
+    },
+    {
+      "term": "무게중심",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-14",
+      "teaching_only": false,
+      "check": true,
+      "note": "같은 이유"
+    },
+    {
+      "term": "피타고라스 정리",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-15",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "삼각비",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-16",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "사인",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-16",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "코사인",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-16",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "탄젠트",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-16",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "접선",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-18",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "접점",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-18",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "접한다",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-18",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "원주각",
+      "area": "도형과 측정",
+      "page": 45,
+      "standard": "9수03-19",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "변량",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "대푯값",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "중앙값",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "최빈값",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-01",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "줄기와 잎 그림",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "계급",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "계급의 크기",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "도수",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "도수분포표",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "히스토그램",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "도수분포다각형",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-02",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "상대도수",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-03",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "사건",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-05",
+      "teaching_only": false,
+      "check": false,
+      "note": "경우의 수와 함께 다룬다고 봄. 9수04-06일 수도 있음",
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "확률",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-06",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "산포도",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "편차",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "분산",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "표준편차",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-07",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "사분위수",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-08",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "상자그림",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-08",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "산점도",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-09",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "상관관계",
+      "area": "자료와 가능성",
+      "page": 47,
+      "standard": "9수04-09",
+      "teaching_only": false,
+      "check": true
+    },
+    {
+      "term": "식의 값",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-01",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "좌변",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-03",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "우변",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-03",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "양변",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-03",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "이차식",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-19",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "전개식",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-19",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "연립일차방정식",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-13",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "소거",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-13",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "가감법",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-13",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "대입법",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-13",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "함수의 그래프",
+      "area": "수업용",
+      "page": 43,
+      "standard": "9수02-15",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "삼각형의 중점연결정리",
+      "area": "수업용",
+      "page": 46,
+      "standard": "9수03-14",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "접선의 길이",
+      "area": "수업용",
+      "page": 46,
+      "standard": "9수03-18",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "계급값",
+      "area": "수업용",
+      "page": 48,
+      "standard": "9수04-02",
+      "teaching_only": true,
+      "check": true
+    },
+    {
+      "term": "경우의 수",
+      "area": "수업용",
+      "page": 48,
+      "standard": "9수04-05",
+      "teaching_only": true,
+      "check": true
+    }
+  ],
+  "high": [
+    {
+      "term": "미정계수법",
+      "subject": "공통수학1",
+      "area": "다항식",
+      "page": 66,
+      "check": true
+    },
+    {
+      "term": "나머지정리",
+      "subject": "공통수학1",
+      "area": "다항식",
+      "page": 66,
+      "check": true
+    },
+    {
+      "term": "인수정리",
+      "subject": "공통수학1",
+      "area": "다항식",
+      "page": 66,
+      "check": true
+    },
+    {
+      "term": "조립제법",
+      "subject": "공통수학1",
+      "area": "다항식",
+      "page": 66,
+      "check": true
+    },
+    {
+      "term": "허수단위",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "복소수",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "실수부분",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "허수부분",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "허수",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "켤레복소수",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "실근",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "허근",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "판별식",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "연립부등식",
+      "subject": "공통수학1",
+      "area": "방정식과 부등식",
+      "page": 67,
+      "check": true
+    },
+    {
+      "term": "합의 법칙",
+      "subject": "공통수학1",
+      "area": "경우의 수",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "곱의 법칙",
+      "subject": "공통수학1",
+      "area": "경우의 수",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "순열",
+      "subject": "공통수학1",
+      "area": "경우의 수",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "계승",
+      "subject": "공통수학1",
+      "area": "경우의 수",
+      "page": 68,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "조합",
+      "subject": "공통수학1",
+      "area": "경우의 수",
+      "page": 68,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "행렬",
+      "subject": "공통수학1",
+      "area": "행렬",
+      "page": 69,
+      "check": true
+    },
+    {
+      "term": "행",
+      "subject": "공통수학1",
+      "area": "행렬",
+      "page": 69,
+      "check": false,
+      "exclude_reason": "한 글자"
+    },
+    {
+      "term": "열",
+      "subject": "공통수학1",
+      "area": "행렬",
+      "page": 69,
+      "check": false,
+      "exclude_reason": "한 글자"
+    },
+    {
+      "term": "성분",
+      "subject": "공통수학1",
+      "area": "행렬",
+      "page": 69,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "내분",
+      "subject": "공통수학2",
+      "area": "도형의 방정식",
+      "page": 71,
+      "check": true
+    },
+    {
+      "term": "대칭이동",
+      "subject": "공통수학2",
+      "area": "도형의 방정식",
+      "page": 71,
+      "check": true
+    },
+    {
+      "term": "집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "원소",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "화학 용어로도 쓰는 일상어"
+    },
+    {
+      "term": "공집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "부분집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "진부분집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "벤 다이어그램",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "합집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "교집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "전체집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "여집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "차집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "드모르간의 법칙",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "명제",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "가정",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "결론",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "정의",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "일상어·문제 문장에 흔함 ('~의 정의')"
+    },
+    {
+      "term": "정리",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "일상어 ('식을 정리하면')"
+    },
+    {
+      "term": "조건",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "일상어 ('조건을 만족하는')"
+    },
+    {
+      "term": "진리집합",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "부정",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "역",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "한 글자 (역수·역할 등에 포함)"
+    },
+    {
+      "term": "대우",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "충분조건",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "필요조건",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "필요충분조건",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "귀류법",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "절대부등식",
+      "subject": "공통수학2",
+      "area": "집합과 명제",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "정의역",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "치역",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "공역",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "대응",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": false,
+      "exclude_reason": "초등 '대응점'·중학 수업용 '(도형의) 대응'과 겹침"
+    },
+    {
+      "term": "일대일대응",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "항등함수",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "상수함수",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "일대일함수",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "합성함수",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "역함수",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "다항함수",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "유리식",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "무리식",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "유리함수",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "점근선",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "무리함수",
+      "subject": "공통수학2",
+      "area": "함수와 그래프",
+      "page": 73,
+      "check": true
+    },
+    {
+      "term": "거듭제곱근",
+      "subject": "대수",
+      "area": "지수함수와 로그함수",
+      "page": 106,
+      "check": true
+    },
+    {
+      "term": "로그",
+      "subject": "대수",
+      "area": "지수함수와 로그함수",
+      "page": 106,
+      "check": false,
+      "exclude_reason": "'블로그' 등에 포함"
+    },
+    {
+      "term": "진수",
+      "subject": "대수",
+      "area": "지수함수와 로그함수",
+      "page": 106,
+      "check": false,
+      "exclude_reason": "사람 이름 등"
+    },
+    {
+      "term": "상용로그",
+      "subject": "대수",
+      "area": "지수함수와 로그함수",
+      "page": 106,
+      "check": true
+    },
+    {
+      "term": "지수함수",
+      "subject": "대수",
+      "area": "지수함수와 로그함수",
+      "page": 106,
+      "check": true
+    },
+    {
+      "term": "로그함수",
+      "subject": "대수",
+      "area": "지수함수와 로그함수",
+      "page": 106,
+      "check": true
+    },
+    {
+      "term": "시초선",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "동경",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": false,
+      "exclude_reason": "일상어·지명"
+    },
+    {
+      "term": "일반각",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "호도법",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "라디안",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "주기",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "주기함수",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "삼각함수",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "사인함수",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "코사인함수",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "탄젠트함수",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "사인법칙",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "코사인법칙",
+      "subject": "대수",
+      "area": "삼각함수",
+      "page": 107,
+      "check": true
+    },
+    {
+      "term": "수열",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "일반항",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "공차",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "등차수열",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "등차중항",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "공비",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "등비수열",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "등비중항",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "귀납적 정의",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "수학적 귀납법",
+      "subject": "대수",
+      "area": "수열",
+      "page": 108,
+      "check": true
+    },
+    {
+      "term": "증분",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "평균변화율",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "순간변화율",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "미분계수",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "미분가능",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "도함수",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "롤의 정리",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "평균값 정리",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "증가",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": false,
+      "exclude_reason": "일상어 ('값이 증가한다')"
+    },
+    {
+      "term": "감소",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "극대",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "극소",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "극값",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "극댓값",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "극솟값",
+      "subject": "미적분Ⅰ",
+      "area": "미분",
+      "page": 121,
+      "check": true
+    },
+    {
+      "term": "부정적분",
+      "subject": "미적분Ⅰ",
+      "area": "적분",
+      "page": 122,
+      "check": true
+    },
+    {
+      "term": "적분상수",
+      "subject": "미적분Ⅰ",
+      "area": "적분",
+      "page": 122,
+      "check": true
+    },
+    {
+      "term": "정적분",
+      "subject": "미적분Ⅰ",
+      "area": "적분",
+      "page": 122,
+      "check": true
+    },
+    {
+      "term": "중복순열",
+      "subject": "확률과 통계",
+      "area": "경우의 수",
+      "page": 134,
+      "check": true
+    },
+    {
+      "term": "중복조합",
+      "subject": "확률과 통계",
+      "area": "경우의 수",
+      "page": 134,
+      "check": true
+    },
+    {
+      "term": "이항정리",
+      "subject": "확률과 통계",
+      "area": "경우의 수",
+      "page": 134,
+      "check": true
+    },
+    {
+      "term": "이항계수",
+      "subject": "확률과 통계",
+      "area": "경우의 수",
+      "page": 134,
+      "check": true
+    },
+    {
+      "term": "파스칼의 삼각형",
+      "subject": "확률과 통계",
+      "area": "경우의 수",
+      "page": 134,
+      "check": true
+    },
+    {
+      "term": "시행",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "통계적 확률",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": true
+    },
+    {
+      "term": "수학적 확률",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": true
+    },
+    {
+      "term": "여사건",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": true
+    },
+    {
+      "term": "배반사건",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": true
+    },
+    {
+      "term": "조건부확률",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": true
+    },
+    {
+      "term": "종속",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "독립",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "독립시행",
+      "subject": "확률과 통계",
+      "area": "확률",
+      "page": 135,
+      "check": true
+    },
+    {
+      "term": "확률변수",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "이산확률변수",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "확률분포",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "연속확률변수",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "기댓값",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "이항분포",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "큰 수의 법칙",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "정규분포",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "표준정규분포",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "모집단",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "표본",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "전수조사",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "표본조사",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "임의추출",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "모평균",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "모분산",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "모표준편차",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "표본평균",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "표본분산",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "표본표준편차",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "모비율",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "표본비율",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "추정",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": false,
+      "exclude_reason": "일상어 ('~로 추정')"
+    },
+    {
+      "term": "신뢰도",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "신뢰구간",
+      "subject": "확률과 통계",
+      "area": "통계",
+      "page": 136,
+      "check": true
+    },
+    {
+      "term": "급수",
+      "subject": "미적분Ⅱ",
+      "area": "수열의 극한",
+      "page": 150,
+      "check": true
+    },
+    {
+      "term": "부분합",
+      "subject": "미적분Ⅱ",
+      "area": "수열의 극한",
+      "page": 150,
+      "check": true
+    },
+    {
+      "term": "급수의 합",
+      "subject": "미적분Ⅱ",
+      "area": "수열의 극한",
+      "page": 150,
+      "check": true
+    },
+    {
+      "term": "등비급수",
+      "subject": "미적분Ⅱ",
+      "area": "수열의 극한",
+      "page": 150,
+      "check": true
+    },
+    {
+      "term": "자연로그",
+      "subject": "미적분Ⅱ",
+      "area": "미분법",
+      "page": 151,
+      "check": true
+    },
+    {
+      "term": "덧셈정리",
+      "subject": "미적분Ⅱ",
+      "area": "미분법",
+      "page": 151,
+      "check": true
+    },
+    {
+      "term": "매개변수",
+      "subject": "미적분Ⅱ",
+      "area": "미분법",
+      "page": 151,
+      "check": true
+    },
+    {
+      "term": "음함수",
+      "subject": "미적분Ⅱ",
+      "area": "미분법",
+      "page": 151,
+      "check": true
+    },
+    {
+      "term": "이계도함수",
+      "subject": "미적분Ⅱ",
+      "area": "미분법",
+      "page": 151,
+      "check": true
+    },
+    {
+      "term": "변곡점",
+      "subject": "미적분Ⅱ",
+      "area": "미분법",
+      "page": 151,
+      "check": true
+    },
+    {
+      "term": "치환적분법",
+      "subject": "미적분Ⅱ",
+      "area": "적분법",
+      "page": 152,
+      "check": true
+    },
+    {
+      "term": "부분적분법",
+      "subject": "미적분Ⅱ",
+      "area": "적분법",
+      "page": 152,
+      "check": true
+    },
+    {
+      "term": "이차곡선",
+      "subject": "기하",
+      "area": "이차곡선",
+      "page": 164,
+      "check": true
+    },
+    {
+      "term": "초점",
+      "subject": "기하",
+      "area": "이차곡선",
+      "page": 164,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "준선",
+      "subject": "기하",
+      "area": "이차곡선",
+      "page": 164,
+      "check": true
+    },
+    {
+      "term": "타원",
+      "subject": "기하",
+      "area": "이차곡선",
+      "page": 164,
+      "check": true
+    },
+    {
+      "term": "장축",
+      "subject": "기하",
+      "area": "이차곡선",
+      "page": 164,
+      "check": true
+    },
+    {
+      "term": "단축",
+      "subject": "기하",
+      "area": "이차곡선",
+      "page": 164,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "쌍곡선",
+      "subject": "기하",
+      "area": "이차곡선",
+      "page": 164,
+      "check": true
+    },
+    {
+      "term": "주축",
+      "subject": "기하",
+      "area": "이차곡선",
+      "page": 164,
+      "check": true
+    },
+    {
+      "term": "삼수선 정리",
+      "subject": "기하",
+      "area": "공간도형과 공간좌표",
+      "page": 165,
+      "check": true
+    },
+    {
+      "term": "이면각",
+      "subject": "기하",
+      "area": "공간도형과 공간좌표",
+      "page": 165,
+      "check": true
+    },
+    {
+      "term": "정사영",
+      "subject": "기하",
+      "area": "공간도형과 공간좌표",
+      "page": 165,
+      "check": true
+    },
+    {
+      "term": "좌표공간",
+      "subject": "기하",
+      "area": "공간도형과 공간좌표",
+      "page": 165,
+      "check": true
+    },
+    {
+      "term": "공간좌표",
+      "subject": "기하",
+      "area": "공간도형과 공간좌표",
+      "page": 165,
+      "check": true
+    },
+    {
+      "term": "벡터",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "시점",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": false,
+      "exclude_reason": "일상어 ('그 시점에')"
+    },
+    {
+      "term": "종점",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": false,
+      "exclude_reason": "일상어"
+    },
+    {
+      "term": "벡터의 크기",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "단위벡터",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "영벡터",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "평면벡터",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "공간벡터",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "위치벡터",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "벡터의 성분",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "내적",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "방향벡터",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "법선벡터",
+      "subject": "기하",
+      "area": "벡터",
+      "page": 166,
+      "check": true
+    },
+    {
+      "term": "삼차방정식",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "사차방정식",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "연립이차방정식",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "연립일차부등식",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "이차부등식",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "연립이차부등식",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 68,
+      "check": true
+    },
+    {
+      "term": "정사각행렬",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 69,
+      "check": true
+    },
+    {
+      "term": "영행렬",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 69,
+      "check": true
+    },
+    {
+      "term": "단위행렬",
+      "subject": "공통수학1",
+      "area": "수업용",
+      "page": 69,
+      "check": true
+    },
+    {
+      "term": "내분점",
+      "subject": "공통수학2",
+      "area": "수업용",
+      "page": 71,
+      "check": true
+    },
+    {
+      "term": "원의 방정식",
+      "subject": "공통수학2",
+      "area": "수업용",
+      "page": 71,
+      "check": true
+    },
+    {
+      "term": "원소나열법",
+      "subject": "공통수학2",
+      "area": "수업용",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "조건제시법",
+      "subject": "공통수학2",
+      "area": "수업용",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "유한집합",
+      "subject": "공통수학2",
+      "area": "수업용",
+      "page": 72,
+      "check": true
+    },
+    {
+      "term": "무한집합",
+      "subject": "공통수학2",
+      "area": "수업용",
+      "page": 72,
+      "check": true
+    }
+  ]
+}
