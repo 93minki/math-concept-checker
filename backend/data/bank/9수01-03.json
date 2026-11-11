@@ -1,0 +1,985 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T06:36:53.077954+00:00",
+          "issues": [
+            "학생의 말을 판단하는 형식이지만, 각 말이 정의와 분류를 직접 확인하는 수준이어서 일반적인 개념 확인 문제와 구별되지 않는다.",
+            "보기 ③: M1대로 판단하면 가와 다를 골라 보기 ①이 된다.",
+            "보기 ⑤: M1만으로는 보기 ①을 고르며, 보기 ⑤가 되려면 M2도 함께 적용해야 한다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:37:15.085786+00:00",
+          "issues": [
+            "고난이도 조건: 학생 이름만 붙였을 뿐, 정수와 유리수의 관계 및 0의 분류를 직접 확인하는 일반 문제와 구별되지 않는다.",
+            "보기 1: M1에서 나오는 선택지가 아니다. M1대로 판단하면 ㄱ, ㄹ을 고른다.",
+            "보기 4: M2에서 나오는 선택지가 아니다. M2대로 판단하면 ㄴ, ㄷ을 고른다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:37:50.090215+00:00",
+          "issues": [
+            "M1에 따라 판단하면 옳은 학생은 다, 라인데 해당 보기가 없어 M1을 진단하기 어렵다.",
+            "보기 3, 4: M1대로 풀면 각각 ‘다’, ‘가, 다, 라’가 아니라 ‘다, 라’를 고르게 된다.",
+            "보기 5: M2대로 풀면 ‘나, 다, 라’가 아니라 ‘가, 나, 다’를 고르게 된다.",
+            "학생의 말이라는 형식만 있을 뿐, 각 진술이 수의 분류를 직접 확인하는 일반 문제와 구별되지 않아 고난이도 조건을 충족하지 못한다.",
+            "해설은 가를 틀리거나 라를 옳다고 판단한 이유를 정수 전체가 유리수가 아니라는 오개념으로 단정하지만, 다른 판단 오류일 수도 있다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T06:37:50.864964+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": null,
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T07:15:23.632650+00:00",
+          "issues": [
+            "학생의 말로 제시했지만 각 보기가 정의와 기본 성질을 바로 확인하는 주장에 그쳐, 일반적인 개념 확인 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T07:15:55.129344+00:00",
+          "issues": [
+            "학생들의 말을 제시했지만 각 보기가 단순한 정의·분류 진술이어서 정의와 성질을 바로 확인하는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T07:16:18.608613+00:00",
+          "issues": [
+            "네 학생의 말을 판단하는 형식이지만, 각 말이 정수·유리수와 0의 정의를 직접 확인하는 내용이어서 일반적인 정의 확인 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T07:16:19.070999+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": null,
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T06:38:10.569988+00:00",
+          "issues": [
+            "보기 1: M1대로 판단하면 가만 옳으므로 가, 나가 나오지 않는다.",
+            "보기 2: M1대로 판단하면 가만 옳으므로 가, 다가 나오지 않는다.",
+            "보기 3: M1대로 판단하면 가만 옳으므로 가, 라가 나오지 않는다.",
+            "보기 4: 0을 양수로 보는 M2대로 판단하면 나, 다가 옳으므로 나, 라가 나오지 않는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:38:37.215348+00:00",
+          "issues": [
+            "M2만 가진 학생이 고를 ‘가, 나, 다’가 보기에 없어 0을 양수로 보는 오류를 제대로 판별할 수 없다.",
+            "보기 ③, ④: M2에서만 나오는 답이 아니다. M2대로 판단하면 가, 나, 다가 모두 옳다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:39:09.827430+00:00",
+          "issues": [
+            "보기 ①, ④: M1대로 풀면 가와 다를 틀리고 나만 옳다고 판단하므로 해당 보기들이 나오지 않는다.",
+            "보기 ⑤: M2만 적용하면 가와 라를 고르므로 ③이 나온다. 나까지 옳다고 판단하려면 별도로 M1이 필요하다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T06:39:10.090988+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T07:16:46.369437+00:00",
+          "issues": [
+            "학생의 말을 제시했지만 각 발언이 정의와 분류를 직접 확인하는 진술이어서 일반적인 옳고 그름 판단 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T07:17:12.478565+00:00",
+          "issues": [
+            "misconception-b: 학생의 말 형식이지만 각 주장이 정의나 성질을 바로 확인하는 수준이어서 일반적인 옳은 것 고르기 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T07:17:40.740508+00:00",
+          "issues": [
+            "보기 1: M1에서 나오는 선택이 아니다. M1대로 정수인 -3과 0을 모두 유리수가 아니라고 보면 ‘다’만 고르지만, 해당 보기가 없다.",
+            "보기 3: M1에서 나오는 선택이 아니다. M1대로 풀면 ‘다’만 고르지만, 해당 보기가 없다.",
+            "M1에 해당하는 선택지가 없어 정수가 유리수가 아니라고 보는 오개념을 의도대로 판별할 수 없다.",
+            "네 학생의 주장이라는 형식을 사용했지만, 각 주장은 정의와 분류를 바로 확인하는 일반 문제와 구별되지 않아 misconception-b의 고난이도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T07:17:41.238399+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": null,
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T07:14:47.646459+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C1-성질적용",
+      "body": "민지와 지수는 동쪽과 서쪽으로 걸은 거리를 각각 부호가 있는 수로 나타낸다. 각자 한 방향은 양수로, 그 반대 방향은 음수로 나타낸다.\n\n민지는 동쪽으로 $3$ m 걸은 것을 $-3$ m로 나타냈다. 지수는 서쪽으로 $3$ m 걸은 것을 $-3$ m로 나타냈다.\n\n두 사람이 각자 정한 방법으로 동쪽으로 $2$ m 걸은 것을 나타내려고 한다. 민지와 지수가 나타낼 수를 차례로 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "민지: $-2$ m, 지수: $+2$ m"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "민지: $-2$ m, 지수: $-2$ m"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "민지: $+2$ m, 지수: $+2$ m"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "민지: $+2$ m, 지수: $-2$ m"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M3",
+          "no": 5,
+          "text": "민지의 $-3$은 어떤 수에서 $3$을 빼라는 표시이므로 민지가 정한 방법을 알 수 없다."
+        }
+      ],
+      "created_at": "2026-11-11T06:32:41.310018+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "민지는 동쪽을 음수로 나타내므로 $-2$ m이다. 지수는 서쪽을 음수로 나타내므로 동쪽은 양수로 나타낸다. 따라서 $+2$ m이다.\n\n⑤에서 $-3$은 다른 수에서 $3$을 빼라는 뜻이 아니라, 음수 하나를 나타낸다. 이 수와 걸은 방향을 알면 민지가 정한 방법을 알 수 있다.",
+      "generated_at": "2026-11-11T06:32:41.089146+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "걸은 방향과 이를 나타낸 수를 보고 각 사람이 정한 부호의 방향을 거꾸로 찾아야 한다. 그 방법을 새로운 상황에 적용해 수를 나타낸다.",
+      "id": "69f7daff-c580-4138-a7a6-f33d2db4eafd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:32:41.088686+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:47.697153+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C1-성질적용",
+      "body": "어느 건물은 $1$층부터 $10$층까지 있다. 한 층을 기준으로 정하고, 다른 층을 다음 방법으로 나타낸다.\n\n- 기준 층은 $0$으로 나타낸다.\n- 기준 층에서 몇 층 떨어져 있는지를 수에 나타낸다.\n- 기준 층보다 위쪽은 한 부호로, 아래쪽은 그 반대 부호로 나타낸다.\n\n이 방법으로 $8$층을 $-3$, $3$층을 $+2$로 나타냈다. 기준 층과 부호를 정한 방법으로 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "기준 층은 $5$층이고, 위쪽은 음수로 나타낸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "기준 층은 $5$층이고, 위쪽은 양수로 나타낸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "기준 층은 $3$층이고, 위쪽은 음수로 나타낸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "기준 층은 $8$층이고, 위쪽은 양수로 나타낸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M3",
+          "no": 5,
+          "text": "$-3$은 무엇에서 $3$을 뺀 식이므로 층을 나타낼 수 없다."
+        }
+      ],
+      "created_at": "2026-11-11T06:33:00.617536+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$8$층을 $-3$으로 나타냈으므로 기준 층은 $8$층에서 세 층 떨어져 있다. $3$층을 $+2$로 나타낸 것도 살펴보면 기준 층은 $5$층이다. $8$층은 기준 층보다 위쪽이고 음수로 나타냈으므로, 위쪽은 음수, 아래쪽은 양수로 나타낸다.\n\n$-3$은 하나의 음수이다. 무엇에서 $3$을 빼야만 쓸 수 있는 것이 아니다.",
+      "generated_at": "2026-11-11T06:33:00.427195+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 층을 나타낸 수가 주어졌을 때, 기준 층과 부호를 정한 방법을 거꾸로 찾는다.",
+      "id": "892f7236-879c-48ac-8fe1-ae5dcecb2389",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:33:00.426847+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:47.740233+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C1-성질적용",
+      "body": "잠수함의 위치를 수면을 기준으로 나타내려고 한다. 수면 위는 양수로, 수면 아래는 음수로 나타낸다. 수면 아래 $3\\,\\mathrm{m}$에 있는 잠수함의 위치를 나타낸 수와 그 뜻으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$+3$: 수면 아래 $3\\,\\mathrm{m}$를 나타내는 수"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-3$: 수면 아래 $3\\,\\mathrm{m}$를 나타내는 수"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M3",
+          "no": 3,
+          "text": "$-3$: 어떤 수에서 $3$을 빼야만 뜻을 알 수 있는 것"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$-3$: 수면 위 $3\\,\\mathrm{m}$를 나타내는 수"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$0$: 수면에 있는 위치를 나타내는 수"
+        }
+      ],
+      "created_at": "2026-11-11T06:31:49.125539+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "수면 아래는 음수로 나타내므로 답은 $-3$이다. $-3$은 수면 아래 $3\\,\\mathrm{m}$를 나타내는 하나의 수이다. ③처럼 $-3$의 뜻을 알기 위해 다른 수에서 $3$을 빼야 하는 것은 아니다.",
+      "generated_at": "2026-11-11T06:31:48.801457+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "6ede18b8-ad77-4df1-92d5-95eda9ae0eb9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:31:48.801332+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:47.790905+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C1-성질적용",
+      "body": "가게의 이익과 손해를 천 원 단위의 수로 나타내려고 한다. 이익은 양수로, 손해는 음수로 나타낸다. 손해 $7$천 원을 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$+7$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$0$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$-8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M3",
+          "no": 5,
+          "text": "무엇에서 $7$을 빼는지 모르므로 수로 나타낼 수 없다."
+        }
+      ],
+      "created_at": "2026-11-11T06:32:21.144574+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "손해는 음수로 나타내므로 손해 $7$천 원은 $-7$이다. $-7$에서 $-$는 음의 부호이다. $-7$은 무엇에서 $7$을 빼는 식이 아니라 하나의 수이다.",
+      "generated_at": "2026-11-11T06:32:20.850095+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1867a1e4-d6c8-4d86-8af7-cec3c368b10c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:32:08.405691+00:00",
+          "issues": [
+            "주어진 부호가 있는 수에 해당하는 상황을 고르는 문제로, 상황을 부호가 있는 수로 나타내는 능력을 직접 측정하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:32:20.849838+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:47.841638+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C1-이유설명",
+      "body": "호수의 수면을 기준으로 물체의 높이를 기록하려고 한다. 수면과 같은 높이는 $0$으로, 그 밖의 높이는 수면에서 떨어진 길이만 양수로 적는다. 다른 말이나 기호는 적지 않는다.\n\n민지는 “이렇게 하면 모든 물체가 수면 위에 있는지 아래에 있는지 구별할 수 있어.”라고 말했다.\n\n민지의 말이 틀렸음을 서로 다른 두 위치를 예로 들어 설명하시오. 또 음수를 쓰면 두 위치를 어떻게 구별할 수 있는지 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:33:50.168967+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "수면에서 같은 길이만큼 떨어져 있어도 한 물체는 수면 위에, 다른 물체는 수면 아래에 있을 수 있다. 떨어진 길이만 양수로 적으면 두 위치가 같은 수로 기록된다. 수면 위는 양수, 수면 아래는 음수로 나타내면 두 위치를 구별할 수 있다.",
+      "generated_at": "2026-11-11T06:33:49.99124+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민지의 말이 틀렸음을 보이기 위해 수면 위와 아래의 두 위치를 예로 들고, 양수만으로 기록할 때 생기는 문제를 설명하게 한다.",
+      "id": "1624279e-98d1-448c-b88f-7c577e00ed38",
+      "model": "gpt-6.1-terra",
+      "model_answer": "수면 위 $2\\,\\mathrm{m}$에 있는 물체와 수면 아래 $2\\,\\mathrm{m}$에 있는 물체를 생각해 보자. 길이만 양수로 적으면 둘 다 $2$가 되므로 위와 아래를 구별할 수 없다. 수면 위 $2\\,\\mathrm{m}$를 $+2$, 수면 아래 $2\\,\\mathrm{m}$를 $-2$로 나타내면 구별할 수 있다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "수면에서 같은 길이만큼 떨어진 수면 위와 아래의 위치를 각각 한 가지씩 들었다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 위치를 떨어진 길이만 양수로 적으면 같은 수가 되어 구별할 수 없다고 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "든 예에서 수면 위와 아래를 각각 양수와 음수로 나타내어 구별했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:33:49.991113+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.452068+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C1-이유설명",
+      "body": "가게에서 하루 동안 생긴 이익이나 손해를 수로만 기록하려고 한다. 이익도 손해도 없는 날은 $0$으로 기록한다.\n\n지우는 이익이나 손해가 생긴 날에는 그 금액을 양수로만 기록하자고 제안했다. 이익인지 손해인지는 말이나 다른 기호로 따로 적지 않는다.\n\n금액이 얼마이든, 지우의 방법으로는 이익과 손해를 구별하기 어려운 까닭을 설명하시오. 또 이익을 양수로 기록한다면 손해를 어떻게 기록해야 구별할 수 있는지 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:34:09.049486+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "같은 금액의 이익과 손해를 모두 그 금액을 나타내는 양수로 기록하면 두 기록이 같아진다. 이는 금액이 얼마이든 마찬가지다. 이익을 양수로 기록할 때 손해를 음수로 기록하면 두 상황을 구별할 수 있다. 이때 음수 앞의 $-$는 빼기를 나타내는 것이 아니라 손해임을 나타내는 부호이다.",
+      "generated_at": "2026-11-11T06:34:08.875433+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "금액이 얼마이든 양수로만 기록하면 이익과 손해를 구별하기 어려운 까닭을 설명하도록 했다.",
+      "id": "cc223355-4f5e-4f8b-9b87-b4992701e3b5",
+      "model": "gpt-6.1-terra",
+      "model_answer": "같은 금액의 이익과 손해는 양수로만 기록하면 같은 수가 된다. 따라서 금액이 얼마이든 기록만 보고는 이익인지 손해인지 알 수 없다. 이익을 양수로 기록한다면 손해는 그 금액 앞에 음의 부호를 붙여 음수로 기록하면 구별할 수 있다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "금액이 얼마이든 같은 금액의 이익과 손해가 같은 양수로 기록되어 구별되지 않는다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "이익을 양수로 기록할 때 손해를 그 금액에 음의 부호를 붙인 음수로 기록하면 구별할 수 있다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-03-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:34:08.875320+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.507952+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C1-이유설명",
+      "body": "가게에서 이익이 $4$만 원일 때 이를 $+4$로 나타내기로 했다. 손해가 $4$만 원일 때는 어떤 수로 나타내면 좋을까? 그 수를 쓰고, 이 상황에서 음수가 필요한 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:33:13.739615+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "이익과 손해는 서로 반대되는 상황이다. 손해 $4$만 원을 $-4$로 나타내면 이익 $4$만 원을 나타내는 $+4$와 구별할 수 있다. 이때 $-4$의 $-$는 빼기를 뜻하는 것이 아니라 손해를 나타내는 음의 부호이다.",
+      "generated_at": "2026-11-11T06:33:13.550405+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1098b2d2-39f9-4c72-8992-50194957db45",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$-4$로 나타낸다. 이익과 손해가 모두 $4$만 원일 때 $4$만 쓰면 수만 보고는 이익인지 손해인지 구별할 수 없다. 음수를 쓰면 서로 반대되는 이익과 손해를 구별하여 나타낼 수 있다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "손해 $4$만 원을 $-4$로 나타냈다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-03-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "이익과 손해가 같은 금액일 때 음수를 쓰면 두 상황을 구별할 수 있다고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:33:13.550177+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.562377+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C1-이유설명",
+      "body": "온도를 말 없이 수 하나로만 기록하려고 한다. 민수는 “영상 $6$℃와 영하 $6$℃를 모두 $6$으로 기록해도 돼.”라고 말한다.\n\n민수의 방법으로는 두 온도를 구별할 수 없는 까닭을 설명하시오. 또 음수를 이용하여 두 온도를 각각 기록하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:33:31.98199+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 온도를 모두 $6$으로 기록하면 영상인지 영하인지 알 수 없다. 양수와 음수를 이용하면 영상과 영하를 구별할 수 있다. 영상 $6$℃는 $+6$, 영하 $6$℃는 $-6$으로 기록한다. 이때 $-6$은 무엇에서 $6$을 빼라는 뜻이 아니라 영하 온도를 나타내는 하나의 수이다.",
+      "generated_at": "2026-11-11T06:33:31.799141+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "16f3352f-f7b2-45b4-8edf-84f93512d350",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 온도를 모두 $6$으로 기록하면 영상인지 영하인지 구별할 수 없다. 음수를 쓰면 영상과 영하를 서로 다르게 나타낼 수 있다. 영상 $6$℃는 $+6$, 영하 $6$℃는 $-6$으로 기록한다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "같은 수로 기록하면 영상과 영하를 구별할 수 없으며, 음수를 쓰면 구별할 수 있다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "영상 $6$℃를 $+6$ 또는 $6$으로, 영하 $6$℃를 $-6$으로 기록한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:33:31.798851+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.60773+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "body": "정수와 유리수에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M1",
+          "no": 1,
+          "text": "정수는 유리수가 아니고, $0$은 양수도 음수도 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M2",
+          "no": 2,
+          "text": "모든 정수는 유리수이고, $0$은 양수이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M2",
+          "no": 3,
+          "text": "모든 정수는 유리수이고, $0$은 음수이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "정수가 아닌 유리수는 없고, $0$은 양수도 음수도 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "모든 정수는 유리수이고, $0$은 양수도 음수도 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T06:35:34.873027+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정수는 모두 분수로 나타낼 수 있으므로 유리수이다. 예를 들어 $-2$는 $\\frac{-2}{1}$로 나타낼 수 있다. 또 $0$은 양수도 음수도 아니다. ①은 정수가 유리수가 아니라고 잘못 생각한 것이다. ②와 ③은 $0$을 양수 또는 음수로 잘못 분류한 것이다. ④와 달리 $\\frac{1}{2}$과 같이 정수가 아닌 유리수도 있다.",
+      "generated_at": "2026-11-11T06:35:34.667898+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "455b8ead-cf35-44c3-8a7c-a68adc90b446",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:35:34.667831+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.63707+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "body": "수 카드 $-3$, $0$, $\\frac{1}{2}$이 있습니다. 이 카드에서 유리수인 수와 양수인 수를 각각 모두 고른 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M2",
+          "no": 1,
+          "text": "유리수: $-3$, $0$, $\\frac{1}{2}$ / 양수: $0$, $\\frac{1}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M1",
+          "no": 2,
+          "text": "유리수: $\\frac{1}{2}$ / 양수: $\\frac{1}{2}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "유리수: $-3$, $0$, $\\frac{1}{2}$ / 양수: $\\frac{1}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "유리수: $-3$, $\\frac{1}{2}$ / 양수: $\\frac{1}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "유리수: $-3$, $0$, $\\frac{1}{2}$ / 양수: $-3$, $\\frac{1}{2}$"
+        }
+      ],
+      "created_at": "2026-11-11T06:36:27.773011+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정수는 모두 유리수이므로 $-3$과 $0$도 유리수입니다. 따라서 세 수는 모두 유리수입니다. 양수는 $\\frac{1}{2}$뿐입니다. $0$은 양수도 음수도 아닙니다. ①은 $0$을 양수로 잘못 보았습니다. ②는 정수를 유리수가 아니라고 잘못 보았습니다. ④는 유리수인 $0$을 빠뜨렸고, ⑤는 음수인 $-3$을 양수로 잘못 보았습니다.",
+      "generated_at": "2026-11-11T06:36:27.511244+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "bed3f1bf-f207-426c-87ef-9e0eba231b25",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:35:53.107288+00:00",
+          "issues": [
+            "보기 ②: M1은 소수 0.5도 유리수가 아니라고 보므로, M1대로라면 유리수 상자에는 아무 수 없이 양수 상자에 0.5만 적는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:36:11.279081+00:00",
+          "issues": [
+            "보기 ①: M1에서 나오는 분류가 아니다. 분수 꼴로 쓰인 수만 유리수라고 보면 -2, 0, 0.5 모두 유리수가 아니라고 분류한다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:36:27.510188+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.682226+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C2-정의이해",
+      "body": "다음 네 수 중 정수가 아닌 유리수를 모두 고른 것은?\n\nㄱ. $\\frac{-3}{3}$　ㄴ. $\\frac{0}{4}$　ㄷ. $-0.5$　ㄹ. $\\frac{-3}{2}$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄱ, ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "ㄴ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄱ, ㄷ, ㄹ"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄷ, ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M1",
+          "no": 5,
+          "text": "ㄹ"
+        }
+      ],
+      "created_at": "2026-11-11T06:34:53.701537+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "ㄱ은 $-1$이고, ㄴ은 $0$이므로 둘 다 정수이다. ㄷ은 $\\frac{-1}{2}$로 나타낼 수 있으므로 유리수이고, 정수는 아니다. ㄹ도 정수가 아닌 유리수이다. 따라서 정답은 ④이다.\n\n⑤를 골랐다면 분수 꼴로 쓰인 수만 유리수라고 생각했을 수 있다. 소수로 쓰인 $-0.5$도 정수의 분수 꼴로 나타낼 수 있으므로 유리수이다.",
+      "generated_at": "2026-11-11T06:34:53.534129+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "분수 꼴로 쓰였지만 정수인 수와 소수로 쓰인 유리수를 함께 제시했다. 각 수가 유리수인지, 정수는 아닌지 따져야 한다.",
+      "id": "b25a2825-e9e9-45d4-a0ee-df68c03ba715",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:34:53.534024+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.747022+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C2-정의이해",
+      "body": "다음 설명 중 옳은 것만을 있는 대로 고른 것은?\n\nㄱ. 모든 정수는 유리수이다.\nㄴ. $0$은 정수이지만 양수도 음수도 아니다.\nㄷ. 분수 꼴로 쓴 수는 모두 정수가 아니다.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M2",
+          "no": 1,
+          "text": "ㄱ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M1",
+          "no": 2,
+          "text": "ㄴ"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄱ, ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄱ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄱ, ㄴ, ㄷ"
+        }
+      ],
+      "created_at": "2026-11-11T06:35:21.272159+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "ㄱ. 정수는 모두 분모가 $1$인 분수로 쓸 수 있으므로 유리수이다.\nㄴ. $0$은 정수이지만 양수도 음수도 아니다.\nㄷ. 분수 꼴로 쓴 $\\frac{8}{2}$는 정수 $4$와 같은 수이므로 옳지 않다.\n\n따라서 정답은 ③이다. ①은 $0$을 양수나 음수라고 잘못 생각했을 수 있다. ②는 정수가 유리수에 포함되지 않는다고 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T06:35:20.847769+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "ㄴ에서 $0$의 분류를, ㄷ에서 분수 꼴로 쓴 정수의 분류를 따져야 한다. ㄱ에서는 정수와 유리수의 관계를 판단해야 한다.",
+      "id": "90ae40cd-9a9a-42c9-b017-92a07e864f9b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:35:20.847685+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.775837+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C2-정의이해",
+      "body": "정수와 유리수에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "모든 정수는 유리수이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M1",
+          "no": 2,
+          "text": "분수 꼴로 적힌 수만 유리수이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M2",
+          "no": 3,
+          "text": "$0$은 양의 정수이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "정수가 아닌 유리수는 모두 음수이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "모든 유리수는 정수이다."
+        }
+      ],
+      "created_at": "2026-11-11T06:34:24.093474+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정수는 모두 분모가 $1$인 분수로 나타낼 수 있으므로 유리수입니다. 따라서 정답은 ①입니다.\n② 유리수는 분수 꼴로 적힌 수만 있는 것이 아닙니다. 예를 들어 $0.5$도 $\\frac{1}{2}$로 나타낼 수 있으므로 유리수입니다.\n③ $0$은 양수도 음수도 아닙니다.\n④ $\\frac{1}{2}$은 정수가 아닌 유리수이면서 양수입니다.\n⑤ $\\frac{1}{2}$은 유리수이지만 정수는 아닙니다.",
+      "generated_at": "2026-11-11T06:34:23.779922+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "588296f0-91cb-47f5-a1d2-77b967b14f79",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:34:23.779738+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:48.826131+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C2-정의이해",
+      "body": "다음 다섯 수 중에서 정수가 아닌 유리수를 모두 고른 것은?\n\n$-2$, $0$, $0.5$, $-\\frac{3}{4}$, $3$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-03-M1",
+          "no": 1,
+          "text": "$-\\frac{3}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$0$, $-\\frac{3}{4}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$0.5$, $-\\frac{3}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$-2$, $0$, $3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "다섯 수 모두"
+        }
+      ],
+      "created_at": "2026-11-11T06:34:37.456779+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$0.5$는 $\\frac{1}{2}$로 나타낼 수 있으므로 유리수입니다. $-\\frac{3}{4}$도 유리수입니다. 두 수는 정수가 아닙니다. 나머지 $-2$, $0$, $3$은 모두 정수입니다.\n\n①을 골랐다면 분수 꼴로 쓰인 수만 유리수라고 생각했을 수 있습니다. 소수로 쓰인 $0.5$도 유리수입니다.",
+      "generated_at": "2026-11-11T06:34:37.260688+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "24f415b9-ca66-43ee-a6d6-2bca1f42b294",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:34:37.260534+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

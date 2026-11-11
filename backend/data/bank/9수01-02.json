@@ -1,0 +1,1597 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수01-02-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T06:10:35.959427+00:00",
+          "issues": [
+            "보기 ①: M1대로 공통 소인수의 작은 지수를 고르면 민수만 옳다고 판단하여 ③을 고르게 된다. ①은 한 수에만 있는 소인수를 빠뜨려도 된다고 여기는 데다 지연의 큰 지수 선택도 허용한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:10:56.155220+00:00",
+          "issues": [
+            "보기 ③: M2만 적용하면 공통 소인수의 큰 지수를 고르고 5를 빠뜨린다는 보기 ②를 고른다. 보기 ③에는 M1도 함께 반영되어 있다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:11:20.262337+00:00",
+          "issues": [
+            "보기 ③: M2만 적용하면 최소공배수는 2²×3²인데, 보기의 설명은 작은 지수까지 골라 2×3을 제시한다.",
+            "보기 ⑤: M2를 적용하면 수아의 2²×3²을 옳다고 판단하므로, 수아의 수에 5를 곱해야 한다는 보기와 맞지 않는다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T06:11:20.479468+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T06:21:56.049384+00:00",
+      "variant": 1
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T06:19:19.725835+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C1-성질적용",
+      "body": "두 자연수 $A$, $B$의 최대공약수가 $2^2\\times3^3$이다. $A=2^2\\times3^3\\times5$일 때, $B$가 될 수 있는 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 1,
+          "text": "$2\\times3^2\\times7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2^3\\times3^2\\times7$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2^3\\times3^4\\times7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2\\times3^4\\times7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2^2\\times3^3\\times5\\times7$"
+        }
+      ],
+      "created_at": "2026-11-11T06:07:24.044524+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "최대공약수를 구할 때는 공통인 소인수의 지수 중 작은 것을 고른다. $A$에서 $2$의 지수는 $2$, $3$의 지수는 $3$이므로 $B$에서 두 소인수의 지수는 각각 $2$ 이상, $3$ 이상이어야 한다. 또 $B$는 $5$를 소인수로 가지면 안 된다. 이를 모두 만족하는 것은 ③이다.\n①을 골랐다면 공통인 소인수의 지수 중 큰 것을 고른 것은 아닌지 살펴보자. ①의 경우 작은 지수를 고르면 최대공약수는 $2\\times3^2$이다.",
+      "generated_at": "2026-11-11T06:07:23.988415+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "최대공약수와 한 수가 주어졌을 때, 다른 수가 될 수 있는 것을 거꾸로 찾게 했다.",
+      "id": "b7c338ac-6714-4035-8517-04ed8ba85634",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:07:23.988108+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.767746+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C1-성질적용",
+      "body": "세 자연수 $2^2\\times3^3$, $2^3\\times3\\times5$, $2\\times3^2\\times5$의 최대공약수를 구하는 학생의 풀이이다.\n\n“세 수에 공통인 소인수는 $2$와 $3$이다. $2$의 지수는 가장 작은 $1$을 고르고, $3$의 지수는 가장 큰 $3$을 고른다. 따라서 최대공약수는 $2\\times3^3$이다.”\n\n이 풀이의 잘못된 부분을 바로잡은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "세 수에 공통인 소인수에 $5$를 추가해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 2,
+          "text": "$2$의 지수도 가장 큰 $3$으로 고쳐야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3$의 지수를 가장 작은 $1$로 고쳐야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M4",
+          "no": 4,
+          "text": "공통인 소인수 $2$와 $3$을 곱하지 말고 더해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$3$의 지수를 가운데 크기인 $2$로 고쳐야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T06:07:46.127184+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "최대공약수를 구할 때는 공통인 소인수의 지수 중 가장 작은 것을 고른다. $2$의 지수는 $1$, $3$의 지수도 $1$이므로 최대공약수는 $2\\times3=6$이다.\n\n②처럼 큰 지수를 고르면 세 수 모두를 나누지 못할 수 있다. ④처럼 공통인 소인수를 더하지 않고 곱해야 한다. $5$는 첫째 수에 없고, $3$의 지수는 가운데 크기가 아닌 가장 작은 것을 고른다.",
+      "generated_at": "2026-11-11T06:07:46.064842+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "세 수의 최대공약수를 구하는 풀이에서 잘못된 부분을 찾아 바로잡게 한다.",
+      "id": "aa0d313e-ce85-4f6a-815c-daf1a30c93fa",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:07:46.064642+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.802158+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C1-성질적용",
+      "body": "두 자연수 $2^3\\times 3^2\\times 5$와 $2^2\\times 3^3\\times 7$의 최대공약수를 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2^2\\times 3^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 2,
+          "text": "$2^3\\times 3^3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2^2\\times 3^3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2^3\\times 3^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M4",
+          "no": 5,
+          "text": "$2+3$"
+        }
+      ],
+      "created_at": "2026-11-11T06:06:47.668699+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 수에 공통으로 들어 있는 소인수는 $2$와 $3$이다. 두 수를 모두 나누려면 각각의 지수가 더 작은 $2^2$과 $3^2$을 곱해야 한다. 따라서 최대공약수는 $2^2\\times 3^2$이다.\n②처럼 지수가 더 큰 것을 고르면 두 수를 모두 나눌 수 없다. ⑤처럼 공통인 소인수를 더해서도 최대공약수를 구할 수 없다.",
+      "generated_at": "2026-11-11T06:06:47.615429+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9d806f34-d0cb-4fff-b563-8c967576f7df",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:06:47.615272+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.825916+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C1-성질적용",
+      "body": "세 자연수 $72$, $120$, $180$을 각각 소인수분해하면 다음과 같다.\n$72=2^3\\times 3^2$, $120=2^3\\times 3\\times 5$, $180=2^2\\times 3^2\\times 5$\n\n세 수의 최대공약수를 구한 방법으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "두 수 이상에 들어 있는 소인수를 모두 택하여 $2^2\\times 3\\times 5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 2,
+          "text": "세 수에 공통인 소인수에서 지수가 가장 큰 것을 택하여 $2^3\\times 3^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M4",
+          "no": 3,
+          "text": "세 수에 공통인 소인수를 더하여 $2+3$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "세 수에 공통인 소인수에서 지수가 가장 작은 것을 택하여 $2^2\\times 3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "세 수에 공통인 소인수 중 가장 작은 것만 택하여 $2^2$"
+        }
+      ],
+      "created_at": "2026-11-11T06:07:04.646739+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "세 수에 공통으로 들어 있는 소인수는 $2$와 $3$이다. 각각의 지수 중 가장 작은 것을 택하여 곱하면 $2^2\\times 3=12$이다. 따라서 정답은 ④이다.\n②는 최대공약수를 구할 때 지수가 큰 것을 택한 것이다. ③은 공통인 소인수를 곱하지 않고 더한 것이다.",
+      "generated_at": "2026-11-11T06:07:04.597648+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "38bb0dad-f18b-4b1b-b96a-5e559d10c0c8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:07:04.597531+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.851454+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C2-성질적용",
+      "body": "두 자연수 $A$, $B$가 있다. $A=2^2\\times3^3\\times5$이고, 두 수의 최소공배수는 $2^3\\times3^3\\times5$이다. $B$로 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2^2\\times3\\times5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2^3\\times3^4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2^3\\times3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2^3\\times3\\times5^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M2",
+          "no": 5,
+          "text": "$2^3\\times3^3\\times5\\times7$"
+        }
+      ],
+      "created_at": "2026-11-11T06:08:32.764521+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "최소공배수에서 $2$의 지수는 $3$이므로 $B$에는 $2^3$이 있어야 한다. 또 $B$에 있는 $3$의 지수는 $3$보다 클 수 없고, $5$의 지수는 $1$보다 클 수 없다. $A$에 없는 소인수가 $B$에 있으면 그 소인수도 최소공배수에 들어간다. 따라서 답은 ③이다.\n⑤를 고른 경우, 두 수에 공통인 소인수만 곱하고 $B$에만 있는 소인수 $7$을 빠뜨렸을 수 있다.",
+      "generated_at": "2026-11-11T06:08:32.695838+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "최소공배수를 먼저 주고, 그 결과가 나오도록 하는 다른 한 수를 찾게 한다.",
+      "id": "9b324c26-f313-48cb-8ecc-82770cd429f3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:08:32.695515+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.877821+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C2-성질적용",
+      "body": "세 자연수 $2^2\\times3$, $2\\times3^2\\times5$, $2^2\\times7$의 최소공배수를 다음과 같이 구했다.\n\nㄱ. 세 수에 있는 소인수를 모두 고르면 $2$, $3$, $5$, $7$이다.\nㄴ. 각 소인수에서 지수가 작은 것을 골라 $2$, $3$, $5$, $7$을 얻는다.\nㄷ. 공통인 소인수끼리 곱하면 최소공배수는 $2\\times3$이다.\n\n처음으로 잘못된 단계와 그 이유를 바르게 말한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M2",
+          "no": 1,
+          "text": "ㄱ: 세 수에 공통인 소인수만 골라야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "ㄴ: 각 소인수에서 지수가 가장 큰 것을 골라야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 3,
+          "text": "ㄷ: $5$와 $7$을 더 곱해야 한다. 공통인 소인수에서는 지수가 작은 것을 고른 ㄴ이 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄷ: $2$와 $3$을 한 번씩 더 곱해야 한다. ㄱ과 ㄴ은 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄱ: $2$는 세 수에 모두 있으므로 세 번 골라야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T06:09:34.988548+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "ㄱ은 옳다. 세 수 중 어느 하나에라도 있는 소인수를 모두 골랐다.\nㄴ은 잘못되었다. 최소공배수를 구할 때는 각 소인수에서 지수가 가장 큰 것을 골라야 한다. 따라서 $2^2$, $3^2$, $5$, $7$을 곱한 $2^2\\times3^2\\times5\\times7$이 최소공배수이다.\n①처럼 공통인 소인수만 고르면 $5$와 $7$을 빠뜨린다. ③처럼 공통인 소인수에서 지수가 작은 것을 고르면 세 수의 공배수가 되지 않는다.",
+      "generated_at": "2026-11-11T06:09:34.66527+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "세 수의 최소공배수를 구하는 과정을 보고 처음으로 잘못된 단계와 그 이유를 판단해야 한다.",
+      "id": "45760112-2a23-4ff2-b9db-1b9bc3b22d16",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:09:07.589188+00:00",
+          "issues": [
+            "보기 1: M2만 적용하면 공통 소인수의 가장 큰 거듭제곱을 곱한 36이 나오지만, 보기대로 한 곳만 고치면 12가 나온다. M2대로도 ①의 3을 3²으로 고쳐야 하므로 한 곳만 수정하는 조건에 맞지 않는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:09:34.665170+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.913057+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C2-성질적용",
+      "body": "두 자연수 $2^3\\times 3^2$, $2^2\\times 3\\times 5$의 최소공배수는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 1,
+          "text": "$2^2\\times 3\\times 5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M2",
+          "no": 2,
+          "text": "$2^3\\times 3^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2^3\\times 3\\times 5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2^2\\times 3^2\\times 5$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2^3\\times 3^2\\times 5$"
+        }
+      ],
+      "created_at": "2026-11-11T06:07:59.288218+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "최소공배수를 구할 때 공통인 소인수는 지수가 큰 것을 택하고, 한 수에만 있는 소인수도 곱한다. 따라서 최소공배수는 $2^3\\times 3^2\\times 5$이다. ①처럼 공통인 소인수의 지수가 작은 것을 택하면 첫째 수의 배수가 아니다. ②처럼 $5$를 빠뜨리면 둘째 수의 배수가 아니다.",
+      "generated_at": "2026-11-11T06:07:59.230083+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ea90fa0e-7cf4-4d0e-83bf-c7207e61fe20",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:07:59.229874+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.939916+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C2-성질적용",
+      "body": "세 자연수 $12$, $18$, $30$의 최소공배수를 구하는 식으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 1,
+          "text": "$2\\times 3\\times 5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M2",
+          "no": 2,
+          "text": "$2^2\\times 3^2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2^2\\times 3^2\\times 5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2^2\\times 3\\times 5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2^2\\times 3^2\\times 5^2$"
+        }
+      ],
+      "created_at": "2026-11-11T06:08:13.220185+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$12=2^2\\times 3$, $18=2\\times 3^2$, $30=2\\times 3\\times 5$입니다. 세 수의 소인수를 모두 쓰고, 같은 소인수는 지수가 가장 큰 것을 골라 곱합니다. 따라서 최소공배수는 $2^2\\times 3^2\\times 5$입니다.\n①은 공통인 소인수의 지수를 가장 작은 것으로 골랐습니다. 최소공배수를 구할 때는 가장 큰 것을 골라야 합니다.\n②는 $30$에만 있는 소인수 $5$를 빠뜨렸습니다.",
+      "generated_at": "2026-11-11T06:08:13.147446+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7f0ffb49-cee7-4796-b6fe-2d2078074327",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:08:13.147214+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:27:44.480674+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C2-오개념판별",
+      "body": "세 자연수 $A=2^3\\times3$, $B=2^2\\times3^2\\times5$, $C=2\\times3^2$의 최소공배수에 대해 민호가 다음과 같이 말했다.\n\n“$2^3\\times3^2\\times5$는 세 수의 공배수이지만 최소공배수는 아니야. 공통인 소인수 $2$와 $3$은 지수가 가장 작은 것을 골라야 해.”\n\n민호의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$가 한 수에만 있으므로 $2^3\\times3^2\\times5$는 세 수의 공배수가 아니야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 2,
+          "text": "민호의 말이 모두 옳아. 최소공배수는 $2\\times3\\times5$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M2",
+          "no": 3,
+          "text": "세 수의 공배수라는 말은 옳아. 하지만 최소공배수는 공통인 소인수만 곱한 $2^3\\times3^2$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 4,
+          "text": "세 수의 공배수라는 말은 옳아. 하지만 최소공배수를 구할 때 $3$의 지수는 $1$로 골라야 해."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "세 수의 공배수라는 말은 옳아. 그리고 공통인 소인수는 지수가 가장 큰 것을 골라야 하므로 그 수는 최소공배수이기도 해."
+        }
+      ],
+      "created_at": "2026-11-11T06:21:56.115298+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$2^3\\times3^2\\times5$는 세 수의 공배수이다. 세 수에 있는 소인수를 빠짐없이 고르고, 같은 소인수는 지수가 가장 큰 것을 골랐으므로 최소공배수이기도 하다.\n\n①에서 $5$가 한 수에만 있다는 것은 맞지만, $5$를 곱해도 세 수의 공배수이다. ②와 ④는 최소공배수에서 공통인 소인수의 지수를 작게 골랐다. ③은 한 수에만 있는 소인수 $5$를 빠뜨렸다.",
+      "generated_at": "2026-11-11T06:21:55.954719+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민호가 구한 수와 그 수에 대한 주장을 함께 제시했다. 학생은 공배수라는 판단과 지수를 고르는 방법을 각각 살펴보아야 한다.",
+      "id": "d800e5c5-9c91-4352-abe3-169266f0cac6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:21:55.954365+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.975418+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C2-오개념판별",
+      "body": "두 자연수 $A=2^3\\times3$, $B=2\\times5$의 최소공배수를 구하는 방법에 대해 두 학생이 다음과 같이 말했다.\n\n지민: “공통인 소인수 $2$는 지수가 작은 것을 고르고, 한 수에만 있는 소인수도 곱해. 따라서 최소공배수는 $2\\times3\\times5$야.”\n\n수아: “두 수에 공통인 소인수만 고르고, 그 지수는 큰 것을 골라. 따라서 최소공배수는 $2^3$이야.”\n\n두 학생의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 1,
+          "text": "지민만 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M2",
+          "no": 2,
+          "text": "수아만 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 학생 모두 옳다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 학생 모두 틀리다. 지민은 공통인 소인수의 지수를 잘못 골랐고, 수아는 한 수에만 있는 소인수를 빠뜨렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 학생 모두 틀리다. 지민은 한 수에만 있는 소인수를 빠뜨렸고, 수아는 공통인 소인수의 지수를 잘못 골랐다."
+        }
+      ],
+      "created_at": "2026-11-11T06:11:39.297998+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "최소공배수에는 두 수에 있는 모든 소인수가 필요하다. 공통인 소인수는 지수가 큰 것을 고른다. 따라서 최소공배수는 $2^3\\times3\\times5$이다.\n\n지민은 공통인 소인수 $2$의 지수를 작은 것으로 골랐다. 지민이 구한 수는 $A$의 배수가 아니다. 수아는 한 수에만 있는 소인수 $3$과 $5$를 빠뜨렸다. 수아가 구한 수는 $A$와 $B$의 배수가 아니다.",
+      "generated_at": "2026-11-11T06:11:39.238447+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 학생의 풀이를 보고 각각 옳은지 판단하게 했다. 두 풀이에서 서로 다른 잘못을 구별해야 한다.",
+      "id": "506ee8f2-6335-450b-90f7-4b2d5e791b62",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:11:39.238104+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:19:19.998582+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C2-오개념판별",
+      "body": "두 자연수 $A=2^3\\times3$, $B=2\\times3^2\\times5$의 최소공배수를 구하려고 한다. 구하는 방법과 결과가 모두 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 1,
+          "text": "공통인 소인수는 지수가 작은 것을 고르고, 한 수에만 있는 소인수도 곱한다. 따라서 $2\\times3\\times5$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "공통인 소인수는 지수가 큰 것을 고르고, 한 수에만 있는 소인수도 곱한다. 따라서 $2^3\\times3^2\\times5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M2",
+          "no": 3,
+          "text": "공통인 소인수만 지수가 큰 것으로 골라 곱한다. 따라서 $2^3\\times3^2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 수에 있는 소인수를 모두 곱한다. 따라서 $2^4\\times3^3\\times5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 수 중 큰 수를 고른다. 따라서 $2\\times3^2\\times5$이다."
+        }
+      ],
+      "created_at": "2026-11-11T06:09:50.265622+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "최소공배수를 구할 때는 두 수에 공통으로 있는 소인수의 지수 중 큰 것을 고르고, 한 수에만 있는 소인수도 곱한다. 따라서 최소공배수는 $2^3\\times3^2\\times5$이다.\n①은 공통인 소인수의 지수 중 작은 것을 골랐다. ③은 한 수에만 있는 소인수 $5$를 빠뜨렸다.",
+      "generated_at": "2026-11-11T06:09:50.200319+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "818a598b-e680-4abd-bc36-3ca14d13c26c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:09:50.200147+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:20.025125+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C2-오개념판별",
+      "body": "두 자연수 $12$와 $42$의 최소공배수를 구하려고 한다. 민수는 다음과 같이 구했다.\n\n$12=2^2\\times3$, $42=2\\times3\\times7$이므로, 공통인 소인수만 골라 지수가 큰 것을 곱하면 최소공배수는 $2^2\\times3=12$이다.\n\n민수의 풀이에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$42$에 있는 소인수 $7$을 빠뜨렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M1",
+          "no": 2,
+          "text": "$2$의 지수는 큰 $2$가 아니라 작은 $1$을 골라야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M2",
+          "no": 3,
+          "text": "공통인 소인수만 곱했으므로 틀린 곳이 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3$은 두 수에 공통으로 있으므로 빼야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 수의 소인수를 모두 곱하여 $2^3\\times3^2\\times7$로 구해야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T06:10:07.549603+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$42$의 소인수인 $7$도 곱해야 하므로 민수의 답은 $42$의 배수가 아니다. 최소공배수는 $2^2\\times3\\times7=84$이다.\n\n②처럼 최소공배수를 구할 때 공통인 소인수의 지수가 작은 것을 고르면 안 된다. ③처럼 공통인 소인수만 곱하면 한 수에만 있는 소인수를 빠뜨릴 수 있다. ④의 $3$은 두 수의 배수가 되도록 곱해야 한다. ⑤처럼 같은 소인수를 두 수에서 모두 골라 곱할 필요는 없다.",
+      "generated_at": "2026-11-11T06:10:07.273939+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3e6900bf-36fd-4ad3-90da-397808d9ec9a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:10:07.273749+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:19:20.057269+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C3-정의이해",
+      "body": "다음 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$1$과 $12$의 공약수는 $1$뿐이므로 두 수는 서로소이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M3",
+          "no": 2,
+          "text": "$8$과 $9$는 모두 소수가 아니므로 서로소가 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M3",
+          "no": 3,
+          "text": "$5$와 $5$는 모두 소수이므로 서로소이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6$과 $15$는 서로 다른 수이므로 서로소이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$1$과 $1$은 같은 수이므로 서로소가 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T06:12:25.821131+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 자연수의 최대공약수가 $1$이면 서로소이다. $1$과 $12$의 공약수는 $1$뿐이므로 두 수는 서로소이다. $8$과 $9$도 최대공약수가 $1$이므로 서로소이다. 두 수가 모두 소수여야 서로소인 것은 아니다. $5$와 $5$의 최대공약수는 $5$이고, $6$과 $15$의 최대공약수는 $3$이다. 또 $1$과 $1$의 최대공약수는 $1$이므로 두 수는 서로소이다.",
+      "generated_at": "2026-11-11T06:12:25.765368+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$1$이 포함된 두 수와 같은 두 수를 보기에 넣었다. 두 수의 최대공약수가 $1$인지 살펴야 서로소인지 판단할 수 있다.",
+      "id": "1a5665f6-50c3-4d35-abe2-570eb93c01fc",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:12:25.765218+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:20.080153+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C3-정의이해",
+      "body": "다음 세 쌍 중 서로소인 것을 모두 고른 것은?\n\n가. $1$과 $9$\n나. $8$과 $9$\n다. $6$과 $15$",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "가, 나"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "가"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "나"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "다"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M3",
+          "no": 5,
+          "text": "없다"
+        }
+      ],
+      "created_at": "2026-11-11T06:12:40.872491+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가에서 $1$과 $9$의 공약수는 $1$뿐이므로 두 수는 서로소이다. 나에서 $8=2^3$, $9=3^2$이므로 최대공약수는 $1$이다. 따라서 두 수는 서로소이다. 다에서 $6$과 $15$의 최대공약수는 $3$이므로 서로소가 아니다.\n\n두 수가 모두 소수여야 서로소라고 생각하면 ⑤를 고를 수 있다. 하지만 두 수가 소수가 아니어도 최대공약수가 $1$이면 서로소이다.",
+      "generated_at": "2026-11-11T06:12:40.796466+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$1$과 $9$에서 $1$의 공약수를 살펴야 한다. 또 $8$과 $9$에서는 두 수가 모두 소수가 아니어도 서로소인지 판단해야 한다.",
+      "id": "37c79803-5ebb-4bb1-9823-570ba1d8d95b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:12:40.796297+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:19:20.113962+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C3-정의이해",
+      "body": "두 자연수 $8=2^3$, $9=3^2$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "두 수가 모두 소수이므로 서로소이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M3",
+          "no": 2,
+          "text": "두 수가 모두 소수가 아니므로 서로소가 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 수의 최대공약수가 $1$이므로 서로소이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 수의 공약수가 하나도 없으므로 서로소이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 수의 최대공약수가 $1$이므로 서로소가 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T06:11:51.153464+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$8$과 $9$는 공통인 소인수가 없으므로 최대공약수가 $1$이다. 따라서 두 수는 서로소이다. 서로소는 두 수가 모두 소수라는 뜻이 아니다. $8$과 $9$는 모두 소수가 아니지만 서로소이다.",
+      "generated_at": "2026-11-11T06:11:51.079796+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "5125f9b1-f7ab-461d-91b7-81393dbb750e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:11:51.079598+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:20.141096+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C3-정의이해",
+      "body": "자연수 $A=2^2\\times3$이다. 다음 설명 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-02-M3",
+          "no": 1,
+          "text": "$A$와 $25$는 모두 소수가 아니므로 서로소가 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$A$와 $18$은 공통인 소인수 $3$이 있으므로 서로소이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$9$는 홀수이므로 $A$와 서로소이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$A$와 $25$의 공약수는 $1$뿐이므로 서로소이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$1$은 공약수가 아니므로 $A$와 $5$는 서로소가 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T06:12:10.204946+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$A$와 $25$의 공약수는 $1$뿐이므로 두 수는 서로소이다. 두 수가 모두 소수가 아니어도 서로소일 수 있다. $18$과 $9$는 각각 $A$와 공통인 소인수 $3$을 가진다. $1$은 $A$와 $5$의 공약수이고, $A$는 소수가 아니다.",
+      "generated_at": "2026-11-11T06:12:09.968086+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3bfc88be-9f65-4cf1-8f22-1dc005a8a241",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:12:09.967796+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수01-02-C4-이유설명",
+      "body": "서로 다른 세 소수 $p$, $q$, $r$와 $m<n$인 두 자연수 $m$, $n$에 대하여 두 자연수 $A$, $B$가 다음과 같다.\n\n$A=p^m q$, $B=p^n r$\n\n$A$와 $B$의 최대공약수와 최소공배수를 각각 구하시오. 또, 각각의 답이 주어진 모든 $p$, $q$, $r$, $m$, $n$에 대하여 성립하는 이유를 공약수와 공배수의 소인수를 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:22:56.597618+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T06:27:43.517439+00:00",
+      "explanation": "공약수에는 두 수에 모두 있는 소인수만 들어갈 수 있다. 공통인 소인수 $p$의 지수는 두 수의 지수보다 클 수 없으므로 작은 지수 $m$을 고른다. 반대로 공배수에는 각 수의 소인수가 충분히 들어 있어야 하므로 $p$의 큰 지수 $n$을 고르고, 한 수에만 있는 $q$와 $r$도 빠뜨리지 않는다.",
+      "generated_at": "2026-11-11T06:22:56.153139+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "특정 수를 계산하는 대신, 주어진 관계를 만족하는 모든 $p$, $q$, $r$, $m$, $n$에 대하여 답이 성립하는 이유를 설명하게 했다.",
+      "id": "22ed2f4f-9e29-47bc-9a5c-51a5f329d67c",
+      "model": "gpt-6.1-terra",
+      "model_answer": "최대공약수는 $p^m$이다. 두 수의 공약수에는 공통인 소인수 $p$만 들어갈 수 있고, 그 지수는 $m$보다 클 수 없다. 따라서 모든 공약수는 $p^m$의 약수이다. $p^m$은 두 수의 공약수이므로 최대공약수이다.\n\n최소공배수는 $p^nqr$이다. 두 수의 공배수에는 $p$가 적어도 $n$개, $q$와 $r$이 각각 적어도 한 개씩 들어 있어야 한다. 따라서 모든 공배수는 $p^nqr$의 배수이다. $p^nqr$은 두 수의 공배수이므로 최소공배수이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "최대공약수를 $p^m$으로 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "모든 공약수에는 $p$만 들어갈 수 있고 그 지수는 $m$보다 클 수 없음을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "$p^m$이 두 수의 공약수임을 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "최소공배수를 $p^nqr$으로 쓴다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "모든 공배수에 $p$가 적어도 $n$개, $q$와 $r$이 각각 적어도 한 개씩 들어 있어야 함을 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "$p^nqr$이 두 수의 공배수임을 설명한다.",
+          "no": 6,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T06:22:37.065155+00:00",
+          "issues": [
+            "‘한 수에만 있는 소인수는 그대로 곱한다’가 그 소인수를 한 번만 곱한다는 뜻인지, 원래 지수만큼 곱한다는 뜻인지 모호하다. 예를 들어 A=4, B=3일 때 L을 6으로 해석하면 L은 공배수가 아니어서 모범 답안이 성립하지 않는다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:22:56.152649+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:31:29.509799+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C4-이유설명",
+      "body": "두 자연수 $24=2^3\\times3$, $90=2\\times3^2\\times5$에 대하여 민수가 다음과 같이 말했습니다.\n\n“최대공약수는 공통인 소인수의 큰 지수를 골라 곱한 $2^3\\times3^2$이다. 최소공배수는 공통인 소인수의 작은 지수를 골라 곱한 $2\\times3$이다.”\n\n두 수를 반례로 삼아 민수의 말이 각각 왜 틀렸는지 설명하세요. 또 두 수의 최대공약수와 최소공배수를 구하고, 소인수의 지수를 그렇게 고른 이유를 각각 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T06:29:24.91045+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$2^3\\times3^2=72$는 $24$와 $90$의 공약수가 아닙니다. $2\\times3=6$도 두 수의 공배수가 아닙니다. 민수는 최대공약수에 큰 지수를, 최소공배수에 작은 지수를 쓰고, 최소공배수에서 $5$를 빠뜨렸습니다.\n\n두 수의 공약수에는 공통인 소인수 $2$와 $3$만 들어갈 수 있습니다. $2$는 $90$에 한 번만, $3$은 $24$에 한 번만 있으므로 각각 한 번까지만 들어갈 수 있습니다. 따라서 최대공약수는 $2\\times3=6$입니다.\n\n두 수의 공배수에는 $24$의 소인수인 $2^3$과 $3$, $90$의 소인수인 $2$, $3^2$, $5$가 모두 들어가야 합니다. 따라서 $2$와 $3$은 각각 큰 지수를 고르고 $5$도 넣어야 합니다. 최소공배수는 $2^3\\times3^2\\times5=360$입니다.",
+      "generated_at": "2026-11-11T06:29:24.759426+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민수의 두 주장에 대해 주어진 $24$와 $90$을 반례로 삼아 각각 왜 틀렸는지 설명하게 했다.",
+      "id": "2c18d550-7294-4ef4-b9af-f714652ee088",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$2^3\\times3^2=72$는 $24$의 약수가 아니므로 공약수가 아니다. $2\\times3=6$은 $24$의 배수가 아니므로 공배수가 아니다.\n\n공약수에는 공통인 소인수 $2$와 $3$만 들어갈 수 있다. $90$에는 $2$가 한 번, $24$에는 $3$이 한 번 있으므로 각각 한 번까지만 들어갈 수 있다. 따라서 최대공약수는 $2\\times3=6$이다.\n\n공배수에는 $24$와 $90$에 있는 소인수가 모두 들어가야 한다. $24$에 있는 $2^3$, $90$에 있는 $3^2$와 $5$도 필요하다. 따라서 최소공배수는 $2^3\\times3^2\\times5=360$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$72$가 두 수 중 적어도 한 수의 약수가 아님을 들어 민수의 최대공약수에 대한 말이 틀렸음을 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "$6$이 두 수 중 적어도 한 수의 배수가 아님을 들어 민수의 최소공배수에 대한 말이 틀렸음을 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "공약수에 $2$와 $3$이 각각 한 번까지만 들어갈 수 있는 이유를 두 수에서 찾아 설명하고, 최대공약수를 $6$으로 구한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "공배수에 $2^3$, $3^2$, $5$가 필요한 이유를 두 수에서 찾아 설명하고, 최소공배수를 $360$으로 구한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:29:24.759224+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수01-02-C4-이유설명",
+      "body": "$1$보다 큰 두 자연수 $A$, $B$가 있다. 두 수를 소인수분해하여 최대공약수와 최소공배수를 구하려고 한다.\n\n어떤 소수 $p$가 두 수에 각각 몇 번 곱해져 있는지 생각하자. $p$가 어느 한 수의 소인수가 아니면 그 수에는 $0$번 곱해져 있다고 한다.\n\n$A$, $B$가 어떤 수이든 다음이 성립하는 이유를 설명하시오.\n\n1. 최대공약수에는 $p$를 두 횟수 중 작은 횟수만큼 곱한다.\n2. 최소공배수에는 $p$를 두 횟수 중 큰 횟수만큼 곱한다.\n\n$p$가 한 수의 소인수가 아닌 때도 생각하고, 이렇게 구한 수가 각각 가장 큰 공약수와 가장 작은 공배수인 이유까지 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:13:39.719015+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T06:19:17.925172+00:00",
+      "explanation": "공약수에 들어 있는 각 소인수의 횟수는 두 수에 들어 있는 횟수보다 각각 많을 수 없다. 따라서 작은 횟수만큼 곱해야 가장 큰 공약수를 만들 수 있다.\n\n공배수에 들어 있는 각 소인수의 횟수는 두 수에 들어 있는 횟수보다 각각 적을 수 없다. 따라서 큰 횟수만큼 곱해야 가장 작은 공배수를 만들 수 있다. 한 수에만 있는 소인수도 최소공배수에 들어가야 한다. 이를 빠뜨리면 그 소인수가 있는 수의 배수가 되지 않는다.",
+      "generated_at": "2026-11-11T06:13:39.671578+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "특정 수를 주지 않고 두 자연수가 어떤 수이든 작은 횟수와 큰 횟수를 고르는 이유를 설명하게 한다. 한 수에만 있는 소인수도 생각하게 한다.",
+      "id": "eaefa1be-f336-4956-8177-0f3e992ad666",
+      "model": "gpt-6.1-terra",
+      "model_answer": "공약수는 $A$, $B$를 모두 나누어야 한다. 따라서 공약수에 들어 있는 $p$의 횟수는 $A$, $B$에 들어 있는 두 횟수보다 각각 많을 수 없다. 두 횟수 중 작은 횟수만큼 $p$를 곱하면 이 소수에 대해서는 공약수에 넣을 수 있는 횟수가 가장 많다. 한 수에 $p$가 없으면 작은 횟수는 $0$이므로 공약수에는 $p$가 들어가지 않는다.\n\n이렇게 각 소인수를 작은 횟수만큼 곱한 수는 두 수의 공약수이다. 또 다른 모든 공약수는 이 수를 나누므로, 이 수가 최대공약수이다.\n\n공배수는 $A$, $B$로 모두 나누어져야 한다. 따라서 공배수에 들어 있는 $p$의 횟수는 $A$, $B$에 들어 있는 두 횟수보다 각각 적을 수 없다. 두 횟수 중 큰 횟수만큼 $p$를 곱하면 이 소수에 대해서는 공배수에 필요한 횟수가 가장 적다. 한 수에만 $p$가 있어도 큰 횟수만큼 곱해야 한다.\n\n이렇게 두 수에 있는 각 소인수를 큰 횟수만큼 곱한 수는 두 수의 공배수이다. 또 다른 모든 공배수는 이 수의 배수이므로, 이 수가 최소공배수이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "공약수에 들어 있는 소인수의 횟수가 두 수에 들어 있는 횟수보다 각각 많을 수 없으므로 작은 횟수를 고른다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "작은 횟수만큼 곱한 수가 공약수이고 모든 공약수가 이 수를 나누므로 최대공약수라고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "공배수에 들어 있는 소인수의 횟수가 두 수에 들어 있는 횟수보다 각각 적을 수 없으므로 큰 횟수를 고른다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "큰 횟수만큼 곱한 수가 공배수이고 모든 공배수가 이 수의 배수이므로 최소공배수라고 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "한 수에만 있는 소인수는 최대공약수에는 들어가지 않지만 최소공배수에는 들어간다고 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T06:13:39.671492+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수01-02-C4-이유설명",
+      "body": "두 자연수 $A=2^3\\times3$, $B=2\\times3^2\\times5$가 있다. 두 학생이 소인수분해를 이용하여 최대공약수와 최소공배수를 구하려고 한다.\n\n방법 1: 공통인 소인수는 작은 지수를 골라 곱하여 최대공약수를 구한다. 모든 소인수는 큰 지수를 골라 곱하여 최소공배수를 구한다. 한 수에만 있는 소인수도 최소공배수를 구할 때 곱한다.\n\n방법 2: 먼저 최대공약수를 구한다. 각 수를 최대공약수로 나눈 뒤, 최대공약수와 나눈 몫 두 개를 모두 곱하여 최소공배수를 구한다.\n\n두 방법으로 각각 최대공약수와 최소공배수를 구하시오. 또, $A$, $B$뿐 아니라 $1$보다 큰 두 자연수에 대하여 두 방법이 항상 같은 결과를 주는 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:23:22.534885+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T06:27:43.577912+00:00",
+      "explanation": "공약수에 들어갈 수 있는 소인수의 지수는 두 수의 지수보다 각각 클 수 없다. 따라서 공통인 소인수의 작은 지수를 골라 곱하면 최대공약수가 된다.\n\n최대공약수로 각 수를 나눈 두 몫에는 공통인 소인수가 남지 않는다. 따라서 최대공약수와 두 몫을 곱하면, 공통인 소인수는 큰 지수만큼 들어간다. 한 수에만 있는 소인수도 빠짐없이 들어간다. 이 수는 두 수의 공배수이고, 모든 공배수는 이 수의 배수이므로 최소공배수이다.\n\n최대공약수에 큰 지수를 고르면 어느 한 수를 나누지 못할 수 있다. 최소공배수에 작은 지수를 고르거나 한 수에만 있는 소인수를 빠뜨리면 어느 한 수의 배수가 되지 못할 수 있다.",
+      "generated_at": "2026-11-11T06:23:22.33584+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 방법으로 최대공약수와 최소공배수를 구한 뒤, 두 방법이 항상 같은 결과를 주는 이유를 비교하여 설명하게 한다.",
+      "id": "6617dbf2-e5ca-4b9c-b3db-228efd8708b3",
+      "model": "gpt-6.1-terra",
+      "model_answer": "방법 1에서 최대공약수는 $2\\times3=6$이고, 최소공배수는 $2^3\\times3^2\\times5=360$이다.\n\n방법 2에서 최대공약수는 $6$이다. $A$를 $6$으로 나눈 몫은 $2^2$이고, $B$를 $6$으로 나눈 몫은 $3\\times5$이다. 따라서 최소공배수는 $6\\times2^2\\times3\\times5=360$이다.\n\n$1$보다 큰 두 자연수의 공약수에 들어가는 소인수는 두 수에 모두 있어야 한다. 그 지수는 두 수의 지수보다 각각 클 수 없다. 그러므로 공통인 소인수마다 작은 지수를 골라 곱한 수가 최대공약수이다.\n\n각 수를 최대공약수로 나누면 공통인 소인수는 작은 지수만큼 없어지므로 두 몫에는 공통인 소인수가 남지 않는다. 최대공약수와 두 몫을 곱하면 공통인 소인수는 큰 지수만큼 들어가고, 한 수에만 있는 소인수도 들어간다. 이것은 방법 1에서 고른 것과 같다. 이렇게 만든 수는 두 수의 공배수이다. 또 모든 공배수에는 이 소인수들이 적어도 이 지수만큼 들어가야 하므로, 모든 공배수는 이 수의 배수이다. 따라서 두 방법이 구한 수는 모두 최소공배수이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 방법으로 구한 최대공약수가 $6$, 최소공배수가 $360$임을 각각 나타낸다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": false
+        },
+        {
+          "description": "공약수에 들어가는 소인수와 지수의 제한을 이용하여, 공통인 소인수의 작은 지수를 골라 곱한 수가 최대공약수인 이유를 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "각 수를 최대공약수로 나눈 두 몫에 공통인 소인수가 남지 않는 이유를 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "방법 2에서 공통인 소인수는 큰 지수만큼, 한 수에만 있는 소인수도 빠짐없이 들어감을 이용하여 두 방법의 결과가 같음을 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법으로 만든 수가 공배수이고 모든 공배수가 그 수의 배수이므로 최소공배수임을 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T06:23:22.335630+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:31:29.556821+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C4-이유설명",
+      "body": "두 수 $12=2^2\\times3$, $45=3^2\\times5$의 최대공약수와 최소공배수를 두 방법으로 구했습니다.\n\n방법 1: 소인수를 골라 곱합니다.\n- 최대공약수: $3$\n- 최소공배수: $2^2\\times3^2\\times5=180$\n\n방법 2: 두 수를 공통으로 나누는 수 $3$으로 각각 나누면 $4$와 $15$가 됩니다. $4$와 $15$는 서로소입니다.\n- 최대공약수: $3$\n- 최소공배수: $3\\times4\\times15=180$\n\n두 방법이 같은 결과를 내는 이유를 최대공약수와 최소공배수로 나누어 설명하세요. 공통인 소인수의 작은 지수와 모든 소인수의 큰 지수를 고르는 이유도 포함하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T06:30:19.711071+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$12$와 $45$에 공통으로 들어 있는 소인수는 $3$뿐입니다. $12$에는 $3$이 한 번만 들어 있으므로 공약수에는 $3$이 한 번까지만 들어갈 수 있습니다. 그래서 최대공약수는 $3$입니다. 방법 2에서도 공통으로 나눈 수 $3$을 얻고, 남은 $4$와 $15$에는 공통인 소인수가 없습니다.\n\n공배수에는 $12$의 약수인 $2^2$과 $45$의 약수인 $3^2$, $5$가 모두 들어 있어야 합니다. 따라서 필요한 가장 작은 곱은 $2^2\\times3^2\\times5$입니다. 방법 2의 $3\\times4\\times15$도 $3\\times2^2\\times(3\\times5)$이므로 같은 소인수를 곱합니다.\n\n최대공약수에 $3^2$을 고르면 $12$를 나눌 수 없습니다. 최소공배수에 $3$을 한 번만 넣거나 $5$를 빠뜨리면 $45$의 배수가 되지 않습니다.",
+      "generated_at": "2026-11-11T06:30:19.444718+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "소인수를 고르는 방법과 공통으로 나누는 방법을 제시했습니다. 최대공약수와 최소공배수에서 각각 두 방법이 같은 결과를 내는 이유를 비교해 설명하도록 했습니다.",
+      "id": "66530ec6-265f-4938-876f-b0282fb35a82",
+      "model": "gpt-6.1-terra",
+      "model_answer": "최대공약수: $12$와 $45$에 공통으로 들어 있는 소인수는 $3$뿐이고, $12$에는 $3$이 한 번만 들어 있습니다. 따라서 공약수에 들어갈 수 있는 $3$의 지수는 작은 쪽인 $1$까지입니다. 방법 2에서는 공통으로 나눈 수가 $3$이고, 남은 $4$와 $15$에는 공통인 소인수가 없으므로 두 방법 모두 최대공약수로 $3$을 얻습니다.\n\n최소공배수: 공배수에는 $12$와 $45$에 들어 있는 소인수가 모두 필요합니다. $2$는 $12$에 있는 $2^2$만큼, $3$은 지수가 더 큰 $45$에 있는 $3^2$만큼, $5$는 $45$에 있는 만큼 필요합니다. 이보다 적으면 어느 한 수의 배수가 될 수 없으므로 최소공배수는 $2^2\\times3^2\\times5=180$입니다. 방법 2에서 $4=2^2$, $15=3\\times5$이므로 $3\\times4\\times15=3\\times2^2\\times3\\times5$입니다. 두 방법에서 같은 소인수를 같은 횟수만큼 곱하므로 결과가 같습니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "$12$와 $45$의 공약수에 $3$이 한 번까지만 들어갈 수 있고 다른 공통인 소인수는 없음을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "방법 2에서 공통으로 나눈 수는 $3$이고 남은 $4$와 $15$에는 공통인 소인수가 없음을 이용해 최대공약수의 결과를 비교한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "공배수에 $2^2$, $3^2$, $5$가 모두 필요한 이유와 이들을 곱한 수가 최소공배수인 이유를 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "방법 2의 $3\\times4\\times15$와 방법 1의 $2^2\\times3^2\\times5$에 같은 소인수가 같은 횟수만큼 들어 있음을 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:29:54.298918+00:00",
+          "issues": [
+            "두 방법에서 고른 지수가 같음을 비교하면 발문에 답할 수 있어, 최대공약수에 작은 지수와 최소공배수에 큰 지수를 고르는 이유까지 설명해야 하는 것은 아니다. 채점 기준 2·3은 발문에서 명시적으로 요구하지 않은 설명을 요구한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:30:19.444399+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수01-02-C4-이유설명",
+      "body": "두 자연수 $A=2^3\\times3$, $B=2\\times3^2\\times5$의 최대공약수와 최소공배수를 구하려고 한다. 두 학생이 최소공배수를 구하는 방법을 말했다.\n\n가: 각 소인수의 지수 중 큰 것을 골라 곱한다.\n나: 두 수를 곱한 뒤 최대공약수로 나눈다.\n\n1. 두 수의 최대공약수를 구하고, 가와 나의 방법으로 각각 최소공배수를 구하시오.\n2. $1$보다 큰 두 자연수를 소인수분해할 수 있을 때, 두 방법이 항상 같은 결과를 내는 이유를 설명하시오. 최대공약수와 최소공배수에서 각 소인수의 지수를 고르는 이유도 쓰시오. 한 수에만 있는 소인수도 생각하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:14:03.898997+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T06:19:17.975113+00:00",
+      "explanation": "공약수에는 두 수에 모두 들어 있는 소인수만 들어갈 수 있다. 또 그 지수는 두 수의 지수보다 클 수 없으므로 작은 지수를 고르면 가장 큰 공약수를 얻는다. 한편 공배수에는 두 수에 들어 있는 모든 소인수가 필요하고, 각 지수는 두 수의 지수보다 작을 수 없다. 따라서 큰 지수를 고르면 가장 작은 공배수를 얻는다.\n\n두 수를 곱하면 각 소인수의 지수는 두 수의 지수를 더한 것과 같다. 여기서 최대공약수에 들어 있는 작은 지수만큼 나누면 큰 지수가 남는다. 한 수에만 있는 소인수도 그대로 남는다. 따라서 두 방법의 결과는 같다.\n\n최대공약수에 큰 지수를 고르면 두 수를 모두 나누지 못할 수 있다. 최소공배수에 공통인 소인수만 쓰면 한 수에만 있는 소인수가 빠져 공배수가 되지 못한다.",
+      "generated_at": "2026-11-11T06:14:03.833014+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 학생의 최소공배수 구하는 방법을 비교하고, 두 방법이 항상 같은 결과를 내는 이유를 설명하도록 했다.",
+      "id": "7bf61278-b54c-4e60-9b3c-100c1c2a38b4",
+      "model": "gpt-6.1-terra",
+      "model_answer": "최대공약수는 $2\\times3=6$이다. 가의 방법으로 구한 최소공배수는 $2^3\\times3^2\\times5=360$이다. 나의 방법으로 구한 최소공배수도 $(2^3\\times3)\\times(2\\times3^2\\times5)\\div6=360$이다.\n\n어떤 소인이 두 수에 들어 있는 횟수를 생각하자. 한 수에 그 소인수가 없으면 횟수를 $0$으로 생각한다. 공약수가 두 수를 모두 나누려면 그 소인수의 지수는 두 횟수보다 클 수 없다. 따라서 작은 횟수만큼씩 곱하면 최대공약수가 된다. 공배수가 두 수로 모두 나누어지려면 그 소인수의 지수는 두 횟수보다 작을 수 없다. 따라서 큰 횟수만큼씩 곱하면 최소공배수가 된다.\n\n두 수를 곱하면 그 소인수가 들어 있는 횟수는 두 횟수의 합이다. 이를 최대공약수로 나누면 작은 횟수만큼 없어지므로 큰 횟수가 남는다. 한 수에만 있는 소인수는 작은 횟수가 $0$이므로 그대로 남는다. 따라서 나의 방법도 각 소인수를 큰 횟수만큼 곱한 가의 방법과 같은 결과를 낸다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "최대공약수를 $6$으로 구하고, 두 방법으로 구한 최소공배수가 각각 $360$임을 나타낸다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "공약수의 각 소인수는 두 수에 모두 들어 있어야 하고 그 지수는 두 수의 지수보다 클 수 없으므로 작은 지수를 고른다고 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "공배수에는 두 수의 모든 소인수가 필요하고 각 지수가 두 수의 지수보다 작을 수 없으므로 큰 지수를 고른다고 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 수를 곱하고 최대공약수로 나누면 각 소인수의 지수가 두 지수의 합에서 작은 지수를 뺀 큰 지수가 됨을 설명한다. 한 수에만 있는 소인수도 그대로 남는다고 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T06:14:03.832872+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T06:19:20.163835+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C4-이유설명",
+      "body": "두 자연수 $A=2^3\\times3$, $B=2\\times3^2\\times5$가 있다.\n두 수의 최대공약수와 최소공배수를 각각 구하시오. 또 각각을 구할 때 소인수와 그 지수를 고른 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:12:57.107197+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "공약수에 들어갈 수 있는 $2$와 $3$은 각각 한 개까지이다. 따라서 최대공약수는 $2\\times3$이다. 공배수가 되려면 $2$는 적어도 세 개, $3$은 적어도 두 개, $5$는 적어도 한 개가 필요하다. 따라서 최소공배수는 $2^3\\times3^2\\times5$이다.\n최대공약수에 큰 지수를 고르면 두 수의 공약수가 되지 않는다. 최소공배수에 작은 지수를 고르거나 $5$를 빠뜨리면 두 수의 공배수가 되지 않는다.",
+      "generated_at": "2026-11-11T06:12:57.037511+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "63786646-acb6-4a0f-a792-c68b11e90b3d",
+      "model": "gpt-6.1-terra",
+      "model_answer": "최대공약수는 $2\\times3=6$이다. 공약수에 들어갈 수 있는 $2$와 $3$은 각각 한 개까지이므로 작은 지수를 고른다. $5$는 $A$의 소인수가 아니므로 넣지 않는다.\n최소공배수는 $2^3\\times3^2\\times5=360$이다. 두 수의 공배수가 되려면 $2$가 적어도 세 개, $3$이 적어도 두 개 필요하므로 큰 지수를 고른다. 또 $B$의 소인수인 $5$도 필요하다. 이보다 소인수를 적게 넣으면 두 수의 공배수가 될 수 없다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "최대공약수를 $2\\times3$ 또는 $6$으로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": false
+        },
+        {
+          "description": "공약수에 들어갈 수 있는 공통인 소인수의 개수가 두 수 중 적은 쪽을 넘을 수 없으므로 작은 지수를 고른다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "최소공배수를 $2^3\\times3^2\\times5$ 또는 $360$으로 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": false
+        },
+        {
+          "description": "두 수의 공배수가 되려면 공통인 소인수는 큰 지수만큼, 한 수에만 있는 소인수 $5$도 필요하며, 이보다 적게 넣으면 공배수가 될 수 없다고 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1",
+            "9수01-02-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:12:57.037370+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T06:19:20.187224+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-02-C4-이유설명",
+      "body": "두 자연수 $A=3^2\\times5\\times7$, $B=3^3\\times7^2$이 있다.\n두 수의 최대공약수는 $3^2\\times7$이고, 최소공배수는 $3^3\\times5\\times7^2$이다.\n\n최대공약수와 최소공배수를 구할 때 각각 소인수와 그 지수를 이와 같이 고른 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:13:16.463978+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "공약수는 두 수를 모두 나누어떨어지게 해야 한다. 따라서 두 수에 공통으로 있는 소인수를 작은 지수로 골라 곱한다.\n공배수는 두 수로 모두 나누어떨어져야 한다. 따라서 각 소인수를 두 수 중 큰 지수로 골라 곱한다. 한 수에만 있는 소인수도 빠뜨리지 않는다.\n지수를 고르는 방법을 서로 바꾸면 두 수를 모두 나누는 가장 큰 수와 두 수로 모두 나누어지는 가장 작은 수를 구할 수 없다. 또 최소공배수에서 $5$를 빠뜨리면 $A$로 나누어떨어지지 않는다.",
+      "generated_at": "2026-11-11T06:13:16.39567+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0ecb3943-795c-47b1-9310-384b1a751c04",
+      "model": "gpt-6.1-terra",
+      "model_answer": "최대공약수는 두 수를 모두 나누어떨어지게 하는 가장 큰 수이다. 두 수에 공통으로 있는 소인수는 $3$과 $7$이다. 각각의 지수가 두 수의 지수보다 크면 안 되므로 작은 지수를 골라 $3^2\\times7$이 된다.\n\n최소공배수는 두 수로 모두 나누어떨어지는 가장 작은 수이다. 그러려면 각 소인수가 두 수에 있는 만큼은 모두 들어 있어야 한다. 따라서 $3$과 $7$은 각각 큰 지수를 고르고, $A$에만 있는 $5$도 넣어 $3^3\\times5\\times7^2$이 된다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "최대공약수에는 두 수에 공통으로 있는 소인수만 들어가며, 두 수를 모두 나누어떨어지게 하려면 각각 작은 지수를 골라야 한다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "최소공배수에는 두 수로 모두 나누어떨어지도록 각 소인수를 큰 지수로 넣어야 한다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "최소공배수에 $A$에만 있는 $5$도 넣어야 하는 이유를 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-02-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:13:16.395243+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}
