@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
@@ -30,7 +32,9 @@
     "@vitejs/plugin-react": "^6.2.1",
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
+    "eslint-config-prettier": "10.1.8",
     "jsdom": "^31.0.0",
+    "prettier": "3.9.10",
     "typescript": "^5",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^5.1.0"

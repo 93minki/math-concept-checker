@@ -6,7 +6,8 @@ export async function GET(request: NextRequest) {
   if (code) {
     const supabase = await createClient();
     const { error } = await supabase.auth.exchangeCodeForSession(code);
-    if (!error) return NextResponse.redirect(new URL("/signup/complete", request.url));
+    if (!error)
+      return NextResponse.redirect(new URL("/signup/complete", request.url));
   }
   return NextResponse.redirect(new URL("/login?error=callback", request.url));
 }

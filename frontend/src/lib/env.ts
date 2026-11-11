@@ -20,9 +20,7 @@ export class PublicEnvError extends Error {
   readonly invalidKeys: readonly PublicEnvKey[];
 
   constructor(invalidKeys: readonly PublicEnvKey[]) {
-    super(
-      `공개 환경 변수가 없거나 형식이 틀립니다: ${invalidKeys.join(", ")}`,
-    );
+    super(`공개 환경 변수가 없거나 형식이 틀립니다: ${invalidKeys.join(", ")}`);
     this.name = "PublicEnvError";
     this.invalidKeys = invalidKeys;
   }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
@@ -20,8 +21,15 @@ export default function HomeActions() {
     }
   }
 
-  return <>
-    <button onClick={signOut}>로그아웃</button>
-    {error && <p role="alert">{error}</p>}
-  </>;
+  return (
+    <>
+      <div className="button-row">
+        <button onClick={signOut}>로그아웃</button>
+        <Link className="study-link" href="/history">
+          지난 기록
+        </Link>
+      </div>
+      {error && <p role="alert">{error}</p>}
+    </>
+  );
 }

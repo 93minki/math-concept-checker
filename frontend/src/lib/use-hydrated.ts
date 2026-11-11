@@ -9,5 +9,9 @@ const subscribe = () => () => {};
  * password in the URL.
  */
 export function useHydrated(): boolean {
-  return useSyncExternalStore(subscribe, () => true, () => false);
+  return useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  );
 }

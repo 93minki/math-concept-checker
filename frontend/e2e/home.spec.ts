@@ -3,9 +3,7 @@ import { expect, test } from "@playwright/test";
 test("로그아웃 사용자는 로그인 화면으로 이동한다", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveURL(/\/login$/);
-  await expect(
-    page.getByRole("heading", { name: "로그인" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "로그인" })).toBeVisible();
 });
 
 for (const route of ["/login", "/signup"]) {
@@ -13,11 +11,13 @@ for (const route of ["/login", "/signup"]) {
     await page.goto(route);
     await expect(page.locator("main")).toBeVisible();
     const overflow = await page.evaluate(
-      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      () =>
+        document.documentElement.scrollWidth -
+        document.documentElement.clientWidth,
     );
     expect(overflow).toBeLessThanOrEqual(0);
     const controls = page.locator("input, button");
-    for (let i = 0; i < await controls.count(); i++) {
+    for (let i = 0; i < (await controls.count()); i++) {
       const box = await controls.nth(i).boundingBox();
       expect(box?.height).toBeGreaterThanOrEqual(44);
     }
@@ -33,8 +33,17 @@ test("proxy 응답은 공유 캐시에 저장되지 않는다", async ({ request
   expect(redirect.headers()["cache-control"]).toContain("no-store");
 });
 
-test("로그아웃 사용자는 진단 화면에서 로그인으로 이동한다", async ({ page }) => {
+test("로그아웃 사용자는 진단 화면에서 로그인으로 이동한다", async ({
+  page,
+}) => {
   await page.goto("/diagnoses/00000000-0000-4000-8000-000000000000");
+  await expect(page).toHaveURL(/\/login$/);
+});
+
+test("로그아웃 사용자는 지난 기록에서 로그인으로 이동한다", async ({
+  page,
+}) => {
+  await page.goto("/history");
   await expect(page).toHaveURL(/\/login$/);
 });
 
@@ -42,7 +51,9 @@ test("로그아웃 사용자는 진단 화면에서 로그인으로 이동한다
 // query (?email=…&password=…). With JavaScript off, the page must not let
 // that happen: the submit button stays disabled and the form is POST.
 for (const route of ["/login", "/signup"]) {
-  test(`${route} 화면은 스크립트 실행 전에도 비밀번호를 주소로 보내지 않는다`, async ({ browser }) => {
+  test(`${route} 화면은 스크립트 실행 전에도 비밀번호를 주소로 보내지 않는다`, async ({
+    browser,
+  }) => {
     const context = await browser.newContext({ javaScriptEnabled: false });
     const page = await context.newPage();
     await page.goto(route);

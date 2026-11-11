@@ -1,14 +1,24 @@
+import base64
+import binascii
 import logging
 import random
 from typing import Annotated
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
+from pydantic import ValidationError
 
 from app.auth import AuthUser, get_current_user
 from app.diagnoses.ai import DiagnosisAI, get_ai
 from app.diagnoses.repository import AnswerConflict, DiagnosesRepository, get_diagnoses
-from app.diagnoses.schemas import AnswerInput, Diagnosis, StartInput, Unit, UnitStatus
+from app.diagnoses.schemas import (
+    AnswerInput,
+    Diagnosis,
+    HistoryCursor,
+    StartInput,
+    Unit,
+    UnitStatus,
+)
 from app.diagnoses.selection import select_questions
 from app.diagnoses.service import (
     AnswersChanged,
@@ -108,6 +118,33 @@ def list_units(user: User, repo: Repo) -> list[dict[str, object]]:
         }
         for unit in sorted(repo.units(), key=lambda u: (u.grade, u.number))
     ]
+
+
+@router.get("/diagnoses")
+def list_diagnoses(
+    user: User,
+    repo: Repo,
+    limit: Annotated[int, Query(ge=1, le=50)] = 20,
+    before: Annotated[str | None, Query(max_length=512)] = None,
+) -> dict[str, object]:
+    cursor = None
+    if before is not None:
+        try:
+            decoded = base64.b64decode(before, altchars=b"-_", validate=True)
+            cursor = HistoryCursor.model_validate_json(decoded)
+        except (ValueError, binascii.Error, ValidationError) as exc:
+            raise HTTPException(status_code=422, detail="Invalid cursor") from exc
+    rows = repo.list_diagnoses(user.id, limit + 1, cursor)
+    items = rows[:limit]
+    next_before = None
+    if len(rows) > limit:
+        last = items[-1]
+        next_before = base64.urlsafe_b64encode(
+            HistoryCursor(started_at=last.started_at, id=last.id)
+            .model_dump_json()
+            .encode()
+        ).decode()
+    return {"items": items, "next_before": next_before}
 
 
 @router.post("/diagnoses", status_code=201)
