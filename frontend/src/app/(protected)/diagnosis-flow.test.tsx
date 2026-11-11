@@ -131,22 +131,41 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
   );
   expect(mocks.push).toHaveBeenCalledWith("/diagnoses/new");
 });
+test("첫 문제에는 다음만 있고 마지막 문제에는 제출하기만 있다", async () => {
+  render(<DiagnosisView id="d" />);
+  await screen.findByRole("button", { name: "다음" });
+  expect(screen.queryByRole("button", { name: "제출하기" })).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "다음" }));
+  expect(await screen.findByRole("button", { name: "제출하기" })).toBeTruthy();
+  expect(screen.queryByRole("button", { name: "다음" })).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "이전" }));
+  await screen.findByRole("button", { name: "다음" });
+});
+test("마지막 문제에서 미답이 있으면 번호를 보이고 제출은 꺼져 있다", async () => {
+  render(<DiagnosisView id="d" />);
+  fireEvent.click(await screen.findByRole("button", { name: "다음" }));
+  expect(await screen.findByText("아직 답하지 않은 문제: 1, 2번")).toBeTruthy();
+  const submit = screen.getByRole("button", { name: "제출하기" });
+  expect((submit as HTMLButtonElement).disabled).toBe(true);
+});
 test("답을 저장하고 모두 답해야 제출한다", async () => {
   render(<DiagnosisView id="d" />);
-  const submit = await screen.findByRole("button", { name: "제출하기" });
-  expect((submit as HTMLButtonElement).disabled).toBe(true);
-  fireEvent.click(screen.getByRole("radio", { name: /하나/ }));
+  fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
   await waitFor(() =>
     expect(mocks.saveAnswer).toHaveBeenCalledWith("d", 1, {
       selected_choice: 1,
     }),
   );
-  fireEvent.click(screen.getByRole("button", { name: "다음" }));
-  const input = await screen.findByLabelText("풀이와 답");
+  fireEvent.click(await screen.findByRole("button", { name: "다음" }));
+  await screen.findByText("2 / 2");
+  const submit = screen.getByRole("button", { name: "제출하기" });
+  const input = screen.getByLabelText("풀이와 답");
   fireEvent.change(input, { target: { value: "  " } });
   expect((submit as HTMLButtonElement).disabled).toBe(true);
+  expect(screen.getByText("아직 답하지 않은 문제: 2번")).toBeTruthy();
   fireEvent.change(input, { target: { value: "답이에요" } });
   expect((submit as HTMLButtonElement).disabled).toBe(false);
+  expect(screen.queryByText(/아직 답하지 않은 문제/)).toBeNull();
   mocks.submitStage.mockResolvedValue({
     status: "stage2",
     report_ready: false,
@@ -267,7 +286,7 @@ test("채점 실패는 답을 유지하며 안내한다", async () => {
   });
   render(<DiagnosisView id="d" />);
   fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
-  fireEvent.click(screen.getByRole("button", { name: "제출하기" }));
+  fireEvent.click(await screen.findByRole("button", { name: "제출하기" }));
   fireEvent.click(screen.getByRole("button", { name: "제출할게요" }));
   expect(
     await screen.findByText("채점을 하지 못했어요. 잠시 후 다시 제출해 주세요"),
@@ -295,7 +314,7 @@ test("답안 충돌이면 최신 답을 다시 읽는다", async () => {
   );
   render(<DiagnosisView id="d" />);
   fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
-  fireEvent.click(screen.getByRole("button", { name: "제출하기" }));
+  fireEvent.click(await screen.findByRole("button", { name: "제출하기" }));
   fireEvent.click(screen.getByRole("button", { name: "제출할게요" }));
   expect(
     await screen.findByText("답이 바뀌었어요. 다시 제출해 주세요"),
@@ -342,7 +361,7 @@ test("심화 제출 중 입력을 막고 완료되면 리포트를 연다", asyn
   );
   render(<DiagnosisView id="d" />);
   fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
-  fireEvent.click(screen.getByRole("button", { name: "제출하기" }));
+  fireEvent.click(await screen.findByRole("button", { name: "제출하기" }));
   fireEvent.click(screen.getByRole("button", { name: "제출할게요" }));
   expect(await screen.findByText("채점하고 있어요")).toBeTruthy();
   expect(screen.getByRole("radio", { name: /하나/ }).matches(":disabled")).toBe(

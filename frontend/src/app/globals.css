@@ -159,4 +159,6 @@ a {
 .choice > .math-text {
   min-width: 0;
   overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.4em;
 }
