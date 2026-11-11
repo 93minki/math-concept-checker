@@ -1,0 +1,993 @@
+{
+  "backlog": [],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T08:44:23.637079+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-이유설명",
+      "body": "좌표평면 위의 점 $P$는 원점에서 왼쪽으로 $2$, 위로 $3$만큼 간 곳에 있다.\n\n민수는 “점의 좌표에서 두 수의 순서를 바꾸어 적어도 나타내는 점은 언제나 같다.”라고 말했다.\n\n점 $P$의 좌표와 그 좌표에서 두 수의 순서를 바꾸어 적은 순서쌍을 각각 쓰고, 민수의 말이 틀린 이유를 설명하시오. 또 좌표를 이용해 위치를 나타내면 어떤 점이 편리한지도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:22:52.835042+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $P$의 좌표는 $(-2, 3)$이다. 순서를 바꾼 $(3, -2)$는 원점에서 오른쪽으로 $3$, 아래로 $2$만큼 간 곳을 나타낸다. 따라서 두 순서쌍은 서로 다른 점을 나타내므로 민수의 말은 틀렸다. 두 수만 같으면 같은 점이라고 생각하면 각 수가 나타내는 방향을 놓치게 된다. 좌표를 정해진 순서로 쓰면 점의 위치를 분명하게 알 수 있다.",
+      "generated_at": "2026-11-11T08:22:50.767758+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "점 $P$를 이용해 두 수의 순서를 바꾸면 다른 점이 나타나는 예를 찾고, 그 예로 민수의 말이 틀린 이유를 설명하게 했다.",
+      "id": "245745ac-05a9-42f0-b6ea-9b5520dfa387",
+      "model": "gpt-6.1-terra",
+      "model_answer": "점 $P$의 좌표는 $(-2, 3)$이고, 순서를 바꾸면 $(3, -2)$이다. $(3, -2)$는 원점에서 오른쪽으로 $3$, 아래로 $2$만큼 간 곳이므로 점 $P$와 다르다. 따라서 민수의 말은 틀렸다. 좌표를 이용하면 점의 위치를 두 수로 분명하게 나타낼 수 있어 편리하다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "점 $P$의 좌표와 두 수의 순서를 바꾼 순서쌍을 각각 $(-2, 3)$, $(3, -2)$로 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "$(3, -2)$가 나타내는 위치를 원점에서 오른쪽으로 $3$, 아래로 $2$만큼 간 곳이라고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 순서쌍이 나타내는 점이 다르므로 민수의 말이 틀렸다고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "좌표를 이용하면 점의 위치를 두 수로 분명하게 나타낼 수 있다고 설명했다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:22:50.767338+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:23.708162+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-이유설명",
+      "body": "좌표평면 위의 세 점 $A$, $B$, $C$의 좌표는 각각 $(4,-1)$, $(-1,4)$, $(2,2)$이다.\n\n지우는 “점의 좌표에서 두 수의 순서를 바꾸면 반드시 다른 점을 나타낸다.”라고 말했다.\n\n세 점 중 하나를 골라 지우의 말이 틀렸음을 보이시오. 또 점 $A$와 점 $B$의 위치를 비교하여 좌표에서 수의 순서가 중요한 이유를 설명하시오. 마지막으로 그림 없이 좌표로 위치를 나타내면 편리한 점을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:23:15.542194+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $C$의 좌표 $(2,2)$는 두 수의 순서를 바꾸어도 $(2,2)$이므로 같은 점을 나타낸다. 따라서 지우의 말은 틀렸다.\n\n점 $A$는 원점에서 오른쪽으로 $4$, 아래로 $1$만큼 간 곳에 있다. 점 $B$는 원점에서 왼쪽으로 $1$, 위로 $4$만큼 간 곳에 있다. 두 좌표에 적힌 수는 같지만 순서가 다르므로 서로 다른 점을 나타낸다. 적힌 수만 같으면 같은 점이라고 생각해서는 안 된다.\n\n좌표를 쓰면 그림이 없어도 점의 위치를 두 수로 나타내고 다른 사람에게 알려 줄 수 있다.",
+      "generated_at": "2026-11-11T08:23:13.454284+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "점 $C$를 이용해 좌표의 두 수의 순서를 바꾸어도 같은 점을 나타내는 예를 들게 한다. 이를 통해 지우의 말이 틀린 이유를 설명하게 한다.",
+      "id": "1ee9f0f5-c9ca-430f-91b5-cfca12085479",
+      "model": "gpt-6.1-terra",
+      "model_answer": "점 $C$의 좌표 $(2,2)$는 두 수의 순서를 바꾸어도 $(2,2)$이다. 따라서 같은 점을 나타내므로 지우의 말은 틀렸다.\n\n점 $A$는 원점에서 오른쪽으로 $4$, 아래로 $1$만큼 간 곳에 있고, 점 $B$는 왼쪽으로 $1$, 위로 $4$만큼 간 곳에 있다. 두 좌표에 같은 수가 적혀 있어도 순서가 다르면 서로 다른 위치를 나타낼 수 있으므로 순서가 중요하다.\n\n좌표를 이용하면 그림 없이도 두 수로 점의 위치를 간단하고 정확하게 알려 줄 수 있다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "점 $C$를 골라 두 수의 순서를 바꾸어도 좌표가 같으므로 지우의 말이 틀렸다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "점 $A$와 점 $B$의 위치를 바르게 비교하고, 두 좌표에 적힌 수가 같아도 순서에 따라 다른 점을 나타낼 수 있다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "좌표를 쓰면 그림 없이 두 수로 위치를 간단하고 정확하게 나타내거나 전달할 수 있다고 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:23:13.453915+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:23.749806+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-이유설명",
+      "body": "좌표평면 위의 두 점 $A$, $B$의 좌표가 각각 $(4, 1)$, $(1, 4)$이다. 민수는 두 좌표에 쓰인 수가 같으므로 $A$와 $B$가 같은 점이라고 말한다.\n\n민수의 말이 옳은지 판단하고, 두 점의 위치를 각각 설명하여 그 이유를 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:21:47.864679+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$A$는 원점에서 오른쪽으로 $4$, 위로 $1$만큼 간 곳에 있다. $B$는 원점에서 오른쪽으로 $1$, 위로 $4$만큼 간 곳에 있다. 따라서 두 점은 서로 다르다. 두 좌표에 같은 수가 쓰였더라도 순서가 바뀌면 다른 점을 나타낼 수 있다.",
+      "generated_at": "2026-11-11T08:21:45.771943+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c5bf2648-0ce0-4460-b77a-dac490f5cde9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "민수의 말은 옳지 않다. $A$는 원점에서 오른쪽으로 $4$, 위로 $1$만큼 간 곳에 있고, $B$는 오른쪽으로 $1$, 위로 $4$만큼 간 곳에 있으므로 서로 다른 점이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$A$와 $B$의 위치를 원점에서 오른쪽과 위로 얼마나 간 곳인지 각각 바르게 설명하였다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 점이 서로 다르므로 민수의 말이 옳지 않다고 판단하였다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-05-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:21:45.771736+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:23.800542+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-이유설명",
+      "body": "좌표평면에서 보물은 원점에서 왼쪽으로 $2$, 위로 $5$만큼 떨어진 곳에 있다. 친구에게 보물의 위치를 좌표로 알려 주려고 한다.\n\n보물의 좌표를 쓰고, 좌표로 위치를 알려 주면 편리한 까닭을 설명하시오. 또 좌표의 두 수의 순서를 바꾸어 알려 주면 친구가 찾는 위치가 어떻게 달라지는지도 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:22:28.785466+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "보물의 좌표는 $(-2, 5)$이다. 첫 번째 수는 원점에서 왼쪽으로 $2$, 두 번째 수는 위로 $5$만큼 떨어진 위치를 나타낸다. 좌표를 알려 주면 그림이 없어도 위치를 찾을 수 있다.\n\n두 수의 순서를 바꾼 $(5, -2)$는 원점에서 오른쪽으로 $5$, 아래로 $2$만큼 떨어진 위치를 나타낸다. 두 좌표에 같은 수가 쓰였더라도 순서가 다르면 같은 위치라고 생각해서는 안 된다.",
+      "generated_at": "2026-11-11T08:22:26.648275+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "35b44c3a-75c0-4efa-9148-61c8d1aca263",
+      "model": "gpt-6.1-terra",
+      "model_answer": "보물의 좌표는 $(-2, 5)$이다. 이 좌표를 알려 주면 친구가 원점에서 왼쪽으로 $2$, 위로 $5$만큼 가서 그림 없이도 보물을 찾을 수 있다. 순서를 바꾼 $(5, -2)$를 알려 주면 친구는 원점에서 오른쪽으로 $5$, 아래로 $2$만큼 떨어진 다른 위치를 찾게 된다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "보물의 좌표를 $(-2, 5)$로 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "좌표의 두 수를 이용하면 그림 없이도 원점에서 보물의 위치를 찾을 수 있다고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "순서를 바꾼 좌표가 나타내는 위치를 원점에서 오른쪽으로 $5$, 아래로 $2$만큼 떨어진 곳이라고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-05-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:22:10.116110+00:00",
+          "issues": [
+            "순서쌍에서 순서가 중요한 이유를 묻지 않아, 순서를 바꾼 좌표와의 차이를 모르는 학생도 만점을 받을 수 있다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:22:26.648118+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:23.853795+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-정의이해",
+      "body": "점 $P$는 원점에서 왼쪽으로 $2$, 위로 $\\frac{1}{2}$만큼 움직인 곳에 있다.\n\n가와 나는 점 $P$의 위치를 다음과 같이 순서쌍으로 나타낸다. 왼쪽이나 아래쪽으로 움직인 정도는 음수로 나타낸다.\n\n- 가: 오른쪽으로 움직인 정도를 먼저, 위쪽으로 움직인 정도를 나중에 적는다. 이것이 점 $P$의 좌표이다.\n- 나: 위쪽으로 움직인 정도를 먼저, 오른쪽으로 움직인 정도를 나중에 적는다. 이것은 나가 따로 정한 방식이다.\n\n가와 나가 적은 순서쌍을 차례로 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 1,
+          "text": "가: $\\left(-2,\\frac{1}{2}\\right)$, 나: $\\left(-2,\\frac{1}{2}\\right)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "가: $\\left(-2,\\frac{1}{2}\\right)$, 나: $\\left(-\\frac{1}{2},2\\right)$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "가: $\\left(-2,\\frac{1}{2}\\right)$, 나: $\\left(\\frac{1}{2},-2\\right)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "가: $\\left(\\frac{1}{2},-2\\right)$, 나: $\\left(-2,\\frac{1}{2}\\right)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가: $\\left(2,-\\frac{1}{2}\\right)$, 나: $\\left(-\\frac{1}{2},2\\right)$"
+        }
+      ],
+      "created_at": "2026-11-11T08:21:08.029713+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $P$는 왼쪽으로 $2$, 위로 $\\frac{1}{2}$만큼 움직인 곳에 있다. 따라서 오른쪽으로 움직인 정도는 $-2$, 위쪽으로 움직인 정도는 $\\frac{1}{2}$이다. 가는 오른쪽을 먼저 적으므로 $\\left(-2,\\frac{1}{2}\\right)$이고, 나는 위쪽을 먼저 적으므로 $\\left(\\frac{1}{2},-2\\right)$이다. 따라서 정답은 3번이다.\n\n1번처럼 두 순서쌍을 같게 적으면 두 수를 적는 순서가 달라졌다는 점을 놓친 것이다.",
+      "generated_at": "2026-11-11T08:21:05.945761+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "점의 위치를 말로 주고, 두 방법에서 수를 적는 순서를 각각 따져 순서쌍으로 나타내게 했다.",
+      "id": "f580679c-7dd5-4570-a7c1-a7fe4549d4d9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:21:05.945556+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:23.89365+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-정의이해",
+      "body": "좌표평면 위의 다섯 점의 좌표가 다음과 같다.\n\n$P(2,-1)$, $Q(-1,2)$, $R(0,3)$, $S(3,0)$, $T(-2,-2)$\n\n다음 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 1,
+          "text": "$P$와 $Q$는 같은 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 2,
+          "text": "$R$과 $S$는 같은 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$R$은 원점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$S$는 제1사분면에 있다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$T$의 좌표에서 두 수의 순서를 바꾸어도 같은 점을 나타낸다."
+        }
+      ],
+      "created_at": "2026-11-11T08:21:30.456472+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "좌표의 첫 번째 수는 가로 위치를, 두 번째 수는 세로 위치를 나타낸다. $T$의 좌표는 두 수가 같으므로 순서를 바꾸어도 $(-2,-2)$이다.\n\n$P$와 $Q$, $R$와 $S$는 각각 두 수의 순서를 바꾸어 적었지만 서로 다른 점이다. 순서쌍의 순서를 무시하면 같은 점이라고 잘못 생각할 수 있다. $R$은 원점이 아니고, $S$는 좌표축 위에 있으므로 제1사분면에 속하지 않는다.",
+      "generated_at": "2026-11-11T08:21:28.363414+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "좌표의 두 수가 같은 점과 한 수가 $0$인 점을 함께 제시했다. 순서를 바꾸어도 같은 점인 경우와 그렇지 않은 경우를 구별해야 한다.",
+      "id": "7434d4a7-1dce-4ecd-ad22-0e3306e8987a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:21:28.363259+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:23.949961+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-정의이해",
+      "body": "좌표평면 위의 점 $P$의 좌표가 $(-2, 3)$이다. 점 $P$의 위치를 옳게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "원점에서 왼쪽으로 $2$, 위로 $3$만큼 떨어진 곳"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 2,
+          "text": "원점에서 오른쪽으로 $3$, 아래로 $2$만큼 떨어진 곳"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "원점에서 오른쪽으로 $2$, 위로 $3$만큼 떨어진 곳"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "원점에서 왼쪽으로 $2$, 아래로 $3$만큼 떨어진 곳"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "원점에서 왼쪽으로 $3$, 위로 $2$만큼 떨어진 곳"
+        }
+      ],
+      "created_at": "2026-11-11T08:20:22.135479+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "좌표의 첫 번째 수는 원점에서 왼쪽이나 오른쪽으로 얼마나 떨어져 있는지, 두 번째 수는 위나 아래로 얼마나 떨어져 있는지를 나타낸다. 따라서 점 $P$는 원점에서 왼쪽으로 $2$, 위로 $3$만큼 떨어져 있다. ②는 순서쌍의 순서를 바꾸어 $(-2, 3)$과 $(3, -2)$를 같은 점으로 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T08:20:20.027726+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c36a6cba-d2cc-4102-a8ba-fdfc5ff0425d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:20:20.027513+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:23.989697+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-정의이해",
+      "body": "좌표평면 위의 두 점 $A$, $B$의 좌표는 각각 $(1, 4)$, $(4, 1)$이다. 두 점의 좌표에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 1,
+          "text": "같은 수 $1$과 $4$가 쓰였으므로 두 점은 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "첫째 수는 같고 둘째 수는 다르므로 두 점은 다르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫째 수는 다르고 둘째 수는 같으므로 두 점은 다르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "첫째 수도 같고 둘째 수도 같으므로 두 점은 같다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "첫째 수도 다르고 둘째 수도 다르므로 두 점은 다르다."
+        }
+      ],
+      "created_at": "2026-11-11T08:20:41.175919+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 좌표에서 첫째 수도 다르고 둘째 수도 다르므로 $A$와 $B$는 서로 다른 점이다. ①처럼 같은 수가 쓰였다는 이유로 두 점이 같다고 생각하면, 순서쌍에서 수가 쓰인 순서를 놓친 것이다.",
+      "generated_at": "2026-11-11T08:20:39.044147+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "488e966f-cf17-4578-b17e-400e51f2634f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:20:39.043933+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.029765+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C2-성질적용",
+      "body": "좌표평면 위의 점 $P$는 원점에서 왼쪽으로 $2$, 위로 $3$만큼 간 곳에 있다. 점 $Q$의 좌표는 $(1,-1)$이다.\n\n점 $P$에서 출발하여 점 $Q$에 도착하려면 어떻게 가야 하는가? 오른쪽 또는 왼쪽으로 먼저 간 다음, 위 또는 아래로 간다.",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "오른쪽으로 $3$, 아래로 $4$만큼 간다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 2,
+          "text": "오른쪽으로 $1$, 아래로 $2$만큼 간다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "왼쪽으로 $3$, 위로 $4$만큼 간다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "오른쪽으로 $3$, 위로 $4$만큼 간다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "왼쪽으로 $1$, 아래로 $2$만큼 간다."
+        }
+      ],
+      "created_at": "2026-11-11T08:24:17.824413+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $P$의 좌표는 $(-2,3)$이고, 점 $Q$의 좌표는 $(1,-1)$이다. 따라서 점 $P$에서 오른쪽으로 $3$, 아래로 $4$만큼 가야 한다.\n\n②를 고른 학생은 점 $Q$의 좌표 $(1,-1)$의 순서를 바꾸어 $(-1,1)$로 생각했을 수 있다. 순서쌍에서는 수의 순서가 중요하다.",
+      "generated_at": "2026-11-11T08:24:15.678547+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "글로 주어진 점 $P$의 위치를 좌표로 나타내고, 점 $Q$의 좌표와 비교하여 가야 할 방향과 양을 찾는다.",
+      "id": "510caa04-b5fc-4ae6-9681-c32d6624f33e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:24:15.678287+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.078286+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C2-성질적용",
+      "body": "좌표평면 위의 점 $P$의 좌표는 $(-2,1)$이다. 점 $Q$는 원점에서 오른쪽으로 $3$, 아래로 $\\frac{1}{2}$만큼 간 곳에 있다.\n\n점 $R$은 점 $P$와 같은 높이에 있고, 점 $Q$의 바로 위 또는 바로 아래에 있다. 점 $R$의 좌표는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$(3,1)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 2,
+          "text": "$(1,3)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(3,-\\frac{1}{2})$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(-2,1)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(-2,-\\frac{1}{2})$"
+        }
+      ],
+      "created_at": "2026-11-11T08:24:38.029677+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $Q$의 좌표는 $(3,-\\frac{1}{2})$이다. 점 $R$은 점 $Q$의 바로 위 또는 바로 아래에 있으므로 첫째 좌표가 $3$이다. 또 점 $P$와 높이가 같으므로 둘째 좌표가 $1$이다. 따라서 점 $R$의 좌표는 $(3,1)$이다.\n\n$(1,3)$을 골랐다면 첫째 좌표와 둘째 좌표의 순서를 바꾸어 생각한 것이다. 순서쌍에서 순서가 바뀌면 다른 점을 나타낸다.",
+      "generated_at": "2026-11-11T08:24:35.948203+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "글로 주어진 점 $Q$의 위치를 좌표로 나타내고, 두 점과 점 $R$의 위치를 비교하여 점 $R$의 좌표를 구해야 한다.",
+      "id": "47854564-5491-4efc-9977-80dd44ae5c19",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:24:35.947394+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.12236+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C2-성질적용",
+      "body": "좌표평면 위의 점 $P$는 원점에서 오른쪽으로 $3$, 아래로 $2$만큼 간 곳에 있다. 점 $P$의 좌표는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$(3,-2)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 2,
+          "text": "$(-2,3)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(3,2)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(-3,-2)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(2,-3)$"
+        }
+      ],
+      "created_at": "2026-11-11T08:23:25.23448+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "오른쪽으로 $3$만큼 간 위치를 먼저 쓰고, 아래로 $2$만큼 간 위치를 나중에 쓰므로 좌표는 $(3,-2)$이다. ②는 두 수의 순서를 바꾸어 쓴 것으로, $(3,-2)$와는 다른 점을 나타낸다.",
+      "generated_at": "2026-11-11T08:23:23.130212+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f817a87e-9356-420a-8c40-134762008f87",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:23:23.129925+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.151432+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C2-성질적용",
+      "body": "좌표평면 위의 점 $A$의 좌표는 $(-1, 4)$이다. 점 $A$의 위치를 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "원점에서 왼쪽으로 $4$, 위로 $1$만큼 간 곳"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "원점에서 오른쪽으로 $1$, 위로 $4$만큼 간 곳"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "원점에서 왼쪽으로 $1$, 위로 $4$만큼 간 곳"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 4,
+          "text": "원점에서 오른쪽으로 $4$, 아래로 $1$만큼 간 곳"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "원점에서 왼쪽으로 $1$, 아래로 $4$만큼 간 곳"
+        }
+      ],
+      "created_at": "2026-11-11T08:23:58.531756+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "첫 번째 수 $-1$은 원점에서 왼쪽으로 $1$, 두 번째 수 $4$는 위로 $4$만큼 간다는 뜻이다. 따라서 정답은 ③이다. ④는 두 수의 순서를 바꾸어 $(4, -1)$로 생각한 것이다.",
+      "generated_at": "2026-11-11T08:23:56.320913+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "37821510-a7cf-4af0-9f4e-3e61db76a9a0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:23:34.944545+00:00",
+          "issues": [
+            "보기 ①: 오개념 M1대로 좌표의 순서를 바꾸면 (4, -2)이므로 보기 ⑤를 고른다. 해설에서도 ①을 순서를 바꾼 결과로 잘못 설명했다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:23:45.550610+00:00",
+          "issues": [
+            "보기 ②: 오개념 M1에서 나오는 위치가 아니다. 두 좌표의 순서를 바꾸면 (1, -4)로 보기 ⑤이다. 해설에서도 ②를 순서를 바꾼 결과라고 잘못 설명했다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T08:23:56.320338+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.201426+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C3-오개념판별",
+      "body": "좌표평면 위에 네 점 $A(-2,1)$, $B(2,-1)$, $C(3,0)$, $D(0,-2)$가 있다. 다섯 학생의 말 중 옳은 것을 고르시오.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M3",
+          "no": 1,
+          "text": "$A$는 제4사분면의 점이고, $D$는 어느 사분면에도 속하지 않아."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M3",
+          "no": 2,
+          "text": "$B$는 제2사분면의 점이고, $C$는 어느 사분면에도 속하지 않아."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M2",
+          "no": 3,
+          "text": "$C$는 제1사분면의 점이고, $A$는 제2사분면의 점이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M2",
+          "no": 4,
+          "text": "$D$는 제4사분면의 점이고, $B$는 제4사분면의 점이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$A$는 제2사분면, $B$는 제4사분면의 점이고, $C$와 $D$는 어느 사분면에도 속하지 않아."
+        }
+      ],
+      "created_at": "2026-11-11T08:25:44.152943+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$A$는 첫째 좌표가 음수이고 둘째 좌표가 양수이므로 제2사분면의 점이다. $B$는 첫째 좌표가 양수이고 둘째 좌표가 음수이므로 제4사분면의 점이다. $C$와 $D$는 좌표축 위에 있으므로 어느 사분면에도 속하지 않는다. 따라서 정답은 ⑤이다.\n①과 ②는 첫째 좌표와 둘째 좌표의 부호를 바꾸어 생각했다. ③과 ④는 좌표축 위의 점도 사분면에 속한다고 생각했다.",
+      "generated_at": "2026-11-11T08:25:42.071383+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 보고 옳고 그름을 판단해야 한다. 각 오답에는 옳은 내용과 함께 사분면을 잘못 판단한 내용이 하나씩 들어 있다.",
+      "id": "5f940d84-a882-4e69-800a-4db9411a4c3e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:25:42.071102+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.279582+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C3-오개념판별",
+      "body": "좌표평면 위에 두 점 $P(0,\\frac{1}{2})$, $Q(-\\frac{1}{2},2)$가 있다. 한 학생이 다음과 같이 말했다.\n\n가. 점 $P$는 어느 사분면에도 속하지 않는다.\n나. 점 $Q$는 제4사분면에 속한다.\n\n가와 나의 옳고 그름을 바르게 판단한 것을 고르시오.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M3",
+          "no": 1,
+          "text": "가와 나가 모두 옳다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "가는 옳고 나는 옳지 않다. 점 $Q$는 제2사분면에 속한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M2",
+          "no": 3,
+          "text": "가와 나가 모두 옳지 않다. 점 $P$는 제1사분면에, 점 $Q$는 제2사분면에 속한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "가는 옳고 나는 옳지 않다. 점 $Q$는 제1사분면에 속한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가는 옳고 나는 옳지 않다. 점 $Q$는 제3사분면에 속한다."
+        }
+      ],
+      "created_at": "2026-11-11T08:26:46.548747+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $P$는 좌표축 위에 있으므로 어느 사분면에도 속하지 않는다. 따라서 가는 옳다. 점 $Q$는 첫 번째 좌표가 음수이고 두 번째 좌표가 양수이므로 제2사분면에 속한다. 따라서 나는 옳지 않다.\n\n①은 두 좌표의 부호 순서를 바꾸어 사분면을 잘못 정한 것이다. ③은 좌표축 위의 점도 사분면에 속한다고 생각한 것이다. ④와 ⑤는 점 $Q$의 두 좌표의 부호로 사분면을 잘못 정한 것이다.",
+      "generated_at": "2026-11-11T08:26:44.415936+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "한 학생의 두 말을 보고 각각 옳고 그름을 판단하게 했다. 좌표축 위의 점과 두 좌표의 부호로 정하는 사분면을 함께 살펴야 한다.",
+      "id": "84c163c0-172a-41ba-a9d3-9d1993c11a84",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:26:20.878043+00:00",
+          "issues": [
+            "보기 ①, ②: M3을 두 점에 일관되게 적용하면 P는 제4사분면, Q는 제2사분면이므로 어느 보기와도 일치하지 않는다. 따라서 M3을 판별하기 어렵다.",
+            "학생의 주장과 무관하게 세 점의 위치를 바로 구하면 정답을 고를 수 있어, 정의를 확인하는 일반 문제와 구별되지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:26:44.415639+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.315869+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C3-오개념판별",
+      "body": "좌표평면 위에 두 점 $P(-2, 3)$, $Q(0, 3)$이 있다. 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "점 $P$는 제1사분면에 속한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M3",
+          "no": 2,
+          "text": "점 $P$는 제4사분면에 속한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M2",
+          "no": 3,
+          "text": "점 $Q$는 제1사분면에 속한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M2",
+          "no": 4,
+          "text": "점 $Q$는 제2사분면에 속한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "점 $P$는 제2사분면에 속한다."
+        }
+      ],
+      "created_at": "2026-11-11T08:24:55.361585+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점 $P$는 원점에서 왼쪽으로 $2$, 위로 $3$만큼 간 곳에 있으므로 제2사분면에 속한다. $P$가 제4사분면에 속한다고 생각했다면 두 좌표의 부호를 바꾸어 보았는지 확인한다. 점 $Q$는 좌표축 위에 있으므로 어느 사분면에도 속하지 않는다.",
+      "generated_at": "2026-11-11T08:24:53.292661+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "093ee07e-b731-4bcb-b7b7-a9d75a8efdb2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:24:53.292503+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.360669+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C3-오개념판별",
+      "body": "좌표평면 위의 점에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M2",
+          "no": 1,
+          "text": "$(-4, 0)$은 제2사분면의 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M3",
+          "no": 2,
+          "text": "$(2, -3)$은 제2사분면의 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-05-M2",
+          "no": 3,
+          "text": "$(0, -2)$는 제4사분면의 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(-1, -3)$은 제1사분면의 점이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(3, -1)$은 제4사분면의 점이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:25:19.262916+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "⑤는 $x$좌표가 양수이고 $y$좌표가 음수이므로 제4사분면의 점이다. ①과 ③은 좌표축 위의 점이므로 어느 사분면에도 속하지 않는다. ②는 두 좌표의 부호를 바꾸어 생각하기 쉽지만, 제4사분면의 점이다. ④는 두 좌표가 모두 음수이므로 제3사분면의 점이다.",
+      "generated_at": "2026-11-11T08:25:17.190882+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "e67a4e0d-a732-4c1a-98fc-4a54178203f1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:25:17.190537+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

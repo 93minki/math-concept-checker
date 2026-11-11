@@ -1,0 +1,1215 @@
+{
+  "backlog": [],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T09:08:14.788894+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C1-정의이해",
+      "body": "선분 $\\overline{AB}$의 길이는 $6$ cm이다. 다섯 점 $P$, $Q$, $R$, $S$, $T$의 위치와 두 점 $A$, $B$까지의 거리는 다음과 같다.\n\n- $P$는 선분 $\\overline{AB}$ 위에 있고, $AP=2$ cm, $BP=4$ cm이다.\n- $Q$는 직선 $AB$ 위에 있지 않고, $AQ=5$ cm, $BQ=5$ cm이다.\n- $R$은 선분 $\\overline{AB}$ 위에 있고, $AR=3$ cm, $BR=3$ cm이다.\n- $S$는 직선 $AB$ 위에 있지 않고, $AS=4$ cm, $BS=5$ cm이다.\n- $T$는 직선 $AB$ 위에 있지만 선분 $\\overline{AB}$ 위에는 없고, $AT=2$ cm, $BT=8$ cm이다.\n\n선분 $\\overline{AB}$의 중점은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M3",
+          "no": 1,
+          "text": "$P$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$Q$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$R$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$S$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$T$"
+        }
+      ],
+      "created_at": "2026-11-11T08:47:11.705647+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "중점은 선분 위에 있으면서 선분의 양 끝점까지의 거리가 같은 점이다. 따라서 $R$이 중점이다. $P$는 선분 위에 있지만 $A$, $B$까지의 거리가 다르다. 선분 위의 아무 점이나 중점이 되는 것은 아니다. $Q$는 $A$, $B$까지의 거리가 같지만 선분 위에 있지 않다. $S$와 $T$도 선분 위에 있지 않다.",
+      "generated_at": "2026-11-11T08:47:11.544504+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$P$와 $Q$는 각각 중점이 되기 위해 필요한 두 가지 중 한 가지만 만족한다. 선분 위에 있는지와 양 끝점까지의 거리가 같은지를 모두 살펴야 한다.",
+      "id": "d782f0e2-b8f9-4b44-81c8-ba6856d45f03",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:47:11.544253+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:14.812556+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C1-정의이해",
+      "body": "세 점 $A$, $B$, $C$는 한 직선 위에 있고, $B$는 선분 $\\overline{AC}$ 위에 있다. $AB=2$ cm, $BC=4$ cm이다.\n\n점 $D$는 직선 $AC$ 위에 있지 않고, $AD=4$ cm, $CD=4$ cm이다.\n\n다음 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M3",
+          "no": 1,
+          "text": "$B$는 선분 $\\overline{AC}$의 중점이고, 직선 $AD$와 직선 $CD$의 교점은 $D$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$D$는 선분 $\\overline{AC}$의 중점이고, 직선 $AD$와 직선 $CD$의 교점은 $D$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$B$는 선분 $\\overline{AC}$의 중점이 아니고, 직선 $AB$와 직선 $CD$의 교점은 $B$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$D$는 선분 $\\overline{AC}$의 중점이 아니고, 직선 $AD$와 직선 $CD$의 교점은 $A$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$D$는 선분 $\\overline{AC}$의 중점이 아니고, 직선 $AB$와 직선 $CD$의 교점은 $C$이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:48:16.325226+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$B$는 선분 $\\overline{AC}$ 위에 있지만 $AB$와 $BC$가 다르므로 중점이 아니다. $D$는 $A$, $C$까지의 거리가 같지만 선분 $\\overline{AC}$ 위에 없으므로 중점이 아니다.\n\n직선 $AB$와 직선 $CD$는 점 $C$에서 만나므로 교점은 $C$이다. 또 직선 $AD$와 직선 $CD$의 교점은 $D$이다. 따라서 정답은 ⑤이다.\n\n①을 골랐다면 선분 위에 있는 점은 모두 그 선분의 중점이라고 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T08:48:16.152852+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$B$는 선분 위에 있지만 양 끝점까지의 거리가 다르고, $D$는 양 끝점까지의 거리가 같지만 선분 위에 없다. 중점인지 판단하려면 두 가지를 각각 확인해야 한다.",
+      "id": "962e6c0d-48c3-4f53-93a6-a330face9fa3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:47:44.060090+00:00",
+          "issues": [
+            "서로 다른 두 평면의 교선과 두 점 사이의 거리를 정의대로 확인하는 일반적인 사례로, 정의의 조건을 하나하나 따져야 하는 경계 사례가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:48:16.152569+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:14.842255+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C1-정의이해",
+      "body": "서로 다른 두 점 $A$, $B$가 있다. 선분 $AB$의 중점에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M3",
+          "no": 1,
+          "text": "선분 $AB$ 위에 있는 점은 모두 중점이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "선분 $AB$ 위에 있으면서 $A$, $B$까지의 거리가 같은 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "직선 $AB$ 위에 있으면서 선분 $AB$ 밖에 있는 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "선분 $AB$ 위에 있으면서 $A$까지의 거리가 $B$까지의 거리보다 긴 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "선분 $AB$의 양 끝점 $A$, $B$이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:46:34.493407+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "선분 $AB$의 중점은 선분 위에 있으면서 양 끝점 $A$, $B$까지의 거리가 같은 점이다. ①처럼 선분 위의 아무 점이나 중점이라고 생각하면 안 된다.",
+      "generated_at": "2026-11-11T08:46:34.344995+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "aac19e66-79d6-4741-8ea1-d9436b6de1af",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:46:34.344777+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:14.865583+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C1-정의이해",
+      "body": "두 점 $A$, $B$를 잇는 선분의 길이는 $5\\text{ cm}$이고, 두 점을 잇는 굽은 선의 길이는 $7\\text{ cm}$이다. 두 점 $A$, $B$ 사이의 거리에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "두 점을 잇는 선분의 길이이므로 $5\\text{ cm}$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M3",
+          "no": 2,
+          "text": "두 점을 잇는 굽은 선의 길이이므로 $7\\text{ cm}$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 점을 지나는 직선의 길이이므로 $5\\text{ cm}$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 점을 잇는 선분의 길이의 두 배이므로 $10\\text{ cm}$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "주어진 두 선의 길이의 차이므로 $2\\text{ cm}$이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:46:50.131846+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 점 사이의 거리는 두 점을 잇는 선분의 길이이므로 $5\\text{ cm}$이다. 굽은 선의 길이를 거리로 생각하면 ②를 고를 수 있지만, 두 점 사이의 거리는 굽은 선의 길이가 아니다.",
+      "generated_at": "2026-11-11T08:46:49.992003+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b6f72351-5c82-4e2c-a755-440b138b6ea5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:46:49.991638+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:14.889006+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C2-성질적용",
+      "body": "서로 다른 두 직선 $AB$와 $CD$가 점 $O$에서 만난다. 점 $O$는 두 점 $A$, $B$ 사이에 있고, 두 점 $C$, $D$ 사이에도 있다.\n\n$\\angle AOC$의 크기는 $\\angle BOC$의 크기보다 $40^\\circ$ 크다. $\\angle BOD$의 크기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$40^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M2",
+          "no": 2,
+          "text": "$70^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$90^\\circ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$110^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$140^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T08:49:03.784353+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle AOC$와 $\\angle BOC$의 크기의 합은 $180^\\circ$이고, 크기의 차는 $40^\\circ$이다. 따라서 $\\angle BOC=(180^\\circ-40^\\circ)\\div 2=70^\\circ$이고, $\\angle AOC=110^\\circ$이다.\n\n$\\angle AOC$와 $\\angle BOD$는 맞꼭지각이므로 크기가 같다. 따라서 $\\angle BOD=110^\\circ$이다.\n\n$70^\\circ$를 골랐다면 맞꼭지각의 크기의 합이 $180^\\circ$라고 잘못 생각했을 수 있다. 맞꼭지각은 크기가 같다.",
+      "generated_at": "2026-11-11T08:49:03.613984+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 각의 크기 차이를 문장에서 찾아 평각의 성질과 함께 사용한다. 이어서 맞꼭지각의 성질을 적용해 구하는 각의 크기를 찾는다.",
+      "id": "93c191f1-9169-4214-a8e8-07f40784d69b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:49:03.613820+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:14.915247+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C2-성질적용",
+      "body": "서로 다른 두 직선 $AB$와 $CD$가 점 $O$에서 만난다. 점 $O$는 두 점 $A$, $B$ 사이에 있고, 두 점 $C$, $D$ 사이에도 있다. 반직선 $OE$는 $\\angle BOD$의 안쪽에 있다.\n\n$\\angle AOE=145^\\circ$이고, $\\angle EOD$의 크기는 $\\angle BOE$의 크기보다 $5^\\circ$ 크다. $\\angle AOC$의 크기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$35^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$40^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$70^\\circ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$75^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M2",
+          "no": 5,
+          "text": "$105^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T08:49:26.239618+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle AOB$가 평각이므로 $\\angle BOE=180^\\circ-145^\\circ=35^\\circ$이다. 따라서 $\\angle EOD=35^\\circ+5^\\circ=40^\\circ$이고, $\\angle BOD=35^\\circ+40^\\circ=75^\\circ$이다.\n\n$\\angle AOC$와 $\\angle BOD$는 맞꼭지각이므로 크기가 같다. 따라서 정답은 $75^\\circ$이다.\n\n$105^\\circ$를 골랐다면 맞꼭지각의 크기가 같다는 성질을 쓰지 않고, 두 각의 크기의 합이 $180^\\circ$라고 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T08:49:26.084105+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 각의 크기를 비교하는 문장을 식으로 바꾸어 $\\angle EOD$를 구해야 한다. 이어서 $\\angle BOD$를 구하고 맞꼭지각의 성질을 적용해야 한다.",
+      "id": "54717af7-b0be-4734-95af-c1de7e9e24c3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:49:26.083950+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:14.951769+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C2-성질적용",
+      "body": "서로 다른 두 직선 $AB$와 $CD$가 점 $O$에서 만납니다. 점 $O$는 $A$와 $B$ 사이에 있고, $C$와 $D$ 사이에도 있습니다. $\\angle AOC=68°$일 때, $\\angle BOD$의 크기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$22°$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$68°$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$78°$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M2",
+          "no": 4,
+          "text": "$112°$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$122°$"
+        }
+      ],
+      "created_at": "2026-11-11T08:48:26.554331+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle AOC$와 $\\angle BOD$는 맞꼭지각이므로 크기가 같습니다. 따라서 $\\angle BOD=68°$입니다. $112°$를 골랐다면 맞꼭지각의 크기의 합을 $180°$로 잘못 생각했을 수 있습니다.",
+      "generated_at": "2026-11-11T08:48:26.318831+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "87f95ea4-bb4a-437a-ad35-c1aefdc84e4a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:48:26.318635+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:14.97868+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C2-성질적용",
+      "body": "두 개의 곧은 막대가 한 평면 위에서 점 $O$를 서로 가로질러 놓여 있습니다. 첫째 막대의 양 끝은 $E$, $F$이고, 둘째 막대의 양 끝은 $G$, $H$입니다. $O$는 두 막대의 양 끝 사이에 있습니다. $\\angle EOG=124^\\circ$일 때, $\\angle FOH$의 크기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$46^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M2",
+          "no": 2,
+          "text": "$56^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$114^\\circ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$124^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$134^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T08:48:45.573706+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle EOG$와 $\\angle FOH$는 맞꼭지각이므로 크기가 같습니다. 따라서 $\\angle FOH=124^\\circ$입니다. $56^\\circ$를 골랐다면 맞꼭지각의 크기의 합이 $180^\\circ$라고 잘못 생각한 것입니다.",
+      "generated_at": "2026-11-11T08:48:45.418573+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c0a39bff-92aa-40ed-b8f9-90e5e472288c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:48:45.418401+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.004552+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C2-이유설명",
+      "body": "두 직선 $AC$와 $BD$가 점 $O$에서 만납니다. 점 $O$는 두 점 $A$, $C$ 사이와 두 점 $B$, $D$ 사이에 있습니다. $\\angle AOB=68^\\circ$입니다.\n\n두 학생이 $\\angle COD$의 크기를 구하려고 합니다.\n- 가: 먼저 $\\angle BOC$의 크기를 구한 뒤, $\\angle COD$의 크기를 구한다.\n- 나: 먼저 $\\angle AOD$의 크기를 구한 뒤, $\\angle COD$의 크기를 구한다.\n\n두 방법으로 각각 $\\angle COD$의 크기를 구하세요. 두 방법에서 같은 결과가 나오는 이유를 평각을 이용하여 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T08:51:15.269913+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle AOB$와 $\\angle BOC$는 평각을 이루므로 $\\angle BOC=112^\\circ$입니다. 또 $\\angle AOB$와 $\\angle AOD$도 평각을 이루므로 $\\angle AOD=112^\\circ$입니다. 따라서 두 방법 모두 $180^\\circ$에서 $112^\\circ$를 빼어 $\\angle COD=68^\\circ$를 얻습니다.\n\n맞꼭지각인 $\\angle AOB$와 $\\angle COD$의 합이 항상 $180^\\circ$인 것은 아닙니다. 이 문제에서는 두 각의 합이 $136^\\circ$입니다. 평각을 이루는 것은 예를 들어 $\\angle AOB$와 $\\angle BOC$입니다.",
+      "generated_at": "2026-11-11T08:51:15.091979+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "서로 다른 각을 먼저 구하는 두 방법을 제시하고, 두 방법에서 같은 결과가 나오는 이유를 비교하여 설명하게 했다.",
+      "id": "05f7f8e4-748b-4a9f-80f3-f084d2fee868",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가의 방법에서는 $\\angle AOB$와 $\\angle BOC$가 평각을 이루므로 $\\angle BOC=180^\\circ-68^\\circ=112^\\circ$입니다. $\\angle BOC$와 $\\angle COD$도 평각을 이루므로 $\\angle COD=180^\\circ-112^\\circ=68^\\circ$입니다.\n\n나의 방법에서는 $\\angle AOB$와 $\\angle AOD$가 평각을 이루므로 $\\angle AOD=180^\\circ-68^\\circ=112^\\circ$입니다. $\\angle AOD$와 $\\angle COD$도 평각을 이루므로 $\\angle COD=180^\\circ-112^\\circ=68^\\circ$입니다.\n\n두 방법에서 먼저 구한 각은 모두 $180^\\circ$에서 $68^\\circ$를 뺀 $112^\\circ$입니다. 두 방법 모두 다시 $180^\\circ$에서 그 각을 빼므로 같은 결과가 나옵니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 2,
+      "rubric": [
+        {
+          "description": "$\\angle BOC$와 $\\angle AOD$가 각각 $\\angle AOB$와 평각을 이룸을 이용하여 두 각의 크기를 모두 $112^\\circ$로 구한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "먼저 구한 두 각의 크기가 같은 이유와, 각각 $\\angle COD$와 평각을 이루므로 두 방법의 결과가 같은 이유를 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-01-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "$\\angle COD$의 크기를 $68^\\circ$로 쓴다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-01-M2"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:50:23.806347+00:00",
+          "issues": [
+            "문제에 두 중간 각이 110°이고 ∠COD가 ∠AOB와 같은 70°라는 결론이 미리 제시되어, 답을 드러내지 않도록 한 측정 의도에 어긋난다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:50:49.347735+00:00",
+          "issues": [
+            "문제에서 ∠AOB와 ∠COD의 크기가 같다고 미리 밝혀, 답을 드러내지 않아야 한다는 측정 의도에 어긋난다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T08:51:15.091786+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.032265+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C2-이유설명",
+      "body": "두 곧은 도로의 가운데를 나타낸 두 직선 $AC$와 $BD$가 점 $O$에서 만납니다. 점 $O$는 두 점 $A$, $C$ 사이와 두 점 $B$, $D$ 사이에 있습니다. $\\angle BOC=120^\\circ$입니다.\n\n민지는 “맞꼭지각의 크기의 합은 언제나 $180^\\circ$이다.”라고 말했습니다.\n\n$\\angle AOB$와 $\\angle COD$의 크기를 각각 구하세요. 두 각의 크기가 서로 어떤지와 그 이유를 평각을 이용하여 설명하세요. 또 이 두 각을 이용하여 민지의 말이 옳지 않음을 보여 주세요.",
+      "choices": [],
+      "created_at": "2026-11-11T08:51:42.303566+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle AOB$와 $\\angle BOC$는 함께 평각을 이루므로 $\\angle AOB=180^\\circ-120^\\circ=60^\\circ$입니다. $\\angle BOC$와 $\\angle COD$도 함께 평각을 이루므로 $\\angle COD=180^\\circ-120^\\circ=60^\\circ$입니다. 두 각은 같은 평각의 크기에서 같은 각의 크기를 빼므로 크기가 같습니다.\n\n두 맞꼭지각의 크기의 합은 $120^\\circ$이므로 민지의 말은 옳지 않습니다. 민지는 맞꼭지각을 함께 평각을 이루는 두 각과 혼동했습니다.",
+      "generated_at": "2026-11-11T08:51:42.128383+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "주어진 두 맞꼭지각의 크기와 그 합을 구하여 민지의 말이 언제나 성립하지 않음을 보이게 했습니다.",
+      "id": "732d8ef5-3683-4197-99b1-a4127cb7f8a5",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\angle AOB=60^\\circ$, $\\angle COD=60^\\circ$입니다. $\\angle AOB$와 $\\angle BOC$가 함께 평각을 이루고, $\\angle COD$와 $\\angle BOC$도 함께 평각을 이룹니다. 따라서 두 각의 크기는 각각 $180^\\circ-120^\\circ$이므로 서로 같습니다. 두 맞꼭지각의 크기의 합은 $120^\\circ$이므로 언제나 $180^\\circ$라는 민지의 말은 옳지 않습니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\angle AOB$와 $\\angle COD$의 크기를 각각 $60^\\circ$로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-01-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 각이 각각 $\\angle BOC$와 함께 평각을 이룸을 이용하여 두 각의 크기가 같은 이유를 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 맞꼭지각의 크기의 합이 $120^\\circ$임을 이용하여 민지의 말이 옳지 않음을 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-01-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:51:42.128064+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.057381+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C2-이유설명",
+      "body": "두 직선 $AC$와 $BD$가 점 $O$에서 만난다. 각 직선 위의 점은 각각 $A$, $O$, $C$의 순서와 $B$, $O$, $D$의 순서로 놓여 있다. $\\angle AOB=65^\\circ$이다.\n$\\angle AOB$와 $\\angle COD$의 크기를 비교하시오. 평각과 구체적인 각의 크기를 이용하여 그렇게 판단한 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:49:42.990676+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle AOB$와 $\\angle BOC$의 크기의 합은 평각의 크기인 $180^\\circ$이므로 $\\angle BOC=115^\\circ$이다. 또 $\\angle BOC$와 $\\angle COD$의 크기의 합도 $180^\\circ$이므로 $\\angle COD=65^\\circ$이다. 따라서 두 각의 크기는 같다.\n맞꼭지각의 크기의 합이 항상 $180^\\circ$인 것은 아니다. 이 문제에서 두 맞꼭지각의 크기의 합은 $130^\\circ$이다.",
+      "generated_at": "2026-11-11T08:49:42.851856+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "cb836aec-86bb-462c-ae8b-469d28577117",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\angle AOB$와 $\\angle BOC$의 크기의 합은 $180^\\circ$이므로 $\\angle BOC=115^\\circ$이다. 또 $\\angle BOC$와 $\\angle COD$의 크기의 합은 $180^\\circ$이므로 $\\angle COD=180^\\circ-115^\\circ=65^\\circ$이다. 따라서 $\\angle AOB$와 $\\angle COD$의 크기는 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "평각을 이용하여 $\\angle BOC$ 또는 $\\angle AOD$의 크기가 $115^\\circ$임을 구했다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-01-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "구한 각과 $\\angle COD$의 크기의 합이 $180^\\circ$임을 이용하여 $\\angle COD=65^\\circ$를 구하고, 두 각의 크기가 같다고 했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-01-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:49:42.851758+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.0815+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C2-이유설명",
+      "body": "두 곧은 막대가 점 $P$에서만 만난다. 한 막대의 양 끝은 $A$, $C$이고, 다른 막대의 양 끝은 $B$, $D$이다. 점 $P$는 각 막대의 양 끝 사이에 있다. $\\angle BPC=112^\\circ$이다.\n\n$\\angle APB$와 $\\angle CPD$의 크기를 각각 구하고, 두 각의 크기가 같은 이유를 평각을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:49:59.147976+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle APB$와 $\\angle BPC$는 함께 평각을 이룬다. $\\angle BPC$와 $\\angle CPD$도 함께 평각을 이룬다. 따라서 두 각은 각각 $180^\\circ$에서 $112^\\circ$를 뺀 $68^\\circ$이다.\n\n맞꼭지각의 합이 항상 $180^\\circ$라고 생각하면 안 된다. 이 문제에서 맞꼭지각인 $\\angle APB$와 $\\angle CPD$의 합은 $136^\\circ$이다.",
+      "generated_at": "2026-11-11T08:49:58.99373+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f4257555-009d-4aac-a187-ff439a3bd17a",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\angle APB$와 $\\angle BPC$는 함께 평각을 이루고, $\\angle BPC$와 $\\angle CPD$도 함께 평각을 이룬다. 따라서 두 각은 모두 $180^\\circ-112^\\circ=68^\\circ$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\angle APB$와 $\\angle CPD$의 크기를 각각 $68^\\circ$로 구했다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-01-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 각이 각각 $\\angle BPC$와 함께 평각을 이룸을 이용하여 두 각의 크기가 같은 이유를 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-01-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:49:58.993527+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.10592+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C3-오개념판별",
+      "body": "직육면체 $ABCD$-$EFGH$의 윗면과 아랫면의 꼭짓점은 각각 $A$, $B$, $C$, $D$와 $E$, $F$, $G$, $H$의 순서로 놓여 있다. 모서리 $AE$, $BF$, $CG$, $DH$는 세로 모서리이다.\n\n민지는 다음과 같이 말했다.\n\n“직선 $AB$와 직선 $CG$는 만나지 않고, 직선 $AB$와 직선 $EF$도 만나지 않아. 따라서 두 쌍은 모두 평행해.”\n\n민지의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M1",
+          "no": 1,
+          "text": "옳다. 공간에서 만나지 않는 두 직선은 언제나 평행하다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳지 않다. 직선 $AB$와 직선 $CG$는 꼬인 위치에 있고, 직선 $AB$와 직선 $EF$는 평행하다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳지 않다. 만나지 않는 두 직선은 꼬인 위치에 있으므로 두 쌍 모두 꼬인 위치에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳지 않다. 모서리를 양쪽으로 늘리면 두 쌍의 직선은 모두 만난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. 직선 $AB$와 직선 $CG$는 꼬인 위치에 있지만, 직선 $AB$와 직선 $EF$는 한 평면 위에 있으므로 만난다."
+        }
+      ],
+      "created_at": "2026-11-11T08:53:59.994436+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "직선 $AB$와 직선 $CG$는 만나지 않는다. 또 두 직선을 한 평면 위에 놓을 수도 없다. 두 직선을 포함하는 평면이 있다면 그 평면은 $A$, $B$, $C$를 지나므로 윗면을 포함하는 평면이어야 한다. 그런데 $G$는 그 평면 위에 없다. 따라서 직선 $AB$와 직선 $CG$는 꼬인 위치에 있다.\n\n직선 $AB$와 직선 $EF$는 한 평면 위에 있고 서로 만나지 않으므로 평행하다. ①처럼 공간에서 만나지 않는 두 직선을 모두 평행하다고 생각하면 꼬인 위치를 놓칠 수 있다.",
+      "generated_at": "2026-11-11T08:53:59.652033+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "만나지 않는 두 쌍의 직선이 모두 평행하다는 민지의 말을 판단하게 한다. 두 쌍을 비교하여 평행과 꼬인 위치를 구별해야 한다.",
+      "id": "418ba745-1b30-49ee-91b4-1049fe8eea00",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:53:59.651814+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.137984+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C3-오개념판별",
+      "body": "평평한 바닥을 평면 $\\alpha$로 생각하자. 기둥을 따라 위아래로 끝없이 늘인 직선 $l$은 평면 $\\alpha$와 점 $P$에서 만난다. 바닥 위의 직선 $m$은 점 $P$를 지나지 않는다.\n\n세 학생이 직선 $l$과 직선 $m$의 위치 관계에 대해 다음과 같이 말했다.\n\nㄱ. 두 직선은 만나지 않으므로 평행해.\nㄴ. 두 직선은 한 평면 위에 놓일 수 없으므로 꼬인 위치에 있어.\nㄷ. 직선 $l$이 바닥과 만나는 점 $P$에서 두 직선이 만나.\n\n옳게 말한 학생을 모두 고른 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M1",
+          "no": 1,
+          "text": "ㄱ"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄴ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "없다"
+        }
+      ],
+      "created_at": "2026-11-11T08:54:30.917147+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "직선 $l$은 바닥과 점 $P$에서만 만나고, 직선 $m$은 $P$를 지나지 않는다. 따라서 두 직선은 만나지 않는다.\n\n두 직선이 한 평면 위에 있다고 생각해 보자. 그 평면은 바닥과 직선 $m$에서 만난다. 점 $P$도 두 평면 위에 있으므로 $m$ 위에 있어야 한다. 하지만 $m$은 $P$를 지나지 않는다. 따라서 두 직선은 한 평면 위에 놓일 수 없고, 꼬인 위치에 있다. 옳게 말한 학생은 ㄴ뿐이다.\n\nㄱ처럼 공간에서 만나지 않는 두 직선이 언제나 평행하다고 생각하면 꼬인 위치를 놓칠 수 있다.",
+      "generated_at": "2026-11-11T08:54:30.763367+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "세 학생의 말을 보고 옳은 말을 골라야 한다. 만나지 않는 두 직선에 대해 평행과 꼬인 위치 중 어느 판단이 옳은지 생각하게 한다.",
+      "id": "49db12f7-dedd-4203-b3e9-096d43de4519",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:54:30.763215+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.160394+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C3-오개념판별",
+      "body": "직육면체의 윗면은 $ABCD$, 아랫면은 $EFGH$입니다. 윗면의 꼭짓점 $A$, $B$, $C$, $D$는 차례로 놓여 있고, $AE$, $BF$, $CG$, $DH$는 세로 모서리입니다. 다음 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "직선 $AB$와 직선 $CG$는 꼬인 위치에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M1",
+          "no": 2,
+          "text": "직선 $AB$와 직선 $CG$는 만나지 않으므로 평행하다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "직선 $AB$와 직선 $BF$는 평행하다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "직선 $AB$와 직선 $CD$는 만난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "직선 $AE$와 직선 $CG$는 만난다."
+        }
+      ],
+      "created_at": "2026-11-11T08:53:14.737339+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "직선 $AB$와 직선 $CG$는 만나지 않고, 한 평면 위에 있지도 않으므로 꼬인 위치에 있습니다. 두 직선이 만나지 않는다고 해서 언제나 평행인 것은 아닙니다. ②는 이를 잘못 생각한 것입니다.",
+      "generated_at": "2026-11-11T08:53:14.678289+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1dd3cbe5-dc73-4007-a671-69b625bc3e1a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:53:14.678203+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.184392+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C3-오개념판별",
+      "body": "두 평면 $\\alpha$와 $\\beta$는 서로 평행하다. 직선 $\\ell$은 평면 $\\alpha$ 위에 있고, 직선 $m$과 $n$은 평면 $\\beta$ 위에 있다. $\\ell$과 $n$은 평행하고, $m$과 $n$은 수직이다. 다음 중 $\\ell$과 $m$의 위치 관계와 그 이유가 모두 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M1",
+          "no": 1,
+          "text": "평행하다. 두 직선이 만나지 않기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "만난다. $m$과 $n$이 만나기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "같은 직선이다. $\\ell$과 $n$이 평행하기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "꼬인 위치에 있다. 두 직선이 한 평면 위에 있기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "꼬인 위치에 있다. 두 직선이 만나지 않고 평행하지도 않기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:53:35.306867+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\ell$과 $m$은 서로 평행한 두 평면 위에 있으므로 만나지 않는다. 또 $\\ell$은 $n$과 평행하지만 $m$은 $n$과 수직이므로, $\\ell$과 $m$은 평행하지 않다. 따라서 두 직선은 꼬인 위치에 있다. ①은 공간에서 만나지 않는 두 직선은 언제나 평행하다고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T08:53:35.243714+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "fffb380b-0ede-404a-b35e-c10156e5b878",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:53:35.243640+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.207445+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C3-정의이해",
+      "body": "직육면체 $ABCD$-$EFGH$에서 윗면은 $ABCD$, 아랫면은 $EFGH$이고, $AE$, $BF$, $CG$, $DH$는 세로 모서리이다. 다음 세 직선 쌍의 위치 관계를 차례대로 바르게 나타낸 것은?\n\n(가) 직선 $AB$와 직선 $BA$\n(나) 직선 $AB$와 직선 $EF$\n(다) 직선 $AB$와 직선 $CG$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "평행하다, 평행하다, 꼬인 위치에 있다"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M1",
+          "no": 2,
+          "text": "겹친다, 평행하다, 평행하다"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "겹친다, 꼬인 위치에 있다, 꼬인 위치에 있다"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "겹친다, 평행하다, 꼬인 위치에 있다"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "겹친다, 평행하다, 한 점에서 만난다"
+        }
+      ],
+      "created_at": "2026-11-11T08:52:35.267241+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "직선 $AB$와 직선 $BA$는 같은 직선이므로 겹친다. 두 직선은 만나지 않는 것이 아니므로 평행하지 않다. 직선 $AB$와 직선 $EF$는 한 평면 위에 있고 만나지 않으므로 평행하다.\n\n직선 $AB$와 직선 $CG$는 만나지 않는다. 또 직선 $AB$와 점 $C$를 지나는 평면은 윗면을 늘인 평면인데, 점 $G$는 이 평면 위에 없다. 따라서 두 직선은 한 평면 위에 있지 않아 꼬인 위치에 있다. 2번을 골랐다면 공간에서 만나지 않는 두 직선은 언제나 평행하다고 생각했을 수 있다.",
+      "generated_at": "2026-11-11T08:52:35.184972+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "같은 직선을 두 점의 순서만 바꾸어 나타낸 쌍을 넣어, 겹치는 두 직선과 평행한 두 직선을 구별하게 했다. 또한 만나지 않는 두 직선이 한 평면 위에 있는지도 따져 꼬인 위치와 평행을 구별하게 했다.",
+      "id": "f76a431a-d2d6-4820-a852-8792c47e5d35",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:52:35.184721+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.231386+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C3-정의이해",
+      "body": "서로 다른 두 평면 $\\alpha$, $\\beta$가 직선 $l$에서 만난다. 직선 $a$는 평면 $\\alpha$ 위에 있고, $l$과 한 점 $P$에서 만난다. 직선 $b$는 평면 $\\beta$ 위에 있고, $l$과 한 점 $Q$에서 만난다. 두 점 $P$, $Q$는 서로 다르다.\n\n두 직선 $a$, $b$의 위치 관계로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M1",
+          "no": 1,
+          "text": "평행하다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "꼬인 위치에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "점 $P$에서 만난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "점 $Q$에서 만난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "주어진 내용만으로는 위치 관계를 알 수 없다."
+        }
+      ],
+      "created_at": "2026-11-11T08:52:57.552509+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$a$와 $b$가 만나는 점이 있다면 그 점은 두 평면에 모두 있으므로 $l$ 위에 있어야 한다. 그런데 $a$와 $l$의 만나는 점은 $P$, $b$와 $l$의 만나는 점은 $Q$이고, $P$와 $Q$는 다르다. 따라서 $a$와 $b$는 만나지 않는다.\n\n만약 $a$와 $b$가 한 평면 위에 있다면, 그 평면은 $P$, $Q$를 지나므로 $l$을 포함한다. 이 평면은 $a$와 $l$을 포함하므로 $\\alpha$와 같다. 그러면 $b$는 $\\alpha$와 $\\beta$에 모두 있어야 하므로 $l$과 같아진다. 이는 $b$가 $l$과 한 점에서 만난다는 것과 맞지 않는다. 따라서 $a$와 $b$는 꼬인 위치에 있다.\n\n①을 골랐다면 공간에서 만나지 않는 두 직선은 언제나 평행이라고 생각했을 수 있다. 두 직선이 한 평면 위에 있지 않으면 꼬인 위치에 있다.",
+      "generated_at": "2026-11-11T08:52:57.492249+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "두 직선이 각각 교선과 만나지만 그 점이 서로 다른 상황을 제시했다. 두 직선이 만나지 않는지와 한 평면 위에 있는지를 따로 살펴야 위치 관계를 판단할 수 있다.",
+      "id": "36d6d963-963a-4781-b817-8e0e45cc37b5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:52:57.491856+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.253305+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C3-정의이해",
+      "body": "직육면체 $ABCD$-$EFGH$가 있다. 윗면의 꼭짓점은 $A$, $B$, $C$, $D$가 차례로 놓여 있고, 아랫면은 $EFGH$이다. 모서리 $AE$, $BF$, $CG$, $DH$는 세로 모서리이다. 두 직선 $AB$와 $CG$의 위치 관계를 바르게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "두 직선은 점 $A$에서 만난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 직선은 점 $C$에서 만난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M1",
+          "no": 3,
+          "text": "두 직선은 만나지 않으므로 평행하다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 직선은 만나지 않고 한 평면 위에 있지 않으므로 꼬인 위치이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 직선은 만나지 않고 한 평면 위에 있으므로 꼬인 위치이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:51:58.645187+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "직선 $CG$는 윗면을 포함하는 평면과 점 $C$에서 만나지만, $C$는 직선 $AB$ 위에 있지 않다. 따라서 두 직선은 만나지 않는다. 또 직선 $AB$와 점 $C$를 지나는 평면은 윗면을 포함하는 평면인데, $G$는 이 평면 위에 없다. 따라서 두 직선은 한 평면 위에 있지 않으므로 꼬인 위치이다. 3번처럼 만나지 않는 두 직선이 언제나 평행이라고 생각하면, 꼬인 위치를 놓칠 수 있다.",
+      "generated_at": "2026-11-11T08:51:58.470185+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "dd4e9f91-8495-4b85-88c7-2402c73a7f9b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:51:58.469976+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:15.288008+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-01-C3-정의이해",
+      "body": "공간에 서로 다른 두 직선 $l$, $m$이 있다. 두 직선은 만나지 않고, 한 평면 위에 함께 놓을 수도 없다. 두 직선의 위치 관계를 바르게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-01-M1",
+          "no": 1,
+          "text": "평행하다. 두 직선이 만나지 않기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "한 점에서 만난다. 두 직선이 한 평면 위에 있지 않기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "일치한다. 두 직선이 한 평면 위에 있지 않기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "서로 수직이다. 두 직선이 만나지 않기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "꼬인 위치에 있다. 두 직선을 한 평면 위에 함께 놓을 수 없기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:52:13.057705+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 직선은 한 평면 위에 함께 놓을 수 없으므로 꼬인 위치에 있다. 공간에서 두 직선이 만나지 않는다고 해서 언제나 평행한 것은 아니다. 평행한 두 직선은 한 평면 위에 있다.",
+      "generated_at": "2026-11-11T08:52:12.897064+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "28bd6d31-f861-423f-a8af-3c08557fac5e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:52:12.891254+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

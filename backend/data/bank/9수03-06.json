@@ -1,0 +1,971 @@
+{
+  "backlog": [],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T09:08:58.273818+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-성질적용",
+      "body": "한 원에 중심각의 크기가 각각 $60^\\circ$, $180^\\circ$인 두 부채꼴이 있다. 큰 부채꼴의 호의 양 끝을 잇는 현의 길이는 작은 부채꼴의 호의 양 끝을 잇는 현의 길이의 $2$배이다. 두 호의 길이의 차가 $4\\pi\\text{ cm}$일 때, 작은 부채꼴의 호의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\pi\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2\\pi\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3\\pi\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 4,
+          "text": "$4\\pi\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6\\pi\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T08:31:43.64761+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "한 원에서 호의 길이는 중심각의 크기에 정비례한다. 두 중심각의 크기의 비가 $1:3$이므로 두 호의 길이의 비도 $1:3$이다. 따라서 두 호의 길이의 차인 $4\\pi\\text{ cm}$는 작은 호의 길이의 $2$배이다. 작은 호의 길이는 $2\\pi\\text{ cm}$이다.\n\n④는 현의 길이의 비가 $1:2$이므로 호의 길이의 비도 $1:2$라고 잘못 생각한 경우이다. 현의 길이는 중심각의 크기에 정비례하지 않는다.",
+      "generated_at": "2026-11-11T08:31:41.575704+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 호의 길이의 차를 주고 작은 호의 길이를 거꾸로 구하게 했다. 현의 길이의 비와 호의 길이의 비를 구별해야 한다.",
+      "id": "719c7c69-b425-4030-b4e1-2b4f1b6a66d5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:31:41.575220+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.296122+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-성질적용",
+      "body": "한 원의 중심을 $O$라 하자. 원 위의 서로 다른 두 점 $A$, $B$와 두 반지름 $OA$, $OB$로 원을 두 부채꼴 $P$, $Q$로 나눈다. 두 부채꼴의 호의 양 끝을 이은 현은 모두 $AB$이다.\n\n부채꼴 $P$의 호의 길이는 부채꼴 $Q$의 호의 길이의 $\\frac{1}{4}$이다. 부채꼴 $P$의 중심각의 크기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$45^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$60^\\circ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$72^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$90^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 5,
+          "text": "$180^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T08:32:30.092328+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 중심각의 크기의 합은 $360^\\circ$이다. 한 원에서 중심각의 크기는 호의 길이에 정비례하므로, $P$와 $Q$의 중심각의 크기의 비는 $1:4$이다. 따라서 $P$의 중심각의 크기는 $360^\\circ\\times\\frac{1}{5}=72^\\circ$이다.\n\n⑤를 골랐다면 두 부채꼴의 현이 같으므로 중심각도 같다고 생각했을 수 있다. 하지만 두 부채꼴은 같은 현을 가져도 호의 길이가 다르다.",
+      "generated_at": "2026-11-11T08:32:27.934204+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 부채꼴이 원을 나눈다는 말에서 중심각의 크기의 합이 $360^\\circ$임을 알아야 한다. 호의 길이의 비를 중심각의 크기의 비로 바꾸어 답을 구한다.",
+      "id": "80b69a15-cdad-485a-8d66-7f853d3b91bd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:32:27.933882+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.320787+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-성질적용",
+      "body": "반지름이 $6$ cm인 원이 있다. 이 원에서 중심각의 크기가 $60^\\circ$인 부채꼴의 호의 길이는 $2\\pi$ cm이고, 이 호의 양 끝을 이은 현의 길이는 $6$ cm이다.\n\n이 원에서 중심각의 크기가 $180^\\circ$인 부채꼴의 호의 길이와 이 호의 양 끝을 이은 현의 길이를 차례로 구하면?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4\\pi$ cm, $12$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6\\pi$ cm, $6$ cm"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\pi$ cm, $12$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 4,
+          "text": "$6\\pi$ cm, $18$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\pi$ cm, $12$ cm"
+        }
+      ],
+      "created_at": "2026-11-11T08:30:49.233956+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "중심각의 크기가 $60^\\circ$에서 $180^\\circ$로 $3$배가 되므로 호의 길이는 $2\\pi\\times 3=6\\pi$ cm이다. $180^\\circ$인 부채꼴의 호의 양 끝을 이은 현은 원의 중심을 지나므로 그 길이는 지름인 $12$ cm이다. 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각하면 $6\\times 3=18$ cm로 구할 수 있다.",
+      "generated_at": "2026-11-11T08:30:47.162024+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8323230f-62e4-4f41-a576-34eba7260f26",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:30:47.161961+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.366002+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-성질적용",
+      "body": "한 원에 두 부채꼴 가와 나가 있다. 가와 나의 호는 양 끝점이 같다.\n\n가의 중심각의 크기는 $120^\\circ$이고 호의 길이는 $4$ cm이다. 나의 중심각의 크기는 $240^\\circ$이다.\n\n나의 호의 길이와, 나의 호의 양 끝을 이은 현의 길이가 가의 호의 양 끝을 이은 현의 길이의 몇 배인지 차례로 고르면?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4$ cm, $1$배"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$ cm, $1$배"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8$ cm, $1$배"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 4,
+          "text": "$8$ cm, $2$배"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$ cm, $1$배"
+        }
+      ],
+      "created_at": "2026-11-11T08:31:14.391894+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "나의 중심각의 크기는 가의 $2$배이다. 한 원에서 호의 길이는 중심각의 크기에 정비례하므로 나의 호의 길이는 $4\\times 2=8$ cm이다.\n\n두 호의 양 끝점이 같으므로 두 호의 양 끝을 이은 현도 같다. 따라서 현의 길이는 $1$배이다.\n\n④는 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각한 경우이다.",
+      "generated_at": "2026-11-11T08:31:12.309192+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "36ec18f1-d627-4cd5-a00d-65bcf9a059d0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:31:12.308734+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.39101+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-오개념판별",
+      "body": "한 원에서 중심각의 크기가 각각 $60^\\circ$, $180^\\circ$인 두 부채꼴을 생각하자. 각 부채꼴에서 호의 양 끝을 이은 선분은 현이다.\n\n민수는 다음과 같이 말했다.\n“$180^\\circ$인 부채꼴의 호의 길이는 $60^\\circ$인 부채꼴의 호의 길이의 $3$배야. 현의 길이도 $3$배야.”\n\n민수의 말에 대한 판단과 그 까닭이 모두 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 1,
+          "text": "호와 현에 대한 말이 모두 옳다. 같은 원에서는 호와 현의 길이가 모두 중심각의 크기에 정비례하기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "호에 대한 말만 옳다. $60^\\circ$인 부채꼴의 현은 반지름과 길이가 같고, $180^\\circ$인 부채꼴의 현은 지름이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "호에 대한 말만 옳다. $60^\\circ$와 $180^\\circ$인 부채꼴의 현은 모두 반지름과 길이가 같기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "호에 대한 말만 옳다. $60^\\circ$와 $180^\\circ$인 부채꼴의 현은 모두 지름과 길이가 같기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "호에 대한 말만 옳다. $60^\\circ$인 부채꼴의 현은 반지름보다 짧고, $180^\\circ$인 부채꼴의 현은 지름이기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:34:16.158364+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "같은 원에서 호의 길이는 중심각의 크기에 정비례한다. 따라서 $180^\\circ$인 부채꼴의 호의 길이는 $60^\\circ$인 부채꼴의 호의 길이의 $3$배이다.\n\n$60^\\circ$인 부채꼴의 두 반지름과 현으로 이루어진 삼각형은 정삼각형이다. 따라서 이 현의 길이는 반지름과 같다. $180^\\circ$인 부채꼴의 현은 지름이므로 길이가 반지름의 $2$배이다. 두 현의 길이는 $3$배가 아니라 $2$배이다.\n\n①은 현의 길이도 호의 길이처럼 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T08:34:14.081921+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민수가 호와 현의 길이에 대해 한 말을 각각 판단하고, 판단의 까닭까지 고르게 했다.",
+      "id": "1c971cb1-e16e-4a64-a911-378c7476a361",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:34:14.081559+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.417568+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-오개념판별",
+      "body": "원 위의 서로 다른 두 점 $A$, $B$가 원을 두 호로 나눈다. 두 호에 대한 부채꼴의 중심각은 각각 $120^\\circ$, $240^\\circ$이다.\n\n각 호의 양 끝을 이은 현에 대하여 학생들이 다음과 같이 말했다. 옳은 말은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 1,
+          "text": "$240^\\circ$인 호의 현은 $120^\\circ$인 호의 현보다 길이가 $2$배야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 호의 길이는 서로 같아."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 부채꼴의 넓이는 서로 같아."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$240^\\circ$인 호의 길이는 $120^\\circ$인 호의 길이의 $3$배야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 호의 현은 같은 선분이므로 길이가 서로 같아."
+        }
+      ],
+      "created_at": "2026-11-11T08:34:37.810983+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "한 원에서 호의 길이와 부채꼴의 넓이는 각각 중심각의 크기에 정비례한다. 따라서 $240^\\circ$인 부채꼴의 호의 길이와 넓이는 각각 $120^\\circ$인 부채꼴의 $2$배이다.\n\n두 호의 양 끝은 모두 $A$, $B$이므로 두 호의 현은 같은 선분이다. 따라서 현의 길이는 서로 같다. ①은 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T08:34:35.738051+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "같은 두 점을 양 끝으로 하는 두 호를 살펴보고, 호와 현에 대한 학생들의 말 중 옳은 것을 판단하게 했다.",
+      "id": "71c51992-9eec-4b64-a6af-5f277298dff6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:34:35.737961+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.452187+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-오개념판별",
+      "body": "한 원에 중심각이 $60^\\circ$인 부채꼴과 $180^\\circ$인 부채꼴이 있다. 각 부채꼴에서 호의 양 끝을 이은 현을 생각하자.\n\n중심각이 $180^\\circ$인 부채꼴의 호와 현의 길이는 각각 중심각이 $60^\\circ$인 부채꼴의 호와 현의 길이의 몇 배인가?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "호: $3$배, 현: $2$배"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 2,
+          "text": "호: $3$배, 현: $3$배"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "호: $3$배, 현: $1$배"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "호: $2$배, 현: $2$배"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "호: $6$배, 현: $2$배"
+        }
+      ],
+      "created_at": "2026-11-11T08:32:46.899594+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "호의 길이는 중심각의 크기에 정비례하므로 $3$배이다.\n\n중심각이 $60^\\circ$인 부채꼴에서 중심과 호의 양 끝을 이은 삼각형은 정삼각형이다. 따라서 현의 길이는 반지름과 같다. 중심각이 $180^\\circ$인 부채꼴의 현은 지름이므로 반지름의 $2$배이다. 따라서 현의 길이는 $2$배이다.\n\n②는 현의 길이도 호의 길이처럼 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T08:32:44.814417+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c0564430-8a05-47cf-83da-16e6c331d7d5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:32:44.814210+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.476579+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-오개념판별",
+      "body": "한 원 위의 서로 다른 두 점 $A$, $B$를 양 끝으로 하는 두 호가 있다. 한 호의 중심각은 $120^\\circ$이고, 다른 호의 중심각은 $240^\\circ$이다.\n\n각 호의 양 끝을 이은 현의 길이에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "길이가 같다. 두 현이 같은 현이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 2,
+          "text": "$240^\\circ$에 대한 현의 길이가 두 배이다. 중심각의 크기가 두 배이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "길이가 같다. 두 중심각의 크기가 같기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "길이가 다르다. 두 호의 길이가 다르기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "길이가 같다. 한 원에 있는 현의 길이는 모두 같기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:33:48.654292+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 호의 양 끝이 모두 $A$, $B$이므로 두 현은 같은 현이다. 따라서 길이가 같다.\n\n②처럼 중심각이 두 배이면 현의 길이도 두 배라고 생각할 수 있지만, 현의 길이는 중심각의 크기에 정비례하지 않는다. ③에서 두 중심각의 크기는 다르다. ④에서 두 호의 길이는 다르지만 두 현은 같다. ⑤에서 한 원에 있는 현의 길이가 모두 같은 것은 아니다.",
+      "generated_at": "2026-11-11T08:33:46.574738+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0b48ac5c-c36b-466e-9244-b8cb8d13456c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:33:14.243691+00:00",
+          "issues": [
+            "보기 ⑤: M1대로 생각해도 옳은 설명이다. M1대로 풀면 ④도 옳다고 판단하여 모든 보기가 옳다고 보게 된다.",
+            "해설에서 ④를 고른 학생이 현의 길이가 중심각에 정비례한다고 잘못 생각했을 수 있다고 한 부분은 정답을 고른 이유와 반대이다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:33:46.574307+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.503692+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-성질적용",
+      "body": "두 부채꼴 $A$, $B$의 호의 길이는 서로 같다. $A$의 반지름은 $6\\text{ cm}$이고 넓이는 $12\\pi\\text{ cm}^2$이다. $B$의 지름은 $18\\text{ cm}$이다. $B$의 넓이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$9\\pi\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$12\\pi\\text{ cm}^2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$18\\pi\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M3",
+          "no": 4,
+          "text": "$36\\pi\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M2",
+          "no": 5,
+          "text": "$54\\pi\\text{ cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-11T08:35:18.488668+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$A$는 넓이가 $36\\pi\\text{ cm}^2$인 원의 $\\frac{1}{3}$이므로, 호의 길이는 $12\\pi\\times\\frac{1}{3}=4\\pi\\text{ cm}$이다. $B$의 반지름은 $9\\text{ cm}$이고, 원의 둘레는 $18\\pi\\text{ cm}$이다. 따라서 $B$는 원의 $\\frac{4\\pi}{18\\pi}=\\frac{2}{9}$이므로, 넓이는 $81\\pi\\times\\frac{2}{9}=18\\pi\\text{ cm}^2$이다.\n④는 $B$의 지름을 반지름으로 잘못 사용한 경우이다. ⑤는 $A$의 넓이 $12\\pi$를 호의 길이로 잘못 사용한 경우이다.",
+      "generated_at": "2026-11-11T08:35:16.426294+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$A$의 넓이로부터 호의 길이를 거꾸로 구한 뒤, 같은 호의 길이를 이용하여 $B$의 넓이를 구한다.",
+      "id": "5b78d478-3d59-45ce-9ea1-16ee4cac584d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:35:16.426224+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.529867+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-성질적용",
+      "body": "어느 부채꼴의 호의 길이는 $4\\pi\\text{ cm}$이고 넓이는 $20\\pi\\text{ cm}^2$이다. 이 부채꼴의 중심각의 크기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$36^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$60^\\circ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$72^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$90^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M3",
+          "no": 5,
+          "text": "$144^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T08:35:45.104127+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "부채꼴의 넓이를 호의 길이로 나눈 값은 반지름의 절반과 같다. 따라서 반지름은 $(20\\pi\\div4\\pi)\\times2=10\\text{ cm}$이다. 원 둘레는 $20\\pi\\text{ cm}$이므로 중심각의 크기는 $360^\\circ\\times\\dfrac{4\\pi}{20\\pi}=72^\\circ$이다.\n⑤는 넓이를 구하는 식에서 반지름 대신 지름을 사용하여 지름을 $10\\text{ cm}$로 잘못 구한 경우이다. 이때 반지름을 $5\\text{ cm}$로 잘못 생각하면 $144^\\circ$가 나온다.",
+      "generated_at": "2026-11-11T08:35:43.035845+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "호의 길이와 넓이를 먼저 주고, 이를 이용하여 반지름과 중심각을 거꾸로 구하게 했다.",
+      "id": "8ee46fa4-03c2-4d9f-8dbc-c190492e7cee",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:35:43.035572+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.555457+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-성질적용",
+      "body": "지름이 $12\\text{ cm}$인 원에서 중심각의 크기가 $120°$인 부채꼴의 넓이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M2",
+          "no": 1,
+          "text": "$4\\pi\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6\\pi\\text{ cm}^2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12\\pi\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$24\\pi\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M3",
+          "no": 5,
+          "text": "$48\\pi\\text{ cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-11T08:34:48.513927+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "반지름은 $6\\text{ cm}$입니다. 부채꼴의 넓이는 $\\pi\\times 6^2\\times\\frac{120}{360}=12\\pi\\text{ cm}^2$입니다.\n①은 호의 길이를 구하는 식으로 넓이를 구한 것입니다. ⑤는 반지름 대신 지름을 사용하여 넓이를 구한 것입니다.",
+      "generated_at": "2026-11-11T08:34:46.428608+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "6418b78e-00ae-447c-86e1-c77324ff78bd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:34:46.428234+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.58328+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-성질적용",
+      "body": "반지름이 $8\\text{ cm}$이고 중심각의 크기가 $90°$인 부채꼴이 있습니다. 이 부채꼴의 호의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2\\pi\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\pi\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\pi\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-06-M3",
+          "no": 4,
+          "text": "$8\\pi\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$16\\pi\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T08:34:59.917519+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "호의 길이는 원주의 $\\dfrac{90}{360}$이므로 $2\\pi\\times 8\\times\\dfrac{90}{360}=4\\pi\\text{ cm}$입니다. ④는 반지름 $8\\text{ cm}$ 대신 지름 $16\\text{ cm}$를 넣어 계산한 경우입니다.",
+      "generated_at": "2026-11-11T08:34:57.825719+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c7a99a83-cac4-4e81-833e-a59d4cfe079a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:34:57.825535+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.608157+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-이유설명",
+      "body": "반지름이 $6\\text{ cm}$이고 중심각의 크기가 $120°$인 부채꼴이 있다. 이 부채꼴의 넓이를 구하는 두 방법을 생각해 보자.\n\n방법 가: 원 전체의 넓이를 구한 뒤, 중심각의 크기를 이용하여 부채꼴의 넓이를 구한다.\n방법 나: 부채꼴의 호의 길이를 구한 뒤, 그 길이에 반지름을 곱하고 $2$로 나눈다.\n\n두 방법으로 구한 넓이가 같음을 보이고, 두 방법이 같은 결과를 내는 이유를 원 전체와 비교하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:36:36.116156+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "원 전체의 둘레는 $12\\pi\\text{ cm}$이고 넓이는 $36\\pi\\text{ cm}^2$이다. 중심각 $120°$는 $360°$의 $\\frac{1}{3}$이므로 호의 길이와 부채꼴의 넓이는 각각 원 전체의 $\\frac{1}{3}$이다.\n\n방법 가로 구한 넓이는 $36\\pi\\times\\frac{1}{3}=12\\pi\\text{ cm}^2$이다. 방법 나에서는 호의 길이가 $12\\pi\\times\\frac{1}{3}=4\\pi\\text{ cm}$이므로 넓이는 $4\\pi\\times6\\div2=12\\pi\\text{ cm}^2$이다.\n\n원 전체에서도 둘레에 반지름을 곱하고 $2$로 나누면 넓이가 된다. 호의 길이와 부채꼴의 넓이는 각각 원 전체의 같은 비율이므로, 방법 나도 방법 가와 같은 결과를 낸다. 원의 둘레나 호의 길이만 구한 것은 넓이를 구한 것이 아님에 주의한다. 또 계산할 때 지름이 아닌 반지름 $6\\text{ cm}$를 사용해야 한다.",
+      "generated_at": "2026-11-11T08:36:35.965986+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "문제에서 두 방법으로 구한 넓이가 같음을 보이고, 원 전체와 비교하여 같은 결과가 나오는 이유를 설명하게 한다.",
+      "id": "322da759-3e42-41cf-917f-f533aececd4d",
+      "model": "gpt-6.1-terra",
+      "model_answer": "방법 가: $36\\pi\\times\\frac{120}{360}=12\\pi\\text{ cm}^2$\n\n방법 나: 호의 길이는 $12\\pi\\times\\frac{120}{360}=4\\pi\\text{ cm}$이다. 따라서 넓이는 $4\\pi\\times6\\div2=12\\pi\\text{ cm}^2$이다.\n\n호의 길이와 부채꼴의 넓이는 각각 원 전체의 $\\frac{1}{3}$이다. 원 전체의 둘레에 반지름을 곱하고 $2$로 나누면 원 전체의 넓이가 된다. 따라서 둘레의 $\\frac{1}{3}$인 호의 길이에 반지름을 곱하고 $2$로 나누면 원 전체의 넓이의 $\\frac{1}{3}$이 된다. 이것은 방법 가로 구한 부채꼴의 넓이와 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "호의 길이와 부채꼴의 넓이가 각각 원 전체의 $\\frac{1}{3}$임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "원 전체의 둘레에 반지름을 곱하고 $2$로 나누면 원 전체의 넓이가 됨을 이용하여, 방법 나가 방법 가와 같은 넓이를 구하는 이유를 설명한다.",
+          "no": 2,
+          "points": 3.0,
+          "related_misconception_ids": [
+            "9수03-06-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법으로 구한 넓이가 모두 $12\\pi\\text{ cm}^2$임을 계산하여 보인다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M2",
+            "9수03-06-M3"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:36:35.965811+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.633004+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-이유설명",
+      "body": "한 학생이 다음과 같이 말했다.\n\n“중심각의 크기가 같은 두 부채꼴은 호의 길이도 언제나 같다.”\n\n반지름이 각각 $4\\text{ cm}$, $8\\text{ cm}$이고 중심각의 크기가 모두 $90^\\circ$인 두 부채꼴을 생각해 보자.\n\n두 부채꼴의 호의 길이를 각각 구하여 이 학생의 말이 틀렸음을 보이시오. 또 호의 길이를 구하는 방법의 이유를 각각 원 전체와 비교하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:37:01.16047+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 부채꼴은 중심각의 크기가 같지만 반지름이 다르므로 원 전체의 둘레가 다르다. 각 부채꼴의 호의 길이는 원 전체의 둘레의 $\\frac{90}{360}$, 즉 $\\frac14$이다. 따라서 호의 길이는 각각 $2\\pi\\text{ cm}$, $4\\pi\\text{ cm}$이다. 중심각의 크기가 같아도 호의 길이는 다를 수 있다.\n\n호의 길이를 구할 때 넓이를 구하는 식을 쓰지 않도록 주의한다. 또 원의 둘레를 구할 때 지름을 반지름으로 잘못 넣지 않도록 주의한다.",
+      "generated_at": "2026-11-11T08:37:01.007468+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "중심각의 크기는 같지만 반지름이 다른 두 부채꼴을 예로 들어 학생의 말이 틀렸음을 보이게 했다.",
+      "id": "b1575330-1db0-493c-b66d-4702558e5d53",
+      "model": "gpt-6.1-terra",
+      "model_answer": "중심각 $90^\\circ$는 원 전체의 중심각 $360^\\circ$의 $\\frac14$이므로, 각 호의 길이도 원 전체의 둘레의 $\\frac14$이다.\n\n반지름이 $4\\text{ cm}$인 원의 둘레는 $8\\pi\\text{ cm}$이므로 호의 길이는 $2\\pi\\text{ cm}$이다. 반지름이 $8\\text{ cm}$인 원의 둘레는 $16\\pi\\text{ cm}$이므로 호의 길이는 $4\\pi\\text{ cm}$이다.\n\n두 부채꼴은 중심각의 크기가 같지만 호의 길이는 다르므로 학생의 말은 틀렸다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "각 호의 길이가 원 전체의 둘레의 $\\frac14$인 이유를 중심각 $90^\\circ$와 $360^\\circ$를 비교하여 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "반지름이 각각 $4\\text{ cm}$, $8\\text{ cm}$인 원의 둘레를 각각 $8\\pi\\text{ cm}$, $16\\pi\\text{ cm}$로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M3"
+          ],
+          "required": false
+        },
+        {
+          "description": "두 호의 길이를 각각 $2\\pi\\text{ cm}$, $4\\pi\\text{ cm}$로 구하고, 이를 이용해 학생의 말이 틀렸음을 보인다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-06-M2",
+            "9수03-06-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:37:01.007214+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.657834+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-이유설명",
+      "body": "반지름이 $6\\text{ cm}$이고 중심각의 크기가 $120^\\circ$인 부채꼴이 있다. 이 부채꼴의 호의 길이를 구하시오. 원 전체와 비교하여 구하는 방법의 이유도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:35:58.512436+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "원의 중심각 $360^\\circ$에 대한 원주는 $12\\pi\\text{ cm}$이다. $120^\\circ$는 $360^\\circ$의 $\\frac{1}{3}$이므로 호의 길이도 원주의 $\\frac{1}{3}$이다. 원주를 구할 때 지름을 반지름 자리에 넣지 않도록 주의한다.",
+      "generated_at": "2026-11-11T08:35:56.426677+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7aaf2298-db9c-4335-9e20-bb32aaa76ffe",
+      "model": "gpt-6.1-terra",
+      "model_answer": "원의 원주는 $2\\pi\\times6=12\\pi\\text{ cm}$이다. $120^\\circ$는 $360^\\circ$의 $\\frac{1}{3}$이므로 호의 길이도 원주의 $\\frac{1}{3}$이다. 따라서 구하는 호의 길이는 $12\\pi\\times\\frac{1}{3}=4\\pi\\text{ cm}$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "반지름 $6\\text{ cm}$를 이용하여 원의 원주가 $12\\pi\\text{ cm}$임을 나타냈다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$120^\\circ$가 $360^\\circ$의 $\\frac{1}{3}$이므로 호의 길이도 원주의 $\\frac{1}{3}$이라고 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "호의 길이를 $4\\pi\\text{ cm}$로 구했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:35:56.426480+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.682324+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-이유설명",
+      "body": "지름이 $10\\text{ cm}$인 원 모양의 종이에서 중심각의 크기가 $72^\\circ$인 부채꼴을 잘라 냈다. 잘라 낸 부채꼴의 넓이를 구하시오. 원 전체와 비교하여 구하는 방법의 이유도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:36:13.822633+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "원의 반지름은 $5\\text{ cm}$이므로 원 전체의 넓이는 $25\\pi\\text{ cm}^2$이다. 부채꼴의 중심각 $72^\\circ$는 원 전체의 중심각 $360^\\circ$의 $\\frac{1}{5}$이다. 따라서 부채꼴의 넓이도 원 전체 넓이의 $\\frac{1}{5}$이므로 $5\\pi\\text{ cm}^2$이다.\n지름 $10\\text{ cm}$를 반지름으로 쓰면 원의 넓이를 잘못 구하게 된다. 또 원의 둘레를 이용하면 호의 길이를 구하게 되므로, 넓이를 구할 때는 원 전체의 넓이를 이용해야 한다.",
+      "generated_at": "2026-11-11T08:36:11.740795+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ed619f6d-90d4-4086-9c0e-baf285679113",
+      "model": "gpt-6.1-terra",
+      "model_answer": "원의 반지름은 $5\\text{ cm}$이므로 원 전체의 넓이는 $25\\pi\\text{ cm}^2$이다. $72^\\circ$는 $360^\\circ$의 $\\frac{1}{5}$이므로 부채꼴의 넓이도 원 전체 넓이의 $\\frac{1}{5}$이다. 따라서 부채꼴의 넓이는 $25\\pi\\times\\frac{1}{5}=5\\pi\\text{ cm}^2$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "반지름을 $5\\text{ cm}$로 보고 원 전체의 넓이를 $25\\pi\\text{ cm}^2$로 구했다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M2",
+            "9수03-06-M3"
+          ],
+          "required": false
+        },
+        {
+          "description": "중심각이 원 전체의 중심각의 $\\frac{1}{5}$이므로 부채꼴의 넓이도 원 전체 넓이의 $\\frac{1}{5}$이라고 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "부채꼴의 넓이를 $5\\pi\\text{ cm}^2$로 구했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M2",
+            "9수03-06-M3"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:36:11.740464+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

@@ -1,0 +1,1336 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-11T08:38:12.123348+00:00",
+          "issues": [
+            "면의 수를 세어 이름을 비교하는 일반적인 문제로, 정의의 조건을 하나하나 따져야 하는 경계 사례가 제시되지 않았다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:38:36.512066+00:00",
+          "issues": [
+            "육각뿔과 육각뿔대는 일반적인 사례로, 면의 수를 바로 확인하면 정답을 고를 수 있다. 정의의 조건을 하나하나 따져야 하는 경계 사례가 없어 definition-a를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T08:39:00.488561+00:00",
+          "issues": [
+            "세 도형 모두 면의 수를 세어 정의를 바로 확인하는 일반적인 사례이며, 정의의 조건을 따져야 하는 경계 사례가 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T08:39:00.665181+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": null,
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-11T09:38:24.952772+00:00",
+          "issues": [
+            "사각뿔을 밑면과 평행하게 자른 일반적인 각뿔대의 면을 세는 문제로, 정의의 조건을 하나하나 따져야 하는 경계 사례가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T09:38:55.110258+00:00",
+          "issues": [
+            "definition-a 미충족: 각뿔대와 각뿔 등의 면의 수를 세어 칠면체인지 확인하는 일반적인 문제이며, 정의의 조건을 하나하나 따져야 하는 경계 사례가 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T09:39:19.041335+00:00",
+          "issues": [
+            "잘린 면을 각각 센다는 조건과 두 입체의 종류가 명시되어 있어, 정의의 조건을 따져 판단해야 하는 경계 사례가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T09:39:19.236155+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": null,
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-11T08:39:23.967223+00:00",
+          "issues": [
+            "definition-a의 경계 사례가 아니다. 일반적인 육각뿔대의 면 수와 이름을 확인하는 문제로, 정의의 조건을 하나하나 따져 판단해야 하는 사례가 제시되지 않았다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:39:52.718237+00:00",
+          "issues": [
+            "고난도 조건 미충족: 각뿔대는 일반적인 사례이며, 경계 사례의 정의 조건을 따져야 하는 문제가 아니다. ①을 판단하는 데 B의 면을 살펴볼 필요도 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T08:40:16.489456+00:00",
+          "issues": [
+            "삼각뿔과 삼각뿔대의 면을 세는 일반적인 문제로, 정의의 조건을 하나하나 따져야 하는 경계 사례가 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T08:40:16.702271+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T09:40:14.920135+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T09:46:02.836549+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "body": "다음 입체도형 중 육면체인 것만 모두 고른 것은?\n\nㄱ. 밑면이 오각형인 각뿔\nㄴ. 밑면이 사각형인 각뿔을 꼭짓점과 밑면 사이에서 밑면과 평행한 평면으로 자를 때, 밑면을 포함하는 쪽의 입체도형\nㄷ. 밑면이 오각형인 각뿔대\nㄹ. 밑면이 육각형인 각뿔",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄱ, ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M2",
+          "no": 2,
+          "text": "ㄱ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄱ, ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄴ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄷ, ㄹ"
+        }
+      ],
+      "created_at": "2026-11-11T09:40:14.915865+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "육면체는 면이 $6$개인 다면체이다.\nㄱ은 밑면이 $1$개, 옆면이 $5$개이므로 육면체이다.\nㄴ은 밑면과 잘린 면이 각각 $1$개, 옆면이 $4$개이므로 육면체이다.\nㄷ은 밑면이 $2$개, 옆면이 $5$개이므로 면이 $7$개이다. ㄹ도 밑면이 $1$개, 옆면이 $6$개이므로 면이 $7$개이다.\n②를 골랐다면 각뿔대의 밑면을 $1$개로 잘못 세었을 수 있다.",
+      "generated_at": "2026-11-11T09:40:14.704031+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "잘린 입체도형 ㄴ에서 새로 생긴 면과 원래 밑면을 모두 세어야 한다. 또 밑면이 같은 각뿔과 각뿔대의 면의 수를 구별해야 한다.",
+      "id": "d641601c-64f1-4341-bee3-b9727b1c3c54",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T09:39:48.505910+00:00",
+          "issues": [
+            "고난이도 조건 definition-a를 충족하지 않는다. ㄱ은 일반적인 사각뿔대의 면 수를 확인하는 사례이며, 나머지도 각뿔과 각기둥의 면 수를 확인하면 판단할 수 있어 정의의 조건을 따져야 하는 경계 사례가 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T09:40:14.703713+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.571418+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "body": "오각뿔대를 면의 수에 따라 부른 이름으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "오면체"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M2",
+          "no": 2,
+          "text": "육면체"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "칠면체"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "팔면체"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "구면체"
+        }
+      ],
+      "created_at": "2026-11-11T08:37:14.348935+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "오각뿔대에는 밑면이 $2$개, 옆면이 $5$개 있습니다. 면이 모두 $7$개이므로 칠면체입니다. 육면체를 골랐다면 밑면을 하나만 세어 오각뿔과 면의 수가 같다고 생각했을 수 있습니다.",
+      "generated_at": "2026-11-11T08:37:14.192233+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "17b3641d-da10-4f19-a4e4-f651906eab31",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:37:14.192112+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.629952+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "body": "팔면체인 각뿔대가 있다. 이 각뿔대의 두 밑면의 모양과 옆면의 수를 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "오각형, $5$개"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "육각형, $6$개"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "육각형, $8$개"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M2",
+          "no": 4,
+          "text": "칠각형, $7$개"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "팔각형, $8$개"
+        }
+      ],
+      "created_at": "2026-11-11T08:37:52.122687+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "팔면체는 면이 모두 $8$개인 다면체이다. 각뿔대는 밑면이 $2$개이므로 옆면은 $6$개이다. 따라서 두 밑면은 육각형이다. ④는 각뿔대의 밑면을 $1$개로 잘못 센 경우이다.",
+      "generated_at": "2026-11-11T08:37:51.907389+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1a3fefd7-9375-4533-b730-af146a0d1a54",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:37:34.915781+00:00",
+          "issues": [
+            "육각뿔대를 알아보고 면의 수를 세지만, 면의 수에 따른 이름인 ‘팔면체’를 아는지는 측정하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:37:51.907053+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.687993+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-오개념판별",
+      "body": "서로 합동인 정사면체 두 개를 한 면씩 서로 완전히 맞대어 붙였다. 맞댄 면은 겉에 드러나지 않는다. 이렇게 만든 볼록 다면체를 $P$라고 하자.\n\n민지는 “$P$의 면은 모두 합동인 정삼각형이므로 $P$는 정다면체야.”라고 말했다. 민지의 말에 대한 판단과 그 까닭으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M1",
+          "no": 1,
+          "text": "옳다. 모든 면이 합동인 정다각형이면 각 꼭짓점에 모이는 면의 수와 관계없이 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. 각 꼭짓점에 모이는 면의 수와 모서리의 수가 같으면 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳다. 면이 $6$개인 다면체는 모두 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳지 않다. 정삼각형을 면으로 갖는 정다면체는 정사면체와 정팔면체뿐이기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. $P$에는 면이 $3$개 모이는 꼭짓점과 $4$개 모이는 꼭짓점이 있기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:44:05.547399+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$P$의 면은 모두 합동인 정삼각형이다. 하지만 맞댄 면에 있지 않은 꼭짓점에는 면이 $3$개씩 모이고, 맞댄 면에 있던 꼭짓점에는 면이 $4$개씩 모인다. 따라서 $P$는 정다면체가 아니다.\n\n①은 모든 면이 합동인 정다각형이기만 하면 정다면체라고 생각한 것이다. 정다면체는 각 꼭짓점에 모이는 면의 수도 같아야 한다.",
+      "generated_at": "2026-11-11T08:44:05.393818+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지가 모든 면의 모양만 보고 정다면체라고 판단한 말을 제시했다. 그 판단의 옳고 그름을 꼭짓점에 모이는 면의 수와 연결하여 판단하게 한다.",
+      "id": "9a720e81-3701-46d2-937f-32bd7bd86671",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:44:05.393580+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.724222+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-오개념판별",
+      "body": "두 볼록 다면체 $P$, $Q$에 대해 다음을 알고 있다.\n\n- $P$의 면은 서로 합동인 정삼각형 $10$개이다. $P$의 꼭짓점 중 $5$개에는 각각 면 $4$개가, 나머지 $2$개에는 각각 면 $5$개가 모인다.\n- $Q$의 면은 서로 합동인 정삼각형 $8$개이다. $Q$의 모든 꼭짓점에는 각각 면 $4$개가 모인다.\n\n지수는 “두 다면체는 모두 면이 서로 합동인 정삼각형이므로 둘 다 정다면체야.”라고 말했다. 지수의 말에 대한 판단과 그 까닭으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M1",
+          "no": 1,
+          "text": "지수의 말이 옳다. 모든 면이 서로 합동인 정다각형이면 각 꼭짓점에 모이는 면의 수가 달라도 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "지수의 말이 옳지 않다. 정다면체에는 면 $5$개가 모이는 꼭짓점이 있어야 하므로 $P$만 정다면체이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "지수의 말이 옳지 않다. $P$는 각 꼭짓점에 모이는 면의 수가 같지 않으므로 $Q$만 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "지수의 말이 옳지 않다. 정다면체의 각 꼭짓점에는 면이 $3$개씩 모여야 하므로 둘 다 정다면체가 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "지수의 말이 옳지 않다. 정다면체는 다섯 가지뿐이므로 면의 수가 $5$개여야 한다. 따라서 둘 다 정다면체가 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T08:44:30.397576+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정다면체는 모든 면이 서로 합동인 정다각형이고, 각 꼭짓점에 모이는 면의 수도 같아야 한다. $P$는 꼭짓점에 따라 모이는 면의 수가 $4$개 또는 $5$개이므로 정다면체가 아니다. $Q$는 모든 면이 서로 합동인 정삼각형이고 각 꼭짓점에 모이는 면의 수도 $4$개로 같으므로 정다면체이다. ①은 면의 모양과 크기만 살피고 각 꼭짓점에 모이는 면의 수를 살피지 않은 생각이다.",
+      "generated_at": "2026-11-11T08:44:30.239038+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 다면체의 면과 꼭짓점에 관한 정보를 비교하여 지수의 주장과 그 까닭이 옳은지 판단하게 했다.",
+      "id": "a77c0717-2bae-41f6-abd3-375fc31a99db",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:44:30.238771+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.76423+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-오개념판별",
+      "body": "볼록 다면체 $A$의 모든 면은 서로 합동인 정삼각형이다. $A$의 한 꼭짓점에는 $3$개의 면이, 다른 꼭짓점에는 $4$개의 면이 모인다. $A$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M1",
+          "no": 1,
+          "text": "모든 면이 서로 합동인 정삼각형이므로 정다면체이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "각 꼭짓점에 모이는 면의 수가 같지 않으므로 정다면체가 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "한 꼭짓점에 $3$개의 면이 모이는 곳은 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "한 꼭짓점에 $4$개의 면이 모이는 곳은 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "서로 합동이 아닌 면이 있다."
+        }
+      ],
+      "created_at": "2026-11-11T08:42:11.530605+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정다면체는 모든 면이 서로 합동인 정다각형이고, 각 꼭짓점에 모이는 면의 수도 같아야 한다. $A$는 각 꼭짓점에 모이는 면의 수가 같지 않으므로 정다면체가 아니다. ①은 모든 면이 서로 합동인 정삼각형이라는 것만으로 정다면체라고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T08:42:11.36022+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "24ac7c79-6779-4038-a98b-aec1cb9237be",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:42:11.360123+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.804874+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-오개념판별",
+      "body": "볼록 다면체에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M1",
+          "no": 1,
+          "text": "모든 면이 서로 합동인 정다각형이면 반드시 정다면체이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "모든 면이 서로 합동인 정다각형이고 각 꼭짓점에 모이는 면의 수도 같으면 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "각 꼭짓점에 모이는 면의 수만 같으면 반드시 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "정다면체의 모든 면은 정삼각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "정다면체는 모두 면의 수가 같다."
+        }
+      ],
+      "created_at": "2026-11-11T08:43:41.21318+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정다면체는 모든 면이 서로 합동인 정다각형이고, 각 꼭짓점에 모이는 면의 수도 같은 다면체이다. ①처럼 면의 모양만 확인해서는 정다면체인지 알 수 없다. ③은 각 꼭짓점에 모이는 면의 수만 확인했으므로 옳지 않다. 정육면체의 면은 정사각형이므로 ④는 옳지 않다. 정사면체와 정육면체의 면의 수는 다르므로 ⑤도 옳지 않다.",
+      "generated_at": "2026-11-11T08:43:41.027152+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "88a04baf-434f-4250-acec-5b35a0953508",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:42:42.902144+00:00",
+          "issues": [
+            "보기 ①: M1대로 생각하면 ①뿐 아니라 ⑤도 정다면체임을 알 수 있는 조건이다. 따라서 ⑤를 골라도 M1을 가지고 있을 수 있어 오개념을 판별하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:43:16.383636+00:00",
+          "issues": [
+            "M1에 따라 판단하면 ②와 ⑤가 모두 옳으므로, 학생이 ⑤를 골라도 M1을 갖고 있는지 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T08:43:41.026623+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.84302+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-이유설명",
+      "body": "정다면체는 모든 면이 서로 합동인 정다각형이고, 각 꼭짓점에 모이는 면의 수가 모두 같은 다면체이다. 한 꼭짓점에는 적어도 세 면이 모인다.\n\n정삼각형, 정사각형, 정오각형, 정육각형의 한 각의 크기는 차례로 $60^\\circ$, $90^\\circ$, $108^\\circ$, $120^\\circ$이다. 정다각형의 변의 수가 늘어나면 한 각의 크기도 커진다.\n\n정다면체가 다섯 가지뿐인 이유를 한 꼭짓점에 모이는 각의 크기의 합을 이용하여 설명하시오. 설명에는 다섯 가지 정다면체의 이름과 각각의 한 꼭짓점에 모이는 면의 수를 쓰고, 다른 정다각형이나 다른 수의 면으로는 만들 수 없는 이유도 포함하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:46:42.107751+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "한 꼭짓점에 모이는 각의 크기의 합이 $360^\\circ$이면 면이 평평하게 놓인다. 합이 $360^\\circ$보다 크면 면이 겹친다. 따라서 꼭짓점을 만들려면 이 합이 $360^\\circ$보다 작아야 한다.\n\n정삼각형은 한 꼭짓점에 $3$개, $4$개, $5$개가 모일 수 있다. $6$개가 모이면 각의 크기의 합이 $360^\\circ$가 된다. 정사각형은 $3$개가 모일 수 있고, $4$개가 모이면 합이 $360^\\circ$가 된다. 정오각형은 $3$개가 모일 수 있고, $4$개가 모이면 합이 $432^\\circ$가 된다. 정육각형은 $3$개만 모여도 합이 $360^\\circ$이다. 변이 더 많은 정다각형은 한 각이 더 크므로 만들 수 없다.\n\n이에 따라 만들 수 있는 정다면체는 정사면체, 정팔면체, 정이십면체, 정육면체, 정십이면체의 다섯 가지이다. 모든 면이 서로 합동인 정다각형이라는 것만으로는 정다면체라고 할 수 없다. 각 꼭짓점에 모이는 면의 수도 모두 같아야 한다.",
+      "generated_at": "2026-11-11T08:46:41.954397+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "다섯 가지를 찾는 데 그치지 않고, 다른 수의 면이나 변이 더 많은 모든 정다각형으로는 만들 수 없는 이유를 설명하도록 했다.",
+      "id": "55c56d59-6ba8-432e-800e-f1fe00687bd1",
+      "model": "gpt-6.1-terra",
+      "model_answer": "한 꼭짓점에 모이는 각의 크기의 합은 $360^\\circ$보다 작아야 한다. 합이 $360^\\circ$이면 면이 평평하게 놓이고, 이보다 크면 면이 겹쳐 꼭짓점을 만들 수 없기 때문이다.\n\n정삼각형은 $3$개, $4$개, $5$개가 모일 수 있다. 각각 정사면체, 정팔면체, 정이십면체이다. $6$개가 모이면 각의 크기의 합이 $360^\\circ$이므로 더 많이 모일 수도 없다.\n\n정사각형은 $3$개가 모인 정육면체만 가능하다. $4$개가 모이면 합이 $360^\\circ$이기 때문이다. 정오각형은 $3$개가 모인 정십이면체만 가능하다. $4$개가 모이면 합이 $432^\\circ$이기 때문이다.\n\n정육각형은 $3$개만 모여도 합이 $360^\\circ$이다. 변이 더 많은 정다각형은 한 각이 더 크므로 역시 만들 수 없다. 따라서 정다면체는 이 다섯 가지뿐이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "한 꼭짓점에 모이는 각의 크기의 합이 $360^\\circ$보다 작아야 하는 이유를 평평하게 놓이거나 면이 겹치는 상황과 연결하여 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정삼각형이 한 꼭짓점에 $3$개, $4$개, $5$개 모이는 경우와 정사면체, 정팔면체, 정이십면체를 각각 바르게 연결한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정사각형과 정오각형이 각각 $3$개 모이는 경우를 정육면체와 정십이면체에 바르게 연결한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정삼각형 $6$개, 정사각형 $4$개, 정오각형 $4$개가 모이는 경우의 각의 크기의 합을 이용하여 각각 그보다 많은 면도 모일 수 없음을 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정육각형의 각 $3$개의 합과 변이 더 많은 정다각형의 한 각의 크기를 이용하여 나머지 정다각형으로 정다면체를 만들 수 없음을 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:46:41.954117+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.880979+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-이유설명",
+      "body": "두 학생이 정다면체에 관해 다음과 같이 말하였다.\n\n가: “정육각형 세 개가 한 꼭짓점에 모이면 각의 크기의 합이 $360^\\circ$이므로, 정육각형을 면으로 하는 정다면체를 만들 수 있어.”\n나: “모든 면이 정삼각형인 다면체는 반드시 정다면체야.”\n\n두 학생의 말이 각각 왜 틀렸는지 설명하시오. 나의 말에 대해서는 구체적인 다면체를 만들어 설명하시오.\n\n또 정다면체가 다섯 가지뿐인 이유를 한 꼭짓점에 모이는 각의 크기의 합을 이용하여 설명하시오. 정다면체에서 가능한 면의 모양과 한 꼭짓점에 모이는 면의 수를 모두 쓰고, 그 밖에는 가능하지 않은 이유도 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:47:17.400516+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "한 꼭짓점에 모이는 각의 크기의 합이 $360^\\circ$이면 면이 평평하게 놓이므로 다면체의 꼭짓점을 만들 수 없다. 합이 $360^\\circ$보다 커도 면을 겹치지 않게 모을 수 없다. 따라서 가의 말은 틀렸다.\n\n나의 말도 틀렸다. 정사면체 두 개를 한 면끼리 맞붙이면 모든 면이 정삼각형인 다면체가 된다. 그러나 꼭짓점에 따라 모이는 면의 수가 $3$ 또는 $4$이므로 정다면체가 아니다. 모든 면이 서로 합동인 정다각형이라는 것만으로는 정다면체인지 알 수 없다.\n\n한 꼭짓점에는 적어도 세 면이 모인다. 각의 크기의 합을 살펴보면 가능한 면의 모양과 모이는 면의 수는 정삼각형에서 $3$, $4$, $5$, 정사각형에서 $3$, 정오각형에서 $3$뿐이다. 이들은 차례로 정사면체, 정팔면체, 정이십면체, 정육면체, 정십이면체에 해당한다. 정육각형 이상의 정다각형은 한 각이 $120^\\circ$ 이상이므로 세 면만 모여도 각의 크기의 합이 $360^\\circ$ 이상이다.",
+      "generated_at": "2026-11-11T08:47:17.261044+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "정다면체가 다섯 가지뿐인 이유를 설명하면서 정육각형 이상의 모든 정다각형과 가능한 면의 수를 빠짐없이 살펴보게 한다. 또한 나의 말이 틀렸음을 구체적인 다면체로 설명하게 하여 explanation-b도 포함한다.",
+      "id": "45a98968-3a73-4475-a888-e492a596674d",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가의 말은 틀렸다. 각의 크기의 합이 $360^\\circ$이면 세 면이 평평하게 놓여 다면체의 꼭짓점을 만들 수 없기 때문이다.\n\n나의 말도 틀렸다. 정사면체 두 개를 한 면끼리 맞붙여 다면체를 만든다. 모든 면이 정삼각형이지만, 꼭짓점에 따라 모이는 면의 수가 $3$ 또는 $4$이므로 정다면체가 아니다.\n\n정다면체의 한 꼭짓점에는 적어도 세 면이 모이고, 모이는 각의 크기의 합은 $360^\\circ$보다 작아야 한다. 정삼각형의 한 각은 $60^\\circ$이므로 모이는 면의 수는 $3$, $4$, $5$가 가능하다. 정사각형의 한 각은 $90^\\circ$이므로 $3$만 가능하다. 정오각형의 한 각은 $108^\\circ$이므로 $3$만 가능하다. 각각 더 많은 면이 모이면 각의 크기의 합이 $360^\\circ$ 이상이 된다.\n\n정육각형 이상의 정다각형은 한 각이 $120^\\circ$ 이상이므로 세 면만 모여도 각의 크기의 합이 $360^\\circ$ 이상이다. 따라서 그 밖의 면의 모양은 가능하지 않다. 위의 다섯 가지는 차례로 정사면체, 정팔면체, 정이십면체, 정육면체, 정십이면체에 해당하므로 정다면체는 다섯 가지뿐이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "각의 크기의 합이 $360^\\circ$이면 면이 평평하게 놓여 다면체의 꼭짓점이 되지 않는다고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "모든 면이 정삼각형이지만 꼭짓점에 따라 모이는 면의 수가 다른 다면체를 구체적으로 제시하고, 정다면체가 아닌 이유를 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-07-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "정삼각형에서 $3$, $4$, $5$개, 정사각형과 정오각형에서 각각 $3$개의 면이 한 꼭짓점에 모일 수 있음을 모두 쓰고, 더 많은 면은 모일 수 없는 이유를 각의 크기의 합으로 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정육각형 이상의 모든 정다각형에 대해 한 각이 $120^\\circ$ 이상임을 이용하여 정다면체의 면이 될 수 없는 이유를 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "찾은 다섯 가지 면의 모양과 모이는 면의 수에 해당하는 정다면체가 각각 있음을 보인다.",
+          "no": 5,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:47:17.260767+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.928608+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-이유설명",
+      "body": "정다면체의 면은 모두 합동인 정다각형이다. 정삼각형, 정사각형, 정오각형의 한 각의 크기는 각각 $60^\\circ$, $90^\\circ$, $108^\\circ$이다. 변의 수가 $6$ 이상인 정다각형의 한 각의 크기는 $120^\\circ$ 이상이다.\n\n정다면체의 면의 모양과 한 꼭짓점에 모이는 면의 수를 짝 지어 모두 쓰시오. 또 정다면체가 다섯 가지만 가능한 이유를 꼭짓점에 모이는 면의 수와 각의 크기의 합을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:44:57.819955+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정다면체에서는 모든 꼭짓점에 모이는 면의 수가 같다. 또 한 꼭짓점에 적어도 세 면이 모이고, 그 각의 크기의 합은 $360^\\circ$보다 작아야 한다. 합이 $360^\\circ$이면 면이 평평하게 놓이고, 그보다 크면 한 꼭짓점에 모일 수 없다.\n\n정삼각형은 한 꼭짓점에 $3$, $4$, $5$개가 모일 수 있다. 정사각형과 정오각형은 각각 $3$개만 모일 수 있다. 변의 수가 $6$ 이상인 정다각형은 세 개만 모여도 각의 크기의 합이 $360^\\circ$ 이상이다. 따라서 가능한 정다면체는 다섯 가지이다.\n\n모든 면이 합동인 정다각형이라는 것만으로는 정다면체라고 할 수 없다. 각 꼭짓점에 모이는 면의 수도 같아야 한다.",
+      "generated_at": "2026-11-11T08:44:57.650585+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "dac24992-5592-4e49-85c5-44d098891257",
+      "model": "gpt-6.1-terra",
+      "model_answer": "면의 모양과 한 꼭짓점에 모이는 면의 수는 정삼각형 $3$개, 정삼각형 $4$개, 정삼각형 $5$개, 정사각형 $3$개, 정오각형 $3$개이다.\n\n정다면체에서는 각 꼭짓점에 모이는 면의 수가 같다. 한 꼭짓점에는 적어도 세 면이 모여야 하고, 그 각의 크기의 합은 $360^\\circ$보다 작아야 한다. $360^\\circ$이면 면이 평평하게 놓이기 때문이다.\n\n정삼각형은 $6$개가 모이면 각의 크기의 합이 $360^\\circ$이므로 $3$, $4$, $5$개가 가능하다. 정사각형은 $4$개가 모이면 $360^\\circ$이므로 $3$개만 가능하다. 정오각형은 $3$개가 모이면 $324^\\circ$이고 $4$개가 모이면 $432^\\circ$이므로 $3$개만 가능하다. 변의 수가 $6$ 이상인 정다각형은 $3$개만 모여도 각의 크기의 합이 $360^\\circ$ 이상이다. 따라서 정다면체는 다섯 가지뿐이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "한 꼭짓점에 적어도 세 면이 모이고, 모이는 각의 크기의 합이 $360^\\circ$보다 작아야 함을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정삼각형이 한 꼭짓점에 $3$, $4$, $5$개 모이는 경우를 모두 쓰고, $6$개는 모일 수 없는 이유를 각의 크기의 합으로 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정사각형과 정오각형은 각각 $3$개만 모일 수 있음을 각의 크기의 합으로 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "변의 수가 $6$ 이상인 정다각형은 면이 될 수 없는 이유를 각의 크기의 합으로 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정다면체의 각 꼭짓점에 모이는 면의 수가 같다고 쓴다.",
+          "no": 5,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-07-M1"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:44:57.650431+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.955049+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-이유설명",
+      "body": "민수는 다음과 같이 말했습니다.\n\n“정육각형도 정다각형이므로, 정육각형을 면으로 하는 정다면체가 있다.”\n\n정다면체에는 정사면체, 정육면체, 정팔면체, 정십이면체, 정이십면체가 있습니다. 민수의 말이 옳지 않은 이유와 이 다섯 가지 말고는 정다면체가 없는 이유를 설명하시오. 한 꼭짓점에 모이는 면의 각의 크기의 합을 이용하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:46:04.132977+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정다면체의 한 꼭짓점에는 적어도 세 면이 모입니다. 이 면들이 입체를 이루려면 꼭짓점에 모이는 각의 크기의 합이 $360^\\circ$보다 작아야 합니다. $360^\\circ$이면 면들이 평평하게 펴져 입체를 이루지 못합니다.\n\n정육각형의 한 각은 $120^\\circ$입니다. 세 면만 모여도 각의 크기의 합이 $360^\\circ$이므로 민수의 말은 옳지 않습니다. 면이 정다각형이라고 해서 모두 정다면체의 면이 될 수 있는 것은 아닙니다.\n\n정삼각형은 한 꼭짓점에 $3$, $4$, $5$개가 모일 수 있고, 정사각형과 정오각형은 각각 $3$개가 모일 수 있습니다. 정육각형보다 변의 수가 많은 정다각형의 한 각은 $120^\\circ$보다 큽니다. 따라서 이 다섯 가지 말고는 정다면체가 없습니다.",
+      "generated_at": "2026-11-11T08:46:03.968861+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b715717c-2ba0-4aec-836f-c224a322d381",
+      "model": "gpt-6.1-terra",
+      "model_answer": "한 꼭짓점에는 적어도 세 면이 모입니다. 입체를 이루려면 이 각의 크기의 합이 $360^\\circ$보다 작아야 합니다. $360^\\circ$이면 면들이 평평하게 펴집니다.\n\n정육각형의 한 각은 $120^\\circ$이므로 세 면이 모이면 각의 크기의 합이 $360^\\circ$입니다. 따라서 민수의 말은 옳지 않습니다.\n\n정삼각형의 한 각은 $60^\\circ$이므로 한 꼭짓점에 $3$, $4$, $5$개가 모일 수 있습니다. 정사각형의 한 각은 $90^\\circ$이고 정오각형의 한 각은 $108^\\circ$이므로 각각 $3$개가 모일 수 있습니다. 정육각형보다 변의 수가 많은 정다각형의 한 각은 $120^\\circ$보다 커서 세 면이 모일 수 없습니다. 따라서 가능한 정다면체는 주어진 다섯 가지뿐입니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "한 꼭짓점에 적어도 세 면이 모이며, 입체를 이루려면 모이는 각의 크기의 합이 $360^\\circ$보다 작아야 함을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정육각형의 한 각이 $120^\\circ$이고 세 면의 각의 크기의 합이 $360^\\circ$임을 이용하여 민수의 말이 옳지 않음을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "한 꼭짓점에 모일 수 있는 면의 수가 정삼각형은 $3$, $4$, $5$개이고, 정사각형과 정오각형은 각각 $3$개임을 각의 크기를 이용하여 설명한다.",
+          "no": 3,
+          "points": 3.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "정육각형보다 변의 수가 많은 정다각형은 한 각이 $120^\\circ$보다 커서 정다면체의 면이 될 수 없음을 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:45:30.966761+00:00",
+          "issues": [
+            "문제에서 ‘다른 정다면체를 만들 수 없는 이유’라고 하여 다섯 가지 외에는 없다는 결론과 민수의 말이 옳지 않다는 판단을 미리 드러낸다. 이는 답을 미리 드러내지 않도록 한 측정 의도에 어긋난다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:46:03.968682+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:08.995599+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-정의이해",
+      "body": "다음은 볼록 다면체 $A$, $B$, $C$, $D$의 면과 꼭짓점에 대한 설명이다.\n\n- $A$: 모든 면은 합동인 정삼각형이다. 면 $3$개가 모이는 꼭짓점도 있고, 면 $4$개가 모이는 꼭짓점도 있다.\n- $B$: 모든 면은 직사각형이고, 정사각형이 아닌 면이 있다. 모든 꼭짓점에 면 $3$개가 모인다.\n- $C$: 모든 면은 합동인 정삼각형이고, 모든 꼭짓점에 면 $5$개가 모인다.\n- $D$: 모든 면은 합동인 정오각형이고, 모든 꼭짓점에 면 $3$개가 모인다.\n\n이 중 정다면체인 것을 모두 고른 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M1",
+          "no": 1,
+          "text": "$A$, $C$, $D$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$B$, $C$, $D$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$C$, $D$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$A$, $C$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$C$"
+        }
+      ],
+      "created_at": "2026-11-11T08:41:25.111654+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정다면체는 모든 면이 합동인 정다각형이고, 모든 꼭짓점에 모이는 면의 수가 같은 다면체이다. $C$와 $D$는 이 두 가지를 모두 만족한다. $A$는 모든 면이 합동인 정삼각형이지만, 꼭짓점에 모이는 면의 수가 서로 다르다. $B$에는 정사각형이 아닌 직사각형인 면이 있으므로 모든 면이 정다각형이 아니다. ①을 골랐다면 모든 면이 합동인 정다각형이기만 하면 정다면체라고 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T08:41:24.958366+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$A$는 모든 면이 합동인 정다각형이지만 꼭짓점에 모이는 면의 수가 다른 경계 사례이다. $B$도 함께 살펴보며 정다면체가 되기 위해 필요한 두 가지를 각각 따져야 한다.",
+      "id": "4aed38a2-4a74-4dc9-a4fb-87755a67d3ec",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:41:24.958293+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:09.030701+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-정의이해",
+      "body": "크기가 같은 정사면체 두 개를 면 하나끼리 맞붙였다. 맞붙인 면은 겉에 드러나지 않고, 나머지 면은 모두 겉에 드러난다. 이렇게 만든 볼록 다면체에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M1",
+          "no": 1,
+          "text": "모든 면이 합동인 정삼각형이므로 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "정삼각형이 아닌 면이 있으므로 정다면체가 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "모든 꼭짓점에 면 $3$개씩 모이므로 정다면체이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "모든 면은 합동인 정삼각형이지만, 꼭짓점에 모이는 면의 수가 서로 다르므로 정다면체가 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "면이 $6$개이므로 정다면체가 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T08:41:51.94734+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "겉에 드러난 면은 모두 합동인 정삼각형이다. 하지만 맞붙인 면의 세 꼭짓점에는 각각 면 $4$개가 모이고, 나머지 두 꼭짓점에는 각각 면 $3$개가 모인다. 따라서 이 다면체는 정다면체가 아니다. ①은 모든 면이 합동인 정다각형이기만 하면 정다면체라고 잘못 생각한 것이다. 정다면체는 각 꼭짓점에 모이는 면의 수도 모두 같아야 한다.",
+      "generated_at": "2026-11-11T08:41:51.773931+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "모든 면이 합동인 정삼각형이지만 꼭짓점에 모이는 면의 수가 서로 다른 다면체를 제시했다. 정다면체인지 판단하려면 면과 꼭짓점을 모두 살펴야 한다.",
+      "id": "71e02918-98a3-4b6b-a96c-cc974f5cc758",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:41:51.773770+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:09.067973+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-정의이해",
+      "body": "정다면체를 바르게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M1",
+          "no": 1,
+          "text": "모든 면이 서로 합동인 정다각형이면 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "각 꼭짓점에 모이는 면의 수만 같으면 정다면체이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "모든 면이 서로 합동인 정다각형이고, 각 꼭짓점에 모이는 면의 수가 같으면 정다면체이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "정다면체의 면은 모두 정삼각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "정다면체는 세 가지이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:40:39.683673+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정다면체는 모든 면이 서로 합동인 정다각형이고, 각 꼭짓점에 모이는 면의 수도 같다. 따라서 정답은 ③이다. ①처럼 면만 살피면 각 꼭짓점에 모이는 면의 수가 같아야 한다는 점을 놓치게 된다. ②는 면의 모양을 살피지 않았다. ④와 달리 정육면체의 면은 정사각형이다. ⑤와 달리 정다면체는 다섯 가지이다.",
+      "generated_at": "2026-11-11T08:40:38.964897+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ee840807-6b8f-44e3-b21e-929c03526bfb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:40:38.964701+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:09.10042+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C2-정의이해",
+      "body": "다음 다면체 중 정다면체는 어느 것인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M1",
+          "no": 1,
+          "text": "면이 6개이고, 모든 면이 합동인 정삼각형이다. 어떤 꼭짓점에는 면 3개가, 다른 꼭짓점에는 면 4개가 모인다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "면이 8개이고, 모든 면이 합동인 정삼각형이다. 각 꼭짓점에는 면 4개가 모인다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 밑면이 정삼각형이고, 옆면이 모두 정사각형인 삼각기둥이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "밑면이 정사각형이고, 옆면이 모두 정삼각형인 사각뿔이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가로, 세로, 높이가 모두 다른 직육면체이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:41:02.484078+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "②는 모든 면이 합동인 정삼각형이고, 각 꼭짓점에 모이는 면의 수도 4로 같다. ①은 모든 면이 합동인 정삼각형이지만, 각 꼭짓점에 모이는 면의 수가 같지 않다. 따라서 ①을 고른 학생은 각 꼭짓점에 모이는 면의 수도 같아야 한다는 것을 놓쳤을 수 있다. ③, ④, ⑤는 모든 면이 합동인 정다각형이 아니다.",
+      "generated_at": "2026-11-11T08:41:02.314409+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "92977cac-cede-4a31-b499-10042d8af752",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:41:02.314030+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:09.155577+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C3-성질적용",
+      "body": "두 입체도형 A와 B는 각각 원기둥, 원뿔, 원뿔대, 구 중 하나이다. A와 B를 각각 회전축을 포함하는 평면으로 잘랐다. A의 단면은 삼각형이고, B의 단면은 서로 평행한 두 변의 길이가 다른 사각형이다.\n\n이번에는 A와 B를 각각 회전축에 수직인 평면으로 자른다. 이 평면은 각 입체도형의 내부를 지난다. A와 B의 이름과 이번에 자른 단면의 모양을 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "A: 원뿔, B: 원뿔대 / 단면: A와 B 모두 원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "A: 원뿔대, B: 원뿔 / 단면: A와 B 모두 원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "A: 원뿔, B: 원기둥 / 단면: A와 B 모두 원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "A: 구, B: 원뿔대 / 단면: A와 B 모두 원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M3",
+          "no": 5,
+          "text": "A: 원뿔, B: 원뿔대 / 단면: A는 삼각형, B는 사각형"
+        }
+      ],
+      "created_at": "2026-11-11T08:48:37.059882+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "회전축을 포함하는 단면이 삼각형인 것은 원뿔이다. 원기둥의 단면은 서로 평행한 두 변의 길이가 같은 직사각형이다. 서로 평행한 두 변의 길이가 다른 사각형이 나오는 것은 원뿔대이다. 따라서 A는 원뿔, B는 원뿔대이다. 둘 다 회전축에 수직인 평면으로 자르면 단면이 원이다.\n\n⑤는 자르는 방향이 달라져도 단면의 모양이 같다고 생각한 것이다.",
+      "generated_at": "2026-11-11T08:48:36.897538+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "회전축을 포함하는 단면의 모양을 보고 두 입체도형을 거꾸로 찾은 뒤, 다른 방향으로 자른 단면의 모양을 판단하게 했다.",
+      "id": "0f7924ba-7a78-4b52-ae4d-067d203ff57f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:48:15.963294+00:00",
+          "issues": [
+            "단면의 모양을 각 회전체의 단면 성질과 바로 대조하면 답을 찾을 수 있어, 일반적인 성질 확인 문제와 구별되는 고난이도 조건을 충족하지 않는다.",
+            "보기 ①: M3대로 생각하면 각 회전체에서 방향에 따라 원과 직사각형 또는 원과 삼각형이 나온다는 조건 자체가 모순되므로, 구·구가 도출되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:48:36.897229+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:09.188201+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C3-성질적용",
+      "body": "두 변의 길이가 각각 $2\\text{ cm}$, $4\\text{ cm}$인 직사각형이 있다. 이 직사각형의 한 변을 회전축으로 하여 한 바퀴 돌려 회전체를 만들었다.\n\n이 회전체를 회전축을 포함하는 평면으로 잘랐더니 단면이 정사각형이었다. 회전축으로 삼은 변의 길이와, 이 회전체의 내부를 회전축에 수직인 평면으로 자른 단면의 모양을 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2\\text{ cm}$, 원"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\text{ cm}$, 원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2\\text{ cm}$, 정사각형"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M3",
+          "no": 4,
+          "text": "$4\\text{ cm}$, 정사각형"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4\\text{ cm}$, 삼각형"
+        }
+      ],
+      "created_at": "2026-11-11T08:48:54.296226+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$4\\text{ cm}$인 변을 회전축으로 하면 회전체의 높이는 $4\\text{ cm}$이고, 밑면의 지름도 $4\\text{ cm}$이다. 따라서 회전축을 포함하는 단면은 정사각형이다. $2\\text{ cm}$인 변을 회전축으로 하면 이 단면은 가로와 세로의 길이가 각각 $8\\text{ cm}$와 $2\\text{ cm}$인 직사각형이다.\n\n이 회전체는 원기둥이므로 회전축에 수직인 단면은 원이다. ④처럼 정사각형이라고 생각했다면, 자르는 방향이 달라져도 단면의 모양이 같다고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T08:48:54.146268+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "회전축을 포함하는 단면이 정사각형이라는 결과를 주고, 회전축으로 삼은 변을 거꾸로 찾게 했다.",
+      "id": "55402ee3-c5ee-43e8-8f39-dbac3455c346",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:48:54.145920+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:40:09.223262+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C3-성질적용",
+      "body": "원뿔을 다음 두 평면으로 각각 자른다.\n\n가: 회전축을 포함하는 평면\n나: 밑면과 꼭짓점 사이에서 회전축에 수직인 평면\n\n가, 나로 자른 단면의 모양을 차례로 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "원, 삼각형"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M3",
+          "no": 2,
+          "text": "삼각형, 삼각형"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "삼각형, 원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M3",
+          "no": 4,
+          "text": "원, 원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "직사각형, 원"
+        }
+      ],
+      "created_at": "2026-11-11T08:47:30.508634+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "회전축을 포함하는 평면으로 원뿔을 자르면 단면은 삼각형이다. 밑면과 꼭짓점 사이에서 회전축에 수직인 평면으로 자르면 단면은 원이다. 따라서 정답은 ③이다.\n\n②와 ④는 자르는 방향이 달라도 단면의 모양이 같다고 생각한 것이다.",
+      "generated_at": "2026-11-11T08:47:30.343494+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "71456178-3638-430c-85ba-d4f10d0c46d1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:47:30.343292+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T09:40:09.278358+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C3-성질적용",
+      "body": "밑면의 반지름이 $2\\text{ cm}$이고 높이가 $6\\text{ cm}$인 원기둥이 있다. 이 원기둥을 두 평면으로 각각 자른다. 한 평면은 회전축을 포함하고, 다른 평면은 두 밑면 사이에서 회전축에 수직이다.\n\n잘린 단면에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M3",
+          "no": 1,
+          "text": "회전축을 포함하는 평면으로 자른 단면은 반지름이 $2\\text{ cm}$인 원이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "회전축을 포함하는 평면으로 자른 단면은 가로가 $4\\text{ cm}$, 세로가 $6\\text{ cm}$인 직사각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-07-M3",
+          "no": 3,
+          "text": "회전축에 수직인 평면으로 자른 단면은 가로가 $4\\text{ cm}$, 세로가 $6\\text{ cm}$인 직사각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "회전축에 수직인 평면으로 자른 단면은 지름이 $6\\text{ cm}$인 원이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "회전축을 포함하는 평면으로 자른 단면은 한 변의 길이가 $4\\text{ cm}$인 정사각형이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:47:44.795835+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "회전축을 포함하는 평면으로 자른 단면은 가로가 밑면의 지름인 $4\\text{ cm}$, 세로가 원기둥의 높이인 $6\\text{ cm}$인 직사각형이다. 회전축에 수직인 평면으로 자른 단면은 반지름이 $2\\text{ cm}$인 원이다.\n\n①이나 ③을 골랐다면 자르는 방향이 달라도 단면의 모양이 같다고 생각했을 수 있다.",
+      "generated_at": "2026-11-11T08:47:44.654327+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "24e0a54f-498a-4f31-831a-f5648af425eb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:47:44.654271+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}
