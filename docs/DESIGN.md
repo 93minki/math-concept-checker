@@ -61,7 +61,7 @@
 | 백엔드 테스트 | pytest + TestClient | FastAPI 공식 테스트 방식, `dependency_overrides`로 외부 의존성 교체 ([Testing](https://fastapi.tiangolo.com/tutorial/testing/), [Dependency overrides](https://fastapi.tiangolo.com/advanced/testing-dependencies/)) |
 | 프론트 패키지 관리 | pnpm | 사용자 결정 (2026-11-09). pnpm 11부터 공개 1일 미만 버전을 기본으로 설치하지 않음(하위 의존성 포함) ([pnpm 공급망 보안](https://pnpm.io/supply-chain-security)). Next.js 공식 Docker 예제가 pnpm 지원 ([with-docker](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile)). Yarn 2+(Berry)는 기본 PnP 방식과 Next.js standalone 배포 호환 문제 보고가 있어 제외 ([Next.js #33567](https://github.com/vercel/next.js/discussions/33567)) |
 | 프론트 타입 체크 | `next typegen && tsc --noEmit` | Next.js 공식 안내 ([Next.js TypeScript](https://nextjs.org/docs/app/api-reference/config/typescript)) |
-| 프론트 포맷 | Prettier + eslint-config-prettier | 사용자 결정 (2026-11-11, `docs/PLAN.md` 결정 6). Prettier 문서가 포맷은 Prettier, 버그 찾기는 린터에 맡기라고 안내 ([Prettier vs. Linters](https://prettier.io/docs/comparison)). ESLint 포맷 규칙과 겹치지 않게 `eslint-config-prettier` ([Integrating with Linters](https://prettier.io/docs/integrating-with-linters)). 계기: 진단 화면 코드가 한 줄에 여러 문장을 몰아 쓴 형태였고 프론트엔드에 포맷 검사가 없었다 |
+| 프론트 포맷 | Prettier + eslint-config-prettier | 사용자 결정 (2026-11-11, `docs/plans/2026-11-11_history.md` 결정 6). Prettier 문서가 포맷은 Prettier, 버그 찾기는 린터에 맡기라고 안내 ([Prettier vs. Linters](https://prettier.io/docs/comparison)). ESLint 포맷 규칙과 겹치지 않게 `eslint-config-prettier` ([Integrating with Linters](https://prettier.io/docs/integrating-with-linters)). 계기: 진단 화면 코드가 한 줄에 여러 문장을 몰아 쓴 형태였고 프론트엔드에 포맷 검사가 없었다 |
 | 프론트 린트 | ESLint + eslint-config-next | `next lint`는 Next.js 16에서 삭제 ([Upgrading to 16](https://nextjs.org/docs/app/guides/upgrading/version-16)) |
 | 프론트 단위 테스트 | Vitest | 사용자 결정. Vitest·Jest 모두 Next.js 공식 가이드가 있고 우열 근거는 찾지 못함 ([Next.js Testing](https://nextjs.org/docs/pages/guides/testing)) |
 | E2E·화면 크기 | Playwright | Next.js 테스트 가이드 포함, 기기·화면 크기 흉내 지원 ([Playwright Emulation](https://playwright.dev/docs/emulation)) |
@@ -563,7 +563,7 @@
 
 ## 지난 기록 (F-10. 사용자 결정 2026-11-11, 에이전트 추천 채택)
 
-- 결정 근거와 다른 안은 `docs/PLAN.md` (끝나면 `docs/plans/2026-11-11_history.md`) "결정 사항" 1~5.
+- 결정 근거와 다른 안은 `docs/plans/2026-11-11_history.md` "결정 사항" 1~5.
 
 ### API: `GET /diagnoses?limit=&before=` (로그인 필요)
 - 브라우저가 Supabase를 직접 읽지 않고 백엔드를 거친다 (다른 진단 화면과 같음). 다른 진단 API처럼 먼저 그 사용자의 만료된 진단을 중단으로 바꾼다. 가입 미완료는 403.
