@@ -58,8 +58,8 @@ class RichRepo(FakeDiagnoses):
             )
         ]
 
-    def questions(self) -> list[Question]:
-        normal = super().questions()[0]
+    def _all_questions(self) -> list[Question]:
+        normal = super()._all_questions()[0]
         normal.explanation = "풀이 설명"
         normal.model_answer = "양변에 같은 수를 더해요"
         if not self.has_hard:

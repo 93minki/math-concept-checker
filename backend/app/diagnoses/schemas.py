@@ -35,18 +35,21 @@ class Assessment(BaseModel):
     question_type: QuestionType
 
 
-class Question(BaseModel):
+class QuestionSlot(BaseModel):
     id: UUID
     assessment_item_id: str
     variant: int
     question_type: QuestionType
+    difficulty: str
+    status: str
+
+
+class Question(QuestionSlot):
     body: str
     explanation: str = ""
     model_answer: str | None = None
     hard_condition: str | None = None
     hard_condition_reason: str | None = None
-    difficulty: str
-    status: str
 
 
 class Diagnosis(BaseModel):

@@ -43,7 +43,8 @@ def grade_items(
     items: list[Item],
     answers: dict[int, AnswerRow],
 ) -> list[GradingRow]:
-    questions = {q.id: q for q in repo.questions()}
+    question_ids = [item.question_id for item in items]
+    questions = {q.id: q for q in repo.questions_by_ids(question_ids)}
     assessments = {a.id: a for a in repo.assessments()}
     misconceptions = repo.misconceptions()
     result: list[GradingRow] = []
@@ -137,7 +138,7 @@ def pick_hard(
 ) -> list[UUID]:
     passed = {g.diagnosis_item_id for g in gradings if g.passed}
     history = repo.history(user_id)
-    questions = repo.questions()
+    questions = repo.question_slots()
     rng = random.Random()
     chosen: list[UUID] = []
     for item in sorted(items, key=lambda i: i.position):
