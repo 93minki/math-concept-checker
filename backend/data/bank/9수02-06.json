@@ -1,0 +1,1052 @@
+{
+  "backlog": [],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T08:44:24.388348+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C1-성질적용",
+      "body": "민지는 출발한 곳에서 한 방향으로 곧게 난 길을 따라 걸었다. 처음 $2$분 동안 오르막길을 걷고, $1$분 동안 쉬었다. 그다음 $2$분 동안 내리막길을 같은 방향으로 걸었다. 걸을 때의 빠르기는 내내 분당 $30$m로 같았다.\n\n가로 방향은 출발한 때부터 흐른 시간(분), 세로 방향은 출발한 곳에서 길을 따라 잰 거리(m)를 나타낸다. 이 상황을 나타내는 그래프로 알맞은 것은? 각 보기에서 이웃한 두 점은 곧은 선으로 잇는다.",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$(0, 0)$, $(2, 60)$, $(3, 60)$, $(5, 120)$을 차례로 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M1",
+          "no": 2,
+          "text": "$(0, 0)$, $(2, 60)$, $(3, 60)$, $(5, 0)$을 차례로 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(0, 0)$, $(2, 60)$, $(3, 90)$, $(5, 150)$을 차례로 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(0, 0)$, $(2, 60)$, $(3, 60)$, $(5, 90)$을 차례로 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(0, 0)$, $(2, 0)$, $(3, 30)$, $(5, 90)$을 차례로 지난다."
+        }
+      ],
+      "created_at": "2026-11-11T08:28:31.003279+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "처음 $2$분 동안 $60$m를 걷고, 쉬는 동안 거리는 $60$m로 그대로이다. 그다음에도 같은 방향으로 $2$분 동안 걸으므로 거리는 $60$m 더 늘어 $120$m가 된다. 따라서 정답은 ①이다.\n\n②는 내리막길을 걸으면 그래프도 내려간다고 생각한 보기이다. 그래프는 길의 모양이 아니라 출발한 곳에서 길을 따라 잰 거리를 나타낸다.",
+      "generated_at": "2026-11-11T08:28:28.919033+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "걷고 쉬는 상황을 시간에 따른 거리로 바꾸어 각 시각의 거리를 구한 뒤 그래프를 고르게 한다. 내리막길에서도 출발한 곳으로부터의 거리는 늘어난다는 점을 적용해야 한다.",
+      "id": "e25e8359-2998-4de4-9171-796bd3b63793",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:28:03.732118+00:00",
+          "issues": [
+            "집에서 멀어지는 쪽으로 4 m를 걸었다는 것만으로 집에서부터의 거리가 4 m 증가한다고 할 수 없다. 일정한 빠르기로 걸어도 거리 그래프가 직선이라는 보장이 없으므로 ③을 정답으로 확정할 수 없다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:28:28.918684+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.433469+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C1-성질적용",
+      "body": "엘리베이터가 처음 위치에서 위로 $6$m 올라간 다음, 아래로 $4$m 내려갔다. 올라가는 데 $2$초, 내려가는 데 $4$초가 걸렸다. 올라갈 때와 내려갈 때 각각 같은 빠르기로 움직였다.\n\n가로 방향은 처음 움직이기 시작한 때부터 흐른 시간(초), 세로 방향은 그때까지 엘리베이터가 움직인 거리의 합(m)을 나타낸다. 이 상황을 나타내는 그래프로 알맞은 것은? 각 보기에서 이웃한 두 점은 곧은 선으로 잇는다.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M1",
+          "no": 1,
+          "text": "$(0,0)$, $(2,6)$, $(6,2)$를 차례로 지나는 그래프"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$(0,0)$, $(2,6)$, $(6,10)$을 차례로 지나는 그래프"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(0,0)$, $(2,6)$, $(6,6)$을 차례로 지나는 그래프"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(0,0)$, $(2,4)$, $(6,10)$을 차례로 지나는 그래프"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(0,0)$, $(4,6)$, $(6,10)$을 차례로 지나는 그래프"
+        }
+      ],
+      "created_at": "2026-11-11T08:29:41.751957+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "올라간 거리는 $6$m이고 내려간 거리는 $4$m이므로 움직인 거리의 합은 $6+4=10$m이다. 내려간 때까지 걸린 시간은 $2+4=6$초이다. 따라서 그래프는 $(0,0)$, $(2,6)$, $(6,10)$을 차례로 지난다.\n\n①은 내려갈 때 그래프도 내려간다고 생각한 경우이다. 하지만 세로 방향은 엘리베이터의 높이가 아니라 움직인 거리의 합을 나타낸다.",
+      "generated_at": "2026-11-11T08:29:39.665102+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "올라간 거리와 내려간 거리를 더해 $6+4=10$으로 나타내고, 걸린 시간도 더한 뒤 그래프의 점을 찾아야 한다.",
+      "id": "a0769819-4b39-44bc-820e-8d70a2964d58",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:29:14.172173+00:00",
+          "issues": [
+            "보기 ②: M1대로 비행 경로를 그림처럼 나타내면 위로 수직, 오른쪽으로 수평, 아래로 수직인 선이어야 한다. ②는 오르내리는 부분이 비스듬한 시간-높이 그래프이므로 M1에서 나오는 보기가 아니다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:29:39.664860+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.461927+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C1-성질적용",
+      "body": "민지는 출발한 곳에서 멀어지는 방향으로 길을 따라 걷는다. 처음 $5$분은 오르막길을 걷고, 다음 $5$분은 내리막길을 걷는다. 걷는 빠르기는 $10$분 동안 일정하다.\n가로에는 출발한 후의 시간, 세로에는 걸어온 거리를 나타내려고 한다. 그래프의 모양으로 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M1",
+          "no": 1,
+          "text": "처음 $5$분은 오른쪽 위로 올라가는 직선이고, 다음 $5$분은 오른쪽 아래로 내려가는 직선이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "처음 $5$분은 오른쪽 위로 올라가는 직선이고, 다음 $5$분은 가로로 뻗은 직선이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10$분 동안 오른쪽 위로 올라가는 직선이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "처음 $5$분은 가로로 뻗은 직선이고, 다음 $5$분은 오른쪽 위로 올라가는 직선이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$10$분 동안 가로로 뻗은 직선이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:27:04.446336+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "민지는 같은 빠르기로 계속 걸으므로 걸어온 거리는 일정하게 늘어난다. 따라서 그래프는 처음부터 끝까지 오른쪽 위로 올라가는 직선이다.\n①처럼 길의 오르막과 내리막 모양을 그대로 그래프로 나타내면 안 된다. 내리막길에서도 계속 걸었으므로 걸어온 거리는 늘어난다.",
+      "generated_at": "2026-11-11T08:27:02.350925+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3718c6bb-8da1-412a-8631-1023654c3994",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:27:02.350469+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.488551+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C1-성질적용",
+      "body": "관람차의 한 칸이 바닥에서 가장 가까운 곳에서 출발한다. 관람차는 일정한 빠르기로 $4$분 동안 한 바퀴를 돈다.\n\n가로에는 출발한 후의 시간, 세로에는 그 칸의 바닥으로부터의 높이를 나타내려고 한다. 출발한 때부터 $4$분까지의 그래프 모양으로 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "처음 $2$분 동안 내려가고, 다음 $2$분 동안 올라간다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "처음 $2$분 동안 올라가고, 다음 $2$분 동안 가로로 나아간다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "처음 $2$분 동안 올라가고, 다음 $2$분 동안 내려가 처음 높이로 돌아온다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "처음 $2$분 동안 가로로 나아가고, 다음 $2$분 동안 올라간다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M1",
+          "no": 5,
+          "text": "동그라미 모양이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:27:24.942793+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "관람차의 칸은 가장 낮은 곳에서 출발하여 $2$분 동안 높아진다. 그 후 $2$분 동안 낮아져 처음 높이로 돌아온다. 따라서 정답은 ③이다.\n\n⑤는 관람차의 칸이 움직인 모습을 그대로 그린 것이다. 시간에 따라 높이가 어떻게 변하는지를 나타낸 그래프가 아니다.",
+      "generated_at": "2026-11-11T08:27:22.855093+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "bc873429-88f8-435d-a60c-ba038915f51d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:27:22.854659+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.523957+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-성질적용",
+      "body": "어떤 물통에 들어 있는 물의 양을 시간에 따라 나타낸 그래프가 있습니다. 가로 방향은 시간(분), 세로 방향은 물의 양(L)을 나타냅니다.\n\n그래프는 다섯 점 $(0, 0)$, $(2, 4)$, $(4, 4)$, $(6, 0)$, $(8, \\square)$를 차례로 곧게 이은 선입니다.\n\n$7$분일 때 물의 양은 $3$분일 때 물의 양과 같았습니다. $\\square$에 알맞은 수는 무엇인가요?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M3",
+          "no": 1,
+          "text": "$0$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$8$"
+        }
+      ],
+      "created_at": "2026-11-11T08:30:33.996495+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$3$분일 때 물의 양은 $4$L입니다. 따라서 $7$분일 때 물의 양도 $4$L입니다. $6$분부터 $8$분까지 그래프가 곧은 선이므로, 그 한가운데인 $7$분의 물의 양은 $6$분과 $8$분의 물의 양의 가운데 값입니다. $6$분일 때 물의 양이 $0$L이므로 $8$분일 때는 $8$L입니다.\n\n그래프가 평평한 부분에서 물의 양이 $0$이라고 잘못 생각하면 ①을 고를 수 있습니다. 이 부분은 물의 양이 $0$이라는 뜻이 아니라 $4$L로 변하지 않는다는 뜻입니다.",
+      "generated_at": "2026-11-11T08:30:31.924735+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$7$분과 $3$분일 때 물의 양이 같다는 결과를 이용하여 그래프의 빈 값을 거꾸로 구하게 한다.",
+      "id": "71c8a59b-d16a-497e-b68f-0bd90c41ab0c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:30:31.924534+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T10:42:57.050173+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-성질적용",
+      "body": "민지가 집에서 떨어진 거리를 시간에 따라 나타낸 그래프가 있습니다. 가로 방향은 시각(분), 세로 방향은 집에서 떨어진 거리(m)를 나타냅니다.\n\n그래프는 $(1, 90)$, $(3, 0)$, $(5, 0)$, $(9, 150)$, $(12, 150)$, $(15, 60)$을 차례로 곧게 이은 선입니다.\n\n민지가 집에 있고, 그 직후에는 집에서 떨어진 거리가 변하지 않기 시작한 시각은 언제인가요?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$1$분"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M3",
+          "no": 4,
+          "text": "$9$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$분"
+        }
+      ],
+      "created_at": "2026-11-11T10:39:36.918593+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$3$분일 때 집에서 떨어진 거리는 $0$m이고, 그 직후부터 $5$분까지 거리가 변하지 않습니다. 따라서 정답은 ②입니다.\n\n$5$분에도 민지는 집에 있지만, 그 직후에는 집에서 멀어집니다. ④를 골랐다면 가로 방향으로 이어진 부분을 거리가 $0$m인 부분으로 잘못 읽었을 수 있습니다. $9$분부터 $12$분까지 집에서 떨어진 거리는 $150$m로 변하지 않습니다.",
+      "generated_at": "2026-11-11T10:39:36.622812+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "집에 있다는 사실과 그 직후 거리가 변하지 않기 시작한다는 사실을 주고, 두 사실을 모두 만족하는 시각을 거꾸로 찾게 합니다.",
+      "id": "5b83a02f-c298-4d49-a845-06658fa33ae8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T10:38:57.243388+00:00",
+          "issues": [
+            "application-a에 해당하지 않는다. 일정한 구간을 찾고 온도를 읽어 비교하는 일반적인 그래프 해석 문제이다.",
+            "보기 5: M2에서 나오는 보기가 아니다. 기울기가 가파른 구간의 값이 더 크다고 읽으면 8분부터 9분까지인 보기 4를 고르게 된다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T10:39:36.622319+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-06-C2-성질적용",
+      "body": "어느 방의 온도를 시간에 따라 나타낸 그래프가 있습니다. 가로 방향은 시간(분), 세로 방향은 온도(℃)를 나타냅니다.\n\n그래프는 다섯 점이 아닌 다음 일곱 점을 차례로 곧게 이은 선입니다.\n\n$(0, 16)$, $(2, 20)$, $(4, 24)$, $(6, 24)$, $(8, 16)$, $(10, 20)$, $(12, 20)$\n\n$2$분, $5$분, $7$분, $9$분, $11$분 중에서 온도가 $20$℃였던 시각을 모두 고른 것은 무엇인가요?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M3",
+          "no": 1,
+          "text": "$2$분, $7$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$분, $7$분, $9$분"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2$분, $7$분, $11$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2$분, $5$분, $7$분, $11$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5$분, $7$분, $9$분, $11$분"
+        }
+      ],
+      "created_at": "2026-11-11T08:30:58.027214+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T10:38:18.581258+00:00",
+      "explanation": "$2$분일 때의 온도는 $20$℃입니다. $6$분부터 $8$분까지 온도가 $24$℃에서 $16$℃로 일정하게 내려가므로, 그 사이인 $7$분일 때는 $20$℃입니다. $10$분부터 $12$분까지는 온도가 $20$℃로 그대로이므로 $11$분일 때도 $20$℃입니다. $5$분일 때는 $24$℃, $9$분일 때는 $18$℃입니다.\n\n①처럼 $11$분을 빼면 가로로 곧은 부분에서 온도가 $0$℃라고 잘못 생각했을 수 있습니다. 이 부분은 온도가 변하지 않고 $20$℃로 유지된다는 뜻입니다.",
+      "generated_at": "2026-11-11T08:30:55.942343+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "온도가 $20$℃라는 결과를 주고, 제시된 시각 중 그 온도에 맞는 시각을 모두 찾게 했습니다. 그래프에서 내려가는 부분과 온도가 그대로인 부분을 함께 살펴야 합니다.",
+      "id": "95177106-a1fc-4a28-947c-026ccf4f04d6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T08:30:55.942081+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.548479+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-성질적용",
+      "body": "수조에 담긴 물의 높이를 그래프로 나타냈다. 가로 방향은 시간(분), 세로 방향은 물의 높이(cm)를 뜻한다. 그래프는 $(0, 2)$, $(2, 6)$, $(5, 6)$, $(7, 3)$을 차례대로 곧은 선으로 이은 것이다.\n\n$3$분일 때 물의 높이는 몇 cm인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M3",
+          "no": 1,
+          "text": "$0$cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3$cm"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6$cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9$cm"
+        }
+      ],
+      "created_at": "2026-11-11T08:29:53.64714+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$2$분부터 $5$분까지 물의 높이는 $6$cm로 변하지 않는다. 따라서 $3$분일 때 물의 높이는 $6$cm이다. 높이가 변하지 않는다는 것을 높이가 $0$cm라는 뜻으로 생각하면 ①을 고를 수 있다.",
+      "generated_at": "2026-11-11T08:29:51.570201+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c07a0ce6-b3e3-41ad-a7fa-cee82c8e481f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:29:51.570000+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.586109+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-성질적용",
+      "body": "어느 방의 온도를 시간에 따라 그래프로 나타냈다. 가로 방향은 시간(분), 세로 방향은 온도(℃)를 나타낸다. 그래프는 $(0, 10)$, $(4, 18)$, $(8, 20)$, $(12, 16)$을 차례대로 곧은 선으로 이은 것이다.\n\n다음 중 방의 온도가 가장 높은 때는 언제인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M2",
+          "no": 1,
+          "text": "$2$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6$분"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$분"
+        }
+      ],
+      "created_at": "2026-11-11T08:30:13.467719+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$8$분일 때 온도는 $20$℃로, 보기에서 가장 높다. $2$분은 그래프가 가장 가파르게 올라가는 구간에 있지만, 그때의 온도는 $14$℃이다. 그래프가 가파르게 올라간다고 해서 그때의 온도가 가장 높은 것은 아니다.",
+      "generated_at": "2026-11-11T08:30:11.385973+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "527cda5c-a6fd-4217-93b6-69b8ad3af529",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:30:11.385812+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.619602+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-오개념판별",
+      "body": "한 사람이 출발점에서 움직이는 동안 출발점으로부터의 거리를 그래프로 나타냈다. 가로로는 출발한 뒤의 시간(분)을, 세로로는 출발점으로부터의 거리(m)를 나타낸다.\n\n그래프는 차례로 $(0, 0)$, $(2, 120)$, $(4, 160)$, $(6, 160)$을 지나며, 이웃한 두 점 사이는 곧게 이어져 있다.\n\n다섯 학생이 이 그래프를 보고 한 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M1",
+          "no": 1,
+          "text": "$0$분부터 $2$분까지 그래프가 오른쪽 위로 올라가므로, 언덕길을 올라갔어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M2",
+          "no": 2,
+          "text": "처음 구간의 그래프가 더 가파르므로, 출발점으로부터의 거리는 $1$분일 때가 $3$분일 때보다 커."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M3",
+          "no": 3,
+          "text": "$4$분부터 $6$분까지 그래프가 가로로 놓여 있으므로, $5$분일 때 출발점으로부터의 거리는 $0$m야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$0$분부터 $2$분까지가 그다음 $2$분 동안보다 빠르게 멀어지므로, $2$분부터 $4$분까지는 출발점에 가까워져."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$3$분일 때는 $1$분일 때보다 출발점에서 더 멀리 있지만, 출발점에서 멀어지는 빠르기는 더 느려."
+        }
+      ],
+      "created_at": "2026-11-11T08:32:43.163093+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$1$분일 때의 거리는 $60$m이고 $3$분일 때의 거리는 $140$m이다. 따라서 $3$분일 때 더 멀리 있다. 하지만 앞의 $2$분 동안은 $120$m, 그다음 $2$분 동안은 $40$m 멀어지므로 멀어지는 빠르기는 $3$분일 때 더 느리다.\n\n①은 그래프를 실제 길의 모양으로 잘못 읽었다. 그래프만으로는 언덕길을 지났는지 알 수 없다. ②는 그래프가 더 가파르면 거리도 더 크다고 잘못 생각했다. ③은 그래프가 가로로 놓인 구간에서 거리가 $0$m라고 잘못 생각했다. 이 구간에서 거리는 $160$m로 변하지 않는다. ④에서 $2$분부터 $4$분까지도 거리는 계속 늘어나므로 출발점에 가까워지는 것이 아니다.",
+      "generated_at": "2026-11-11T08:32:41.077569+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 해석을 비교하여 옳은 말을 고르게 했다. 특히 그래프의 모양과 실제 길의 모양, 거리와 멀어지는 빠르기를 구별해야 한다.",
+      "id": "166516fb-fe2b-482b-9478-20b7721e682e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:32:14.121539+00:00",
+          "issues": [
+            "보기 ④: M2는 더 가파른 1분일 때의 거리가 더 크다고 읽는 오개념이다. ④는 반대로 거리가 더 큰 6분일 때의 빠르기가 더 크다고 판단하므로, 제시된 M2에서 나오는 주장이 아니다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T08:32:41.077057+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.800622+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-오개념판별",
+      "body": "수조에 담긴 물의 높이를 시간에 따라 그래프로 나타냈다. 물의 높이는 수조 바닥에 표시한 한 점을 기준으로 잰다. 가로는 관찰을 시작한 뒤의 시간(분), 세로는 물의 높이(cm)를 나타낸다.\n\n그래프는 차례로 $(0, 10)$, $(1, 16)$, $(3, 18)$, $(4, 14)$, $(5, 14)$를 지난다. 이웃한 두 점은 곧게 이어져 있다.\n\n다섯 학생의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M2",
+          "no": 1,
+          "text": "0분부터 1분까지의 그래프가 1분부터 3분까지보다 더 가파르므로, 1분의 물의 높이가 3분보다 높아."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M1",
+          "no": 2,
+          "text": "0분부터 1분까지의 그래프가 오른쪽 위로 올라가므로, 수조 바닥도 한쪽에서 다른 쪽으로 갈수록 높아진다는 것을 알 수 있어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M3",
+          "no": 3,
+          "text": "4분부터 5분까지의 그래프가 가로로 이어지므로, 이때 물의 높이는 $0$cm야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "1분부터 3분까지 물의 높이는 매 분 $2$cm씩 높아져."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "3분부터 4분까지 물의 높이는 낮아지지만, 4분의 물의 높이는 처음보다 높아."
+        }
+      ],
+      "created_at": "2026-11-11T08:33:07.739545+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "3분부터 4분까지 물의 높이는 $18$cm에서 $14$cm로 낮아진다. 4분의 높이인 $14$cm는 처음 높이인 $10$cm보다 높으므로 ⑤가 옳다.\n\n①에서는 그래프가 더 가파르면 물의 높이도 더 높다고 잘못 생각했다. 1분의 높이는 $16$cm이고 3분의 높이는 $18$cm이다.\n\n②에서는 그래프를 수조의 모양을 그린 그림으로 잘못 생각했다. 이 그래프로는 수조 바닥의 모양을 알 수 없다.\n\n③에서는 그래프가 가로로 이어지면 물의 높이가 $0$이라고 잘못 생각했다. 4분부터 5분까지 물의 높이는 $14$cm로 변하지 않는다.\n\n④에서 1분부터 3분까지 물의 높이는 $2$분 동안 모두 $2$cm 높아진다. 따라서 매 분 $2$cm씩 높아지는 것은 아니다.",
+      "generated_at": "2026-11-11T08:33:05.670672+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 보고 옳고 그름을 판단하게 했다. 특히 그래프의 가파른 정도와 물의 높이, 그래프와 수조의 모양을 구별해야 한다.",
+      "id": "14c015a7-6799-441f-9e8b-2143c553be3b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:33:05.670291+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.833215+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-오개념판별",
+      "body": "집에서 출발한 사람이 집에서 떨어진 거리를 시간에 따라 그래프로 나타냈다. 가로는 시간(분), 세로는 집에서 떨어진 거리(m)를 나타낸다.\n\n그래프는 점 $(0, 0)$에서 $(2, 8)$까지, 다시 $(6, 12)$까지 각각 곧게 이어진다. 그다음 $(8, 12)$까지 가로로 곧게 이어진다.\n\n그래프를 해석한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M1",
+          "no": 1,
+          "text": "$0$분부터 $2$분까지 언덕을 올라갔다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$분부터 $6$분까지 집에서 떨어진 거리가 $8$m에서 $12$m로 늘어났다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M2",
+          "no": 3,
+          "text": "$0$분부터 $2$분까지의 그래프가 $2$분부터 $6$분까지보다 더 가파르므로, $2$분일 때 집에서 떨어진 거리가 $6$분일 때보다 더 멀다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M3",
+          "no": 4,
+          "text": "$6$분부터 $8$분까지 집에서 떨어진 거리는 $0$m이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6$분일 때 집에서 떨어진 거리는 $10$m이다."
+        }
+      ],
+      "created_at": "2026-11-11T08:31:17.447768+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "② $2$분일 때 거리는 $8$m이고, $6$분일 때 거리는 $12$m이다.\n\n① 그래프가 오른쪽 위로 올라가도 실제 길이 언덕인지는 알 수 없다.\n③ 그래프가 더 가파른 것은 거리가 더 빠르게 늘어났다는 뜻이지, 그때의 거리가 더 크다는 뜻이 아니다. $2$분일 때 거리는 $6$분일 때보다 작다.\n④ $6$분부터 $8$분까지 거리는 $0$m가 아니라 $12$m로 변하지 않는다.\n⑤ $6$분일 때 거리는 $12$m이다.",
+      "generated_at": "2026-11-11T08:31:15.358023+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c0758d36-a874-4d9b-8f73-8175f1da6485",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:31:15.357835+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.859142+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-오개념판별",
+      "body": "어떤 사람이 산길을 걸을 때, 시간에 따라 사람이 있는 곳의 높이를 그래프로 나타냈다. 가로는 출발한 후의 시간(분), 세로는 사람이 있는 곳의 높이(m)를 나타낸다.\n\n그래프는 점 $(0, 20)$, $(1, 50)$, $(5, 60)$, $(7, 40)$을 차례로 곧게 이은 모양이다.\n\n이 그래프를 해석한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M1",
+          "no": 1,
+          "text": "이 그래프만으로 걸은 길의 모양이 그래프의 모양과 같다는 것을 알 수 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-06-M2",
+          "no": 2,
+          "text": "$0$분에서 $1$분 사이의 그래프가 더 가파르므로, $1$분에서의 높이가 $5$분에서의 높이보다 높다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$0$분에서 $1$분 사이에는 $1$분에서 $5$분 사이보다 높이가 더 빠르게 높아졌다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$0$분에서 $1$분 사이에는 높이가 변하지 않았다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5$분에서 $7$분 사이에는 높이가 높아졌다."
+        }
+      ],
+      "created_at": "2026-11-11T08:31:44.501165+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$0$분에서 $1$분 사이에는 높이가 $1$분 동안 $30$m 높아졌다. $1$분에서 $5$분 사이에는 $4$분 동안 $10$m 높아졌다. 따라서 앞 구간에서 높이가 더 빠르게 높아졌다.\n\n① 그래프의 모양이 실제로 걸은 길의 모양과 같은 것은 아니다. ② 앞 구간의 그래프가 더 가파르지만, $1$분에서의 높이는 $50$m이고 $5$분에서의 높이는 $60$m이다. 높이가 변하는 빠르기와 높이 자체를 혼동하면 안 된다. ④ $0$분에서 $1$분 사이에 높이는 높아졌다. ⑤ $5$분에서 $7$분 사이에 높이는 낮아졌다.",
+      "generated_at": "2026-11-11T08:31:42.434369+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1f844669-037b-4d6b-9d46-42d18a0b9c10",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:31:42.434123+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.890212+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-이유설명",
+      "body": "어느 수조에 담긴 물의 높이를 그래프로 나타냈다. 시간은 가로 방향에, 물의 높이는 세로 방향에 나타냈다. 시간의 단위는 분, 물의 높이의 단위는 $\\mathrm{cm}$이다.\n\n그래프는 $(0, 0)$, $(2, 8)$, $(4, 8)$, $(6, 12)$를 차례로 직선으로 이은 모양이다.\n\n민수는 “물 높이가 더 빠르게 높아지는 구간에서는 물 높이도 언제나 더 높다.”라고 말했다.\n\n$0$분부터 $2$분까지, $2$분부터 $4$분까지, $4$분부터 $6$분까지 물의 높이가 각각 어떻게 변하는지 그래프를 근거로 설명하시오. 또 그래프에서 구체적인 때를 골라 민수의 말이 틀렸음을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:34:14.025101+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$0$분부터 $2$분까지 물의 높이는 $0\\mathrm{cm}$에서 $8\\mathrm{cm}$로 높아진다. $2$분부터 $4$분까지는 $8\\mathrm{cm}$로 변하지 않는다. $4$분부터 $6$분까지는 $8\\mathrm{cm}$에서 $12\\mathrm{cm}$로 높아진다.\n\n처음 $2$분 동안에는 $1$분마다 $4\\mathrm{cm}$씩 높아지고, 마지막 $2$분 동안에는 $1$분마다 $2\\mathrm{cm}$씩 높아진다. 처음 구간에서 더 빠르게 높아지지만, $1$분일 때의 높이 $4\\mathrm{cm}$는 $5$분일 때의 높이 $10\\mathrm{cm}$보다 낮다. 높아지는 빠르기와 물 높이의 크기는 다르다. 또한 가로 방향으로 나란한 부분은 물의 높이가 $0$이라는 뜻이 아니라 변하지 않는다는 뜻이다.",
+      "generated_at": "2026-11-11T08:34:11.959735+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민수의 말이 틀렸음을 그래프에서 구체적인 때를 골라 설명하게 한다. 물의 높이가 변하는 빠르기와 물 높이의 크기를 비교하여 반례를 찾아야 한다.",
+      "id": "e6a8c888-1353-4e11-82e6-bc58dda7791e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$0$분부터 $2$분까지는 물의 높이가 $0\\mathrm{cm}$에서 $8\\mathrm{cm}$로 높아진다. $2$분부터 $4$분까지는 그래프가 가로 방향으로 나란하므로 물의 높이가 $8\\mathrm{cm}$로 변하지 않는다. $4$분부터 $6$분까지는 물의 높이가 $8\\mathrm{cm}$에서 $12\\mathrm{cm}$로 높아진다.\n\n처음 구간에서는 $1$분마다 $4\\mathrm{cm}$씩, 마지막 구간에서는 $1$분마다 $2\\mathrm{cm}$씩 높아지므로 처음 구간에서 더 빠르게 높아진다. 하지만 $1$분일 때의 물 높이는 $4\\mathrm{cm}$이고 $5$분일 때는 $10\\mathrm{cm}$이다. 따라서 민수의 말은 틀렸다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "처음 구간과 마지막 구간에서 물의 높이가 높아짐을 각각 그래프의 수치를 근거로 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$2$분부터 $4$분까지 물의 높이가 $8\\mathrm{cm}$로 변하지 않음을 그래프를 근거로 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "처음 구간에서 마지막 구간보다 물의 높이가 더 빠르게 높아짐을 수치를 근거로 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-06-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 구간에서 각각 구체적인 때를 골라 물의 높이를 비교하고, 더 빠르게 높아지는 구간에서도 물의 높이가 더 낮을 수 있음을 보인다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-06-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:34:11.959480+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.926053+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-이유설명",
+      "body": "지우가 학교 근처에서 움직이는 동안, 학교에서 지우까지 직선으로 잰 거리를 그래프로 나타냈다. 가로 방향은 시간(분), 세로 방향은 거리($\\mathrm{m}$)를 나타낸다.\n\n그래프는 $(0, 20)$, $(2, 100)$, $(5, 100)$, $(7, 40)$을 차례로 직선으로 이은 모양이다.\n\n민지는 “이 그래프에서 학교까지의 거리가 변하지 않는 동안 지우는 반드시 한곳에 멈춰 있었어.”라고 말했다.\n\n$0$분부터 $2$분까지, $2$분부터 $5$분까지, $5$분부터 $7$분까지 학교와 지우 사이의 거리가 각각 어떻게 변하는지 그래프를 근거로 설명하시오. 또 민지의 말이 틀렸음을 보이는 지우의 움직임을 한 가지 들고, 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:34:36.836763+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그래프의 높이를 보면 학교와 지우 사이의 거리가 늘어나는지, 그대로인지, 줄어드는지 알 수 있다. $2$분부터 $5$분까지 그래프가 가로 방향과 나란하므로 거리는 $0\\mathrm{m}$가 아니라 $100\\mathrm{m}$로 그대로이다. 이때 지우가 멈춰 있었을 수도 있지만, 학교를 중심으로 하는 반지름 $100\\mathrm{m}$인 원을 따라 움직였을 수도 있다. 따라서 거리만으로 지우가 반드시 멈춰 있었다고 판단할 수 없다.",
+      "generated_at": "2026-11-11T08:34:34.756694+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "거리가 변하지 않는 동안 반드시 멈춰 있었다는 민지의 말에 대해, 거리를 유지하면서 움직이는 예를 들어 틀렸음을 설명하게 한다.",
+      "id": "7bd0114a-dc40-4a67-a4a2-eebe472ecbe9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$0$분부터 $2$분까지 거리는 $20\\mathrm{m}$에서 $100\\mathrm{m}$로 늘어난다. $2$분부터 $5$분까지 거리는 $100\\mathrm{m}$로 그대로이다. $5$분부터 $7$분까지 거리는 $100\\mathrm{m}$에서 $40\\mathrm{m}$로 줄어든다.\n\n$2$분부터 $5$분까지 지우가 학교를 중심으로 하는 반지름 $100\\mathrm{m}$인 원을 따라 걸을 수도 있다. 이때 지우는 움직이지만 학교까지의 거리는 계속 $100\\mathrm{m}$이므로 민지의 말은 틀리다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$0$분부터 $2$분까지와 $5$분부터 $7$분까지의 거리가 각각 어떻게 변하는지, 그래프에 나타난 거리를 들어 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$2$분부터 $5$분까지의 거리가 $100\\mathrm{m}$로 그대로임을 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$2$분부터 $5$분까지 학교에서 $100\\mathrm{m}$ 떨어진 채 움직일 수 있는 구체적인 예를 들고, 그 예가 민지의 말과 다른 이유를 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:34:34.756488+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.949074+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-이유설명",
+      "body": "물통에 들어 있는 물의 양을 시간에 따라 그래프로 나타내었다. 가로 방향은 지난 시간(분), 세로 방향은 물의 양(L)을 나타낸다. 그래프는 점 $(0, 2)$, $(2, 6)$, $(4, 6)$, $(6, 3)$을 차례로 곧게 이은 모양이다.\n\n$0$분부터 $2$분까지, $2$분부터 $4$분까지, $4$분부터 $6$분까지 물의 양이 각각 어떻게 변하는지 그래프의 수치를 근거로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:33:24.200819+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$0$분부터 $2$분까지 물의 양은 $2$L에서 $6$L로 늘어난다. $2$분부터 $4$분까지는 물의 양이 계속 $6$L이다. $4$분부터 $6$분까지는 $6$L에서 $3$L로 줄어든다. 가운데 구간의 그래프가 가로로 뻗어 있다고 해서 물의 양이 $0$L인 것은 아니다.",
+      "generated_at": "2026-11-11T08:33:22.094214+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "59b39536-a53d-4e8b-ac8d-486653dd1dd9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$0$분부터 $2$분까지 물의 양은 $2$L에서 $6$L로 늘어난다. $2$분부터 $4$분까지는 물의 양이 $6$L로 변하지 않는다. $4$분부터 $6$분까지는 물의 양이 $6$L에서 $3$L로 줄어든다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$0$분부터 $2$분까지 물의 양이 $2$L에서 $6$L로 늘어난다고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$2$분부터 $4$분까지 물의 양이 $6$L로 변하지 않는다고 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$4$분부터 $6$분까지 물의 양이 $6$L에서 $3$L로 줄어든다고 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:33:22.094051+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T08:44:24.982503+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-06-C2-이유설명",
+      "body": "엘리베이터의 높이를 시간에 따라 그래프로 나타내었다. 가로 방향은 지난 시간(분), 세로 방향은 땅에서 엘리베이터까지의 높이(m)를 나타낸다.\n\n그래프는 $0$분에 $5$m에서 시작하여 $3$분에 $17$m까지 오른쪽 위로 곧게 올라간다. 그다음 $6$분까지 가로 방향으로 곧게 이어진다.\n\n$0$분부터 $3$분까지와 $3$분부터 $6$분까지 엘리베이터의 높이가 각각 어떻게 변하는지, 그래프의 수치를 근거로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T08:33:46.577736+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$0$분부터 $3$분까지 그래프가 $5$m에서 $17$m까지 올라가므로 엘리베이터의 높이는 높아진다. 그래프가 올라가는 모양은 높이가 변하는 것을 나타내며, 엘리베이터가 비스듬히 움직인다는 뜻은 아니다. $3$분부터 $6$분까지 그래프가 가로 방향으로 이어지므로 높이는 $17$m로 변하지 않는다. 높이가 $0$m가 된 것이 아니다.",
+      "generated_at": "2026-11-11T08:33:44.486043+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "81444c39-f654-4147-87a4-ee19514e8fd9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$0$분부터 $3$분까지 높이는 $5$m에서 $17$m로 높아진다. $3$분부터 $6$분까지 높이는 $17$m로 변하지 않는다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$0$분부터 $3$분까지 높이가 $5$m에서 $17$m로 높아진다고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-06-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "$3$분부터 $6$분까지 높이가 $17$m로 변하지 않는다고 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-06-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T08:33:44.485938+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}
