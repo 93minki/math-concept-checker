@@ -17,6 +17,8 @@ from app.diagnoses.schemas import (
     Concept,
     Diagnosis,
     GradingRow,
+    HistoryCursor,
+    HistoryItem,
     Item,
     MisconceptionRow,
     Question,
@@ -46,6 +48,9 @@ class DiagnosesRepository(Protocol):
     def questions(self) -> list[Question]: ...
     def history(self, user_id: UUID) -> dict[UUID, datetime]: ...
     def in_progress(self, user_id: UUID) -> list[Diagnosis]: ...
+    def list_diagnoses(
+        self, user_id: UUID, limit: int, before: HistoryCursor | None
+    ) -> list[HistoryItem]: ...
     def start(
         self, user_id: UUID, unit_id: int, restart: bool, ids: list[UUID]
     ) -> StartResult: ...
@@ -105,6 +110,29 @@ class SupabaseDiagnoses:
 
     def expire(self, user_id: UUID) -> None:
         self.client.rpc("diagnosis_expire", {"p_user_id": str(user_id)}).execute()
+
+    def list_diagnoses(
+        self, user_id: UUID, limit: int, before: HistoryCursor | None
+    ) -> list[HistoryItem]:
+        query = (
+            self.client.table("diagnoses")
+            .select(
+                "id,status,abort_reason,started_at,completed_at,aborted_at,unit:display_units(grade,name,publisher)"
+            )
+            .eq("user_id", str(user_id))
+        )
+        if before is not None:
+            timestamp = before.started_at.isoformat()
+            query = query.or_(
+                f"started_at.lt.{timestamp},and(started_at.eq.{timestamp},id.lt.{before.id})"
+            )
+        return TypeAdapter(list[HistoryItem]).validate_python(
+            query.order("started_at", desc=True)
+            .order("id", desc=True)
+            .limit(limit)
+            .execute()
+            .data
+        )
 
     def units(self) -> list[Unit]:
         return TypeAdapter(list[Unit]).validate_python(

@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import Literal
 from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, model_validator
 
 UnitStatus = Literal["full", "partial", "unavailable"]
 QuestionType = Literal["multiple_choice", "written"]
@@ -58,6 +58,27 @@ class Diagnosis(BaseModel):
     started_at: datetime
     stage1_submitted_at: datetime | None
     stage2_submitted_at: datetime | None = None
+
+
+class HistoryCursor(BaseModel):
+    started_at: AwareDatetime
+    id: UUID
+
+
+class HistoryUnit(BaseModel):
+    grade: str
+    name: str
+    publisher: str
+
+
+class HistoryItem(BaseModel):
+    id: UUID
+    status: Literal["stage1", "stage2", "completed", "aborted"]
+    abort_reason: Literal["expired", "restarted"] | None
+    started_at: AwareDatetime
+    completed_at: datetime | None
+    aborted_at: datetime | None
+    unit: HistoryUnit
 
 
 class Item(BaseModel):
