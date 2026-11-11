@@ -1,0 +1,1330 @@
+{
+  "backlog": [],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T15:40:40.948462+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C1-정의이해",
+      "body": "다음 중 $x$에 대한 이차방정식인 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 1,
+          "text": "$x^2+2x=x^2+4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 2,
+          "text": "$(x-1)(x+1)=x^2-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 3,
+          "text": "$x^2+2=x^2+3$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x(x-2)=x-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2(x+1)=x+3$"
+        }
+      ],
+      "created_at": "2026-11-11T14:24:06.083208+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "모든 항을 한쪽으로 옮기고 같은 항끼리 계산했을 때, $x^2$의 항이 남아야 이차방정식이다.\n①은 $2x-4=0$, ②는 $0=0$, ③은 $2=3$이 된다. 처음에 $x^2$이 보인다는 이유만으로 이차방정식이라고 생각하면 안 된다.\n④는 $x^2-3x+2=0$이므로 이차방정식이다. 해는 $x=1$ 또는 $x=2$이다. ⑤는 $x-1=0$이므로 이차방정식이 아니다.",
+      "generated_at": "2026-11-11T14:24:06.004043+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "②에는 양변이 같은 식을, ③에는 계산하면 참이 아닌 등식이 되는 식을 넣었다. 겉모양만 보지 않고 각 식에서 $x^2$의 항이 남는지 살펴야 한다.",
+      "id": "f1041760-b29b-43d7-becf-8a3bcb959f33",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:24:06.003872+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:40.978811+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C1-정의이해",
+      "body": "다음 등식 중 $x$에 대한 이차방정식인 것을 모두 고른 것은?\n\nㄱ. $x^2+2x=x^2+4$\nㄴ. $(x-1)(x+1)=3$\nㄷ. $(x+2)^2=x^2+4x+4$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄱ"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 4,
+          "text": "ㄱ, ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄴ, ㄷ"
+        }
+      ],
+      "created_at": "2026-11-11T15:33:27.531299+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "ㄱ은 한쪽으로 옮겨 간단히 하면 $2x-4=0$이므로 이차방정식이 아니다. ㄴ은 $x^2-4=0$이므로 이차방정식이다. ㄷ은 간단히 하면 $0=0$이므로 이차방정식이 아니다.\n\n④를 골랐다면 ㄱ에서 처음 보이는 $x^2$만 보고 판단했을 수 있다. 양쪽의 항을 한쪽으로 옮겨 간단히 한 뒤 판단해야 한다.",
+      "generated_at": "2026-11-11T15:33:27.448031+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "ㄱ은 양쪽의 $x^2$이 없어지고, ㄷ은 양쪽이 같은 식이 되는 경계 사례이다. 처음 보이는 모양이 아니라 한쪽으로 옮겨 간단히 한 식으로 판단해야 한다.",
+      "id": "22ae3e76-a062-47dc-a76a-50894099f9db",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T15:33:27.447892+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-20-C1-정의이해",
+      "body": "다음 식 중에서 $x$에 대한 이차방정식이면서 $x=1$을 해로 갖는 것을 모두 고른 것은?\n\nㄱ. $x^2+x=x^2+1$\nㄴ. $(x-1)(x+2)=0$\nㄷ. $x^2=4$\nㄹ. $x^2+1=x^2+1$",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 2,
+          "text": "ㄱ, ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄴ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 4,
+          "text": "ㄱ, ㄴ, ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄴ, ㄷ, ㄹ"
+        }
+      ],
+      "created_at": "2026-11-11T14:25:17.550611+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T15:32:57.506215+00:00",
+      "explanation": "ㄱ은 한쪽으로 옮기면 $x-1=0$이므로 이차방정식이 아니다. ㄴ은 한쪽으로 옮기면 $x^2+x-2=0$이고, $x=1$을 넣으면 등식이 성립한다. ㄷ은 이차방정식이지만 $x=1$을 넣으면 등식이 성립하지 않는다. ㄹ은 한쪽으로 옮기면 $0=0$이므로 이차방정식이 아니다. 따라서 ㄴ만 알맞다.\n\nㄱ이나 ㄹ을 고른 것은 식을 한쪽으로 옮겨 보지 않고 $x^2$이 있는 모양만 보고 판단한 것이다.",
+      "generated_at": "2026-11-11T14:25:17.478616+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "ㄱ과 ㄹ은 겉으로는 $x^2$이 있지만 한쪽으로 옮기면 $x^2$이 없어진다. 특히 ㄹ은 양변이 같은 식이므로 이차방정식인지 주의해서 판단해야 한다.",
+      "id": "ada60099-2b0e-4b4c-9a5b-0357d15169f7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T14:24:41.458976+00:00",
+          "issues": [
+            "보기 ⑤: M1을 ㄷ에도 적용하여 정리 전의 이차항만 보고 이차방정식이라고 판단하면 ㄷ은 틀린 설명이므로 ③(ㄱ, ㄴ)을 고르게 된다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:25:17.478440+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.026997+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C1-정의이해",
+      "body": "다음 중 이차방정식인 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 1,
+          "text": "$x^2+2x=x^2+4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2(x+1)=x-3$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x(x-1)=2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 4,
+          "text": "$x(x+1)=x^2+3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 5,
+          "text": "$2x^2+x=2x^2-2$"
+        }
+      ],
+      "created_at": "2026-11-11T14:23:28.202538+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "모든 항을 한쪽으로 옮기고 같은 항끼리 계산하면 ③은 $x^2-x-2=0$이므로 이차방정식입니다. ①, ④, ⑤는 계산하면 $x^2$이 없어집니다. 처음 식에 $x^2$이 있다는 이유만으로 이차방정식이라고 생각하면 ①, ④, ⑤를 고를 수 있습니다. ②도 이차방정식이 아닙니다.",
+      "generated_at": "2026-11-11T14:23:28.153838+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "fcf32733-72cb-4bd2-bf7b-9e22b2e3e495",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:23:13.264924+00:00",
+          "issues": [
+            "보기 2: 오개념 M1만으로는 해가 x=2라는 결론이 나오지 않는다. M1에 따라 이차방정식이라고 판단하더라도 식을 풀면 해는 x=-2이다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:23:28.153799+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.076818+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C1-정의이해",
+      "body": "방정식 $x^2+2x=x^2+4$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M1",
+          "no": 1,
+          "text": "처음 식에 $x^2$이 있으므로 이차방정식이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "모든 항을 왼쪽으로 옮겨 간단히 하면 $2x-4=0$이므로 이차방정식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "해가 $x=2$이므로 이차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "해가 하나이므로 이차방정식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "양변에 $x^2$이 있으므로 $x=0$만 해이다."
+        }
+      ],
+      "created_at": "2026-11-11T14:23:46.66917+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "모든 항을 왼쪽으로 옮겨 간단히 하면 $2x-4=0$이다. $x^2$을 포함한 항이 없어지므로 이차방정식이 아니다. 따라서 정답은 ②이다. ①은 처음 식에 $x^2$이 있다는 것만 보고 판단한 것이다. 이 방정식의 해는 $x=2$이지만, 해가 하나라고 해서 이차방정식이 아닌 것은 아니다. 예를 들어 $(x-1)^2=0$은 해가 하나인 이차방정식이다.",
+      "generated_at": "2026-11-11T14:23:46.608205+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "bb8c6689-4a5e-424a-bad5-fe39e42cdee3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:23:46.608043+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.102735+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C2-성질적용",
+      "body": "실수 $a$에 대하여 이차방정식 $x^2+(a-1)(a-2)x=10$의 한 해가 $x=2$이다. 이때 $a$의 값을 모두 구한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$a=\\dfrac{3\\pm\\sqrt{5}}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$a=\\dfrac{-3\\pm\\sqrt{13}}{2}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$a=\\dfrac{3\\pm\\sqrt{13}}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M4",
+          "no": 4,
+          "text": "$a=4$ 또는 $a=5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$a=\\dfrac{3\\pm\\sqrt{17}}{2}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:26:29.807693+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x=2$를 대입하면 $4+2(a-1)(a-2)=10$이다. 따라서 $(a-1)(a-2)=3$, 즉 $a^2-3a-1=0$이다. 근의 공식으로 풀면 $a=\\dfrac{3\\pm\\sqrt{13}}{2}$이다.\n$(a-1)(a-2)=3$에서 $a-1=3$ 또는 $a-2=3$으로 놓으면 ④를 고를 수 있다. 두 식의 곱이 $3$이라고 해서 어느 한 식이 반드시 $3$인 것은 아니다.",
+      "generated_at": "2026-11-11T14:26:29.723275+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "이차방정식의 한 해를 주고 그때의 $a$의 값을 거꾸로 구하게 한다. 해를 대입한 뒤에도 $a$에 대한 이차방정식을 풀어야 한다.",
+      "id": "1f1aefc4-ec14-4c5e-857f-ec0b26ad9b73",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:26:06.077260+00:00",
+          "issues": [
+            "2×3=6과 (-2)×(-3)=6을 거꾸로 이용하면 이차방정식을 풀지 않고도 a=-1 또는 4를 찾을 수 있다. 따라서 의도한 이차방정식 풀이를 측정하기 어렵고, 고난도 거꾸로 쓰기 조건에도 맞지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:26:29.723186+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.129969+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C2-성질적용",
+      "body": "직사각형의 가로의 길이는 세로의 길이보다 $3\\,\\mathrm{cm}$ 길다. 이 직사각형의 넓이를 $\\mathrm{cm}^2$로 나타낸 수와 둘레의 길이를 $\\mathrm{cm}$로 나타낸 수가 같다. 가로의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3\\,\\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\,\\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M2",
+          "no": 3,
+          "text": "$5\\,\\mathrm{cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6\\,\\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$7\\,\\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:26:48.454701+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "세로의 길이를 $x\\,\\mathrm{cm}$라 하면 가로의 길이는 $(x+3)\\,\\mathrm{cm}$이다. 넓이와 둘레의 길이를 각각 수로 나타내어 같다고 놓으면 $x(x+3)=2x+2(x+3)$이다. 이를 풀면 $(x-3)(x+2)=0$이므로 $x=3$ 또는 $x=-2$이다. 길이는 양수이므로 $x=3$이고, 가로의 길이는 $6\\,\\mathrm{cm}$이다.\n③을 골랐다면 인수분해한 식에서 각 해의 부호를 바꾸어 $x=-3$ 또는 $x=2$로 잘못 구했을 수 있다.",
+      "generated_at": "2026-11-11T14:26:48.349995+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "넓이와 둘레의 길이에 관한 문장을 이차방정식으로 나타내어 푼다. 구한 해 중 길이에 맞는 것을 골라 가로의 길이를 구해야 한다.",
+      "id": "e652cf95-be02-4ba9-8738-2f29309c791d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:26:48.349942+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.154349+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C2-성질적용",
+      "body": "이차방정식 $x^2-3x-10=0$의 해를 모두 구한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x=-5$ 또는 $x=-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M2",
+          "no": 2,
+          "text": "$x=-5$ 또는 $x=2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x=-2$ 또는 $x=5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x=2$ 또는 $x=5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x=2$ 또는 $x=10$"
+        }
+      ],
+      "created_at": "2026-11-11T14:25:27.783734+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x^2-3x-10=(x-5)(x+2)$이므로 $(x-5)(x+2)=0$입니다. 따라서 $x-5=0$ 또는 $x+2=0$이므로 해는 $x=5$ 또는 $x=-2$입니다. ②는 각 괄호를 $0$으로 놓아 구한 해의 부호를 잘못 쓴 경우입니다.",
+      "generated_at": "2026-11-11T14:25:27.722192+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "976ea5df-62a0-4ccd-a42e-1bb0eabb4474",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:25:27.722070+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.179872+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C2-성질적용",
+      "body": "이차방정식 $x^2=6x$의 해를 모두 구한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M3",
+          "no": 1,
+          "text": "$x=6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M2",
+          "no": 2,
+          "text": "$x=0$ 또는 $x=-6$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x=0$ 또는 $x=6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x=0$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x=-6$ 또는 $x=6$"
+        }
+      ],
+      "created_at": "2026-11-11T14:25:38.767741+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x^2-6x=0$에서 인수분해하면 $x(x-6)=0$이다. 따라서 $x=0$ 또는 $x=6$이다.\n①처럼 양변을 $x$로 나누면 $x=0$인 해를 놓친다. ②는 $x-6=0$의 해를 $x=-6$으로 잘못 구한 것이다.",
+      "generated_at": "2026-11-11T14:25:38.704052+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4f7e43cc-3416-418f-b6f1-1e4e92b1af09",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:25:38.703950+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.206682+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C2-오개념판별",
+      "body": "두 이차방정식 $x^2=3x$, $(x-1)(x-2)=2$에 대한 학생들의 말이다. 옳은 말을 한 학생은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M2",
+          "no": 1,
+          "text": "가온: 첫째 방정식은 $x(x-3)=0$이므로 해는 $x=0$ 또는 $x=-3$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M3",
+          "no": 2,
+          "text": "나래: 첫째 방정식의 양변을 $x$로 나누어 $x=3$만 얻어도 해를 모두 구한 거야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M4",
+          "no": 3,
+          "text": "다온: 둘째 방정식에서 $x-1=2$ 또는 $x-2=2$로 놓으면 해를 모두 구할 수 있어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "라온: $x=3$을 대입하면 두 방정식이 모두 성립하므로, 두 방정식의 해는 각각 $x=3$뿐이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "마루: 두 방정식의 해는 서로 같고, 양변을 $x$로 나누지 않고 풀면 $x=0$도 해임을 알 수 있어."
+        }
+      ],
+      "created_at": "2026-11-11T14:28:53.4292+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫째 방정식은 $x(x-3)=0$이므로 해는 $x=0$ 또는 $x=3$이다. 둘째 방정식도 양변에서 $2$를 빼고 인수분해하면 $x(x-3)=0$이 된다. 따라서 옳은 말을 한 학생은 ⑤이다.\n①은 $x-3=0$에서 해의 부호를 잘못 썼다. ②처럼 양변을 $x$로 나누면 해인 $x=0$을 빠뜨린다. ③은 두 수의 곱이 $2$일 때 각 수를 $2$와 같다고 놓았다. 이 방법으로 얻은 $x=4$는 해가 아니다. ④에서 $x=3$이 해인 것은 맞지만, 다른 해가 없는지는 알 수 없다.",
+      "generated_at": "2026-11-11T14:28:49.316652+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 방정식에 대한 학생들의 풀이와 주장을 비교하여 옳은 말을 판단하게 했다.",
+      "id": "bdbae239-63cf-435b-98e1-65419c3446fe",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:28:23.234565+00:00",
+          "issues": [
+            "보기 ③: 원식을 변형하면 (x-1)(x-3)=3인데 -1로 잘못 썼다. 올바르게 변형한 식에 M4를 적용하면 해를 4 또는 6으로 구한다. 따라서 보기에는 변형 오류와 M4가 함께 나타난다.",
+            "해설 ③은 원식을 잘못 변형한 오류를 설명하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:28:49.316459+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.233544+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C2-오개념판별",
+      "body": "다음은 이차방정식 $(x-1)(x+3)=-3$을 푼 학생의 풀이이다.\n\n$(x-1)(x+3)=-3$에서 $x^2+2x=0$이다. 양변을 $x$로 나누면 $x+2=0$이므로 해는 $x=-2$뿐이다.\n\n이 학생의 풀이에 대한 말로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M2",
+          "no": 1,
+          "text": "$x(x+2)=0$에서 $x=2$도 해이므로 학생은 이 해를 빠뜨렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M3",
+          "no": 2,
+          "text": "$x=0$으로는 나눌 수 없으므로 $x=0$은 처음 이차방정식의 해가 될 수 없다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "양변을 $x$로 나누는 과정에서 $x=0$인 해를 빠뜨렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M4",
+          "no": 4,
+          "text": "$x+3=-3$으로 놓을 수 있으므로 $x=-6$도 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "양변을 $x$로 나누는 과정에서 해를 빠뜨렸으므로 학생이 구한 $x=-2$도 해가 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T14:29:21.993585+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정답은 ③이다. $x^2+2x=0$을 인수분해하면 $x(x+2)=0$이므로 해는 $x=0$ 또는 $x=-2$이다. 양변을 $x$로 나누는 과정에서는 $x=0$인 경우를 살펴볼 수 없다.\n\n①에서는 $x+2=0$의 해의 부호를 잘못 썼다. ②에서는 $x=0$으로 나눌 수 없다는 것과 $x=0$이 처음 방정식의 해인지 여부를 혼동했다. ④에서는 두 식의 곱이 $-3$인데 각 식을 $-3$과 같다고 놓았다. ⑤에서는 나누는 과정에서 해를 하나 놓쳤다는 이유로, 올바르게 구한 해까지 해가 아니라고 생각했다.",
+      "generated_at": "2026-11-11T14:29:17.884156+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다른 학생의 풀이를 보고 나누는 과정에서 빠진 해가 있는지 판단해야 한다. 보기에는 부호를 잘못 쓰거나 우변이 0이 아닌데 각 인수를 우변과 같다고 놓는 생각도 담았다.",
+      "id": "d6402e93-2270-4030-8746-384cb11bbf42",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:29:17.883987+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.261036+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C2-오개념판별",
+      "body": "다음은 학생들이 이차방정식을 푼 결과이다. 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M2",
+          "no": 1,
+          "text": "$(x-2)(x+5)=0$의 해는 $x=-2$ 또는 $x=5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M3",
+          "no": 2,
+          "text": "$x^2=7x$의 해는 $x=7$뿐이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M4",
+          "no": 3,
+          "text": "$(x-1)(x-4)=4$의 해는 $x=5$ 또는 $x=8$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x^2=6x$의 해는 $x=0$ 또는 $x=6$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x^2=16$의 해는 $x=2$ 또는 $x=-2$이다."
+        }
+      ],
+      "created_at": "2026-11-11T14:27:33.753504+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "④ $x^2=6x$에서 $x(x-6)=0$이므로 해는 $x=0$ 또는 $x=6$이다.\n① 인수분해한 뒤 해의 부호를 잘못 썼다. 해는 $x=2$ 또는 $x=-5$이다.\n② 양변을 $x$로 나누면 $x=0$인 해를 놓친다. 해는 $x=0$ 또는 $x=7$이다.\n③ 우변이 $0$이 아닌데 각 인수를 $4$와 같다고 놓았다. 예를 들어 $x=8$을 대입하면 좌변은 $28$이므로 해가 아니다.\n⑤ $2^2=4$이므로 $x=2$는 해가 아니다. 해는 $x=4$ 또는 $x=-4$이다.",
+      "generated_at": "2026-11-11T14:27:33.672044+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7a52dbf7-c761-43cd-a63b-592248b91311",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:27:12.373975+00:00",
+          "issues": [
+            "M4를 가려낼 수 있는 보기나 상황이 없어 측정 의도에 제시된 세 오개념을 모두 판별하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:27:33.671887+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.28714+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C2-오개념판별",
+      "body": "이차방정식의 해를 구할 때 쓸 수 있는 말로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M2",
+          "no": 1,
+          "text": "$(x-4)(x+1)=0$의 해는 $x=-4$ 또는 $x=1$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M3",
+          "no": 2,
+          "text": "양변을 $x$로 나누어도 해를 빠뜨리지 않는다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M4",
+          "no": 3,
+          "text": "두 식의 곱이 $6$이면 두 식 중 적어도 하나는 $6$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 식의 곱이 $0$이면 두 식 중 적어도 하나는 $0$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x^2=25$의 해는 $x=5$뿐이다."
+        }
+      ],
+      "created_at": "2026-11-11T14:27:55.649985+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 식의 곱이 $0$이면 적어도 한 식의 값은 $0$이다.\n1. $x-4=0$이면 $x=4$이고, $x+1=0$이면 $x=-1$이다. 해의 부호를 잘못 썼다.\n2. 양변을 $x$로 나누면 $x=0$인 해를 빠뜨릴 수 있다.\n3. 두 수의 곱이 $6$이어도 두 수 중 하나가 반드시 $6$인 것은 아니다. 예를 들어 $2\\times3=6$이다.\n5. $(-5)^2=25$이므로 $x=-5$도 해이다.",
+      "generated_at": "2026-11-11T14:27:55.585846+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "38d3e915-1b50-4c0a-80f5-47ef3dd9ad8a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:27:55.585680+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.312028+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C3-성질적용",
+      "body": "어떤 직사각형의 세로는 가로보다 $2\\,\\text{cm}$ 더 길다. 이 직사각형의 가로를 $3\\,\\text{cm}$, 세로를 $7\\,\\text{cm}$ 짧게 하여 새 직사각형을 만들었다. 새 직사각형의 넓이는 $8\\,\\text{cm}^2$이다. 처음 직사각형의 가로의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M5",
+          "no": 1,
+          "text": "$1\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5\\,\\text{cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$7\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9\\,\\text{cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:30:11.692241+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "처음 직사각형의 가로의 길이를 $x\\,\\text{cm}$라고 하면 새 직사각형의 가로는 $(x-3)\\,\\text{cm}$, 세로는 $(x-5)\\,\\text{cm}$이다. 따라서 $(x-3)(x-5)=8$이고, 이를 풀면 $(x-1)(x-7)=0$이므로 $x=1$ 또는 $x=7$이다. $x=1$이면 처음 가로가 $1\\,\\text{cm}$이므로 $3\\,\\text{cm}$를 짧게 할 수 없다. 따라서 답은 $7\\,\\text{cm}$이다. ①은 방정식의 해가 실제 길이에 맞는지 확인하지 않은 경우이다.",
+      "generated_at": "2026-11-11T14:30:07.601076+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "바뀐 가로와 세로의 길이를 이용해 넓이를 식으로 나타내야 한다. 이차방정식을 푼 뒤에는 두 해 중 실제로 만들 수 있는 길이를 골라야 한다.",
+      "id": "33de07ba-1815-4978-b920-d9d90540c679",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:30:07.601017+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.338391+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C3-성질적용",
+      "body": "공을 땅에서 위로 던졌다. 던진 지 $t$초 후 공의 높이는 땅에서 $(20t-5t^2)\\,\\text{m}$이다. 이 식은 $0\\le t\\le 4$일 때 성립한다.\n\n던진 지 $2$초가 지난 뒤, 공의 높이가 땅에서 $15\\,\\text{m}$가 되는 것은 던진 지 몇 초 후인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M5",
+          "no": 1,
+          "text": "$1$초 후"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$초 후"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3$초 후"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$4$초 후"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5$초 후"
+        }
+      ],
+      "created_at": "2026-11-11T14:30:33.3645+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "공의 높이가 $15\\,\\text{m}$이므로 $20t-5t^2=15$이다. 이를 풀면 $(t-1)(t-3)=0$이므로 $t=1$ 또는 $t=3$이다. 이 중 $2$초가 지난 뒤에 해당하는 것은 $t=3$이다. 따라서 정답은 ③이다.\n\n①을 골랐다면 방정식의 해를 구한 뒤, $2$초가 지난 뒤라는 상황에 맞는지 확인하지 않은 것이다.",
+      "generated_at": "2026-11-11T14:30:29.257066+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "공의 높이가 $15\\,\\text{m}$라는 상황을 이차방정식으로 나타내어 풀어야 한다. 두 해 중에서 $2$초가 지난 뒤에 해당하는 해를 골라야 한다.",
+      "id": "f4c53cc8-0192-448f-9730-1640226e2a69",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:30:29.256952+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.370548+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C3-성질적용",
+      "body": "직사각형의 세로의 길이는 가로의 길이보다 $3\\,\\text{cm}$ 더 길다. 이 직사각형의 넓이가 $40\\,\\text{cm}^2$일 때, 가로의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M5",
+          "no": 1,
+          "text": "$-8\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3\\,\\text{cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$13\\,\\text{cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:29:33.747203+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가로의 길이를 $x\\,\\text{cm}$라고 하면 세로의 길이는 $(x+3)\\,\\text{cm}$이다. 넓이가 $40\\,\\text{cm}^2$이므로 $x(x+3)=40$이다. 이를 풀면 $(x+8)(x-5)=0$이므로 $x=-8$ 또는 $x=5$이다. 길이는 음수가 될 수 없으므로 가로의 길이는 $5\\,\\text{cm}$이다. ①은 방정식의 해를 구한 뒤 길이로 가능한지 확인하지 않은 답이다.",
+      "generated_at": "2026-11-11T14:29:29.659333+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4a6eca85-df64-46f1-86aa-0b083e4f2d68",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:29:29.659241+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.399008+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C3-성질적용",
+      "body": "어떤 자연수의 제곱에서 그 자연수의 $2$배를 빼면 $48$이 된다. 이 자연수는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-20-M5",
+          "no": 2,
+          "text": "$-6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$"
+        }
+      ],
+      "created_at": "2026-11-11T14:29:46.437065+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "자연수를 $x$라고 하면 $x^2-2x=48$이다. 이를 인수분해하면 $(x-8)(x+6)=0$이므로 $x=8$ 또는 $x=-6$이다. $-6$은 이차방정식의 해이지만 자연수가 아니므로 답이 될 수 없다. 따라서 답은 $8$이다.",
+      "generated_at": "2026-11-11T14:29:42.357754+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3726c8be-52c9-491b-8bfe-957a92389e88",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:29:42.357623+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.435716+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C3-이유설명",
+      "body": "직사각형의 넓이는 $48\\text{ cm}^2$이고, 긴 변은 짧은 변보다 $2\\text{ cm}$ 더 길다.\n\n민수는 짧은 변의 길이를 $x\\text{ cm}$로 놓고, 지우는 긴 변의 길이를 $y\\text{ cm}$로 놓아 각각 이차방정식을 세웠다.\n\n두 사람이 각각 이차방정식을 세운 이유와 그 해를 쓰시오. 또 두 풀이에서 구한 해를 비교하여, 같은 직사각형의 두 변의 길이를 얻게 되는 이유를 설명하시오. 답으로 쓸 수 없는 해가 있다면 그 이유도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:31:39.720286+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "민수는 짧은 변이 $x\\text{ cm}$이면 긴 변이 $(x+2)\\text{ cm}$이므로 $x(x+2)=48$을 세운다. 지우는 긴 변이 $y\\text{ cm}$이면 짧은 변이 $(y-2)\\text{ cm}$이므로 $y(y-2)=48$을 세운다.\n\n두 방정식의 해는 각각 $x=6$ 또는 $x=-8$, $y=8$ 또는 $y=-6$이다. $x$와 $y$는 서로 다른 변의 길이를 나타내므로 해가 달라도 된다. $y=x+2$이므로 $x=6$은 $y=8$에, $x=-8$은 $y=-6$에 이어진다. 음수는 변의 길이가 될 수 없으므로 $x=-8$과 $y=-6$은 답으로 쓸 수 없다. 따라서 두 변의 길이는 $6\\text{ cm}$와 $8\\text{ cm}$이다.\n\n방정식의 해를 모두 구한 뒤에도 그것이 변의 길이가 될 수 있는지 확인해야 한다. 음수인 해까지 그대로 답으로 쓰면 문제 상황에 맞지 않는다.",
+      "generated_at": "2026-11-11T14:31:35.615612+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "짧은 변을 문자로 놓은 풀이와 긴 변을 문자로 놓은 풀이를 비교한다. 두 풀이에서 구한 해가 서로 어떻게 이어져 같은 직사각형을 나타내는지 설명하게 한다.",
+      "id": "8616e0c7-db39-4290-800c-474581518f21",
+      "model": "gpt-6.1-terra",
+      "model_answer": "민수는 긴 변의 길이를 $(x+2)\\text{ cm}$로 나타낼 수 있다. 직사각형의 넓이가 $48\\text{ cm}^2$이므로 $x(x+2)=48$이다. 이를 풀면 $(x-6)(x+8)=0$이므로 $x=6$ 또는 $x=-8$이다.\n\n지우는 짧은 변의 길이를 $(y-2)\\text{ cm}$로 나타낼 수 있다. 따라서 $y(y-2)=48$이고, 이를 풀면 $(y-8)(y+6)=0$이므로 $y=8$ 또는 $y=-6$이다.\n\n긴 변은 짧은 변보다 $2\\text{ cm}$ 더 길므로 $y=x+2$이다. 따라서 $x=6$은 $y=8$에, $x=-8$은 $y=-6$에 이어진다. 음수는 변의 길이가 될 수 없으므로 $x=-8$과 $y=-6$은 답으로 쓸 수 없다. 두 풀이 모두 짧은 변이 $6\\text{ cm}$, 긴 변이 $8\\text{ cm}$인 직사각형을 나타낸다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "각 문자로 다른 변의 길이를 나타내고, 넓이를 이용하여 $x(x+2)=48$과 $y(y-2)=48$을 세운 이유를 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 방정식의 해를 각각 $x=6$, $x=-8$과 $y=8$, $y=-6$으로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$x$와 $y$가 나타내는 변이 다름을 이용하여 $x=6$과 $y=8$, $x=-8$과 $y=-6$이 각각 이어짐을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "음수는 변의 길이가 될 수 없다는 이유로 두 음수 해를 답에서 제외한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-20-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "직사각형의 짧은 변과 긴 변의 길이를 각각 $6\\text{ cm}$와 $8\\text{ cm}$로 쓴다.",
+          "no": 5,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:31:35.615432+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.462874+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C3-이유설명",
+      "body": "서로 이웃한 두 자연수의 곱이 $56$이다. 작은 수를 $x$라 하자.\n\n민지는 “문제 상황을 이차방정식으로 나타내면, 그 방정식의 해는 언제나 모두 문제의 답이다.”라고 말했다.\n\n이 상황을 나타내는 이차방정식을 세우고, 그렇게 세운 이유를 설명하시오. 또 방정식을 풀어 두 자연수를 구하고, 이 상황을 반례로 들어 민지의 말이 틀렸음을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:32:14.952799+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "작은 수가 $x$이면 이웃한 큰 수는 $x+1$이다. 두 수의 곱이 $56$이므로 $x(x+1)=56$이다.\n\n이를 풀면 $x=7$ 또는 $x=-8$이다. $x=-8$일 때 두 수는 $-8$, $-7$이므로 자연수가 아니다. 방정식의 해라고 해서 모두 문제의 답으로 쓸 수는 없다. $x=7$일 때 두 수는 $7$, $8$이고, 이웃한 두 자연수이며 곱도 $56$이다. 따라서 답은 $7$과 $8$이다.",
+      "generated_at": "2026-11-11T14:32:10.837921+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "주어진 상황을 반례로 사용하여 방정식의 해가 언제나 모두 문제의 답이라는 민지의 말이 틀렸음을 설명하게 한다.",
+      "id": "bfe2c465-07a9-4324-9b20-c5c19ddc5139",
+      "model": "gpt-6.1-terra",
+      "model_answer": "작은 수가 $x$이면 이웃한 큰 수는 $x+1$이다. 두 수의 곱이 $56$이므로 $x(x+1)=56$이다.\n\n이를 풀면 $(x-7)(x+8)=0$이므로 $x=7$ 또는 $x=-8$이다. $x=7$이면 두 수는 $7$, $8$이고, 곱이 $56$이므로 문제에 맞는다. $x=-8$이면 두 수는 $-8$, $-7$이어서 자연수가 아니므로 답이 될 수 없다. 이처럼 방정식의 해 중 문제의 답이 아닌 것이 있으므로 민지의 말은 틀렸다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "큰 수를 $x+1$로 나타내는 이유와 두 수의 곱을 이용하여 $x(x+1)=56$을 세운 이유를 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "이차방정식의 해를 $7$과 $-8$로 구한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$-8$이 해이지만 자연수가 아니어서 문제의 답이 될 수 없다고 설명하여 민지의 말을 반박한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-20-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 수 $7$, $8$이 이웃한 자연수이고 곱이 $56$임을 확인한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-20-M5"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:32:10.837788+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.491621+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C3-이유설명",
+      "body": "직사각형의 가로는 세로보다 $3\\,\\mathrm{cm}$ 더 길고, 넓이는 $40\\,\\mathrm{cm}^2$이다.\n\n세로의 길이를 $x\\,\\mathrm{cm}$라고 할 때, 이차방정식을 세우고 세로의 길이를 구하시오. 식을 세운 이유와 구한 해를 답으로 쓸 수 있는지 판단한 이유를 모두 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:30:50.556286+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가로의 길이는 $(x+3)\\,\\mathrm{cm}$이다. 직사각형의 넓이는 가로의 길이와 세로의 길이를 곱한 것이므로 $x(x+3)=40$이다. 이를 풀면 $x=5$ 또는 $x=-8$이다. 길이는 음수가 될 수 없으므로 $-8$은 답으로 쓸 수 없다. 두 해를 모두 답으로 쓰면 해가 길이로 알맞은지 확인하지 않은 것이다.",
+      "generated_at": "2026-11-11T14:30:46.460936+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "e27ca09e-0889-43af-9fb3-0e4263ab3f40",
+      "model": "gpt-6.1-terra",
+      "model_answer": "세로가 $x\\,\\mathrm{cm}$이므로 가로는 $(x+3)\\,\\mathrm{cm}$이다. 넓이가 $40\\,\\mathrm{cm}^2$이므로 $x(x+3)=40$이다.\n\n이를 풀면 $(x+8)(x-5)=0$이므로 $x=5$ 또는 $x=-8$이다. 세로의 길이는 음수가 될 수 없으므로 $x=-8$은 답으로 쓸 수 없다. 따라서 세로의 길이는 $5\\,\\mathrm{cm}$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "가로의 길이를 $x+3$으로 나타내고, 가로와 세로의 길이를 곱한 값이 넓이임을 이용하여 $x(x+3)=40$을 세운다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "이차방정식을 풀어 두 해 $x=5$, $x=-8$을 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "길이는 음수가 될 수 없으므로 $-8$을 답으로 쓸 수 없다고 설명하고, 세로의 길이를 $5\\,\\mathrm{cm}$라고 답한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-20-M5"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:30:46.460779+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:41.517169+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-20-C3-이유설명",
+      "body": "연속하는 두 자연수의 곱이 $72$입니다. 작은 수를 $x$라고 할 때, 이차방정식을 세워 두 자연수를 구하시오. 식을 세운 이유와 구한 해가 문제 상황에 맞는지 판단한 이유도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:31:08.044495+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "작은 수가 $x$이면 그다음 자연수는 $x+1$입니다. 두 수의 곱이 $72$이므로 $x(x+1)=72$입니다. 이를 풀면 $x=8$ 또는 $x=-9$입니다. $x=8$일 때 두 수는 $8$, $9$이고, 곱은 $72$입니다. $x=-9$일 때 두 수는 $-9$, $-8$이므로 자연수가 아닙니다. 음수도 답으로 쓰면 두 수가 자연수라는 점을 놓친 것입니다.",
+      "generated_at": "2026-11-11T14:31:03.972254+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d54a19fb-405b-48c3-8902-2a73442cd29f",
+      "model": "gpt-6.1-terra",
+      "model_answer": "작은 수가 $x$이면 그다음 자연수는 $x+1$입니다. 두 수의 곱이 $72$이므로 $x(x+1)=72$입니다. 이 식을 풀면 $(x-8)(x+9)=0$이므로 $x=8$ 또는 $x=-9$입니다. $x=8$일 때 두 수는 $8$, $9$이고 곱이 $72$입니다. $x=-9$일 때 두 수는 $-9$, $-8$로 자연수가 아닙니다. 따라서 답은 $8$, $9$입니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "그다음 자연수가 $x+1$이고 두 수의 곱이 $72$임을 이용하여 $x(x+1)=72$를 세운다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "이차방정식의 해 $x=8$, $x=-9$를 모두 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$x=-9$일 때 두 수가 자연수가 아니므로 답으로 쓸 수 없다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-20-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "$8$과 $9$가 문제 상황에 맞음을 확인하고 두 수를 답으로 쓴다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-20-M5"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:31:03.972117+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

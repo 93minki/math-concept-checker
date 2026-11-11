@@ -1,0 +1,459 @@
+{
+  "backlog": [],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T15:40:44.535024+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-22-C1-성질적용",
+      "body": "이차함수 $y=-2(x+3)^2+4$의 그래프의 꼭짓점과 축을 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M1",
+          "no": 1,
+          "text": "꼭짓점 $(3, 4)$, 축 $x=3$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "꼭짓점 $(-3, 4)$, 축 $x=-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M2",
+          "no": 3,
+          "text": "꼭짓점 $(-3, 4)$, 축 $x=4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M2",
+          "no": 4,
+          "text": "꼭짓점 $(-3, 4)$, 축 $y=-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "꼭짓점 $(-3, -4)$, 축 $x=-3$"
+        }
+      ],
+      "created_at": "2026-11-11T14:48:54.789435+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x+3=0$일 때 꼭짓점의 $x$좌표는 $-3$이고, $y$좌표는 $4$이다. 따라서 꼭짓점은 $(-3, 4)$이고 축은 $x=-3$이다. ①은 꼭짓점의 $x$좌표의 부호를 잘못 쓴 것이다. ③은 꼭짓점의 $y$좌표를 축의 방정식에 쓴 것이고, ④는 축의 방정식에서 $x$를 $y$로 잘못 쓴 것이다.",
+      "generated_at": "2026-11-11T14:48:54.311826+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "03a52866-7be4-4298-8d3b-0cffa238bac2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:48:54.311654+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:44.564029+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-22-C1-오개념판별",
+      "body": "이차함수 $y=2(x+3)^2-1$의 그래프에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M1",
+          "no": 1,
+          "text": "꼭짓점은 $(3,-1)$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M2",
+          "no": 2,
+          "text": "축의 방정식은 $x=-1$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M2",
+          "no": 3,
+          "text": "축의 방정식은 $y=-3$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "꼭짓점은 $(-3,-1)$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "꼭짓점은 $(-3,1)$이다."
+        }
+      ],
+      "created_at": "2026-11-11T14:49:26.950792+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$(x+3)^2=0$이 되는 $x$의 값은 $-3$이다. 따라서 꼭짓점은 $(-3,-1)$이고, 축의 방정식은 $x=-3$이다. ①은 꼭짓점의 $x$좌표의 부호를 반대로 생각한 것이다. ②는 꼭짓점의 $y$좌표를 이용해 축을 나타낸 것이다. ③은 축을 나타낼 때 $x$ 대신 $y$를 쓴 것이다. ⑤는 꼭짓점의 $y$좌표의 부호를 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T14:49:26.434119+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "dc522892-dfc8-4ac1-9bb4-050486e5abe5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:49:12.575737+00:00",
+          "issues": [
+            "보기 ③, ④의 축에 관한 오개념 M2를 가진 학생도 올바른 꼭짓점을 알면 보기 ⑤를 옳다고 판단할 수 있다. 따라서 정답을 골라도 M2가 없는지 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:49:26.433956+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-22-C2-성질적용",
+      "body": "이차함수 $y=-\\frac{1}{2}x^2$의 그래프에 대한 설명으로 옳은 것은? 폭은 $y=x^2$의 그래프와 비교한다.",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "위로 볼록하고, 폭이 넓으며, 제3사분면과 제4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 2,
+          "text": "아래로 볼록하고, 폭이 좁으며, 제1사분면과 제2사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 3,
+          "text": "위로 볼록하고, 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 4,
+          "text": "아래로 볼록하고, 폭이 넓으며, 제1사분면과 제2사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 5,
+          "text": "위로 볼록하고, 폭이 넓으며, 제1사분면과 제2사분면을 지난다."
+        }
+      ],
+      "created_at": "2026-11-11T15:34:04.171922+00:00",
+      "difficulty": "normal",
+      "disabled_at": "2026-11-11T15:37:00.588085+00:00",
+      "explanation": "$x^2$의 계수가 음수이므로 그래프는 위로 볼록하다. 또 계수의 절댓값 $\\frac{1}{2}$이 $1$보다 작으므로 $y=x^2$의 그래프보다 폭이 넓다. $x$가 $0$이 아닐 때 $y$는 음수이므로 그래프는 제3사분면과 제4사분면을 지난다. 계수의 부호를 잘못 판단하면 ②나 ④를, 절댓값이 작을수록 폭이 좁아진다고 생각하면 ②나 ③을 고를 수 있다. $y$가 양수라고 잘못 생각하면 ⑤를 고를 수 있다.",
+      "generated_at": "2026-11-11T15:34:04.092761+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "43857e92-a7e7-4c89-9cf3-1414fb9ef2fb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T15:33:40.216007+00:00",
+          "issues": [
+            "여러 이차함수의 그래프를 대상으로 볼록한 방향, 폭의 순서, 지나는 사분면을 판단하는 대신 한 그래프의 성질만 판단한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T15:34:04.092557+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:44.589036+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-22-C2-성질적용",
+      "body": "이차함수 $y=-2x^2$의 그래프에 대한 설명으로 옳은 것은? 폭은 $y=x^2$의 그래프와 비교한다.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "아래로 볼록하고 폭이 좁으며, 제1사분면과 제2사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 2,
+          "text": "위로 볼록하고 폭이 넓으며, 제3사분면과 제4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "위로 볼록하고 폭이 좁으며, 제1사분면과 제2사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "아래로 볼록하고 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "위로 볼록하고 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
+        }
+      ],
+      "created_at": "2026-11-11T15:38:02.519948+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-2$는 음수이므로 그래프는 위로 볼록하다. 또 $|-2|=2$는 $1$보다 크므로 $y=x^2$의 그래프보다 폭이 좁다. $x$가 $0$이 아닐 때 $y$는 항상 음수이므로 그래프는 제3사분면과 제4사분면을 지난다. ②는 $x^2$의 계수의 절댓값이 클수록 폭이 넓어진다고 잘못 생각한 경우이다.",
+      "generated_at": "2026-11-11T15:38:02.407001+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "510d7dbb-49b9-4191-aef7-5c6a490682ee",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T15:37:22.970322+00:00",
+          "issues": [
+            "한 이차함수의 폭을 기준 그래프와 비교할 뿐, 여러 이차함수 그래프의 폭이 좁거나 넓은 순서를 판단하는 측정 의도를 평가하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T15:37:43.756160+00:00",
+          "issues": [
+            "판단 대상이 y=-2x² 하나이고 폭도 기준 그래프와만 비교하므로, 여러 이차함수의 폭 순서와 그래프의 성질을 판단하는 측정 의도를 충족하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T15:38:02.406826+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-22-C2-성질적용",
+      "body": "이차함수 $y=-2x^2$의 그래프에 대한 설명으로 옳은 것은? 폭은 $y=x^2$의 그래프와 비교한다.",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "위로 볼록하고, 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 2,
+          "text": "아래로 볼록하고, 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 3,
+          "text": "위로 볼록하고, 폭이 넓으며, 제3사분면과 제4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 4,
+          "text": "위로 볼록하고, 폭이 좁으며, 제1사분면과 제2사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 5,
+          "text": "아래로 볼록하고, 폭이 넓으며, 제1사분면과 제2사분면을 지난다."
+        }
+      ],
+      "created_at": "2026-11-11T14:49:52.391494+00:00",
+      "difficulty": "normal",
+      "disabled_at": "2026-11-11T15:32:57.557326+00:00",
+      "explanation": "$x^2$의 계수가 음수이므로 위로 볼록하다. 계수의 절댓값 $2$가 $1$보다 크므로 $y=x^2$의 그래프보다 폭이 좁다. 또 $x$가 $0$이 아닐 때 $y$는 음수이므로 그래프는 제3사분면과 제4사분면을 지난다. 계수의 부호로 폭을 판단하거나, 계수의 절댓값이 클수록 폭이 넓어진다고 생각하지 않도록 주의한다.",
+      "generated_at": "2026-11-11T14:49:51.865621+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b8ee4d33-88fa-4461-8e73-853f6b1d169c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T14:49:51.865484+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:44.618109+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-22-C3-성질적용",
+      "body": "이차함수 $y=2(x-3)^2-4$에서 $x$의 범위가 실수 전체일 때, 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "최솟값은 $-4$이고, 최댓값은 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M4",
+          "no": 2,
+          "text": "최솟값은 $3$이고, 최댓값은 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M4",
+          "no": 3,
+          "text": "최댓값은 $-4$이고, 최솟값은 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-22-M4",
+          "no": 4,
+          "text": "최댓값은 $3$이고, 최솟값은 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "최솟값은 $4$이고, 최댓값은 없다."
+        }
+      ],
+      "created_at": "2026-11-11T14:50:04.098235+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$(x-3)^2$은 $0$ 이상이므로 $y$는 $-4$ 이상이다. $x=3$일 때 $y=-4$이므로 최솟값은 $-4$이다. $x$가 커짐에 따라 $y$도 한없이 커지므로 최댓값은 없다. 꼭짓점의 $x$좌표인 $3$은 최솟값이 아니다. 최솟값은 꼭짓점의 $y$좌표이다.",
+      "generated_at": "2026-11-11T14:50:03.605469+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "eba09be0-6d41-4891-93b7-4f278b6b6a84",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:50:03.605351+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:44.644562+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-22-C3-이유설명",
+      "body": "이차함수 $y=2(x-3)^2-1$에서 $x$의 범위는 실수 전체이다. 이 함수는 최댓값과 최솟값 중 어느 것을 가지는지 쓰고, 그 값을 구하시오. 이때 $x^2$의 계수의 부호와 그래프의 꼭짓점을 이용하여 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:50:18.959134+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x^2$의 계수 $2$는 양수이므로 그래프는 아래로 볼록하다. 꼭짓점이 $(3,-1)$이므로 $x=3$일 때 $y$는 가장 작은 값 $-1$을 가진다. $x$가 $3$에서 멀어질수록 $y$는 한없이 커지므로 최댓값은 없다. 꼭짓점의 $x$좌표인 $3$을 최솟값으로 답하거나, 아래로 볼록한 그래프가 최댓값을 가진다고 생각하지 않도록 주의한다.",
+      "generated_at": "2026-11-11T14:50:18.473535+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "66b6cac0-3ec6-4436-b6b9-7bdba04f0018",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$x^2$의 계수 $2$가 양수이므로 그래프는 아래로 볼록하다. 꼭짓점은 $(3,-1)$이므로 $x=3$일 때 최솟값 $-1$을 가진다. 최댓값은 없다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$x^2$의 계수가 양수이므로 그래프가 아래로 볼록하다고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-22-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "꼭짓점이 $(3,-1)$임을 쓴다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "꼭짓점을 근거로 최솟값이 $-1$이라고 쓰고, 최댓값은 없다고 쓴다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-22-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:50:18.473418+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    }
+  ]
+}
