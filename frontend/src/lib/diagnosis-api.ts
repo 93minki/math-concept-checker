@@ -60,6 +60,16 @@ export type Diagnosis = {
   unit: Pick<Unit, "id" | "grade" | "name" | "publisher" | "status">;
   items: Item[];
 };
+export type HistoryItem = {
+  id: string;
+  status: Diagnosis["status"];
+  abort_reason: Diagnosis["abort_reason"];
+  started_at: string;
+  completed_at: string | null;
+  aborted_at: string | null;
+  unit: Pick<Unit, "grade" | "name" | "publisher">;
+};
+export type HistoryPage = { items: HistoryItem[]; next_before: string | null };
 
 export class ApiError extends Error {
   constructor(
@@ -92,6 +102,11 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   return response.json() as Promise<T>;
 }
 export const getUnits = () => request<Unit[]>("/units");
+export const getHistory = (limit = 20, before?: string) => {
+  const params = new URLSearchParams({ limit: String(limit) });
+  if (before !== undefined) params.set("before", before);
+  return request<HistoryPage>(`/diagnoses?${params}`);
+};
 export const startDiagnosis = (display_unit_id: number, restart: boolean) =>
   request<{ diagnosis_id: string }>("/diagnoses", {
     method: "POST",

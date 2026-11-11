@@ -70,6 +70,25 @@ async function submit(page: Page, stage: 1 | 2) {
   return response.json() as Promise<{ status: "stage2" | "completed" }>;
 }
 
+async function openHistory(page: Page, diagnosisId: string) {
+  const link = page.getByRole("link", { name: "지난 기록으로" });
+  await expect(link).toBeInViewport();
+  await link.click();
+  await expect(page).toHaveURL(/\/history$/);
+  await expect(page.getByRole("heading", { name: "지난 기록" })).toBeVisible();
+  const entry = page.locator(`a[href="/diagnoses/${diagnosisId}"]`);
+  // Newest first: the diagnosis we just touched is the first card.
+  await expect(page.locator('a[href^="/diagnoses/"]').first()).toHaveAttribute(
+    "href",
+    `/diagnoses/${diagnosisId}`,
+  );
+  await expect(entry).toBeInViewport();
+  await noHorizontalOverflow(page);
+  return entry;
+}
+const diagnosisId = (page: Page) =>
+  new URL(page.url()).pathname.split("/").pop() ?? "";
+
 test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는다", async ({
   page,
 }) => {
@@ -121,6 +140,22 @@ test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는
   const text = await nextSteps.innerText();
   await page.reload();
   await expect(nextSteps).toHaveText(text);
+  // F-10: the finished diagnosis is in the history list and reopens with its
+  // report and stored math rendered by KaTeX.
+  const finishedId = diagnosisId(page);
+  const finished = await openHistory(page, finishedId);
+  await expect(finished).toContainText("완료");
+  await finished.click();
+  await expect(page).toHaveURL(new RegExp(`/diagnoses/${finishedId}$`));
+  await expect(
+    page.getByRole("heading", { name: "이해도 리포트" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "문제별 결과" }),
+  ).toBeVisible();
+  await expect(page.locator(".katex").first()).toBeVisible();
+  await expect(page.getByText("수식을 표시하지 못했어요")).toHaveCount(0);
+  await noHorizontalOverflow(page);
   await page.getByRole("link", { name: "← 단원 선택으로" }).click();
   await start(page);
   for (let i = 0; i < first.bodies.length; i++) {
@@ -134,4 +169,12 @@ test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는
     if (i < first.bodies.length - 1)
       await page.getByRole("button", { name: "다음", exact: true }).click();
   }
+  // F-10: an in-progress diagnosis opens from the list and continues.
+  const runningId = diagnosisId(page);
+  const running = await openHistory(page, runningId);
+  await expect(running).toContainText("진행 중");
+  await expect(running).toContainText("이어서 풀기");
+  await running.click();
+  await expect(page).toHaveURL(new RegExp(`/diagnoses/${runningId}$`));
+  await expect(progress(page)).toHaveText(/^1\s*\/\s*\d+$/);
 });

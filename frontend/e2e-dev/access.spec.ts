@@ -40,6 +40,37 @@ async function startDiagnosis(
   return response.json() as Promise<Diagnosis>;
 }
 
+type HistoryPage = {
+  items: { id: string; status: string }[];
+  next_before: string | null;
+};
+
+// Reads every page of the caller's history (records pile up and are never
+// deleted, so this must not assume a fixed count).
+async function historyIds(
+  request: APIRequestContext,
+  accessToken: string,
+  limit: number,
+  maxPages = Infinity,
+): Promise<string[]> {
+  const ids: string[] = [];
+  let before: string | null = null;
+  for (let page = 0; page < maxPages; page++) {
+    const params: Record<string, string | number> = { limit };
+    if (before) params.before = before;
+    const response = await request.get(`${api()}/diagnoses`, {
+      headers: headers(accessToken),
+      params,
+    });
+    expect(response.status()).toBe(200);
+    const body = (await response.json()) as HistoryPage;
+    ids.push(...body.items.map((item) => item.id));
+    before = body.next_before;
+    if (!before) break;
+  }
+  return ids;
+}
+
 function answerFor(item: Item) {
   return item.question_type === "multiple_choice"
     ? { selected_choice: item.choices[0].no }
@@ -65,7 +96,7 @@ test("다른 계정의 진단과 문제 은행에 접근할 수 없다", async (
   const units = (await unitsResponse.json()) as Unit[];
   const unit = units.find((value) => value.name === unitName);
   if (!unit) throw new Error("시험 단원을 찾지 못했어요");
-  await startDiagnosis(request, a.accessToken, unit.id);
+  const ownStarted = await startDiagnosis(request, a.accessToken, unit.id);
   const diagnosis = await startDiagnosis(request, b.accessToken, unit.id);
   expect(diagnosis.items.length).toBeGreaterThanOrEqual(2);
   const first = diagnosis.items[0];
@@ -215,4 +246,18 @@ test("다른 계정의 진단과 문제 은행에 접근할 수 없다", async (
     prompt_version: "v5",
   });
   expect(reportInsert.error?.code).toBe("42501");
+
+  // F-10 history: own records only, and cursor paging against the real DB
+  // returns the same order as one large page (same started_at included).
+  expect((await request.get(`${api()}/diagnoses`)).status()).toBe(401);
+  const aIds = await historyIds(request, a.accessToken, 50);
+  expect(aIds).toContain(ownStarted.id);
+  expect(aIds).not.toContain(diagnosis.id);
+  expect(new Set(aIds).size).toBe(aIds.length);
+  const bIds = await historyIds(request, b.accessToken, 50);
+  expect(bIds[0]).toBe(diagnosis.id);
+  expect(bIds).not.toContain(ownStarted.id);
+  const paged = await historyIds(request, a.accessToken, 2, 3);
+  expect(paged).toEqual(aIds.slice(0, paged.length));
+  expect(paged.length).toBe(Math.min(6, aIds.length));
 });

@@ -235,6 +235,9 @@ export default function DiagnosisView({ id }: { id: string }) {
       <Link className="study-link" href="/">
         ← 단원 선택으로
       </Link>
+      <Link className="study-link" href="/history">
+        지난 기록으로
+      </Link>
       {error && <Notice role="alert">{error}</Notice>}
       {!diagnosis && !error && <p>진단을 불러오고 있어요.</p>}
       {diagnosis && (

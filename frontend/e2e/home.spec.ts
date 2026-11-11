@@ -40,6 +40,13 @@ test("로그아웃 사용자는 진단 화면에서 로그인으로 이동한다
   await expect(page).toHaveURL(/\/login$/);
 });
 
+test("로그아웃 사용자는 지난 기록에서 로그인으로 이동한다", async ({
+  page,
+}) => {
+  await page.goto("/history");
+  await expect(page).toHaveURL(/\/login$/);
+});
+
 // Before React runs, a native form submit would send the fields as a GET
 // query (?email=…&password=…). With JavaScript off, the page must not let
 // that happen: the submit button stays disabled and the form is POST.

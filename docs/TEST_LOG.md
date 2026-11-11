@@ -141,3 +141,10 @@
 - 원인 분류: 요구사항 오해
 - 원인: 이전 단계의 테스트가 출제 시 AI를 호출하지 않는 요구사항을 진단 패키지 전체에 AI import를 금지하는 방식으로 검사했으나, 새 승인 설계는 동일 패키지에 AI 채점·리포트 연결을 추가함.
 - 해결: 사용자 승인으로 출제 코드의 import 검사로 범위를 바로잡고 진단 시작 API에서 가짜 AI 호출이 없는지 동작 테스트를 추가.
+
+### 2026-11-11 — frontend/e2e-dev/access.spec.ts:다른 계정의 진단과 문제 은행에 접근할 수 없다, flow.spec.ts (desktop·mobile)
+- 작업: 계획 시작 전 회사 PC 환경 확인 (`pnpm test:e2e:dev`), F-01·F-04
+- 증상: access는 `POST /signup/complete`가 200이 아니라 401. flow는 단원 선택 화면이 "단원을 불러오고 있어요."에서 멈춰 180초 시간 초과.
+- 원인 분류: 환경·설정
+- 원인: PC 시계가 약 2초 늦었다 (`sntp time.apple.com` +1.97s). Supabase가 막 발급한 토큰의 `iat`가 백엔드 기준 미래가 되어, PyJWT 2.15.1 `_validate_iat`가 `ImmatureSignatureError`를 냈고 `backend/app/auth.py`가 leeway 0으로 이를 401로 바꿨다.
+- 해결: 사용자가 `sudo sntp -sS time.apple.com`으로 시계를 맞춘 뒤 3개 모두 통과. 코드에 허용 오차(`leeway`)를 둘지는 결정 대기 (`docs/PROGRESS.md`).
