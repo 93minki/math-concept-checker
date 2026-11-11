@@ -1,0 +1,1344 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수02-10-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:27:09.090202+00:00",
+          "issues": [
+            "다항식을 단항식으로 나누지 않고 뺄셈과 단항식의 곱셈만으로 정답을 구할 수 있어, 의도한 나눗셈 계산 능력을 직접 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:27:38.478951+00:00",
+          "issues": [
+            "다항식의 각 항을 단항식으로 나누거나 역수를 곱해 계산하지 않아도, 결과에 2x를 곱하여 답을 구할 수 있으므로 의도한 나눗셈 계산을 측정하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:28:15.548916+00:00",
+          "issues": [
+            "다항식을 단항식으로 나누지 않고, 주어진 몫에 단항식을 곱해 정답을 구할 수 있으므로 의도한 나눗셈 계산 능력을 직접 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:28:15.726724+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T11:42:33.43641+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T11:38:31.966884+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C1-성질적용",
+      "body": "$a$는 수이다. 모든 $x$에 대하여 $-2x(3x-a)+x(2x+1)$을 계산한 결과가 $-4x^2+7x$와 같을 때, $a$의 값은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M2",
+          "no": 1,
+          "text": "$-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4$"
+        }
+      ],
+      "created_at": "2026-11-11T11:22:48.898167+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "각 항에 단항식을 곱하면 $-2x(3x-a)+x(2x+1)=-6x^2+2ax+2x^2+x=-4x^2+(2a+1)x$이다. 따라서 $2a+1=7$이므로 $a=3$이다.\n\n①은 $-2x$를 둘째 항 $-a$에 곱할 때 부호를 잘못 생각한 경우이다. $(-2x)\\times(-a)$는 $-2ax$가 아니라 $2ax$이다.",
+      "generated_at": "2026-11-11T11:22:48.740952+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "계산한 결과를 주고, 그 결과가 나오게 하는 수 $a$를 거꾸로 구하게 한다.",
+      "id": "0114b05e-626b-47d4-a51c-560c9a9007ee",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:22:48.740825+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:31.99728+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C1-성질적용",
+      "body": "$x>2$이다. 가로의 길이가 $3x-2$, 세로의 길이가 $2x$인 직사각형이 있다. 이 직사각형의 한쪽 모서리에서 가로의 길이가 $x+1$, 세로의 길이가 $x$인 직사각형을 잘라 냈다. 남은 부분의 넓이는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5x^2-5x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M1",
+          "no": 2,
+          "text": "$5x^2-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M2",
+          "no": 3,
+          "text": "$5x^2-3x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$5x^2+5x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$7x^2-3x$"
+        }
+      ],
+      "created_at": "2026-11-11T11:23:10.217352+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "큰 직사각형의 넓이는 $2x(3x-2)=6x^2-4x$이다. 잘라 낸 직사각형의 넓이는 $x(x+1)=x^2+x$이다. 따라서 남은 부분의 넓이는 $(6x^2-4x)-(x^2+x)=5x^2-5x$이다.\n\n②는 단항식을 각 괄호 안의 첫째 항에만 곱한 경우이다. ③은 잘라 낸 넓이를 뺄 때 $-x(x+1)$의 둘째 항을 $+x$로 잘못 계산한 경우이다.",
+      "generated_at": "2026-11-11T11:23:10.060502+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "직사각형을 잘라 낸 상황에서 남은 넓이를 식으로 나타낸 뒤 계산해야 한다.",
+      "id": "971589d7-02bd-4ea5-872b-cc4815ac2394",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:23:10.060346+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.024212+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C1-성질적용",
+      "body": "다음 식을 전개한 것은?\n\n$-2x(3x-4)$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M1",
+          "no": 1,
+          "text": "$-6x^2-4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M2",
+          "no": 2,
+          "text": "$-6x^2-8x$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-6x^2+8x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6x^2+8x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$-6x+8x^2$"
+        }
+      ],
+      "created_at": "2026-11-11T11:22:19.065637+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-2x$를 괄호 안의 각 항에 곱하면 $(-2x)(3x)+(-2x)(-4)=-6x^2+8x$이다. 따라서 정답은 ③이다.\n\n①은 첫째 항에만 $-2x$를 곱한 것이다. ②는 둘째 항에 곱할 때 음수끼리의 곱을 음수로 잘못 계산한 것이다.",
+      "generated_at": "2026-11-11T11:22:18.905633+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "14ea3b0c-66ff-417a-8066-8a97ab0a1626",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:22:18.905521+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.054162+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C1-성질적용",
+      "body": "다음 식을 전개한 것은?\n\n$3a(2a^2-a+2)$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M1",
+          "no": 1,
+          "text": "$6a^3-a+2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6a^3+3a^2+6a$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6a^3-3a^2+6a$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3a^2+6a$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6a^3-3a^2+2a$"
+        }
+      ],
+      "created_at": "2026-11-11T11:22:32.121714+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$3a$를 괄호 안의 각 항에 곱하면 $3a\\times 2a^2=6a^3$, $3a\\times(-a)=-3a^2$, $3a\\times 2=6a$이다. 따라서 답은 ③이다.\n\n①은 $3a$를 첫째 항에만 곱하고 나머지 항에는 곱하지 않은 것이다.",
+      "generated_at": "2026-11-11T11:22:31.978462+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "cdd377c1-c251-4bdd-81db-a3af375526bc",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:22:31.978379+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.089782+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C1-오개념판별",
+      "body": "세 학생이 $-2x(3x-1)$을 전개했다.\n\n민: $-6x^2-1$\n지: $-6x^2-2x$\n수: $-6x^2+2x$\n\n전개가 옳은 학생과 그 까닭을 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M1",
+          "no": 1,
+          "text": "민만 옳다. $-2x$는 괄호 안의 첫째 항에만 곱해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M2",
+          "no": 2,
+          "text": "지만 옳다. 둘째 항을 계산할 때는 원래 둘째 항의 부호를 그대로 두어야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "수만 옳다. $-2x$를 괄호 안의 각 항에 곱하고 부호도 바르게 계산했다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "지와 수가 모두 옳다. 두 학생 모두 괄호 안의 각 항에 $-2x$를 곱했기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "세 학생 모두 틀렸다. 첫째 항을 계산한 결과는 $6x^2$이어야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T11:24:31.172182+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$-2x$를 괄호 안의 두 항에 각각 곱하면 $(-2x)\\times 3x=-6x^2$, $(-2x)\\times(-1)=2x$이다. 따라서 수만 옳다.\n\n민은 첫째 항에만 $-2x$를 곱했다. 지는 둘째 항을 계산할 때 음수끼리 곱하면 양수가 되는 것을 놓쳤다. 두 항에 모두 곱하더라도 부호까지 바르게 계산해야 한다. 또 첫째 항을 계산한 결과는 $6x^2$이 아니라 $-6x^2$이다.",
+      "generated_at": "2026-11-11T11:24:30.746249+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "세 학생의 전개를 비교하고, 옳은 학생과 그 까닭을 함께 판단하도록 했다.",
+      "id": "c401c893-2b7b-4dfe-92e9-650a75185d20",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:24:30.746116+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.127629+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C1-오개념판별",
+      "body": "한 학생이 $-4y(y-2)$를 다음과 같이 계산했다.\n\n$-4y(y-2)=-4y^2-8y$\n\n이 학생의 계산에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M1",
+          "no": 1,
+          "text": "첫째 항에만 $-4y$를 곱해야 하므로 $-4y^2-2$가 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M2",
+          "no": 2,
+          "text": "둘째 항에는 음의 부호를 반영하지 않아도 되므로 학생의 계산이 옳다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "둘째 항은 $-4y$와 $-2$를 곱한 $8y$가 되어야 하므로 학생의 계산은 틀렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "첫째 항이 $4y^2$가 되어야 하므로 학생의 계산은 틀렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "학생은 둘째 항에서 $y$를 빠뜨렸으므로 계산이 틀렸다."
+        }
+      ],
+      "created_at": "2026-11-11T11:25:02.189233+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$-4y$를 괄호 안의 각 항에 곱하면 $-4y\\times y=-4y^2$, $-4y\\times(-2)=8y$이다. 따라서 바른 계산은 $-4y(y-2)=-4y^2+8y$이다.\n\n①은 첫째 항에만 단항식을 곱했다. ②는 둘째 항을 곱할 때 음의 부호를 반영하지 않았다. ④는 첫째 항의 부호를 잘못 판단했다. ⑤에서 말한 것과 달리 학생의 둘째 항에는 $y$가 있다.",
+      "generated_at": "2026-11-11T11:25:02.010649+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다른 학생의 계산을 보고 옳고 그름과 그 까닭을 판단하게 했다.",
+      "id": "cff5cb34-c7ee-4eca-8d79-d8cc09f213c2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:25:02.010503+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.164981+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C1-오개념판별",
+      "body": "두 학생이 $-2x(3x-4)$를 다음과 같이 계산했다.\n\n가: $-6x^2-4$\n나: $-6x^2-8x$\n\n두 학생이 잘못 계산한 까닭을 각각 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M1",
+          "no": 1,
+          "text": "가: 바르게 계산했다. / 나: 음의 부호를 첫째 항에만 반영했다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M2",
+          "no": 2,
+          "text": "가: 첫째 항에만 $-2x$를 곱했다. / 나: 바르게 계산했다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "가: 첫째 항에만 $-2x$를 곱했다. / 나: 음의 부호를 첫째 항에만 반영했다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "가: 첫째 항에만 $-2x$를 곱했다. / 나: 둘째 항을 계산할 때 $4$에 $2$를 곱하지 않았다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가: 첫째 항을 계산할 때 $3$에 $-2$를 잘못 곱했다. / 나: 음의 부호를 첫째 항에만 반영했다."
+        }
+      ],
+      "created_at": "2026-11-11T11:23:47.430828+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-2x$를 괄호 안의 각 항에 곱하면 $-2x(3x-4)=-6x^2+8x$이다.\n\n가는 첫째 항에만 $-2x$를 곱하고 둘째 항은 그대로 두었다. 나는 각 항에 $2x$를 곱했지만, 음의 부호는 첫째 항에만 반영했다.",
+      "generated_at": "2026-11-11T11:23:47.29334+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4265be4a-51d1-40a7-8070-1a283d5c5556",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:23:47.293259+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.205679+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C1-오개념판별",
+      "body": "$-4a(2a+3b)$를 전개하는 방법으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M1",
+          "no": 1,
+          "text": "첫째 항에만 $-4a$를 곱하고, 둘째 항은 그대로 쓴다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M2",
+          "no": 2,
+          "text": "첫째 항에는 $-4a$를 곱하고, 둘째 항에는 $4a$를 곱한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫째 항과 둘째 항에 각각 $-4a$를 곱한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "첫째 항은 그대로 쓰고, 둘째 항에만 $-4a$를 곱한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "첫째 항에는 $4a$를 곱하고, 둘째 항에는 $-4a$를 곱한다."
+        }
+      ],
+      "created_at": "2026-11-11T11:24:09.320878+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "괄호 안의 각 항에 모두 $-4a$를 곱해야 한다. 따라서 $-4a(2a+3b)=-8a^2-12ab$이다. ①처럼 첫째 항에만 곱하면 둘째 항에 $-4a$를 곱하지 않게 된다. ②처럼 둘째 항에 $4a$를 곱하면 둘째 항의 부호가 잘못된다.",
+      "generated_at": "2026-11-11T11:24:09.169943+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8db682d1-befb-461f-a20b-f5a4c379d419",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:24:09.169828+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.232252+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-성질적용",
+      "body": "다음 식을 계산하여 간단히 했을 때, $x$의 계수가 $5$가 되도록 하는 수 $a$의 값은? (단, $x\\ne 0$)\n\n$(6x^2+3x)\\div 3x+ax$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M3",
+          "no": 2,
+          "text": "$0$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$1$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5$"
+        }
+      ],
+      "created_at": "2026-11-11T11:26:41.646748+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "각 항을 $3x$로 나누면 $(6x^2+3x)\\div 3x=2x+1$이다. 따라서 주어진 식은 $(2+a)x+1$이다. $x$의 계수가 $5$이므로 $2+a=5$, $a=3$이다.\n\n첫째 항만 나누고 $2x+3x+ax$로 계산하면 $a=0$을 고를 수 있다. 둘째 항도 $3x$로 나누어야 한다.",
+      "generated_at": "2026-11-11T11:26:41.485054+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "계산한 식에서 $x$의 계수가 $5$라는 것을 이용하여 거꾸로 $a$의 값을 구한다.",
+      "id": "10d2110b-f041-4a6d-88db-a669c961da66",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:26:06.654922+00:00",
+          "issues": [
+            "몫을 이용한 단항식과 다항식의 곱셈만으로 풀 수 있어, 각 항을 단항식으로 나누거나 역수를 곱해 몫을 구하는 계산을 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:26:41.484796+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:49:35.889973+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-성질적용",
+      "body": "$x\\ne 0$일 때, 다음은 어떤 학생이 식을 계산한 과정이다.\n\n$(8x^3-6x^2)\\div 2x$\n\n$=(8x^3\\div 2x)-(6x^2\\div 2x)$ …… (가)\n\n$=4x^2-6x^2$ …… (나)\n\n$=-2x^2$ …… (다)\n\n처음으로 잘못된 단계와 바르게 계산한 답을 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M3",
+          "no": 1,
+          "text": "(가), $-2x^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "(가), $4x^2-3x$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "(나), $4x^2-3x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "(나), $4x^2-6x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "(다), $4x^2-3x$"
+        }
+      ],
+      "created_at": "2026-11-11T11:42:33.511055+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "(가)에서는 두 항을 각각 $2x$로 나누었다. 하지만 (나)에서는 둘째 항을 $2x$로 나누지 않았다. $6x^2\\div 2x=3x$이므로 바른 답은 $4x^2-3x$이다.\n\n①은 첫째 항만 $2x$로 나누면 된다고 잘못 생각한 경우이다. 두 항을 모두 $2x$로 나누어야 한다.",
+      "generated_at": "2026-11-11T11:42:33.367273+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "학생의 계산 과정에서 처음으로 잘못된 단계를 찾고, 두 항을 각각 나누어 바른 답도 구해야 한다.",
+      "id": "c250f06f-1b0f-4fd2-96b3-2eacd81dcfb3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:42:33.367170+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.267934+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-성질적용",
+      "body": "$x\\ne 0$일 때, $(6x^2+9x)\\div 3x$를 계산한 결과는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2x+3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M3",
+          "no": 2,
+          "text": "$11x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M4",
+          "no": 3,
+          "text": "$2x^3+3x^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2x+9$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2x^2+3$"
+        }
+      ],
+      "created_at": "2026-11-11T11:25:16.222762+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "각 항을 $3x$로 나누면 $6x^2\\div 3x+9x\\div 3x=2x+3$입니다.\n②는 첫째 항만 나누고 둘째 항은 그대로 둔 뒤 더한 것입니다. ③은 $3x$로 나눌 때 $\\frac{1}{3}x$를 곱한 것입니다.",
+      "generated_at": "2026-11-11T11:25:16.040213+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "26e6ae6c-943c-45ff-beb9-b4fa8ef2829a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:25:16.040113+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.296624+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-성질적용",
+      "body": "$x\\ne 0$일 때, $(8x^3-12x^2+4x)\\div(-4x)$를 계산한 결과는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-2x^2+3x-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M3",
+          "no": 2,
+          "text": "$-14x^2+4x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2x^2-3x+1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$-2x^2+3x+1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$-2x^2-3x-1$"
+        }
+      ],
+      "created_at": "2026-11-11T11:25:33.403112+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "각 항을 $-4x$로 나누면 $8x^3\\div(-4x)=-2x^2$, $-12x^2\\div(-4x)=3x$, $4x\\div(-4x)=-1$입니다. 따라서 답은 $-2x^2+3x-1$입니다. ②는 첫째 항만 나누고 나머지 항은 나누지 않은 결과입니다.",
+      "generated_at": "2026-11-11T11:25:33.241427+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "137ca7e6-7ab3-4654-9a95-d3ee9d8bd335",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:25:33.241364+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.3236+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-오개념판별",
+      "body": "$x\\ne 0$일 때, 두 학생이 $(6x^2+3x)\\div 3x$를 다음과 같이 계산했다.\n\n민수: $(6x^2+3x)\\div 3x=2x+3x$\n\n지수: $(6x^2+3x)\\div 3x=(6x^2+3x)\\times \\frac{1}{3}x$\n\n두 학생의 계산에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M3",
+          "no": 1,
+          "text": "민수의 계산은 옳다. 첫째 항만 $3x$로 나누면 된다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M4",
+          "no": 2,
+          "text": "지수의 계산은 옳다. $3x$로 나눌 때 $\\frac{1}{3}$을 곱하고 $x$도 곱하면 된다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "민수의 계산은 틀리다. 둘째 항을 $3$으로만 나누어 $2x+x$로 고쳐야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "지수의 계산은 틀리다. 각 항을 $x$로만 나누어야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 학생의 계산은 모두 틀리다. 각 항을 $3x$로 나누어야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T11:30:06.976618+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "다항식의 각 항을 $3x$로 나누면 $(6x^2+3x)\\div 3x=2x+1$이다.\n\n민수는 첫째 항만 $3x$로 나누고 둘째 항은 나누지 않았다. 지수는 $3x$로 나누면서 $\\frac{1}{3}$뿐 아니라 $x$도 곱했다. 하지만 각 항을 $3$으로 나눈 뒤 $x$로도 나누어야 한다.\n\n둘째 항을 $3$으로만 나누거나 각 항을 $x$로만 나누어도 바른 계산이 아니다.",
+      "generated_at": "2026-11-11T11:30:06.818886+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 학생의 서로 다른 계산을 보고 옳고 그름을 판단하게 했다.",
+      "id": "e0d8366d-7daa-47de-aa8f-c3fa5e57b305",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:30:06.818828+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.351372+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-오개념판별",
+      "body": "$x\\ne 0$일 때, 서윤이는 $(10x^2+4xy)\\div 2x$를 계산한 뒤 답을 확인하려고 한다.\n\n서윤: “구한 식의 첫째 항에만 $2x$를 곱해서 원래 식의 첫째 항이 나오면 답이 맞아.”\n\n서윤이의 말과 답을 확인하는 방법에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M3",
+          "no": 1,
+          "text": "서윤이의 말은 옳다. 첫째 항만 $2x$로 나누고 둘째 항은 그대로 두어도 된다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "서윤이의 말은 옳다. 첫째 항이 맞으면 둘째 항도 반드시 맞기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M4",
+          "no": 3,
+          "text": "서윤이의 말은 옳지 않다. 원래 식에 $\\frac{1}{2}x$를 곱하여 구한 식과 비교해야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "서윤이의 말은 옳지 않다. 구한 식의 모든 항에 $2x$를 곱하여 원래 식과 비교해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "서윤이의 말은 옳지 않다. 구한 식의 둘째 항에만 $2x$를 곱하여 원래 식의 둘째 항과 비교하면 된다."
+        }
+      ],
+      "created_at": "2026-11-11T11:31:59.685533+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "나눗셈의 답이 맞는지 확인하려면 구한 식의 모든 항에 $2x$를 곱해야 한다. 그 결과가 원래 식인 $10x^2+4xy$와 같아야 한다.\n\n실제 답은 $5x+2y$이고, $(5x+2y)\\times 2x=10x^2+4xy$이다.\n\n첫째 항만 나누고 둘째 항을 그대로 두면 $5x+4xy$가 된다. 이 식은 첫째 항에 $2x$를 곱하면 $10x^2$이지만, 답은 아니다. 둘째 항만 확인해도 첫째 항이 맞는지는 알 수 없다.\n\n또 $2x$로 나누는 것을 $\\frac{1}{2}x$를 곱하는 것으로 바꿀 수는 없다. $2x\\times\\frac{1}{2}x=x^2$이므로 두 계산은 서로 다르다.",
+      "generated_at": "2026-11-11T11:31:59.500906+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다른 학생이 나눗셈의 답을 확인하는 방법에 대해 한 말을 판단하게 한다. 첫째 항만 확인하는 것으로 충분한지 생각해야 한다.",
+      "id": "ee5507c6-ac31-491a-b27d-940746c34587",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:30:44.804080+00:00",
+          "issues": [
+            "서연이의 풀이를 살피지 않고 원래 식만 계산해도 ⑤를 고를 수 있어, 일반 계산 문제와 구별되는 고난도 조건을 충족하지 못한다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:31:24.293186+00:00",
+          "issues": [
+            "서연이 풀이의 오류를 판단하지 않고도 주어진 식을 계산해 ③을 고를 수 있다. 정답 보기에도 서연이의 오류에 대한 판단이 없어 일반적인 계산 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:31:59.500782+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.386272+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-오개념판별",
+      "body": "$x\\ne 0$일 때, 두 학생이 $(6x^2+9x)\\div 3x$를 다음과 같이 계산했다.\n\n가: $(6x^2+9x)\\div 3x=2x+9x$\n\n나: $(6x^2+9x)\\div 3x=(6x^2+9x)\\times \\frac{1}{3}x$\n\n두 학생의 계산에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M3",
+          "no": 1,
+          "text": "가는 옳고 나는 틀리다. 첫째 항만 $3x$로 나누면 된다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M4",
+          "no": 2,
+          "text": "가는 틀리고 나는 옳다. $3$을 $\\frac{1}{3}$로 바꾸고 $x$는 그대로 곱하면 된다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "둘 다 틀리다. 가는 둘째 항을 나누지 않았고, 나는 $x$로 나누지 않고 $x$를 곱했다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "둘 다 틀리다. 각 항을 $3$으로만 나누면 된다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "둘 다 틀리다. 각 항을 $3x$로 나누면 $2x+9$가 된다."
+        }
+      ],
+      "created_at": "2026-11-11T11:28:42.674707+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "다항식의 각 항을 $3x$로 나누면 $2x+3$이다.\n\n가는 첫째 항만 $3x$로 나누고 둘째 항은 나누지 않았다. 나는 $x$로 나누어야 하는데 $x$를 곱했다. ④처럼 $3$으로만 나누어도 안 된다. ⑤에서 $9x\\div 3x$는 $9$가 아니라 $3$이다.",
+      "generated_at": "2026-11-11T11:28:42.517435+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a6734772-f28e-4e9a-8505-95967bab129a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:28:42.517032+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-10-C2-오개념판별",
+      "body": "$a\\ne 0$일 때, 한 학생이 다음과 같이 계산했다.\n\n$(8a^2-4a+12ab)\\div 4a=2a-4a+12ab$\n\n이 학생이 잘못 계산한 부분을 바르게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "첫째 항은 나누지 않고 둘째 항과 셋째 항만 나누었다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "각 항의 수는 나누었지만 문자는 나누지 않았다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫째 항만 나누고 둘째 항과 셋째 항은 나누지 않았다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M4",
+          "no": 4,
+          "text": "$4$의 역수를 곱하면서 문자 $a$도 곱하였다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "둘째 항과 셋째 항의 부호만 바꾸었다."
+        }
+      ],
+      "created_at": "2026-11-11T11:29:36.12834+00:00",
+      "difficulty": "normal",
+      "disabled_at": "2026-11-11T11:38:29.030504+00:00",
+      "explanation": "정답은 ③이다. 이 학생은 첫째 항만 $4a$로 나누고, 둘째 항과 셋째 항은 그대로 썼다. 각 항을 모두 $4a$로 나누면 답은 $2a-1+3b$이다. ④처럼 $4$의 역수를 곱하면서 $a$도 곱하면 $4a$로 나누는 것이 아니다.",
+      "generated_at": "2026-11-11T11:29:35.987266+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "66f05425-9c2b-4b83-9638-5dc816af2645",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T11:29:08.848617+00:00",
+          "issues": [
+            "둘째 항은 −8y²이므로 각 항을 나눈 결과는 3y와 −2이다. 이를 더하는 ④가 옳고, 빼는 ③은 3y+2가 되어 표시된 정답과 맞지 않는다. ③과 ④의 ‘각 항’과 ‘두 결과’의 표현도 해설과 모순된다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:29:35.987153+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:49:35.917312+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-오개념판별",
+      "body": "$x\\ne 0$일 때, $(8x^2-4x)\\div 4x$를 계산하는 방법으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M3",
+          "no": 1,
+          "text": "첫째 항만 $4x$로 나누고 둘째 항은 그대로 둔다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-10-M4",
+          "no": 2,
+          "text": "각 항에 $\\frac{x}{4}$를 곱한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "각 항을 $4x$로 나눈다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "둘째 항만 $4x$로 나누고 첫째 항은 그대로 둔다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "각 항을 $4$로 나눈다."
+        }
+      ],
+      "created_at": "2026-11-11T11:42:51.827823+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "다항식을 단항식으로 나눌 때는 각 항을 그 단항식으로 나눈다. 따라서 $(8x^2-4x)\\div 4x=2x-1$이다. ①은 첫째 항만 나누고 둘째 항은 나누지 않았다. ②는 $4x$로 나눌 때 $\\frac{1}{4x}$를 곱해야 하는데, $\\frac{x}{4}$를 곱했다.",
+      "generated_at": "2026-11-11T11:42:51.687636+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9c6ae8d9-137e-4090-b354-0b2c1f2eec50",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:42:51.687518+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.415412+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-이유설명",
+      "body": "$x\\ne 0$일 때, $(6x^2-9x)\\div 3x$를 두 학생이 다음과 같이 계산하려고 한다.\n\n가: 나눗셈을 역수의 곱셈으로 바꾸어 계산한다.\n나: $3x$에 어떤 다항식을 곱하면 $6x^2-9x$가 되는지 찾는다.\n\n두 방법으로 각각 계산하고, 두 방법이 같은 결과를 내는 이유를 설명하시오. 나눗셈에서 다항식의 각 항을 모두 $3x$로 나누는 이유도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T11:33:08.030071+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가의 방법에서는 $3x$로 나누는 것을 $3x$의 역수인 $\\frac{1}{3x}$를 곱하는 것으로 바꾼다. 분배법칙에 따라 두 항에 각각 $\\frac{1}{3x}$를 곱하므로, 두 항을 각각 $3x$로 나누는 것과 같다.\n\n나의 방법에서는 $3x(2x-3)=6x^2-9x$이므로 몫이 $2x-3$이다. 가의 방법으로 구한 몫에도 $3x$를 곱하면 처음 식이 된다. 따라서 두 방법의 결과는 같다.\n\n첫째 항만 나누면 둘째 항에 역수를 곱하지 않은 것이다. 또 $3x$의 역수는 $\\frac{1}{3x}$이지 $\\frac{1}{3}x$가 아니다.",
+      "generated_at": "2026-11-11T11:33:07.855964+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "역수를 곱하는 방법과 곱해서 처음 식이 되는 다항식을 찾는 방법을 비교하여, 두 방법이 같은 결과를 내는 이유를 설명하게 했다.",
+      "id": "964eec79-8e5c-4f32-ab22-e8f6980fee69",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가의 방법에서는 $(6x^2-9x)\\times\\frac{1}{3x}=6x^2\\times\\frac{1}{3x}-9x\\times\\frac{1}{3x}=2x-3$이다. 분배법칙에 따라 두 항에 각각 $\\frac{1}{3x}$를 곱하므로 각 항을 모두 $3x$로 나누게 된다.\n\n나의 방법에서는 $3x(2x-3)=6x^2-9x$이므로 몫은 $2x-3$이다. 가의 방법으로 구한 몫에 $3x$를 곱해도 처음 식이 되므로 두 방법의 결과는 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$3x$로 나누는 것을 $\\frac{1}{3x}$를 곱하는 것으로 바꾸어 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-10-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "분배법칙에 따라 두 항에 각각 $\\frac{1}{3x}$를 곱하므로 각 항을 모두 $3x$로 나누게 됨을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-10-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법의 결과가 $2x-3$임을 구하고, $3x(2x-3)=6x^2-9x$를 이용하여 두 방법의 결과가 같은 이유를 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:33:07.855808+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.444958+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-이유설명",
+      "body": "$x\\ne 0$일 때, 한 학생은 $(8x^2-4x)\\div 4x$를 계산하면서 앞의 항만 $4x$로 나누었다. 그리고 계산 결과가 언제나 $2x-4x$라고 말했다.\n\n이 학생의 말이 틀렸음을 알 수 있는 $x$의 값을 하나 찾고, 그때의 두 결과를 비교하시오. 또 주어진 나눗셈을 곱셈으로 바꾸어 바르게 계산하시오. 괄호 안의 두 항이 계산에 어떻게 쓰이는지 그 까닭도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T11:33:42.135602+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "예를 들어 $x=1$일 때, 주어진 식의 값은 $4\\div 4=1$이다. 학생이 구한 식의 값은 $2-4=-2$이므로 두 결과가 다르다.\n\n$4x$로 나누는 것은 $4x$의 역수인 $\\frac{1}{4x}$를 곱하는 것이다. 분배법칙에 따라 괄호 안의 두 항에 각각 $\\frac{1}{4x}$를 곱해야 하므로 결과는 $2x-1$이다.\n\n앞의 항만 나누면 뒤의 항에도 역수를 곱해야 한다는 점을 놓친 것이다. 또한 $4x$의 역수는 $\\frac{1}{4}x$가 아니라 $\\frac{1}{4x}$이다.",
+      "generated_at": "2026-11-11T11:33:41.971975+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "학생의 말이 틀렸음을 알 수 있는 $x$의 값을 직접 찾고 두 결과를 비교하게 했다.",
+      "id": "a793ac66-d671-44a8-9a40-371b5e20d63e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$x=1$일 때, 주어진 식의 값은 $(8-4)\\div 4=1$이다. 학생이 구한 식의 값은 $2-4=-2$이다. 두 결과가 다르므로 학생의 말은 틀렸다.\n\n$4x$로 나누는 것을 그 역수인 $\\frac{1}{4x}$를 곱하는 것으로 바꾸면, $(8x^2-4x)\\times\\frac{1}{4x}$이다. 분배법칙에 따라 괄호 안의 두 항에 각각 $\\frac{1}{4x}$를 곱해야 한다. 따라서 $8x^2\\times\\frac{1}{4x}-4x\\times\\frac{1}{4x}=2x-1$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$0$이 아닌 $x$의 값을 하나 정하고, 그때 주어진 식과 학생이 구한 식의 값이 다름을 보였다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-10-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$4x$로 나누는 것을 $\\frac{1}{4x}$를 곱하는 것으로 바꾸었다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-10-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "분배법칙에 따라 괄호 안의 두 항에 각각 $\\frac{1}{4x}$를 곱해야 함을 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-10-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "주어진 식을 계산하여 $2x-1$을 구했다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:33:41.971820+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.479641+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-이유설명",
+      "body": "$x\\ne 0$일 때, $(8x^2+4x)\\div 4x$를 계산하시오. 나눗셈을 곱셈으로 바꾸어 계산하고, 그와 같이 계산하는 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T11:32:17.424007+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$4x$의 역수는 $\\frac{1}{4x}$이다. 따라서 주어진 식은 $(8x^2+4x)\\times\\frac{1}{4x}$가 된다. 분배법칙에 따라 각 항에 $\\frac{1}{4x}$를 곱하면 $2x+1$이다.\n첫째 항만 $4x$로 나누면 둘째 항에 역수를 곱하지 않은 것이다. 또 $4x$의 역수를 $\\frac{1}{4}x$로 쓰면 문자 $x$까지 포함하여 역수를 구하지 않은 것이다.",
+      "generated_at": "2026-11-11T11:32:17.215179+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7a035b71-6da8-41d0-b2ac-82a548d26b01",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$4x$의 역수는 $\\frac{1}{4x}$이므로 나눗셈을 이 역수의 곱셈으로 바꿀 수 있다. 분배법칙에 따라 각 항에 $\\frac{1}{4x}$를 곱하므로 각 항을 $4x$로 나누는 것과 같다. 따라서 $(8x^2+4x)\\div 4x=2x+1$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$4x$로 나누는 것을 $\\frac{1}{4x}$를 곱하는 것으로 바꾸었다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-10-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "분배법칙에 따라 각 항에 $\\frac{1}{4x}$를 곱하므로 각 항을 $4x$로 나누는 것과 같다고 설명하였다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-10-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "계산 결과를 $2x+1$로 썼다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:32:17.215050+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:32.515105+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-10-C2-이유설명",
+      "body": "$a\\ne 0$일 때, 민수는 $(12a^2-6a)\\div(-3a)$의 결과가 $-4a-6a$라고 했습니다. 민수의 답이 옳은지 판단하시오. 나눗셈을 곱셈으로 바꾸어 그 이유와 바른 결과를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T11:32:37.268497+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "민수의 답은 옳지 않습니다. $-3a$로 나누는 것은 그 역수인 $-\\frac{1}{3a}$를 곱하는 것과 같습니다. 분배법칙에 따라 두 항에 각각 $-\\frac{1}{3a}$를 곱하므로 결과는 $-4a+2$입니다. 첫째 항만 나누고 둘째 항은 그대로 두면 안 됩니다. 또 역수를 구할 때는 $-3$뿐 아니라 $a$도 함께 생각해야 합니다.",
+      "generated_at": "2026-11-11T11:32:36.984982+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4366257c-a1df-48f8-983c-43c6620c51b2",
+      "model": "gpt-6.1-terra",
+      "model_answer": "민수의 답은 옳지 않습니다. $-3a$로 나누는 것은 $-\\frac{1}{3a}$를 곱하는 것과 같습니다. 분배법칙에 따라 두 항에 각각 이 수를 곱해야 합니다. 따라서 $(12a^2-6a)\\times\\left(-\\frac{1}{3a}\\right)=-4a+2$입니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$-3a$로 나누는 것을 $-\\frac{1}{3a}$를 곱하는 것으로 바꾸었다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-10-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "분배법칙에 따라 두 항에 각각 역수를 곱해야 한다고 설명하였다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-10-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "민수의 답이 옳지 않다고 판단하고 바른 결과를 $-4a+2$로 구하였다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:32:36.984845+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

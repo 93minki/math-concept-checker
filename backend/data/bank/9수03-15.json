@@ -1,0 +1,2177 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:10.381122+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:13.861432+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:17.451722+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:17.607371+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:25.636122+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:46.591287+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:49.970496+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:53.916368+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:54.063665+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:25.686534+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:20.949686+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:24.560750+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:28.604820+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:28.746904+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:03.173434+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:58.776335+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:03.117333+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:07.483020+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:07.620709+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:03.258273+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:50:40.381631+00:00",
+          "issues": [
+            "정답 ④는 첫째 삼각형만 풀어도 고를 수 있어 둘째 삼각형에서의 M1 오개념을 가려내기 어렵다. M1을 가진 학생도 ②와 ④를 모두 옳다고 판단할 수 있다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:02.276289+00:00",
+          "issues": [
+            "review: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:06.773680+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:06.935255+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:01.153961+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:34.918635+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:38.628379+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:42.188514+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:42.331997+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:01.196774+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:54.012608+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:57.496969+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:01.168592+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:01.312914+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:11.713515+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:36.432889+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:39.942219+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:43.790600+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:43.924232+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:11.75201+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:04.510417+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:08.559491+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:13.271466+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:13.417587+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:53.494887+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:47.558103+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:50.947809+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:54.687656+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:54.821359+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:53.533763+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:32.326620+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:36.171343+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:39.609465+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:39.74676+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:23.809088+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:12.988669+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:16.594026+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:20.495535+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:20.645273+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:23.849573+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:43.294052+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:47.369437+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:50.708064+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:50.847599+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:44.435535+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:24.081553+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:28.062806+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:32.413599+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:32.580306+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:44.482263+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:38.640011+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:41.983228+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:45.317404+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:45.458223+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:10:01.186343+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:21.362704+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:24.927376+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:28.685570+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:28.825526+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:10:01.241956+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:48.672942+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:52.713534+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:56.267237+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:56.400974+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:09.685651+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:32.165419+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:35.648519+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:39.084403+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:39.233109+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:09.750298+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:17.142171+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:21.172387+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:24.587760+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:24.729077+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:12.591119+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:58.152347+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:01.957395+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:05.983782+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:06.117694+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:12.629513+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:28.089324+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:31.369891+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:35.021386+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:35.160675+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:33.203524+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:09.835369+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:13.426819+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:17.645907+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:17.785315+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:33.241118+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:21.933337+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:25.483997+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:28.969785+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:29.101895+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:26.74826+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:03:06.096540+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:03:09.953158+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:03:14.499650+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:03:14.63861+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:26.802325+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:33.207255+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:36.507970+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:40.106326+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:40.245714+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:52.839018+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:03:18.214361+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:03:22.677257+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:03:26.234293+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:03:26.370363+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:52.926745+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:01.693315+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:05.085440+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:08.324894+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:08.466727+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:31.616872+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:44.353147+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:47.968335+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:51.477370+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:51.613894+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:31.659936+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:11.608870+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:14.915132+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:18.523768+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:18.652533+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:02.381884+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:55.250857+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:58.612135+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:03:02.374816+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:03:02.512746+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:02.421642+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T12:07:08.048686+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-성질적용",
+      "body": "삼각형 모양의 종이 $ABC$에서 $\\angle ABC=90°$, $\\overline{AB}=5\\text{ cm}$, $\\overline{AC}=13\\text{ cm}$이다. 점 $D$는 두 점 $A$, $B$ 사이의 선분 $\\overline{AB}$ 위에 있고, $\\overline{AD}=2\\text{ cm}$이다.\n\n선분 $\\overline{CD}$를 한 변으로 하는 정사각형의 넓이는 몇 $\\text{cm}^2$인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$34\\text{ cm}^2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$153\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$169\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$178\\text{ cm}^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 5,
+          "text": "$203\\text{ cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-11T11:49:33.952678+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "삼각형 $ABC$에서 빗변은 $\\overline{AC}$이므로 $\\overline{BC}$의 길이의 제곱은 $13^2-5^2=144$이다.\n\n또 $\\overline{BD}=5-2=3\\text{ cm}$이고, $\\angle DBC=90°$이다. 따라서 정사각형의 넓이는 $\\overline{CD}$의 길이의 제곱과 같으므로 $144+3^2=153\\text{ cm}^2$이다.\n\n⑤는 $\\overline{BC}$의 길이의 제곱을 구할 때 $13^2$에서 $5^2$을 빼지 않고 더한 경우이다. $\\overline{BC}$는 빗변이 아니므로 빼야 한다.",
+      "generated_at": "2026-11-11T11:49:33.818192+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "정사각형의 넓이를 구하는 상황을 선분 $\\overline{CD}$의 길이의 제곱을 구하는 식으로 바꾸어야 한다. 두 직각삼각형에서 각각 빗변을 찾아 성질을 적용해야 한다.",
+      "id": "be315e5d-9e60-4d08-b913-8841362fee9c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:33.818109+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T12:07:08.077219+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-성질적용",
+      "body": "수직인 벽과 평평한 바닥이 직각으로 만난다. 사다리를 벽에 기대었더니 사다리의 아래쪽 끝은 벽에서 $6\\text{ m}$ 떨어져 있고, 위쪽 끝은 벽의 한 점에 닿았다. 이 사다리의 길이는 $10\\text{ m}$이다.\n\n다른 사다리를 같은 벽에 기대어 위쪽 끝이 앞의 사다리와 같은 점에 닿게 하려고 한다. 이때 아래쪽 끝이 벽에서 $15\\text{ m}$ 떨어져 있으려면 다른 사다리의 길이는 몇 $\\text{m}$이어야 하는가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$13\\text{ m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$15\\text{ m}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$17\\text{ m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 4,
+          "text": "$23\\text{ m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$25\\text{ m}$"
+        }
+      ],
+      "created_at": "2026-11-11T11:49:58.128729+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫 번째 사다리가 빗변이므로 벽에 닿은 높이의 제곱은 $10^2-6^2=64$이다. 따라서 높이는 $8\\text{ m}$이다.\n\n다른 사다리가 빗변이므로 그 길이의 제곱은 $8^2+15^2=289$이다. $17^2=289$이므로 길이는 $17\\text{ m}$이다.\n\n$23\\text{ m}$를 골랐다면 높이와 바닥에서의 거리를 그대로 더했을 수 있다. 빗변의 길이는 두 길이를 그대로 더하는 것이 아니라, 각 길이의 제곱을 이용하여 구해야 한다.",
+      "generated_at": "2026-11-11T11:49:57.98769+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "사다리와 벽, 바닥이 이루는 직각삼각형을 생각해야 한다. 첫 번째 사다리로 벽에 닿은 높이를 구하고, 이를 이용하여 다른 사다리의 길이를 구한다.",
+      "id": "927305b8-868d-4cd5-b72e-aada420535e2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:57.987581+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T12:07:08.112321+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-성질적용",
+      "body": "직각삼각형 $ABC$에서 $\\angle A=90°$, $\\overline{BC}=17$, $\\overline{AB}=8$이다. $\\overline{AC}$의 길이의 제곱은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$81$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$225$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$289$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 4,
+          "text": "$353$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$361$"
+        }
+      ],
+      "created_at": "2026-11-11T11:48:56.251281+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle A=90°$이므로 빗변은 $\\overline{BC}$이다. 피타고라스 정리에 따라 빗변을 한 변으로 하는 정사각형의 넓이 $289$는 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같다. 따라서 $\\overline{AC}$의 길이의 제곱은 $289-64=225$이다. ④는 주어진 두 길이의 제곱을 더한 값이다. 빗변이 아닌 변의 길이의 제곱을 구할 때는 빗변의 길이의 제곱에서 다른 변의 길이의 제곱을 빼야 한다.",
+      "generated_at": "2026-11-11T11:48:56.091187+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "be26cfff-e81d-455d-a481-46c8b7f4fbfb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:48:56.091111+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T12:07:08.145742+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-성질적용",
+      "body": "벽과 바닥이 직각으로 만나는 곳에 사다리를 기울여 놓았다. 사다리의 아랫끝은 바닥에, 윗끝은 벽에 닿아 있다. 벽과 바닥이 만나는 곳에서 사다리 아랫끝까지의 거리는 $6\\,\\mathrm{m}$이고, 사다리 윗끝의 높이는 $8\\,\\mathrm{m}$이다. 사다리의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$7\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 4,
+          "text": "$14\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$15\\,\\mathrm{m}$"
+        }
+      ],
+      "created_at": "2026-11-11T11:49:09.99496+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "사다리는 직각삼각형의 빗변에 해당한다. 사다리의 길이의 제곱은 $6^2+8^2=100$이다. $10^2=100$이므로 사다리의 길이는 $10\\,\\mathrm{m}$이다. $14\\,\\mathrm{m}$를 골랐다면 두 길이를 그대로 더했을 수 있다. 빗변의 길이를 구할 때는 두 길이를 각각 제곱하여 더해야 한다.",
+      "generated_at": "2026-11-11T11:49:09.859014+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2d2c4210-239d-4fdc-a271-138381fe321e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:09.858847+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.68397+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "body": "두 직각삼각형 $ABC$, $DEF$가 있다. $\\angle ABC=90^\\circ$, $AB=8$, $BC=15$이고, $\\angle DEF=90^\\circ$, $DF=13$, $DE=5$이다. 여기서 두 점을 나란히 쓴 기호는 그 두 점을 잇는 선분의 길이를 나타낸다.\n\n다음 중 학생의 말이 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 1,
+          "text": "지수: $EF^2=13^2+5^2$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 2,
+          "text": "민호: $AC=8+15$야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "서연: $EF^2=13^2-5^2$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "도윤: $AC^2=15^2-8^2$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "하린: $AC=8^2+15^2$이야."
+        }
+      ],
+      "created_at": "2026-11-11T13:06:25.590401+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "삼각형 $DEF$에서 빗변은 $DF$이므로 $DF^2=DE^2+EF^2$이다. 따라서 $EF^2=13^2-5^2=144$이므로 ③이 옳다.\n\n①은 빗변이 아닌 변의 길이의 제곱을 구할 때도 두 길이의 제곱을 더한 것이다. ②는 길이를 각각 제곱하지 않고 그대로 더해 빗변의 길이로 생각한 것이다.\n\n삼각형 $ABC$에서 빗변은 $AC$이므로 $AC^2=8^2+15^2=289$이고 $AC=17$이다. ④는 빗변의 길이의 제곱을 구할 때 두 변의 길이의 제곱을 뺀 것이다. ⑤는 빗변의 길이의 제곱을 빗변의 길이로 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T13:06:25.564426+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 직각삼각형에서 빗변과 빗변이 아닌 변을 구별하여 각 학생의 말이 옳은지 판단하게 한다.",
+      "id": "1b6d8b8e-bb80-4f8e-bd59-bfbdcadd5279",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:06:25.564345+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.714156+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "body": "직사각형 $ABCD$에서 $AB=6$, $BC=8$, $AC=10$이다. 여기서 두 점을 나란히 쓴 기호는 두 점을 잇는 선분의 길이를 나타낸다.\n\n각 선분 $AB$, $BC$, $AC$를 한 변으로 하는 정사각형을 생각하자. 다음 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 1,
+          "text": "민수: $BC$를 한 변으로 하는 정사각형의 넓이는 $AC$와 $AB$를 각각 한 변으로 하는 두 정사각형의 넓이를 더하면 구할 수 있어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 2,
+          "text": "지우: 빗변 $AC$의 길이는 $AB$와 $BC$의 길이를 더한 $6+8$이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "서윤: $BC$를 한 변으로 하는 정사각형의 넓이는 $AC$를 한 변으로 하는 정사각형의 넓이에서 $AB$를 한 변으로 하는 정사각형의 넓이를 빼면 구할 수 있어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "도윤: $AB$와 $BC$를 각각 한 변으로 하는 두 정사각형의 넓이의 합은 $BC$를 한 변으로 하는 정사각형의 넓이와 같아."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "하린: $AC$를 한 변으로 하는 정사각형의 넓이는 $BC$를 한 변으로 하는 정사각형의 넓이의 두 배야."
+        }
+      ],
+      "created_at": "2026-11-11T13:07:03.12579+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "선분 $AC$는 직각삼각형 $ABC$의 빗변이다. 각 선분을 한 변으로 하는 정사각형의 넓이는 차례로 $36$, $64$, $100$이다. 따라서 $100-36=64$이므로 ③이 옳다.\n\n①은 빗변이 아닌 변을 한 변으로 하는 정사각형의 넓이를 구할 때 두 넓이를 더했다. ②는 길이를 제곱하지 않고 그대로 더했다. ④에서 두 넓이의 합은 $100$이므로 $64$와 같지 않다. ⑤에서 $100$은 $64$의 두 배가 아니다.",
+      "generated_at": "2026-11-11T13:07:03.101205+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생이 길이와 정사각형의 넓이에 대해 한 말을 비교하여 옳은 주장을 고르게 했다.",
+      "id": "71d5d129-c467-4aad-aa6f-04fe1c5f0992",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:07:03.101116+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T12:07:08.180423+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "body": "$\\angle ABC=90^\\circ$인 직각삼각형 $ABC$가 있다. $\\overline{AC}$의 길이는 $10$, $\\overline{BC}$의 길이는 $8$이다. $\\overline{AB}$의 길이를 $x$라 할 때, 옳은 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 1,
+          "text": "$x^2=10^2+8^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 2,
+          "text": "$x+8=10$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x^2=10^2-8^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x^2+10^2=8^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x^2=10^2-8$"
+        }
+      ],
+      "created_at": "2026-11-11T11:50:15.784434+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "빗변은 $\\overline{AC}$이다. 빗변에 만든 정사각형의 넓이 $100$은 나머지 두 변에 만든 정사각형의 넓이의 합과 같다. 따라서 $x^2+64=100$이므로 $x^2=10^2-8^2$이다. ①은 빗변이 아닌 변을 구하면서 두 제곱을 더한 식이다. ②는 길이를 그대로 더한 식이다. ④는 빗변이 아닌 변의 제곱을 두 제곱의 합으로 나타낸 식이다. ⑤는 $8$을 제곱하지 않고 뺀 식이다.",
+      "generated_at": "2026-11-11T11:50:15.626007+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "581141ae-703e-40b6-87e1-cdcaed0b97ae",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:50:15.625930+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.744572+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "body": "두 직각삼각형 가와 나에 대해 학생들이 말하였다.\n\n- 가: 빗변이 아닌 두 변의 길이는 각각 $5$, $12$이다.\n- 나: 빗변의 길이는 $13$이고, 빗변이 아닌 한 변의 길이는 $5$이다.\n\n옳게 말한 학생은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 1,
+          "text": "가의 빗변의 길이는 $5+12=17$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 2,
+          "text": "나의 나머지 변을 한 변으로 하는 정사각형의 넓이는 $13^2+5^2=194$야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "나의 나머지 변을 한 변으로 하는 정사각형의 넓이는 $13^2-5^2=144$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "나의 나머지 변을 한 변으로 하는 정사각형의 넓이는 $169-25=134$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가의 빗변을 한 변으로 하는 정사각형의 넓이가 $169$이므로 빗변의 길이는 $14$야."
+        }
+      ],
+      "created_at": "2026-11-11T13:06:01.104962+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가에서 빗변이 아닌 두 변을 한 변으로 하는 정사각형의 넓이는 각각 $25$, $144$이다. 빗변을 한 변으로 하는 정사각형의 넓이는 $25+144=169$이므로 빗변의 길이는 $13$이다. 두 변의 길이를 그대로 더해 $17$이라고 하면 안 된다.\n\n나에서 빗변을 한 변으로 하는 정사각형의 넓이는 $169$이고, 길이가 $5$인 변을 한 변으로 하는 정사각형의 넓이는 $25$이다. 따라서 나머지 변을 한 변으로 하는 정사각형의 넓이는 $169-25=144$이다. 이 넓이를 구할 때 두 넓이를 더하면 안 된다.",
+      "generated_at": "2026-11-11T13:06:01.054762+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "387de5da-a89a-4b2c-be13-2de50783ed77",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:05:31.263098+00:00",
+          "issues": [
+            "세 변의 길이가 모두 주어져 있어 피타고라스 정리를 이해하지 않아도 각 정사각형의 넓이를 직접 계산하여 ⑤를 고를 수 있다. ①과 ②도 주어진 길이만으로 틀렸음을 확인할 수 있어 M1과 M2를 판별하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:06:01.054530+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.772682+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "body": "다음은 두 삼각형의 세 변의 길이와 각 변을 한 변으로 하는 정사각형의 넓이이다.\n\n- 삼각형 A: 세 변의 길이는 차례로 $3$, $4$, $5$이고, 정사각형의 넓이는 차례로 $9$, $16$, $25$이다.\n- 삼각형 B: 세 변의 길이는 차례로 $4$, $5$, $6$이고, 정사각형의 넓이는 차례로 $16$, $25$, $36$이다.\n\n민수는 “모든 삼각형에서 가장 긴 변을 한 변으로 하는 정사각형의 넓이는 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같다.”라고 말했다.\n\n민수의 말이 옳은지 판단하시오. 옳지 않다면 두 삼각형 중 하나를 골라, 정사각형의 넓이를 이용하여 그 까닭을 설명하시오. 고른 삼각형이 직각삼각형이 아닌 까닭도 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:08:11.667857+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "삼각형 B에서 가장 긴 변을 한 변으로 하는 정사각형의 넓이는 $36$이다. 나머지 두 정사각형의 넓이의 합은 $16+25=41$이므로 민수의 말은 옳지 않다. 삼각형 B가 직각삼각형이라면 가장 긴 변이 빗변이므로 두 넓이가 같아야 한다. 따라서 삼각형 B는 직각삼각형이 아니다. 피타고라스 정리의 넓이 관계는 모든 삼각형이 아니라 직각삼각형에서 성립한다.",
+      "generated_at": "2026-11-11T13:08:11.638612+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "모든 삼각형에 대해 성립한다는 말이 옳지 않음을 보일 삼각형을 고르고, 넓이를 비교하여 설명하게 한다.",
+      "id": "aba6543d-0895-4df7-803c-9f48fdf3d454",
+      "model": "gpt-6.1-terra",
+      "model_answer": "민수의 말은 옳지 않다. 삼각형 B에서 가장 긴 변을 한 변으로 하는 정사각형의 넓이는 $36$이고, 나머지 두 정사각형의 넓이의 합은 $16+25=41$이므로 서로 다르다. 삼각형 B가 직각삼각형이라면 가장 긴 변이 빗변이어서 두 넓이가 같아야 하므로, 삼각형 B는 직각삼각형이 아니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "민수의 말이 옳지 않다고 판단하고 삼각형 B를 고른다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-15-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "삼각형 B에서 가장 긴 변을 한 변으로 하는 정사각형의 넓이 $36$과 나머지 두 정사각형의 넓이의 합 $41$이 다름을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-15-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "삼각형 B가 직각삼각형이라면 가장 긴 변이 빗변이고 두 넓이가 같아야 함을 이용하여, 직각삼각형이 아님을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-15-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:08:11.638427+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.824955+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "body": "한 변의 길이가 $17$인 정사각형 종이 두 장이 있다. 각 종이에서 세 변의 길이가 $5$, $12$, $13$인 같은 직각삼각형 네 개를 겹치지 않게 잘라 냈다.\n\n첫째 종이에는 한 변의 길이가 $13$인 정사각형 하나가 남았다. 둘째 종이에는 한 변의 길이가 각각 $5$, $12$인 정사각형 두 개가 남았다.\n\n두 종이에 남은 부분의 넓이를 각각 구하고 비교하시오. 두 넓이가 그와 같은 관계인 까닭을 잘라 낸 부분의 넓이를 이용하여 설명하시오. 또 이 결과가 주어진 직각삼각형의 각 변을 한 변으로 하는 정사각형의 넓이 사이에 어떤 관계가 있음을 보여 주는지 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:08:53.445357+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 종이의 처음 넓이는 각각 $17^2=289$이다. 각 종이에서 잘라 낸 직각삼각형 네 개의 넓이는 $4\\times(5\\times12\\div2)=120$으로 같다. 따라서 남은 부분의 넓이도 각각 $289-120=169$로 같다.\n\n첫째 종이에 남은 정사각형의 넓이는 $13^2=169$이다. 둘째 종이에 남은 두 정사각형의 넓이의 합은 $5^2+12^2=25+144=169$이다. 따라서 이 직각삼각형에서 빗변을 한 변으로 하는 정사각형의 넓이는 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같다.",
+      "generated_at": "2026-11-11T13:08:53.400011+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 종이에 남은 부분의 넓이를 서로 다른 방법으로 구해 비교하게 한다. 처음 넓이와 잘라 낸 넓이를 살펴 두 결과가 같은 까닭을 설명해야 한다.",
+      "id": "fb55b251-c1b8-42d1-b3e4-f59d85aa6d71",
+      "model": "gpt-6.1-terra",
+      "model_answer": "첫째 종이에 남은 넓이는 $13^2=169$이고, 둘째 종이에 남은 넓이는 $5^2+12^2=169$이므로 같다. 두 종이의 처음 넓이가 같고, 각각에서 잘라 낸 네 직각삼각형의 넓이도 같기 때문이다. 따라서 빗변을 한 변으로 하는 정사각형의 넓이는 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "첫째 종이와 둘째 종이에 남은 넓이가 각각 $169$임을 구하고 비교했다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "처음 두 종이의 넓이가 같고 각각에서 잘라 낸 부분의 넓이도 같으므로 남은 넓이가 같다고 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "빗변을 한 변으로 하는 정사각형의 넓이가 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같다고 썼다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:08:53.399842+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.85394+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "body": "직각삼각형이 아닌 삼각형의 세 변의 길이가 각각 $4$, $5$, $6$이다. 이 삼각형을 보고 한 학생이 다음과 같이 말했다.\n\n“모든 삼각형에서 가장 긴 변을 한 변으로 하는 정사각형의 넓이는 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같아.”\n\n이 학생의 말이 옳은지 쓰고, 이 삼각형의 각 변을 한 변으로 하는 정사각형의 넓이를 이용하여 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:07:23.764718+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "세 정사각형의 넓이는 각각 $16$, $25$, $36$이다. $16+25=41$이므로 가장 긴 변을 한 변으로 하는 정사각형의 넓이 $36$과 같지 않다. 피타고라스 정리는 직각삼각형에 성립하며, 모든 삼각형에 적용할 수는 없다.",
+      "generated_at": "2026-11-11T13:07:23.725851+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "82b17f4b-b07b-42ab-9f6a-50b688721c1a",
+      "model": "gpt-6.1-terra",
+      "model_answer": "옳지 않다. 세 정사각형의 넓이는 각각 $16$, $25$, $36$인데, $16+25=41$로 $36$과 같지 않기 때문이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "세 변을 각각 한 변으로 하는 정사각형의 넓이를 $16$, $25$, $36$으로 구했다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "학생의 말이 옳지 않다고 쓰고, $16+25$가 $36$과 같지 않다는 이유를 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-15-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:07:23.725618+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.892843+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "body": "직각삼각형 $ABC$에서 $\\angle ABC=90^\\circ$이고, $\\overline{AB}=5$, $\\overline{BC}=12$, $\\overline{AC}=13$이다. 세 변을 각각 한 변으로 하는 정사각형을 만든다.\n\n세 정사각형의 넓이 사이에 어떤 관계가 있는지 쓰고, 각 정사각형의 넓이를 구하여 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:07:44.389071+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "세 정사각형의 넓이는 각각 $25$, $144$, $169$이다. $25+144=169$이므로 빗변을 한 변으로 하는 정사각형의 넓이는 나머지 두 정사각형의 넓이의 합과 같다. 이 관계가 직각이 아닌 삼각형에서도 언제나 성립한다고 생각하지 않도록 주의한다.",
+      "generated_at": "2026-11-11T13:07:44.369084+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "26d81768-7343-4d5e-8c46-4acb74156bfb",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\overline{AB}$, $\\overline{BC}$, $\\overline{AC}$를 각각 한 변으로 하는 정사각형의 넓이는 $25$, $144$, $169$이다. $25+144=169$이므로 빗변 $\\overline{AC}$를 한 변으로 하는 정사각형의 넓이는 나머지 두 정사각형의 넓이의 합과 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "세 정사각형의 넓이를 각각 $25$, $144$, $169$로 구했다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$25+144=169$를 이용하여 빗변을 한 변으로 하는 정사각형의 넓이가 나머지 두 정사각형의 넓이의 합과 같다고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:07:44.368985+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.920868+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "body": "삼각형 $ABC$의 둘레는 $24$입니다. 변 $AB$의 길이는 $6$이고, 변 $BC$의 길이는 변 $AB$의 길이보다 $2$ 더 깁니다. 삼각형 $ABC$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "직각삼각형이고, $\\angle A$가 직각이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "직각삼각형이고, $\\angle B$가 직각이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "직각삼각형이고, $\\angle C$가 직각이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M3",
+          "no": 4,
+          "text": "$6^2+10^2$이 $8^2$과 다르므로 직각삼각형이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6^2+8^2$이 $10^2$과 다르므로 직각삼각형이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T13:10:01.137696+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "변 $BC$의 길이는 $6+2=8$이고, 변 $AC$의 길이는 $24-6-8=10$입니다. 세 변을 한 변으로 하는 정사각형의 넓이를 비교하면 $6^2+8^2=36+64=100=10^2$입니다. 길이가 $6$, $8$인 두 변을 직각으로 만난 두 변으로 하는 삼각형을 만들면 나머지 변의 길이는 $10$입니다. 따라서 세 변의 길이가 같은 삼각형 $ABC$도 직각삼각형입니다. 가장 긴 변 $AC$와 마주 보는 각 $B$가 직각이므로 정답은 ②입니다.\n④는 가장 긴 변이 아닌 길이 $8$인 변을 빗변으로 생각한 것입니다. 빗변은 직각과 마주 보는 가장 긴 변이어야 합니다.",
+      "generated_at": "2026-11-11T13:10:01.121123+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "변의 길이 사이의 관계와 둘레를 식으로 나타내어 세 변의 길이를 구해야 한다. 그 길이를 비교해 직각삼각형인지 판별하고 직각의 위치도 찾아야 한다.",
+      "id": "a9f1589f-d97e-4948-91c8-479e836bd73a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:10:01.120990+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.9584+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "body": "길이가 $5$, $12$인 두 변을 가진 삼각형을 만들려고 한다. 이 삼각형이 직각삼각형이 되도록 나머지 한 변의 길이를 정하려고 할 때, 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$13$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$15$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M3",
+          "no": 5,
+          "text": "알맞은 길이가 없다."
+        }
+      ],
+      "created_at": "2026-11-11T13:11:09.613736+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가장 긴 변을 한 변으로 하는 정사각형의 넓이와 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합을 비교한다.\n\n① $12^2=144$, $5^2+8^2=89$\n② $12^2=144$, $5^2+10^2=125$\n③ $13^2=169$, $5^2+12^2=169$\n④ $15^2=225$, $5^2+12^2=169$\n\n넓이가 같은 것은 ③뿐이다. 길이가 $5$와 $12$인 두 변이 직각을 이루는 삼각형을 생각하면, 빗변을 한 변으로 하는 정사각형의 넓이는 $169$이다. $13^2=169$이므로 빗변의 길이는 $13$이다. 따라서 세 변의 길이가 $5$, $12$, $13$인 삼각형은 직각삼각형이다.\n\n가장 긴 변이 아닌 변을 빗변으로 생각하여 비교하면 ③도 직각삼각형이 아니라고 잘못 판단해 ⑤를 고를 수 있다.",
+      "generated_at": "2026-11-11T13:11:09.455447+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "직각삼각형이 된다는 결과를 주고, 이를 만족하는 나머지 한 변의 길이를 찾게 한다. 각 길이에서 가장 긴 변을 확인하여 직접 비교해야 한다.",
+      "id": "7a78e4e1-0e60-46f5-a52a-b8472ac38f58",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:10:43.532283+00:00",
+          "issues": [
+            "각 보기에 주어진 길이를 8, 15와 함께 비교하면 풀리는 일반적인 직각삼각형 판별 문제이므로, 결과에서 조건을 거꾸로 찾는 고난이도 조건과 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:11:09.455306+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.988378+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "body": "세 변의 길이가 각각 $6$, $8$, $10$인 삼각형이 있다. 이 삼각형이 직각삼각형인지 판별한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$6^2+8^2=10^2$이므로 직각삼각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M3",
+          "no": 2,
+          "text": "$6^2+10^2\\ne 8^2$이므로 직각삼각형이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6^2+10^2=8^2$이므로 직각삼각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6^2+8^2\\ne 10^2$이므로 직각삼각형이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6+8\\ne 10$이므로 직각삼각형이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T13:09:12.541548+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가장 긴 변의 길이는 $10$이다. $6^2+8^2=36+64=100=10^2$이므로 정답은 ①이다.\n\n길이가 $6$, $8$인 두 변이 직각을 이루는 삼각형을 생각해 보자. 두 변을 한 변으로 하는 정사각형의 넓이의 합은 $36+64=100$이다. 따라서 빗변을 한 변으로 하는 정사각형의 넓이도 $100$이고, 빗변의 길이는 $10$이다. 이 삼각형은 문제의 삼각형과 세 변의 길이가 각각 같으므로 모양이 같다. 따라서 문제의 삼각형도 직각삼각형이다.\n\n②는 가장 긴 변이 아닌 길이 $8$인 변을 빗변의 자리에 놓고 비교한 것이다. 직각삼각형의 빗변은 가장 긴 변이다.",
+      "generated_at": "2026-11-11T13:09:12.513604+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "629a0d4a-d928-41ee-81b3-b933ac448212",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:09:12.513479+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.018281+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C2-성질적용",
+      "body": "삼각형 $ABC$에서 $AB=12$, $BC=13$, $CA=5$이다. 이 삼각형에 대해 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "직각삼각형이고, $∠A$가 직각이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "직각삼각형이고, $∠B$가 직각이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "직각삼각형이고, $∠C$가 직각이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M3",
+          "no": 4,
+          "text": "$5^2+13^2\\ne12^2$이므로 직각삼각형이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5+12\\ne13$이므로 직각삼각형이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T13:09:33.144511+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가장 긴 변은 $BC$이다. $13^2=169$, $12^2+5^2=169$이므로 두 값이 같다. 길이가 $12$, $5$인 두 변이 직각을 이루는 삼각형을 만들면 나머지 변의 길이는 $13$이다. 두 삼각형은 세 변의 길이가 각각 같으므로 합동이다. 따라서 $∠A$가 직각이다.\n④는 가장 긴 변이 아닌 변을 빗변으로 생각하여 잘못 비교한 것이다.",
+      "generated_at": "2026-11-11T13:09:33.110974+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1cb13205-d669-4f03-973b-6c4f1a045319",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:09:33.110882+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.046821+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "body": "삼각형 $ABC$의 세 변의 길이는 $AB=5$, $BC=12$, $AC=13$이다. 이 삼각형에 대한 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M3",
+          "no": 1,
+          "text": "민수: $5^2+13^2\\ne12^2$이므로 직각삼각형이 아니야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "지우: $5+12\\ne13$이므로 직각삼각형이 아니야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "서연: 세 변의 길이가 모두 다르므로 직각삼각형이 아니야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "도윤: $5^2+12^2=13^2$이므로 직각삼각형이고, $\\angle BAC$가 직각이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "하은: $5^2+12^2=13^2$이므로 직각삼각형이고, $\\angle ABC$가 직각이야."
+        }
+      ],
+      "created_at": "2026-11-11T13:13:26.694751+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정답은 ⑤이다. 길이가 $5$와 $12$인 두 변이 직각을 이루는 삼각형을 생각해 보자. 두 변에 각각 만든 정사각형의 넓이는 $25$와 $144$이므로, 빗변에 만든 정사각형의 넓이는 $25+144=169$이다. $13^2=169$이므로 빗변의 길이는 $13$이다. 이 삼각형과 삼각형 $ABC$는 세 변의 길이가 각각 같으므로 합동이다. 따라서 길이가 $5$와 $12$인 두 변이 만나는 $\\angle ABC$가 직각이다.\n①에서 계산한 부등식은 맞지만, 가장 긴 변 $AC$가 아닌 $BC$를 빗변 자리에 놓고 판별한 것이 잘못이다. ②에서는 길이의 합을 비교했고, ③에서는 세 변의 길이가 모두 다르면 직각삼각형이 될 수 없다고 생각했다. ④에서는 식은 맞게 세웠지만 직각의 위치를 잘못 찾았다.",
+      "generated_at": "2026-11-11T13:13:26.399694+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 비교하여 직각삼각형인지와 직각의 위치에 대한 판단이 모두 옳은 말을 고르게 했다.",
+      "id": "3d1136cb-e21f-45af-b405-fcdc2b108d02",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:13:26.399593+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.076275+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "body": "세 변의 길이가 각각 $6$, $8$, $10$인 삼각형이 있다. 민지는 “$6^2+10^2\\ne 8^2$이므로 이 삼각형은 직각삼각형이 아니야.”라고 말했다.\n\n민지의 말에 대한 판단과 그 까닭이 모두 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M3",
+          "no": 1,
+          "text": "민지의 말은 맞아. 길이가 $8$인 변을 빗변 자리에 놓고 살펴보면 돼."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "민지의 말은 맞아. $6+8\\ne 10$이므로 직각삼각형이 아니야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "민지의 말은 틀려. $6+8>10$이므로 직각삼각형이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "민지의 말은 틀려. $6^2+8^2=10^2$이므로 길이가 $10$인 변을 빗변으로 하는 직각삼각형이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "민지의 말은 틀려. $6^2+8^2=10^2$이므로 길이가 $8$인 변을 빗변으로 하는 직각삼각형이야."
+        }
+      ],
+      "created_at": "2026-11-11T13:13:52.705586+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가장 긴 변의 길이는 $10$이다. 길이가 $6$, $8$인 두 변을 한 변으로 하는 정사각형의 넓이의 합은 $36+64=100$이고, 길이가 $10$인 변을 한 변으로 하는 정사각형의 넓이도 $100$이다.\n\n길이가 $6$, $8$인 두 변이 직각을 이루는 삼각형을 그리면 빗변을 한 변으로 하는 정사각형의 넓이는 $100$이므로 빗변의 길이는 $10$이다. 이 삼각형과 주어진 삼각형은 세 변의 길이가 각각 같아 합동이다. 따라서 주어진 삼각형도 직각삼각형이다.\n\n민지는 가장 긴 변이 아닌 길이 $8$인 변을 빗변 자리에 놓고 살펴본 것이 잘못이다.",
+      "generated_at": "2026-11-11T13:13:52.552465+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지가 가장 긴 변이 아닌 변을 빗변 자리에 놓고 판별한 말을 제시하고, 그 말의 옳고 그름과 까닭을 함께 판단하게 한다.",
+      "id": "2efb3237-1382-4999-be80-5db94cd8756c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:13:52.552366+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.106685+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "body": "세 변의 길이가 각각 $5$, $12$, $13$인 삼각형이 있다. 이 삼각형이 직각삼각형인지 판단한 말로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5+12\\ne13$이므로 직각삼각형이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M3",
+          "no": 2,
+          "text": "$5^2+13^2\\ne12^2$이므로 직각삼각형이 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5^2+12^2=13^2$이므로 직각삼각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$5^2+12^2=159$이므로 직각삼각형이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5^2+12^2=13^2$이므로 직각삼각형이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T13:11:31.557565+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가장 긴 변의 길이는 $13$이고, $5^2+12^2=25+144=169=13^2$이다. 길이가 $5$, $12$인 두 변을 직각으로 만나는 변으로 하여 삼각형을 만들면, 나머지 변의 길이는 $13$이다. 따라서 주어진 삼각형은 직각삼각형이다.\n\n②에서는 길이가 $12$인 변을 빗변 자리에 놓았다. 직각삼각형의 빗변은 가장 긴 변이므로 길이가 $13$인 변을 빗변 자리에 놓고 살펴보아야 한다.",
+      "generated_at": "2026-11-11T13:11:31.533905+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0e42f6e5-d0a1-4219-9c83-b0403f32e049",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:11:31.533756+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.137551+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C2-오개념판별",
+      "body": "세 변의 길이가 각각 $6$, $8$, $10$인 삼각형이 있다. 민수는 “$6^2+10^2\\ne 8^2$이므로 이 삼각형은 직각삼각형이 아니다.”라고 말했다.\n\n민수의 말에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "가장 긴 변의 길이가 $10$이므로 $6^2+8^2=10^2$인지 확인해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-15-M3",
+          "no": 2,
+          "text": "길이가 $8$인 변을 빗변으로 놓고 확인했으므로 민수의 판별은 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6+8>10$이므로 이 삼각형은 직각삼각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "세 변의 길이의 합이 짝수이므로 이 삼각형은 직각삼각형이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6^2+8^2=10^2$이므로 이 삼각형은 직각삼각형이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T13:13:02.325701+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가장 긴 변의 길이가 $10$이므로 $6^2+8^2=10^2$인지 확인해야 한다. 실제로 $6^2+8^2=36+64=100=10^2$이다.\n\n두 직각을 낀 변의 길이가 $6$, $8$인 직각삼각형을 생각해 보자. 빗변을 한 변으로 하는 정사각형의 넓이는 $36+64=100$이므로 빗변의 길이는 $10$이다. 이 직각삼각형과 주어진 삼각형은 세 변의 길이가 각각 같아서 합동이다. 따라서 주어진 삼각형도 직각삼각형이다.\n\n②를 고른 학생은 가장 긴 변이 아닌 길이가 $8$인 변을 빗변으로 놓고 판별해도 된다고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T13:13:02.290936+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "516fef9b-fc72-4681-b617-594a6522a3cf",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:12:07.975194+00:00",
+          "issues": [
+            "보기 ②는 8+15=17이라는 덧셈 오류와 변의 길이의 합을 이용한 잘못된 판별 기준이 섞여 있어, 한 가지 오개념만 드러내지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:12:42.896484+00:00",
+          "issues": [
+            "보기 ②: M3처럼 15를 빗변 자리에 놓고 판별하는 학생은 민수의 판단을 잘못이라고 보지 않으므로 ②를 고르지 않는다. M3를 가진 학생의 반응을 해당 보기로 진단할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:13:02.290765+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

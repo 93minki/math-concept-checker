@@ -1,0 +1,2890 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:49:31.932897+00:00",
+          "issues": [
+            "평행한 선분의 길이로 다른 선분의 길이를 구하는 일반적인 성질 적용 문제이다. 결과를 주고 조건을 거꾸로 찾는 application-a와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:49:55.816135+00:00",
+          "issues": [
+            "주어진 DE로 DB를 구하는 것은 평행선의 선분 비를 바로 적용하는 일반적인 문제로, 결과에서 조건을 거꾸로 찾는 고난이도 조건을 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:50:20.415301+00:00",
+          "issues": [
+            "‘9cm가 되려면’이라는 표현과 관계없이, 주어진 선분의 길이에 평행선의 비례 성질을 바로 적용하여 DB를 구하는 일반적인 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:50:20.580192+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:06.763193+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:58:48.626136+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:58:53.556968+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:58:57.067107+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:58:57.21852+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:06.811722+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:21.984218+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:25.415429+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:28.962703+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:29.102431+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:46.508003+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:24.389247+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:27.947864+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:31.636471+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:31.786931+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:46.563766+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:32.664951+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:35.994331+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:39.603646+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:39.761203+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:12.01477+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:35.382157+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:39.210668+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:43.307859+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:43.479521+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:12.066743+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:00.348416+00:00",
+          "issues": [
+            "review: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:03.905430+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:07.488391+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:07.965201+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:55.969735+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:02.153967+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:05.700816+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:08.955182+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:09.100457+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:56.009267+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:11.639494+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:15.237044+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:18.558489+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:18.7016+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:19.367789+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:13.090370+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:16.580481+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:20.149066+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:20.303544+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:19.412489+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:05.135148+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:08.841422+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:12.416288+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:12.55742+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:48.784278+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:10.861840+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:14.745169+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:18.363395+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:18.526771+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:48.831455+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:16.132109+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:19.630001+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:23.548288+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:23.697072+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:15.545568+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:21.896032+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:25.599295+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:29.762917+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:29.953026+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:15.582487+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:43.226163+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:46.840395+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:51.056196+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:51.197036+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:23.098105+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:47.013584+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:51.140688+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:54.577717+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:54.73524+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:23.133854+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:54.511490+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:58.138921+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:01.558698+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:01.697642+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:33.185073+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:58.871107+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:02.328517+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:06.314269+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:06.464985+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:33.225316+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:48.580034+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:52.249020+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:56.689464+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:56.829608+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:10:36.362968+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:58.263058+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:02.177368+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:05.746267+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:05.881506+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:10:36.406176+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:00.420972+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:03.840261+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:07.389472+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:07.53129+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:51.673858+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:10.041812+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:13.624975+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:17.455710+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:17.608161+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:51.721153+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:27.340837+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:31.047977+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:34.459899+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:34.602237+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:48.918291+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:33.568850+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:38.683130+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:42.251699+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:42.391027+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:48.95996+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:38.197436+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:41.591838+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:45.105203+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:45.246151+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:10:10.563075+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:46.239482+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:49.997465+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:53.871863+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:54.010467+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:10:10.610094+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:38.877675+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:42.507211+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:45.974204+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:46.11852+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:30:13.777809+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:44.479651+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:48.317396+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:52.333080+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:53.000441+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:30:13.845388+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T13:13:00.442866+00:00",
+          "issues": [
+            "application-a 조건을 충족하지 않는다. 전체 길이와 대응하는 선분의 비로 한 선분의 길이를 구하는 일반적인 성질 적용 문제이며, 결과로부터 조건을 거꾸로 찾는 문제가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:13:25.496713+00:00",
+          "issues": [
+            "application-a 미충족: 주어진 선분의 길이로 대응하는 선분의 길이를 구하는 일반적인 비례 적용 문제이며, 결과로부터 조건을 거꾸로 찾는 문제가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:14:08.317492+00:00",
+          "issues": [
+            "‘EF=9가 되도록’이라는 표현을 썼지만, 주어진 선분의 길이로 다른 선분의 길이를 구하는 일반적인 비례 문제와 구별되지 않는다. 결과에서 조건을 거꾸로 찾는 application-a가 실질적으로 적용되지 않았다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T13:14:08.358011+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:30:13.527885+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:50.008219+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:53.302591+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:57.600503+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:57.748376+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:15:46.369817+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:56.745575+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:00.397170+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:04.108042+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:04.261773+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:15:46.420494+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:11.687029+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:19.377883+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:23.241831+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:23.377988+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:12:07.89235+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:22.124520+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:25.751830+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:29.492331+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:29.634988+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:12:07.934502+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:26.893541+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:30.364047+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:34.167728+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:34.302243+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:12:33.937237+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:33.143954+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:37.382636+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:40.705582+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:40.854959+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:12:34.00448+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:54:25.237097+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:54:30.178228+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:54:33.951567+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:54:34.327909+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:16:32.898805+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:30.531635+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:34.112083+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:37.642232+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:37.793451+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:16:32.937057+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:54:38.051027+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:54:41.541565+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:54:45.212574+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:54:45.400664+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:16:58.453238+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:41.166881+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:45.371466+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:49.229157+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:49.373928+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:16:58.491374+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:54:01.071794+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:54:04.474929+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:54:08.495086+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:54:08.648216+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:15:57.287647+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:07.893186+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:11.789569+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:15.885169+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:16.057894+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:15:57.376038+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:54:13.728621+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:54:17.672852+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:54:21.095106+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:54:21.399532+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:16:11.294469+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:19.464513+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:23.383799+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:26.870579+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:27.050814+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:16:11.343195+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T13:24:48.076825+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "body": "삼각형 $ABC$에서 $\\overline{BC}=10$ cm이다. 점 $D$는 선분 $AB$ 위의 점이고, 점 $E$는 선분 $AC$ 위의 점이다. $\\overline{DE} \\parallel \\overline{BC}$이고 $\\overline{DB}=8$ cm이다.\n\n$\\overline{DE}=6$ cm가 되려면 $\\overline{AD}$의 길이는 몇 cm이어야 하는가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "$4.8$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$8$ cm"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$20$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$24$ cm"
+        }
+      ],
+      "created_at": "2026-11-11T13:06:06.71946+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\overline{DE} : \\overline{BC}=6:10=3:5$이므로 $\\overline{AD} : \\overline{AB}=3:5$이다. 따라서 $\\overline{AD} : \\overline{DB}=3:2$이다. $\\overline{DB}=8$ cm이므로 $\\overline{AD}=12$ cm이다.\n\n①은 $\\overline{AD} : \\overline{DB}$를 $\\overline{DE} : \\overline{BC}$와 같다고 잘못 생각한 경우이다. $\\overline{DE} : \\overline{BC}$와 같은 비는 $\\overline{AD} : \\overline{AB}$이다.",
+      "generated_at": "2026-11-11T13:06:06.67946+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$\\overline{DE}$의 길이를 주고, 그 길이가 되기 위한 $\\overline{AD}$의 길이를 거꾸로 구하게 했다. $\\overline{AB}$가 아닌 $\\overline{DB}$의 길이를 이용해야 한다.",
+      "id": "49c8a711-b7b6-49b8-91cb-31908c99c9ad",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:04:55.039137+00:00",
+          "issues": [
+            "주어진 평행선분의 길이와 BD의 길이로 AD를 구하는 일반적인 선분의 비 문제이다. 결과로부터 별도의 조건을 거꾸로 찾는 application-a가 실제로 구현되어 있지 않다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:05:22.529974+00:00",
+          "issues": [
+            "DE의 길이를 주고 DB의 길이를 묻지만, 이는 주어진 길이로 평행선의 비를 바로 적용해 미지의 선분을 구하는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:06:06.679241+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T12:07:07.94951+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "body": "삼각형 $ABC$에서 점 $D$는 선분 $AB$ 위에, 점 $E$는 선분 $AC$ 위에 있다. $\\overline{DE} \\parallel \\overline{BC}$이고 $\\overline{AB}=15$ cm이다.\n\n두 선분 $DE$, $BC$의 길이의 합은 $20$ cm이다. 선분 $BC$는 선분 $DE$보다 $4$ cm 더 길다. 선분 $DB$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4$ cm"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6$ cm"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 5,
+          "text": "$9$ cm"
+        }
+      ],
+      "created_at": "2026-11-11T11:50:41.766059+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "선분 $DE$의 길이를 $x$ cm라 하면 선분 $BC$의 길이는 $(x+4)$ cm이다. 따라서 $x+(x+4)=20$에서 $x=8$이다. 즉, $\\overline{DE}=8$ cm, $\\overline{BC}=12$ cm이다.\n\n$\\overline{DE} \\parallel \\overline{BC}$이므로 $\\overline{AD}:\\overline{AB}=8:12=2:3$이다. 따라서 $\\overline{AD}=10$ cm이고, $\\overline{DB}=15-10=5$ cm이다.\n\n⑤는 $\\overline{DE}:\\overline{BC}$를 $\\overline{AD}:\\overline{DB}$와 같다고 잘못 생각한 답이다. $\\overline{DE}:\\overline{BC}$는 $\\overline{AD}:\\overline{AB}$와 같다.",
+      "generated_at": "2026-11-11T11:50:41.62314+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 선분의 길이의 합과 차를 나타낸 문장을 식으로 바꾸어 각 길이를 구한 뒤, 평행선에서 생기는 선분의 길이의 비를 적용한다.",
+      "id": "bb4cc5bf-7282-4f7f-a72e-8862b3d8cc49",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:50:41.623058+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T12:07:07.986594+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "body": "삼각형 $ABC$의 변 $AB$ 위에 두 끝점이 아닌 점 $D$가 있고, 변 $AC$ 위에 두 끝점이 아닌 점 $E$가 있다. $DE \\parallel BC$이고, $AD=4$, $DB=6$, $BC=15$일 때, $DE$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$9$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 4,
+          "text": "$10$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$"
+        }
+      ],
+      "created_at": "2026-11-11T11:48:56.203729+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB=4+6=10$이다. $DE \\parallel BC$이므로 $AD:AB=DE:BC$이다. 따라서 $4:10=DE:15$에서 $DE=6$이다.\n$10$을 골랐다면 $AD:DB$를 $DE:BC$와 같다고 잘못 생각했을 수 있다. $DE:BC$와 같은 비는 $AD:DB$가 아니라 $AD:AB$이다.",
+      "generated_at": "2026-11-11T11:48:56.057339+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "5bb72924-4bf1-4430-b5ed-5ad7b760b2ee",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:48:56.057217+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T12:07:08.020614+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "body": "삼각형 $ABC$의 변 $AB$ 위에 두 끝점이 아닌 점 $D$가 있고, 변 $AC$ 위에 두 끝점이 아닌 점 $E$가 있다. $DE \\parallel BC$이고 $AD=3$, $DB=9$, $DE=4$일 때, $BC$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 3,
+          "text": "$12$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$16$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$20$"
+        }
+      ],
+      "created_at": "2026-11-11T11:49:08.411597+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB=3+9=12$이다. $DE \\parallel BC$이므로 $AD:AB=DE:BC$이다. 따라서 $3:12=4:BC$에서 $BC=16$이다. $12$를 고른 경우에는 $AD:DB$를 $DE:BC$와 같다고 잘못 생각했을 수 있다. $DE:BC$와 같은 비는 $AD:AB$이다.",
+      "generated_at": "2026-11-11T11:49:08.263249+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0539598d-be92-449b-b894-6ceca26ae494",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:08.263092+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.111842+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "body": "삼각형 $ABC$에서 점 $D$는 선분 $AB$ 위의 점이고 $A$, $B$와 다르다. 점 $E$는 선분 $AC$ 위의 점이고 $A$, $C$와 다르다. $DE \\parallel BC$이다.\n\n민지는 ‘$DE \\parallel BC$이므로 $AD : DB = DE : BC$이다.’라고 말했다. 민지의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "평행하므로 민지의 식은 언제나 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$AD = DB$인 경우에만 민지의 식은 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$DE$ 대신 $AE$를 써야 하므로 민지의 식은 틀리다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$DB$ 대신 $AB$를 써야 하므로 민지의 식은 틀리다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$BC$ 대신 $EC$를 써야 하므로 민지의 식은 틀리다."
+        }
+      ],
+      "created_at": "2026-11-11T13:07:46.460806+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$DE \\parallel BC$이므로 $AD : AB = DE : BC$이다. $DB$는 $AB$보다 짧으므로 $AD : DB$는 $AD : AB$와 다르다. 따라서 민지의 말은 틀리다.\n\n①을 골랐다면 작은 삼각형과 큰 삼각형의 변의 비를 나타낼 때 $AB$ 대신 $DB$를 쓸 수 있다고 잘못 생각한 것이다. 두 변에서 평행선으로 나누어진 선분의 비를 나타내는 식은 $AD : DB = AE : EC$이다.",
+      "generated_at": "2026-11-11T13:07:46.419564+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지가 평행선으로 생긴 선분의 비를 잘못 세운 식을 제시하고, 그 식이 옳은지 판단하게 했다.",
+      "id": "26280df1-c600-454d-ad46-1a50c24581e1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:07:46.419392+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.141673+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "body": "삼각형 $PQR$에서 점 $S$는 선분 $PQ$ 위에 있고, 점 $U$는 선분 $SQ$ 위에 있다. 네 점 $P$, $S$, $U$, $Q$는 서로 다르다. 점 $T$는 선분 $PR$ 위에 있고, 점 $V$는 선분 $TR$ 위에 있다. 네 점 $P$, $T$, $V$, $R$는 서로 다르다.\n\n$ST \\parallel QR$, $UV \\parallel QR$이고, $PS=2$, $SU=1$, $UQ=3$이다.\n\n다섯 학생이 $ST : UV$에 대해 한 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "$ST : UV = PS : SU$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$ST : UV = PS : PQ$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$ST : UV = SU : PU$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$ST : UV = PU : PS$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$ST : UV = PS : PU$이다."
+        }
+      ],
+      "created_at": "2026-11-11T13:08:11.96902+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$ST \\parallel UV$이므로 삼각형 $PST$와 삼각형 $PUV$에서 $ST : UV = PS : PU$이다. $PU=PS+SU=3$이므로 그 비는 $2 : 3$이다.\n\n①은 작은 삼각형의 변 $ST$와 큰 삼각형의 변 $UV$의 비를 작은 삼각형의 변 $PS$와 나머지 부분 $SU$의 비로 잘못 생각한 것이다. $SU$가 아니라 큰 삼각형의 변 $PU$와 비교해야 한다.",
+      "generated_at": "2026-11-11T13:08:11.94152+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 평행한 선분이 있는 상황에서 다섯 학생의 말을 판단하게 했다. 어느 두 삼각형을 살펴보아야 하는지 생각해야 한다.",
+      "id": "55aa60c2-9503-4771-8c4b-c1008bdfa969",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:08:11.941440+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.169514+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "body": "삼각형 $ABC$에서 점 $D$는 선분 $AB$의 양 끝점이 아닌 점이고, 점 $E$는 선분 $AC$의 양 끝점이 아닌 점이다. $DE \\parallel BC$, $AD=2$, $DB=3$이다.\n\n한 학생이 $AD:DB=DE:BC$라고 식을 세웠다. 이 학생의 식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$AD:DB=BC:DE$이므로 학생의 식에서 $DE$와 $BC$의 순서를 바꾸어야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$DE:BC$는 작은 삼각형의 변과 큰 삼각형의 변의 길이의 비이므로, $AD:DB$가 아니라 $AD:AB$와 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 3,
+          "text": "$AD:DB$와 $DE:BC$는 모두 작은 삼각형의 변과 큰 삼각형의 변의 길이의 비이므로 학생의 식은 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$DE:BC$는 큰 삼각형의 변과 작은 삼각형의 변의 길이의 비이므로 학생의 식은 옳지 않다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$AD:DB$는 $AE:EC$와 같지 않으므로 학생의 식은 옳지 않다."
+        }
+      ],
+      "created_at": "2026-11-11T13:06:55.925073+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$DE \\parallel BC$이므로 $AD:AB=DE:BC$이다. $AB=5$이므로 $DE:BC=2:5$이다. 하지만 $AD:DB=2:3$이므로 학생의 식은 옳지 않다.\n\n③은 $AD:DB$를 작은 삼각형의 변과 큰 삼각형의 변의 길이의 비로 잘못 생각한 것이다. $DB$가 아니라 $AB$를 써야 한다.",
+      "generated_at": "2026-11-11T13:06:55.897383+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "17b901f4-bc84-4bfb-9f11-26f6bc5307e9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:06:26.182128+00:00",
+          "issues": [
+            "보기 ⑤에는 AD:AB를 AD:DB로 잘못 비교하는 오류와 DE:BC를 BC:DE로 거꾸로 비교하는 오류가 함께 드러나, 오답 보기 하나에 오개념 하나만 담아야 하는 조건에 어긋난다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:06:55.897080+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.211073+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "body": "삼각형 $PQR$에서 점 $S$는 선분 $QR$의 양 끝점이 아닌 점이고, 점 $T$는 선분 $PR$의 양 끝점이 아닌 점이다. $ST \\parallel PQ$이다. 여기서 $RS$와 같은 기호는 선분의 길이를 나타낸다.\n\n항상 옳은 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "$RS:SQ=ST:PQ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$RS:RQ=ST:PQ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$RS:SQ=RT:RP$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$RS:RQ=PQ:ST$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$SQ:RQ=ST:PQ$"
+        }
+      ],
+      "created_at": "2026-11-11T13:07:19.322239+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$ST \\parallel PQ$이므로 작은 삼각형 $RST$와 큰 삼각형 $RQP$에서 $RS:RQ=ST:PQ$이다. 따라서 정답은 ②이다.\n\n①은 선분 $RQ$의 두 부분인 $RS$와 $SQ$의 비를 $ST$와 $PQ$의 비와 같다고 잘못 생각한 식이다. $ST:PQ$와 비교해야 하는 비는 $RS:RQ$이다.",
+      "generated_at": "2026-11-11T13:07:19.287596+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8530111d-11f3-43b6-9558-fa9838043e45",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:07:19.287491+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.239902+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "body": "삼각형 $ABC$에서 점 $D$, $E$는 각각 선분 $AB$, $AC$의 중점이다. 점 $F$, $G$는 각각 선분 $AD$, $AE$의 중점이다. 두 선분 $DE$와 $FG$의 길이의 합이 $18$일 때, 선분 $BC$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 1,
+          "text": "$3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 2,
+          "text": "$9$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$18$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$24$"
+        }
+      ],
+      "created_at": "2026-11-11T13:08:48.736065+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "삼각형 $ABC$에서 $DE$는 $BC$와 평행하고 길이는 $BC$의 절반이다. 삼각형 $ADE$에서 $FG$는 $DE$와 평행하고 길이는 $DE$의 절반이다. 따라서 $DE+FG=\\frac{1}{2}BC+\\frac{1}{4}BC=\\frac{3}{4}BC=18$이므로 $BC=24$이다.\n두 중점을 연결한 선분의 길이가 나머지 변의 길이와 같다고 생각하면 $9$를, 나머지 변의 길이의 $2$배라고 생각하면 $3$을 고를 수 있다.",
+      "generated_at": "2026-11-11T13:08:48.692011+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 중점을 연결한 선분들의 길이의 합을 주고, 이를 거꾸로 이용하여 처음 삼각형의 변의 길이를 구하게 했다.",
+      "id": "65f42674-c63b-496c-90d3-8c152b71a79f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:08:48.691872+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.267513+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "body": "삼각형 $ABC$에서 점 $D$, $E$, $F$는 각각 선분 $AB$, $BC$, $CA$의 중점이다. 선분 $DE$의 길이는 $4\\text{ cm}$, 선분 $EF$의 길이는 $3\\text{ cm}$이다. 삼각형 $ABC$의 둘레가 $24\\text{ cm}$일 때, 선분 $DF$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$10\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 5,
+          "text": "$17\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:09:15.497793+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 변의 중점을 연결한 선분의 길이는 나머지 변의 길이의 절반이다. 따라서 $AC=2DE=8\\text{ cm}$, $AB=2EF=6\\text{ cm}$이다. 삼각형 $ABC$의 둘레가 $24\\text{ cm}$이므로 $BC=24-8-6=10\\text{ cm}$이다. 따라서 $DF=\\dfrac{1}{2}BC=5\\text{ cm}$이다.\n\n$17\\text{ cm}$를 골랐다면 두 변의 중점을 연결한 선분의 길이가 나머지 변의 길이와 같다고 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T13:09:15.468958+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "삼각형의 둘레가 주어졌을 때 두 변의 중점을 연결한 선분의 길이를 거꾸로 구한다.",
+      "id": "fc67a435-4ba2-4545-9c3f-cab3af9b0a5a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:09:15.468753+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.294632+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "body": "삼각형 $ABC$에서 점 $D$는 변 $AB$의 중점이고, 점 $E$는 변 $AC$의 중점이다. $BC=12\\ \\mathrm{cm}$일 때, 선분 $DE$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3\\ \\mathrm{cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6\\ \\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8\\ \\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 4,
+          "text": "$12\\ \\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 5,
+          "text": "$24\\ \\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:08:23.048416+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 변의 중점을 연결한 선분 $DE$는 나머지 변 $BC$와 평행하고, 그 길이는 $BC$의 절반이다. 따라서 $DE=6\\ \\mathrm{cm}$이다. $12\\ \\mathrm{cm}$나 $24\\ \\mathrm{cm}$를 골랐다면 $DE$의 길이가 $BC$의 길이와 같거나 그 $2$배라고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T13:08:23.025228+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f5242217-5c07-41c4-8ade-a68278bce73e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:08:23.025075+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.321827+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "body": "삼각형 $PQR$에서 점 $M$은 변 $PQ$의 중점이고, 점 $N$은 변 $QR$의 중점이다. $MN=7\\ \\mathrm{cm}$일 때, 선분 $PR$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 1,
+          "text": "$3.5\\ \\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 2,
+          "text": "$7\\ \\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10\\ \\mathrm{cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$14\\ \\mathrm{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$21\\ \\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:08:33.135637+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 변의 중점을 연결한 선분 $MN$은 나머지 변 $PR$과 평행하고, 그 길이는 $PR$의 절반이다. 따라서 $PR=7\\times 2=14\\ \\mathrm{cm}$이다. ①은 $MN$의 길이가 $PR$의 2배라고 잘못 생각한 경우이고, ②는 두 선분의 길이가 같다고 잘못 생각한 경우이다.",
+      "generated_at": "2026-11-11T13:08:33.114673+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9a10d532-dcc3-4b1a-ae21-9a6cd6ab4212",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:08:33.114605+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.351206+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "body": "삼각형 $ABC$에서 $\\overline{AB}=6\\text{ cm}$, $\\overline{AC}=8\\text{ cm}$, $\\angle BAC=60^\\circ$이다. 점 $D$는 $\\overline{AB}$의 중점이고, 점 $E$는 $\\overline{AC}$의 중점이다.\n\n$\\overline{DE}$의 길이는 $\\overline{BC}$의 길이와 어떤 관계가 있는가? 또, 주어진 두 변의 길이와 각의 크기가 달라져도 그 관계가 성립하는 이유를 두 삼각형의 닮음과 닮음비를 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:10:36.305263+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 점이 중점이므로 두 변의 길이와 각의 크기가 달라져도 $AD:AB=AE:AC=1:2$이다. 두 삼각형의 그 사이의 각은 $\\angle BAC$로 같으므로 $\\triangle ADE$와 $\\triangle ABC$는 닮음이다. 닮음비가 $1:2$이므로 $DE:BC=1:2$이다. $DE$가 $BC$와 같거나 $BC$의 두 배라고 생각하면 두 삼각형의 닮음비를 잘못 적용한 것이다.",
+      "generated_at": "2026-11-11T13:10:36.2753+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "문제에서 주어진 두 변의 길이와 각의 크기가 달라져도 관계가 성립하는 이유를 설명하도록 했다.",
+      "id": "d462fa83-4949-4972-8f41-087469cc6da8",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$D$, $E$가 각각 중점이므로 두 변의 길이가 달라져도 $AD:AB=AE:AC=1:2$이다. 두 삼각형에서 그 사이의 각은 $\\angle BAC$로 같으므로 $\\triangle ADE$와 $\\triangle ABC$는 닮음이고 닮음비는 $1:2$이다. 따라서 각의 크기가 달라져도 $DE:BC=1:2$이므로 $DE$는 $BC$의 절반이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 점이 중점이므로 $AD:AB=AE:AC=1:2$임을 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 쌍의 변의 길이의 비가 같고 그 사이의 각이 같음을 이용하여 두 삼각형이 닮음이고 닮음비가 $1:2$임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "닮음비를 이용하여 $DE$가 $BC$의 절반임을 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:10:36.275193+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.382426+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "body": "삼각형 $ABC$에서 $\\overline{AB}=8\\text{ cm}$, $\\overline{AC}=6\\text{ cm}$, $\\overline{BC}=10\\text{ cm}$이고, $\\angle CAB=90^\\circ$이다. 점 $M$은 $\\overline{BC}$의 중점이고, 점 $N$은 $\\overline{CA}$의 중점이다.\n\n민수는 “삼각형에서 두 변의 중점을 이은 선분의 길이는 나머지 변의 길이와 같다.”라고 말했다.\n\n위 삼각형을 이용하여 민수의 말이 틀렸음을 보이려고 한다. $\\overline{MN}$의 길이를 구하고, 두 삼각형의 닮음과 닮음비를 이용하여 그 길이를 구한 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:11:51.618339+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$M$과 $N$은 각각 중점이므로 $CM:CB=CN:CA=1:2$이다. 또 $\\angle MCN$과 $\\angle BCA$는 같은 각이다. 따라서 두 변의 길이의 비와 그 끼인각으로부터 $\\triangle CMN$과 $\\triangle CBA$는 닮고, 닮음비는 $1:2$이다. 그러므로 $MN:BA=1:2$이고 $MN=4\\text{ cm}$이다. $AB$의 길이는 $8\\text{ cm}$이므로 민수의 말은 틀렸다. 두 중점을 이은 선분의 길이는 이 삼각형에서 나머지 변의 길이와 같지 않다.",
+      "generated_at": "2026-11-11T13:11:51.599864+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민수의 주장이 틀렸음을 주어진 삼각형을 반례로 이용하여 보이게 한다. 선분의 길이를 닮음을 근거로 구한 뒤 나머지 변의 길이와 비교해야 한다.",
+      "id": "95f9b4a6-f163-435b-88f8-326cc4393fa7",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$M$과 $N$이 중점이므로 $CM:CB=CN:CA=1:2$이고, $\\angle MCN=\\angle BCA$이다. 따라서 $\\triangle CMN$과 $\\triangle CBA$는 닮고 닮음비는 $1:2$이다. 그러므로 $MN:BA=1:2$이어서 $MN=4\\text{ cm}$이다. $AB=8\\text{ cm}$이므로 두 길이는 같지 않아 민수의 말은 틀렸다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "$CM:CB=CN:CA=1:2$와 $\\angle MCN=\\angle BCA$를 이용하여 두 삼각형이 닮음임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 삼각형의 닮음비 $1:2$를 이용하여 $MN:BA=1:2$임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "$MN=4\\text{ cm}$와 $AB=8\\text{ cm}$를 비교하여 민수의 말이 틀렸음을 보인다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:11:13.368651+00:00",
+          "issues": [
+            "지훈이의 주장은 주어진 특정 삼각형의 길이에 관한 것이므로, 그 길이를 직접 구해 비교하는 것은 일반적인 주장에 대한 반례를 드는 것이 아니다. 중점 연결 선분의 성질을 닮음으로 확인하는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:11:51.599521+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.410178+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "body": "삼각형 $ABC$에서 $AB=6\\,\\mathrm{cm}$, $AC=8\\,\\mathrm{cm}$, $BC=10\\,\\mathrm{cm}$이고 $\\angle BAC=90^\\circ$이다. 점 $D$는 선분 $AB$의 중점이고, 점 $E$는 선분 $AC$의 중점이다.\n\n선분 $DE$의 길이를 구하고, 두 삼각형의 닮음을 이용하여 그 이유를 한두 문장으로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:09:48.871309+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$D$, $E$가 중점이므로 $AD:AB=AE:AC=1:2$이다. 또 두 삼각형의 끼인각 $\\angle DAE$와 $\\angle BAC$는 같다. 따라서 두 삼각형은 닮았고, $DE:BC=1:2$이므로 $DE=5\\,\\mathrm{cm}$이다. $DE$가 $BC$와 같거나 $BC$의 2배라고 생각했다면 닮음비를 잘못 적용한 것이다.",
+      "generated_at": "2026-11-11T13:09:48.853928+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8f128444-0358-4242-aebd-f3c4232118a3",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$AD:AB=AE:AC=1:2$이고 끼인각 $\\angle DAE$와 $\\angle BAC$가 같으므로, $\\triangle ADE$와 $\\triangle ABC$는 닮음비가 $1:2$인 닮은 삼각형이다. 따라서 $DE:BC=1:2$이므로 $DE=5\\,\\mathrm{cm}$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$AD:AB=AE:AC=1:2$이고 두 삼각형의 끼인각이 같음을 밝혔다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 삼각형이 닮았으며 닮음비가 $1:2$임을 밝혔다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$DE:BC=1:2$를 이용하여 $DE=5\\,\\mathrm{cm}$임을 밝혔다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:09:48.853809+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.440482+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "body": "삼각형 $PQR$에서 $PQ=10\\,\\mathrm{cm}$, $PR=16\\,\\mathrm{cm}$, $\\angle QPR=60^\\circ$이다. 점 $M$은 선분 $PQ$의 중점이고, 점 $N$은 선분 $PR$의 중점이다. $MN=7\\,\\mathrm{cm}$일 때, 선분 $QR$의 길이를 구하시오. 두 삼각형의 닮음을 이용하여 그 이유도 한두 문장으로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:10:10.511338+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$M$, $N$은 각각 선분 $PQ$, $PR$의 중점이므로 $PM:PQ=PN:PR=1:2$입니다. 두 삼각형은 그 사이의 각도 같으므로 $\\triangle PMN$과 $\\triangle PQR$은 닮음비가 $1:2$인 닮은 삼각형입니다. 따라서 $MN:QR=1:2$이므로 $QR=14\\,\\mathrm{cm}$입니다. $MN$과 $QR$의 길이가 같거나 $MN$의 길이가 $QR$의 길이의 두 배라고 생각하면 두 선분의 길이의 비를 잘못 이해한 것입니다.",
+      "generated_at": "2026-11-11T13:10:10.481129+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0cf0af55-6413-484f-9dae-57c1a817d815",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$PM:PQ=PN:PR=1:2$이고 그 사이의 각이 같으므로 $\\triangle PMN$과 $\\triangle PQR$은 닮음비가 $1:2$인 닮은 삼각형이다. 따라서 $MN:QR=1:2$이므로 $QR=14\\,\\mathrm{cm}$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$PM:PQ=PN:PR=1:2$임을 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 변의 길이의 비와 그 사이의 각을 근거로 두 삼각형이 닮음비가 $1:2$인 닮은 삼각형임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$MN:QR=1:2$를 이용하여 $QR=14\\,\\mathrm{cm}$를 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:10:10.481007+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:39:32.239752+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "body": "서로 평행한 세 철길을 두 직선 도로가 가로지른다. 첫째 도로가 세 철길과 만나는 점을 차례로 $A$, $B$, $C$라 하고, 둘째 도로가 같은 철길과 만나는 점을 차례로 $D$, $E$, $F$라 하자. 두 도로에서 점의 순서는 각각 $A$, $B$, $C$와 $D$, $E$, $F$이다.\n\n$AB=4\\text{ km}$, $BC=6\\text{ km}$이다. $AB$와 $EF$의 길이의 합은 $BC$와 $DE$의 길이의 합보다 $1\\text{ km}$ 길다. 이때 $DF$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5\\text{ km}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M3",
+          "no": 2,
+          "text": "$10\\text{ km}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12\\text{ km}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$15\\text{ km}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$18\\text{ km}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:30:13.444887+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "세 평행선 사이의 선분의 길이의 비를 이용하면 $DE:EF=AB:BC=2:3$이다.\n\n길이의 합을 비교하면 $4+EF=6+DE+1$이므로 $EF-DE=3\\text{ km}$이다. 따라서 $DE=6\\text{ km}$, $EF=9\\text{ km}$이고, $DF=15\\text{ km}$이다.\n\n②는 $DE=AB$, $EF=BC$라고 생각하여 고를 수 있다. 하지만 두 도로 위의 선분은 길이가 같은 것이 아니라 길이의 비가 같다.",
+      "generated_at": "2026-11-11T13:30:13.372556+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 도로에 걸친 길이의 합을 비교한 문장을 식으로 바꾸어 $EF$와 $DE$의 길이의 차를 구해야 한다. 그다음 세 평행선 사이의 선분의 길이의 비를 이용한다.",
+      "id": "67a82d59-246a-4522-9542-f986144eb74b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:28:58.541243+00:00",
+          "issues": [
+            "application-a: 주어진 길이와 비로 AB를 구하는 일반적인 순방향 적용 문제이다. 결과를 주고 그 결과를 만드는 조건을 거꾸로 찾게 하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:29:36.484639+00:00",
+          "issues": [
+            "application-a 미충족: 일부의 길이로 전체 길이를 구하는 것은 선분의 비를 직접 적용하는 일반적인 길이 구하기이며, 주어진 결과로부터 조건을 찾는 역방향 적용이 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:30:13.372381+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.47036+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "body": "한 직선 위에 있지 않은 두 반직선 $OX$, $OY$가 있다. 점 $A$, $C$는 반직선 $OX$ 위에 있고 $O$에서 가까운 순서대로 $A$, $C$이다. 점 $D$, $F$는 반직선 $OY$ 위에 있고 $O$에서 가까운 순서대로 $D$, $F$이다.\n\n$\\overline{AD} \\parallel \\overline{CF}$이고, $AC=15\\text{ cm}$, $DF=10\\text{ cm}$이다. 선분 $AC$ 위에 점 $B$를 잡고, $B$를 지나 $\\overline{AD}$에 평행한 직선이 선분 $DF$와 만나는 점을 $E$라 하자.\n\n$EF$가 $DE$보다 $2\\text{ cm}$ 길어지도록 $B$의 위치를 정하려고 한다. 이때 $AB$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M3",
+          "no": 1,
+          "text": "$4\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$5\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$10\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:15:46.315521+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$DF=10\\text{ cm}$이고 $EF$가 $DE$보다 $2\\text{ cm}$ 길다. 따라서 $DE=4\\text{ cm}$, $EF=6\\text{ cm}$이다.\n\n세 평행선 사이의 선분의 길이의 비를 이용하면 $AB:BC=DE:EF=4:6$이다. $AC=15\\text{ cm}$이므로 $AB=15\\times\\frac{4}{10}=6\\text{ cm}$이다.\n\n①을 골랐다면 $AB$와 $DE$의 길이가 같다고 생각했을 수 있다. 두 선분의 길이는 같지 않지만, 각각의 직선에서 생기는 선분의 길이의 비는 같다.",
+      "generated_at": "2026-11-11T13:15:46.280806+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$EF$가 $DE$보다 $2\\text{ cm}$ 길다는 결과가 주어졌을 때, 이를 만족하도록 잡은 점 $B$의 위치를 $AB$의 길이로 구한다.",
+      "id": "abf72436-571e-4eb1-b0a8-59c5bd1059cb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:14:42.331540+00:00",
+          "issues": [
+            "application-a: AB가 4가 되도록 한다는 표현을 썼지만, 실제로는 주어진 세 선분의 길이로 나머지 선분의 길이를 구하는 일반적인 비례 문제이다. 결과로부터 조건을 거꾸로 찾는 사고가 필요하지 않다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:15:11.478785+00:00",
+          "issues": [
+            "application-b 미충족: 길과 줄이라는 표현만 사용했을 뿐, 필요한 선분의 길이가 직접 주어져 평행선 사이의 비를 적용하는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:15:46.280706+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.507957+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "body": "서로 평행한 세 직선 $l$, $m$, $n$이 있다. 한 직선이 $l$, $m$, $n$과 만나는 점을 차례로 $A$, $B$, $C$라 하고, 다른 직선이 $l$, $m$, $n$과 만나는 점을 차례로 $D$, $E$, $F$라 하자. $B$는 $\\overline{AC}$ 위에 있고, $E$는 $\\overline{DF}$ 위에 있다.\n\n$AB=4\\,\\text{cm}$, $BC=6\\,\\text{cm}$, $DE=8\\,\\text{cm}$일 때, $EF$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M3",
+          "no": 2,
+          "text": "$6\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8\\,\\text{cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$12\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$16\\,\\text{cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:12:07.840968+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "세 평행선 사이의 선분의 길이의 비는 같으므로 $AB:BC=DE:EF$입니다. 따라서 $4:6=8:EF$이므로 $EF=12\\,\\text{cm}$입니다.\n\n$6\\,\\text{cm}$를 골랐다면 두 직선에서 같은 평행선 사이에 있는 선분의 길이가 항상 같다고 생각했을 수 있습니다. 항상 같은 것은 길이가 아니라 길이의 비입니다.",
+      "generated_at": "2026-11-11T13:12:07.824963+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "75c205b0-d102-418e-bd7b-fb38bd2ae6fd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:12:07.824843+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.537765+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "body": "사다리꼴 $ABCD$에서 $\\overline{AB}\\parallel\\overline{DC}$이다. 점 $E$는 $\\overline{AD}$ 위에 있고, 점 $F$는 $\\overline{BC}$ 위에 있다. $\\overline{EF}$는 $\\overline{AB}$와 평행하다.\n\n$AE=3\\,\\text{cm}$, $ED=5\\,\\text{cm}$, $BF=6\\,\\text{cm}$일 때, $FC$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M3",
+          "no": 2,
+          "text": "$5\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8\\,\\text{cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$10\\,\\text{cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$15\\,\\text{cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:12:33.88497+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{AB}$, $\\overline{EF}$, $\\overline{DC}$가 서로 평행하므로 $AE:ED=BF:FC$이다. 따라서 $3:5=6:FC$이므로 $FC=10\\,\\text{cm}$이다.\n\n$5\\,\\text{cm}$를 골랐다면 $ED$와 $FC$의 길이가 같다고 생각했을 수 있다. 두 선분의 길이가 아니라 두 직선에서 생기는 선분의 길이의 비가 같다.",
+      "generated_at": "2026-11-11T13:12:33.86684+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3272eab7-7895-48c5-a139-91dea738a863",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:12:33.866716+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.565699+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "body": "△$ABC$에서 점 $D$는 $\\overline{BC}$의 중점이고, 점 $G$는 무게중심이다. 점 $P$는 $\\overline{AG}$의 중점이다. $PG=3$일 때, 중선 $\\overline{AD}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$6$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$9$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 3,
+          "text": "$12$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$15$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 5,
+          "text": "$18$"
+        }
+      ],
+      "created_at": "2026-11-11T13:16:32.824066+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$P$는 $\\overline{AG}$의 중점이므로 $AG=2PG=6$이다. 무게중심 $G$는 중선 $\\overline{AD}$를 꼭짓점 $A$에서부터 $2:1$로 나누므로 $GD=3$이다. 따라서 $AD=6+3=9$이다.\n무게중심이 중선을 $1:1$로 나눈다고 생각하면 $AD=12$를 고를 수 있다. 꼭짓점 쪽이 짧게 $1:2$로 나눈다고 생각하면 $AD=18$을 고를 수 있다.",
+      "generated_at": "2026-11-11T13:16:32.734899+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "중선 전체의 길이가 아니라 무게중심까지의 선분을 반으로 나눈 길이를 주고, 중선의 길이를 거꾸로 찾게 한다.",
+      "id": "d16dd392-490a-47a8-bdf5-c8a75d66602e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:16:32.734783+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.595436+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "body": "삼각형 $ABC$에서 점 $D$는 $\\overline{BC}$의 중점이고, 점 $G$는 무게중심이다. 점 $P$는 $\\overline{AD}$ 위의 점이다. $AP=8$, $PG=2$일 때, 가능한 $AD$의 길이를 모두 더한 값은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$12$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$18$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$24$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 4,
+          "text": "$32$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 5,
+          "text": "$48$"
+        }
+      ],
+      "created_at": "2026-11-11T13:16:58.395721+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $G$가 점 $P$보다 점 $A$에 가까우면 $AG=8-2=6$이다. 점 $G$가 점 $P$보다 점 $D$에 가까우면 $AG=8+2=10$이다. 무게중심은 중선을 꼭짓점에서부터 $2:1$로 나누므로 $AD$는 각각 $9$, $15$이다. 따라서 구하는 합은 $9+15=24$이다.\n④는 무게중심이 중선을 $1:1$로 나눈다고 생각한 답이다. ⑤는 꼭짓점 쪽을 짧게 $1:2$로 나눈다고 생각한 답이다.",
+      "generated_at": "2026-11-11T13:16:58.375552+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$AP$와 $PG$의 길이로부터 $G$의 두 위치를 찾아 각각 가능한 중선의 길이를 거꾸로 구한다.",
+      "id": "7058c55d-17fb-407c-af46-eab8393d7a00",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:16:58.375413+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.625694+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "body": "$\\triangle ABC$에서 점 $D$는 $\\overline{BC}$의 중점이고, 점 $G$는 무게중심이다. $\\overline{AD}=12\\text{ cm}$일 때, $\\overline{AG}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 1,
+          "text": "$4\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 2,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$10\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:15:57.230862+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "무게중심 $G$는 중선 $AD$를 꼭짓점 $A$에서부터 $2:1$로 나눈다. 따라서 $\\overline{AG}=12\\times\\frac{2}{3}=8\\text{ cm}$이다. $4\\text{ cm}$는 꼭짓점 쪽을 짧게 $1:2$로 나눈 경우이고, $6\\text{ cm}$는 중선을 $1:1$로 나눈 경우이다.",
+      "generated_at": "2026-11-11T13:15:57.204075+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "40e5c351-c6e4-4489-94bf-0e294ab6eec4",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:15:57.203978+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.654056+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "body": "$\\triangle PQR$에서 점 $M$은 $\\overline{PQ}$의 중점이고, 점 $G$는 무게중심이다. $\\overline{GM}=4\\text{ cm}$일 때, $\\overline{RG}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 1,
+          "text": "$2\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 2,
+          "text": "$4\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:16:11.237567+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "무게중심 $G$는 중선 $\\overline{RM}$을 꼭짓점 $R$에서부터 $2:1$로 나눈다. 따라서 $\\overline{RG}=4\\times 2=8\\text{ cm}$이다. $2\\text{ cm}$를 골랐다면 꼭짓점 쪽이 더 짧다고 생각한 것이다. $4\\text{ cm}$를 골랐다면 무게중심이 중선을 반으로 나눈다고 생각한 것이다.",
+      "generated_at": "2026-11-11T13:16:11.227311+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4373d48d-0bfd-44d7-bf33-7b91d8e00ca3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:16:11.227170+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}
