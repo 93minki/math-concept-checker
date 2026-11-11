@@ -1,0 +1,1817 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:08.076559+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:11.327283+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:14.962077+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:15.10665+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:02:42.899655+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:12.075044+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:15.657627+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:19.457034+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:19.622016+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:02:42.958174+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:19.952506+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:23.692112+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:26.932696+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:27.072977+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:05:59.959546+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:23.272359+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:26.996712+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:30.666645+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:30.846332+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:00.052066+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:44.160433+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:48.047226+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:52.307988+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:52.446925+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:01:23.166527+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:58:50.059246+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:58:54.154024+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:58:57.737225+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:58:57.875921+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:01:23.239687+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:56.173712+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:00.353414+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:04.017346+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:04.160076+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:01:53.782339+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:01.529152+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:04.683982+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:08.427128+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:08.567677+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:01:53.850488+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:53.748036+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:57.392322+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:00.966589+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:01.104955+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:14.962948+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:58.498937+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:01.929949+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:05.815037+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:05.985058+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:15.010779+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:04.447448+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:08.100381+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:12.032321+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:12.176188+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:41.198681+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:09.572613+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:13.313789+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:17.200652+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:17.367737+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:07:41.236199+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:30.663957+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:34.633450+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:38.150966+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:38.302785+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:20.778104+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:34.295783+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:38.170426+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:41.708579+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:41.862112+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:20.826428+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:42.944648+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:46.607735+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:50.201363+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:50.337973+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:39.79631+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:59:45.570499+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:59:49.246851+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:59:54.981639+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:59:55.149782+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:06:39.840867+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:33.188139+00:00",
+          "issues": [
+            "review: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:36.860572+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:40.395947+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:40.53377+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:00:43.960216+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:58:38.456151+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:58:41.914978+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:58:46.094917+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:58:46.246451+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:00:44.028565+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:39.510037+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:42.832340+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:46.028912+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:46.158693+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:06.910951+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:44.030857+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:48.741805+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:53.058441+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:53.218608+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:09:06.950022+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:49.719943+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:53.190033+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:57.006002+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:57.150151+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:20.597942+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:57.139732+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:00.788713+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:04.574433+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:04.737378+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:20.639368+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:16.160526+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:19.876351+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:23.549752+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:23.681777+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:03.404588+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:21.706947+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:25.599296+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:29.325936+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:29.705923+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:03.451793+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:27.695238+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:32.577394+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:36.082513+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:36.223251+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:28.025016+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:00:33.152941+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:00:36.965500+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:00:40.244747+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:00:40.383733+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:08:28.079885+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T13:24:47.591888+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "body": "다음은 다섯 학생의 주장이다. 옳은 주장을 한 학생은 누구인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "민수: $AB=5$, $AC=BC=4$인 $\\triangle ABC$가 있다. 점 $D$는 $\\overline{BC}$ 위의 점이고 $B$, $C$와 다르며, $AD=4$이다. $AB$는 공통이고 $AC=AD$이며 $\\angle ABC=\\angle ABD$이므로 $\\triangle ABC$와 $\\triangle ABD$는 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 2,
+          "text": "서연: 세 변의 길이가 각각 $4$, $5$, $6$인 삼각형과 각각 $6$, $7$, $8$인 삼각형은 짝 지은 세 쌍의 변의 길이의 차가 모두 $2$이므로 닮음이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "지우: $AB=3$, $AC=4$, $DE=6$, $DF=8$이고 $\\angle BAC=\\angle EDF$이면 $\\triangle ABC$와 $\\triangle DEF$는 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "현우: 두 삼각형에서 두 쌍의 각의 크기가 각각 같아도 변의 길이를 모르면 닮음인지 알 수 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "수아: 두 삼각형에서 한 쌍의 각의 크기가 같으면 언제나 닮음이다."
+        }
+      ],
+      "created_at": "2026-11-11T13:02:42.846174+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "③에서 $AB:DE=AC:DF=1:2$이고, 두 변이 이루는 각의 크기도 같다. 따라서 두 삼각형은 닮음이다.\n①에서 같은 크기인 각은 길이가 같은 두 변이 이루는 각이 아니다. 실제로 $\\triangle ABC$는 길이가 같은 두 변이 있지만, $\\triangle ABD$는 세 변의 길이가 모두 다르므로 닮음이 아니다.\n②에서 세 쌍의 변의 길이의 차는 모두 $2$이지만, $4:6$과 $5:7$은 같지 않다. 길이의 차가 같다고 해서 닮음은 아니다.\n④에서는 두 쌍의 각의 크기가 각각 같으므로 닮음이라고 할 수 있다. ⑤에서는 한 쌍의 각만으로는 닮음인지 알 수 없다.",
+      "generated_at": "2026-11-11T13:02:42.746754+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 주장을 비교하여 옳은 주장을 고르게 했다. 특히 ①과 ②에서 두 변과 끼인각이 아닌 각을 이용한 주장과 변의 길이의 차를 이용한 주장을 각각 판단해야 한다.",
+      "id": "479389ea-5669-4b25-b512-685ea5750bc2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:02:42.746607+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.624107+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "body": "다음은 한 학생이 공책에 적은 두 메모이다.\n\n첫째 메모: $AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이면, $\\triangle ABC$와 $\\triangle DEF$는 반드시 닮음이다.\n\n둘째 메모: 세 변의 길이가 각각 $3$, $4$, $5$인 삼각형과 $5$, $6$, $7$인 삼각형은 반드시 닮음이다.\n\n두 메모에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "첫째 메모에서는 두 쌍의 변의 길이의 비가 같고 한 쌍의 각의 크기가 같으므로 판단이 언제나 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 2,
+          "text": "둘째 메모에서는 세 쌍의 변의 길이가 각각 $2$씩 차이 나므로 두 삼각형은 닮음이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫째 메모에서 크기가 같다고 한 각은 길이의 비를 비교한 두 변 사이의 각이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 4,
+          "text": "첫째 메모에서는 나머지 한 쌍의 변의 길이의 비 $BC:EF$도 반드시 $AB:DE$와 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 5,
+          "text": "둘째 메모의 두 삼각형은 닮음이고, 닮음비는 $3:5$이다."
+        }
+      ],
+      "created_at": "2026-11-11T13:05:59.874469+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫째 메모에서 크기가 같다고 한 각은 길이의 비를 비교한 두 변 사이의 각이 아니다. 따라서 주어진 내용만으로는 닮음인지 판별할 수 없다.\n\n예를 들어 $AB=AC$이고 $\\angle ABC=\\angle ACB=70^\\circ$인 삼각형 $ABC$를 생각하자. 점 $D$는 선분 $BC$ 위에 있고, $\\angle BAD=10^\\circ$이다. $\\triangle ABD$와 $\\triangle ACD$에서는 $AB=AC$, $AD=AD$, $\\angle ABD=\\angle ACD$이다. 하지만 두 삼각형의 세 각의 크기는 각각 $10^\\circ$, $70^\\circ$, $100^\\circ$와 $30^\\circ$, $70^\\circ$, $80^\\circ$이므로 닮음이 아니다. ①과 ④는 끼인각이 아닌 각이 같아도 닮음이라고 잘못 생각한 것이다.\n\n둘째 메모에서는 세 변의 길이가 각각 $2$씩 차이 나지만, $3:5$와 $4:6$은 같지 않다. ②와 ⑤는 세 변의 길이의 차가 같으면 닮음이라고 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T13:05:59.561793+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "한 학생이 적은 두 메모를 보고 그 판단에 대한 설명이 옳은지 살펴보게 했다.",
+      "id": "633f6471-c31b-4f02-93b0-1b042316ddf2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:03:55.079708+00:00",
+          "issues": [
+            "M1은 판별할 수 있지만, 세 쌍의 대응변 길이의 차가 같으면 닮음이라고 보는 M2를 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:04:52.836941+00:00",
+          "issues": [
+            "M2는 판별할 수 있지만, 두 변의 비와 끼인각이 아닌 각에 관한 M1은 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:05:59.561556+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.654511+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "body": "다음은 두 삼각형의 닮음에 대한 학생들의 말이다. 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "두 쌍의 각의 크기가 각각 같으면 두 삼각형은 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 2,
+          "text": "$AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이면 $\\triangle ABC$와 $\\triangle DEF$는 반드시 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 3,
+          "text": "세 변의 길이가 $3$, $4$, $5$인 삼각형과 $5$, $6$, $7$인 삼각형은 세 변의 길이 차가 모두 $2$이므로 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "한 쌍의 각의 크기가 같으면 두 삼각형은 반드시 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 쌍의 변의 길이의 비가 같으면 두 삼각형은 반드시 닮음이다."
+        }
+      ],
+      "created_at": "2026-11-11T13:01:23.051417+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "① 두 삼각형에서 두 쌍의 각의 크기가 각각 같으면 두 삼각형은 닮음이다.\n② 길이의 비가 같은 두 쌍의 변은 $\\overline{AB}$와 $\\overline{DE}$, $\\overline{AC}$와 $\\overline{DF}$이다. 이 변의 끼인각인 $\\angle BAC$와 $\\angle EDF$가 각각 같은지는 알 수 없다. 끼인각이 아닌 각의 크기가 같다는 것만으로는 닮음이라고 할 수 없다.\n③ 세 변의 길이 차가 모두 $2$이지만, $3:5$, $4:6$, $5:7$은 서로 같지 않다. 길이의 차가 같다는 것을 길이의 비가 같다는 것과 잘못 생각했다.\n④ 한 쌍의 각의 크기만 같아서는 닮음이라고 할 수 없다.\n⑤ 두 쌍의 변의 길이의 비만 같아서는 닮음이라고 할 수 없다.",
+      "generated_at": "2026-11-11T13:01:22.702279+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "262e6b6b-9465-4bb9-ab46-764ce51e7baa",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:01:22.702179+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.689191+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "body": "다음 중 주어진 내용만으로 두 삼각형이 반드시 닮음이라고 할 수 있는 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "한 삼각형의 세 변의 길이는 $3$, $4$, $5$이고, 다른 삼각형의 세 변의 길이는 $6$, $8$, $11$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 2,
+          "text": "$\\triangle ABC$와 $\\triangle DEF$에서 $AB=4$, $AC=3$, $DE=8$, $DF=6$이고, $\\angle ABC=\\angle DEF=30^\\circ$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "한 삼각형의 세 변의 길이는 $4$, $6$, $7$이고, 다른 삼각형의 세 변의 길이는 $8$, $12$, $14$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 4,
+          "text": "한 삼각형의 세 변의 길이는 $4$, $5$, $6$이고, 다른 삼각형의 세 변의 길이는 $6$, $7$, $8$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "한 삼각형의 세 변의 길이는 $3$, $4$, $6$이고, 다른 삼각형의 세 변의 길이는 $6$, $8$, $10$이다."
+        }
+      ],
+      "created_at": "2026-11-11T13:01:53.730104+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "③에서는 세 변의 길이의 비가 모두 $1:2$이므로 두 삼각형은 닮음이다.\n②에서 길이의 비가 같은 두 변 사이의 각은 주어지지 않았다. 따라서 닮음이라고 할 수 없다. ④에서는 짝 지은 세 변의 길이의 차가 모두 $2$이지만, 길이의 비는 모두 같지 않다. 차가 같다는 것만으로는 닮음이라고 할 수 없다. ①과 ⑤에서도 세 변의 길이의 비가 모두 같지 않다.",
+      "generated_at": "2026-11-11T13:01:53.67761+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d9efe956-fc66-4415-be6d-e6876aa81365",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:01:53.677518+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.719685+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "body": "삼각형 $ABC$에서 $AB=6$, $AC=8$, $BC=10$이다. 점 $D$는 선분 $AB$ 위의 점이고, 점 $E$는 선분 $AC$ 위의 점이다. $AD=3$, $AE=4$, $DE=5$이다.\n\n두 학생이 삼각형 $ABC$와 삼각형 $ADE$가 닮음인지 알아보려고 한다. 지수는 두 쌍의 변과 그 끼인각을 이용하고, 민수는 세 쌍의 변을 이용한다.\n\n두 방법을 각각 이용하여 닮음인지 판별하시오. 또 두 방법에서 짝 지은 꼭짓점이 같은 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:07:14.916366+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$AB:AD=AC:AE=2:1$이고, $\\angle BAC=\\angle DAE$이다. 따라서 두 쌍의 변과 그 끼인각을 이용하면 두 삼각형은 닮음이다. 이때 변 $AB$는 $AD$와, 변 $AC$는 $AE$와 짝을 이룬다.\n\n$BC:DE$도 $2:1$이므로 세 쌍의 변을 이용해도 두 삼각형은 닮음이다. 이 방법에서도 $AB$는 $AD$와, $AC$는 $AE$와 짝을 이루므로 꼭짓점은 두 방법 모두 $A$와 $A$, $B$와 $D$, $C$와 $E$로 짝 지어진다.\n\n두 쌍의 변을 이용할 때는 크기가 같은 각이 그 변들의 끼인각인지 확인해야 한다.",
+      "generated_at": "2026-11-11T13:07:14.895023+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 학생의 방법을 각각 사용한 뒤, 두 방법에서 짝 지은 꼭짓점이 같은 이유를 비교하여 설명하게 한다.",
+      "id": "b54ddba9-9c56-4255-a673-aeffd666e53d",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$AB:AD=AC:AE=2:1$이고 그 끼인각인 $\\angle BAC$와 $\\angle DAE$가 같다. 따라서 두 삼각형은 닮음이다.\n\n또 $AB:AD=AC:AE=BC:DE=2:1$이므로 세 쌍의 변을 이용해도 두 삼각형은 닮음이다. 두 방법 모두 $AB$와 $AD$, $AC$와 $AE$를 짝 지으므로 꼭짓점도 $A$와 $A$, $B$와 $D$, $C$와 $E$로 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 쌍의 변의 길이의 비가 같음과 그 끼인각의 크기가 같음을 밝혀 닮음이라고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "세 쌍의 변의 길이의 비가 모두 같음을 밝혀 닮음이라고 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법에서 같은 변끼리 짝 지음을 이용하여 꼭짓점이 어떻게 짝 지어지는지 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:07:14.894784+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.749182+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "body": "세 삼각형의 변의 길이가 다음과 같다.\n\n$AB=3$, $BC=4$, $CA=5$\n$DE=6$, $EF=8$, $FD=10$\n$GH=5$, $HI=6$, $IG=7$\n\n1. $\\triangle ABC$와 $\\triangle DEF$가 닮음인지 판별하고, 그 이유를 설명하시오.\n\n2. 한 학생은 “두 삼각형에서 짧은 변부터 차례로 짝 지었을 때, 세 쌍의 변의 길이의 차가 모두 같으면 두 삼각형은 닮음이다.”라고 말하였다. 위의 세 삼각형 중 두 삼각형을 이용하여 이 말이 틀렸음을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:07:41.152547+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\triangle ABC$와 $\\triangle DEF$는 세 쌍의 변의 길이의 비가 모두 $1:2$이므로 닮음이다.\n\n$\\triangle ABC$와 $\\triangle GHI$에서 짧은 변부터 차례로 짝 지으면 길이의 차는 모두 $2$이다. 하지만 짧은 변끼리의 길이의 비는 $3:5$이고, 그다음으로 짧은 변끼리의 길이의 비는 $4:6$이므로 두 삼각형은 닮음이 아니다. 길이의 차가 같은 것과 길이의 비가 같은 것은 다르다.",
+      "generated_at": "2026-11-11T13:07:40.959111+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "2번에서 주어진 삼각형 중 두 개를 골라 학생의 말이 틀렸음을 설명하게 한다. 길이의 차가 모두 같아도 닮음이 아닌 예를 찾아야 한다.",
+      "id": "a4b1b163-0c6a-4419-9a81-f31e05cc1c2e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "1. $AB:DE=BC:EF=CA:FD=1:2$이므로 세 쌍의 변의 길이의 비가 같다. 따라서 $\\triangle ABC$와 $\\triangle DEF$는 닮음이다.\n\n2. $\\triangle ABC$와 $\\triangle GHI$에서 짧은 변부터 차례로 짝 지으면 길이의 차는 모두 $2$이다. 그러나 짧은 변끼리의 비 $3:5$와 그다음으로 짧은 변끼리의 비 $4:6$이 같지 않으므로 두 삼각형은 닮음이 아니다. 따라서 그 학생의 말은 틀렸다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\triangle ABC$와 $\\triangle DEF$가 닮음이라고 판별하고, 세 쌍의 변의 길이의 비가 같음을 밝혔다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$\\triangle ABC$와 $\\triangle GHI$를 골라 짧은 변부터 짝 지은 세 쌍의 길이의 차가 모두 $2$임을 밝혔다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "$\\triangle ABC$와 $\\triangle GHI$에서 짝 지은 변의 길이의 비가 같지 않음을 보여 두 삼각형이 닮음이 아니라고 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-13-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:07:40.958983+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.780205+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에서 $AB=4$, $AC=6$, $DE=6$, $DF=9$이고, $\\angle BAC=\\angle EDF=50^\\circ$이다.\n\n두 삼각형이 닮음인지 판별하고, 그 이유를 두 변의 길이의 비와 각을 이용하여 짧게 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:06:20.72753+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB:DE=AC:DF=2:3$이고, 두 변의 끼인각인 $\\angle BAC$와 $\\angle EDF$의 크기가 같다. 따라서 삼각형의 닮음 조건에 따라 $\\triangle ABC$와 $\\triangle DEF$는 닮음이다.\n\n두 쌍의 변의 길이의 비가 같더라도 끼인각이 아닌 각의 크기가 같다는 것만으로는 닮음이라고 할 수 없다. 또 세 쌍의 변의 길이의 차가 같다는 것만으로도 닮음이라고 할 수 없다.",
+      "generated_at": "2026-11-11T13:06:20.705084+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9d725259-215e-4bf1-b3bd-84987e974c16",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$AB:DE=AC:DF=2:3$이고, 두 변의 끼인각인 $\\angle BAC$와 $\\angle EDF$의 크기가 같다. 따라서 삼각형의 닮음 조건에 따라 $\\triangle ABC$와 $\\triangle DEF$는 닮음이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$AB:DE$와 $AC:DF$가 같음을 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "크기가 같은 $\\angle BAC$와 $\\angle EDF$가 각각 비를 비교한 두 변의 끼인각임을 쓴다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 삼각형이 닮음이라고 판별한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:06:20.704982+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.807109+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에서 $AB=5$, $BC=6$, $CA=8$이고, $DE=10$, $EF=12$, $FD=16$이다.\n\n두 삼각형이 닮음인지 판별하고, 그 이유를 짧게 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:06:39.727019+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB:DE=BC:EF=CA:FD=1:2$이다. 세 쌍의 변의 길이의 비가 모두 같으므로 두 삼각형은 SSS 닮음이다.\n\n각 변의 길이의 차가 같다는 것만으로는 닮음이라고 할 수 없다. 예를 들어 세 변의 길이가 $3$, $4$, $5$인 삼각형과 $5$, $6$, $7$인 삼각형은 각 변의 길이의 차가 $2$이지만 닮음이 아니다.",
+      "generated_at": "2026-11-11T13:06:39.672718+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d99cb429-41f1-4853-bc17-e10a76680612",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$AB:DE=BC:EF=CA:FD=1:2$이므로 두 삼각형은 SSS 닮음이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$AB:DE$, $BC:EF$, $CA:FD$가 모두 $1:2$임을 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "세 쌍의 변의 길이의 비가 같다는 사실을 이용하여 두 삼각형이 닮음이라고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:06:39.672637+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T12:07:07.834045+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "다음에서 주어진 내용만으로 두 삼각형이 반드시 닮음이라고 할 수 있는 것을 모두 고른 것은?\n\nㄱ. $AB=4$, $BC=6$, $DE=6$, $EF=9$이고 $\\angle ABC=\\angle DEF$인 두 삼각형 $ABC$와 $DEF$\n\nㄴ. $GH=JK=17$, $GI=JL=10$이고 $\\angle GHI=\\angle JKL$인 두 삼각형 $GHI$와 $JKL$\n\nㄷ. 세 변의 길이가 각각 $3$, $4$, $5$인 삼각형과 각각 $5$, $6$, $7$인 삼각형",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄱ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 2,
+          "text": "ㄱ, ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 3,
+          "text": "ㄱ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄴ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄱ, ㄴ, ㄷ"
+        }
+      ],
+      "created_at": "2026-11-11T11:50:41.559716+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "ㄱ에서 $AB:DE=BC:EF=2:3$이고, 그 끼인각인 $\\angle ABC$와 $\\angle DEF$의 크기가 같다. 따라서 두 삼각형은 닮음이다.\n\nㄴ에서 길이가 주어진 두 변의 끼인각은 $\\angle HGI$와 $\\angle KJL$이다. 크기가 같다고 주어진 각은 이 끼인각이 아니므로, 두 삼각형이 반드시 닮음인 것은 아니다. 예를 들어 $G$와 $J$를 $(8, 3)$, $H$와 $K$를 $(0, -12)$, $I$를 $(0, -3)$, $L$을 $(0, 9)$에 놓으면 주어진 내용을 만족하지만 두 삼각형은 닮음이 아니다.\n\nㄷ에서는 작은 변부터 차례로 비교하면 길이의 차가 모두 $2$이다. 하지만 길이의 비는 모두 같지 않으므로 두 삼각형은 닮음이 아니다. 길이의 차가 같은 것과 길이의 비가 같은 것을 혼동하지 않아야 한다.",
+      "generated_at": "2026-11-11T11:50:41.405552+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "ㄱ과 ㄴ을 비교하며 길이의 비가 같은 두 쌍의 변과 크기가 같은 각을 하나하나 확인해야 한다. ㄷ에서는 변의 길이의 차가 같은 것과 비가 같은 것을 구별해야 한다.",
+      "id": "ba51be47-e1ef-42d3-b153-e9ed94040ae6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:50:41.405433+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.834818+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "두 삼각형 $ABC$와 $DEF$에서 $AB=5$, $BC=4$, $DE=10$, $EF=8$이고 $\\angle BAC=\\angle EDF$이다. 다음 설명 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "더 알아야 할 것 없이, 두 쌍의 변의 길이의 비와 $\\angle BAC=\\angle EDF$를 이용하여 닮음이라고 할 수 있다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\angle ABC=\\angle DEF$를 더 알면, 두 쌍의 변의 길이의 비와 그 끼인각을 이용하여 닮음이라고 할 수 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\angle ABC=\\angle DEF$를 더 알면 두 삼각형은 닮음이고, $AC:DF=5:4$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\angle ACB=\\angle DFE$를 더 알아도 두 삼각형이 닮음인지 알 수 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\angle ABC=\\angle DEF$를 더 알면 두 삼각형은 닮음이 아니라고 할 수 있다."
+        }
+      ],
+      "created_at": "2026-11-11T13:00:43.877844+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "주어진 두 쌍의 변의 길이의 비는 $AB:DE=BC:EF=1:2$이다. $\\angle ABC=\\angle DEF$를 더 알면 이 각들은 각각 그 두 변의 끼인각이므로 두 삼각형은 닮음이다.\n①에서 주어진 $\\angle BAC$와 $\\angle EDF$는 비를 비교한 두 변의 끼인각이 아니다. 따라서 처음 주어진 내용만으로는 닮음이라고 할 수 없다. ③에서는 두 삼각형의 닮음비가 $1:2$이므로 $AC:DF=1:2$이다. ④에서는 각 두 쌍의 크기가 같으므로 닮음이다. ⑤에서는 ②와 같이 닮음이라고 할 수 있다.",
+      "generated_at": "2026-11-11T13:00:43.706823+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "길이의 비를 비교한 두 변과 같다고 주어진 각을 살펴, 그 각이 두 변의 끼인각인지 판단해야 한다.",
+      "id": "a7fc32d3-8ad9-4f68-8934-821589392fde",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:00:43.706578+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T12:07:07.8782+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에서 $AB=6$, $AC=4$, $DE=9$, $DF=6$이고, $\\angle BAC=\\angle EDF=50^\\circ$이다. 두 삼각형에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "두 쌍의 변의 길이의 비가 같고 그 끼인각의 크기가 같으므로 SAS 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 2,
+          "text": "두 쌍의 변의 길이의 비가 같고 한 쌍의 각의 크기가 같으면, 그 각의 위치에 관계없이 항상 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "주어진 세 쌍의 변의 길이의 비가 같으므로 SSS 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "주어진 두 쌍의 각의 크기가 각각 같으므로 AA 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "주어진 내용만으로는 두 삼각형이 닮음인지 알 수 없다."
+        }
+      ],
+      "created_at": "2026-11-11T11:49:18.319726+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB:DE=AC:DF=2:3$이고, 이 변들의 끼인각인 $\\angle BAC$와 $\\angle EDF$의 크기가 같다. 따라서 두 삼각형은 SAS 닮음이다. ②처럼 두 쌍의 변의 길이의 비가 같더라도, 크기가 같은 각이 끼인각이 아니면 항상 닮음이라고 할 수는 없다.",
+      "generated_at": "2026-11-11T11:49:18.171376+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "16490909-b5a3-4560-8146-3958b053b793",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:18.171239+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T12:07:07.917947+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "다음 중 옳은 것은? 각 보기에서 두 삼각형의 세 변의 길이를 작은 것부터 차례로 나타내었다.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 1,
+          "text": "세 변의 길이가 $3, 4, 5$인 삼각형과 $5, 6, 7$인 삼각형은 길이의 차가 모두 $2$이므로 닮음이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "세 변의 길이가 $4, 6, 8$인 삼각형과 $6, 9, 12$인 삼각형은 세 쌍의 길이의 비가 모두 같으므로 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "세 변의 길이가 $3, 4, 5$인 삼각형과 $6, 8, 11$인 삼각형은 두 쌍의 길이의 비가 같으므로 닮음이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "세 변의 길이가 $4, 6, 8$인 삼각형과 $6, 9, 12$인 삼각형은 변의 길이가 모두 같지는 않으므로 닮음이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "세 변의 길이가 $3, 4, 5$인 삼각형과 $6, 8, 10$인 삼각형은 길이의 차가 모두 같지 않으므로 닮음이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T11:49:44.702122+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "②에서 작은 변부터 차례로 비교하면 길이의 비가 모두 $2:3$이므로 두 삼각형은 닮음이다. ①처럼 세 변의 길이의 차가 모두 같더라도 길이의 비가 모두 같지 않으면 닮음이 아니다. ③에서는 $5:11$이 나머지 두 쌍의 길이의 비와 다르다. ④에서는 길이가 서로 달라도 세 쌍의 길이의 비가 같으므로 닮음이다. ⑤에서도 세 쌍의 길이의 비가 모두 $1:2$이므로 닮음이다.",
+      "generated_at": "2026-11-11T11:49:44.562791+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d504a180-1163-49df-85d5-538a4aaa51ad",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:44.562638+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.874822+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "body": "삼각형 $ABC$에서 $AB=9$, $AC=12$, $BC=10$이다. 점 $D$는 선분 $AB$ 위에 있고, 점 $E$는 선분 $AC$ 위에 있다. 단, $D$와 $E$는 각 선분의 양 끝점이 아니다. 또 $\\angle ADE=\\angle ACB$이다.\n\n$DE=5$가 되도록 점 $D$를 잡으려고 한다. 이때 $AD$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M3",
+          "no": 3,
+          "text": "$\\dfrac{9}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$5$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6$"
+        }
+      ],
+      "created_at": "2026-11-11T13:09:06.848339+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle DAE=\\angle CAB$이고 $\\angle ADE=\\angle ACB$이므로 $\\triangle ADE\\sim\\triangle ACB$이다. 따라서 $AD$와 짝이 되는 변은 $AC$이고, $DE$와 짝이 되는 변은 $CB$이다.\n\n$DE:CB=5:10=1:2$이므로 $AD:AC=1:2$이다. 따라서 $AD=6$이다.\n\n선분이 놓인 모양만 보고 $AD$를 $AB$와 짝 지으면 $AD=\\dfrac{9}{2}$라고 생각할 수 있다. 하지만 $AD$와 짝이 되는 변은 $AC$이다.",
+      "generated_at": "2026-11-11T13:09:06.812781+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$DE$의 길이가 5가 되는 결과를 제시하고, 그 결과를 얻기 위해 점 $D$를 어디에 잡아야 하는지 $AD$의 길이로 구하게 했다.",
+      "id": "94e3da91-7fb8-4cd2-9cb3-da1f0b6014d3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:09:06.812607+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:47.988629+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "body": "서로 한 직선 위에 놓이지 않은 두 곧은 막대 $\\overline{BC}$와 $\\overline{DE}$가 점 $A$에서 만난다. 점 $A$는 두 막대 각각의 양 끝점이 아니다.\n\n$AB=5$, $AD=4$, $AE=10$이고 $\\angle ABD=\\angle AEC$이다. 막대 $\\overline{BC}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$13$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$15$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M3",
+          "no": 5,
+          "text": "$17.5$"
+        }
+      ],
+      "created_at": "2026-11-11T13:11:20.546304+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle BAD=\\angle EAC$이고 $\\angle ABD=\\angle AEC$이므로 $\\triangle ABD\\sim\\triangle AEC$이다. 따라서 $AB$와 $AE$, $AD$와 $AC$를 각각 짝지으면 $5:10=4:AC$이다. 그러므로 $AC=8$이다.\n\n점 $A$는 막대 $\\overline{BC}$의 양 끝점 사이에 있으므로 $BC=AB+AC=13$이다.\n\n각의 크기를 살피지 않고 위치가 비슷한 $AB$와 $AC$, $AD$와 $AE$를 짝지으면 $AC=12.5$로 잘못 구하여 $BC=17.5$를 고를 수 있다.",
+      "generated_at": "2026-11-11T13:11:20.533657+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 막대가 중간에서 만나는 상황을 이용해 $BC=AB+AC$로 나타내야 한다. 닮은 두 삼각형에서 변을 바르게 짝지어 $AC$를 구한 뒤 막대 전체의 길이를 구한다.",
+      "id": "bf1e2eb8-57c3-4b31-b691-8fda2d9564e5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:09:46.564013+00:00",
+          "issues": [
+            "application-a: BC=17은 AB를 구하는 데 필요한 주어진 길이로 쓰이며, 이후 닮음비로 BD를 직접 구하는 일반적인 길이 구하기 문제이다. 결과를 주고 조건을 거꾸로 찾는 과정이 실질적으로 나타나지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:10:38.924167+00:00",
+          "issues": [
+            "application-a: BD=10은 닮음비를 구하는 주어진 길이일 뿐이며, OA를 구하는 과정은 일반적인 닮음의 길이 구하기와 구별되는 거꾸로 찾기가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:11:20.533530+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.01889+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "body": "삼각형 $ABC$에서 점 $D$는 선분 $AB$ 위에 있고 $A$, $B$와 다르다. 점 $E$는 선분 $AC$ 위에 있고 $A$, $C$와 다르다. $\\angle ABC=\\angle AED$, $AB=6$, $AD=4$, $AE=3$일 때, $AC$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M3",
+          "no": 1,
+          "text": "$4.5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$7$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9$"
+        }
+      ],
+      "created_at": "2026-11-11T13:08:03.358919+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle BAC=\\angle DAE$이고 $\\angle ABC=\\angle AED$이므로 $\\triangle ABC\\sim\\triangle AED$이다. 따라서 $AB$와 $AE$, $AC$와 $AD$가 각각 짝을 이루므로 $6:3=AC:4$이다. 이를 풀면 $AC=8$이다. ①은 각의 크기를 확인하지 않고 위치가 비슷한 $AB$와 $AD$, $AC$와 $AE$를 짝지어 구한 값이다.",
+      "generated_at": "2026-11-11T13:08:03.339158+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7fdf179f-e19e-4e4e-9d83-ec085c390f17",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:08:03.339067+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.046322+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "body": "서로 다른 네 점 $A$, $B$, $C$, $D$가 있다. 점 $O$는 선분 $AC$ 위에 있고 $A$, $C$와 다르다. 또 점 $O$는 선분 $BD$ 위에 있고 $B$, $D$와 다르다. 세 점 $A$, $O$, $B$는 한 직선 위에 있지 않다.\n\n$\\angle OAB=\\angle ODC$, $AO=4$, $BO=6$, $DO=8$일 때, $CO$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-13-M3",
+          "no": 2,
+          "text": "$\\dfrac{16}{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$"
+        }
+      ],
+      "created_at": "2026-11-11T13:08:27.959972+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "맞꼭지각이므로 $\\angle AOB=\\angle DOC$이다. 또 $\\angle OAB=\\angle ODC$이므로 $\\triangle AOB$와 $\\triangle DOC$는 닮음이다.\n\n따라서 $AO$와 $DO$, $BO$와 $CO$를 각각 짝지으면 $4:8=6:CO$이다. 그러므로 $CO=12$이다.\n\n②는 같은 크기의 각을 살피지 않고 선분 $AC$와 $BD$에서 위치가 비슷한 변끼리 짝지어 $4:CO=6:8$로 계산한 경우이다.",
+      "generated_at": "2026-11-11T13:08:27.925126+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d75a0cc3-83e5-4106-8441-d73f95ce7626",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:08:27.924979+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

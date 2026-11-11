@@ -1,0 +1,1880 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수03-09-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:50:40.739621+00:00",
+          "issues": [
+            "고난도 조건 application-a: ‘되려면’이라는 표현만 있을 뿐, 주어진 두 각에서 삼각형의 내각과 이등변삼각형의 성질을 차례로 적용해 미지의 각을 구하는 일반적인 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:22.911543+00:00",
+          "issues": [
+            "review: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:27.015160+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:27.157439+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:46:48.791223+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:55:29.880360+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:55:33.499836+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:55:36.919496+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:55:37.073337+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:46:48.848722+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:52.752207+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:56.701580+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:01.275536+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:01.412153+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:48:54.176979+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:56:02.734567+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:56:06.241388+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:56:09.552469+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:56:09.711894+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:48:54.211193+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:05.714574+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:09.590909+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:13.271467+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:13.421268+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:51:20.40305+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:56:13.648774+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:56:17.243736+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:56:20.743228+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:56:20.881762+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:51:20.44104+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:30.643920+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:33.834447+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:37.320967+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:37.479868+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:47:11.445353+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:55:40.891009+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:55:44.549715+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:55:48.135452+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:55:48.277658+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:47:11.48586+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:41.290533+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:44.996247+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:49.295354+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:49.436509+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:47:41.353674+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:55:51.675007+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:55:55.005409+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:55:58.740918+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:55:58.940756+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:47:41.409657+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:38.270547+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:41.866978+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:45.860067+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:46.035668+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:52:32.044778+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:56:46.827646+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:56:50.462644+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:56:54.300553+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:56:54.471486+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:52:32.121871+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:49.423265+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:54.765575+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:59.188633+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:59.327382+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:53:02.424556+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:56:58.141377+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:57:01.732955+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:57:04.996442+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:57:05.158621+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:53:02.489577+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:17.084012+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:20.960572+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:24.393841+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:24.542591+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:51:40.757416+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:56:24.482691+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:56:28.516766+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:56:32.044011+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:56:32.18292+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:51:40.799805+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:27.900547+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:31.434834+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:34.878765+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:35.019996+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:52:08.820577+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:56:35.360618+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:56:39.001988+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:56:43.173440+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:56:43.325343+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:52:08.867054+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:25.933411+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:29.584843+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:33.129580+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:33.279071+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:54:17.957704+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:57:31.858279+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:57:35.528809+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:57:39.299054+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:57:39.453099+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:54:18.006013+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:36.949998+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:41.217428+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:45.154084+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:45.289742+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:54:48.097138+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:57:43.016311+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:57:46.673472+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:57:49.930580+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:57:50.086321+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:54:48.138974+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:02.807293+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:06.842135+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:11.208442+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:11.342199+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:53:32.30916+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:57:08.761658+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:57:12.777186+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:57:17.371858+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:57:17.525243+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:53:32.356325+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:15.100909+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:18.902487+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:22.216525+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:22.354581+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:53:49.091931+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:57:21.247242+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:57:24.860813+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:57:28.450453+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:57:28.60564+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:53:49.141748+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T12:07:07.161318+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-성질적용",
+      "body": "$\\overline{AB}=\\overline{AC}$인 삼각형 $ABC$가 있다. 점 $E$는 $\\overline{AC}$ 위의 점이고, $A$, $C$와 다르다. $\\overline{BE}$는 $\\angle ABC$를 이등분한다.\n\n$\\angle BEC$의 크기가 $120^\\circ$가 되려면 $\\angle BAC$의 크기는 얼마이어야 하는가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 1,
+          "text": "$40^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$60^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$80^\\circ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$100^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$120^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T11:49:38.976459+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle ABC$와 $\\angle BCA$의 크기를 각각 $x$라 하면, $\\angle EBC$의 크기는 $\\frac{x}{2}$이다. 삼각형 $BEC$에서 $\\frac{x}{2}+x+120^\\circ=180^\\circ$이므로 $x=40^\\circ$이다. 따라서 $\\angle BAC=180^\\circ-40^\\circ-40^\\circ=100^\\circ$이다.\n\n$40^\\circ$를 골랐다면 꼭지각도 밑각과 크기가 같다고 생각하지 않았는지 확인해 보자. 이등변삼각형에서 크기가 같은 두 각은 두 밑각이다.",
+      "generated_at": "2026-11-11T11:49:38.837523+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$\\angle BEC$의 크기를 먼저 주고, 그 크기가 되기 위한 꼭지각의 크기를 거꾸로 구하게 한다.",
+      "id": "cc292979-e53d-476e-a15a-527cb47a6ae1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:38.837429+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.518621+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-성질적용",
+      "body": "$\\overline{AB}=\\overline{AC}$인 삼각형 $ABC$가 있다. 점 $D$는 $\\overline{BC}$ 위의 점이고, $B$, $C$와 다르다. $\\overline{AD}$는 $\\angle BAC$를 이등분한다.\n\n두 밑각 중 하나의 크기는 $\\angle BAD$의 크기의 세 배보다 $10^\\circ$ 작다. $\\angle BCA$의 크기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 1,
+          "text": "$20^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$25^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$50^\\circ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$65^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$80^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T12:46:48.765759+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle BAD=x^\\circ$라 하면 $\\angle BAC=2x^\\circ$이다. 두 밑각의 크기는 같으므로 각각 $(3x-10)^\\circ$이다.\n\n따라서 $2x+2(3x-10)=180$이므로 $x=25$이다. 그러므로 $\\angle BCA=65^\\circ$이다.\n\n꼭지각도 밑각과 크기가 같다고 잘못 생각하면 $2x=3x-10$에서 $x=10$을 구하고, 밑각의 크기를 $20^\\circ$로 잘못 구할 수 있다.",
+      "generated_at": "2026-11-11T12:46:48.706956+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "밑각의 크기와 $\\angle BAD$의 크기 사이의 관계를 문장에서 식으로 바꾸어야 한다. 꼭지각의 이등분과 두 밑각의 성질을 함께 이용해 답을 구한다.",
+      "id": "9a63208c-f776-450f-8d6c-0e88772527bb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:46:48.706791+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T12:07:07.301363+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-성질적용",
+      "body": "삼각형 $ABC$에서 $\\overline{AB}=\\overline{AC}$이고 $\\angle BAC=40^\\circ$이다. $\\angle ABC$의 크기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 1,
+          "text": "$40^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$50^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$60^\\circ$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$70^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$80^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T11:48:53.869969+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "이등변삼각형의 두 밑각의 크기는 같으므로 $\\angle ABC=\\angle BCA$이다. 따라서 $\\angle ABC=(180^\\circ-40^\\circ)\\div 2=70^\\circ$이다. $40^\\circ$를 골랐다면 꼭지각과 밑각의 크기가 같다고 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T11:48:53.732237+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ddf06bd4-9436-4561-a987-f44617d3400a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:48:53.732194+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T12:07:07.380508+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-성질적용",
+      "body": "삼각형 $ABC$에서 $\\overline{AB}=\\overline{AC}$이고 $\\angle ABC=65^\\circ$이다. $\\angle BAC$의 크기는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$50^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$55^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$60^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 4,
+          "text": "$65^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$70^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T11:49:14.42118+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{AB}=\\overline{AC}$이므로 두 밑각의 크기가 같아 $\\angle ACB=65^\\circ$이다. 따라서 $\\angle BAC=180^\\circ-65^\\circ-65^\\circ=50^\\circ$이다. ④를 골랐다면 꼭지각도 밑각과 크기가 같다고 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T11:49:14.290661+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a7ae98c5-0e84-4b2d-8f73-fe0cc1776cdd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:14.290593+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.562911+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "body": "$\\overline{AB}=\\overline{AC}$인 삼각형 $ABC$에서 $\\angle BAC=40^\\circ$이다. 점 $D$는 $\\overline{AC}$ 위의 점이고, $\\overline{BD}$는 $\\angle ABC$를 이등분한다.\n\n다섯 학생의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 1,
+          "text": "$\\angle BAC=\\angle ABC$야. 꼭지각과 밑각의 크기는 같으니까."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M3",
+          "no": 2,
+          "text": "$\\overline{BD}$는 $\\overline{AC}$를 수직이등분해. $\\angle ABC$를 이등분하니까."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\angle ABD=\\angle ACB$야. $\\angle ABC$와 $\\angle ACB$의 크기가 같으니까."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\angle ADB=\\angle BDC$야. 점 $D$가 $\\overline{AC}$ 위에 있으니까."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\angle ADB=105^\\circ$야. $\\angle ABD=35^\\circ$이고 $\\angle BAD=40^\\circ$이니까."
+        }
+      ],
+      "created_at": "2026-11-11T12:48:54.148517+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "이등변삼각형의 두 밑각은 같으므로 $\\angle ABC=\\angle ACB=70^\\circ$이다. 따라서 $\\angle ABD=35^\\circ$이고, 삼각형 $ABD$에서 $\\angle ADB=105^\\circ$이다. 정답은 ⑤이다.\n\n①은 꼭지각도 밑각과 크기가 같다고 잘못 생각한 것이다. ②는 꼭지각이 아닌 각의 이등분선도 마주 보는 변을 수직이등분한다고 잘못 생각한 것이다. ③에서 $\\angle ABC$와 $\\angle ACB$는 같지만, $\\angle ABD$는 $\\angle ABC$의 절반이다. ④의 두 각의 크기의 합은 $180^\\circ$이지만, 두 각이 같지는 않다.",
+      "generated_at": "2026-11-11T12:48:54.087884+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 비교하여 옳은 말을 고르게 한다. 꼭지각과 밑각을 혼동하거나 밑각의 이등분선에 성질을 잘못 적용한 말도 판단해야 한다.",
+      "id": "f1db404c-80b8-4175-b277-37be25d06c8c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:48:20.705732+00:00",
+          "issues": [
+            "④가 꼭지각의 이등분선에 관한 성질을 그대로 확인하는 주장이다. 다른 학생들의 주장을 판단하지 않고도 답을 고를 수 있어 일반적인 성질 확인 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:48:54.087776+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "body": "다음은 다섯 학생이 삼각형의 성질에 관해 한 말이다. 언제나 옳은 말을 한 학생은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 1,
+          "text": "이등변삼각형에서 길이가 같은 두 변 사이의 각은 밑각과 크기가 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M3",
+          "no": 2,
+          "text": "이등변삼각형에서 밑각의 이등분선은 그 밑각에 마주 보는 변을 수직이등분한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 3,
+          "text": "두 각의 크기가 같은 삼각형에서는 세 변의 길이가 모두 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "이등변삼각형에서 꼭지각의 이등분선은 길이가 같은 두 변 중 하나를 수직이등분한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 각의 크기가 같은 삼각형에서 나머지 한 각의 이등분선은 그 각에 마주 보는 변을 수직이등분한다."
+        }
+      ],
+      "created_at": "2026-11-11T12:51:20.37731+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T13:24:44.750721+00:00",
+      "explanation": "두 각의 크기가 같으면 그 두 각에 마주 보는 두 변의 길이가 같다. 따라서 나머지 한 각은 이등변삼각형의 꼭지각이다. 꼭지각의 이등분선은 그 각에 마주 보는 변을 수직이등분하므로 ⑤가 옳다.\n\n①은 꼭지각도 밑각과 크기가 같다고 잘못 생각한 말이다. ②는 밑각의 이등분선에도 꼭지각의 이등분선의 성질을 잘못 적용한 말이다. 예를 들어 세 각의 크기가 각각 $80^\\circ$, $50^\\circ$, $50^\\circ$인 삼각형을 생각해 보자. 밑각을 이등분하면 $25^\\circ$가 되어, 이 이등분선이 만나는 변과 이루는 한 각은 $75^\\circ$이다. 따라서 수직이등분하지 않는다.\n\n③은 두 각의 크기가 같으면 세 변의 길이가 모두 같다고 잘못 생각한 말이다. 위의 삼각형에서는 두 각만 크기가 같으므로 세 변의 길이가 모두 같지는 않다. ④에서 꼭지각의 이등분선이 수직이등분하는 것은 길이가 같은 두 변 중 하나가 아니라 밑변이다.",
+      "generated_at": "2026-11-11T12:51:20.320507+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 비교하여 언제나 옳은 말을 판단하게 했다. 특히 꼭지각과 밑각을 구별하고, 어느 각의 이등분선에 성질을 적용할 수 있는지 살펴야 한다.",
+      "id": "0a3b7343-b53b-4abf-bd0c-51a23dc3cd88",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T12:49:36.894425+00:00",
+          "issues": [
+            "보기 ①은 문제에 직접 주어진 ∠QPR≠∠PQR과 모순된다. 이등변삼각형의 성질을 이해하지 못해도 배제할 수 있어 M1을 판별하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:50:37.370692+00:00",
+          "issues": [
+            "보기 ②: M1을 적용하면 ∠R=∠Q가 되어 문제에 명시된 ∠R≠∠Q와 충돌한다. 보기 ②는 이등변삼각형의 성질을 몰라도 주어진 조건만으로 배제할 수 있어 M1을 가려내기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:51:20.320382+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:39:31.983177+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "body": "삼각형 $PQR$에서 $\\angle P=\\angle Q$이고 $\\angle R=100^\\circ$이다.\n\n점 $S$는 $\\overline{QR}$의 양 끝점이 아닌 점이고, $\\overline{PS}$는 $\\angle QPR$을 이등분한다. 점 $T$는 $\\overline{PQ}$의 양 끝점이 아닌 점이고, $\\overline{RT}$는 $\\angle PRQ$를 이등분한다.\n\n다섯 학생의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 1,
+          "text": "$\\angle R=\\angle P$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M3",
+          "no": 2,
+          "text": "$\\overline{PS}$는 $\\overline{QR}$를 수직이등분한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\overline{PT}\\ne\\overline{TQ}$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\overline{PT}=\\overline{TR}$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\overline{RT}$는 $\\overline{PQ}$를 수직이등분한다."
+        }
+      ],
+      "created_at": "2026-11-11T13:28:14.333782+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle P=\\angle Q=40^\\circ$이므로 $\\overline{PR}=\\overline{QR}$이다. 따라서 $\\angle R$은 꼭지각이고, 그 이등분선인 $\\overline{RT}$는 $\\overline{PQ}$를 수직이등분한다. 정답은 ⑤이다.\n\n①은 꼭지각도 밑각과 크기가 같다고 잘못 생각한 것이다. ②는 꼭지각이 아닌 각의 이등분선도 맞은편 변을 수직이등분한다고 잘못 생각한 것이다. 실제로 $\\angle RPS=20^\\circ$이므로 $\\angle PSR=60^\\circ$이다.\n\n③에서는 $\\overline{PT}=\\overline{TQ}$이다. ④에서 $\\overline{PT}=\\overline{TR}$라면 $\\angle PRT=\\angle RPT$이어야 한다. 하지만 두 각은 각각 $50^\\circ$, $40^\\circ$이다.",
+      "generated_at": "2026-11-11T13:28:14.270208+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 보고 옳은 것을 고르게 했다. 두 내각이 같다는 사실에서 꼭지각을 찾아 두 각의 이등분선에 관한 말을 판단해야 한다.",
+      "id": "e29c5cdd-ee3d-48a2-9d00-b1ada4b808e9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:28:14.270052+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.618384+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "body": "$\\overline{AB}=\\overline{AC}$이고 $\\angle BAC=40°$인 삼각형 $ABC$가 있다. 점 $D$는 선분 $BC$ 위의 점이고, $\\overline{AD}$는 $\\angle BAC$의 이등분선이다. 점 $E$는 선분 $AC$ 위의 점이고, $\\overline{BE}$는 $\\angle ABC$의 이등분선이다. 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 1,
+          "text": "$\\angle BAC=\\angle ABC$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M3",
+          "no": 2,
+          "text": "$\\overline{BE}\\perp\\overline{AC}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\overline{AD}\\perp\\overline{BC}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\angle ABC=80°$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\angle BAD=40°$"
+        }
+      ],
+      "created_at": "2026-11-11T12:47:11.423153+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 밑각의 크기가 같으므로 $\\angle ABC=70°$이다. 꼭지각의 이등분선 $\\overline{AD}$는 밑변 $\\overline{BC}$에 수직이므로 ③이 옳다. ①은 꼭지각도 밑각과 크기가 같다고 잘못 생각한 것이다. ②에서 $\\overline{BE}$는 밑각의 이등분선이므로 대변에 수직이라고 할 수 없다. 실제로 $\\angle BAE=40°$, $\\angle ABE=35°$이므로 $\\angle AEB=105°$이다. 또 $\\angle BAD=20°$이므로 ④와 ⑤도 옳지 않다.",
+      "generated_at": "2026-11-11T12:47:11.373046+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a5b2c427-6e3e-4dbc-8eb0-fdec2aafbdaa",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:47:11.372906+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.665048+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-오개념판별",
+      "body": "삼각형 $PQR$에서 $\\angle QPR=\\angle PQR=50^\\circ$이다. 점 $S$는 선분 $QR$ 위의 점이고, 선분 $PS$는 $\\angle QPR$의 이등분선이다. 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\overline{QR}=\\overline{PR}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M1",
+          "no": 2,
+          "text": "$\\angle PRQ=50^\\circ$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M3",
+          "no": 3,
+          "text": "$PS$는 $QR$에 수직이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\overline{PQ}=\\overline{QR}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\angle QPS=50^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-11T12:47:41.333936+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "크기가 같은 두 각 $\\angle QPR$와 $\\angle PQR$의 맞은편에 있는 변은 각각 $QR$와 $PR$이다. 따라서 $\\overline{QR}=\\overline{PR}$이다.\n$\\angle PRQ=80^\\circ$이므로 길이가 같은 두 변 사이의 각도 밑각과 같다고 생각하면 안 된다. 또 $\\angle QPS=25^\\circ$이다. 만약 $PS$가 $QR$에 수직이라면 삼각형 $PQS$의 세 각의 크기의 합이 $25^\\circ+50^\\circ+90^\\circ=165^\\circ$가 되어 맞지 않는다. 밑각의 이등분선은 맞은편 변을 수직이등분하지 않는다.",
+      "generated_at": "2026-11-11T12:47:41.282675+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9f1a92a6-b19f-4789-beab-1bfc72bb42a7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:47:41.282563+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.700728+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "body": "$\\overline{AB}=\\overline{AC}$인 삼각형 $ABC$가 있다. 점 $D$는 선분 $BC$ 위에 있고, $B$, $C$와는 다른 점이다. $\\overline{AD}$는 $\\angle BAC$를 이등분한다.\n\n한 학생이 두 밑각의 크기가 같은 이유를 다음과 같이 설명했다.\n\n“두 밑각의 크기가 같으므로 $\\triangle ABD$와 $\\triangle ACD$는 합동이다. 따라서 두 밑각의 크기는 같다.”\n\n이 설명이 적절하지 않은 이유를 쓰고, 두 밑각의 크기가 같은 이유를 바르게 설명하시오. 이때 어떤 삼각형의 합동 조건을 썼는지와 그 근거를 밝히시오. 설명은 위와 같은 모든 삼각형에 적용되어야 한다.",
+      "choices": [],
+      "created_at": "2026-11-11T12:52:31.965814+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "학생의 설명은 보이려는 두 밑각의 크기가 같다는 사실을 이미 알고 있는 것처럼 사용했다. 대신 길이가 같은 두 변과 이등분된 각을 이용하면 두 삼각형이 SAS 합동임을 알 수 있다. 이로부터 두 밑각의 크기가 같다고 할 수 있다. 이 설명은 삼각형의 크기나 모양을 한 가지로 정하지 않아도 성립한다.",
+      "generated_at": "2026-11-11T12:52:31.798772+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "문제에서 설명이 주어진 길이와 각의 관계를 만족하는 모든 삼각형에 적용되어야 한다고 요구한다. 특정 각의 크기를 계산하는 대신 합동을 이용해 이유를 설명해야 한다.",
+      "id": "f64547a8-8d57-4ccd-beeb-8385c61d23cc",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 밑각의 크기가 같음을 보이려고 하면서 그 사실을 먼저 사용했으므로 적절하지 않다. $\\overline{AB}=\\overline{AC}$이고 $\\overline{AD}$는 공통이다. 또 $\\angle BAD=\\angle CAD$이므로 $\\triangle ABD$와 $\\triangle ACD$는 SAS 합동이다. 따라서 $\\angle ABD=\\angle ACD$이고, 두 밑각의 크기가 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 밑각의 크기가 같음을 보이기 전에 그 사실을 사용한 점을 지적한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-09-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "$\\overline{AB}=\\overline{AC}$, $\\overline{AD}$가 공통인 것, $\\angle BAD=\\angle CAD$를 근거로 두 삼각형이 SAS 합동이라고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 삼각형의 합동으로부터 $\\angle ABD=\\angle ACD$임을 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:52:31.798622+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.759067+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "body": "$\\overline{PQ}=\\overline{PR}=6\\text{ cm}$이고 $\\angle QPR=(2x)^\\circ$인 삼각형 $PQR$가 있다. 단, $0<x<90$이다.\n\n점 $S$는 선분 $QR$ 위에 있고 $Q$, $R$와 다른 점이다. 선분 $PS$는 $\\angle QPR$를 이등분한다. 점 $T$는 선분 $QR$의 중점이다.\n\n$\\triangle PQS$와 $\\triangle PRS$를 이용하는 방법과 $\\triangle PQT$와 $\\triangle PRT$를 이용하는 방법으로 두 밑각의 크기 사이의 관계를 알아보려고 한다.\n\n각 방법에서 어떤 삼각형의 합동 조건을 쓰는지와 그 근거를 밝히시오. 또 두 방법이 모든 $x$에 대해 같은 관계를 알려 주는 이유를 짧게 설명하시오. 두 밑각의 크기가 같다는 성질은 근거로 쓰지 마시오.",
+      "choices": [],
+      "created_at": "2026-11-11T12:53:02.388786+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫 번째 방법에서는 길이가 같은 두 변 $PQ$, $PR$와 공통인 변 $PS$, 이등분하여 크기가 같은 두 각을 이용한다. 두 삼각형은 SAS 합동이다. 두 번째 방법에서는 $PQ=PR$, $QT=RT$이고 $PT$는 공통이므로 두 삼각형이 SSS 합동이다. 두 방법에서 같은 위치에 있는 각의 크기는 각각 같다. $S$와 $T$가 모두 선분 $QR$ 위에 있으므로 두 방법은 모두 $\\angle PQR=\\angle PRQ$를 알려 준다. 두 밑각이 같다는 사실을 처음부터 근거로 쓰면 그 이유를 설명한 것이 아니다.",
+      "generated_at": "2026-11-11T12:53:02.332112+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "꼭지각의 이등분선을 이용하는 방법과 밑변의 중점을 이용하는 방법을 비교한다. 두 방법이 모든 $x$에 대해 같은 관계를 알려 주는 이유를 설명하게 한다.",
+      "id": "0c8b9472-a60a-4764-bc15-0cb94676bfdb",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$PQ=PR$, $PS$는 공통이고 $\\angle QPS=\\angle RPS$이므로 $\\triangle PQS$와 $\\triangle PRS$는 SAS 합동이다. 또 $PQ=PR$, $QT=RT$이고 $PT$는 공통이므로 $\\triangle PQT$와 $\\triangle PRT$는 SSS 합동이다. $S$와 $T$가 선분 $QR$ 위에 있으므로 두 방법에서 같은 위치에 있는 각을 살펴보면 모두 $\\angle PQR=\\angle PRQ$를 얻는다. 이 설명은 모든 $x$에 대해 성립한다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$PQ=PR$, $PS$는 공통, $\\angle QPS=\\angle RPS$를 근거로 첫 번째 두 삼각형이 SAS 합동임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-09-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "$PQ=PR$, $QT=RT$, $PT$는 공통임을 근거로 두 번째 두 삼각형이 SSS 합동임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-09-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "합동인 삼각형의 같은 위치에 있는 각과 $S$, $T$의 위치를 이용하여 두 방법 모두 $\\angle PQR=\\angle PRQ$를 알려 줌을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-09-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:53:02.332010+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.784276+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "body": "$\\triangle ABC$에서 $\\overline{AB}=\\overline{AC}=5\\,\\mathrm{cm}$이다. 점 $D$는 $\\overline{BC}$ 위에 있고, $B$, $C$와 다른 점이다. $\\angle BAD=\\angle DAC=30^\\circ$이다.\n\n두 밑각의 크기가 같다는 성질을 사용하지 말고, $\\angle ABC=\\angle BCA$인 이유를 설명하시오. 두 삼각형이 합동인 까닭을 밝혀 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T12:51:40.728228+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{AB}=\\overline{AC}$이고 $\\angle BAD=\\angle DAC$이다. 또 $\\overline{AD}$는 두 삼각형의 공통인 변이다. 따라서 $\\triangle ABD$와 $\\triangle ACD$는 SAS 합동이다. 합동인 두 삼각형에서 서로 포개지는 각의 크기는 같으므로 $\\angle ABC=\\angle BCA$이다.\n\n두 밑각이 같음을 보이기 위해 두 밑각이 같다는 성질을 먼저 이용하면 안 된다.",
+      "generated_at": "2026-11-11T12:51:40.675999+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ef8bd0e0-0edd-40f3-bb7a-1e17362b684f",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\overline{AB}=\\overline{AC}$, $\\angle BAD=\\angle DAC$이고 $\\overline{AD}$는 공통이므로 $\\triangle ABD$와 $\\triangle ACD$는 SAS 합동이다. 따라서 서로 포개지는 각인 $\\angle ABC$와 $\\angle BCA$의 크기는 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\overline{AB}=\\overline{AC}$, $\\angle BAD=\\angle DAC$와 공통인 변 $\\overline{AD}$를 합동의 근거로 썼다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-09-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "$\\triangle ABD$와 $\\triangle ACD$가 SAS 합동임을 썼다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "합동인 두 삼각형에서 서로 포개지는 각임을 이용하여 $\\angle ABC=\\angle BCA$라고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-09-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:51:40.675872+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.832008+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C1-이유설명",
+      "body": "$\\triangle PQR$에서 $\\overline{RP}=\\overline{RQ}=7\\,\\mathrm{cm}$이고, $\\angle PRQ=80^\\circ$이다. 점 $T$는 $\\overline{PQ}$ 위의 점이고 $P$, $Q$와 다르다. $\\overline{RT}$는 $\\angle PRQ$의 이등분선이다.\n\n한 학생이 다음과 같이 설명했다.\n\n“$\\triangle RPT$와 $\\triangle RQT$는 합동이다. 따라서 $\\angle RPQ=\\angle RQP$이다.”\n\n두 밑각의 크기가 같다는 성질을 사용하지 말고, 이 설명에서 두 삼각형이 합동인 까닭을 쓰시오. 또 그로부터 $\\angle RPQ=\\angle RQP$인 이유를 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T12:52:08.794118+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{RP}=\\overline{RQ}$이고 $\\overline{RT}$는 공통인 변이다. 또 $\\overline{RT}$가 $\\angle PRQ$의 이등분선이므로 $\\angle PRT=\\angle TRQ$이다. 따라서 두 삼각형은 SAS 합동이다. 합동인 두 삼각형에서 서로 포개지는 각의 크기는 같으므로 $\\angle RPQ=\\angle RQP$이다.\n\n두 밑각이 같다는 것을 보이기 전에 그 사실을 합동인 까닭으로 쓰면, 보이려는 내용을 근거로 사용한 것이다.",
+      "generated_at": "2026-11-11T12:52:08.755088+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "637873a1-c430-4756-a8bd-df3468eb6434",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\overline{RP}=\\overline{RQ}$이고 $\\overline{RT}$는 공통이다. 또 $\\angle PRT=\\angle TRQ$이므로 $\\triangle RPT$와 $\\triangle RQT$는 SAS 합동이다. 합동인 두 삼각형에서 서로 포개지는 각의 크기는 같으므로 $\\angle RPQ=\\angle RQP$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\overline{RP}=\\overline{RQ}$이고 $\\overline{RT}$가 공통인 변임을 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$\\angle PRT=\\angle TRQ$임을 쓰고, 두 삼각형이 SAS 합동이라고 밝혔다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-09-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 삼각형이 합동이므로 서로 포개지는 각인 $\\angle RPQ$와 $\\angle RQP$의 크기가 같다고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-09-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:52:08.754971+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.863166+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "body": "삼각형 $ABC$에서 $\\angle ABC=\\angle BCA$이고, $\\overline{BC}$의 길이는 $6\\text{ cm}$이다. 이 삼각형의 둘레는 $\\overline{BC}$의 길이에 $7\\text{ cm}$를 더한 것의 $2$배이다. $\\overline{AB}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M2",
+          "no": 1,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$13\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$20\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T12:54:17.926027+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "둘레는 $(6+7)\\times 2=26\\text{ cm}$이다. $\\angle ABC=\\angle BCA$이므로 이 두 각을 마주 보는 변의 길이가 같아 $\\overline{AB}=\\overline{AC}$이다. 따라서 $\\overline{AB}$의 길이는 $(26-6)\\div 2=10\\text{ cm}$이다. ①을 골랐다면 길이가 같은 두 변을 $\\overline{AB}$와 $\\overline{BC}$로 잘못 골랐는지 확인해 보자.",
+      "generated_at": "2026-11-11T12:54:17.886666+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "문장으로 주어진 둘레를 식으로 나타낸 뒤, 두 각의 크기가 같을 때 길이가 같은 두 변을 찾아 적용해야 한다.",
+      "id": "558a4439-0c73-47c9-909d-2c777d46471b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:54:17.886562+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.901038+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "body": "삼각형 $ABC$에서 $\\angle ABC=\\angle BCA$이고, 선분 $BC$의 길이는 $8\\text{ cm}$이다. 점 $D$는 선분 $AC$ 위에 있고, $A$, $C$와는 다른 점이다. 선분 $AD$의 길이는 선분 $BC$의 길이와 같고, 선분 $DC$의 길이는 선분 $BC$의 길이보다 $5\\text{ cm}$ 짧다. 선분 $AB$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$5\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M2",
+          "no": 3,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$11\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$16\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T12:54:48.066951+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "선분 $AD$의 길이는 $8\\text{ cm}$이고, 선분 $DC$의 길이는 $8-5=3\\text{ cm}$이다. 따라서 선분 $AC$의 길이는 $8+3=11\\text{ cm}$이다. $\\angle ABC=\\angle BCA$이므로 각의 맞은편에 있는 두 변 $AC$, $AB$의 길이가 같다. 따라서 선분 $AB$의 길이는 $11\\text{ cm}$이다. ③을 골랐다면 길이가 같은 두 변을 $AB$, $BC$로 잘못 짝 지었을 수 있다.",
+      "generated_at": "2026-11-11T12:54:48.012107+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "선분의 길이에 관한 문장을 식으로 바꾸어 선분 $AC$의 길이를 구한다. 그 후 크기가 같은 두 각을 이용하여 선분 $AB$의 길이를 구한다.",
+      "id": "11cdb812-f3d2-48c0-8e78-48f29e4bbb4f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:54:48.011989+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.946455+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "body": "삼각형 $ABC$에서 $\\angle B=\\angle C$이고, 세 변의 길이는 $\\overline{AB}=2x+1\\text{ cm}$, $\\overline{AC}=x+7\\text{ cm}$, $\\overline{BC}=9\\text{ cm}$이다. $\\overline{AB}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$7\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M2",
+          "no": 2,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$11\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$13\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$15\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T12:53:32.27951+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle B=\\angle C$이므로 두 각을 각각 마주 보는 변의 길이가 같다. 따라서 $\\overline{AB}=\\overline{AC}$이다. $2x+1=x+7$을 풀면 $x=6$이므로 $\\overline{AB}=13\\text{ cm}$이다. ②를 골랐다면 길이가 같은 두 변을 $\\overline{AB}$와 $\\overline{BC}$로 잘못 고른 것이다.",
+      "generated_at": "2026-11-11T12:53:32.214969+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "921dbc26-b66f-417d-bc4c-f02011213450",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:53:32.214851+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:45.991536+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-09-C2-성질적용",
+      "body": "삼각형 $PQR$에서 $\\angle P=\\angle Q$이다. 세 변의 길이가 $\\overline{PR}=9\\text{ cm}$, $\\overline{QR}=(2x+1)\\text{ cm}$, $\\overline{PQ}=(x+7)\\text{ cm}$일 때, $\\overline{PQ}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-09-M2",
+          "no": 2,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10\\text{ cm}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$11\\text{ cm}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-11T12:53:49.064668+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "크기가 같은 $\\angle P$와 $\\angle Q$를 각각 마주 보는 변은 $\\overline{QR}$와 $\\overline{PR}$이다. 따라서 $2x+1=9$이므로 $x=4$이다. 그러므로 $\\overline{PQ}=11\\text{ cm}$이다.\n$9\\text{ cm}$를 골랐다면 길이가 같은 두 변을 $\\overline{PR}$와 $\\overline{PQ}$로 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T12:53:49.007813+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2f972794-6bbe-40c5-aeb0-42ad90768df7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:53:49.007711+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

@@ -1,0 +1,2431 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수02-16-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:05:56.480210+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:06:00.145487+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:06:04.046332+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:06:04.194801+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:42:16.337056+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:50:58.670685+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:02.073569+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:05.386200+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:05.584721+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:43:19.299226+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:09.191414+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:12.896863+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:16.310758+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:16.451633+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:43:43.373122+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:49:23.064870+00:00",
+          "issues": [
+            "그래프의 모양·위치를 글로 고르게 해야 한다는 제시 방식 조건과 달리, 보기에서 식을 고르게 한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:49:41.605441+00:00",
+          "issues": [
+            "그래프의 모양을 보기 중 글로 고르게 하라는 범위의 조건과 달리, 일차함수의 식을 고르게 한다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:49:58.499820+00:00",
+          "issues": [
+            "보기에서 그래프의 모양·위치를 글로 고르게 해야 하는데, 함수의 식만 제시했다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:49:58.651199+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:42:30.029893+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:06:07.721167+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:06:11.219639+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:06:14.894032+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:06:15.046802+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:42:30.119115+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:50:17.274052+00:00",
+          "issues": [
+            "그래프의 모양·위치를 보기에서 글로 고르게 해야 하는데, 함수식 중 가장 가파른 그래프를 고르게 했다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:50:33.417593+00:00",
+          "issues": [
+            "그래프의 모양·위치를 글로 고르게 해야 한다는 조건과 달리, 보기에서 식만 고르게 했다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:50:54.483386+00:00",
+          "issues": [
+            "그래프의 모양·위치를 글로 고르게 해야 하는데, 보기에서 함수의 식을 고르게 했다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:50:54.648121+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:42:57.602285+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:41.392157+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:44.862516+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:48.742961+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:48.884866+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:44:33.068295+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:52.324377+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:56.087552+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:59.805767+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:59.943569+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:45:33.798607+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:19.765178+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:23.020685+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:26.459054+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:26.603633+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:43:57.060331+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C3-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:30.090928+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:33.875447+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:37.647499+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:37.795726+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T12:44:14.510182+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:25.797236+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:29.652131+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:33.006766+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:33.147297+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:26:23.911996+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:46:52.260107+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:47:05.538601+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:47:24.531898+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:47:24.57919+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:26:23.951311+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:36.736728+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:40.328786+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:43.899864+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:44.040426+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:26:56.896814+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:47:40.432935+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:47:53.852089+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:48:07.684964+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:48:07.739374+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:26:56.970589+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:03.767965+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:07.996686+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:11.552635+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:11.689747+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:25:13.407563+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:45:47.273152+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:45:56.038047+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:46:05.287260+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:46:05.331014+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:25:13.435096+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:15.239902+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:18.954216+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:22.484413+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:22.635437+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:25:59.589635+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:46:17.019561+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:46:25.889438+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:46:35.297187+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:46:35.345347+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:25:59.626238+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T11:55:01.465247+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C1-성질적용",
+      "body": "일차함수의 그래프가 두 점 $(2, 7)$, $(k, 1)$을 지납니다. 이 그래프의 기울기가 $-\\frac{3}{2}$일 때, $k$의 값은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 1,
+          "text": "$-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 5,
+          "text": "$11$"
+        }
+      ],
+      "created_at": "2026-11-11T11:43:23.985502+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x$의 값의 차를 $k-2$로 잡으면, 같은 순서로 구한 $y$의 값의 차는 $1-7=-6$입니다. 따라서 $\\frac{-6}{k-2}=-\\frac{3}{2}$이므로 $k=6$입니다.\n\n$11$을 골랐다면 $x$의 값의 차를 $y$의 값의 차로 나누었는지 확인해 보세요. $-2$를 골랐다면 $x$와 $y$의 값의 차를 구할 때 뺀 순서가 서로 다르지 않은지 확인해 보세요.",
+      "generated_at": "2026-11-11T11:43:23.847315+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 점의 좌표에서 기울기를 구하는 대신, 기울기를 주고 한 점의 좌표에 있는 미지수의 값을 찾게 한다.",
+      "id": "4f935979-afd7-42cc-af5c-c00a1df70f2f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:43:23.847149+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.493371+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C1-성질적용",
+      "body": "물통에 처음에 물이 $18$L 들어 있습니다. 물통에서 물을 빼기 시작한 지 $4$분 후에는 물이 $12$L 남았습니다. 물을 빼기 시작한 때부터 물의 양이 $3$L가 될 때까지, 물의 양은 시간에 대한 일차함수입니다.\n\n물을 빼기 시작한 지 몇 분 후에 물의 양이 $3$L가 됩니까?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$6$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$8$분"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$12$분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 5,
+          "text": "$\\frac{45}{2}$분"
+        }
+      ],
+      "created_at": "2026-11-11T11:43:49.348428+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "시간을 $x$분, 물의 양을 $y$L라고 하면 기울기는 $\\frac{12-18}{4-0}=-\\frac{3}{2}$입니다. 물의 양이 처음보다 $15$L 적어져야 하므로 걸리는 시간은 $15\\div\\frac{3}{2}=10$분입니다. 따라서 정답은 ③입니다.\n\n⑤를 골랐다면 기울기를 구할 때 물의 양의 차이를 시간의 차이로 나누지 않고, 거꾸로 나누었는지 확인해 보세요.",
+      "generated_at": "2026-11-11T11:43:49.199206+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "나중의 물의 양을 주고, 기울기를 이용하여 그때까지 걸린 시간을 거꾸로 구하게 했다.",
+      "id": "0eb70ada-d349-4c69-9c3b-2ab7a64f18d0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:43:49.199025+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.527613+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C1-성질적용",
+      "body": "일차함수의 그래프가 두 점 $(1, 5)$, $(3, -1)$을 지난다. 이 그래프의 기울기는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 3,
+          "text": "$-\\dfrac{1}{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 5,
+          "text": "$3$"
+        }
+      ],
+      "created_at": "2026-11-11T11:42:22.887394+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$의 값이 $1$에서 $3$으로 바뀔 때, $y$의 값은 $5$에서 $-1$로 바뀐다. 따라서 기울기는 $\\dfrac{-1-5}{3-1}=-3$이다. $-\\dfrac{1}{3}$을 골랐다면 나누는 순서를 거꾸로 생각했을 수 있다. $3$을 골랐다면 $x$와 $y$에서 빼는 순서를 다르게 했을 수 있다.",
+      "generated_at": "2026-11-11T11:42:22.710856+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2c499415-a8ff-41e9-aa1f-62c6985149ce",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:42:22.710738+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.566987+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C1-성질적용",
+      "body": "시간에 따라 온도가 일정하게 변한다. 처음부터 $x$분이 지났을 때의 온도를 $y\\,^{\\circ}\\mathrm{C}$라 하자.\n\n| $x$ | $0$ | $2$ |\n|---|---:|---:|\n| $y$ | $6$ | $10$ |\n\n이 일차함수의 그래프의 기울기는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 1,
+          "text": "$-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 2,
+          "text": "$\\frac{1}{2}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6$"
+        }
+      ],
+      "created_at": "2026-11-11T11:43:09.277823+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$의 값이 $0$에서 $2$로 바뀔 때, $y$의 값은 $6$에서 $10$으로 바뀝니다. 따라서 기울기는 $(10-6)\\div(2-0)=2$입니다.\n\n①은 두 값에서 빼는 순서를 다르게 하여 부호를 잘못 구한 것입니다. ②는 나누는 순서를 바꾸어 $x$의 값이 바뀐 양을 $y$의 값이 바뀐 양으로 나눈 것입니다.",
+      "generated_at": "2026-11-11T11:43:08.491297+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0d806fdd-24fb-43ed-8b9e-97d9566dc1e5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:42:52.282308+00:00",
+          "issues": [
+            "보기 ①: M2는 두 점에서 증가량을 구할 때 빼는 순서를 다르게 하는 오개념인데, 이 문제에서는 두 점을 이용해 기울기를 구할 필요가 없다. 식에서 기울기를 바로 읽으면 6만큼 커진다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:43:08.491154+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.596716+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C1-오개념판별",
+      "body": "일차함수의 그래프는 두 점 $(1, 7)$, $(5, 5)$를 지난다. 다음은 이 그래프의 기울기에 대한 다섯 학생의 주장이다. 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 1,
+          "text": "민수: 기울기는 $\\dfrac{5-1}{5-7}=-2$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 2,
+          "text": "지은: 기울기는 $\\dfrac{5-7}{1-5}=\\dfrac{1}{2}$이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "서준: 기울기는 $\\dfrac{7-5}{1-5}=-\\dfrac{1}{2}$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "하은: $x$가 $1$에서 $5$로 변할 때 $y$가 $-2$만큼 변하므로 기울기는 $-2$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "도윤: $x$가 $1$에서 $5$로 변할 때 $x$가 $4$만큼 변하므로 기울기는 $4$야."
+        }
+      ],
+      "created_at": "2026-11-11T11:45:12.741274+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 점을 $(1, 7)$에서 $(5, 5)$의 순서로 보면, $x$의 값은 $4$만큼, $y$의 값은 $-2$만큼 변한다. 따라서 기울기는 $\\dfrac{-2}{4}=-\\dfrac{1}{2}$이다. ③은 두 값의 빼는 순서를 모두 바꾸었으므로 옳다. ①은 나누는 순서를 거꾸로 하였다. ②는 $x$와 $y$에서 빼는 순서를 다르게 하였다. ④와 ⑤는 한 값이 변한 양만으로 기울기를 구하였다.",
+      "generated_at": "2026-11-11T11:45:12.495961+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 기울기에 대한 주장 중 옳은 것을 판단하게 하였다. 나누는 순서와 빼는 순서를 살펴보아야 한다.",
+      "id": "e15af277-08aa-430e-94c3-55fa518600fb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:45:12.495827+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.62691+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C1-오개념판별",
+      "body": "어떤 일차함수에서 $x$의 값이 $0$에서 $4$로 변할 때, $y$의 값은 $1$에서 $3$으로 변한다. 민수는 기울기를 $\\frac{3-1}{0-4}=-\\frac{1}{2}$로 구했다. 민수의 풀이에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 1,
+          "text": "옳다. $x$와 $y$에서 빼는 순서를 다르게 해도 기울기는 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 2,
+          "text": "잘못이다. $x$의 값의 증가량을 $y$의 값의 증가량으로 나누어야 하므로 기울기는 $2$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "잘못이다. $x$와 $y$에서 빼는 순서를 같게 해야 하므로 기울기는 $\\frac{1}{2}$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "잘못이다. $y$의 값이 $2$만큼 커졌으므로 기울기는 $2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "잘못이다. $x$의 값이 $4$만큼 커졌으므로 기울기는 $4$이다."
+        }
+      ],
+      "created_at": "2026-11-11T11:45:36.181179+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x$와 $y$에서 빼는 순서를 같게 하면 기울기는 $\\frac{3-1}{4-0}=\\frac{1}{2}$이다. ①은 $x$와 $y$에서 빼는 순서를 다르게 해도 된다고 생각한 것이다. ②는 $x$의 값의 증가량을 $y$의 값의 증가량으로 나누었다. ④와 ⑤는 각각 한쪽 값이 변한 양만을 기울기로 생각했다.",
+      "generated_at": "2026-11-11T11:45:36.011418+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민수가 두 값에서 빼는 순서를 다르게 한 풀이를 제시하고, 그 풀이가 옳은지 판단하게 했다.",
+      "id": "904911fe-b315-4d73-a094-934a11c67d0e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:45:36.011360+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.664469+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C1-오개념판별",
+      "body": "일차함수의 그래프가 두 점 $(2, 1)$, $(5, 7)$을 지난다. 이 그래프의 기울기를 구하는 방법으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 1,
+          "text": "$x$의 값이 변한 양을 $y$의 값이 변한 양으로 나눈다: $\\dfrac{5-2}{7-1}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 2,
+          "text": "$x$와 $y$에서 빼는 순서를 다르게 하여 나눈다: $\\dfrac{7-1}{2-5}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x$와 $y$에서 같은 순서로 빼고, $y$의 값이 변한 양을 $x$의 값이 변한 양으로 나눈다: $\\dfrac{7-1}{5-2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y$의 두 값을 더한 것을 $x$의 두 값을 더한 것으로 나눈다: $\\dfrac{7+1}{5+2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 번째 점의 $y$의 값에서 첫 번째 점의 $x$의 값을 빼고, 이것을 $x$의 값이 변한 양으로 나눈다: $\\dfrac{7-2}{5-2}$"
+        }
+      ],
+      "created_at": "2026-11-11T11:44:08.651582+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "기울기는 $y$의 값이 변한 양을 $x$의 값이 변한 양으로 나눈 것이다. 두 점에서 같은 순서로 빼면 기울기는 $\\dfrac{7-1}{5-2}=2$이다.\n①은 나누는 순서를 거꾸로 생각했다. ②는 $x$와 $y$에서 빼는 순서를 다르게 하여 부호가 바뀌었다. ④는 변한 양 대신 두 값을 더했다. ⑤는 $y$의 값이 변한 양을 잘못 구했다.",
+      "generated_at": "2026-11-11T11:44:08.515369+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2aa4c882-6242-4458-8af8-dac63f9f652c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:44:08.515234+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.700455+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C1-오개념판별",
+      "body": "어떤 일차함수에서 $x$의 값이 $4$에서 $10$으로 바뀔 때, $y$의 값은 $8$에서 $6$으로 바뀐다. 기울기에 대한 다음 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 1,
+          "text": "$x$의 값이 변한 양을 $y$의 값이 변한 양으로 나누면 기울기는 $-3$이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y$의 값이 변한 양을 $x$의 값이 변한 양으로 나누면 기울기는 $-\\frac{1}{3}$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 3,
+          "text": "$y$에서는 나중 값에서 처음 값을 빼고, $x$에서는 처음 값에서 나중 값을 빼면 기울기는 $\\frac{1}{3}$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y$의 값이 변한 양이 기울기이므로 기울기는 $-2$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x$의 값이 변한 양이 기울기이므로 기울기는 $6$이야."
+        }
+      ],
+      "created_at": "2026-11-11T11:44:55.068103+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$의 값이 변한 양은 $10-4=6$이고, $y$의 값이 변한 양은 $6-8=-2$이다. 따라서 기울기는 $\\frac{-2}{6}=-\\frac{1}{3}$이다. ①은 나누는 순서를 거꾸로 생각했다. ③은 $x$와 $y$에서 빼는 순서를 다르게 하여 기울기의 부호를 잘못 구했다.",
+      "generated_at": "2026-11-11T11:44:54.699228+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "5263e539-5db8-4708-a0c9-c9f0bc72d34e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:44:37.544668+00:00",
+          "issues": [
+            "보기 ②, ③, ⑤는 기울기가 해당 값이라고 명시하지 않고 계산 결과만 제시하며, 그 계산 결과들은 모두 참이다. 따라서 ①만 옳은 설명인지 모호하고, ②와 ③만으로 기울기에 관한 오개념을 판별하기 어렵다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:44:54.699107+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.745357+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C2-정의이해",
+      "body": "두 일차함수 $y=2x$와 $y=-2x+4$의 그래프가 있다. 각 그래프의 $x$절편과 $y$절편을 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M3",
+          "no": 1,
+          "text": "$y=2x$: $x$절편 $0$, $y$절편 $0$; $y=-2x+4$: $x$절편 $4$, $y$절편 $2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=2x$: $x$절편 $0$, $y$절편 $0$; $y=-2x+4$: $x$절편 $2$, $y$절편 $4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=2x$: 두 절편이 모두 없다; $y=-2x+4$: $x$절편 $2$, $y$절편 $4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=2x$: $x$절편 $0$, $y$절편 $2$; $y=-2x+4$: $x$절편 $2$, $y$절편 $4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=2x$: $x$절편 $0$, $y$절편 $0$; $y=-2x+4$: $x$절편 $-2$, $y$절편 $4$"
+        }
+      ],
+      "created_at": "2026-11-11T11:46:26.743921+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그래프가 지나는 점 중 $y=0$인 점의 $x$좌표가 $x$절편이고, $x=0$인 점의 $y$좌표가 $y$절편이다. $y=2x$의 그래프는 $(0,0)$을 지나므로 두 절편이 모두 $0$이다. $y=-2x+4$에서 $y=0$이면 $x=2$이고, $x=0$이면 $y=4$이다. 따라서 정답은 ②이다. ①은 $x$절편을 구할 때 $x=0$을, $y$절편을 구할 때 $y=0$을 대입하여 두 절편을 바꾸어 생각한 것이다.",
+      "generated_at": "2026-11-11T11:46:26.564331+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$y=2x$의 그래프가 $(0,0)$을 지나는 사례를 넣었다. 두 절편이 모두 $0$인 것과 절편이 없는 것을 구별해야 한다.",
+      "id": "5aacafce-d5ea-4b07-b59f-7e57113f8d0b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:46:26.564244+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.773905+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C2-정의이해",
+      "body": "일차함수 $y=-x+3$의 그래프에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x$절편과 $y$절편은 모두 $3$이고, 그래프에서 $y=0$인 점과 $x=0$인 점은 같은 점이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M3",
+          "no": 2,
+          "text": "$x$절편과 $y$절편은 모두 $3$이고, $x$절편은 $x=0$을, $y$절편은 $y=0$을 대입하여 구한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x$절편과 $y$절편은 모두 $3$이고, 그래프에서 $y=0$인 점은 $(3,0)$, $x=0$인 점은 $(0,3)$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x$절편은 $(3,0)$이고, $y$절편은 $(0,3)$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x$절편과 $y$절편은 모두 $0$이다."
+        }
+      ],
+      "created_at": "2026-11-11T11:47:31.456065+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$y=0$을 대입하면 $x=3$이므로 $x$절편은 $3$이다. $x=0$을 대입하면 $y=3$이므로 $y$절편도 $3$이다. 두 절편의 값은 같지만, 그래프에서 $y=0$인 점은 $(3,0)$이고 $x=0$인 점은 $(0,3)$이다. ②처럼 $x$절편을 구할 때 $x=0$을 대입하면 $y$절편을 구하게 된다. 이 문제에서는 두 절편의 값이 우연히 같아도 구하는 방법은 다르다.",
+      "generated_at": "2026-11-11T11:47:31.291832+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "두 절편의 값은 같지만 각각에 해당하는 점은 다른 사례를 제시했다. 각 절편을 구할 때 어느 값을 $0$으로 놓는지와 절편이 점의 좌표 중 어느 값인지 따져야 한다.",
+      "id": "17dbfaa4-df46-4d3f-b0b8-c14f49e9d8fc",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:47:05.334317+00:00",
+          "issues": [
+            "고난도 조건: 주어진 식에서 두 절편을 구하면 정답이 결정되므로, 점 (-4,4)가 절편 조건을 만족하는지 따질 필요가 없다.",
+            "보기 3: M3대로 x=0을 대입해 구한 값을 x절편으로 생각하면 -4가 나오므로, 제시된 0은 해당 오개념에서 직접 나오는 값이 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:47:31.291694+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.800377+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C2-정의이해",
+      "body": "일차함수 $y=2x-6$의 그래프에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M3",
+          "no": 1,
+          "text": "$x$절편은 $-6$이고, $y$절편은 $3$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x$절편은 $3$이고, $y$절편은 $-6$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x$절편은 $(3, 0)$이고, $y$절편은 $(0, -6)$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x$절편은 $-3$이고, $y$절편은 $6$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x$절편은 $6$이고, $y$절편은 $-3$이다."
+        }
+      ],
+      "created_at": "2026-11-11T11:45:50.58306+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$y=0$을 대입하면 $x=3$이므로 그래프는 $x$축과 $(3, 0)$에서 만난다. 따라서 $x$절편은 $3$이다. $x=0$을 대입하면 $y=-6$이므로 $y$절편은 $-6$이다. ①은 $x$절편과 $y$절편을 바꾸어 생각한 것이다. 절편은 점의 좌표 전체가 아니라 각 점의 $x$좌표 또는 $y$좌표이므로 ③도 옳지 않다.",
+      "generated_at": "2026-11-11T11:45:50.428142+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ab3e7fa5-0bcf-4c3b-aa95-5edec810764d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:45:50.427970+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.841312+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C2-정의이해",
+      "body": "일차함수 $y=-2x-6$의 그래프에서 $x$절편과 $y$절편을 구하는 방법과 그 값이 모두 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M3",
+          "no": 1,
+          "text": "$x$절편: $x=0$을 대입하여 $-6$, $y$절편: $y=0$을 대입하여 $-3$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x$절편: $y=0$을 대입하여 $-3$, $y$절편: $x=0$을 대입하여 $-6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x$절편: $y=0$을 대입하여 $3$, $y$절편: $x=0$을 대입하여 $-6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x$절편: $y=0$을 대입하여 $-3$, $y$절편: $x=0$을 대입하여 $6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x$절편: $y=0$을 대입하여 $-6$, $y$절편: $x=0$을 대입하여 $-3$"
+        }
+      ],
+      "created_at": "2026-11-11T11:46:06.788121+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$절편은 그래프가 $x$축과 만나는 점의 $x$좌표이다. 따라서 $y=0$을 대입하면 $x=-3$이다. $y$절편은 그래프가 $y$축과 만나는 점의 $y$좌표이다. 따라서 $x=0$을 대입하면 $y=-6$이다. ①은 $x$절편과 $y$절편을 바꾸어 생각한 것이다.",
+      "generated_at": "2026-11-11T11:46:06.58987+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "35fd0f01-a5a4-41d5-9f1d-6f4528c6d1df",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:46:06.589748+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.881317+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-성질적용",
+      "body": "그래프가 제1사분면, 제2사분면, 제4사분면을 지나고, $y=-2x$의 그래프보다 더 가파른 일차함수의 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 1,
+          "text": "$y=-x+1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=-3x-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=3x+1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=-2x+1$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=-3x+1$"
+        }
+      ],
+      "created_at": "2026-11-11T11:48:32.755622+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그래프가 제1사분면, 제2사분면, 제4사분면을 지나려면 기울기는 음수이고 $y$절편은 양수여야 한다. 또 $y=-2x$의 그래프보다 더 가파르려면 기울기의 절댓값이 $2$보다 커야 한다. 이를 모두 만족하는 식은 ⑤이다.\n①의 기울기 $-1$은 $-2$보다 크지만, 절댓값이 $1$이므로 그래프는 $y=-2x$의 그래프보다 덜 가파르다. 가파른 정도는 기울기의 값이 아니라 기울기의 절댓값으로 비교해야 한다.",
+      "generated_at": "2026-11-11T11:48:32.583514+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "그래프가 지나는 사분면과 가파른 정도를 먼저 주고, 이에 맞는 일차함수의 식을 찾게 한다.",
+      "id": "6aeb7451-1f12-4c2d-8cf1-aa71b86ffd8a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:48:32.583420+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-16-C3-성질적용",
+      "body": "두 일차함수 $y=-4x+1$의 그래프를 $A$, $y=2x-3$의 그래프를 $B$라고 하자. 다음은 두 그래프의 성질을 알아본 풀이이다.\n\n1단계: $A$의 기울기는 $-4$, $B$의 기울기는 $2$이다.\n2단계: $A$는 오른쪽 아래로, $B$는 오른쪽 위로 향한다.\n3단계: $-4<2$이므로 $B$가 $A$보다 더 가파르다.\n4단계: 두 그래프의 기울기가 다르므로 두 그래프는 평행하다.\n\n처음으로 잘못된 단계와 그 까닭을 바르게 말한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "1단계: $A$의 기울기는 $1$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "2단계: $A$는 오른쪽 위로 향한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "3단계: 기울기의 절댓값을 비교하면 $A$가 더 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 4,
+          "text": "4단계: $-4<2$이므로 $B$가 더 가파르다는 판단은 옳지만, 두 그래프는 평행하지 않다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "2단계: $B$는 오른쪽 아래로 향한다."
+        }
+      ],
+      "created_at": "2026-11-11T11:49:05.58182+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T11:54:59.50012+00:00",
+      "explanation": "1단계와 2단계는 옳다. 3단계에서는 기울기의 절댓값을 비교해야 한다. $|-4|>|2|$이므로 $A$가 $B$보다 더 가파르다. 기울기의 값만 비교하여 $B$가 더 가파르다고 생각하지 않도록 주의한다. 4단계도 잘못되었지만, 처음 잘못된 단계는 아니다.",
+      "generated_at": "2026-11-11T11:49:05.439156+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "풀이의 여러 단계 중 처음으로 잘못된 단계를 찾고 그 까닭을 판단하게 한다.",
+      "id": "929855fe-eced-4b58-9e72-02f247dd5919",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T11:49:05.439016+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.065407+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-성질적용",
+      "body": "일차함수의 그래프 $l$은 두 점 $(-1, 3)$, $(1, -5)$를 지난다. 일차함수 $y=2x-1$의 그래프를 $m$이라 할 때, 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 1,
+          "text": "$m$은 $l$보다 더 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$l$과 $m$은 서로 평행하다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$l$과 $m$은 일치한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$l$은 제2사분면, 제3사분면, 제4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$l$은 제1사분면, 제2사분면, 제4사분면을 지난다."
+        }
+      ],
+      "created_at": "2026-11-11T12:42:16.21941+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$l$의 기울기는 $-4$이고, 식은 $y=-4x-1$이다. 따라서 $l$은 제2사분면, 제3사분면, 제4사분면을 지난다. 정답은 ④이다.\n①은 $2$가 $-4$보다 크므로 $m$이 더 가파르다고 잘못 생각한 것이다. 가파른 정도는 기울기의 절댓값으로 비교한다. $|-4|=4$이고 $|2|=2$이므로 $l$이 더 가파르다.",
+      "generated_at": "2026-11-11T12:42:16.087335+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 점을 지나는 그래프를 식으로 나타내고, 그 식에서 기울기와 절편을 살펴 그래프의 모양과 위치를 판단한다.",
+      "id": "d9631ee9-6589-463a-b81f-3fef416e6d2c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:41:45.520609+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:42:16.087216+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.931869+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-성질적용",
+      "body": "일차함수 $y=-2x$의 그래프에 대한 설명으로 옳은 것은? 가파른 정도는 기울기가 $1$인 그래프와 비교한다.",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "오른쪽 아래로 향하고, 비교하는 그래프보다 더 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 2,
+          "text": "오른쪽 아래로 향하고, 비교하는 그래프보다 덜 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "오른쪽 위로 향하고, 비교하는 그래프보다 더 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "오른쪽 위로 향하고, 비교하는 그래프보다 덜 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "오른쪽 아래로 향하고, 비교하는 그래프와 가파른 정도가 같다."
+        }
+      ],
+      "created_at": "2026-11-11T11:47:45.546741+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$y=-2x$의 기울기는 음수이므로 그래프는 오른쪽 아래로 향한다. 기울기의 절댓값은 $2$이고, 비교하는 그래프의 기울기의 절댓값은 $1$이다. 따라서 $y=-2x$의 그래프가 더 가파르다. ②를 골랐다면 기울기의 절댓값이 아니라 기울기의 값만 비교했을 수 있다.",
+      "generated_at": "2026-11-11T11:47:45.392027+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b773e942-1220-4dd4-8bae-dd238318fbde",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:47:45.391835+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:55:01.97533+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-성질적용",
+      "body": "일차함수 $y=2x-3$의 그래프에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "오른쪽 위로 향하고, 제1, 2, 4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "오른쪽 아래로 향하고, 제2, 3, 4사분면을 지난다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "오른쪽 위로 향하고, 제1, 3, 4사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "오른쪽 위로 향하고, 제1, 2, 3사분면을 지난다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 5,
+          "text": "$y=-3x-3$의 그래프보다 더 가파르다."
+        }
+      ],
+      "created_at": "2026-11-11T11:48:05.645462+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "기울기가 $2$이므로 그래프는 오른쪽 위로 향합니다. $x$가 음수이면 $y$는 음수이고, $x$가 양수이면 $y$는 음수일 수도 양수일 수도 있습니다. 따라서 그래프는 제1, 3, 4사분면을 지납니다.\n⑤에서 두 기울기는 $2$와 $-3$입니다. $2$가 $-3$보다 크지만, 가파른 정도는 기울기의 절댓값으로 비교해야 합니다. $|-3|$이 $|2|$보다 크므로 $y=-3x-3$의 그래프가 더 가파릅니다.",
+      "generated_at": "2026-11-11T11:48:05.466467+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "70128348-eda1-472b-a7eb-23fb706032d8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:48:05.466351+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.103835+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "body": "세 일차함수 $y=-3x+1$, $y=2x+4$, $y=-2x-1$의 그래프를 차례로 A, B, C라고 하자. 세 그래프의 가파른 정도에 대한 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 1,
+          "text": "기울기의 값은 B가 A보다 크므로 B가 A보다 더 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 2,
+          "text": "기울기의 값은 C가 A보다 크므로 C가 A보다 더 가파르다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "기울기의 절댓값은 B와 C가 같으므로 B와 C의 가파른 정도가 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "A와 C는 모두 오른쪽 아래로 향하므로 가파른 정도가 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y$절편은 B가 가장 크므로 B가 가장 가파르다."
+        }
+      ],
+      "created_at": "2026-11-11T12:43:19.282837+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "A, B, C의 기울기의 절댓값은 차례로 $3$, $2$, $2$이다. 따라서 B와 C의 가파른 정도가 같다. 기울기의 값은 $2$가 $-3$보다 크지만, 가파른 정도는 기울기의 절댓값으로 비교해야 한다. 또 기울기의 부호가 같거나 $y$절편이 크다는 것만으로 가파른 정도를 비교할 수 없다.",
+      "generated_at": "2026-11-11T12:43:19.232509+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "세 그래프에 대한 학생들의 말을 비교하여 옳은 주장 하나를 고르게 했다.",
+      "id": "5b1c57a3-f99f-48cb-9584-ac1b8b3665b4",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:43:19.232394+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.169792+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "body": "일차함수의 그래프 $P$는 두 점 $(0, 0)$, $(1, -4)$를 지난다. 일차함수의 그래프 $Q$는 두 점 $(0, 2)$, $(2, 3)$을 지난다. 두 그래프에 대한 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 1,
+          "text": "$\\frac{1}{2}>-4$이므로 $Q$가 $P$보다 더 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 그래프는 모두 일차함수의 그래프이므로 가파른 정도가 같다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$|-4|>\\left|\\frac{1}{2}\\right|$이므로 $P$가 $Q$보다 더 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$P$는 오른쪽 위로 향한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$Q$의 $y$절편은 $3$이다."
+        }
+      ],
+      "created_at": "2026-11-11T12:43:43.358366+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$P$의 기울기는 $-4$이고, $Q$의 기울기는 $\\frac{1}{2}$이다. 기울기의 절댓값은 $P$가 $4$, $Q$가 $\\frac{1}{2}$이므로 $P$가 더 가파르다. ①은 기울기의 값이 클수록 그래프가 더 가파르다고 잘못 생각한 말이다. 가파른 정도는 기울기의 절댓값으로 비교해야 한다.",
+      "generated_at": "2026-11-11T12:43:43.295091+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 그래프가 지나는 점을 보고 학생들의 말이 옳은지 판단하게 했다. 특히 ①과 ③에서 기울기의 값과 절댓값 중 무엇으로 가파른 정도를 비교해야 하는지 판단해야 한다.",
+      "id": "bd015e36-3489-42c2-b373-9344ab340028",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:43:43.294970+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.206918+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "body": "두 일차함수 $y=2x+1$, $y=-4x+1$의 그래프에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 1,
+          "text": "$y=2x+1$의 그래프가 더 가파르다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=-4x+1$의 그래프가 더 가파르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 그래프의 가파른 정도는 같다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 그래프는 오른쪽으로 향하는 방향이 달라서 가파른 정도를 비교할 수 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 그래프의 가파른 정도는 $x$의 값에 따라 달라진다."
+        }
+      ],
+      "created_at": "2026-11-11T12:42:29.941175+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "기울기의 절댓값은 각각 $2$, $4$이다. 따라서 $y=-4x+1$의 그래프가 더 가파르다. ①은 기울기의 절댓값이 아니라 기울기의 값을 비교하여 잘못 판단한 것이다.",
+      "generated_at": "2026-11-11T12:42:29.709044+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "19f9fd5a-7353-43a1-afd1-06d17aa8010b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:42:29.708920+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.234965+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-오개념판별",
+      "body": "일차함수 $y=-3x+4$의 그래프보다 더 가파른 그래프를 나타내는 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M4",
+          "no": 1,
+          "text": "$y=2x-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=-x+2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=-5x-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=-2x+3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=-3x-2$"
+        }
+      ],
+      "created_at": "2026-11-11T12:42:57.586189+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그래프의 가파른 정도는 기울기의 절댓값으로 비교한다. $y=-3x+4$의 기울기의 절댓값은 $3$이고, $y=-5x-1$의 기울기의 절댓값은 $5$이다. 따라서 정답은 ③이다. ①을 골랐다면 기울기의 절댓값이 아니라 기울기의 값이 클수록 그래프가 더 가파르다고 잘못 생각했을 수 있다.",
+      "generated_at": "2026-11-11T12:42:57.52314+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "21fe26fb-3da9-414a-9720-5642f81bb675",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:42:57.523019+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.264108+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-이유설명",
+      "body": "두 일차함수 $y=-2x+4$, $y=-2x-1$의 그래프가 있다.\n\n두 그래프가 서로 평행한지, 일치하는지, 한 점에서 만나는지 판단하시오. 또 같은 $x$의 값에 대한 두 $y$의 값의 차가 모든 $x$의 값에서 어떠한지 그 까닭을 쓰고, 두 그래프의 기울기를 이용하여 판단한 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T12:44:32.979979+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "같은 $x$의 값에 대한 두 $y$의 값의 차는 $(-2x+4)-(-2x-1)=5$이다. 따라서 모든 $x$의 값에서 첫 번째 그래프의 $y$의 값이 두 번째보다 $5$만큼 크다. 두 그래프의 기울기는 모두 $-2$이고, 서로 일치하지 않으므로 평행하다.",
+      "generated_at": "2026-11-11T12:44:32.756032+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "같은 $x$의 값에 대한 두 $y$의 값의 차가 모든 $x$의 값에서 어떠한지 그 까닭을 설명하게 했다.",
+      "id": "19389559-51d1-46d3-87f7-c9952be5b7b6",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 그래프는 평행하다. 같은 $x$의 값에 대한 두 $y$의 값의 차는 $(-2x+4)-(-2x-1)=5$이므로 모든 $x$의 값에서 $5$이다. 두 그래프의 기울기는 모두 $-2$이고, 같은 $x$의 값에서 $y$의 값이 다르므로 두 그래프는 일치하지 않는다. 따라서 두 그래프는 평행하다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 그래프가 평행하다고 판단한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "같은 $x$의 값에 대한 두 $y$의 값의 차가 모든 $x$의 값에서 $5$임을 식이나 말로 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 그래프의 기울기가 모두 $-2$이고 두 그래프가 일치하지 않음을 이용하여 평행한 이유를 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:44:32.755899+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.294587+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-이유설명",
+      "body": "일차함수의 그래프 A는 두 점 $(0, 2)$, $(2, 3)$을 지나고, 그래프 B는 $y=\\frac{1}{2}x-1$의 그래프이다.\n\n두 그래프의 관계를 알아보기 위해 두 학생이 다음과 같은 방법을 생각했다.\n\n민수: 같은 $x$의 값에서 두 $y$의 값의 차이를 살펴본다.\n지우: 두 그래프의 기울기를 살펴본다.\n\n두 그래프가 서로 평행한지, 일치하는지, 한 점에서 만나는지 판단하시오. 민수의 방법으로는 모든 $x$의 값에서 두 $y$의 값의 차이가 어떠한지와 그 까닭을 쓰시오. 또 지우의 방법을 이용하고, 두 방법이 같은 판단으로 이어지는 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T12:45:33.774567+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그래프 A의 기울기는 $\\frac{3-2}{2-0}=\\frac{1}{2}$이고, 그래프 A의 식은 $y=\\frac{1}{2}x+2$이다. 같은 $x$의 값에서 A의 $y$의 값은 B의 $y$의 값보다 항상 $3$만큼 크다. 두 식에서 $\\frac{1}{2}x$ 부분이 같기 때문이다. 두 그래프의 기울기가 같아서 $x$가 같은 만큼 변할 때 두 $y$의 값도 같은 만큼 변한다. 따라서 처음의 차이 $3$이 그대로 유지된다. 두 그래프는 일치하지 않고 평행하다.",
+      "generated_at": "2026-11-11T12:45:33.704222+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "같은 $x$에서의 $y$의 값의 차이를 살펴보는 방법과 기울기를 살펴보는 방법이 같은 판단으로 이어지는 이유를 비교하여 설명하게 한다.",
+      "id": "9067a6f2-ee68-44e2-99be-049bbe53f254",
+      "model": "gpt-6.1-terra",
+      "model_answer": "그래프 A의 식은 $y=\\frac{1}{2}x+2$이다. 같은 $x$의 값에서 A의 $y$의 값은 B의 $y$의 값보다 항상 $3$만큼 크다. 두 식의 $\\frac{1}{2}x$ 부분이 같기 때문이다. 두 그래프의 기울기는 모두 $\\frac{1}{2}$이므로 $x$가 같은 만큼 변할 때 두 $y$의 값도 같은 만큼 변한다. 그래서 두 $y$의 값의 차이가 항상 $3$으로 유지된다. 두 그래프는 일치하지 않고 평행하다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "그래프 A의 식을 $y=\\frac{1}{2}x+2$로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "모든 같은 $x$의 값에서 A의 $y$의 값이 B의 $y$의 값보다 $3$만큼 큼을 까닭과 함께 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 기울기가 모두 $\\frac{1}{2}$이고 두 그래프가 일치하지 않음을 이용하여 평행하다고 판단한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "기울기가 같으면 $x$가 같은 만큼 변할 때 두 $y$의 값도 같은 만큼 변하므로 두 $y$의 값의 차이가 유지된다고 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:45:08.831462+00:00",
+          "issues": [
+            "문제에서 두 함수의 식을 구하라고 요구하지 않았고, 식을 구하지 않고도 기울기와 y절편을 이용해 모든 요구를 설명할 수 있다. 그런데 채점 기준 1은 두 식을 구한 경우에만 1점을 부여한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:45:33.704102+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.332908+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-이유설명",
+      "body": "두 일차함수 $y=-2x+1$과 $y=-2x-3$의 그래프가 있다. 두 그래프는 서로 어떤 위치 관계에 있는지 쓰시오. 기울기와 같은 $x$에서 두 $y$의 값의 차를 이용하여 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T12:43:57.045309+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 그래프의 기울기는 모두 $-2$이다. 같은 $x$에서 두 $y$의 값의 차는 $(-2x+1)-(-2x-3)=4$로 늘 같다. 따라서 두 그래프는 서로 만나지 않고 평행하다.",
+      "generated_at": "2026-11-11T12:43:56.99208+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "e7e9b8cc-7310-4a5d-9059-70fe37079d7f",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 그래프는 평행하다. 기울기가 모두 $-2$로 같다. 같은 $x$에서 두 $y$의 값의 차도 $(-2x+1)-(-2x-3)=4$로 늘 같기 때문이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 그래프가 평행하다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 그래프의 기울기가 모두 $-2$로 같다고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "같은 $x$에서 두 $y$의 값의 차가 늘 $4$라고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:43:56.991959+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:22:02.361655+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C3-이유설명",
+      "body": "두 일차함수의 $x$와 $y$의 값이 다음 표와 같다.\n\n| $x$ | $0$ | $1$ | $2$ |\n|---|---|---|---|\n| 첫째 함수의 $y$ | $2$ | $5$ | $8$ |\n| 둘째 함수의 $y$ | $-3$ | $0$ | $3$ |\n\n두 함수의 그래프는 서로 어떤 위치 관계에 있는지 쓰시오. 기울기와 같은 $x$에서 두 $y$의 값의 차를 이용하여 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T12:44:14.494087+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 함수에서 $x$가 $1$만큼 커질 때 $y$는 각각 $3$만큼 커진다. 따라서 두 그래프의 기울기는 모두 $3$이다. 같은 $x$에서 첫째 함수의 $y$는 둘째 함수의 $y$보다 항상 $5$만큼 크다. 두 그래프는 기울기가 같고 서로 다른 직선이므로 평행하다.",
+      "generated_at": "2026-11-11T12:44:14.425785+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4aee881a-6b6e-4c5a-8402-c0627d3078af",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 그래프는 서로 평행하다. 두 함수 모두 $x$가 $1$만큼 커질 때 $y$가 $3$만큼 커지므로 기울기는 모두 $3$이다. 또 같은 $x$에서 첫째 함수의 $y$는 둘째 함수의 $y$보다 항상 $5$만큼 크다. 두 그래프는 기울기가 같고 서로 다른 직선이므로 평행하다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 그래프가 평행하다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 그래프의 기울기가 모두 $3$이라고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "같은 $x$에서 첫째 함수의 $y$가 둘째 함수의 $y$보다 항상 $5$만큼 크다고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T12:44:14.425643+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:39:31.841906+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "body": "어느 물통의 물의 양을 살펴보았다. 살펴보기 시작한 지 $x$분 후의 물의 양을 $y$ L라고 할 때, $y$는 $x$에 대한 일차함수이다. $x=2$일 때 물의 양은 $17$ L이고, $x=6$일 때 물의 양은 $11$ L이다. $0\\le x\\le 7$일 때, 물의 양이 $14$ L인 것은 살펴보기 시작한 지 몇 분 후인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 1,
+          "text": "$0$분 후"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3$분 후"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$4$분 후"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$5$분 후"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 5,
+          "text": "$6.5$분 후"
+        }
+      ],
+      "created_at": "2026-11-11T13:26:23.825682+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "기울기는 $\\frac{11-17}{6-2}=-\\frac32$이다. 점 $(2,17)$을 지나므로 $y=-\\frac32(x-2)+17$이다. 여기에 $y=14$를 대입하면 $x=4$이다.\n①은 두 값의 차를 구할 때 $x$와 $y$에서 빼는 순서를 다르게 하여 기울기를 $\\frac32$로 생각한 답이다. ⑤는 기울기를 $y$의 값의 차로 $x$의 값의 차를 나누어 $-\\frac23$으로 생각한 답이다.",
+      "generated_at": "2026-11-11T13:26:23.812486+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 시각의 물의 양으로 일차함수의 식을 세운 뒤, 물의 양이 $14$ L라는 결과에서 시각을 거꾸로 구하게 한다.",
+      "id": "b1918898-1e46-431d-a50a-567b6304c2ed",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:26:23.812373+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:40:18.393773+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "body": "일차함수의 그래프가 두 점 $(1, 4)$, $(5, 10)$을 지난다. 이 그래프와 평행하고 $x$절편이 $-2$인 일차함수의 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 1,
+          "text": "$y=-\\frac{3}{2}x-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 2,
+          "text": "$y=\\frac{2}{3}x+\\frac{4}{3}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=\\frac{3}{2}x+3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=\\frac{3}{2}x-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=\\frac{3}{2}x+\\frac{5}{2}$"
+        }
+      ],
+      "created_at": "2026-11-11T13:39:55.209153+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 점을 지나는 그래프의 기울기는 $\\frac{10-4}{5-1}=\\frac{3}{2}$이다. 평행한 두 그래프의 기울기는 같으므로 구하는 식을 $y=\\frac{3}{2}x+b$로 놓는다. $x$절편이 $-2$이므로 $x=-2$, $y=0$을 대입하면 $b=3$이다. 따라서 정답은 ③이다.\n①은 두 점의 $x$와 $y$에서 빼는 순서를 다르게 하여 기울기를 $-\\frac{3}{2}$로 구한 경우이다. ②는 기울기를 구할 때 나누는 순서를 거꾸로 하여 $\\frac{2}{3}$으로 구한 경우이다.",
+      "generated_at": "2026-11-11T13:39:55.174861+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$x$절편을 주고 이를 이용하여 거꾸로 일차함수의 식을 구하게 했다. 먼저 평행한 그래프의 기울기를 구한 뒤 $x$절편을 이용해야 한다.",
+      "id": "116f7b2a-bf0f-443b-a682-7fd7f00217c6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:39:55.174720+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "body": "일차함수의 그래프가 두 점 $(2, 5)$, $(t, -1)$을 지나고, $y$절편이 $8$이다. $t$의 값은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 1,
+          "text": "$-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 5,
+          "text": "$11$"
+        }
+      ],
+      "created_at": "2026-11-11T13:26:56.790833+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T13:39:30.898985+00:00",
+      "explanation": "$y$절편이 $8$이므로 그래프는 $(0, 8)$을 지난다. $(0, 8)$과 $(2, 5)$를 이용하면 기울기는 $(5-8)\\div(2-0)=-\\frac{3}{2}$이다. 따라서 일차함수의 식은 $y=-\\frac{3}{2}x+8$이다. 여기에 $(t, -1)$을 대입하면 $-1=-\\frac{3}{2}t+8$이므로 $t=6$이다.\n\n①은 기울기를 구할 때 $x$와 $y$의 값에서 빼는 순서를 다르게 하여 기울기를 $\\frac{3}{2}$로 구한 경우이다. ⑤는 기울기를 구할 때 나누는 순서를 거꾸로 하여 $-\\frac{2}{3}$으로 구한 경우이다.",
+      "generated_at": "2026-11-11T13:26:56.334082+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$y$절편과 그래프 위의 한 점을 이용해 식을 세운 뒤, 다른 점의 $y$좌표가 주어졌을 때 그 점의 $x$좌표를 거꾸로 구한다.",
+      "id": "78d226fc-6718-42cc-9d88-ecd68ffd8403",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T13:26:56.333918+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:39:31.8813+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "body": "그래프가 두 점 $(2, 3)$, $(6, 11)$을 지나는 일차함수의 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 1,
+          "text": "$y=-2x+7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 2,
+          "text": "$y=\\frac{1}{2}x+2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=2x-3$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=2x-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=2x+1$"
+        }
+      ],
+      "created_at": "2026-11-11T13:25:13.332555+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "기울기는 $(11-3)\\div(6-2)=2$이다. 식을 $y=2x+b$로 놓고 점 $(2, 3)$을 대입하면 $b=-1$이다. 따라서 식은 $y=2x-1$이다.\n①은 두 점의 $x$좌표와 $y$좌표를 서로 다른 순서로 빼서 기울기를 $-2$로 구한 경우이다. ②는 $x$좌표의 차를 $y$좌표의 차로 나누어 기울기를 $\\frac{1}{2}$로 구한 경우이다.",
+      "generated_at": "2026-11-11T13:25:13.336914+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b61345cb-9ec4-40dd-bfb6-d0be6aa28e88",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:25:13.336778+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:39:31.937139+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-16-C4-성질적용",
+      "body": "물통에서 물이 일정한 빠르기로 빠져나간다. 물이 빠져나가기 시작한 지 $x$분 후 물의 양을 $y$L라고 하자. $2$분 후에는 물이 $14$L, $5$분 후에는 물이 $8$L 남아 있었다. $y$를 $x$의 식으로 나타내고, $7$분 후 남은 물의 양을 구한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M1",
+          "no": 1,
+          "text": "$y=-\\frac{1}{2}x+15$, $\\frac{23}{2}$L"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=-2x+18$, $4$L"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-16-M2",
+          "no": 3,
+          "text": "$y=2x+10$, $24$L"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=-2x+14$, $0$L"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=-2x+16$, $2$L"
+        }
+      ],
+      "created_at": "2026-11-11T13:25:59.515826+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$의 값이 $3$만큼 커질 때 $y$의 값은 $6$만큼 작아진다. 따라서 기울기는 $-6\\div 3=-2$이다. $y=-2x+b$에 $x=2$, $y=14$를 대입하면 $b=18$이다. 따라서 $y=-2x+18$이고, $7$분 후 남은 물의 양은 $4$L이다.\n①은 기울기를 구할 때 나누는 순서를 거꾸로 한 것이다. ③은 두 값의 차를 구할 때 빼는 순서를 다르게 하여 기울기의 부호를 잘못 구한 것이다.",
+      "generated_at": "2026-11-11T13:25:59.515303+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "433f0e70-653c-46f2-8652-306e9ddfcd17",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:25:40.536404+00:00",
+          "issues": [
+            "1분부터 4분까지와 4분부터 7분까지의 시간 간격이 같아, 기울기나 일차함수의 식을 구하지 않고 온도의 감소량만 반복해 답을 구할 수 있다. 따라서 일차함수의 식을 세워 값을 구하는 능력을 직접 측정하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:25:59.515178+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

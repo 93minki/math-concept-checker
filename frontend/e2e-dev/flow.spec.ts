@@ -1,4 +1,4 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Locator, type Page } from "@playwright/test";
 import { login, noHorizontalOverflow, requiredEnv, unitName } from "./helpers";
 
 function unitCard(page: Page) {
@@ -33,6 +33,12 @@ async function countQuestions(page: Page) {
   expect(count).toBeGreaterThan(0);
   return count;
 }
+async function documentY(locator: Locator) {
+  const box = await locator.boundingBox();
+  if (!box) throw new Error("요소의 위치를 읽지 못했어요");
+  const scrollY = await locator.page().evaluate(() => window.scrollY);
+  return box.y + scrollY;
+}
 async function solve(page: Page) {
   const count = await countQuestions(page);
   const bodies: string[] = [];
@@ -66,7 +72,8 @@ async function solve(page: Page) {
     });
     await expect(forward).toBeDisabled();
     // The nav row must not move when answering/saving (2026-11-11 manual check).
-    const navBefore = (await forward.boundingBox())?.y;
+    // Document Y (viewport y + scrollY) stays the same when the page scrolls.
+    const navBefore = await documentY(forward);
     bodies.push(await page.locator(".question").innerText());
     const radio = page.getByRole("radio").first();
     if (await radio.count()) {
@@ -78,7 +85,7 @@ async function solve(page: Page) {
     }
     await expect(page.getByText("저장됨", { exact: true })).toBeVisible();
     await expect(forward).toBeEnabled();
-    expect((await forward.boundingBox())?.y).toBe(navBefore);
+    expect(await documentY(forward)).toBe(navBefore);
     if (i < count - 1)
       await page.getByRole("button", { name: "다음", exact: true }).click();
   }

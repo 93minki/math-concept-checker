@@ -1,0 +1,1274 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수02-12-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:24:23.820206+00:00",
+          "issues": [
+            "주어진 9에서 처음 수를 구하는 것은 부등식과 별개의 역산이다. 부등식의 해가 주어졌을 때 조건을 찾는 등 부등식 풀이를 거꾸로 적용하는 요소가 없어 application-a를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:25:00.373045+00:00",
+          "issues": [
+            "분수가 포함된 일차부등식의 풀이를 측정하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:25:32.097498+00:00",
+          "issues": [
+            "첫 번째 부등식에서 a를 구한 뒤 두 번째 부등식을 풀어야 하므로, 부등식 두 개를 함께 푸는 문제를 다루지 않는다는 범위를 벗어난다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:25:32.252413+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T11:42:42.695135+00:00",
+      "variant": 1
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T11:38:33.549102+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C1-정의이해",
+      "body": "다음 중 $x$에 대한 일차부등식은 어느 것인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 1,
+          "text": "$3(x-1)>3x+2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 2,
+          "text": "$2(x+1)\\le 2x+2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$4-x>2(2-x)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 4,
+          "text": "$0.5(x+2)<0.5x-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 5,
+          "text": "$\\frac{x-1}{2}\\ge \\frac{x}{2}-1$"
+        }
+      ],
+      "created_at": "2026-11-11T11:23:01.339667+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "모든 항을 좌변으로 옮겨 간단히 하면 ③은 $x>0$이므로 일차부등식이다. ①, ②, ④, ⑤는 각각 $-5>0$, $0\\le 0$, $2<0$, $\\frac{1}{2}\\ge 0$이 되어 $x$가 없어진다. 따라서 일차부등식이 아니다. 처음 식에 $x$가 보인다는 것만으로 일차부등식이라고 판단하면 안 된다.",
+      "generated_at": "2026-11-11T11:23:01.185998+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "보기 ①, ②, ④, ⑤는 처음에는 $x$가 있지만 모든 항을 좌변으로 옮겨 간단히 하면 $x$가 없어진다. 특히 ②는 양변이 같은 식인 경우를 다룬다.",
+      "id": "125e5365-e35b-4a54-8b40-6635b9fcc10e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:23:01.185827+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.57676+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C1-정의이해",
+      "body": "다음 두 부등식에 대한 설명 중 옳은 것을 고르시오.\n\n가: $3(x+1)>3x+2$\n나: $3(x+1)>2x+3$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "가만 일차부등식이다. 간단히 했을 때 $x$가 없어지기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "나만 일차부등식이다. 간단히 하면 $x>0$이 되기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 3,
+          "text": "가와 나 모두 일차부등식이다. 처음 식에 각각 $x$가 있기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "나는 일차부등식이 아니다. $x=0$을 넣으면 부등식이 성립하지 않기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 5,
+          "text": "가와 나 모두 일차부등식이 아니다. 처음 식의 양변에 각각 $x$가 있기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T11:23:23.746631+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "모든 항을 좌변으로 옮겨 간단히 했을 때, $x$의 계수가 $0$이 아닌 일차식이 되면 일차부등식이다.\n\n가는 간단히 하면 $1>0$이므로 일차부등식이 아니다. 나는 간단히 하면 $x>0$이므로 일차부등식이다. 따라서 정답은 2번이다.\n\n3번처럼 처음 식의 모양에 $x$가 있다고 해서 모두 일차부등식은 아니다. 또 5번처럼 양변에 $x$가 있다고 해서 모두 일차부등식이 아닌 것도 아니다.",
+      "generated_at": "2026-11-11T11:23:23.602893+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "가는 양변에 $x$가 있지만 간단히 하면 $x$가 없어지는 경계 사례이다. 나와 비교하여 처음 식의 모양이 아니라 간단히 한 결과로 판단해야 한다.",
+      "id": "58bf3307-4071-43e6-81a2-0b570433729a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:23:23.602800+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.604085+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C1-정의이해",
+      "body": "다음 부등식이 일차부등식인지 판단한 것으로 옳은 것은?\n\n$3(x+1)>3x+2$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 1,
+          "text": "$x$가 모두 일차로 나타나 있으므로 일차부등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 2,
+          "text": "좌변과 우변에 모두 $x$가 있으므로 일차부등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "참이 되는 $x$의 값이 있으므로 일차부등식이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "모든 항을 좌변으로 옮겨 계산하면 $x$가 없어지므로 일차부등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "괄호가 있으므로 일차부등식이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T11:22:25.711252+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "모든 항을 좌변으로 옮겨 계산하면 $1>0$이 되어 $x$가 없어진다. 따라서 일차부등식이 아니다.\n\n①, ②는 계산하기 전의 모양만 보고 판단한 것이다. ③처럼 참이 되는 $x$의 값이 있다고 해서 일차부등식인 것은 아니다. ⑤처럼 괄호가 있는지만 보고 판단할 수도 없다.",
+      "generated_at": "2026-11-11T11:22:25.546182+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "32463886-1e5d-4160-b727-3b95341a678a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:22:25.546075+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.628922+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C1-정의이해",
+      "body": "다음 부등식이 일차부등식인지 판단한 것으로 옳은 것은?\n\n$2(x-1) \\le x+4$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 1,
+          "text": "일차부등식이 아니다. 부등호 양쪽에 $x$가 있기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "일차부등식이 아니다. 모든 항을 좌변으로 옮기면 $x$가 없어지기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "일차부등식이다. 모든 항을 좌변으로 옮겨 간단히 하면 $x-6 \\le 0$이 되기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "일차부등식이 아니다. 부등호가 $\\le$이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M2",
+          "no": 5,
+          "text": "일차부등식이다. 부등호 양쪽에 $x$가 있는 부등식은 언제나 일차부등식이기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T11:22:43.416843+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "모든 항을 좌변으로 옮겨 간단히 하면 $x-6 \\le 0$이다. 따라서 일차부등식이다. 부등호 양쪽에 $x$가 있는지만 보고 일차부등식인지 판단할 수는 없다. 모든 항을 한쪽으로 옮겨 간단히 한 뒤 판단해야 한다.",
+      "generated_at": "2026-11-11T11:22:43.2477+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0775ea81-c94e-453e-8d4c-84fb35799f7f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:22:43.247601+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:49:36.102675+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C2-성질적용",
+      "body": "다음 부등식의 해가 $x>4$가 되도록 하는 수 $a$는?\n\n$a(x-4)>\\frac{1}{2}(x-4)$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 1,
+          "text": "$-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 2,
+          "text": "$-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 3,
+          "text": "$0$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 4,
+          "text": "$\\frac{1}{4}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$1$"
+        }
+      ],
+      "created_at": "2026-11-11T11:42:42.770577+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "주어진 부등식을 풀면 $(a-\\frac{1}{2})(x-4)>0$입니다. 해가 $x>4$가 되려면 $a-\\frac{1}{2}$이 양수여야 합니다. 보기 중 이를 만족하는 수는 $1$뿐입니다.\n\n예를 들어 $a=0$을 넣으면 $-\\frac{1}{2}(x-4)>0$입니다. 양변을 음수로 나눌 때 부등호의 방향을 바꾸지 않으면 해를 $x>4$로 잘못 구할 수 있습니다. 바르게 구한 해는 $x<4$입니다.",
+      "generated_at": "2026-11-11T11:42:42.630465+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "부등식의 해를 주고, 그 해가 되도록 하는 부등식 안의 수 $a$를 찾게 했다.",
+      "id": "954a5de8-10c1-468c-a0f1-1892d76d5fbf",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:42:42.630375+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.656024+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C2-성질적용",
+      "body": "어떤 수 $x$에서 $2$를 뺀 값의 $\\frac{3}{4}$은 $x$의 $1.25$배보다 $1$만큼 크거나 같다. $x$의 범위는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x<-5$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x\\le -5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 3,
+          "text": "$x\\ge -5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x\\le 5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x\\ge 5$"
+        }
+      ],
+      "created_at": "2026-11-11T11:25:47.734987+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "주어진 말을 부등식으로 나타내면 $\\frac{3}{4}(x-2)\\ge 1.25x+1$이다. 이를 풀면 $0.75x-1.5\\ge 1.25x+1$, $-0.5x\\ge 2.5$이다. 양변을 $-0.5$로 나누면 부등호의 방향이 바뀌므로 $x\\le -5$이다. ③은 음수로 나눌 때 부등호의 방향을 바꾸지 않은 답이다.",
+      "generated_at": "2026-11-11T11:25:47.578489+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "문장으로 주어진 수의 관계를 일차부등식으로 나타낸 뒤 직접 풀어야 한다.",
+      "id": "0d6f354d-bcd0-4c38-bdbb-f382be79d582",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:25:47.578399+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.691626+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C2-성질적용",
+      "body": "다음 일차부등식의 해를 구하시오.\n\n$3-2(x+1) \\ge 5$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x < -2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x \\le -2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 3,
+          "text": "$x \\ge -2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x \\le 2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x \\ge 2$"
+        }
+      ],
+      "created_at": "2026-11-11T11:23:35.925762+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "괄호를 풀면 $1-2x \\ge 5$이다. 양변에서 $1$을 빼면 $-2x \\ge 4$이다. 양변을 $-2$로 나눌 때 부등호의 방향을 바꾸므로 해는 $x \\le -2$이다.\n\n③을 고른 경우, 양변을 음수로 나눌 때 부등호의 방향을 바꾸지 않았는지 살펴본다.",
+      "generated_at": "2026-11-11T11:23:35.78827+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ef4ed149-729e-439f-916a-b927785ec5ee",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:23:35.788155+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.718915+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C2-성질적용",
+      "body": "다음 일차부등식의 해를 구하시오.\n\n$\\dfrac{x-2}{3}>x+2$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x<-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x\\le -4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x<-4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 4,
+          "text": "$x>-4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x>4$"
+        }
+      ],
+      "created_at": "2026-11-11T11:23:47.201995+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변에 $3$을 곱하면 $x-2>3x+6$이다. 항을 이항하면 $-2x>8$이다. 양변을 음수 $-2$로 나눌 때 부등호의 방향을 바꾸면 $x<-4$이다.\n\n④는 양변을 음수로 나눌 때 부등호의 방향을 바꾸지 않은 답이다.",
+      "generated_at": "2026-11-11T11:23:47.049275+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a24c6033-b39f-45c8-843e-eb2aaa202a16",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:23:47.049070+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.745977+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C2-오개념판별",
+      "body": "두 학생이 부등식 $-2x+3>7$을 다음과 같이 풀었다.\n\n지우: $3$을 이항하여 $-2x>4$로 바꾸었다.\n민수: $-2x>4$의 양변을 $-2$로 나누어 $x<-2$로 바꾸었다.\n\n각 학생이 바로 앞의 식을 뒤의 식으로 바꾼 방법을 판단한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "지우와 민수의 방법은 모두 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 2,
+          "text": "지우의 방법은 옳지만 민수의 방법은 틀리다. 양변을 $-2$로 나눌 때 부등호의 방향을 그대로 두어야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M4",
+          "no": 3,
+          "text": "지우의 방법은 틀리지만 민수의 방법은 옳다. 이항할 때 부등호의 방향도 바꾸어야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "지우의 방법은 옳지만 민수의 방법은 틀리다. 양변을 $-2$로 나눈 뒤 $x\\le -2$라고 해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "지우의 방법은 틀리지만 민수의 방법은 옳다. 이항한 뒤 $-2x>10$이라고 해야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T11:27:16.92166+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "지우의 방법은 옳다. $3$을 이항하면 $-2x>4$가 되며, 이때 부등호의 방향은 바뀌지 않는다. 민수의 방법도 옳다. 양변을 음수 $-2$로 나누면 부등호의 방향이 바뀌므로 $x<-2$이다.\n\n②는 음수로 나눌 때 부등호의 방향을 그대로 두는 잘못된 생각이다. ③은 이항할 때 부등호의 방향도 바뀐다는 잘못된 생각이다. ④는 등호가 없는 부등식에 등호를 붙인 것이다. ⑤는 이항할 때 $3$의 부호를 바꾸지 않은 것이다.",
+      "generated_at": "2026-11-11T11:27:16.750779+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 학생의 풀이를 보고 각 단계가 옳은지 판단하게 한다. 이항할 때와 음수로 나눌 때 부등호의 방향을 각각 어떻게 해야 하는지 구별해야 한다.",
+      "id": "95b3a9ff-3995-4742-abc1-bef10da2e1db",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:26:58.641940+00:00",
+          "issues": [
+            "M1만 가진 학생은 (가)를 틀리고 (나)를 옳다고 판단하면서, 처음 부등식의 해도 x>-3으로 구한다. 따라서 ②와 ⑤를 모두 옳다고 판단할 수 있어 단일 선택 결과로 M1을 안정적으로 가려내기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:27:16.750652+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.77307+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C2-오개념판별",
+      "body": "한 학생이 부등식 $5-3x\\le 11$을 다음과 같이 풀었다.\n\n$5$를 이항하면 $-3x\\ge 6$이다. 이어서 양변을 $-3$으로 나누면 $x\\le -2$이다.\n\n이 학생의 풀이에 대한 설명으로 옳은 것은? 각 식은 바로 앞의 식에서 바꾼 방법을 판단한다.",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "이항한 식은 틀렸지만, 이어서 음수로 나눈 방법은 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 2,
+          "text": "이항한 식은 틀렸고, 이어서 음수로 나눌 때도 부등호의 방향을 그대로 두어야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M4",
+          "no": 3,
+          "text": "이항할 때 부등호의 방향을 바꾸어야 하므로 이항한 식은 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x=-2$가 처음 부등식을 만족하므로 학생이 구한 해는 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "처음 부등식에 등호가 있으므로 $x=-2$는 해에 들어가지 않는다."
+        }
+      ],
+      "created_at": "2026-11-11T11:27:41.209762+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$5$를 이항할 때는 부등호의 방향을 바꾸지 않으므로 첫 번째 식은 틀렸다. 그다음에는 양변을 음수인 $-3$으로 나누었으므로 부등호의 방향을 바꾼 것이 맞다. 따라서 정답은 ①이다.\n\n②처럼 음수로 나눌 때 부등호의 방향을 그대로 두면 안 된다. ③처럼 이항할 때 부등호의 방향을 바꾸어서도 안 된다. $x=-2$ 하나가 부등식을 만족하는지만으로는 학생이 구한 해가 모두 맞는지 알 수 없다. 또 처음 부등식에 등호가 있으므로 $x=-2$도 해에 들어간다. 바르게 구한 해는 $x\\ge -2$이다.",
+      "generated_at": "2026-11-11T11:27:41.040135+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "학생의 풀이에서 이항한 식과 음수로 나눈 식을 각각 바로 앞의 식과 비교하여 판단하게 했다.",
+      "id": "723b349a-25a6-4cfa-8f02-9d4f9280045b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:27:41.039915+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.80053+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C2-오개념판별",
+      "body": "일차부등식 $-2x + 4 > 10$을 푼 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4$를 이항하면 $-2x > 6$이고, 양변을 $-2$로 나누면 $x < -3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 2,
+          "text": "$4$를 이항하면 $-2x > 6$이고, 양변을 $-2$로 나눌 때 부등호의 방향을 그대로 두면 $x > -3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M4",
+          "no": 3,
+          "text": "$4$를 이항할 때 부등호의 방향을 바꾸면 $-2x < 6$이고, 양변을 $-2$로 나누면 $x > -3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$4$를 이항하면 $-2x > 14$이고, 양변을 $-2$로 나누면 $x < -7$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4$를 이항하면 $-2x > 6$이고, 양변을 $-2$로 나누면 $x < 3$이다."
+        }
+      ],
+      "created_at": "2026-11-11T11:26:03.446143+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$4$를 이항하면 $-2x > 6$이다. 양변을 음수 $-2$로 나누면 부등호의 방향이 바뀌므로 $x < -3$이다. 따라서 정답은 1번이다.\n2번은 음수로 나눌 때 부등호의 방향을 바꾸지 않았다. 3번은 이항할 때 부등호의 방향을 잘못 바꾸었다. 4번과 5번은 계산을 잘못했다.",
+      "generated_at": "2026-11-11T11:26:03.289815+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c9bce1a4-5e64-4e20-a434-4c5d1136dc7d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:26:03.289691+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.836517+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C2-오개념판별",
+      "body": "일차부등식 $5-3x\\le 11$의 풀이에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M4",
+          "no": 1,
+          "text": "$5$를 오른쪽으로 이항하면 $-3x\\ge 6$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M1",
+          "no": 2,
+          "text": "$-3x\\le 6$의 양변을 $-3$으로 나누면 $x\\le -2$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5$를 오른쪽으로 이항하면 $-3x\\le 6$이고, 해는 $x\\ge -2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$-3x\\le 6$의 양변을 $3$으로 나누면 $-x\\le 3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5$를 오른쪽으로 이항하면 $-3x\\le 16$이다."
+        }
+      ],
+      "created_at": "2026-11-11T11:26:21.007734+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$5$를 오른쪽으로 이항하면 부등호의 방향은 그대로이므로 $-3x\\le 6$이다. 양변을 음수인 $-3$으로 나누면 부등호의 방향이 바뀌므로 $x\\ge -2$이다. 따라서 정답은 3번이다.\n1번은 이항할 때 부등호의 방향도 바뀐다고 잘못 생각했다. 2번은 음수로 나눌 때 부등호의 방향을 그대로 두었다. 4번에서는 $6\\div 3=2$이고, 5번에서는 $11-5=6$이다.",
+      "generated_at": "2026-11-11T11:26:20.716927+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "df381c15-7674-44c9-ae89-f1a391d8082f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:26:20.716787+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.879518+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C3-성질적용",
+      "body": "물통에 물이 $19\\mathrm{L}$ 들어 있다. 물통에서 물을 덜어 한 병에 $2\\mathrm{L}$씩 가득 채우려고 한다. 물통에 물이 $4\\mathrm{L}$ 이상 남아야 할 때, 가득 채울 수 있는 병은 최대 몇 병인가? 일차부등식을 세워 풀어 보자.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$6$병"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$7$병"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M3",
+          "no": 3,
+          "text": "$7.5$병"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M3",
+          "no": 4,
+          "text": "$8$병"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9$병"
+        }
+      ],
+      "created_at": "2026-11-11T11:28:30.441237+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가득 채우는 병의 수를 $x$라고 하면 물통에 남은 물의 양은 $(19-2x)\\mathrm{L}$이다. 따라서 $19-2x\\ge 4$이다. 이를 풀면 $-2x\\ge -15$이고, 양변을 $-2$로 나누면 부등호의 방향이 바뀌므로 $x\\le 7.5$이다. 병의 수는 온전한 개수여야 하므로 가장 많이 채울 수 있는 병은 $7$병이다. $7.5$병은 가득 채운 병의 수가 될 수 없고, $8$병을 채우면 물통에 $3\\mathrm{L}$만 남는다.",
+      "generated_at": "2026-11-11T11:28:30.134025+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "남은 물의 양을 일차부등식으로 나타내고 풀어야 한다. 구한 범위를 가득 채운 병의 수에 맞게 해석해야 한다.",
+      "id": "23c36691-e0bf-4c62-929c-76eceedbe292",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:28:30.133899+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.909893+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C3-성질적용",
+      "body": "어느 학급은 모금함에 $5000$원이 있다. 앞으로 기부권을 한 장 팔 때마다 $2000$원씩 모금함에 넣는다. 모금함의 돈이 $20000$원을 넘으려면 기부권을 적어도 몇 장 팔아야 하는가? 일차부등식을 세워 풀어 보자.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M3",
+          "no": 1,
+          "text": "$7$장"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M3",
+          "no": 2,
+          "text": "$7.5$장"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8$장"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9$장"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$10$장"
+        }
+      ],
+      "created_at": "2026-11-11T11:28:49.455554+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "기부권을 $x$장 판다고 하면 $5000+2000x>20000$이다. 이를 풀면 $x>7.5$이다. 기부권은 한 장씩 팔므로 $7.5$장이나 $7$장으로는 답할 수 없다. $7.5$보다 큰 장수 중 가장 작은 수는 $8$이다.",
+      "generated_at": "2026-11-11T11:28:49.291575+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "모금 상황을 일차부등식으로 나타내고, 구한 범위에서 기부권의 가장 작은 장수를 찾아야 한다.",
+      "id": "5cd2ce35-390c-4fe0-b9fe-5d4c018ade25",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:28:49.291401+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.961338+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C3-성질적용",
+      "body": "공책 한 권의 값은 $400$원이다. 공책을 사면 권수에 관계없이 포장비 $1000$원을 낸다. 공책 값과 포장비를 합하여 $4000$원 이하로 쓰려고 한다. 공책은 가장 많이 몇 권 살 수 있는가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$권"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$권"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$7$권"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M3",
+          "no": 4,
+          "text": "$8$권"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9$권"
+        }
+      ],
+      "created_at": "2026-11-11T11:27:53.161505+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "공책을 $x$권 산다고 하면 $400x+1000\\le 4000$이다. 이를 풀면 $x\\le 7.5$이다. 공책은 한 권씩 살 수 있으므로 가장 많이 살 수 있는 공책은 $7$권이다. $8$권을 사면 공책 값과 포장비의 합이 $4200$원이므로 $4000$원을 넘는다. 따라서 $8$권이라고 답하면 공책을 한 권씩 사야 한다는 점을 생각하지 않은 것이다.",
+      "generated_at": "2026-11-11T11:27:52.997354+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b9a901be-7dd7-4ad9-baa5-6a32f2d3f3cd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:27:52.997212+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:33.990727+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C3-성질적용",
+      "body": "길이가 $6$m인 끈을 한 조각의 길이가 $0.8$m가 되도록 자르려고 한다. 자를 때 버려지는 끈은 없다. 이 끈으로 $0.8$m인 조각을 가장 많이 몇 개 만들 수 있는가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$개"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$개"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$7$개"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-12-M3",
+          "no": 4,
+          "text": "$8$개"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9$개"
+        }
+      ],
+      "created_at": "2026-11-11T11:28:10.642052+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "만들 수 있는 조각을 $x$개라 하면 $0.8x \\le 6$이다. 이를 풀면 $x \\le 7.5$이다. 조각의 개수는 온전한 개수로 세어야 하므로 가장 많이 만들 수 있는 조각은 $7$개이다. $8$개를 고르면 끈의 길이가 $6.4$m 필요하므로 주어진 끈으로는 만들 수 없다.",
+      "generated_at": "2026-11-11T11:28:10.473796+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "057019fb-d6ac-4282-a42b-49eca2075edd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:28:10.473656+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:34.018779+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C3-이유설명",
+      "body": "색종이가 $8$장 있다. 한 묶음에 $5$장씩 들어 있는 색종이를 몇 묶음 더 사서 모두 $26$장 이상이 되게 하려고 한다. 색종이는 묶음을 나누어 살 수 없다.\n\n더 사는 묶음 수를 $x$라고 할 때, 부등식을 세운 이유와 그 해를 쓰고, 필요한 묶음 수는 적어도 몇인지 구하시오. 또 그보다 적은 묶음 수는 모두 알맞지 않은 이유를 구체적인 수를 사용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T11:29:43.910059+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x$묶음을 더 사면 색종이는 모두 $5x+8$장이다. $26$장 이상이어야 하므로 $5x+8\\ge 26$이고, 이를 풀면 $x\\ge 3.6$이다. 하지만 묶음은 나누어 살 수 없으므로 $3.6$묶음을 살 수는 없다. 적어도 $4$묶음을 사야 한다. $4$묶음이면 모두 $28$장이고, 그보다 적게 사면 많아야 $3$묶음이므로 색종이는 많아야 $23$장이다.",
+      "generated_at": "2026-11-11T11:29:43.75346+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "문제에서 구한 묶음 수보다 적은 묶음 수가 모두 알맞지 않은 이유를 설명하게 한다.",
+      "id": "5293307c-85a2-43b5-bfa5-346da47b3640",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$x$묶음을 사면 색종이는 모두 $5x+8$장이다. $26$장 이상이 되어야 하므로 $5x+8\\ge 26$이다. 이를 풀면 $x\\ge 3.6$이다. 묶음을 나누어 살 수 없으므로 적어도 $4$묶음을 사야 한다. $4$묶음을 사면 모두 $28$장이다. $4$묶음보다 적게 사면 많아야 $3$묶음이므로 색종이는 많아야 $23$장이다. 따라서 그보다 적게 사서는 $26$장 이상이 될 수 없다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "전체 색종이 수가 $5x+8$장이고 $26$장 이상이어야 함을 이용하여 $5x+8\\ge 26$을 세운다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "부등식의 해를 $x\\ge 3.6$으로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "묶음을 나누어 살 수 없음을 이용하여 적어도 $4$묶음이 필요하다고 답하고, $4$묶음이면 $28$장으로 충분함을 확인한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-12-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$4$묶음보다 적으면 많아야 $3$묶음이고, 이때 색종이가 많아야 $23$장이므로 모두 알맞지 않다고 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-12-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:29:43.753329+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:34.047388+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C3-이유설명",
+      "body": "놀이공원 입장료는 $4000$원이고, 놀이 기구를 한 번 탈 때마다 $1200$원을 낸다. 입장료는 한 번만 내며, 놀이 기구를 타는 횟수에는 제한이 없다. 입장료와 놀이 기구 이용료의 합을 $10000$원보다 적게 쓰려고 한다.\n\n놀이 기구를 타는 횟수를 $x$라고 하자. 부등식을 세운 이유와 그 해를 쓰고, 놀이 기구를 가장 많이 탈 수 있는 횟수를 구하시오. 또 구체적인 금액을 사용하여, 구한 횟수보다 많이 타는 것은 모두 알맞지 않은 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T11:30:06.618486+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "총금액이 $10000$원보다 적어야 하므로 $4000+1200x<10000$이다. 이를 풀면 $x<5$이다. 횟수는 $0$ 또는 자연수이므로 가장 많이 탈 수 있는 횟수는 $4$이다. $4$번 타면 총 $8800$원이고, $5$번 타면 총 $10000$원이다. $5$번보다 더 타면 돈이 더 들므로 $5$번 이상은 모두 알맞지 않다. 해가 $x<5$라고 해서 $5$번까지 탈 수 있는 것은 아니다. 또 $4.5$와 같은 수는 횟수로 고를 수 없다.",
+      "generated_at": "2026-11-11T11:30:06.448656+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "구한 횟수보다 많이 타는 것은 모두 알맞지 않은 이유를 구체적인 금액을 사용하여 설명하게 했다.",
+      "id": "72da0e15-800e-49b2-9e39-f1c4eb524415",
+      "model": "gpt-6.1-terra",
+      "model_answer": "입장료와 놀이 기구 이용료의 합이 $10000$원보다 적어야 하므로 $4000+1200x<10000$이다. 이를 풀면 $x<5$이다. 타는 횟수는 $0$ 또는 자연수이므로 가장 많이 탈 수 있는 횟수는 $4$이다. $4$번 타면 $8800$원이 들어 알맞다. $5$번 타면 $10000$원이 들고, 더 많이 타면 돈이 더 든다. 따라서 $4$번보다 많이 타는 것은 모두 알맞지 않다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "입장료와 이용료의 합이 $10000$원보다 적어야 한다는 이유와 함께 $4000+1200x<10000$을 세운다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "부등식의 해를 $x<5$로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "타는 횟수는 $0$ 또는 자연수임을 이용하여 가장 많이 탈 수 있는 횟수를 $4$로 구한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-12-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$4$번 탈 때의 총금액 $8800$원이 알맞음을 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "$5$번 탈 때 총금액이 $10000$원이고 더 많이 타면 돈이 더 든다는 점을 이용하여, $4$번보다 많이 타는 것은 모두 알맞지 않음을 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-12-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:30:06.448527+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T11:38:34.074786+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C3-이유설명",
+      "body": "한 권에 $1200$원인 공책을 $10000$원으로 사려고 한다. 공책은 낱권으로만 판다. 공책을 가장 많이 사면 몇 권을 살 수 있는가? 사는 공책의 수를 $x$권으로 놓고 부등식을 세워 풀어라. 부등식을 세운 이유와 구한 해에서 답을 고른 이유를 구체적인 수를 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T11:29:06.190254+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$권의 가격은 $1200x$원이다. 가진 돈보다 더 많이 쓸 수 없으므로 $1200x\\le 10000$이다. 이를 풀면 $x\\le \\dfrac{25}{3}$이다. 공책은 낱권으로만 사므로 $\\dfrac{25}{3}$권을 살 수 없고, $9$권도 살 수 없다. 가장 많이 살 수 있는 수는 $8$권이다. 해의 범위만 보고 $\\dfrac{25}{3}$권이나 $9$권이라고 답하면 공책을 낱권으로만 살 수 있다는 점이나 가진 돈을 넘을 수 없다는 점을 놓친 것이다.",
+      "generated_at": "2026-11-11T11:29:06.031025+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2a9ccacf-4dd9-4bae-82e6-953c8d805b36",
+      "model": "gpt-6.1-terra",
+      "model_answer": "공책 $x$권의 가격은 $1200x$원이고, 가진 돈은 $10000$원이므로 $1200x\\le 10000$이다. 이 부등식을 풀면 $x\\le \\dfrac{25}{3}$이다. 공책은 낱권으로만 살 수 있고 $8<\\dfrac{25}{3}<9$이므로 가장 많이 살 수 있는 공책은 $8$권이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "공책 $x$권의 가격이 $1200x$원이고 가진 돈을 넘을 수 없다는 이유와 함께 $1200x\\le 10000$을 세웠다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "부등식을 풀어 해를 $x\\le \\dfrac{25}{3}$으로 구했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "답을 $8$권으로 구하고, 낱권으로만 살 수 있다는 점과 $8$, $9$ 등 구체적인 수를 이용하여 그 이유를 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-12-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:29:06.030871+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T11:38:34.102353+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-12-C3-이유설명",
+      "body": "운동장에서 한 바퀴를 돌면 $800$m를 걷는다. 출발점에서 걷기 시작하여 한 바퀴씩 완전히 돈다. $5000$m 이상 걸으려면 적어도 몇 바퀴를 돌아야 하는가?\n\n돈 바퀴 수를 $x$로 놓고 부등식을 세워 풀어라. 부등식을 세운 이유와 구한 해에서 답을 고른 이유를 구체적인 수를 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T11:29:22.794963+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$바퀴를 돌면 $800x$m를 걷는다. 걸은 거리가 $5000$m 이상이어야 하므로 $800x\\ge 5000$이다. 이를 풀면 $x\\ge 6.25$이다. 한 바퀴씩 완전히 돌아야 하므로 $6.25$바퀴는 답이 될 수 없다. $6$바퀴는 $4800$m여서 부족하고, $7$바퀴는 $5600$m이므로 답은 $7$바퀴이다.",
+      "generated_at": "2026-11-11T11:29:22.620707+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "24d87ea1-b458-4ccd-af9e-9a82cacff35c",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$x$바퀴를 돌면 $800x$m를 걷는다. $5000$m 이상 걸어야 하므로 $800x\\ge 5000$이다. 이를 풀면 $x\\ge 6.25$이다. 한 바퀴씩 완전히 돌아야 하므로 바퀴 수는 자연수이다. $6$바퀴를 돌면 $4800$m로 부족하고, $7$바퀴를 돌면 $5600$m로 $5000$m 이상이다. 따라서 적어도 $7$바퀴를 돌아야 한다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$x$바퀴를 돌면 $800x$m를 걷고, $5000$m 이상 걸어야 하므로 $800x\\ge 5000$임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "부등식을 풀어 $x\\ge 6.25$를 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "한 바퀴씩 완전히 돌아야 함을 이용하여 $6$바퀴는 부족하고 $7$바퀴는 가능하다는 것을 구체적인 수로 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-12-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "적어도 $7$바퀴를 돌아야 한다고 답한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-12-M3"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:29:22.620602+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

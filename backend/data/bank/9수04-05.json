@@ -1,0 +1,1934 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:50:38.864436+00:00",
+          "issues": [
+            "두 조건에 해당하는 경우를 직접 세고 겹친 경우를 한 번만 세는 일반적인 문제로, 상황을 식으로 바꾼 뒤 성질을 적용하는 application-b 조건이 드러나지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:50:59.216144+00:00",
+          "issues": [
+            "review: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:02.654865+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:02.910526+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:44.935577+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:09.392001+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:13.019232+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:16.630311+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:16.782221+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:11:44.965952+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:06.200817+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:09.942461+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:13.470131+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:13.786934+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:29:05.679443+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:20.491616+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:24.089948+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:28.253788+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:28.400891+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:29:05.713508+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T13:12:24.204425+00:00",
+          "issues": [
+            "제시된 보기에서는 3만 정답이지만, 보기 밖의 k=6도 조건을 만족하므로 k의 값이 하나로 정해지지 않는다. 해설에서 k=3인 때뿐이라고 단정한 것도 틀리다.",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:12:55.630682+00:00",
+          "issues": [
+            "해설은 조건을 만족하려면 1이 적힌 카드를 치워야 한다고 했지만, 3이나 5가 적힌 카드를 치워도 조건을 만족한다. 보기 중 정답은 ③뿐이다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:13:35.484254+00:00",
+          "issues": [
+            "n의 범위가 주어지지 않았다. 정수의 배수를 정수배로 해석하면 n=-3일 때도 조건을 만족하므로 n의 값을 하나로 정할 수 없다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T13:13:35.499975+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:29:05.643968+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:39.047051+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:42.568093+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:45.785173+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:45.923997+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:14:23.853911+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:54.687653+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:58.742379+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:02.201991+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:02.356515+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:14:23.902028+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:49.254013+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:54.696016+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:58.368026+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:58.507883+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:14:52.840824+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:05.746543+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:10.661733+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:14.872317+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:15.031583+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:14:52.889633+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:17.371253+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:21.167829+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:24.752782+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:24.887223+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:46.557987+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:32.159322+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:35.857259+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:39.225701+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:39.398252+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:46.594256+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:51:28.164034+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:51:31.732150+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:51:35.245325+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:51:35.384426+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:58.840412+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:01:43.525551+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:01:46.892297+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:01:51.330357+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:01:51.484588+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:13:58.891555+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:23.348837+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:26.641607+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:29.933955+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:30.075096+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:17:48.350743+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:40.578842+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:44.043945+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:47.703007+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:47.867294+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:17:48.454664+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:33.476687+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:38.251123+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:42.023962+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:42.163396+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:18:12.937949+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:51.575131+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:55.051833+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:03:00.009785+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:03:00.153177+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:18:12.994911+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:02.037516+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:05.882630+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:09.314582+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:09.457682+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:15:50.476509+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:19.067868+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:22.540443+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:25.920716+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:26.18138+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:15:50.526086+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:12.810768+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:16.109715+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:19.633042+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:19.770583+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:16:07.924489+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:02:29.693006+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:02:33.330767+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:02:36.989640+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:02:37.14672+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:16:07.962181+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:08.599641+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:12.252640+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:17.988454+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:18.127588+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:19:26.287796+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:03:26.308815+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:03:29.892739+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:03:33.286415+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:03:33.45479+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:19:26.331077+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:53:21.625638+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:26.161372+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:29.559150+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:29.683604+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:20:29.194496+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:03:37.208326+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:03:40.776340+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:03:44.444012+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:03:44.615258+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:20:29.254662+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:45.748512+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:52:50.447349+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:52:53.786640+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:52:53.932147+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:18:35.490466+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:03:03.918265+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:03:09.289071+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:03:12.484892+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:03:12.637751+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:18:35.523421+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T11:52:57.430049+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T11:53:00.992276+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T11:53:04.746460+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T11:53:04.889255+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:19:05.556048+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T12:03:16.274788+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T12:03:19.591723+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T12:03:22.891997+00:00",
+          "issues": [
+            "generate: RateLimitError"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T12:03:23.052618+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T13:19:05.621425+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T13:24:49.168035+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "body": "책갈피 $8$개에 각각 가, 나, 다, 라, 마, 바, 사, 아라고 이름을 붙였다.\n\n빨간 끈이 달린 책갈피는 가, 나, 다, 라, 마이다. 별 그림이 있는 책갈피는 다, 마, 바, 사이다.\n\n이 책갈피 중 빨간 끈이 달려 있거나 별 그림이 있는 것을 하나 고르려고 한다. 두 가지가 모두 있는 책갈피도 고를 수 있다. 고르는 경우의 수는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$6$가지"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$7$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M1",
+          "no": 4,
+          "text": "$9$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M3",
+          "no": 5,
+          "text": "$20$가지"
+        }
+      ],
+      "created_at": "2026-11-11T13:11:44.881066+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "빨간 끈이 달린 책갈피는 $5$개이다. 별 그림이 있으면서 빨간 끈이 없는 책갈피는 바, 사로 $2$개이다. 이 둘은 빨간 끈이 달린 책갈피와 겹치지 않으므로 경우의 수는 $5+2=7$이다.\n\n$9$가지를 고른 경우에는 빨간 끈과 별 그림이 모두 있는 다, 마를 각각 두 번 셌다. $20$가지를 고른 경우에는 책갈피 하나를 고르는데 두 종류의 책갈피 수를 곱했다.",
+      "generated_at": "2026-11-11T13:11:44.860895+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "빨간 끈과 별 그림에 관한 상황을 보고 겹치는 책갈피를 찾아야 한다. 겹치지 않게 나눈 뒤 경우의 수를 더하는 식을 세워야 한다.",
+      "id": "9b9f2ac9-8834-4c49-a1a0-6426716b22db",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:11:44.860766+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:39:32.269802+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "body": "$1$부터 $12$까지의 자연수가 하나씩 적힌 카드가 $12$장 있다.\n\n이 중 적힌 수가 $2$의 배수이거나 $ㄱ$의 배수인 카드를 한 장 고른다. 두 수의 배수인 카드도 고를 수 있다.\n\n고르는 경우의 수가 $8$일 때, $ㄱ$에 들어갈 수는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M1",
+          "no": 3,
+          "text": "$5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M1",
+          "no": 4,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$8$"
+        }
+      ],
+      "created_at": "2026-11-11T13:29:05.571079+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$2$의 배수가 적힌 카드는 $2, 4, 6, 8, 10, 12$의 $6$장이다.\n\n$ㄱ$이 $3$이면 이 카드 외에 $3, 9$가 적힌 카드도 고를 수 있다. 따라서 경우의 수는 $6+2=8$이다.\n\n$ㄱ$이 $5$이면 $5$가 적힌 카드만 더 고를 수 있어 $7$가지이다. $ㄱ$이 $4, 6, 8$ 중 하나이면 더 고를 수 있는 카드가 없어 각각 $6$가지이다.\n\n$ㄱ$을 $5$ 또는 $6$으로 고른 학생은 두 수의 배수인 카드를 두 번 세지 않았는지 살펴본다. 예를 들어 $ㄱ$이 $6$이면 $6, 12$가 적힌 카드는 이미 $2$의 배수가 적힌 카드에 들어 있다.",
+      "generated_at": "2026-11-11T13:29:05.563364+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "고르는 경우의 수를 $8$로 주고, 그 수가 되도록 $ㄱ$에 들어갈 수를 찾게 했다.",
+      "id": "4d3b54bd-3894-4677-9a13-65b809706ad9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:29:05.563182+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T12:07:08.24288+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "body": "서로 다른 카드가 빨간색 $3$장, 파란색 $4$장, 초록색 $2$장 있다. 이 카드 중 한 장을 고를 때, 빨간색 또는 파란색 카드를 고르는 경우의 수는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M3",
+          "no": 5,
+          "text": "$12$"
+        }
+      ],
+      "created_at": "2026-11-11T11:48:57.62101+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "빨간색 카드를 고르는 경우는 $3$가지이고, 파란색 카드를 고르는 경우는 $4$가지이다. 한 장을 고를 때 빨간색과 파란색을 동시에 고를 수 없으므로 경우의 수는 $3+4=7$이다. $3\\times4=12$로 계산하면 빨간색과 파란색 카드를 각각 한 장씩 고르는 것으로 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T11:48:57.467811+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c5476c42-3130-4c8d-8156-deb5515d1df8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:48:57.467687+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T12:07:08.275633+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C1-성질적용",
+      "body": "학교에서 도서관까지 한 번에 가는 버스 노선이 $5$개, 지하철 노선이 $6$개 있다. 버스나 지하철 중 한 가지만 이용하여 도서관에 가는 경우의 수는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$11$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$12$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M3",
+          "no": 5,
+          "text": "$30$"
+        }
+      ],
+      "created_at": "2026-11-11T11:50:12.675146+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "버스를 이용하는 경우는 $5$가지, 지하철을 이용하는 경우는 $6$가지이다. 한 가지만 이용하므로 두 경우는 겹치지 않는다. 따라서 경우의 수는 $5+6=11$이다. $5\\times6=30$으로 구하면 버스와 지하철 노선을 하나씩 고르는 경우를 센 것이다.",
+      "generated_at": "2026-11-11T11:50:12.423962+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ba65b17c-7e50-40e2-afd9-793b5cc9df57",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T11:50:12.423852+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.197075+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "body": "음료 가, 나, 다 중에서 한 가지를 고르고, 간식도 한 가지 고르려고 한다. 어떤 음료를 고르더라도 고를 수 있는 간식의 종류는 모두 같다.\n\n고른 음료와 간식의 짝은 모두 $12$가지이다. 고를 수 있는 간식은 몇 종류인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2$종류"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3$종류"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$4$종류"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6$종류"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M2",
+          "no": 5,
+          "text": "$9$종류"
+        }
+      ],
+      "created_at": "2026-11-11T13:14:23.797155+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "간식 한 종류마다 음료 가, 나, 다와 짝을 지을 수 있으므로 짝이 $3$가지씩 생긴다. 짝이 모두 $12$가지이므로 간식은 $4$종류이다.\n\n실제로 간식을 ㉠, ㉡, ㉢, ㉣이라고 하면 짝은 다음과 같이 $12$가지이다.\n(가, ㉠), (가, ㉡), (가, ㉢), (가, ㉣), (나, ㉠), (나, ㉡), (나, ㉢), (나, ㉣), (다, ㉠), (다, ㉡), (다, ㉢), (다, ㉣)\n\n$3+9=12$만 생각하여 $9$종류를 고르면 음료와 간식을 하나씩 함께 고른 짝을 세지 않은 것이다.",
+      "generated_at": "2026-11-11T13:14:23.765638+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "완성되는 음료와 간식의 짝의 수를 먼저 주고, 간식의 종류 수를 거꾸로 찾게 했다.",
+      "id": "6257bacd-b641-44f9-b403-54e1e93af13e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:14:23.765518+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.226701+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "body": "출발 지점 $A$, $B$, $C$, $D$ 중 한 곳에서 출발하여 도착 지점 $1$, $2$, $3$ 중 한 곳에 도착한다.\n\n$A$와 $B$에서는 각각 $1$, $2$, $3$으로 갈 수 있다. $C$와 $D$에서는 각각 $1$, $2$로만 갈 수 있다. 갈 수 있는 출발 지점과 도착 지점의 짝마다 이동 방법은 한 가지뿐이다.\n\n이동하는 방법의 경우의 수는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$8$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M2",
+          "no": 2,
+          "text": "$9$가지"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$11$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$가지"
+        }
+      ],
+      "created_at": "2026-11-11T13:14:52.783753+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$A$ 또는 $B$에서 출발하면 각각 $3$곳으로 갈 수 있으므로 $2\\times3=6$가지이다. $C$ 또는 $D$에서 출발하면 각각 $2$곳으로 갈 수 있으므로 $2\\times2=4$가지이다. 따라서 모두 $6+4=10$가지이다.\n\n출발 지점과 도착 지점의 짝을 모두 쓰면 $(A,1)$, $(A,2)$, $(A,3)$, $(B,1)$, $(B,2)$, $(B,3)$, $(C,1)$, $(C,2)$, $(D,1)$, $(D,2)$이다.\n\n$9$가지를 고른 학생은 출발 지점과 도착 지점을 함께 골라야 하는데, 각각 고르는 경우의 수를 곱하지 않고 $2+3+2+2$로 더했을 수 있다.",
+      "generated_at": "2026-11-11T13:14:52.758025+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "출발 지점에 따라 갈 수 있는 도착 지점이 다르므로, 상황을 두 부분으로 나누어 각각 곱하는 식을 세워야 한다.",
+      "id": "99d21cfc-22ae-4224-9aa6-20cef357e9dd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:14:52.757824+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.257534+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "body": "빵 $3$종류와 음료 $4$종류가 있다. 빵 한 종류와 음료 한 종류를 골라 한 세트로 만든다. 어떤 빵을 골라도 음료 $4$종류 중 하나를 고를 수 있다. 만들 수 있는 서로 다른 세트의 경우의 수는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M2",
+          "no": 2,
+          "text": "$7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$12$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$16$"
+        }
+      ],
+      "created_at": "2026-11-11T13:13:46.469643+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "빵 한 종류마다 함께 고를 수 있는 음료가 $4$종류씩 있다. 따라서 경우의 수는 $3 \\times 4=12$이다. $3+4=7$로 구하면 빵과 음료를 따로 센 것이므로, 빵과 음료를 하나씩 고르는 세트의 경우를 구할 수 없다.",
+      "generated_at": "2026-11-11T13:13:46.364127+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "54685ecf-459b-4ffd-8364-4c08b592aa44",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:13:46.364024+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.286865+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C2-성질적용",
+      "body": "동전 한 개를 던지고, $1$부터 $5$까지의 수가 하나씩 적힌 회전판을 한 번 돌린다. 동전의 앞면과 뒷면 중 하나와 회전판에서 나온 수 하나를 함께 기록할 때, 서로 다른 기록의 경우의 수는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M2",
+          "no": 2,
+          "text": "$7$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8$가지"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$10$가지"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$가지"
+        }
+      ],
+      "created_at": "2026-11-11T13:13:58.760085+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "동전은 앞면과 뒷면의 $2$가지이다. 각각에 대해 회전판에서 나오는 수는 $5$가지이므로 경우의 수는 $2\\times 5=10$가지이다. $7$가지를 고른 경우에는 두 결과를 함께 기록해야 하는데, 각각의 경우의 수를 더했을 수 있다.",
+      "generated_at": "2026-11-11T13:13:58.709801+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "13e6d3f0-35ab-433e-ae1b-3d9d36f8eeff",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:13:58.709723+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.31558+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "body": "그림이 그려진 카드 $3$장과 스티커 $2$장이 있다. 카드의 그림은 해, 달, 별이고 스티커의 모양은 원, 세모이다. 카드 한 장과 스티커 한 장을 고른다. 어떤 카드와 어떤 스티커도 함께 고를 수 있다.\n\n민지는 카드별로, 지수는 스티커별로 나누어 경우의 수를 구하려고 한다.\n\n가능한 경우를 (카드의 그림, 스티커의 모양)으로 모두 적으시오. 또 민지와 지수의 방법을 각각 곱셈식으로 나타내고, 두 방법이 같은 결과를 내는 이유와 곱셈으로 구할 수 있는 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:17:48.280543+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "카드별로 보면 각 카드에 스티커 $2$가지씩을 고를 수 있다. 같은 수인 $2$를 카드 $3$장에 대해 더하므로 $3\\times2=6$이다. 스티커별로 보면 각 스티커에 카드 $3$가지씩을 고를 수 있으므로 $2\\times3=6$이다. 두 방법은 같은 경우들을 다르게 묶어 센 것이므로 결과가 같다.\n\n$3+2=5$로 구하면 카드와 스티커를 따로 세게 된다. 이 문제에서는 카드와 스티커를 함께 고른 한 쌍을 한 가지 경우로 세어야 한다.",
+      "generated_at": "2026-11-11T13:17:48.062302+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "카드별로 세는 방법과 스티커별로 세는 방법을 비교하고, 두 방법이 같은 결과를 내는 이유를 설명하게 한다.",
+      "id": "8544d7c1-86dc-449f-9b91-c535480de8a3",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가능한 경우는 (해, 원), (해, 세모), (달, 원), (달, 세모), (별, 원), (별, 세모)이다.\n\n민지의 방법에서는 카드 $3$장 각각에 스티커 $2$가지씩을 고를 수 있으므로 $3\\times2=6$이다. 지수의 방법에서는 스티커 $2$가지 각각에 카드 $3$장씩을 고를 수 있으므로 $2\\times3=6$이다.\n\n두 방법 모두 같은 카드와 스티커의 쌍을 빠뜨리거나 겹치지 않게 한 번씩 센다. 묶어 세는 방법만 다르므로 결과가 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 2,
+      "rubric": [
+        {
+          "description": "가능한 카드와 스티커의 쌍 $6$가지를 빠짐없이 적었다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "민지의 방법과 지수의 방법을 각각 $3\\times2=6$, $2\\times3=6$으로 나타냈다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-05-M2"
+          ],
+          "required": false
+        },
+        {
+          "description": "각 카드에 스티커 $2$가지씩, 각 스티커에 카드 $3$장씩을 고를 수 있음을 이용하여 두 곱셈식의 이유를 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법이 같은 쌍을 빠뜨리거나 겹치지 않게 세며, 묶는 방법만 다르므로 결과가 같다고 설명했다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:16:47.296527+00:00",
+          "issues": [
+            "문제에서 ‘곱셈식’을 요구하여 경우의 수를 곱해서 구한다는 답을 미리 드러낸다.",
+            "곱하는 순서를 정하지 않았는데 채점 기준은 민지를 3×2, 준호를 2×3으로 나타낸 답만 인정한다. 각 방법을 반대 순서의 곱셈식으로 나타내어도 맞다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:17:17.147905+00:00",
+          "issues": [
+            "두 묶기 방법을 2+2+2와 3+3으로 나타내고 같은 순서쌍을 센다고 설명해도 문제의 요구를 충족하므로, 곱해서 구할 수 있는 이유를 반드시 설명하게 하지 않는다. 채점 기준은 문제에서 요구하지 않은 곱셈식을 요구한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T13:17:48.062182+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.345824+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "body": "집에서 광장까지 가는 길은 $A$, $B$, $C$, $D$의 $4$가지이고, 광장에서 도서관까지 가는 길은 $1$, $2$의 $2$가지이다. 집에서 광장을 거쳐 도서관까지 간다. 집에서 광장까지 어떤 길을 이용해도 광장에서 도서관까지 가는 두 길 중 어느 것이든 이용할 수 있다.\n\n수아는 “두 구간의 길의 수를 더하면 집에서 광장을 거쳐 도서관까지 가는 경우의 수를 구할 수 있어.”라고 말한다.\n\n가능한 경우를 (집에서 광장까지 가는 길, 광장에서 도서관까지 가는 길)로 모두 적으시오. 이 상황을 반례로 이용하여 수아의 말이 틀렸음을 보이고, 경우의 수를 곱해서 구할 수 있는 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:18:12.877194+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가능한 경우는 $(A,1)$, $(A,2)$, $(B,1)$, $(B,2)$, $(C,1)$, $(C,2)$, $(D,1)$, $(D,2)$이다. 집에서 광장까지 가는 길 $4$가지 각각에 광장에서 도서관까지 가는 길 $2$가지를 짝 지을 수 있으므로 경우의 수는 $4\\times2=8$이다. 빠지거나 겹치는 경우도 없다.\n\n$4+2=6$으로 구하면 두 구간의 길을 따로 세어 더한 것이다. 이렇게 하면 두 구간의 길을 하나씩 짝 지은 경우를 모두 세지 못한다. 따라서 이 상황은 수아의 말이 틀렸음을 보여 주는 반례이다.",
+      "generated_at": "2026-11-11T13:18:12.846275+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "두 구간의 길의 수를 더하면 된다는 수아의 말에 대해 주어진 상황을 반례로 이용하여 틀렸음을 보이게 했다.",
+      "id": "2caee302-ea55-4cbf-b600-8dff23a3a11c",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가능한 경우는 $(A,1)$, $(A,2)$, $(B,1)$, $(B,2)$, $(C,1)$, $(C,2)$, $(D,1)$, $(D,2)$이다. 모두 $8$가지이므로 $4+2=6$이라는 수아의 말과 다르다.\n\n집에서 광장까지 가는 길 $4$가지 각각에 광장에서 도서관까지 가는 길 $2$가지를 짝 지을 수 있다. 이렇게 하면 빠지거나 겹치는 경우가 없으므로 경우의 수는 $4\\times2=8$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "가능한 경우 $8$가지를 순서쌍으로 빠짐없이 적었다.",
+          "no": 1,
+          "points": 3.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "첫 구간의 길 $4$가지 각각에 다음 구간의 길 $2$가지를 짝 지을 수 있고, 빠지거나 겹치는 경우가 없음을 설명했다.",
+          "no": 2,
+          "points": 3.0,
+          "related_misconception_ids": [
+            "9수04-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "$4+2=6$과 실제 경우의 수 $8$을 비교하여 수아의 말이 틀렸음을 보였다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-05-M2"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:18:12.846092+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.384656+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "body": "음료는 우유, 주스, 보리차 $3$가지가 있고, 빵은 식빵, 단팥빵 $2$가지가 있다. 음료와 빵을 각각 한 가지씩 고르려고 한다. 어느 음료와 어느 빵이든 함께 고를 수 있다.\n\n고를 수 있는 경우를 모두 $(음료, 빵)$의 꼴로 적으시오. 또 경우의 수를 구하고, 그렇게 구한 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:15:50.420767+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "음료를 하나 고를 때마다 함께 고를 수 있는 빵은 $2$가지이다. 이러한 음료가 $3$가지이므로 경우의 수는 $3\\times 2=6$이다. $3+2=5$로 구하면 음료와 빵을 함께 고르는 경우를 세지 못한다.",
+      "generated_at": "2026-11-11T13:15:50.404668+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0ce4339d-9fe1-41a2-a9f0-76287b4080a8",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가능한 경우는 $(우유, 식빵)$, $(우유, 단팥빵)$, $(주스, 식빵)$, $(주스, 단팥빵)$, $(보리차, 식빵)$, $(보리차, 단팥빵)$이다. 음료를 하나 고를 때마다 빵을 고르는 방법이 $2$가지씩 있다. 음료가 $3$가지이므로 경우의 수는 $3\\times 2=6$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "가능한 경우 $6$가지를 빠짐없이 중복 없이 $(음료, 빵)$의 꼴로 적었다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "음료 각각에 빵을 고르는 방법이 $2$가지씩 있음을 들어 곱하는 이유를 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "$3\\times 2=6$을 쓰거나 이에 해당하는 계산 방법과 답을 적었다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-05-M2"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:15:18.456700+00:00",
+          "issues": [
+            "문제는 식의 종류를 제한하지 않아 1+1+1+1+1+1=6으로 나타내고 나열한 경우를 하나씩 세었다고 설명해도 된다. 따라서 경우의 수를 곱해서 구하는 이유를 설명하는지 반드시 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:15:50.404518+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.414448+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C2-이유설명",
+      "body": "$1$, $2$, $3$, $4$가 하나씩 적힌 카드 $4$장과 앞면과 뒷면이 있는 동전 $1$개가 있다. 카드 한 장을 뽑고 동전을 한 번 던진다.\n\n나올 수 있는 경우를 모두 $(카드의 수, 동전의 면)$의 꼴로 적으시오. 또 경우의 수를 구하고, 그렇게 구한 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T13:16:07.867688+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "카드에 적힌 수가 $1$일 때 동전은 앞면 또는 뒷면이 나올 수 있으므로 $2$가지이다. 나머지 $2$, $3$, $4$에 대해서도 각각 $2$가지씩 있다. 따라서 경우의 수는 $4\\times 2=8$가지이다.\n\n$4+2$로 구하면 카드의 수 $4$가지와 동전의 면 $2$가지를 따로 더한 것이다. 카드의 수와 동전의 면이 함께 나오는 경우를 센 것이 아니다.",
+      "generated_at": "2026-11-11T13:16:07.85711+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ca418135-967e-48de-85c9-6afeeb1fd3e7",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가능한 경우는 $(1, \\text{앞면})$, $(1, \\text{뒷면})$, $(2, \\text{앞면})$, $(2, \\text{뒷면})$, $(3, \\text{앞면})$, $(3, \\text{뒷면})$, $(4, \\text{앞면})$, $(4, \\text{뒷면})$이다.\n\n카드의 수 $4$가지 각각에 대해 동전의 면이 $2$가지씩 나올 수 있다. 이 경우들을 모두 세면 $4\\times 2=8$가지이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "가능한 경우 $8$가지를 순서쌍으로 빠짐없이, 중복 없이 적었다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "경우의 수를 $4\\times 2=8$가지로 구했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "카드의 수 $4$가지 각각에 대해 동전의 면이 $2$가지씩 나올 수 있으므로 곱한다고 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-05-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:16:07.857024+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.44266+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "body": "빨간 카드 $3$장과 파란 카드 $2$장이 있다. 카드는 모두 서로 다르다.\n\n민수: 빨간 카드와 파란 카드를 하나씩 고르는 경우의 수는 $3+2$야.\n지수: 빨간 카드와 파란 카드 중에서 카드 한 장만 고르는 경우의 수는 $3\\times2$야.\n\n두 학생의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M2",
+          "no": 1,
+          "text": "민수의 말은 옳다. 두 색의 카드를 하나씩 고를 때에는 더해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M3",
+          "no": 2,
+          "text": "지수의 말은 옳다. 두 색의 카드 중에서 한 장만 고를 때에는 곱해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "민수의 말은 틀리다. 두 색의 카드 중에서 한 장만 고르기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "지수의 말은 틀리다. 두 색의 카드를 하나씩 고르기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "민수의 말은 틀리다. 두 색의 카드를 하나씩 고르므로 곱해야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T13:19:26.226801+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "민수는 빨간 카드와 파란 카드를 하나씩 함께 고르므로 $3\\times2$를 해야 한다. 따라서 ⑤가 옳다.\n지수는 두 색 중에서 한 장만 고르므로 $3+2$를 해야 한다.\n①은 두 카드를 함께 고를 때 더한 잘못이고, ②는 한 장만 고를 때 곱한 잘못이다. ③과 ④는 각 학생이 무엇을 고르는지 잘못 보았다.",
+      "generated_at": "2026-11-11T13:19:26.215319+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 학생이 같은 카드에 대해 서로 다르게 고르는 상황을 말한다. 각 학생의 식과 그 까닭이 옳은지 판단해야 한다.",
+      "id": "662bbaeb-6e56-4bcc-9605-784236c420fd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:19:26.215215+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.494168+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "body": "집에서 박물관에 가는 방법은 다음과 같다.\n\n- 도서관을 거치지 않고 가는 길은 $4$개이다.\n- 도서관을 거쳐 가려면 집에서 도서관까지 가는 길 $2$개 중 하나를 고르고, 도서관에서 박물관까지 가는 길 $3$개 중 하나를 고른다.\n\n도서관을 거쳐 갈 때에는 앞에서 고른 길과 뒤에서 고른 길을 모두 이어서 갈 수 있다. 고른 길이 하나라도 다르면 서로 다른 방법이다. 이 밖에 다른 방법은 없다.\n\n집에서 박물관에 가는 방법의 경우의 수를 구하는 식에 대해 다섯 학생이 다음과 같이 말했다. 옳게 말한 학생은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M2",
+          "no": 1,
+          "text": "민재: $4+(2+3)$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M3",
+          "no": 2,
+          "text": "서윤: $4\\times(2\\times3)$이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "하린: $4+(2\\times3)$이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "도윤: $4+2$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "지아: $4+3$이야."
+        }
+      ],
+      "created_at": "2026-11-11T13:20:29.131289+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "도서관을 거쳐 갈 때에는 앞의 길 $2$개 각각에 뒤의 길 $3$개를 이어 갈 수 있으므로 $2\\times3$가지이다. 도서관을 거치지 않는 방법과 거치는 방법 중 하나로 가므로 $4+(2\\times3)=10$가지이다. 따라서 정답은 ③이다.\n\n①은 이어서 가는 두 길의 경우의 수를 더했다. ②는 둘 중 하나로 가는 두 방법의 경우의 수를 곱했다. ④는 도서관에서 박물관까지 가는 길을, ⑤는 집에서 도서관까지 가는 길을 빠뜨렸다.",
+      "generated_at": "2026-11-11T13:20:29.122366+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "도서관을 거쳐 가는 방법과 거치지 않는 방법을 함께 살펴보고, 다섯 학생이 제시한 식의 옳고 그름을 판단하게 했다.",
+      "id": "43567c4c-eb52-40be-b203-8b5540f32723",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:20:01.597836+00:00",
+          "issues": [
+            "모든 보기가 서준의 말이 틀렸다고 전제하므로, 서준의 풀이를 보지 않고 경우의 수만 구해도 정답을 고를 수 있다. 다른 학생의 주장을 보고 옳고 그름을 판단하는 고난도 조건을 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T13:20:29.122153+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.526547+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "body": "서로 다른 볼펜 $3$종류와 서로 다른 공책 $4$종류가 있다. 각 종류의 볼펜과 공책은 충분히 있다.\n\n다음 중 경우의 수를 바르게 말한 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "볼펜과 공책을 한 개씩 고르는 경우의 수는 $12$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M2",
+          "no": 2,
+          "text": "볼펜과 공책을 한 개씩 고르는 경우의 수는 $7$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "볼펜과 공책을 한 개씩 고르는 경우의 수는 $3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M3",
+          "no": 4,
+          "text": "볼펜이나 공책 중 하나만 고르는 경우의 수는 $12$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "볼펜이나 공책 중 하나만 고르는 경우의 수는 $4$이다."
+        }
+      ],
+      "created_at": "2026-11-11T13:18:35.413603+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "볼펜과 공책을 한 개씩 고를 때는 볼펜을 고르는 방법마다 공책을 고르는 방법이 $4$가지씩 있다. 따라서 경우의 수는 $3\\times4=12$이다.\n\n볼펜이나 공책 중 하나만 고를 때는 볼펜을 고르는 $3$가지와 공책을 고르는 $4$가지를 합한다. 따라서 경우의 수는 $3+4=7$이다.\n\n②는 두 물건을 모두 고르는데 경우의 수를 더한 것이다. ④는 두 물건 중 하나만 고르는데 경우의 수를 곱한 것이다.",
+      "generated_at": "2026-11-11T13:18:35.378793+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0d6c7dd0-d315-4ff4-bccc-46be020ffa7f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:18:35.378733+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:49.555903+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-05-C3-오개념판별",
+      "body": "운동 시간에 달리기 방법과 스트레칭 방법을 고르려고 한다. 달리기 방법은 서로 다른 $2$가지이고, 스트레칭 방법은 서로 다른 $5$가지이다.\n\n다음 중 경우의 수를 바르게 말한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M2",
+          "no": 1,
+          "text": "두 종류에서 각각 방법 하나씩을 고를 때, 경우의 수는 $2+5=7$가지이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수04-05-M3",
+          "no": 2,
+          "text": "두 종류 중 한 종류에서만 방법 하나를 고를 때, 경우의 수는 $2\\times5=10$가지이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 종류에서 각각 방법 하나씩을 고를 때, 경우의 수는 $2\\times5=10$가지이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 종류에서 각각 방법 하나씩을 고를 때, 경우의 수는 $2$가지이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 종류 중 한 종류에서만 방법 하나를 고를 때, 경우의 수는 $5$가지이다."
+        }
+      ],
+      "created_at": "2026-11-11T13:19:05.479065+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "달리기 방법 하나와 스트레칭 방법 하나를 함께 고를 때는 각 달리기 방법마다 스트레칭 방법 $5$가지를 고를 수 있다. 따라서 경우의 수는 $2\\times5=10$가지이다.\n\n①은 두 방법을 함께 고르는데 각각의 경우의 수를 더한 것이다. ②는 두 종류 중 한 종류에서만 고르는데 각각의 경우의 수를 곱한 것이다. 한 종류에서만 고를 때는 $2+5=7$가지이다.",
+      "generated_at": "2026-11-11T13:19:05.154912+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f623e8ab-9cc1-431a-ad77-3ec9a3f16055",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T13:19:05.154810+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}
