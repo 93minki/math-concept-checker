@@ -1,0 +1,1018 @@
+{
+  "backlog": [],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T15:40:42.674655+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C1-성질적용",
+      "body": "평평한 땅 위에 수직으로 세운 기둥의 꼭대기를 $A$, 밑을 $B$라 하자. $AB$의 길이는 $12\\,\\text{m}$이다. 땅 위의 점 $C$, $D$는 $B$와 한 직선 위에 있고, $B$, $D$, $C$의 순서로 놓여 있다. 점 $A$에서 $C$와 $D$까지 팽팽하게 줄을 하나씩 이었다. 줄 $AC$와 땅이 이루는 각은 $30^\\circ$, 줄 $AD$와 땅이 이루는 각은 $60^\\circ$이다. 두 줄의 길이의 차는 몇 $\\text{m}$인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M2",
+          "no": 1,
+          "text": "$6(\\sqrt{3}-1)\\,\\text{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 2,
+          "text": "$8\\sqrt{3}\\,\\text{m}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(24-8\\sqrt{3})\\,\\text{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(24-4\\sqrt{3})\\,\\text{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(24+8\\sqrt{3})\\,\\text{m}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:38:53.681107+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "각 줄은 직각삼각형의 빗변이다. 따라서 $\\sin 30^\\circ=\\frac{12}{AC}$, $\\sin 60^\\circ=\\frac{12}{AD}$이다. 두 줄의 길이는 각각 $AC=24\\,\\text{m}$, $AD=8\\sqrt{3}\\,\\text{m}$이므로 차는 $(24-8\\sqrt{3})\\,\\text{m}$이다. 탄젠트를 사용하여 $8\\sqrt{3}\\,\\text{m}$를 얻었다면 줄의 길이가 아니라 땅 위의 두 거리의 차를 구한 것이다. 사인 값을 $12$에 곱하여 $6(\\sqrt{3}-1)\\,\\text{m}$를 얻었다면 빗변의 길이를 구할 때 사인 값으로 나누어야 한다는 점을 놓친 것이다.",
+      "generated_at": "2026-11-11T14:38:49.485309+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "기둥과 두 줄이 이루는 두 직각삼각형을 찾아야 한다. 각각 알맞은 삼각비로 줄의 길이를 구한 뒤 그 차를 비교해야 한다.",
+      "id": "f117f9fe-0a67-4ab5-b90a-cc9c0296dfe2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:38:49.485224+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.702974+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C1-성질적용",
+      "body": "평평한 바닥 위에 높이가 다른 두 발판이 있다. 곧은 경사로가 낮은 발판의 윗면과 높은 발판의 윗면을 잇는다. 경사로의 길이는 $10\\,\\text{m}$이고, 경사로와 수평면이 이루는 각은 $30^\\circ$이다. 낮은 발판의 높이가 $1\\,\\text{m}$일 때, 높은 발판의 높이는 몇 $\\text{m}$인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 3,
+          "text": "$1+\\frac{10\\sqrt{3}}{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 4,
+          "text": "$1+5\\sqrt{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M2",
+          "no": 5,
+          "text": "$21$"
+        }
+      ],
+      "created_at": "2026-11-11T14:40:15.446694+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 발판의 높이 차를 $h\\,\\text{m}$라고 하면 $\\sin 30^\\circ=\\frac{h}{10}$이다. 따라서 $h=5$이므로 높은 발판의 높이는 $1+5=6\\,\\text{m}$이다.\n①은 두 발판의 높이 차를 높은 발판의 높이로 잘못 생각한 것이다. ③은 경사로의 길이에 탄젠트를 곱한 것이고, ④는 코사인을 곱한 것이다. 높이 차와 경사로의 길이에는 사인을 써야 한다. ⑤는 높이 차를 구할 때 사인 값을 곱하지 않고 나눈 것이다.",
+      "generated_at": "2026-11-11T14:40:11.342426+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "경사로의 길이와 수평면이 이루는 각을 이용해 두 발판의 높이 차를 구한 뒤, 낮은 발판의 높이를 더해야 한다.",
+      "id": "9d65688e-31b8-4d3b-bf03-3514a57e7754",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:39:47.489136+00:00",
+          "issues": [
+            "받침대 옆면은 바닥과 한 직선으로 만나며, 경사로가 옆면에 수직인 방향으로 놓였다는 조건이 없다. 경사로의 위쪽 끝을 옆면을 따라 옮기면 조건을 만족하면서 아래쪽 끝과 표시한 점 사이의 거리가 6m인 경우도 가능하므로 ②도 정답이 될 수 있다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:40:11.342274+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.72945+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C1-성질적용",
+      "body": "직각삼각형 $ABC$에서 $\\angle B=90^\\circ$, $\\angle A=60^\\circ$이고 $\\overline{AC}=8$이다. $\\overline{BC}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 1,
+          "text": "$4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\sqrt{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M2",
+          "no": 4,
+          "text": "$\\dfrac{16\\sqrt{3}}{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 5,
+          "text": "$8\\sqrt{3}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:38:00.84579+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\sin 60^\\circ=\\dfrac{\\overline{BC}}{\\overline{AC}}=\\dfrac{\\sqrt{3}}{2}$이므로 $\\overline{BC}=8\\times\\dfrac{\\sqrt{3}}{2}=4\\sqrt{3}$이다. ④는 삼각비의 값을 곱해야 하는데 나눈 경우이다. ⑤는 빗변과 구할 변에 맞지 않는 탄젠트를 쓴 경우이다.",
+      "generated_at": "2026-11-11T14:37:56.74835+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "128c82bb-34b1-43bf-bb6a-fc75988fc4c0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:37:56.748251+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.756168+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C1-성질적용",
+      "body": "평평한 땅에 수직으로 서 있는 벽에 곧은 사다리를 기대었다. 사다리의 아래쪽 끝은 벽에서 $6\\,\\mathrm{m}$ 떨어져 있다. 사다리와 땅이 이루는 예각은 $60^\\circ$이다. 사다리의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M2",
+          "no": 1,
+          "text": "$3\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3\\sqrt{3}\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 3,
+          "text": "$6\\sqrt{3}\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$12\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\sqrt{3}\\,\\mathrm{m}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:38:19.474378+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "사다리의 길이를 $x\\,\\mathrm{m}$라고 하면 $\\cos 60^\\circ=\\dfrac{6}{x}$이다. 따라서 $\\dfrac{1}{2}=\\dfrac{6}{x}$이므로 $x=12$이다.\n③의 $6\\sqrt{3}$은 탄젠트를 이용하여 구한, 사다리가 벽에 닿는 곳의 높이이다. 사다리의 길이가 아니다. ①의 $3$은 $6$에 $\\cos 60^\\circ$를 곱한 값으로, 사다리의 길이를 잘못 구한 것이다.",
+      "generated_at": "2026-11-11T14:38:15.383041+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f3191ced-1442-46f1-8d2c-f7ca88e3ea8a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:38:15.382933+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.799773+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C1-오개념판별",
+      "body": "직각삼각형 $ABC$에서 $\\angle C=90^\\circ$이고 $\\overline{BC}=6$이다. $\\sin A=\\frac35$, $\\cos A=\\frac45$, $\\tan A=\\frac34$일 때, 빗변 $\\overline{AB}$의 길이를 구하는 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M2",
+          "no": 1,
+          "text": "$\\sin A=\\frac{\\overline{BC}}{\\overline{AB}}$이므로 $\\overline{AB}=6\\times\\sin A$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 2,
+          "text": "$\\overline{BC}$와 $\\overline{AB}$에는 $\\angle A$의 코사인을 써서 $\\overline{AB}=6\\div\\cos A$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 3,
+          "text": "$\\overline{BC}$와 $\\overline{AB}$에는 $\\angle A$의 탄젠트를 써서 $\\overline{AB}=6\\div\\tan A$야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\sin A=\\frac{\\overline{BC}}{\\overline{AB}}$이므로 $\\overline{AB}=6\\div\\sin A$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 5,
+          "text": "$\\overline{BC}$와 $\\overline{AB}$에는 $\\angle B$의 탄젠트를 써서 $\\overline{AB}=6\\div\\tan B$야."
+        }
+      ],
+      "created_at": "2026-11-11T14:43:00.692134+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\sin A$는 $\\frac{\\overline{BC}}{\\overline{AB}}$이므로 $\\overline{AB}=6\\div\\sin A=10$이다. ①은 사인을 곱해야 한다고 잘못 생각했다. ②, ③, ⑤는 주어진 변과 구할 변에 맞지 않는 삼각비를 골랐다. 특히 $\\tan B$는 $\\frac{\\overline{AC}}{\\overline{BC}}$이다.",
+      "generated_at": "2026-11-11T14:42:56.611445+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생이 같은 변의 길이를 구하는 말을 비교하여 옳은 것을 고르게 했다. 각 변의 관계뿐 아니라 삼각비로 나누어야 하는지도 판단해야 한다.",
+      "id": "dd43183d-2c90-4870-a1f4-05f4397a2eb0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:41:52.149475+00:00",
+          "issues": [
+            "각 보기를 학생의 식이라고 제시했지만, 실제로는 삼각비의 정의를 바로 적용해 옳은 식을 고르는 일반 문제와 구별되지 않아 misconception-b의 고난도 조건을 충족하지 못한다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:42:24.891148+00:00",
+          "issues": [
+            "고난이도 조건 misconception-b 미충족: 학생 이름을 붙인 식 중 정답을 고르는 문제로, 학생의 풀이를 분석할 필요 없이 사인의 정의를 바로 적용하면 풀리는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T14:42:56.611248+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.825154+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C1-오개념판별",
+      "body": "직각삼각형 $PQR$에서 $\\angle Q=90^\\circ$, $\\overline{PQ}=12$이다. 또 $\\sin P=\\frac{5}{13}$, $\\cos P=\\frac{12}{13}$, $\\tan P=\\frac{5}{12}$이다.\n\n민수는 $\\overline{QR}$의 길이를 구하며 “$\\overline{QR}=12\\div\\tan P$이다.”라고 말했다. 민수의 말에 대한 다음 의견 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 1,
+          "text": "탄젠트 대신 사인을 써야 해. $\\overline{QR}=12\\times\\sin P$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 2,
+          "text": "탄젠트 대신 코사인을 써야 해. $\\overline{QR}=12\\times\\cos P$야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M2",
+          "no": 3,
+          "text": "탄젠트를 쓴 것이 맞고, $12$를 탄젠트의 값으로 나눈 것도 맞아."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\overline{PQ}$가 빗변이므로 $\\overline{QR}=12\\times\\tan P$야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "탄젠트를 쓴 것은 맞지만, $12$에 탄젠트의 값을 곱해야 해."
+        }
+      ],
+      "created_at": "2026-11-11T14:43:34.407122+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle P$를 기준으로 $\\overline{QR}$은 마주 보는 변이고 $\\overline{PQ}$는 이웃한 변이다. 따라서 $\\tan P=\\frac{\\overline{QR}}{12}$이므로 $\\overline{QR}=12\\times\\tan P=5$이다. 정답은 ⑤이다.\n\n①과 ②는 주어진 변과 구할 변에 맞지 않는 삼각비를 썼다. ③은 탄젠트를 쓴 것은 맞지만, 곱해야 할 때 나누었다. ④의 식은 맞지만 빗변은 $\\overline{PQ}$가 아니라 $\\overline{PR}$이다.",
+      "generated_at": "2026-11-11T14:43:30.31283+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민수의 풀이를 보고 삼각비의 선택과 곱셈·나눗셈의 사용이 각각 옳은지 판단하게 했다.",
+      "id": "8546047a-c3db-4e07-801c-db65ca629761",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:43:30.312725+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.851318+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C1-오개념판별",
+      "body": "직각삼각형 $ABC$에서 $\\angle B=90^\\circ$, $\\angle A=30^\\circ$, $\\overline{AC}=12$이다. $\\overline{BC}$의 길이를 $x$라고 할 때, $x$를 구하는 방법이 옳은 학생은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 1,
+          "text": "민수: $x=12\\tan 30^\\circ$로 구할 수 있어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 2,
+          "text": "서연: $x=12\\cos 30^\\circ$로 구할 수 있어."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "지호: $x=12\\sin 30^\\circ$로 구할 수 있어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 4,
+          "text": "하은: $x=12\\tan 60^\\circ$로 구할 수 있어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M2",
+          "no": 5,
+          "text": "준서: $x=12\\div\\sin 30^\\circ$로 구할 수 있어."
+        }
+      ],
+      "created_at": "2026-11-11T14:40:48.475516+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle A$에 대하여 $\\overline{BC}$는 맞은편 변이고 $\\overline{AC}$는 빗변이다. 따라서 $\\sin 30^\\circ=\\frac{x}{12}$이므로 $x=12\\sin 30^\\circ$이다. ①, ②, ④는 주어진 변과 구할 변에 맞지 않는 삼각비를 사용했다. ⑤는 사인을 이용한 것은 맞지만, $12$에 사인 값을 곱해야 할 때 나누었다.",
+      "generated_at": "2026-11-11T14:40:44.37744+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "83dc4915-65b5-4986-b50f-ae204eaa2e58",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:40:44.377316+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.876938+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C1-오개념판별",
+      "body": "직각삼각형 $PQR$에서 $\\angle Q=90^\\circ$, $\\angle P=35^\\circ$, $\\overline{QR}=8$이다. $\\overline{PR}$의 길이를 $x$라고 하자. $\\sin 35^\\circ=0.57$, $\\tan 35^\\circ=0.70$으로 계산한다.\n\n한 학생이 $x=8\\sin 35^\\circ$라고 구했다. 이 학생의 생각에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M1",
+          "no": 1,
+          "text": "사인 대신 탄젠트를 써서 $x=\\frac{8}{\\tan 35^\\circ}$로 구해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M2",
+          "no": 2,
+          "text": "$\\sin 35^\\circ=\\frac{8}{x}$이므로 $x=8\\sin 35^\\circ$로 구한 것은 옳다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\sin 35^\\circ=\\frac{8}{x}$이므로 $x=\\frac{8}{\\sin 35^\\circ}$로 구해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "길이가 $8$인 변이 빗변이므로 $x=8\\sin 35^\\circ$로 구한 것은 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x$는 $8$보다 작아야 하므로 $x=8\\sin 35^\\circ$로 구한 것은 옳다."
+        }
+      ],
+      "created_at": "2026-11-11T14:41:22.96974+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\sin 35^\\circ=\\frac{8}{x}$이므로 $x=\\frac{8}{\\sin 35^\\circ}$이다. 따라서 $8$에 사인을 곱한 학생의 식은 옳지 않다.\n\n①은 주어진 변과 구할 변에 맞지 않는 탄젠트를 사용했다. ②는 사인과 두 변의 길이 사이의 관계를 바르게 썼지만, $x$를 구할 때 나누지 않고 곱했다.",
+      "generated_at": "2026-11-11T14:41:18.378179+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4ab6590f-b695-4d6c-bc7a-5872bf1ccf7a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:41:18.378060+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.904343+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C2-성질적용",
+      "body": "평평한 땅에 건물이 수직으로 서 있다. 건물의 맨 아래 점을 $A$, 맨 위 점을 $B$라 하자. 땅 위의 세 점 $A$, $P$, $Q$는 이 순서대로 한 직선 위에 있고, $PQ=4\\,\\text{m}$이다.\n\n한 사람이 $P$와 $Q$에서 각각 $B$를 바라보았다. 두 곳에서 사람의 눈은 땅으로부터 모두 $1.5\\,\\text{m}$ 높이에 있다. 눈에서 $B$를 향하는 방향이 수평면과 이루는 각은 $P$에서 $45^\\circ$, $Q$에서 $37^\\circ$이다.\n\n$\\tan 37^\\circ$의 값을 $0.75$로 계산할 때, 건물의 높이 $AB$를 구한 값은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$9\\,\\text{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10.5\\,\\text{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M3",
+          "no": 3,
+          "text": "$12\\,\\text{m}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$13.5\\,\\text{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$15\\,\\text{m}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:44:43.719268+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$AP=x\\,\\text{m}$라 하자. 눈높이에서 건물의 맨 위까지의 높이는 $P$에서 $x\\tan45^\\circ=x$이고, $Q$에서 $(x+4)\\tan37^\\circ=0.75(x+4)$이다.\n\n따라서 $x=0.75(x+4)$이므로 $x=12$이다. 건물의 높이는 눈높이를 더한 $12+1.5=13.5\\,\\text{m}$이다.\n\n$12\\,\\text{m}$를 고른 학생은 눈높이에서 건물의 맨 위까지의 높이를 건물 전체의 높이로 생각했을 수 있다. 건물 전체의 높이를 구하려면 눈높이 $1.5\\,\\text{m}$를 더해야 한다.",
+      "generated_at": "2026-11-11T14:44:43.100333+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 위치에서 바라본 상황을 각각 직각삼각형으로 나타내고, 같은 높이를 두 식으로 나타내어 건물의 높이를 구한다.",
+      "id": "c7f2597a-99ea-4142-8391-e9e5a5393d08",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:44:43.100211+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.936357+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C2-성질적용",
+      "body": "평평한 땅에 나무와 건물이 수직으로 서 있다. 나무의 맨 아래 점을 $A$, 맨 위 점을 $B$라 하고, 건물의 맨 아래 점을 $C$, 옥상에 있는 점을 $D$라 하자. $D$는 $C$의 바로 위에 있고, $CD=6\\,\\text{m}$이다. 나무의 맨 위는 옥상보다 높다.\n\n$D$에서 나무 쪽으로 향하는 수평 방향과 $DA$가 이루는 각은 $30^\\circ$, 같은 수평 방향과 $DB$가 이루는 각은 $45^\\circ$이다.\n\n나무의 높이 $AB$는 몇 $\\text{m}$인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M3",
+          "no": 2,
+          "text": "$6\\sqrt{3}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6+6\\sqrt{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$12\\sqrt{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12+6\\sqrt{3}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:45:08.487805+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "나무에서 $D$와 같은 높이에 있는 점을 $E$라 하자. $AE=CD=6\\,\\text{m}$이다.\n\n직각삼각형 $ADE$에서 $\\tan 30^\\circ=\\dfrac{AE}{DE}$이므로 $DE=6\\sqrt{3}\\,\\text{m}$이다. 또 직각삼각형 $BDE$에서 $\\tan 45^\\circ=\\dfrac{BE}{DE}=1$이므로 $BE=6\\sqrt{3}\\,\\text{m}$이다.\n\n따라서 나무의 높이는 $AB=AE+BE=6+6\\sqrt{3}\\,\\text{m}$이므로 정답은 ③이다. ②를 골랐다면 $BE$만 구하고 땅에서 $E$까지의 높이 $6\\,\\text{m}$를 더하지 않았을 수 있다.",
+      "generated_at": "2026-11-11T14:45:07.973581+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "옥상에서 나무의 맨 아래와 맨 위를 바라보는 상황을 두 직각삼각형으로 나타내어 삼각비를 적용해야 한다. 구한 길이에 옥상의 높이를 더해야 나무의 전체 높이를 구할 수 있다.",
+      "id": "d6fbaa00-9c4d-40ea-ac98-110d7f500b82",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:45:07.973411+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.964357+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C2-성질적용",
+      "body": "평평한 땅 위에 건물이 수직으로 서 있다. 건물 밑에서 $12\\,\\mathrm{m}$ 떨어진 곳에 서 있는 사람의 눈높이는 땅에서 $1.5\\,\\mathrm{m}$이다. 이 사람의 눈에서 건물 꼭대기를 향하는 선과 눈을 지나는 수평선이 이루는 각은 $45^\\circ$이다. 건물의 높이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$10.5\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M3",
+          "no": 2,
+          "text": "$12\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$13.5\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$14.5\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$15\\,\\mathrm{m}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:43:48.68411+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "눈높이에서 건물 꼭대기까지의 높이는 $12\\times\\tan45^\\circ=12\\,\\mathrm{m}$이다. 여기에 눈높이 $1.5\\,\\mathrm{m}$를 더하면 건물의 높이는 $13.5\\,\\mathrm{m}$이다. $12\\,\\mathrm{m}$를 골랐다면 삼각비로 구한 높이에 눈높이를 더하지 않은 것이다.",
+      "generated_at": "2026-11-11T14:43:44.605435+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c5fdf052-99d8-4b8e-984a-734ef1747768",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:43:44.605292+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:42.991741+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C2-성질적용",
+      "body": "강의 양쪽 기슭은 서로 평행한 직선이다. 한쪽 기슭 위의 점 $B$에서 강 건너편 기슭에 수직으로 선을 그었을 때 만나는 점을 $A$라 하자. 점 $B$에서 강의 반대쪽으로 $4\\,\\mathrm{m}$ 떨어진 곳에 점 $C$가 있다. 세 점 $A$, $B$, $C$는 이 순서로 한 직선 위에 있다. 점 $C$를 지나 강기슭과 평행한 직선 위에 $C$에서 $10\\,\\mathrm{m}$ 떨어진 점 $D$가 있다. $\\angle ADC=45^\\circ$일 때, 강의 폭 $\\overline{AB}$의 길이는?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수03-17-M3",
+          "no": 3,
+          "text": "$10\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$10\\sqrt{2}\\,\\mathrm{m}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$14\\,\\mathrm{m}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:44:12.529321+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\triangle ACD$는 $\\angle ACD=90^\\circ$인 직각삼각형이다. $\\tan 45^\\circ=1$이므로 $\\overline{AC}=\\overline{CD}=10\\,\\mathrm{m}$이다. 따라서 강의 폭은 $\\overline{AB}=10-4=6\\,\\mathrm{m}$이다. $10\\,\\mathrm{m}$를 고른 것은 $\\overline{AC}$에서 강 밖의 길이 $\\overline{BC}$를 빼지 않은 것이다.",
+      "generated_at": "2026-11-11T14:44:08.423722+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a87fb4e1-633d-4a97-a463-e338804cf684",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:44:08.423642+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.018733+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C2-이유설명",
+      "body": "평평한 땅 위에 건물이 수직으로 서 있다. 건물의 밑부분을 $B$, 꼭대기를 $T$라 하자. 건물 밖의 한 지점 $P$에서 수평으로 그은 선이 건물과 만나는 점을 $Q$라 하자. $P$는 땅에서 $6\\,\\mathrm{m}$ 높이에 있고, $Q$는 $B$와 $T$ 사이에 있다. $PQ=6\\,\\mathrm{m}$이고, $\\angle QPT=30^\\circ$, $\\angle QPB=45^\\circ$이다.\n\n건물의 높이 $BT$를 다음 두 방법으로 각각 구하고, 두 방법이 같은 결과를 내는 이유를 설명하시오. 각 방법에서 사용한 직각삼각형과 삼각비를 밝히고, 구한 길이들을 어떻게 계산했는지도 설명하시오.\n\n- 방법 1: $P$의 높이 $6\\,\\mathrm{m}$를 이용한다.\n- 방법 2: $\\angle QPB=45^\\circ$를 이용한다.",
+      "choices": [],
+      "created_at": "2026-11-11T14:48:01.641211+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\triangle PQT$에서 $\\tan 30^\\circ=\\dfrac{QT}{PQ}$이므로 $QT=2\\sqrt{3}\\,\\mathrm{m}$이다. $Q$는 $P$와 같은 높이에 있으므로 $BQ=6\\,\\mathrm{m}$이다. 또는 $\\triangle PQB$에서 $\\tan 45^\\circ=\\dfrac{BQ}{PQ}$를 이용해도 $BQ=6\\,\\mathrm{m}$를 얻는다. 따라서 두 방법 모두 $BT=BQ+QT=6+2\\sqrt{3}\\,\\mathrm{m}$이다. $QT$만 건물의 높이로 생각하면 $Q$ 아래에 있는 $BQ$를 빠뜨린 것이다.",
+      "generated_at": "2026-11-11T14:48:01.133057+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 방법으로 건물의 높이를 구한 뒤 같은 결과가 나오는 이유를 비교하여 설명하게 한다.",
+      "id": "0aeeeb5a-cbb8-48db-98ad-467052aee55e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\triangle PQT$에서 $\\tan 30^\\circ=\\dfrac{QT}{6}$이므로 $QT=2\\sqrt{3}\\,\\mathrm{m}$이다.\n\n방법 1: $Q$는 $P$와 같은 높이에 있으므로 $BQ=6\\,\\mathrm{m}$이다. $Q$가 $B$와 $T$ 사이에 있으므로 $BT=BQ+QT=6+2\\sqrt{3}\\,\\mathrm{m}$이다.\n\n방법 2: $\\triangle PQB$에서 $\\tan 45^\\circ=\\dfrac{BQ}{6}=1$이므로 $BQ=6\\,\\mathrm{m}$이다. 따라서 $BT=BQ+QT=6+2\\sqrt{3}\\,\\mathrm{m}$이다.\n\n두 방법은 모두 $BQ$와 $QT$를 더한다. $BQ$를 하나는 $P$의 높이로, 다른 하나는 삼각비로 구했지만 두 길이는 같으므로 결과도 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "$\\triangle PQT$에서 탄젠트를 이용하여 $QT=2\\sqrt{3}\\,\\mathrm{m}$를 구한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$Q$가 $P$와 같은 높이에 있음을 이용하여 $BQ=6\\,\\mathrm{m}$를 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$\\triangle PQB$에서 탄젠트를 이용하여 $BQ=6\\,\\mathrm{m}$를 구한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$Q$가 $B$와 $T$ 사이에 있으므로 $BQ$와 $QT$를 더해야 함을 설명하고, $BT=6+2\\sqrt{3}\\,\\mathrm{m}$를 구한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-17-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법에서 $BQ$를 구하는 방식은 다르지만 같은 길이를 얻고, 그 길이에 같은 $QT$를 더하므로 결과가 같다고 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-17-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:47:30.722828+00:00",
+          "issues": [
+            "문항은 두 풀이의 결과가 같은 까닭만 설명하도록 요구하고, 눈높이를 더하는 까닭은 묻지 않는다. 따라서 측정 의도와 달리 더하는 이유를 설명하지 않아도 문항의 요구를 충족할 수 있으며, 채점 기준 5와도 어긋난다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:48:01.132941+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.046812+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C2-이유설명",
+      "body": "강가의 평평한 땅 위에 수직인 기둥이 서 있다. 기둥의 밑점을 $Q$, 꼭대기를 $P$라 하자. $PQ=4\\,\\mathrm{m}$이다.\n\n$Q$에서 강 쪽으로 수평인 직선을 그으면 가까운 물가의 점 $C$를 지나 반대편 물가의 점 $A$에 닿는다. $QC=2\\,\\mathrm{m}$이다. $P$에서 $A$까지의 직선 거리는 $8\\,\\mathrm{m}$이고, 선분 $PA$와 수평면이 이루는 각은 $30^\\circ$이다. 이때 $P$, $Q$, $C$, $A$는 한 평면 위에 있다.\n\n두 물가 사이의 거리 $CA$를 다음 두 방법으로 각각 구하시오. 두 방법에서 어떤 직각삼각형과 삼각비를 썼는지 밝히고, 두 방법이 같은 결과를 내는 이유를 설명하시오. 또 각 방법에서 구한 길이로 $CA$를 어떻게 구했는지 그 이유도 설명하시오.\n\n- 방법 1: 기둥의 높이 $PQ$와 탄젠트를 이용한다.\n- 방법 2: 직선 거리 $PA$와 코사인을 이용한다.",
+      "choices": [],
+      "created_at": "2026-11-11T14:48:41.495498+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$PQ$는 수평인 $QA$에 수직이므로 $\\triangle PQA$는 직각삼각형이다. $PA$와 수평면이 이루는 각이 $30^\\circ$이므로 $\\angle PAQ=30^\\circ$이다.\n\n탄젠트를 이용하면 $\\tan 30^\\circ=PQ/QA=4/QA$이므로 $QA=4\\sqrt{3}\\,\\mathrm{m}$이다. 코사인을 이용하면 $\\cos 30^\\circ=QA/PA=QA/8$이므로 역시 $QA=4\\sqrt{3}\\,\\mathrm{m}$이다. 두 방법 모두 같은 직각삼각형에서 $QA$를 구하므로 결과가 같다.\n\n$Q$에서 $A$까지의 거리에는 땅 위의 거리 $QC$도 포함되어 있다. 따라서 강의 폭은 $CA=QA-QC=(4\\sqrt{3}-2)\\,\\mathrm{m}$이다. $QA$를 그대로 강의 폭으로 답하면 물가 밖의 $QC$를 빼지 않은 것이다.",
+      "generated_at": "2026-11-11T14:48:40.968942+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "탄젠트와 코사인을 이용한 두 방법을 비교하여 같은 결과가 나오는 이유를 설명하게 한다.",
+      "id": "91b22287-f034-4861-8899-e492bd45d926",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$PQ$는 수평인 $QA$에 수직이므로 $\\triangle PQA$는 직각삼각형이고, $\\angle PAQ=30^\\circ$이다.\n\n방법 1: $\\tan 30^\\circ=4/QA$이므로 $QA=4\\sqrt{3}\\,\\mathrm{m}$이다. $QA$에는 $QC$가 포함되어 있으므로 $CA=(4\\sqrt{3}-2)\\,\\mathrm{m}$이다.\n\n방법 2: $\\cos 30^\\circ=QA/8$이므로 $QA=4\\sqrt{3}\\,\\mathrm{m}$이다. 따라서 $CA=(4\\sqrt{3}-2)\\,\\mathrm{m}$이다.\n\n두 방법은 모두 $\\triangle PQA$에서 같은 길이 $QA$를 구한 뒤 $QC$를 빼므로 같은 결과가 나온다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\triangle PQA$가 직각삼각형이고 $\\angle PAQ=30^\\circ$임을 밝힌다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "탄젠트와 코사인을 각각 이용하여 두 방법 모두 $QA=4\\sqrt{3}\\,\\mathrm{m}$를 구한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 방법이 같은 직각삼각형에서 같은 길이 $QA$를 구하므로 결과가 같다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$QA$에 물가 밖의 $QC$가 포함되어 있으므로 $QC$를 빼야 한다고 설명하고, $CA=(4\\sqrt{3}-2)\\,\\mathrm{m}$를 구한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-17-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:48:40.968794+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.076181+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C2-이유설명",
+      "body": "평평한 땅에 수직으로 서 있는 나무가 있다. 나무의 밑동을 $E$, 꼭대기를 $D$라 하자. 나무에서 $12\\,\\mathrm{m}$ 떨어진 땅 위의 점 $A$에 사람이 서 있다. 이 사람의 눈은 $A$의 바로 위에 있는 점 $B$에 있고, 땅에서 $1.4\\,\\mathrm{m}$ 높이에 있다. 나무 위에서 $B$와 높이가 같은 점을 $C$라 하자. $B$에서 $C$를 향하는 수평 방향과 $B$에서 $D$를 향하는 방향이 이루는 각은 $45^\\circ$이다.\n\n나무의 높이를 구하시오. 어떤 직각삼각형과 삼각비를 이용했는지, 나무의 높이를 구할 때 왜 길이를 더하거나 빼야 하는지도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:46:05.409232+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\triangle BCD$는 $C$에서 직각이고, $\\angle CBD=45^\\circ$이다. $BC=12\\,\\mathrm{m}$이므로 탄젠트를 이용하면 $CD=12\\,\\mathrm{m}$이다. 이 길이는 눈높이에서 나무 꼭대기까지의 높이이다. 나무 전체의 높이를 구하려면 땅에서 눈높이까지의 $1.4\\,\\mathrm{m}$를 더해야 한다. $12\\,\\mathrm{m}$만 나무의 높이로 답했다면 눈높이 아래의 길이를 빠뜨린 것이다.",
+      "generated_at": "2026-11-11T14:46:04.902405+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d4bad578-9139-43b4-8ff8-3ae89739ea67",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\triangle BCD$에서 $\\angle BCD=90^\\circ$, $\\angle CBD=45^\\circ$, $BC=12\\,\\mathrm{m}$이다. $\\tan45^\\circ=\\dfrac{CD}{BC}=1$이므로 $CD=12\\,\\mathrm{m}$이다. $CD$는 눈높이에서 나무 꼭대기까지의 높이이므로, 나무 전체의 높이를 구하려면 눈높이 $1.4\\,\\mathrm{m}$를 더해야 한다. 따라서 나무의 높이는 $12+1.4=13.4\\,\\mathrm{m}$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "$\\triangle BCD$가 $C$에서 직각임을 나타내고, 탄젠트를 이용하여 $CD=12\\,\\mathrm{m}$를 구한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$CD$가 눈높이에서 나무 꼭대기까지의 높이이므로 $1.4\\,\\mathrm{m}$를 더해야 한다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-17-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "나무의 높이를 $13.4\\,\\mathrm{m}$로 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-17-M3"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:45:38.486901+00:00",
+          "issues": [
+            "채점 기준 1은 탄젠트 사용을 필수로 요구하지만, 문제는 삼각비의 종류를 제한하지 않았다. 코사인으로 AC를 구한 뒤 사인으로 BC를 구하는 올바른 풀이도 점수를 받지 못한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:46:04.902198+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.103301+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-17-C2-이유설명",
+      "body": "폭이 일정한 강의 한쪽 물가에 막대가 수면에 수직으로 서 있다. 막대의 아래 끝을 $Q$, 위 끝을 $P$라 하고, $PQ=3\\,\\mathrm{m}$이다.\n\n수면 위에 떠 있는 표지점 $B$와 맞은편 물가의 점 $C$는 $Q$, $B$, $C$의 순서로 한 직선 위에 있다. $QC$는 두 물가에 모두 수직이고, $BC=2\\,\\mathrm{m}$이다. 또 $\\angle QBP=30^\\circ$이다.\n\n강의 폭 $QC$를 구하시오. 어떤 직각삼각형과 삼각비를 이용했는지, 강의 폭을 구할 때 왜 길이를 더하거나 빼야 하는지도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:46:50.56068+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\triangle PBQ$는 $\\angle PQB=90^\\circ$인 직각삼각형이다. $\\tan 30^\\circ=\\dfrac{PQ}{BQ}=\\dfrac{3}{BQ}$이므로 $BQ=3\\sqrt{3}\\,\\mathrm{m}$이다. $B$는 $Q$와 $C$ 사이에 있으므로 강의 폭은 $BQ$에 $BC$를 더한 $(3\\sqrt{3}+2)\\,\\mathrm{m}$이다.\n\n$3\\sqrt{3}\\,\\mathrm{m}$만 답했다면, 표지점에서 맞은편 물가까지의 길이 $BC$를 빠뜨린 것이다.",
+      "generated_at": "2026-11-11T14:46:50.071154+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "55d36b30-64f6-4443-b84e-67418999d881",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\triangle PBQ$에서 $\\angle PQB=90^\\circ$이고, $\\tan 30^\\circ=\\dfrac{3}{BQ}$이다. 따라서 $BQ=3\\sqrt{3}\\,\\mathrm{m}$이다. $B$가 $Q$와 $C$ 사이에 있으므로 $QC=BQ+BC=3\\sqrt{3}+2$이다. 따라서 강의 폭은 $(3\\sqrt{3}+2)\\,\\mathrm{m}$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\triangle PBQ$가 $Q$에서 직각인 삼각형임을 밝히고, $\\tan 30^\\circ=\\dfrac{3}{BQ}$를 나타냈다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$BQ=3\\sqrt{3}\\,\\mathrm{m}$를 구했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$B$가 $Q$와 $C$ 사이에 있어 $BQ$와 $BC$를 더해야 한다고 설명하고, 강의 폭을 $(3\\sqrt{3}+2)\\,\\mathrm{m}$로 구했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-17-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:46:50.071035+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

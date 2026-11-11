@@ -1,0 +1,1176 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수01-09-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T14:35:03.282042+00:00",
+          "issues": [
+            "보기 ④: M3만 적용하면 D, C, A, B이므로 보기 ③이 나온다. 보기 ④가 나오려면 M2도 함께 적용해야 한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:35:34.819801+00:00",
+          "issues": [
+            "고난도 조건 미충족: 각 보기를 두 끝값과 직접 비교하는 일반 문제로, 결과에서 조건을 거꾸로 찾는 과정이 없다.",
+            "보기 ①, ②: M3에서 나오는 답이 아니다. 음수의 대소를 모두 거꾸로 판단해도 두 끝값 사이에 있는 보기는 ④이다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T14:36:09.531925+00:00",
+          "issues": [
+            "보기 ③: M3대로 음수의 절댓값이 클수록 크다고 비교하면 -2 < -√5 < -√7이므로 -√7이 두 번째가 아니다. M3대로 풀어도 ⑤를 고르게 된다.",
+            "보기 ④: M3대로 비교하면 -2 < -√6 < -√7이므로 -√7이 두 번째가 아니다. M3대로 풀어도 ⑤를 고르게 된다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T14:36:13.611231+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T14:59:30.382995+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수01-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T14:40:16.321507+00:00",
+          "issues": [
+            "민수의 주장이 제시되어 있지만, 그 주장이나 풀이의 옳고 그름을 판단하도록 묻지 않는다. 민수의 말을 빼도 보기의 대소 관계만 비교하여 풀 수 있으므로 misconception-b 조건을 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:41:06.601079+00:00",
+          "issues": [
+            "음수 비교와 근호끼리의 덧셈이 없어 M3과 M4 오개념을 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T14:42:24.944322+00:00",
+          "issues": [
+            "M4는 보기 ①로 판별할 수 있지만, M2와 M3을 판별할 수 있는 보기는 없다. 특히 음수 비교가 없어 M3을 판별할 수 없다.",
+            "민지의 풀이를 제시했지만 실제로 묻는 것은 두 수의 올바른 비교와 그 까닭이다. 민지의 주장이나 풀이의 옳고 그름을 판단하지 않고도 풀 수 있어 misconception-b를 충족하지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T14:42:29.043061+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T15:39:47.736929+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수01-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T15:00:41.489856+00:00",
+          "issues": [
+            "민수의 풀이를 판단하지 않고 A와 B의 대소 관계만 비교해 보기의 참·거짓을 확인해도 ③을 고를 수 있다. 따라서 의도한 오개념 판별 및 고난이도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T15:01:30.924418+00:00",
+          "issues": [
+            "보기 4의 부등식만 확인해도 두 수의 대소가 결정되어 정답을 고를 수 있다. 민수의 비교 근거를 판단하지 않고 풀 수 있어 의도한 오개념 판별과 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T15:02:02.817598+00:00",
+          "issues": [
+            "민지의 주장이나 풀이를 검토하지 않고 각 보기의 수학적 내용만 확인해도 4번을 고를 수 있어, 의도한 오개념 판별과 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T15:02:03.328109+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T15:39:47.806489+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수01-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T15:34:46.503804+00:00",
+          "issues": [
+            "제시된 근삿값으로 두 수를 직접 비교하고 ⑤의 부등식만 확인하면 민지의 풀이에서 오류가 난 부분을 판단하지 않고도 정답을 고를 수 있다. 따라서 의도한 오개념 판별과 고난이도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T15:35:20.526107+00:00",
+          "issues": [
+            "민서의 풀이를 판단하지 않고도 각 보기의 부등식과 근거의 참·거짓을 확인하면 ③을 고를 수 있다. 따라서 측정 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T15:36:10.691794+00:00",
+          "issues": [
+            "민수의 판단 과정을 분석하지 않고도 각 보기의 비교와 이유만 확인하면 ⑤를 고를 수 있다. 따라서 학생의 주장이나 풀이를 판단해야 답이 나오도록 한 측정 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T15:36:11.202562+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T15:39:47.85541+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수01-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T14:37:36.667152+00:00",
+          "issues": [
+            "M2와 M3을 판별할 수 있는 비교나 오답 보기가 없다.",
+            "M4대로 생각하면 ②뿐 아니라 정답 ③도 조건을 만족하므로, ③을 선택한 학생의 M4 오개념을 구별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:38:10.982957+00:00",
+          "issues": [
+            "M4 오개념은 판별할 수 있지만, M2와 M3 오개념을 판별할 수 있는 비교 상황이나 보기가 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T14:38:53.936866+00:00",
+          "issues": [
+            "음수의 대소 비교가 없어 오개념 M3을 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T14:38:58.036126+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T15:00:06.266328+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T15:40:43.133463+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C1-정의이해",
+      "body": "수직선에서 $2$를 나타내는 점과 $3$을 나타내는 점 사이의 모든 점을 색칠하였다. 또 $2$를 나타내는 점은 색칠하고, $3$을 나타내는 점은 색칠하지 않았다.\n\n이에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2$와 $3$을 나타내는 점은 모두 색칠되어 있지 않다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M1",
+          "no": 2,
+          "text": "색칠한 점 중에는 무리수를 나타내는 점이 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "색칠한 점 중에는 실수를 나타내지 않는 점이 있다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "색칠한 점이 나타내는 실수 $x$는 $2\\leq x<3$이고, $\\sqrt{5}$를 나타내는 점도 색칠되어 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "색칠한 점이 나타내는 실수 $x$는 $2<x\\leq 3$이고, $\\sqrt{5}$를 나타내는 점도 색칠되어 있다."
+        }
+      ],
+      "created_at": "2026-11-11T14:33:16.113218+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "색칠한 점이 나타내는 실수 $x$는 $2$를 포함하고 $3$을 포함하지 않으므로 $2\\leq x<3$이다. 또 $4<5<9$이므로 $2<\\sqrt{5}<3$이다. 따라서 $\\sqrt{5}$를 나타내는 점도 색칠되어 있다.\n\n무리수를 나타내는 점이 없다고 생각했다면 수직선 위에는 무리수를 나타내는 점도 있다는 것을 놓친 것이다. 수직선 위의 모든 점은 실수를 나타낸다.",
+      "generated_at": "2026-11-11T14:33:12.025231+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "색칠한 범위를 말로 제시하고, 양 끝점이 포함되는지 살펴 식으로 나타내어 판단하게 했다. 또한 그 범위에 있는 무리수를 나타내는 점도 확인해야 한다.",
+      "id": "92285ac4-ade4-4bfc-a418-12d8ac4de5fb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:33:12.025107+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.162172+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C1-정의이해",
+      "body": "수직선 위에서 다음과 같이 점을 찾는다.\n\nㄱ. $0$을 나타내는 점에서 거리가 $0$인 점\nㄴ. $0$을 나타내는 점에서 거리가 $\\sqrt{17}$인 점\n\nㄱ과 ㄴ에서 찾은 점에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M1",
+          "no": 1,
+          "text": "ㄱ에서 찾은 점은 한 개이고, ㄴ에서 찾은 점은 없다. 무리수를 나타내는 점은 수직선에 없기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "ㄱ에서 찾은 점은 한 개이고, ㄴ에서 찾은 점은 두 개이다. ㄴ의 두 점은 각각 $-4$와 $-3$ 사이, $3$과 $4$ 사이에 있다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄱ에서 찾은 점은 한 개이고, ㄴ에서 찾은 점은 두 개이다. ㄴ의 두 점은 각각 $-5$와 $-4$ 사이, $4$와 $5$ 사이에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄱ과 ㄴ에서 찾은 점은 각각 두 개이다. ㄴ의 두 점은 각각 $-5$와 $-4$ 사이, $4$와 $5$ 사이에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄱ과 ㄴ에서 찾은 점은 각각 한 개이다. ㄴ의 점은 $4$와 $5$ 사이에 있다."
+        }
+      ],
+      "created_at": "2026-11-11T14:34:08.792907+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$0$에서 거리가 $0$인 점은 $0$을 나타내는 점 하나뿐이다. 따라서 ㄱ에서 찾은 점은 한 개이다.\n\n$4^2<17<5^2$이므로 $4<\\sqrt{17}<5$이다. ㄴ에서 찾은 두 점은 $-\\sqrt{17}$과 $\\sqrt{17}$을 나타낸다. 따라서 각각 $-5$와 $-4$ 사이, $4$와 $5$ 사이에 있다.\n\n①은 무리수를 나타내는 점이 수직선에 없다고 잘못 생각한 것이다. 무리수도 수직선 위의 점으로 나타낼 수 있다.",
+      "generated_at": "2026-11-11T14:34:04.693428+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "ㄱ에서는 거리가 $0$일 때 점이 하나뿐임을 따져야 한다. ㄴ에서는 거리가 $0$보다 커 양쪽에 점이 있음을 함께 따져야 한다.",
+      "id": "ff5b56f0-4775-44e5-bdc6-c1b95dbdf505",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:33:36.547733+00:00",
+          "issues": [
+            "definition-a: 4.12와 √17이 가깝다는 것만으로 정의의 조건을 하나하나 따져야 하는 경계 사례가 되지 않는다. 주어진 소수 표현과 수직선의 기본 성질을 바로 적용하면 풀린다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:34:04.693288+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.188138+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C1-정의이해",
+      "body": "수직선과 실수에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M1",
+          "no": 1,
+          "text": "수직선에는 유리수만 나타낼 수 있으므로 $\\sqrt{7}$을 나타내는 점은 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "수직선의 모든 점은 실수를 나타내며, $\\sqrt{7}$을 나타내는 점은 $1$과 $2$ 사이에 있다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "수직선의 모든 점은 실수를 나타내며, $\\sqrt{7}$을 나타내는 점은 $2$와 $3$ 사이에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "수직선의 모든 점은 실수를 나타내며, $\\sqrt{7}$을 나타내는 점은 $3$과 $4$ 사이에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "하나의 실수를 나타내는 점은 수직선 위에 두 개씩 있다."
+        }
+      ],
+      "created_at": "2026-11-11T14:32:35.507327+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$2$를 제곱하면 $4$, $3$을 제곱하면 $9$입니다. 따라서 $\\sqrt{7}$은 $2$와 $3$ 사이에 있습니다. 수직선의 모든 점은 실수를 나타냅니다. 수직선에 유리수만 나타낼 수 있다고 생각하면 무리수인 $\\sqrt{7}$을 나타내는 점이 없다고 잘못 판단할 수 있습니다.",
+      "generated_at": "2026-11-11T14:32:31.35722+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1517f0b2-017a-4b28-afe0-0e4f5fc7b3a6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:32:31.357052+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.216668+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C1-정의이해",
+      "body": "민지는 $\\sqrt{7}$을 수직선에 나타내려고 한다. $\\sqrt{7}$을 나타내는 점에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M1",
+          "no": 1,
+          "text": "$\\sqrt{7}$은 무리수이므로 수직선에 나타낼 수 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-3$과 $-2$를 나타내는 두 점 사이에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$1$과 $2$를 나타내는 두 점 사이에 있다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2$와 $3$을 나타내는 두 점 사이에 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$3$과 $4$를 나타내는 두 점 사이에 있다."
+        }
+      ],
+      "created_at": "2026-11-11T14:32:52.069957+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$2^2=4$, $3^2=9$이고 $4<7<9$이므로 $2<\\sqrt{7}<3$이다. 따라서 정답은 ④이다. ①을 골랐다면 무리수는 수직선 위의 점으로 나타낼 수 없다고 잘못 생각한 것이다. 무리수도 수직선 위의 한 점으로 나타낼 수 있다.",
+      "generated_at": "2026-11-11T14:32:47.969997+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1680ee82-6aca-45e1-ad95-7f0e5b9935d7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:32:47.969795+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.245669+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-성질적용",
+      "body": "정수 $n$은 $4$, $5$, $6$, $7$, $8$ 중 하나이다. $3+\\sqrt{n}$이 $4+\\sqrt{3}$보다 작을 때, $n$의 값으로 가장 큰 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M2",
+          "no": 5,
+          "text": "그런 $n$은 없다."
+        }
+      ],
+      "created_at": "2026-11-11T14:59:30.78736+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$3+\\sqrt{n}<4+\\sqrt{3}$은 $\\sqrt{n}<1+\\sqrt{3}$과 같다. 두 수가 모두 양수이므로 제곱하여 비교할 수 있다.\n\n$(1+\\sqrt{3})^2=4+2\\sqrt{3}$이다. $9<12<16$이므로 $3<2\\sqrt{3}<4$이다. 따라서 $7<4+2\\sqrt{3}<8$이다. 즉, $\\sqrt{7}<1+\\sqrt{3}<\\sqrt{8}$이므로 가장 큰 $n$은 $7$이다.\n\n⑤는 근호 안의 수만 비교하여 $n>3$이면 $3+\\sqrt{n}$이 항상 더 크다고 생각한 경우이다. 근호 밖의 수도 함께 비교해야 한다.",
+      "generated_at": "2026-11-11T14:59:30.22239+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 수의 대소 관계를 주고 이를 만족하는 가장 큰 $n$을 찾게 했다. 여러 값을 단순히 거꾸로 계산하는 것이 아니라 근호가 있는 두 수를 비교해야 한다.",
+      "id": "7f963b29-e951-4590-8337-73d0dc21b784",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:59:01.506806+00:00",
+          "issues": [
+            "application-a 미충족: 두 수 사이에 있는 보기를 찾는 일반적인 대소 비교 문제로, 주어진 결과에서 조건을 거꾸로 찾는 구조가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:59:30.222203+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.274192+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-성질적용",
+      "body": "세 곳 $A$, $B$, $C$의 기온은 다음과 같다.\n\n- $A$: $0\\,^{\\circ}\\mathrm{C}$보다 $\\sqrt{5}\\,^{\\circ}\\mathrm{C}$ 낮다.\n- $B$: $0\\,^{\\circ}\\mathrm{C}$보다 $2\\,^{\\circ}\\mathrm{C}$ 낮다.\n- $C$: $0\\,^{\\circ}\\mathrm{C}$보다 $(3-\\sqrt{2})\\,^{\\circ}\\mathrm{C}$ 낮다.\n\n기온이 낮은 곳부터 높은 곳까지 차례로 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$A$, $B$, $C$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$A$, $C$, $B$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$B$, $A$, $C$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$B$, $C$, $A$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M3",
+          "no": 5,
+          "text": "$C$, $B$, $A$"
+        }
+      ],
+      "created_at": "2026-11-11T14:36:40.211147+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "각 기온은 $A$가 $-\\sqrt{5}\\,^{\\circ}\\mathrm{C}$, $B$가 $-2\\,^{\\circ}\\mathrm{C}$, $C$가 $(\\sqrt{2}-3)\\,^{\\circ}\\mathrm{C}$이다.\n\n$\\sqrt{5}>2$이므로 $-\\sqrt{5}<-2$이다. 또 $\\sqrt{2}>1$이므로 $\\sqrt{2}-3>-2$이다. 따라서 기온이 낮은 곳부터 $A$, $B$, $C$이다.\n\n⑤는 음수에서 절댓값이 클수록 더 크다고 잘못 생각하면 고를 수 있다.",
+      "generated_at": "2026-11-11T14:36:36.084506+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "문장으로 주어진 세 기온을 각각 수로 나타낸 뒤, 근호가 있는 음수의 대소를 비교해야 한다.",
+      "id": "691bd5c9-8f6b-4d7a-886b-8eb922f4c0c9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:36:36.084392+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.300775+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-성질적용",
+      "body": "세 수 $-\\sqrt{7}$, $-3$, $-\\sqrt{10}$을 작은 수부터 큰 수의 순서로 나열한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-3<-\\sqrt{7}<-\\sqrt{10}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M3",
+          "no": 2,
+          "text": "$-\\sqrt{7}<-3<-\\sqrt{10}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-\\sqrt{10}<-3<-\\sqrt{7}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$-\\sqrt{10}<-\\sqrt{7}<-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$-3<-\\sqrt{10}<-\\sqrt{7}$"
+        }
+      ],
+      "created_at": "2026-11-11T14:34:20.383463+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$7<9<10$이므로 $\\sqrt{7}<3<\\sqrt{10}$이다. 각 수에 음의 부호를 붙이면 크기의 순서가 반대가 되므로 $-\\sqrt{10}<-3<-\\sqrt{7}$이다. ②처럼 음의 부호를 붙이기 전의 수가 클수록 음수도 크다고 생각하지 않도록 주의한다.",
+      "generated_at": "2026-11-11T14:34:16.297075+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f5e1d5d2-1f03-4e14-a005-fcda0f116860",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:34:16.296977+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.329034+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-성질적용",
+      "body": "$\\sqrt{5}<n<\\sqrt{2}+\\sqrt{3}$을 만족하는 정수 $n$은? 단, $\\sqrt{2}=1.414\\ldots$, $\\sqrt{3}=1.732\\ldots$, $\\sqrt{5}=2.236\\ldots$이다.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M4",
+          "no": 5,
+          "text": "그런 정수는 없다."
+        }
+      ],
+      "created_at": "2026-11-11T14:34:44.68413+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\sqrt{5}=2.236\\ldots$이고 $\\sqrt{2}+\\sqrt{3}=3.146\\ldots$이므로 그 사이에 있는 정수는 $3$이다. $\\sqrt{2}+\\sqrt{3}$을 $\\sqrt{5}$로 잘못 생각하면 두 수가 같아서 그 사이에 정수가 없다고 생각할 수 있다.",
+      "generated_at": "2026-11-11T14:34:40.59577+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8a1b45e7-aff0-487f-9bdb-470424c46e4d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:34:40.595588+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.367693+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-오개념판별",
+      "body": "다섯 학생의 주장 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M2",
+          "no": 1,
+          "text": "$5>3$이므로 $2+\\sqrt{5}>3+\\sqrt{3}$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M3",
+          "no": 2,
+          "text": "$\\sqrt{7}>2$이므로 $-\\sqrt{7}>-2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M4",
+          "no": 3,
+          "text": "$\\sqrt{2}+\\sqrt{7}=\\sqrt{9}$이므로 $\\sqrt{2}+\\sqrt{7}=3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$11>9$이므로 $\\sqrt{11}>4$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6<7$이므로 $-\\sqrt{6}>-\\sqrt{7}$이다."
+        }
+      ],
+      "created_at": "2026-11-11T14:39:23.295102+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "① $\\sqrt{5}<2.5$, $\\sqrt{3}>1.5$이므로 $2+\\sqrt{5}<4.5<3+\\sqrt{3}$입니다. 근호 안의 수만 비교하면 안 됩니다.\n② $\\sqrt{7}>2$이므로 $-\\sqrt{7}<-2$입니다. 음수끼리는 절댓값이 큰 수가 더 작습니다.\n③ $\\sqrt{2}>1$, $\\sqrt{7}>2$이므로 $\\sqrt{2}+\\sqrt{7}>3$입니다. 근호 안의 두 수를 더하여 하나의 근호로 나타낼 수는 없습니다.\n④ $9<11<16$이므로 $3<\\sqrt{11}<4$입니다. $\\sqrt{11}>3$이라고 해서 $\\sqrt{11}>4$인 것은 아닙니다.\n⑤ $\\sqrt{6}<\\sqrt{7}$이므로 $-\\sqrt{6}>-\\sqrt{7}$입니다.",
+      "generated_at": "2026-11-11T14:39:19.182615+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생이 두 수의 크기를 비교한 주장과 그 까닭을 보고, 옳은 주장을 고르게 했다.",
+      "id": "7254e8e3-f6f7-44b1-9b63-8d8755d267b5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:39:19.182469+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.396113+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-오개념판별",
+      "body": "민지는 두 수 $-\\sqrt{5}$와 $-2$를 비교하며 다음과 같이 말했다.\n\n“$\\sqrt{5}>2$이므로 $-\\sqrt{5}$의 절댓값이 $-2$의 절댓값보다 커. 따라서 $-\\sqrt{5}>-2$야.”\n\n민지의 말에 대한 판단과 그 까닭으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M3",
+          "no": 1,
+          "text": "옳다. 음수도 절댓값이 큰 수가 더 크기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "틀리다. 음수끼리는 절댓값이 큰 수가 더 작기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "틀리다. 음수는 모두 양수보다 작기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳다. $-\\sqrt{5}$가 $-2$보다 $0$에 가깝기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. $-\\sqrt{5}$는 정수가 아니고 $-2$는 정수이기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T15:39:47.699364+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$5>4$이므로 $\\sqrt{5}>2$이다. 하지만 음수끼리는 절댓값이 큰 수가 더 작다. 따라서 $-\\sqrt{5}<-2$이고, 민지의 말은 틀리다.\n\n①은 음수도 절댓값이 큰 수가 더 크다고 잘못 생각한 것이다. ④는 $-\\sqrt{5}$가 $-2$보다 $0$에 가깝다고 잘못 생각한 것이다. ③과 ⑤의 까닭만으로는 두 수 중 어느 수가 더 작은지 알 수 없다.",
+      "generated_at": "2026-11-11T15:39:47.476844+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지의 비교와 그 까닭을 보고 말의 옳고 그름을 판단하게 했다. 보기에는 판단과 까닭을 함께 제시했다.",
+      "id": "0231ab2f-2aee-4024-82e8-20a8108e0c6a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T15:39:21.670796+00:00",
+          "issues": [
+            "보기 ③: M2는 근호 안의 수끼리 비교하는 오개념인데, 3은 근호 안의 수가 아니다. -3을 -√9로 나타내어 근호 안의 수끼리 비교하면 7<9이므로 보기의 결론과 반대가 된다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T15:39:47.476601+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.423531+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-오개념판별",
+      "body": "다음은 두 수의 크기를 비교한 학생들의 말이다. 옳은 말은 어느 것인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M2",
+          "no": 1,
+          "text": "$3>2$이므로 $1+\\sqrt{3}>2+\\sqrt{2}$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M3",
+          "no": 2,
+          "text": "$\\sqrt{5}>2$이므로 $-\\sqrt{5}>-2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M4",
+          "no": 3,
+          "text": "$4+5=9$이므로 $\\sqrt{4}+\\sqrt{5}=\\sqrt{9}$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$7<9$이므로 $\\sqrt{7}<3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\sqrt{10}<3$이다."
+        }
+      ],
+      "created_at": "2026-11-11T14:37:00.150305+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "① $1+\\sqrt{3}<3$이고 $2+\\sqrt{2}>3$이다. 근호 안의 수만 비교해서는 안 된다.\n② $\\sqrt{5}>2$이므로 $-\\sqrt{5}<-2$이다. 음수끼리는 절댓값이 큰 수가 더 작다.\n③ $\\sqrt{4}+\\sqrt{5}=2+\\sqrt{5}>3$이고 $\\sqrt{9}=3$이다. 두 제곱근의 합을 근호 안의 수를 더한 제곱근으로 바꿀 수 없다.\n④ $7<9$이므로 $\\sqrt{7}<\\sqrt{9}=3$이다.\n⑤ $10>9$이므로 $\\sqrt{10}>\\sqrt{9}=3$이다.",
+      "generated_at": "2026-11-11T14:36:56.024526+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0d059849-dd48-4699-93b0-4cd898198f05",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:36:56.024440+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.451869+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-오개념판별",
+      "body": "두 수 $-\\sqrt{7}$과 $-3$의 크기 비교와 그 까닭이 모두 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-\\sqrt{7}>-3$. $\\sqrt{7}<3$이고 음수는 $0$에서 가까울수록 크기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-09-M3",
+          "no": 2,
+          "text": "$-\\sqrt{7}<-3$. $\\sqrt{7}<3$이고 음수는 $0$에서 멀수록 크기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-\\sqrt{7}<-3$. $\\sqrt{7}>3$이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$-\\sqrt{7}=-3$. $\\sqrt{7}$을 반올림하여 일의 자리까지 나타내면 $3$이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$-\\sqrt{7}=-3$. 두 수를 각각 제곱하면 같기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T15:00:06.622518+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$7<9$이므로 $\\sqrt{7}<3$이다. 음수는 $0$에서 가까울수록 크므로 $-\\sqrt{7}>-3$이다. ②처럼 음수가 $0$에서 멀수록 크다고 생각하면 크기를 반대로 판단하게 된다.",
+      "generated_at": "2026-11-11T15:00:05.864686+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "22bbd98b-bba7-4d73-90f5-89b4e66ca1cd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T15:00:05.864557+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.491546+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-이유설명",
+      "body": "두 수 $2+\\sqrt{7}$과 $3+\\sqrt{3}$의 크기를 비교하려고 한다. 다음을 이용하여 물음에 답하시오.\n\n$2.645<\\sqrt{7}<2.646$, $1.732<\\sqrt{3}<1.733$\n\n1. 주어진 범위를 이용하여 두 수 각각의 크기를 비교하시오.\n2. 두 수에서 같은 수 $2+\\sqrt{3}$을 빼서 나온 수의 크기를 비교하시오.\n3. 두 방법으로 비교한 결과가 같은 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:43:26.564467+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "주어진 범위를 이용하면 $2+\\sqrt{7}<4.646$이고 $3+\\sqrt{3}>4.732$이다. 따라서 $2+\\sqrt{7}<3+\\sqrt{3}$이다.\n\n두 수에서 $2+\\sqrt{3}$을 빼면 각각 $\\sqrt{7}-\\sqrt{3}$과 $1$이 된다. 주어진 범위에서 $\\sqrt{7}-\\sqrt{3}<2.646-1.732=0.914<1$이다. 두 수에서 같은 수를 빼도 두 수의 크기 관계는 바뀌지 않으므로 두 방법의 결과는 같다.\n\n근호 안의 수만 비교하면 근호 밖의 수가 두 수의 크기에 미치는 영향을 놓친다.",
+      "generated_at": "2026-11-11T14:43:22.486639+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "물음 3에서 두 방법으로 비교한 결과가 같은 이유를 설명하게 한다. 두 수에서 같은 수를 빼도 크기 관계가 바뀌지 않음을 이용해야 한다.",
+      "id": "d8d6e573-70bb-41e5-aa40-88afcc13bcd5",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$2+\\sqrt{7}<4.646<4.732<3+\\sqrt{3}$이므로 $2+\\sqrt{7}<3+\\sqrt{3}$이다.\n\n두 수에서 $2+\\sqrt{3}$을 빼면 각각 $\\sqrt{7}-\\sqrt{3}$과 $1$이다. 이때 $\\sqrt{7}-\\sqrt{3}<2.646-1.732=0.914<1$이다. 따라서 이 방법으로도 $2+\\sqrt{7}<3+\\sqrt{3}$임을 알 수 있다.\n\n두 수에서 같은 수를 빼도 크기 관계는 바뀌지 않으므로 두 방법의 결과가 같다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 수 각각의 범위를 이용하여 $2+\\sqrt{7}<3+\\sqrt{3}$임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-09-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 수에서 $2+\\sqrt{3}$을 뺀 결과가 각각 $\\sqrt{7}-\\sqrt{3}$과 $1$임을 쓴다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "주어진 범위를 이용하여 $\\sqrt{7}-\\sqrt{3}<1$임을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 수에서 같은 수를 빼도 크기 관계가 바뀌지 않으므로 두 방법의 결과가 같다고 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:43:22.486493+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.567621+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-이유설명",
+      "body": "민지는 “두 실수를 각각 제곱했을 때 더 큰 수가 나온 쪽이 원래 수도 더 크다.”라고 말했습니다.\n\n두 수 $-\\sqrt{5}$와 $-2$를 이용하여 민지의 말이 옳지 않음을 보이시오. 두 수의 크기를 비교하고, 그렇게 판단한 이유를 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:45:19.935614+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$5>4$이므로 $\\sqrt{5}>2$입니다. 두 수 앞에 마이너스를 붙이면 크고 작음이 바뀌므로 $-\\sqrt{5}<-2$입니다. 하지만 두 수를 각각 제곱하면 $5>4$입니다. 따라서 민지의 말은 옳지 않습니다.\n\n$-\\sqrt{5}$가 $-2$보다 $0$에서 더 멀리 있다고 해서 더 큰 것은 아닙니다. 두 수 모두 음수일 때는 $0$에서 더 멀리 있는 수가 더 작습니다.",
+      "generated_at": "2026-11-11T14:45:19.420725+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "두 실수의 크기를 비교하고 각각 제곱한 수의 크기와 비교하여 민지의 말이 옳지 않음을 보이게 했다.",
+      "id": "2ed12684-d24a-4b51-8794-f689a52e299f",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$5>4$이므로 $\\sqrt{5}>2$이다. 따라서 $-\\sqrt{5}<-2$이다. 그런데 $(-\\sqrt{5})^2=5$, $(-2)^2=4$이고 $5>4$이다. 제곱한 수의 크고 작음이 원래 두 수의 크고 작음과 다르므로 민지의 말은 옳지 않다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 2,
+      "rubric": [
+        {
+          "description": "$5>4$를 이용하여 $\\sqrt{5}>2$임을 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 수 앞에 마이너스를 붙이면 크고 작음이 바뀜을 이용하여 $-\\sqrt{5}<-2$임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-09-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 수를 제곱하면 각각 $5$, $4$이고 $5>4$임을 이용하여 민지의 말이 옳지 않음을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-09-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:44:01.514786+00:00",
+          "issues": [
+            "문제에서 민지의 말이 옳지 않다고 밝히고, 해당하는 두 수도 유일하게 제시해 비교 결과를 사실상 미리 드러낸다.",
+            "채점 기준 3은 마이너스를 붙이면 순서가 바뀌는 이유를 요구하지만, 모범 답안은 순서가 바뀐다는 성질만 제시한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T14:44:34.064830+00:00",
+          "issues": [
+            "채점 기준 3은 이유 설명을 √7>√3을 이용하는 방식으로 한정한다. 예를 들어 -√7<-2<-√3으로 올바르게 설명한 답은 이 기준을 충족하지 못한다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T14:45:19.420584+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.592191+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-이유설명",
+      "body": "두 수 $-\\sqrt{5}$와 $-2$의 크기를 부등호로 나타내고, 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:42:45.224315+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$2^2=4<5$이므로 $2<\\sqrt{5}$입니다. 두 수에 각각 음의 부호를 붙이면 크기 관계가 바뀌므로 $-\\sqrt{5}<-2$입니다. 음수는 수직선에서 $0$으로부터 멀수록 작습니다. 따라서 $-\\sqrt{5}$가 $-2$보다 크다고 하면 잘못입니다.",
+      "generated_at": "2026-11-11T14:42:41.116166+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "76905c7d-8208-4d87-930d-ac416365b7b9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$2^2=4<5$이므로 $2<\\sqrt{5}$이다. 두 수에 각각 음의 부호를 붙이면 크기 관계가 바뀌므로 $-\\sqrt{5}<-2$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$2<\\sqrt{5}$임을 제곱하여 비교하거나 다른 올바른 방법으로 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-09-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "음의 부호를 붙였을 때의 크기 관계를 설명하고, $-\\sqrt{5}<-2$로 나타낸다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-09-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:42:41.116082+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T15:40:43.62069+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C2-이유설명",
+      "body": "두 수 $2+\\sqrt{3}$과 $3+\\sqrt{2}$의 크기를 부등호로 나타내고, 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T14:43:00.265756+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$3<2^2$이므로 $\\sqrt{3}<2$이다. 따라서 $2+\\sqrt{3}<4$이다. 또 $1^2<2$이므로 $1<\\sqrt{2}$이고, $4<3+\\sqrt{2}$이다. 그러므로 $2+\\sqrt{3}<3+\\sqrt{2}$이다.\n근호 안의 수끼리만 비교하여 $2+\\sqrt{3}$이 더 크다고 판단하면, 근호 밖에 더해진 수의 크기를 살피지 않은 것이다.",
+      "generated_at": "2026-11-11T14:42:56.154112+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7bd45a01-a96c-4d48-a3b2-b49b356abe0a",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$3<2^2$이므로 $\\sqrt{3}<2$이고, $2+\\sqrt{3}<4$이다. 또 $1^2<2$이므로 $1<\\sqrt{2}$이고, $4<3+\\sqrt{2}$이다. 따라서 $2+\\sqrt{3}<3+\\sqrt{2}$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$2+\\sqrt{3}<3+\\sqrt{2}$로 나타냈다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-09-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 수의 크기를 비교한 이유를 올바르게 설명했다. 예를 들어 한 수는 $4$보다 작고 다른 수는 $4$보다 큼을 보였다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-09-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T14:42:56.153987+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}
