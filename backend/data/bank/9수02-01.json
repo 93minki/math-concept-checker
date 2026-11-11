@@ -1,0 +1,1940 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수02-01-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T03:32:19.573646+00:00",
+          "issues": [
+            "다의 말은 두 상자의 배 관계를 거꾸로 해석한 오류이지만, 말의 순서대로 식을 세우는 오류(M1)를 보여 주지는 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:33:47.403440+00:00",
+          "issues": [
+            "ㄷ은 두 수의 배 관계를 거꾸로 해석한 오류로, 말의 순서대로 식을 세우는 오류(M1)를 드러내지 않는다. 따라서 M1과 M2를 가려내려는 측정 의도에 맞지 않으며, ㄷ을 포함한 오답의 M1 분류도 부적절하다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T03:34:08.441017+00:00",
+          "issues": [
+            "나의 a/3은 길이 관계를 거꾸로 해석한 오류이지, 말을 순서대로 식으로 옮긴 오류(M1)는 아니다. 따라서 M1을 판별하지 못한다.",
+            "M1로 표시된 ②의 나와 라는 서로 양립하지 않는다. 나에 따르면 a=4일 때 파란 끈의 길이는 4/3 cm이므로 12 cm라는 라도 옳을 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T03:34:09.238586+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v6",
+      "resolved_at": "2026-11-11T04:06:20.593257+00:00",
+      "variant": 1
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T04:51:26.631775+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-성질적용",
+      "body": "빨간 상자가 $a$개 있다. 파란 상자의 수는 빨간 상자의 수의 $3$배이다. 처음에 파란 상자마다 구슬이 $b$개씩 들어 있었다. 각 파란 상자에서 구슬을 $2$개씩 꺼냈다. 단, $a$는 자연수이고 $b$는 $2$ 이상의 자연수이다.\n\n파란 상자에 남은 구슬의 전체 개수를 항상 바르게 나타낸 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "$\\dfrac{a}{3}(b-2)$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3a(b-2)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3ab-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3(a-2)b$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$a(b-2)$"
+        }
+      ],
+      "created_at": "2026-11-11T03:28:11.744728+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "파란 상자의 수는 $3a$개이다. 각 파란 상자에 남은 구슬은 $(b-2)$개이므로 전체 개수는 $3a(b-2)$이다.\n\n①은 파란 상자의 수를 빨간 상자의 수의 $3$배가 아니라 $3$분의 $1$로 잘못 나타낸 식이다.",
+      "generated_at": "2026-11-11T03:28:11.634384+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "파란 상자의 수와 각 상자에 남은 구슬의 수를 각각 식으로 나타낸 뒤, 이를 이용해 전체 구슬의 수를 구해야 한다.",
+      "id": "35df8089-a504-4944-8619-1201182ef833",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:28:11.634056+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.677667+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-성질적용",
+      "body": "지수가 걸은 거리는 민지가 걸은 거리의 $2$배보다 $3$km 짧다. 지수가 걸은 거리는 $a$km이고, $a$는 양수이다.\n\n민지가 걸은 거리를 km 단위로 나타낸 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "$2a-3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2(a+3)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\frac{a-3}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\frac{a}{2}+3$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\frac{a+3}{2}$"
+        }
+      ],
+      "created_at": "2026-11-11T03:28:32.539735+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "지수가 걸은 거리에 $3$km를 더하면 민지가 걸은 거리의 $2$배가 된다. 따라서 민지가 걸은 거리는 $\\frac{a+3}{2}$km이다.\n\n①은 민지가 걸은 거리가 지수가 걸은 거리의 $2$배보다 $3$km 짧다고 거꾸로 생각한 것이다.",
+      "generated_at": "2026-11-11T03:28:32.441518+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "민지가 걸은 거리로 지수가 걸은 거리를 설명했지만, 지수가 걸은 거리 $a$를 이용하여 민지가 걸은 거리를 구하게 했다.",
+      "id": "73b316f7-48e4-4d01-9837-f276ed920d5a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:28:32.441329+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.706849+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-성질적용",
+      "body": "어른 입장권 한 장의 가격은 어린이 입장권 한 장의 가격의 $4$배이다. 어린이 입장권 한 장의 가격은 $a$원이다.\n\n어른 입장권 $2$장과 어린이 입장권 $3$장을 사고, 전체 금액에서 $1000$원을 한 번 할인받는다. 할인받은 뒤 낼 금액을 $a$를 사용한 식으로 나타내고, $a$가 $2000$일 때 낼 금액도 구하려고 한다.\n\n식과 금액을 모두 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "$2\\left(\\dfrac{a}{4}\\right)+3a-1000$, $6000$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4a+3a-1000$, $13000$원"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2(4a)+3a-1000$, $21000$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2(4a)+3a$, $22000$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2(4a+3a)-1000$, $27000$원"
+        }
+      ],
+      "created_at": "2026-11-11T03:29:30.489612+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "어른 입장권 한 장의 가격은 $4a$원이다. 따라서 할인받은 뒤 낼 금액은 $2(4a)+3a-1000$원이다. 여기에 $a=2000$을 대입하면 $21000$원이다.\n\n①은 어른 입장권의 가격을 어린이 입장권 가격의 $4$배가 아니라 $4$로 나눈 값으로 잘못 나타낸 것이다.",
+      "generated_at": "2026-11-11T03:29:30.305015+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "입장권 가격의 관계와 할인 상황을 식으로 나타낸 뒤, 주어진 수를 대입하여 낼 금액을 구하게 한다.",
+      "id": "e224fbd8-98c5-407c-9caf-f180f05242b8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:29:10.335517+00:00",
+          "issues": [
+            "각 보기의 대입값이 달라 문자식을 세우지 않고도 주어진 수로 넓이 24를 계산해 정답을 고를 수 있다. 따라서 상황을 문자식으로 나타내는 능력을 필수적으로 측정하지 못하며, 식으로 바꾼 뒤 적용하는 고난도 조건도 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:29:30.304701+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.742766+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-성질적용",
+      "body": "빨간 리본의 길이는 파란 리본의 길이의 4배이다. 빨간 리본의 길이가 $x$ cm일 때, 파란 리본의 길이를 cm를 단위로 하여 나타낸 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x-4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\frac{x}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x+4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 4,
+          "text": "$4x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\frac{4}{x}$"
+        }
+      ],
+      "created_at": "2026-11-11T03:27:26.649585+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "빨간 리본은 파란 리본의 4배이므로, 파란 리본의 길이는 빨간 리본의 길이를 4로 나눈 $\\frac{x}{4}$ cm이다. $4x$는 빨간 리본의 길이를 다시 4배 한 것이므로 알맞지 않다.",
+      "generated_at": "2026-11-11T03:27:26.543278+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2b125717-2c98-4a78-967d-5e30aff799a7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:27:26.542972+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.779892+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-성질적용",
+      "body": "공책 한 권의 가격은 $a$원입니다. 같은 공책 3권의 가격은 모두 몇 원인지 식으로 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$a+3$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3a$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\dfrac{a}{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\dfrac{3}{a}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 5,
+          "text": "$3$"
+        }
+      ],
+      "created_at": "2026-11-11T03:27:40.851579+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "공책 한 권의 가격이 $a$원이므로 3권의 가격은 $3a$원입니다. $3$은 공책의 권수만 나타내며, $a$가 공책 한 권의 가격이라는 점을 놓친 것입니다.",
+      "generated_at": "2026-11-11T03:27:40.766652+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2f4c246c-f7eb-4cf6-879e-4bccf51e2092",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:27:40.766117+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-01-C1-성질적용",
+      "body": "수조에 물이 $x$ L 들어 있습니다. 물 $5$ L를 더 넣은 뒤, 수조의 물을 모두 두 통에 똑같이 나누어 담았습니다. 한 통에 담긴 물의 양을 L를 단위로 하여 나타낸 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "$\\dfrac{x}{2}+5$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\dfrac{x+5}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2(x+5)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\dfrac{x-5}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x+5$"
+        }
+      ],
+      "created_at": "2026-11-11T03:27:54.755285+00:00",
+      "difficulty": "normal",
+      "disabled_at": "2026-11-11T04:51:25.447706+00:00",
+      "explanation": "물을 더 넣은 뒤의 양은 $(x+5)$ L입니다. 이것을 두 통에 똑같이 나누므로 한 통에 담긴 물의 양은 $\\dfrac{x+5}{2}$ L입니다. ①은 물을 먼저 나누고 나서 $5$ L를 더한 것으로, 물을 더 넣고 나누는 순서를 잘못 생각한 것입니다.",
+      "generated_at": "2026-11-11T03:27:54.674411+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "844b467f-69aa-406d-9944-ecfbf54056b5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T03:27:54.674252+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:53:43.62182+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-성질적용",
+      "body": "첫째 날 박물관에 온 사람은 $a$명입니다. 둘째 날에는 첫째 날보다 7명 더 많은 사람이 왔습니다. 둘째 날 박물관에 온 사람의 수를 식으로 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$7-a$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$a+7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$7a$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 4,
+          "text": "$a-7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\dfrac{a}{7}$"
+        }
+      ],
+      "created_at": "2026-11-11T04:51:58.43368+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "둘째 날에는 첫째 날보다 7명 더 많은 사람이 왔으므로 $a$에 7을 더한 $a+7$입니다. 4번은 더 많은 것을 더 적은 것으로 잘못 생각하여 7을 뺀 식입니다.",
+      "generated_at": "2026-11-11T04:51:58.326733+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "937a8ba3-6c85-45be-9ce7-d6b0a5784ffa",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:51:58.326496+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.804917+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-오개념판별",
+      "body": "색연필을 한 상자에 $4$자루씩 빠짐없이 담았다. 상자의 수를 $x$라고 할 때, 한 학생이 다음과 같이 말했다.\n\nㄱ. 색연필의 수는 $\\frac{x}{4}$이다.\nㄴ. $x$는 수가 아니라 상자라는 물건을 나타낸다.\n\n이 학생의 말을 바르게 판단한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "ㄱ과 ㄴ은 모두 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 2,
+          "text": "ㄱ은 옳고 ㄴ은 옳지 않다. $x$는 상자의 수를 나타낸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 3,
+          "text": "ㄱ은 옳지 않고 ㄴ은 옳다. $x$는 상자라는 물건을 나타낸다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄱ과 ㄴ은 모두 옳지 않다. $x$는 상자의 수이고 $4x$는 색연필의 수이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 5,
+          "text": "ㄱ과 ㄴ은 모두 옳지 않다. $x$는 색연필의 수이고 $4x$는 상자의 수이다."
+        }
+      ],
+      "created_at": "2026-11-11T04:06:20.650178+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x$는 상자의 수를 나타낸다. 상자마다 색연필이 $4$자루씩 있으므로 색연필의 수는 $4x$이다. 따라서 ㄱ과 ㄴ은 모두 옳지 않다.\n\nㄱ을 옳다고 생각했다면 상자의 수와 색연필의 수 사이의 관계를 거꾸로 생각한 것이다. ㄴ을 옳다고 생각했다면 $x$가 상자의 수를 나타낸다는 것을 놓치고 상자라는 물건을 나타낸다고 생각한 것이다.",
+      "generated_at": "2026-11-11T04:06:20.47552+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "한 학생의 두 가지 말을 보고 각각 옳은지 판단하게 했다. 두 말은 관계를 거꾸로 나타내는 생각과 문자를 물건 이름으로 보는 생각을 담고 있다.",
+      "id": "b214d2f8-efec-433c-a577-21014be6680a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:06:20.475196+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.86611+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-오개념판별",
+      "body": "긴 끈의 길이는 짧은 끈의 길이의 $3$배이다. 긴 끈의 길이를 $a$ cm라고 할 때, 세 학생의 말 중 옳은 것만 고른 것은?\n\nㄱ. 민수: 짧은 끈의 길이는 $3a$ cm야.\nㄴ. 지수: $a$는 끈이라는 물건을 나타내니까, $3a$는 끈 $3$개의 개수를 나타내.\nㄷ. 수아: 짧은 끈의 길이는 $\\frac{a}{3}$ cm야. 따라서 $a$가 $12$이면 짧은 끈의 길이는 $4$ cm야.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "ㄱ만 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 2,
+          "text": "ㄴ만 옳다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄷ만 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 4,
+          "text": "ㄱ, ㄷ만 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 5,
+          "text": "ㄴ, ㄷ만 옳다."
+        }
+      ],
+      "created_at": "2026-11-11T03:34:50.810098+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "긴 끈이 짧은 끈보다 $3$배 길므로, 짧은 끈의 길이는 긴 끈의 길이를 $3$으로 나눈 $\\frac{a}{3}$ cm이다. $a$가 $12$이면 짧은 끈의 길이는 $4$ cm이므로 ㄷ은 옳다.\nㄱ은 긴 끈과 짧은 끈의 길이 관계를 거꾸로 생각했다. ㄴ은 $a$를 길이를 나타내는 수가 아니라 물건의 이름으로 생각했다.",
+      "generated_at": "2026-11-11T03:34:50.599576+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "세 학생의 말을 보고 길이 관계와 문자가 나타내는 것을 바르게 이해했는지 판단하게 한다.",
+      "id": "66e71726-d67d-49e7-82f8-f3f3f82d484b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:34:28.049336+00:00",
+          "issues": [
+            "가의 x/3은 3배 관계를 거꾸로 이해한 오류이지만, 말을 순서대로 식으로 옮긴 오류(M1)를 보여 주지는 않는다. 따라서 의도한 M1과 M2의 판별을 측정하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:34:50.599209+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.904052+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-오개념판별",
+      "body": "어느 전시관의 어른 입장권은 어린이 입장권보다 $2000$원 더 비싸다. 어른 입장권 한 장의 가격을 $a$원이라고 하자. 어른 입장권은 $2000$원보다 비싸다.\n\n다섯 학생의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "민호: 어린이 입장권 한 장의 가격은 $(a+2000)$원이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 2,
+          "text": "서연: $a$는 어른 입장권이라는 물건의 이름이므로 $5000$을 대입할 수 없어."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 3,
+          "text": "도윤: $a$가 $5000$이면 어린이 입장권은 어른 입장권보다 $2000$원 더 비싸므로 $7000$원이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 4,
+          "text": "하린: 어린이 입장권의 가격은 $(a-2000)$원이야. 여기서 $a$는 가격이 아니라 어른 입장권이라는 물건을 나타내."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "유진: 어린이 입장권의 가격은 $(a-2000)$원이야. $a$는 어른 입장권의 가격을 나타내므로 $5000$을 대입하면 어린이 입장권의 가격은 $3000$원이야."
+        }
+      ],
+      "created_at": "2026-11-11T03:35:11.607645+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "어른 입장권이 어린이 입장권보다 $2000$원 더 비싸므로, 어린이 입장권 한 장의 가격은 $(a-2000)$원이다. $a$는 어른 입장권의 가격을 나타내는 수이므로 $5000$을 대입할 수 있다. 이때 어린이 입장권의 가격은 $3000$원이다.\n\n1번과 3번은 더 비싼 쪽을 반대로 생각했다. 2번과 4번은 $a$를 가격을 나타내는 수가 아니라 입장권의 이름으로 생각했다.",
+      "generated_at": "2026-11-11T03:35:11.42064+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 보고 가격의 관계와 문자가 나타내는 것을 모두 바르게 이해한 학생을 고르게 했다.",
+      "id": "ff7c632d-d355-41e7-b263-3b1308a8b18c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:35:11.420458+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.941348+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-오개념판별",
+      "body": "필통에 든 연필 수는 상자에 든 연필 수의 $4$배입니다. 필통에 든 연필 수를 $a$개라고 할 때, 상자에 든 연필 수를 나타낸 식과 $a$가 나타내는 것을 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "$4a$, 필통에 든 연필의 수"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\frac{a}{4}$, 필통에 든 연필의 수"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 3,
+          "text": "$\\frac{a}{4}$, 연필이라는 물건"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$a+4$, 필통에 든 연필의 수"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$a-4$, 필통에 든 연필의 수"
+        }
+      ],
+      "created_at": "2026-11-11T03:30:04.088448+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "필통에 든 연필 수가 상자에 든 연필 수의 $4$배이므로, 상자에 든 연필 수는 $a$를 $4$로 나눈 $\\frac{a}{4}$입니다. $a$는 연필이라는 물건이 아니라 필통에 든 연필의 수를 나타냅니다. $4a$는 필통에 든 연필 수를 다시 $4$배 한 것이므로 상자에 든 연필 수가 아닙니다.",
+      "generated_at": "2026-11-11T03:30:03.856141+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "33f9dba3-b0dd-4da7-becf-89ce33a23341",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:29:48.411872+00:00",
+          "issues": [
+            "문장에 나타난 수의 순서는 a, 3이므로 말의 순서대로 식을 세워도 a-3이다. ①의 3-a는 빼는 순서를 거꾸로 한 오류이지만, 의도한 M1을 판별하지는 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:30:03.856065+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:26.979803+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-오개념판별",
+      "body": "오후 기온은 아침 기온보다 $3$도 낮습니다. 아침 기온을 $t$도라고 할 때, 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 1,
+          "text": "오후 기온은 $(3-t)$도이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 2,
+          "text": "$t$는 기온이라는 말의 이름일 뿐, 수를 나타내지 않는다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "오후 기온은 $(t+3)$도이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "오후 기온은 $(t-3)$도이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "오후 기온은 $3t$도이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:30:34.189587+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$t$는 아침 기온을 나타내는 수입니다. 오후 기온은 이보다 $3$도 낮으므로 $(t-3)$도입니다. ①처럼 말에 나온 순서대로 $3$에서 $t$를 빼면 두 기온의 관계가 거꾸로 됩니다. ②처럼 $t$를 기온이라는 말의 이름으로만 보면 $t$가 나타내는 수를 놓치게 됩니다. ③은 아침 기온보다 $3$도 높은 기온이고, ⑤는 아침 기온의 $3$배입니다.",
+      "generated_at": "2026-11-11T03:30:33.996943+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "edfc62f8-b5fd-4372-9bdf-4971ad1a3582",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:30:33.996668+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.029837+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C1-오개념판별",
+      "body": "파란 리본은 노란 리본보다 $2$cm 더 깁니다. 파란 리본의 길이를 $x$cm라고 할 때, 잘못 말한 학생만을 모두 고른 것은?\n\n가: 노란 리본의 길이는 $(x+2)$cm야.\n나: $x$는 수가 아니라 파란 리본이라는 물건을 나타내.\n다: 노란 리본의 길이는 $(x-2)$cm야.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M2",
+          "no": 1,
+          "text": "가"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M1",
+          "no": 2,
+          "text": "나"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "다"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "가, 나"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가, 다"
+        }
+      ],
+      "created_at": "2026-11-11T03:31:55.540379+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "노란 리본은 파란 리본보다 $2$cm 더 짧으므로 길이는 $(x-2)$cm입니다. 가는 더 긴 리본을 잘못 생각하여 $2$를 더했습니다. 나는 $x$가 파란 리본이라는 물건이 아니라 파란 리본의 길이를 나타내는 수임을 놓쳤습니다. 따라서 잘못 말한 학생은 가와 나입니다.",
+      "generated_at": "2026-11-11T03:31:54.873535+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "e7e7c2eb-cfa8-4a1d-8a63-3b70fdb1d766",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:30:59.969060+00:00",
+          "issues": [
+            "민수의 5p는 나누어야 할 상황에서 곱한 오류를 보여 주지만, 말의 순서대로 식을 세운 오류(M1)인지는 판별할 수 없다. 곱셈은 순서를 바꾸어도 값이 같으므로 해당 오개념을 구별하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:31:33.062508+00:00",
+          "issues": [
+            "민수의 a-5는 옮긴 양을 남은 양에서 다시 뺀 오류이지만, 말의 순서대로 식을 세운 오류(M1)인지는 드러나지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T03:31:54.873387+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.055238+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C2-정의이해",
+      "body": "$a$는 자연수이다. 다음 두 상황을 각각 식으로 나타내려고 한다.\n\n- ㉠ 한 변의 길이가 $a$cm인 정사각형의 넓이는 몇 $\\mathrm{cm}^2$인가?\n- ㉡ 길이가 $3$cm인 끈을 $a$등분할 때, 한 조각의 길이는 몇 $\\mathrm{cm}$인가?\n\n㉠, ㉡을 차례로 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$a^2$, $\\dfrac{3}{a}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M5",
+          "no": 2,
+          "text": "$2a$, $\\dfrac{3}{a}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$a^2$, $\\dfrac{a}{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M5",
+          "no": 4,
+          "text": "$2a$, $\\dfrac{a}{3}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$a^2$, $3a$"
+        }
+      ],
+      "created_at": "2026-11-11T03:36:15.317746+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "㉠은 $a\\times a$이므로 $a^2$이다. ㉡은 $3\\div a$이므로 $\\dfrac{3}{a}$이다. 따라서 정답은 ①이다.\n\n②와 ④처럼 $a\\times a$를 $2a$로 나타내면 안 된다. $2a$는 $2\\times a$를 뜻한다. ③과 ④의 $\\dfrac{a}{3}$은 $a\\div 3$을 뜻하므로 나누는 순서가 바뀌었다. ⑤의 $3a$는 $3\\times a$를 뜻한다.",
+      "generated_at": "2026-11-11T03:36:15.049078+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "정사각형의 넓이와 끈을 똑같이 나누는 상황을 각각 식으로 바꾸어 판단해야 한다.",
+      "id": "7f025ac4-2211-461f-bd36-b21b326204cc",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:36:15.048653+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.094824+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C2-정의이해",
+      "body": "$a$는 $1$부터 $9$까지의 자연수이다. 다음을 차례로 식으로 나타내려고 한다.\n\n㉠ 십의 자리의 숫자가 $4$이고 일의 자리의 숫자가 $a$인 두 자리 수\n㉡ 한 봉지에 $a\\,\\mathrm{kg}$씩 담긴 쌀 $4$봉지의 무게의 합\n㉢ $a\\,\\mathrm{kg}$의 쌀을 $4$명에게 똑같이 나누어 줄 때 한 사람이 받는 쌀의 무게\n\n㉠, ㉡, ㉢을 차례로 바르게 나타낸 것은? 무게의 단위는 쓰지 않는다.",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$40+a$, $4a$, $\\dfrac{a}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M3",
+          "no": 2,
+          "text": "$4a$, $4a$, $\\dfrac{a}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M3",
+          "no": 3,
+          "text": "$40+a$, $40+a$, $\\dfrac{a}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$40+a$, $4a$, $\\dfrac{4}{a}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4+a$, $4a$, $\\dfrac{a}{4}$"
+        }
+      ],
+      "created_at": "2026-11-11T03:36:36.037062+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "㉠에서 십의 자리의 $4$는 $40$을 뜻하므로 두 자리 수는 $40+a$이다. ㉡은 $4\\times a$이므로 $4a$이다. ㉢은 $a\\div4$이므로 $\\frac{a}{4}$이다.\n\n$4a$는 두 자리 수가 아니라 $4$와 $a$를 곱한다는 뜻이다. 따라서 ㉠을 $4a$로 쓰거나 ㉡을 $40+a$로 쓰면 안 된다. 정답은 ①이다.",
+      "generated_at": "2026-11-11T03:36:35.835431+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "두 자리 수와 쌀의 무게를 말로 나타낸 세 상황을 각각 식으로 바꾸어 판단해야 한다. 특히 ㉠과 ㉡을 비교하며 $4a$가 곱을 나타낸다는 약속을 확인한다.",
+      "id": "8c830713-4125-4977-8a9b-a5805a41b047",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:36:35.835157+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.127573+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C2-정의이해",
+      "body": "계산 기계에 $0$이 아닌 두 수 $a$와 $b$를 넣는다. 이 기계는 먼저 $a$에 $a$를 곱한다. 그런 다음 그 결과를 $b$로 나눈다.\n\n기계가 내놓는 수를 곱셈 기호와 나눗셈 기호를 쓰지 않고 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\frac{a^2}{b}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M5",
+          "no": 2,
+          "text": "$\\frac{2a}{b}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\left(\\frac{a}{b}\\right)^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\frac{b}{a^2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$a^2b$"
+        }
+      ],
+      "created_at": "2026-11-11T03:37:07.631568+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$a$에 $a$를 곱하면 $a^2$이다. 이 결과를 $b$로 나누므로 $\\frac{a^2}{b}$이다.\n\n②의 $2a$는 $a$를 두 번 더한 수이다. $a$에 $a$를 곱한 수와 혼동하지 않도록 한다. ③은 $a$를 $b$로 나눈 수를 두 번 곱한 것이다. ④는 나누는 순서가 바뀌었고, ⑤는 $b$로 나누는 대신 $b$를 곱했다.",
+      "generated_at": "2026-11-11T03:37:07.364622+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "기계가 수를 처리하는 방법을 말로 제시하고 이를 식으로 바꾸어 판단하게 했다. 같은 문자의 곱과 나눗셈을 나타내는 방법을 함께 따져야 한다.",
+      "id": "571e2eba-45c2-4bd5-87cb-70ac4f2a33f0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:37:07.364408+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.162168+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C2-정의이해",
+      "body": "문자를 사용한 식 $3a$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3$과 $a$를 더한 것이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3$과 $a$를 곱한 것이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3$을 $a$로 나눈 것이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$a$를 $3$으로 나눈 것이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M3",
+          "no": 5,
+          "text": "$a$에 한 자리 수를 대입하면 그 수를 $3$ 뒤에 붙여 읽는 것이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:35:22.775914+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$3a$는 $3$과 $a$를 곱한 식에서 곱셈 기호를 생략한 것이다. $a$에 한 자리 수를 대입할 때 그 수를 $3$ 뒤에 붙여 읽는 것이 아니다. 예를 들어 $a$에 $2$를 대입하면 $3a$의 값은 $32$가 아니라 $6$이다.",
+      "generated_at": "2026-11-11T03:35:22.569724+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ca493231-24d9-4279-a8c2-d8ae2982bb5e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:35:22.569618+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.187366+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C2-정의이해",
+      "body": "$a\\times a$에서 곱셈 기호를 생략하여 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$a+2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M5",
+          "no": 2,
+          "text": "$2a$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$a^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\dfrac{a}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$a$"
+        }
+      ],
+      "created_at": "2026-11-11T03:35:33.927738+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$a$를 두 번 곱한 식은 $a^2$으로 나타냅니다. $2a$는 $2$와 $a$를 곱한 식이므로 $a\\times a$를 나타낸 것이 아닙니다.",
+      "generated_at": "2026-11-11T03:35:33.734588+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "aa9e8be4-ed47-4639-9faa-5f1c26da57e9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:35:33.734375+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.214452+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C2-정의이해",
+      "body": "한 개에 $b$원인 지우개 $1$개의 가격을 문자를 사용한 식을 쓰는 약속에 맞게 나타낸 것은? 단, 단위인 원은 쓰지 않는다.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$b+1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M5",
+          "no": 2,
+          "text": "$1b$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$b$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$b^2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\dfrac{b}{2}$"
+        }
+      ],
+      "created_at": "2026-11-11T03:35:56.437791+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "지우개 $1$개의 가격은 $1\\times b$원이다. 문자를 사용한 식에서는 $1$과 문자의 곱을 나타낼 때 $1$을 쓰지 않으므로 $b$로 나타낸다. $1b$는 $1\\times b$를 뜻하지만, 식을 쓰는 약속에 맞게 나타내려면 $1$을 생략해야 한다.",
+      "generated_at": "2026-11-11T03:35:56.255536+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4f68b1e1-fbb1-40f3-a5bf-11f532077107",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:35:56.255362+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.239537+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C3-성질적용",
+      "body": "$a=-2$일 때, 한 학생이 식의 값을 다음과 같이 구했습니다.\n\n(가) $3a+a^2=3\\times(-2)+(-2)^2$\n\n(나) $3\\times(-2)+(-2)^2=-6+(-4)$\n\n(다) $-6+(-4)=-10$\n\n각 줄에서 바로 앞에 쓴 식을 사용했을 때, 처음으로 잘못된 부분은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "(가)에서 $3a$를 $3\\times(-2)$로 나타낸 부분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M4",
+          "no": 2,
+          "text": "(가)에서 $a^2$을 $(-2)^2$으로 나타낸 부분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "(나)에서 $3\\times(-2)$를 $-6$으로 계산한 부분"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "(나)에서 $(-2)^2$을 $-4$로 계산한 부분"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "(다)에서 $-6+(-4)$를 $-10$으로 계산한 부분"
+        }
+      ],
+      "created_at": "2026-11-11T03:38:02.822782+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "(가)의 대입은 모두 바릅니다. 음수 전체를 두 번 곱해야 하므로 $(-2)^2=4$입니다. 따라서 (나)에서 $(-2)^2$을 $-4$로 계산한 부분이 처음 잘못된 부분입니다.\n\n②처럼 괄호 없이 $-2^2$로 써야 한다고 생각할 수 있습니다. 하지만 이때는 $2$만 두 번 곱한 뒤 마이너스를 붙이므로, $(-2)^2$과 다릅니다.",
+      "generated_at": "2026-11-11T03:38:02.561898+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "여러 줄로 제시된 풀이에서 대입과 계산을 살펴 처음으로 잘못된 부분을 찾게 했습니다.",
+      "id": "dc9c4fe1-06a7-4b90-8a25-3c23cbd5acba",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:38:02.561733+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.262864+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C3-성질적용",
+      "body": "어떤 기계에 두 수 $a$, $b$를 넣으면 $a$에 $a$를 곱한 값에 $b$의 $3$배를 더한 수가 화면에 나온다.\n\n화면에 $3$이 나왔다. 넣은 두 수로 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M4",
+          "no": 1,
+          "text": "$a=-3$, $b=4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$a=2$, $b=-1$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$a=-3$, $b=-2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$a=1$, $b=1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$a=-1$, $b=-1$"
+        }
+      ],
+      "created_at": "2026-11-11T03:38:18.987719+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "화면에 나오는 수는 $a^2+3b$이다. ③을 대입하면 $(-3)^2+3\\times(-2)=9-6=3$이다. ①, ②, ④, ⑤를 대입하면 각각 $21$, $1$, $4$, $-2$가 나온다.\n\n①을 골랐다면 $(-3)^2$을 $-9$로 잘못 계산했을 수 있다. $(-3)^2$은 $(-3)\\times(-3)$이므로 $9$이다.",
+      "generated_at": "2026-11-11T03:38:18.792617+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "화면에 나온 수를 먼저 주고, 그 수가 나오도록 넣은 두 수를 찾게 했다. 기계가 하는 일을 식으로 나타낸 뒤 보기에 있는 수를 대입해야 한다.",
+      "id": "e3d3f285-90c6-410c-94d4-25ee1ac47214",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:38:18.792294+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.287991+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C3-성질적용",
+      "body": "한 게임의 처음 점수는 $20$점이다. 카드에 적힌 수를 $a$라 할 때, 점수에 $a$의 $2$배를 더한다. 그다음 $a$에 $a$를 곱한 값을 뺀다.\n\n$a=-3$일 때, 이 과정을 나타낸 식과 마지막 점수가 모두 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "식: $20+2a-a^2$, 마지막 점수: $5$점"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M4",
+          "no": 2,
+          "text": "식: $20+2a-a^2$, 마지막 점수: $23$점"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "식: $20+2a+a^2$, 마지막 점수: $23$점"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "식: $20+2a-a^2$, 마지막 점수: $17$점"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "식: $20+a-(2a)^2$, 마지막 점수: $-19$점"
+        }
+      ],
+      "created_at": "2026-11-11T03:39:35.463891+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점수에 $a$의 $2$배를 더하고 $a$에 $a$를 곱한 값을 빼므로 식은 $20+2a-a^2$이다. $a=-3$을 대입하면 $20+2\\times(-3)-(-3)^2=20-6-9=5$이다.\n\n②는 $(-3)^2$을 $-9$로 잘못 계산한 것이다. 음수끼리 곱하면 양수가 되므로 $(-3)^2=9$이다. ③은 $a$에 $a$를 곱한 값을 빼지 않고 더했다. ④는 $2\\times(-3)$을 $6$으로 잘못 계산했다. ⑤는 $a$에 $a$를 곱하지 않고 $2a$에 $2a$를 곱해 뺐다.",
+      "generated_at": "2026-11-11T03:39:35.208242+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "점수를 구하는 방법을 식으로 나타낸 뒤 음수를 대입해야 한다.",
+      "id": "9a8817cf-49d3-43b8-b82e-960662e8095f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:38:46.502532+00:00",
+          "issues": [
+            "주어진 수 -3을 바로 계산하면 되므로, 문자식을 만들고 수를 대입하여 식의 값을 구하는 능력을 측정하지 못한다.",
+            "문자식으로 나타낸 뒤 대입할 필요가 없어, 밝힌 고난이도 조건 application-b를 실제로 요구하지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:39:16.336408+00:00",
+          "issues": [
+            "문자식을 만들고 수를 대입해 식의 값을 구하지 않아도 두 기온의 2배와 제곱을 비교할 수 있어, 의도한 식의 값 구하기를 직접 측정하지 못한다.",
+            "상황을 문자식으로 바꾸어 적용하는 과정이 필수가 아니므로, 밝힌 고난이도 조건 application-b가 실제로 요구되지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T03:39:35.208067+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.318728+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C3-성질적용",
+      "body": "$a=-2$일 때, 식 $a^2+3$의 값은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M4",
+          "no": 2,
+          "text": "$-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$1$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9$"
+        }
+      ],
+      "created_at": "2026-11-11T03:37:18.062349+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-2$를 대입할 때 괄호를 쓰면 $(-2)^2+3=4+3=7$이다. ②는 $(-2)^2$을 $-4$로 잘못 계산한 것이다.",
+      "generated_at": "2026-11-11T03:37:17.871116+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b97b7877-4acc-495c-9277-df2cd490461c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:37:17.870875+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.352692+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C3-성질적용",
+      "body": "길이가 각각 $b$ cm인 끈 $3$개와 길이가 $2$ cm인 끈 $1$개가 있다. 이 끈들의 길이의 합은 $3b+2$ cm이다. $b=4$일 때, 끈들의 길이의 합은 몇 cm인가?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$9$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$12$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$14$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$18$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M3",
+          "no": 5,
+          "text": "$36$"
+        }
+      ],
+      "created_at": "2026-11-11T03:37:29.387466+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$b$에 $4$를 대입하면 $3\\times4+2=14$이다. $3b$는 $3$과 $b$를 곱한다는 뜻이므로, $b=4$일 때 $34$가 아니라 $12$이다. $36$을 골랐다면 $3b$를 $34$로 잘못 읽었을 수 있다.",
+      "generated_at": "2026-11-11T03:37:29.188511+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c7dd3518-1b55-48fd-b51c-440fbd2e9616",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:37:29.188346+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.379094+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C3-성질적용",
+      "body": "$x=-3$일 때, 식 $5x^2$의 값은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-01-M4",
+          "no": 1,
+          "text": "$-45$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-15$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$15$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$30$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$45$"
+        }
+      ],
+      "created_at": "2026-11-11T03:37:43.838917+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$에 $-3$을 대입하면 $5\\times(-3)^2=5\\times9=45$이다. $-45$를 골랐다면 $(-3)^2$을 $-9$로 잘못 계산한 것이다.",
+      "generated_at": "2026-11-11T03:37:43.642236+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b2a455ba-9aa2-4a49-bce8-3bbe38ccf773",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:37:43.642022+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.402424+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C4-이유설명",
+      "body": "연필이 한 묶음에 $4$자루씩 들어 있다. 연필을 $a$묶음 사고, 연필 $3$자루를 더 받는다. 이때 연필은 모두 $4a+3$자루라고 한다. $a$는 $1$ 이상의 자연수이다.\n\n민수: 이 식은 $2$묶음을 살 때만 쓸 수 있어.\n지우: 이 식 하나로 묶음 수가 달라져도 연필이 모두 몇 자루인지 구할 수 있어.\n\n누구의 말이 옳은가? 묶음 수가 어떠하든 그 말이 옳은 이유를 식의 각 부분이 나타내는 것과 연결하여 설명하시오. 또 $5$묶음을 살 때 이 식을 어떻게 이용하는지 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-11T03:40:47.54859+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$4a$는 한 묶음에 $4$자루씩 든 연필을 $a$묶음 샀을 때의 자루 수이고, $3$은 더 받은 연필의 자루 수이다. 따라서 묶음 수가 달라져도 그 수를 $a$에 대입하면 연필의 전체 자루 수를 구할 수 있다. $a$에 $5$를 대입하면 $4\\times5+3=23$이므로 $23$자루이다.",
+      "generated_at": "2026-11-11T03:40:47.351872+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "묶음 수가 어떠하든 지우의 말이 옳은 이유를 식의 각 부분과 연결하여 설명하게 했다.",
+      "id": "2a50d9e8-7915-47b1-9863-02550c265bbd",
+      "model": "gpt-6.1-terra",
+      "model_answer": "지우의 말이 옳다. $4a$는 $a$묶음에 들어 있는 연필의 자루 수이고, $3$은 더 받은 연필의 자루 수이다. 따라서 어떤 묶음 수를 $a$에 대입해도 연필이 모두 몇 자루인지 구할 수 있다. $5$묶음을 살 때는 $a$에 $5$를 대입하면 $4\\times5+3=23$이므로 $23$자루이다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "지우의 말이 옳다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "$4a$가 산 연필의 자루 수이고 $3$이 더 받은 연필의 자루 수임을 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "묶음 수가 달라져도 그 수를 $a$에 대입하여 같은 식으로 전체 자루 수를 구할 수 있다고 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$a$에 $5$를 대입하여 $23$자루를 구했다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:40:47.351791+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.431934+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C4-이유설명",
+      "body": "어느 날 처음 온도를 $a$℃, 한 시간에 올라가는 온도를 $b$℃라고 하자. 두 시간 동안 온도는 매시간 $b$℃씩 올라간다. $a$는 정수이고 $b$는 자연수이다.\n\n두 시간 뒤의 온도를 $a+2b$℃로 나타냈다.\n\n처음 온도와 한 시간에 올라가는 온도가 달라져도 이 식 하나를 쓸 수 있는 이유를 식의 각 부분과 연결하여 설명하시오. 특정한 수를 넣어 확인하는 데 그치지 말고 설명하시오. 또 $a=-3$, $b=4$일 때 이 식을 이용하여 두 시간 뒤의 온도를 구하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T03:41:06.690588+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$a$는 처음 온도이고, $2b$는 두 시간 동안 올라간 온도이다. 따라서 $a+2b$는 처음 온도에 올라간 온도를 더한 것이다. 처음 온도와 한 시간에 올라가는 온도가 달라져도 각각 $a$와 $b$에 넣으면 되므로 식을 새로 만들 필요가 없다. $a=-3$, $b=4$를 대입하면 $-3+2\\times4=5$이므로 두 시간 뒤의 온도는 $5$℃이다.",
+      "generated_at": "2026-11-11T03:41:06.473496+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "처음 온도와 한 시간에 올라가는 온도가 달라져도 식 하나를 쓸 수 있는 이유를 설명하게 했다. 특정한 수를 넣어 확인하는 데 그치지 않도록 요구했다.",
+      "id": "908382f5-0161-4868-a87f-24b95e01e308",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$a$는 처음 온도이고, $2b$는 $b$℃씩 두 시간 동안 올라간 온도이다. 두 시간 뒤의 온도는 처음 온도에 올라간 온도를 더하여 구한다. 처음 온도와 한 시간에 올라가는 온도가 달라져도 그 수를 각각 $a$와 $b$에 대입하면 되므로 같은 식을 쓸 수 있다.\n\n$a=-3$, $b=4$를 대입하면 $-3+2\\times4=5$이므로 두 시간 뒤의 온도는 $5$℃이다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$a$가 처음 온도이고 $2b$가 두 시간 동안 올라간 온도임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "처음 온도와 한 시간에 올라가는 온도가 달라져도 각 수를 $a$와 $b$에 대입하면 같은 식으로 두 시간 뒤의 온도를 구할 수 있다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$a=-3$, $b=4$를 대입하여 두 시간 뒤의 온도를 $5$℃로 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:41:06.473355+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.468661+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C4-이유설명",
+      "body": "박물관에 $a$명이 함께 간다. 이 중 한 명은 무료로 입장하고, 나머지 사람은 한 사람당 $b$원을 낸다. $a$는 $2$ 이상의 자연수이고, $b$는 자연수이다.\n\n전체 입장료를 다음 두 식으로 나타냈다.\n\n첫째 식: $ab-b$\n둘째 식: $b(a-1)$\n\n두 식이 각각 전체 입장료를 어떻게 구한 것인지 설명하시오. 또 사람 수와 한 사람당 입장료가 달라져도 두 식이 같은 금액을 나타내는 이유와, 문자로 나타낸 식을 이용하면 좋은 점을 설명하시오.\n\n$a=6$, $b=700$일 때 두 식 중 하나를 이용하여 전체 입장료를 구하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T03:41:30.026262+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫째 식은 모든 사람이 돈을 낸다고 생각한 금액 $ab$에서 무료인 한 사람의 입장료 $b$를 뺀 것이다. 둘째 식은 돈을 내는 사람 $a-1$명의 입장료를 구한 것이다. 어느 쪽이든 무료인 한 사람을 뺀 나머지 사람의 입장료이므로 같은 금액을 나타낸다. 사람 수와 입장료가 달라져도 각 식에 그 수를 대입하면 되므로 식을 새로 만들 필요가 없다. $a=6$, $b=700$을 대입하면 전체 입장료는 $3500$원이다.",
+      "generated_at": "2026-11-11T03:41:29.805917+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 식이 입장료를 각각 어떻게 구한 것인지 비교하고, 사람 수와 입장료가 달라져도 같은 금액을 나타내는 이유를 설명하게 했다.",
+      "id": "f5180668-45c5-46e2-a199-4c6090ef5167",
+      "model": "gpt-6.1-terra",
+      "model_answer": "첫째 식은 $a$명 모두의 입장료 $ab$원에서 무료인 한 사람의 입장료 $b$원을 뺀 것이다. 둘째 식은 돈을 내는 $a-1$명의 입장료를 구한 것이다. 사람 수와 입장료가 어떠하든 두 식은 모두 무료인 한 사람을 뺀 나머지 사람의 입장료를 나타내므로 같은 금액이 된다. 문자에 알맞은 수를 대입하면 여러 상황의 전체 입장료를 식을 새로 만들지 않고 구할 수 있다. $a=6$, $b=700$일 때 $700(6-1)=3500$이므로 전체 입장료는 $3500$원이다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "첫째 식이 모든 사람의 입장료에서 무료인 한 사람의 입장료를 뺀 것임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "둘째 식이 돈을 내는 $a-1$명의 입장료를 구한 것임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "사람 수와 입장료가 달라져도 두 식이 모두 무료인 한 사람을 뺀 나머지 사람의 입장료를 나타내므로 같은 금액이 됨을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "사람 수와 입장료가 달라져도 문자에 알맞은 수를 대입하여 식을 새로 만들지 않고 사용할 수 있음을 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "주어진 수를 대입하여 전체 입장료를 $3500$원으로 구한다.",
+          "no": 5,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:41:29.805575+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.507538+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C4-이유설명",
+      "body": "사탕이 한 봉지에 $3$개씩 들어 있습니다. 봉지 밖에도 사탕이 $2$개 있습니다. 봉지가 $a$개일 때, 사탕의 전체 개수는 $3a+2$입니다.\n\n봉지가 $2$개일 때와 $4$개일 때를 예로 들어, 이 식 하나로 여러 경우의 사탕 수를 나타낼 수 있는 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T03:39:47.672161+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "봉지 수가 달라져도 한 봉지에 든 사탕 수와 봉지 밖의 사탕 수는 그대로입니다. 따라서 봉지 수를 $a$에 대입하면 같은 식으로 전체 사탕 수를 구할 수 있습니다. $a$에 $2$를 대입하면 $8$개, $4$를 대입하면 $14$개입니다.",
+      "generated_at": "2026-11-11T03:39:47.474354+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "fd8c1bb0-2f7e-4393-bd55-9fd010bdd847",
+      "model": "gpt-6.1-terra",
+      "model_answer": "봉지 수가 달라져도 $a$에 그 수를 대입하면 되므로 하나의 식으로 여러 경우를 나타낼 수 있습니다. $a$에 $2$를 대입하면 $8$개이고, $4$를 대입하면 $14$개입니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "봉지 수가 달라질 때마다 그 수를 $a$에 대입하여 같은 식으로 전체 사탕 수를 구할 수 있다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "봉지가 $2$개일 때 사탕이 $8$개이고, $4$개일 때 $14$개임을 나타낸다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:39:47.474098+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.535444+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C4-이유설명",
+      "body": "어떤 사람이 한 시간에 $6$ km씩 일정하게 걷습니다. 이 사람이 $t$시간 동안 걸은 거리는 $6t$ km입니다.\n\n걸은 시간이 달라져도 이 식 하나로 걸은 거리를 나타낼 수 있는 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T03:40:14.813016+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$t$에 걸은 시간을 대입하면 그 시간 동안 걸은 거리를 구할 수 있습니다. 따라서 걸은 시간마다 새로운 식을 만들지 않아도 됩니다.",
+      "generated_at": "2026-11-11T03:40:14.608555+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "374377bd-895c-43b0-b4b1-3bcc2b573dcb",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$t$에 걸은 시간을 대입하면 그 시간에 $6$을 곱한 거리를 구할 수 있습니다. 따라서 걸은 시간이 달라져도 같은 식으로 거리를 나타낼 수 있습니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$t$에 걸은 시간을 대입한다고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "대입하여 걸은 거리를 구할 수 있으므로 같은 식을 여러 시간에 쓸 수 있다고 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:40:14.608246+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.630624+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-01-C4-이유설명",
+      "body": "정사각형의 한 변의 길이가 $a\\text{ cm}$일 때, 넓이는 $a^2\\text{ cm}^2$입니다.\n\n한 변의 길이가 달라져도 이 식 하나로 넓이를 나타낼 수 있는 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T03:40:30.358908+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "한 변의 길이가 달라지면 $a$에 대입하는 수도 달라집니다. 어느 길이를 대입해도 그 수를 두 번 곱하므로 정사각형의 넓이를 구할 수 있습니다.",
+      "generated_at": "2026-11-11T03:40:30.151046+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2a53f0b1-dfe8-4af5-869e-7f69fd8eed43",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$a$에 달라진 한 변의 길이를 대입하면 됩니다. 어느 길이를 대입해도 $a^2$은 그 길이를 두 번 곱한 것이므로 넓이를 나타냅니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "한 변의 길이가 달라지면 그 길이를 $a$에 대입한다고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "대입한 길이를 두 번 곱하면 넓이를 구할 수 있어 같은 식을 쓸 수 있다고 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:40:30.150769+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    }
+  ]
+}

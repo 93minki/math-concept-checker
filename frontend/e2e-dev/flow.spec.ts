@@ -40,6 +40,31 @@ async function solve(page: Page) {
   for (let i = 0; i < count; i++) {
     await expect(progress(page)).toHaveText(`${i + 1} / ${count}`);
     await noHorizontalOverflow(page);
+    // Fractions (\dfrac) in the body or choices must not get a vertical
+    // scrollbar or be clipped (2026-11-11 manual check).
+    expect(
+      await page
+        .locator(".question, .choice > .math-text")
+        .evaluateAll(
+          (nodes) =>
+            nodes.filter((node) => node.scrollHeight > node.clientHeight)
+              .length,
+        ),
+    ).toBe(0);
+    // Submit sits in place of "다음" on the last question only (user decision A).
+    const last = i === count - 1;
+    await expect(
+      page.getByRole("button", { name: "다음", exact: true }),
+    ).toHaveCount(last ? 0 : 1);
+    await expect(
+      page.getByRole("button", { name: "제출하기", exact: true }),
+    ).toHaveCount(last ? 1 : 0);
+    // Cannot move on (or submit) before answering (user decision 2026-11-11).
+    const forward = page.getByRole("button", {
+      name: last ? "제출하기" : "다음",
+      exact: true,
+    });
+    await expect(forward).toBeDisabled();
     bodies.push(await page.locator(".question").innerText());
     const radio = page.getByRole("radio").first();
     if (await radio.count()) {
@@ -50,6 +75,7 @@ async function solve(page: Page) {
       await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
     }
     await expect(page.getByText("저장했어요", { exact: true })).toBeVisible();
+    await expect(forward).toBeEnabled();
     if (i < count - 1)
       await page.getByRole("button", { name: "다음", exact: true }).click();
   }
@@ -166,6 +192,10 @@ test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는
     expect(await page.locator(".question").innerText()).not.toBe(
       first.bodies[i],
     );
+    // "다음" stays disabled until the question is answered.
+    const radio = page.getByRole("radio").first();
+    if (await radio.count()) await radio.check();
+    else await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
     if (i < first.bodies.length - 1)
       await page.getByRole("button", { name: "다음", exact: true }).click();
   }

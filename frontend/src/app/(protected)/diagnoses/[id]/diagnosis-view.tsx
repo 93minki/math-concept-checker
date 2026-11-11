@@ -230,6 +230,18 @@ export default function DiagnosisView({ id }: { id: string }) {
       (value) => answers[value.id] && answered(answers[value.id]),
     ) &&
     !readonly;
+  const isLast = index === stageItems.length - 1;
+  const currentAnswered = !!(answer && answered(answer));
+  const navigationHint =
+    !currentAnswered && item
+      ? isLast
+        ? item.question_type === "written"
+          ? "답을 쓰면 제출할 수 있어요"
+          : "답을 고르면 제출할 수 있어요"
+        : item.question_type === "written"
+          ? "답을 쓰면 다음 문제로 넘어갈 수 있어요"
+          : "답을 고르면 다음 문제로 넘어갈 수 있어요"
+      : null;
   return (
     <div className="stack">
       <Link className="study-link" href="/">
@@ -317,6 +329,7 @@ export default function DiagnosisView({ id }: { id: string }) {
                   </button>
                 </div>
               )}
+              {navigationHint && <p role="status">{navigationHint}</p>}
               <div className="button-row">
                 <button
                   disabled={index === 0 || busy}
@@ -324,22 +337,23 @@ export default function DiagnosisView({ id }: { id: string }) {
                 >
                   이전
                 </button>
-                <button
-                  disabled={index === stageItems.length - 1 || busy}
-                  onClick={() => void move(index + 1)}
-                >
-                  다음
-                </button>
+                {isLast ? (
+                  <button
+                    disabled={!canSubmit || busy}
+                    onClick={() => setConfirm(true)}
+                  >
+                    제출하기
+                  </button>
+                ) : (
+                  <button
+                    disabled={!currentAnswered || busy}
+                    onClick={() => void move(index + 1)}
+                  >
+                    다음
+                  </button>
+                )}
               </div>
             </section>
-          )}
-          {!readonly && (
-            <button
-              disabled={!canSubmit || busy}
-              onClick={() => setConfirm(true)}
-            >
-              제출하기
-            </button>
           )}
           {confirm && !readonly && (
             <Notice role="dialog" label="제출 확인">
