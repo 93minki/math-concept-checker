@@ -39,6 +39,7 @@ class DisplayUnit(BaseModel):
 
 class ConceptData(BaseModel):
     standard_code: str
+    variants: int = Field(default=2, ge=1, le=3)
     standard_text: str
     area: str
     topic: str

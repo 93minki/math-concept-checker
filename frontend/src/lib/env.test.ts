@@ -3,8 +3,7 @@ import { parsePublicEnv, PublicEnvError, type RawPublicEnv } from "./env";
 
 const validRaw: RawPublicEnv = {
   NEXT_PUBLIC_SUPABASE_URL: "https://abcdefghijklmnopqrst.supabase.co",
-  NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:
-    "sb_publishable_EXAMPLE0000000000000000_abcd1234",
+  NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "sb_publishable_REPLACE_ME",
   NEXT_PUBLIC_API_BASE_URL: "http://localhost:8000",
 };
 

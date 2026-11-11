@@ -5,7 +5,7 @@ from typing import cast
 
 import pytest
 
-from app.ai.schemas import load_concept
+from app.ai.schemas import ConceptData, load_concept
 from app.bank.curriculum import load_curriculum, read_data, validate_data
 from app.bank.operations import available_slots, change_status, generate
 from app.bank.repository import Row
@@ -131,6 +131,56 @@ def test_slots_and_dry_run(tmp_path: Path) -> None:
     repo.tables = {"questions": [question], "generation_backlog": [pending]}
     generate(repo, "9수02-03", "normal", item, False, True, Decimal(1), True, tmp_path)
     assert repo.writes == 0
+
+
+def test_variant_limits_and_dry_run(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    existing = load_concept("9수02-03")
+    data = existing.model_dump(exclude={"variants"})
+    default = ConceptData.model_validate(data)
+    assert default.variants == 2
+    for count in (0, 4):
+        with pytest.raises(ValueError):
+            ConceptData.model_validate({**data, "variants": count})
+    for code in ("9수02-01", "9수02-02", "9수02-03", "9수02-04"):
+        assert load_concept(code).variants == 3
+    item = default.assessment_items[0].id
+    for concept in (default, existing):
+        monkeypatch.setattr(
+            "app.bank.operations.load_concept", lambda code, chosen=concept: chosen
+        )
+        repo = MemoryBank()
+        generate(
+            repo,
+            concept.standard_code,
+            "normal",
+            item,
+            False,
+            True,
+            Decimal(1),
+            True,
+            tmp_path,
+        )
+        lines = capsys.readouterr().out.splitlines()
+        assert lines[:-1] == [
+            f"{item} normal {v}" for v in range(1, concept.variants + 1)
+        ]
+        assert repo.writes == 0
+        backlog = [
+            {
+                "assessment_item_id": item,
+                "difficulty": "normal",
+                "variant": 1,
+                "resolved_at": None,
+            }
+        ]
+        assert available_slots(concept, [], backlog, "normal", item, True) == [
+            (item, "normal", v) for v in range(1, concept.variants + 1)
+        ]
+        assert available_slots(concept, [], backlog, "normal", item, False) == [
+            (item, "normal", v) for v in range(2, concept.variants + 1)
+        ]
 
 
 def test_fake_generation_retries_backlog(tmp_path: Path) -> None:

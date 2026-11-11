@@ -44,7 +44,7 @@ def available_slots(
         (i, d, v)
         for i in items
         for d in ([difficulty] if difficulty else ["normal", "hard"])
-        for v in (1, 2, 3)
+        for v in range(1, concept.variants + 1)
         if (i, d, v) not in occupied and (retry or (i, d, v) not in blocked)
     ]
 
