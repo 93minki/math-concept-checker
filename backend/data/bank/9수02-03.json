@@ -1,0 +1,2220 @@
+{
+  "backlog": [],
+  "questions": [
+    {
+      "approved_at": "2026-11-10T09:09:17.09732+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C1-정의이해",
+      "body": "다음 중 등식을 모두 고른 것은?\n\nㄱ. $7=4+3$\nㄴ. $6+2=9$\nㄷ. $x+2=x+2$\nㄹ. $3+4=7$\nㅁ. $5+1$",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄱ, ㄴ, ㄷ, ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M1",
+          "no": 2,
+          "text": "ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄱ, ㄷ, ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄱ, ㄴ, ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄴ, ㄷ, ㄹ"
+        }
+      ],
+      "created_at": "2026-11-10T08:50:02.488344+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "등식은 등호를 사용하여 두 식이 같음을 나타낸 식이다. 참인지와 관계없이 ㄱ, ㄴ, ㄷ, ㄹ은 모두 등식이다. ㅁ에는 등호가 없으므로 등식이 아니다. ②처럼 ㄹ만 고른 것은 등호를 계산 결과를 쓰라는 기호로만 생각한 것이다. 등호의 왼쪽에 계산 결과가 있어도 등식이다.",
+      "generated_at": "2026-11-10T08:50:02.28005+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "참이 아닌 ㄴ, 문자가 없는 ㄱ, 양변이 같은 ㄷ을 제시하여 등식의 뜻을 따져 판단하게 한다.",
+      "id": "f28c6770-4975-4e28-87d4-bd0c916eec2c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:50:02.279601+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.204632+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C1-정의이해",
+      "body": "다음 문장에서 한 수를 $x$로 나타내려고 한다.\n\n“한 수에 $4$를 더한 값은 그 수와 같다.”\n\n이 문장을 식으로 나타내고, 그 식이 등식인지 판단한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x+4=x$이고, 등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x+4=x$이고, 참이 될 수 없으므로 등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M1",
+          "no": 3,
+          "text": "$x+4=x$이고, 등호의 오른쪽이 계산 결과인 수가 아니므로 등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x+4$이고, 등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4=x$이고, 등식이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:50:34.412462+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "문장을 식으로 나타내면 $x+4=x$이다. 이 식은 등호를 사용하여 두 식이 같음을 나타내므로 등식이다. $x$에 어떤 수를 넣어도 참이 되지는 않지만, 등식이 아닌 것은 아니다.\n\n등호의 오른쪽에는 계산 결과를 수로만 써야 한다고 생각하면 ③을 고를 수 있다. 등호는 두 식이 같음을 나타내는 기호이므로 오른쪽에도 문자가 있는 식을 쓸 수 있다. ④에는 등호가 없고, ⑤는 주어진 문장을 바르게 나타낸 식이 아니다.",
+      "generated_at": "2026-11-10T08:50:34.089538+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "문장을 식으로 나타내면 어떤 수를 넣어도 참이 되지 않는 $x+4=x$가 된다. 참이 되는지와 등식인지를 구별해야 한다.",
+      "id": "42d84edf-5a3e-4b06-9071-d6f9ef72f20f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:50:34.089301+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.258601+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C1-정의이해",
+      "body": "한 묶음에는 구슬이 $10$개 있다. 다른 묶음에는 빨간 구슬 $4$개와 파란 구슬 $5$개만 있다.\n\n지우는 두 묶음의 구슬 수가 같다고 생각하여 $10=4+5$라고 썼다. 지우가 쓴 식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M1",
+          "no": 1,
+          "text": "등호 오른쪽에 계산 결과인 수가 없으므로 등식이 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 식을 등호로 연결했으므로 등식이지만, 두 식의 값은 서로 다르다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 식의 값이 서로 다르므로 등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "문자가 없으므로 등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "등호가 있으므로 두 식의 값은 반드시 같다."
+        }
+      ],
+      "created_at": "2026-11-10T08:50:57.133873+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$10=4+5$는 두 식을 등호로 연결했으므로 등식이다. 하지만 $4+5$는 $9$이므로 두 묶음의 구슬 수가 같다는 지우의 생각은 옳지 않다.\n\n①은 등호 오른쪽에 계산 결과인 수만 와야 한다고 잘못 생각한 것이다. 등호 오른쪽에도 $4+5$와 같은 식이 올 수 있다.",
+      "generated_at": "2026-11-10T08:50:56.965139+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$10=4+5$는 문자가 없고 두 식의 값이 서로 다른 등식이다. 이 식이 등식인지 판단할 때 등식의 뜻을 따져야 한다.",
+      "id": "c5ff7867-433c-4784-a883-9bbd80d48f95",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:50:56.964858+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.298222+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C1-정의이해",
+      "body": "다음 식에 대한 설명으로 옳은 것은?\n\n$7 = 4 + 3$",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "등호를 사용하여 두 식이 같음을 나타냈으므로 등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M1",
+          "no": 2,
+          "text": "계산 결과가 등호의 왼쪽에 있으므로 등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M1",
+          "no": 3,
+          "text": "등호의 오른쪽에 계산이 남아 있으므로 등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "문자가 없으므로 등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "등호의 양쪽에 모두 덧셈이 있어야 하므로 등식이 아니다."
+        }
+      ],
+      "created_at": "2026-11-10T08:49:04.684934+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "등식은 등호를 사용하여 두 식이 같음을 나타낸 식이므로 정답은 1번입니다. 등호는 계산 결과를 오른쪽에 쓰라는 기호가 아닙니다. 계산 결과가 왼쪽에 있거나 오른쪽에 계산이 남아 있어도 등식이 될 수 있습니다.",
+      "generated_at": "2026-11-10T08:49:04.537819+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d07287f1-7025-4e38-acb2-6411dbd8ef3c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:49:04.537664+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.338391+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C1-정의이해",
+      "body": "민지는 $x+2=9$를 보고 등호의 뜻을 생각했습니다. 등호가 나타내는 뜻으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "등호의 왼쪽에만 문자를 쓸 수 있다는 뜻이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M1",
+          "no": 2,
+          "text": "왼쪽의 계산 결과를 오른쪽에 쓰라는 뜻이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "양쪽에 있는 수 또는 식의 값이 같다는 뜻이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "양쪽에 있는 수 또는 식의 값을 더하라는 뜻이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "왼쪽 식의 값이 오른쪽 수보다 크다는 뜻이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:49:18.659009+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "등호는 양쪽에 있는 수 또는 식의 값이 같다는 뜻입니다. ②처럼 등호를 왼쪽의 계산 결과를 오른쪽에 쓰라는 기호로만 생각하면 안 됩니다.",
+      "generated_at": "2026-11-10T08:49:18.507656+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "eac89a3c-509b-4899-a39a-de53cea29fb7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:49:18.507475+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.388152+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C1-정의이해",
+      "body": "선생님이 칠판에 $2+3=1+4$를 썼습니다. 이 식이 등식인 까닭을 설명하려고 합니다. 빈칸에 들어갈 말로 알맞은 것은?\n\n등식은 ( ㉠ ) 식이다.",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "등호를 사용하여 두 식의 값이 같음을 나타낸"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M1",
+          "no": 2,
+          "text": "등호 오른쪽에 계산 결과를 하나의 수로 나타낸"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "반드시 문자를 사용하여 계산 방법을 나타낸"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "등호 없이 계산할 순서만 나타낸"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "등호 양쪽에 같은 수를 똑같이 적어야만 하는"
+        }
+      ],
+      "created_at": "2026-11-10T08:49:40.103679+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "등식은 등호를 사용하여 두 식의 값이 같음을 나타낸 식입니다. $2+3$과 $1+4$의 값은 모두 $5$이므로 주어진 식은 등식입니다. ②를 고른 학생은 등호를 계산 결과를 쓰라는 기호로 잘못 생각했을 수 있습니다. 등호 오른쪽에 계산 결과를 하나의 수로 쓰지 않아도 등식이 될 수 있습니다.",
+      "generated_at": "2026-11-10T08:49:39.943551+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "52e16f23-3a1b-4970-a300-0ea3e3c30965",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:49:39.942834+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.418678+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-성질적용",
+      "body": "다음 중 $x=2$를 해로 갖는 방정식은? 단, 방정식은 미지수의 값에 따라 참이 되기도 하고 거짓이 되기도 하는 등식이다.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 1,
+          "text": "$2(x+1)=2x+2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2x+1=5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x+2=2x+2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2x-1=5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$3x+1=4$"
+        }
+      ],
+      "created_at": "2026-11-10T08:55:41.439153+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x=2$를 대입하면 ②는 $5=5$가 되어 참이다. 또 ②는 $x=2$가 아닌 값을 대입하면 거짓이 되므로 방정식이다. ①은 $x=2$를 대입하면 참이지만, 어떤 값을 대입해도 참인 항등식이다. 문자가 들어 있는 등식을 모두 방정식이라고 생각하면 ①을 고를 수 있다. ③, ④, ⑤는 $x=2$를 대입하면 각각 $4=6$, $3=5$, $7=4$가 되어 거짓이다.",
+      "generated_at": "2026-11-10T08:55:41.271222+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "해가 $x=2$라는 결과를 주고, 이를 만족하는 방정식을 찾게 했다. 대입 결과뿐 아니라 항등식인지도 판단해야 한다.",
+      "id": "5007efe0-1c7f-4191-b001-01b2d81a377c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:55:41.270679+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.452096+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-성질적용",
+      "body": "다음 등식의 $\\square$에 수를 하나 넣어 만든 등식이 방정식이고, $x=-1$이 그 해가 되도록 하려고 한다.\n\n$2(x+1)=\\square(x+1)$\n\n$\\square$에 넣을 수 있는 수에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$0$만 넣을 수 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$만 넣을 수 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-1$만 넣을 수 있다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2$를 제외한 어떤 수든 넣을 수 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 5,
+          "text": "어떤 수든 넣을 수 있다."
+        }
+      ],
+      "created_at": "2026-11-10T08:56:06.632698+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x=-1$을 대입하면 $\\square$에 어떤 수를 넣어도 양변의 값이 모두 $0$이다. 하지만 $\\square$에 $2$를 넣으면 어떤 $x$의 값에 대해서도 참인 항등식이 되므로 방정식이 아니다. $2$가 아닌 수를 넣으면 $x=-1$일 때는 참이고 $x=0$일 때는 거짓이므로 방정식이다. 따라서 정답은 ④이다. ⑤를 골랐다면 문자가 들어 있는 등식은 모두 방정식이라고 생각했을 수 있다. 항등식과 방정식은 구별해야 한다.",
+      "generated_at": "2026-11-10T08:56:06.470357+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "해가 될 값 $x=-1$을 주고, 이 값을 해로 갖는 방정식이 되도록 네모에 넣을 수 있는 수의 조건을 거꾸로 찾게 했다.",
+      "id": "be2a18b3-0ab8-407a-8b03-194919aff2fd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:56:06.469912+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.497648+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-성질적용",
+      "body": "상자에 구슬이 $x$개 있다. 구슬 $2$개를 꺼낸 뒤 남은 구슬 수의 $2$배는 처음 구슬 수보다 $1$개 많다.\n\n이 관계를 식으로 나타내고, $x=5$가 그 식의 해인지 확인한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2(x-2)=x+1$이고, $x=5$는 이 방정식의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2(x-2)=x+1$이고, $x=5$는 이 방정식의 해가 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2x-2=x+1$이고, $x=5$는 이 방정식의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2(x+2)=x+1$이고, $x=5$는 이 방정식의 해가 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 5,
+          "text": "$2(x-2)=x+1$로 나타낼 수 있다. 또한 $2(x-2)=2x-4$도 방정식이므로 $x=5$는 두 방정식의 해이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:56:31.804895+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "구슬을 꺼낸 뒤 남은 수는 $x-2$개이므로 관계를 나타내는 방정식은 $2(x-2)=x+1$이다. $x=5$를 대입하면 양변이 모두 $6$이므로 $x=5$는 해이다.\n\n⑤의 $2(x-2)=2x-4$는 모든 $x$의 값에서 참인 항등식이다. 문자가 들어 있는 등식이 모두 방정식인 것은 아니다. ③과 ④의 식은 주어진 관계를 바르게 나타내지 않는다.",
+      "generated_at": "2026-11-10T08:56:31.354515+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "구슬 수에 대한 문장을 방정식으로 나타낸 뒤, 주어진 값을 대입하여 해인지 판단해야 한다.",
+      "id": "a5a00322-09f3-4bfc-9712-c40a5615355d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:56:31.354320+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.536975+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-성질적용",
+      "body": "방정식 $2x+1=7$에서 $x=3$이 해인지 판단한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "해이다. $3$을 대입하면 등식이 성립하기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "해가 아니다. $3$을 대입하면 좌변은 $7$, 우변은 $3$이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "해가 아니다. 주어진 식에 $3$이 쓰여 있지 않기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "해가 아니다. $3$을 대입하면 문자가 사라지기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M5",
+          "no": 5,
+          "text": "해인지 알 수 없다. 방정식의 해는 하나뿐이므로 다른 수가 해가 아닌지 먼저 확인해야 하기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:54:24.964454+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$에 $3$을 대입하면 $2\\times3+1=7$이므로 등식이 성립한다. 따라서 $3$은 이 방정식의 해이다. 어떤 수가 해인지 확인할 때는 그 수를 대입하면 된다. 다른 수가 해인지 먼저 확인할 필요는 없다.",
+      "generated_at": "2026-11-10T08:54:24.758394+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "31af89ce-ebb1-42ed-aad0-74b194a02460",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:54:24.758251+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.577754+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-성질적용",
+      "body": "방정식 $3x+2=x+8$의 해에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "해는 $x=0$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "해는 $x=1$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "해는 $x=2$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "해는 $x=3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 5,
+          "text": "모든 수가 해이다. 문자가 있는 등식은 모두 방정식이면서 항등식이기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:54:50.67021+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x=3$을 대입하면 양쪽의 값이 모두 $11$이므로 $x=3$은 해이다. 문자가 있는 등식이라고 해서 모두 항등식은 아니다. 예를 들어 $x=0$을 대입하면 양쪽의 값이 각각 $2$, $8$이므로 같지 않다.",
+      "generated_at": "2026-11-10T08:54:50.49183+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "cfef23cd-4521-4506-8e6f-a8f4d318c895",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:54:50.491605+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.615877+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-성질적용",
+      "body": "방정식 $5x-4=6$의 해와 등식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x=1$은 방정식 $5x-4=6$의 해이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x=2$는 방정식 $5x-4=6$의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x=3$은 방정식 $5x-4=6$의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x=4$는 방정식 $5x-4=6$의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 5,
+          "text": "$2x+2=2(x+1)$은 문자가 들어 있는 등식이므로 방정식이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:55:12.5818+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x=2$를 대입하면 $5\\times2-4=6$이므로 양변이 같습니다. 따라서 $x=2$는 해입니다. $x=1$, $x=3$, $x=4$를 대입하면 각각 좌변이 $1$, $11$, $16$이므로 해가 아닙니다. $2x+2=2(x+1)$은 문자에 어떤 수를 넣어도 성립하는 항등식입니다. 문자가 들어 있는 등식이 모두 방정식인 것은 아닙니다.",
+      "generated_at": "2026-11-10T08:55:12.430878+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "dc536300-ae2e-462c-b28d-87b4ac78f6fc",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:55:12.430709+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.651497+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-정의이해",
+      "body": "다음 설명 중 옳은 것을 모두 고른 것은? 단, $x$는 미지수이다.\n\nㄱ. $8=3+5$는 방정식이다.\nㄴ. $2x+x=3x$는 항등식이며, $x=1$을 넣으면 참이다.\nㄷ. $x+2=5$는 방정식이며, $3$은 그 해이다.\nㄹ. $2x+x=3x$는 방정식이며, $1$은 그 해 중 하나이다.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄱ, ㄴ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "ㄱ, ㄷ"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄴ, ㄷ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 4,
+          "text": "ㄴ, ㄹ"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 5,
+          "text": "ㄷ, ㄹ"
+        }
+      ],
+      "created_at": "2026-11-10T08:52:32.916536+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "ㄱ. $8=3+5$는 등식이지만 미지수가 없으므로 방정식이 아니다.\nㄴ. $2x+x=3x$는 $x$에 어떤 수를 넣어도 참인 항등식이다.\nㄷ. $x+2=5$는 방정식이다. $x=3$을 넣으면 참이므로 $3$은 해이다.\nㄹ. $2x+x=3x$는 항등식으로, 방정식과 구별한다. 문자가 들어 있는 등식이라고 해서 모두 방정식인 것은 아니다.\n따라서 옳은 것은 ㄴ, ㄷ이다.",
+      "generated_at": "2026-11-10T08:52:32.710293+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "문자가 없는 등식과 양변이 항상 같은 등식을 방정식과 비교한다. 미지수의 유무와 등식이 참이 되는 경우를 따져 판단해야 한다.",
+      "id": "20e41ebc-063f-4ddf-821b-b65d091a357d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:52:32.710078+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.697354+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-정의이해",
+      "body": "다음 두 문장의 ‘어떤 수’를 각각 미지수 $x$로 나타내어 등식을 만든다. 두 등식은 각각 따로 생각한다.\n\n가. 어떤 수에 $10$을 더한 값은 그 수에 $4$를 더한 값보다 $6$만큼 크다.\n나. 어떤 수에서 $4$를 뺀 값은 $6$이다.\n\n만든 등식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 1,
+          "text": "가에서 만든 등식은 미지수가 있으므로 항등식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M5",
+          "no": 2,
+          "text": "가에서 만든 등식의 해는 $10$ 하나뿐이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "나에서 만든 방정식의 해는 $4$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "가에서 만든 등식은 항등식이고, 나에서 만든 방정식의 해는 $10$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가에서 만든 등식은 항등식이고, 나에서 만든 방정식의 해는 $6$이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:52:59.809937+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가에서 만든 등식은 $x+10=x+4+6$이다. 이 등식은 $x$에 어떤 수를 넣어도 참이므로 항등식이다. 따라서 해가 $10$ 하나뿐인 것은 아니다. 미지수가 있는 등식도 항등식일 수 있다.\n\n나에서 만든 방정식은 $x-4=6$이고, 해는 $10$이다. $4$나 $6$을 넣으면 등식이 참이 되지 않는다.",
+      "generated_at": "2026-11-10T08:52:59.652089+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "두 문장을 각각 등식으로 바꾼 뒤 항등식인지, 방정식의 해가 무엇인지 판단해야 한다.",
+      "id": "d5e6e964-4a56-42cb-b5bc-8898788137d6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:52:59.651870+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.724159+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-정의이해",
+      "body": "한 학생이 다음과 같이 말했다.\n\n“$x$를 포함한 등식에 $2$를 넣어 참이 되면, 그 등식은 방정식이고 해는 $2$뿐이야.”\n\n이 학생의 말이 틀렸음을 올바르게 보여 주는 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x+1=3$은 방정식이고 해는 $2$뿐이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x+1=1+x$는 $2$를 넣으면 참이지만 방정식이 아니라 항등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 3,
+          "text": "$x+1=1+x$는 방정식이고 $2$ 외의 수도 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x+1=4$는 $2$를 넣으면 거짓이므로 학생의 말을 반박한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$3=3$에는 $x$가 없지만 $2$를 넣으면 참이므로 학생의 말을 반박한다."
+        }
+      ],
+      "created_at": "2026-11-10T08:54:09.172606+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x+1=1+x$는 $x$에 $2$를 넣으면 참이지만, 어떤 수를 넣어도 참인 항등식이다. 따라서 방정식이 아니다. 문자가 들어 있는 등식이 모두 방정식은 아니다. 또 $x+1=4$는 $2$를 넣으면 거짓이므로 학생이 말한 조건에 맞지 않는다. $3=3$에는 $x$가 없다.",
+      "generated_at": "2026-11-10T08:54:08.954533+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$2$를 넣어 참이 되는 항등식과 방정식을 비교한다. 또 문자가 없는 등식과 $2$를 넣어 거짓이 되는 등식도 살펴보게 한다.",
+      "id": "42a22295-d488-4250-b15b-d30153558b71",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:53:32.384585+00:00",
+          "issues": [
+            "③에서 다가 방정식이고 2가 해임을 바로 확인하면 정답을 고를 수 있어, 가와 나의 경계 사례를 판단할 필요가 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-10T08:54:08.953908+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.757713+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-정의이해",
+      "body": "다음 등식에서 $x$는 미지수이다.\n\n$x+3=7$\n\n이 등식과 방정식의 해에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x$에 어떤 수를 대입해도 등식이 성립한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 2,
+          "text": "문자가 들어 있는 등식은 모두 방정식이므로, 이 등식도 방정식이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x$에 $4$를 대입하면 등식이 성립하므로, $4$는 이 방정식의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "등식에 $3$과 $7$이 쓰여 있으므로, 두 수는 모두 이 방정식의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "등식에 쓰인 문자 $x$ 자체가 이 방정식의 해이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:51:14.397236+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$에 $4$를 대입하면 $4+3=7$이므로 등식이 성립한다. 따라서 $4$는 이 방정식의 해이다.\n\n문자가 들어 있는 등식이 모두 방정식인 것은 아니다. 예를 들어 $2x+x=3x$는 $x$에 어떤 수를 대입해도 성립하는 항등식이다. 또 주어진 등식은 $x$에 $0$을 대입하면 성립하지 않는다. $3$이나 $7$을 대입해도 성립하지 않으므로 두 수는 해가 아니다. $x$는 미지수이고, 해는 등식을 성립하게 하는 수이다.",
+      "generated_at": "2026-11-10T08:51:14.244165+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3545fdb4-1a0c-46ac-9368-9d8f3e48b055",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:51:14.243724+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.783782+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-정의이해",
+      "body": "민서는 등식 $2(x-4)=10$에 $x=9$를 대입하니 등식이 참이 되는 것을 확인했다. 옳은 설명은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$9$는 이 방정식의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$9$는 이 방정식의 미지수이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10$은 이 방정식의 해이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "주어진 등식은 $x$의 값에 관계없이 항상 참이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 5,
+          "text": "문자가 들어 있는 등식은 모두 방정식이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:51:39.304061+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x=9$를 대입하면 $2(9-4)=10$으로 등식이 참이 된다. 따라서 $9$는 이 방정식의 해이다. 문자가 있는 등식이라도 항상 방정식인 것은 아니다. 예를 들어 $2(x-4)=2x-8$은 $x$의 값에 관계없이 항상 참인 항등식이다.",
+      "generated_at": "2026-11-10T08:51:39.150615+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "92e27fdd-5047-43df-8e14-5932d0fc5e75",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:51:39.150357+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-03-C2-정의이해",
+      "body": "다음 방정식에서 해의 뜻을 바르게 설명한 것은?\n\n$3x+1=x+5$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "해는 등식에 들어 있는 문자이므로 $x$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "해는 등식의 오른쪽에 적힌 수이므로 $5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "해는 등식을 거짓으로 만드는 값이므로 $2$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "해는 등식을 참으로 만드는 값이므로 $2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M5",
+          "no": 5,
+          "text": "방정식의 해는 언제나 하나이므로 모든 방정식에는 해가 있다."
+        }
+      ],
+      "created_at": "2026-11-10T08:52:07.546143+00:00",
+      "difficulty": "normal",
+      "disabled_at": "2026-11-10T09:09:19.885212+00:00",
+      "explanation": "$x$에 $2$를 대입하면 $3x+1=7$, $x+5=7$이므로 등식이 참이 된다. 따라서 $2$는 이 방정식의 해이다.\n문자가 들어 있는 등식이 모두 방정식은 아니다. 예를 들어 $x+x=2x$는 항등식이다. 또 방정식의 해가 항상 하나인 것은 아니다. 예를 들어 $x+1=x+2$는 해가 없다.",
+      "generated_at": "2026-11-10T08:52:07.373598+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "43f4cd25-5a30-4c23-80a7-958829e4d813",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-10T08:52:07.372559+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T10:42:12.563926+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C2-정의이해",
+      "body": "다음은 $x$를 미지수로 하여 만든 학습 카드이다. 빈칸에 들어갈 내용으로 옳은 것은?\n\n“$5x=20$은 방정식이다. (     )”",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 1,
+          "text": "문자가 들어 있는 등식은 모두 방정식이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "이 방정식의 해는 등식을 참으로 만드는 미지수의 값인 $4$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "이 방정식의 해는 등식을 거짓으로 만드는 미지수의 값이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "이 방정식의 해는 등식의 오른쪽에 있는 수인 $20$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "이 방정식은 $x$에 어떤 수를 대입해도 참이 된다."
+        }
+      ],
+      "created_at": "2026-11-10T09:10:40.751061+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x=4$를 대입하면 $5x=20$이 참이 된다. 따라서 이 방정식의 해는 $4$이다. ①처럼 문자가 들어 있다고 해서 모두 방정식은 아니다. 예를 들어 $2x+x=3x$는 문자의 값에 관계없이 항상 참인 항등식이다.",
+      "generated_at": "2026-11-10T09:10:40.443573+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c899d39a-6cc8-4387-9216-53378dbc1da6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:10:12.199465+00:00",
+          "issues": [
+            "방정식을 ‘미지수를 포함한 등식’으로 정의하면 항등식도 방정식에 포함될 수 있다. 이 경우 해설의 항등식 예만으로 ②를 틀렸다고 할 수 없어 정답이 하나로 확정되지 않는다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-10T09:10:40.443225+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.821332+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C3-오개념판별",
+      "body": "다음 두 등식에 대한 학생들의 말 중 옳은 것은?\n\n가. $2(x+1)=2x+2$\n나. $2(x+1)=x+2$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 1,
+          "text": "문자가 들어 있으므로 가와 나는 모두 방정식이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x=0$을 넣으면 둘 다 성립하므로 가와 나는 모두 항등식이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "가에 $x=0$을 넣어 성립하는 것만으로 가가 항등식임을 알 수 있어. 나는 방정식이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "가는 $x$에 어떤 값을 넣어도 성립하므로 항등식이야. 나는 $x$의 값에 따라 성립하기도 하고 성립하지 않기도 하므로 방정식이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가는 $x=0$일 때만 성립하므로 방정식이야. 나는 $x$에 어떤 값을 넣어도 성립하므로 항등식이야."
+        }
+      ],
+      "created_at": "2026-11-10T08:57:47.629944+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가는 $x$에 어떤 값을 넣어도 성립하므로 항등식이다. 나는 $x=0$일 때는 성립하지만, $x=1$일 때는 성립하지 않으므로 방정식이다. 따라서 정답은 ④이다.\n\n①은 문자가 들어 있는 등식을 모두 방정식이라고 잘못 생각한 것이다. ②와 ③처럼 한 가지 값만 넣어 성립하는지 확인해서는 항등식인지 알 수 없다. ⑤는 가와 나를 반대로 구별했다.",
+      "generated_at": "2026-11-10T08:57:47.477827+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 등식에 대한 학생들의 주장 중 옳은 것을 판단하게 했다. 특히 한 가지 값을 넣어 확인한 것만으로 항등식인지 알 수 있는지도 생각해야 한다.",
+      "id": "e39ae2d3-d4aa-439e-b9e5-7dd5d7eefc02",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:57:47.477593+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.856462+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C3-오개념판별",
+      "body": "등식 $3x-3=3(x-1)$에 대해 세 학생이 다음과 같이 말했습니다.\n\n가: $x=0$을 넣으면 양변이 같아. 따라서 이 등식은 항등식이야.\n나: 문자가 들어 있는 등식은 모두 방정식이야. 따라서 이 등식은 항등식이 아니야.\n다: 오른쪽을 계산하면 $3x-3$이야. 따라서 $x$에 어떤 수를 넣어도 양변이 같으므로 항등식이야.\n\n옳은 결론을 올바른 이유로 설명한 학생을 모두 고른 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "가"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 2,
+          "text": "나"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "다"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "가, 다"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 5,
+          "text": "나, 다"
+        }
+      ],
+      "created_at": "2026-11-10T08:58:11.677982+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "다의 말이 옳습니다. 오른쪽을 계산하면 왼쪽과 같은 $3x-3$이므로, $x$에 어떤 수를 넣어도 양변이 같습니다.\n\n가의 결론은 옳지만, 한 수를 넣어 양변이 같다는 것만으로는 항등식인지 알 수 없습니다. 예를 들어 $3x-3=-3$은 $x=0$을 넣으면 양변이 같지만, $x=1$을 넣으면 같지 않습니다.\n\n나는 문자가 들어 있는 등식은 모두 방정식이라고 생각했습니다. 하지만 문자가 들어 있어도 어떤 수를 넣든 양변이 같으면 항등식입니다.",
+      "generated_at": "2026-11-10T08:58:11.499561+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "세 학생의 말을 보고 결론뿐 아니라 그 이유도 옳은지 판단하게 했다. 특히 한 수를 넣어 확인한 것만으로 항등식이라고 할 수 있는지 생각해야 한다.",
+      "id": "d4d8e8a4-0952-4da6-bb57-67145bb2a17c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:58:11.499387+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.896886+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C3-오개념판별",
+      "body": "지우가 등식 $x+x=2x$의 양변에 각각 $4$를 더했습니다. 지우는 다음과 같이 말했습니다.\n\n“새로 만든 등식 $x+x+4=2x+4$는 문자가 들어 있으므로 방정식이야.”\n\n지우의 말을 판단하고, 그 이유를 바르게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 1,
+          "text": "옳다. 새 등식에 문자가 들어 있으므로 방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. 새 등식에 $x=0$을 넣으면 성립하므로 방정식이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳지 않다. 처음 등식은 어떤 수를 넣어도 성립하고, 양변에 각각 $4$를 더해도 그러하므로 새 등식은 항등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳지 않다. 새 등식에 $x=0$을 넣으면 성립하므로 새 등식은 항등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. 새 등식의 양변에 같은 문자 $x$가 있으므로 새 등식은 항등식이다."
+        }
+      ],
+      "created_at": "2026-11-10T08:58:43.802899+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정답은 ③입니다. $x+x=2x$는 $x$에 어떤 수를 넣어도 성립합니다. 양변에 각각 $4$를 더해도 이 성질은 바뀌지 않으므로 새 등식도 항등식입니다.\n\n①은 문자가 들어 있는 등식은 모두 방정식이라고 생각한 잘못입니다. ②와 ④처럼 한 수를 넣어 성립하는지만 확인해서는 방정식인지 항등식인지 판단할 수 없습니다. ⑤처럼 양변에 같은 문자가 있다는 것만으로 항등식이라고 판단할 수도 없습니다. 예를 들어 $x+4=x+5$는 항등식이 아닙니다.",
+      "generated_at": "2026-11-10T08:58:43.228162+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "처음 등식의 양변에 같은 수를 더한 뒤, 새 등식이 방정식이라고 주장한 학생의 말을 판단하게 했습니다.",
+      "id": "62bb7310-14dd-4f2a-b9d7-28ecf0157ea5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:58:43.227914+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.932341+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C3-오개념판별",
+      "body": "다음 등식에 대한 설명으로 옳은 것은?\n\n$2(x+3)=2x+6$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 1,
+          "text": "문자 $x$가 있으므로 방정식이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x$에 어떤 수를 넣어도 등식이 성립하므로 항등식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x$에 $0$을 넣을 때만 등식이 성립하므로 방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x$에 $3$을 넣을 때만 등식이 성립하므로 방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x$에 어떤 수를 넣어도 등식이 성립하지 않으므로 항등식이 아니다."
+        }
+      ],
+      "created_at": "2026-11-10T08:56:45.809594+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "좌변의 괄호를 풀면 $2x+6$이므로, $x$에 어떤 수를 넣어도 등식이 성립한다. 따라서 이 등식은 항등식이다. ①처럼 문자가 있다는 이유만으로 방정식이라고 생각하면 안 된다.",
+      "generated_at": "2026-11-10T08:56:45.629395+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1161412c-307f-474c-88f7-d19650e2cf46",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:56:45.625160+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.957194+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C3-오개념판별",
+      "body": "민수는 “문자가 들어 있는 등식은 모두 방정식이야.”라고 말했습니다. 다음 등식을 이용하여 민수의 말이 옳지 않음을 설명한 것은?\n\n$x+4=4+x$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x$에 $0$을 넣을 때만 성립하므로 방정식이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "문자가 들어 있지 않으므로 항등식이야."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x$에 어떤 수를 넣어도 성립하므로 항등식이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 4,
+          "text": "문자 $x$가 들어 있으므로 방정식이야."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x$에 $4$를 넣으면 성립하므로 방정식이야."
+        }
+      ],
+      "created_at": "2026-11-10T08:57:02.33165+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$에 어떤 수를 넣어도 등식이 성립하므로 이 등식은 항등식입니다. 문자가 들어 있다는 이유만으로 모두 방정식이라고 생각하면 안 됩니다. 따라서 정답은 ③입니다.",
+      "generated_at": "2026-11-10T08:57:02.134459+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "62a948d3-b2c8-47fc-8dda-3e6ee2da07c6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:57:02.134244+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:17.987261+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C3-오개념판별",
+      "body": "지우는 $4x-3=2x+2x-3$에 문자가 있으므로 방정식이라고 판단했습니다. 지우의 판단이 옳은지 확인하려면 무엇을 알아보아야 할까요?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x$에 $0$을 넣었을 때 등식이 성립하는지 알아본다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M4",
+          "no": 2,
+          "text": "등식에 문자가 들어 있는지만 알아본다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x$에 어떤 수를 넣어도 등식이 성립하는지 알아본다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x$에 $1$을 넣었을 때 등식이 성립하는지 알아본다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "좌변과 우변이 처음부터 똑같은 모양으로 쓰여 있는지 알아본다."
+        }
+      ],
+      "created_at": "2026-11-10T08:57:25.942827+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "우변의 $2x+2x-3$은 $4x-3$과 같습니다. 따라서 $x$에 어떤 수를 넣어도 등식이 성립하므로 이 등식은 항등식입니다. ②를 고른 학생은 문자가 들어 있는 등식은 모두 방정식이라고 잘못 생각한 것입니다.",
+      "generated_at": "2026-11-10T08:57:25.770646+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "5784d91d-ef73-46c7-9f1b-561cc2cd0367",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:57:25.770503+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.023731+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-성질적용",
+      "body": "다음은 방정식 $2x+6=14$를 푸는 과정이다.\n\n① $2x+6=14$\n② $2x=8$\n③ $x=4$\n\n각 단계에서 이용한 등식의 성질을 바르게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 1,
+          "text": "①에서 ②로 갈 때 왼쪽에서만 $6$을 뺐다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M3",
+          "no": 2,
+          "text": "①에서 ②로 갈 때 $6$을 이항하면 부호가 바뀌므로, 양변에서 $6$을 빼는 것과는 관계가 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M6",
+          "no": 3,
+          "text": "②에서 ③으로 갈 때 양변을 $0$으로 나누었다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "②에서 ③으로 갈 때 양변을 $2$로 나누었다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "①에서 ②로 갈 때 양변에 $6$을 더했다."
+        }
+      ],
+      "created_at": "2026-11-10T09:01:46.971054+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정답은 ④이다. ②에서 ③으로 갈 때 양변을 $2$로 나누었다.\n①은 한쪽에서만 $6$을 뺐다고 설명했지만, 실제로는 양변에서 $6$을 뺐다. ②에서 $6$을 이항한 것은 양변에서 $6$을 빼는 것과 같다. ③처럼 $0$으로 나누는 것은 할 수 없다. ⑤처럼 양변에 $6$을 더하면 ②가 되지 않는다.",
+      "generated_at": "2026-11-10T09:01:46.701134+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "방정식을 푸는 여러 단계에서 어떤 등식의 성질을 이용했는지 판단하게 한다.",
+      "id": "96035710-a79c-4c06-8e0f-ddfddfa8273a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:01:46.700958+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.076949+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-성질적용",
+      "body": "다음은 방정식을 푸는 과정이다.\n\n① $4x+2=2x+2$\n② $2x=0$  (①의 양변에서 $2x+2$를 뺐다.)\n③ $2=0$  (②의 양변을 $x$로 나누었다.)\n④ 해가 없다.\n\n이 과정에서 처음으로 잘못된 단계와 그 이유를 바르게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 1,
+          "text": "①에서 ②로 갈 때, 좌변에서만 $2x$를 빼고 우변에서만 $2$를 빼야 하므로 틀렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M3",
+          "no": 2,
+          "text": "①에서 ②로 갈 때, 이항을 할 때는 등식의 성질을 쓰면 안 되므로 틀렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "②에서 ③으로 갈 때, 양변을 서로 다른 수로 나누었으므로 틀렸다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "②에서 ③으로 갈 때, $x$가 $0$인데 양변을 $x$로 나누었으므로 틀렸다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M6",
+          "no": 5,
+          "text": "②에서 ③으로 갈 때, 양변을 $x$로 나누지 말고 $0$으로 나누어야 하므로 틀렸다."
+        }
+      ],
+      "created_at": "2026-11-10T09:02:16.375976+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정답은 ④이다. ②에서 $x=0$이므로 양변을 $x$로 나눌 수 없다. ①에서 ②로 갈 때는 양변에서 같은 식을 빼는 등식의 성질을 이용했다. 한쪽 변에서만 빼거나 양변에서 서로 다른 것을 빼서는 안 된다. 또 양변을 $0$으로 나눌 수도 없다. 주어진 방정식의 해는 $x=0$이다.",
+      "generated_at": "2026-11-10T09:02:16.155713+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "여러 풀이 단계에서 처음 잘못된 단계를 찾고, 양변을 $0$으로 나눌 수 없다는 성질을 적용해 이유를 판단하게 한다.",
+      "id": "6d417dc8-eaa7-4409-b95d-ebf01b350d67",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:02:16.155204+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.114318+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-성질적용",
+      "body": "다음은 방정식 $3(x-2)=12$를 푼 세 학생의 풀이이다.\n\n(가) 양변을 $3$으로 나누어 $x-2=4$를 얻었다. 양변에 $2$를 더하여 $x=6$을 얻었다.\n\n(나) 괄호를 풀어 $3x-6=12$를 얻었다. 양변에 $6$을 더하고, 다시 양변을 $3$으로 나누어 $x=6$을 얻었다.\n\n(다) 양변을 $3$으로 나누어 $x-2=12$를 얻었다. 양변에 $2$를 더하여 $x=14$를 얻었다.\n\n각 단계가 모두 바른 풀이를 있는 대로 고른 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "(가)"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "(나)"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 3,
+          "text": "(다)"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "(가), (나)"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 5,
+          "text": "(가), (다)"
+        }
+      ],
+      "created_at": "2026-11-10T09:02:50.591769+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "(가)에서는 양변을 $3$으로 나누고 양변에 $2$를 더했다. (나)에서도 괄호를 바르게 풀고, 양변에 같은 수를 더한 뒤 $0$이 아닌 같은 수로 나누었다. 따라서 두 풀이는 모두 바르다.\n\n(다)에서는 왼쪽 변만 $3$으로 나누었다. 양변을 $3$으로 나누면 오른쪽 변도 $4$가 되어야 한다. (다)를 바른 풀이로 고른 학생은 한쪽 변에만 연산해도 된다고 생각했을 수 있다.",
+      "generated_at": "2026-11-10T09:02:50.342886+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "세 풀이의 각 단계에서 등식의 성질이 바르게 적용되었는지 비교하여 판단하게 했다.",
+      "id": "8ca36532-ca28-4329-a1f2-f0899779bbb6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:02:50.342740+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.251609+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-성질적용",
+      "body": "방정식 $3x+4=19$를 풀 때, 다음 단계로 $3x=15$를 얻었다. 이 과정을 바르게 설명한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "양변에 $4$를 더한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 2,
+          "text": "왼쪽 변에서만 $4$를 뺀다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "양변에서 $4$를 뺀다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 4,
+          "text": "왼쪽 변에서는 $4$를 빼고, 오른쪽 변에는 $4$를 더한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M3",
+          "no": 5,
+          "text": "왼쪽의 $4$를 오른쪽으로 옮기면 부호가 바뀌며, 이는 양변에서 같은 수를 빼는 것과 관계없다."
+        }
+      ],
+      "created_at": "2026-11-10T09:00:49.106317+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변에서 $4$를 빼면 $3x+4-4=19-4$이므로 $3x=15$가 된다. ②와 ④는 양변에 같은 계산을 하지 않았다. ⑤에서 말한 이항은 양변에서 같은 수를 빼는 등식의 성질로 설명할 수 있다. ①은 양변에 $4$를 더하므로 주어진 결과가 나오지 않는다.",
+      "generated_at": "2026-11-10T09:00:48.954731+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ae773f45-b988-4831-990f-9cf3f3011594",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:00:48.954603+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.307507+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-성질적용",
+      "body": "방정식 $-2x=10$에서 등식의 성질을 이용하여 $x=-5$를 얻으려고 한다. 어떻게 해야 하는가?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "양변을 $-2$로 나눈다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 2,
+          "text": "좌변만 $-2$로 나눈다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 3,
+          "text": "좌변은 $-2$로, 우변은 $2$로 나눈다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M6",
+          "no": 4,
+          "text": "양변을 $0$으로 나눈다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "양변에 $2$를 더한다."
+        }
+      ],
+      "created_at": "2026-11-10T09:01:02.820305+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변을 $-2$로 나누면 $x=-5$가 된다. ②는 한쪽 변만 나누고, ③은 양변을 서로 다른 수로 나누므로 바르지 않다. ④에서처럼 $0$으로 나눌 수는 없다. ⑤처럼 양변에 $2$를 더하면 $-2x+2=12$가 된다.",
+      "generated_at": "2026-11-10T09:01:02.534655+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "6c1d6180-79b2-4400-a272-1a688cf9f48b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:01:02.534495+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.332943+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-성질적용",
+      "body": "방정식 $\\frac{x}{3}+2=7$의 양변에 $3$을 곱하여 얻은 등식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 1,
+          "text": "$x+2=21$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 2,
+          "text": "$x+6=7$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-03-M2",
+          "no": 3,
+          "text": "$x+6=10$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x+6=21$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x+6=24$"
+        }
+      ],
+      "created_at": "2026-11-10T09:01:16.751088+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변에 $3$을 곱하면 왼쪽은 $x+6$, 오른쪽은 $21$이므로 정답은 ④이다. ①은 왼쪽의 $2$에 $3$을 곱하지 않았다. ②는 왼쪽에만 $3$을 곱했고, ③은 왼쪽에는 $3$을 곱하고 오른쪽에는 $3$을 더했다. ⑤는 오른쪽을 계산할 때 잘못한 것이다.",
+      "generated_at": "2026-11-10T09:01:16.57095+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0799fdb5-57f3-492f-a80d-e84174f89e1b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v5",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:01:16.570812+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.3627+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-이유설명",
+      "body": "다음 두 등식을 보자.\n\n$ x+4=9 $  ··· ㉠\n$ x=9-4 $  ··· ㉡\n\n$x$에 어떤 수를 넣어도 ㉠과 ㉡은 동시에 성립하거나 동시에 성립하지 않는다. 그 이유를 설명하시오. 단, $x$의 값을 구하지 말고, 등식의 성질을 이용하여 ㉠에서 ㉡으로, ㉡에서 ㉠으로 바꾸는 과정을 모두 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-10T08:59:50.171059+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "㉠의 양변에서 같은 수 $4$를 빼면 ㉡이 된다. 반대로 ㉡의 양변에 $4$를 더하면 ㉠이 된다. 따라서 $x$에 어떤 수를 넣든 두 등식은 함께 성립하거나 함께 성립하지 않는다. $4$가 다른 변에서 $-4$가 된 것은 양변에서 $4$를 뺀 결과이다. 한쪽 변에서만 $4$를 빼면 등식이 그대로 성립한다고 할 수 없다.",
+      "generated_at": "2026-11-10T08:59:49.998501+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "$x$에 특정한 수를 넣어 확인하는 대신, 어떤 수를 넣어도 두 등식이 동시에 성립하거나 동시에 성립하지 않는 이유를 설명하게 했다. 두 방향의 변형을 모두 설명해야 한다.",
+      "id": "6c6741e6-4389-4227-9c31-aaba82561f44",
+      "model": "gpt-6.1-terra",
+      "model_answer": "㉠의 양변에서 $4$를 빼면 왼쪽은 $x$, 오른쪽은 $9-4$가 되므로 ㉡이 된다. 반대로 ㉡의 양변에 $4$를 더하면 ㉠이 된다. 양변에 같은 수를 더하거나 빼면 등식이 성립하므로, $x$에 어떤 수를 넣어도 두 등식은 동시에 성립하거나 동시에 성립하지 않는다.",
+      "prompt_version": "v5",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "㉠의 양변에서 $4$를 빼면 ㉡이 됨을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-03-M2",
+            "9수02-03-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "㉡의 양변에 $4$를 더하면 ㉠이 됨을 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-03-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:59:49.998237+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.385796+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-이유설명",
+      "body": "다음은 민지의 주장이다.\n\n“$3x=6$의 양변에 $0$을 곱하면 $0=0$이 된다. 양변에 같은 수를 곱해도 등식이 성립하므로, $0=0$이 성립하면 처음 등식 $3x=6$도 성립한다.”\n\n민지의 주장이 틀렸음을 반례를 들어 설명하시오. 반례로 든 수를 $x$에 넣었을 때 두 등식이 각각 성립하는지 쓰고, 양변에 같은 수를 곱하는 등식의 성질과 관련지어 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-10T09:00:15.562602+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "예를 들어 $x=0$이면 $0=0$은 성립하지만, $3x=6$은 성립하지 않는다. 처음 등식이 성립할 때 양변에 $0$을 곱하면 등식이 성립한다. 하지만 그 반대는 항상 참이 아니다. 양변에 $0$을 곱하면 처음 등식의 양변이 같았는지 알 수 없기 때문이다. 또 양변을 $0$으로 나누어 처음 등식으로 돌아갈 수도 없다.",
+      "generated_at": "2026-11-10T09:00:15.393394+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민지의 주장이 틀렸음을 보이기 위해 반례를 직접 들고, 두 등식의 성립 여부를 비교하여 설명하게 한다.",
+      "id": "18fe8d7c-55d9-4f91-bb6c-67d5a9f69c14",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$x=0$을 넣으면 $0=0$은 성립하지만, $3x=6$은 $0=6$이 되어 성립하지 않는다. 처음 등식이 성립하면 양변에 $0$을 곱한 등식도 성립한다. 그러나 양변에 $0$을 곱하면 처음 양변의 값이 달라도 모두 $0$이 되므로, 곱한 뒤의 등식이 성립한다고 해서 처음 등식도 성립하는 것은 아니다.",
+      "prompt_version": "v5",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "[필수] $3x=6$을 성립시키지 않는 수를 반례로 제시한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "[필수] 제시한 수에서 $0=0$은 성립하고 $3x=6$은 성립하지 않음을 각각 밝힌다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "[필수] 처음 등식이 성립할 때 양변에 $0$을 곱한 등식은 성립하지만, 양변에 $0$을 곱하면 처음 양변의 값이 달라도 같아지므로 그 반대는 항상 성립하지 않는다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-03-M6"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:00:15.393092+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.421008+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-이유설명",
+      "body": "다음은 등식 $2x+6=14$를 두 가지 방법으로 바꾼 것이다.\n\n방법 가: 양변에서 $6$을 뺀 다음, 양변을 $2$로 나누어 $x=4$를 얻는다.\n방법 나: 양변을 $2$로 나눈 다음, 양변에서 $3$을 빼어 $x=4$를 얻는다.\n\n두 방법을 비교하여, $x$에 어떤 수를 넣더라도 처음 등식과 마지막 등식이 동시에 성립하거나 동시에 성립하지 않는 이유를 설명하시오. 방법 나에서 $6$이 아닌 $3$을 빼는 이유도 포함하시오.",
+      "choices": [],
+      "created_at": "2026-11-10T09:00:33.993156+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "방법 가와 나는 모두 각 단계에서 양변에 같은 연산을 한다. 또 각 연산을 거꾸로 할 수 있으므로, $x$에 어떤 수를 넣어도 각 단계의 등식은 이전 등식과 동시에 성립하거나 동시에 성립하지 않는다. 방법 나에서는 양변을 $2$로 나눌 때 $6$도 $2$로 나누어 $3$이 되므로 $3$을 뺀다. 한쪽 변에만 연산하거나, 나눈 뒤에도 $6$을 그대로 빼면 올바르게 바꾼 것이 아니다.",
+      "generated_at": "2026-11-10T09:00:33.827832+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 풀이에서 연산의 순서와 빼는 수가 다르지만 같은 결과를 얻는 이유를 비교하여 설명하게 한다. 또한 $x$에 어떤 수를 넣어도 처음과 마지막 등식의 성립 여부가 같은 이유를 묻는다.",
+      "id": "a11de57e-a0cd-4cf1-a851-bfa8f1283d79",
+      "model": "gpt-6.1-terra",
+      "model_answer": "방법 가에서는 양변에서 $6$을 빼면 $2x=8$이고, 양변을 $2$로 나누면 $x=4$이다. 방법 나에서는 양변을 $2$로 나누면 $x+3=7$이고, 양변에서 $3$을 빼면 $x=4$이다. 이때 $6$도 $2$로 나누어 $3$이 되었으므로 $3$을 뺀다. 두 방법의 각 단계는 양변에 같은 연산을 했고, 더하기와 빼기, $0$이 아닌 수로 곱하기와 나누기는 서로 거꾸로 할 수 있다. 따라서 $x$에 어떤 수를 넣어도 처음 등식과 마지막 등식은 동시에 성립하거나 동시에 성립하지 않는다.",
+      "prompt_version": "v5",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "[필수] 두 방법의 각 단계에서 양변에 같은 연산을 했음을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-03-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "[필수] 방법 나에서 양변을 $2$로 나누면 $6$이 $3$이 되므로 $3$을 뺀다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-03-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "[필수] 각 단계의 연산을 거꾸로 할 수 있음을 이용하여, $x$에 어떤 수를 넣어도 처음과 마지막 등식이 동시에 성립하거나 동시에 성립하지 않는다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T09:00:33.827741+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.450724+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-이유설명",
+      "body": "$x+5=9$에서 $x=4$로 식을 바꿀 수 있는 이유를 등식의 성질을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-10T08:58:56.111011+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x+5=9$의 양변에서 $5$를 빼면 $(x+5)-5=9-5$이므로 $x=4$가 됩니다. 등식의 양변에서 같은 수를 빼면 등식이 성립합니다. 한쪽에서만 $5$를 빼면 등식이 성립하지 않을 수 있습니다. 또 단순히 $5$를 넘겨서 부호를 바꾼다고만 하면 그 이유를 설명한 것이 아닙니다.",
+      "generated_at": "2026-11-10T08:58:55.947231+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ee10cbe2-b284-4d6f-8808-deb4d16b10aa",
+      "model": "gpt-6.1-terra",
+      "model_answer": "등식의 양변에서 같은 수 $5$를 빼도 등식이 성립하기 때문이다.",
+      "prompt_version": "v5",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "필수: 양변에서 $5$를 뺀다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-03-M2",
+            "9수02-03-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "필수: 등식의 양변에서 같은 수를 빼도 등식이 성립한다는 성질을 밝혔다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-03-M2",
+            "9수02-03-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:58:55.947092+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.484876+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-이유설명",
+      "body": "$3x=18$에서 $x=6$으로 식을 바꿀 수 있는 이유를 등식의 성질을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-10T08:59:07.955644+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "등식의 양변을 0이 아닌 같은 수로 나누어도 등식은 성립한다. 따라서 $3x=18$의 양변을 $3$으로 나누면 $x=6$이 된다. 한쪽 변만 나누거나 양변을 서로 다른 수로 나누면 등식이 성립한다고 할 수 없다.",
+      "generated_at": "2026-11-10T08:59:07.784809+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ed1f149b-a1e9-4a28-bab1-21c767d0dc84",
+      "model": "gpt-6.1-terra",
+      "model_answer": "등식의 양변을 0이 아닌 같은 수로 나누어도 등식이 성립한다. $3x=18$의 양변을 $3$으로 나누면 $x=6$이 된다.",
+      "prompt_version": "v5",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$3x=18$의 양변을 $3$으로 나누어도 등식이 성립한다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-03-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "$3x\\div 3=x$, $18\\div 3=6$임을 나타낸다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:59:07.784539+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-10T09:09:18.511638+00:00",
+      "approved_by": "minki",
+      "assessment_item_id": "9수02-03-C4-이유설명",
+      "body": "등식 $\\frac{x}{7}=2$를 $x=14$로 바꾸는 과정과 이유를 등식의 성질을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-10T08:59:24.295335+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "등식의 양변에 같은 수 $7$을 곱해도 등식이 성립한다. 따라서 $\\frac{x}{7}\\times 7=2\\times 7$에서 $x=14$를 얻는다. 한쪽에만 $7$을 곱하면 양변이 같다고 할 수 없다.",
+      "generated_at": "2026-11-10T08:59:24.112141+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "32a0a528-958f-4ac1-9d47-6418eb7dcb98",
+      "model": "gpt-6.1-terra",
+      "model_answer": "등식의 양변에 $7$을 곱해도 등식이 성립한다. 따라서 $\\frac{x}{7}\\times 7=2\\times 7$이므로 $x=14$이다.",
+      "prompt_version": "v5",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "[필수] 등식의 양변에 각각 $7$을 곱한다고 썼다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-03-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "[필수] 등식의 양변에 같은 수를 곱해도 등식이 성립한다는 이유를 썼다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-03-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-10T08:59:24.111741+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    }
+  ]
+}

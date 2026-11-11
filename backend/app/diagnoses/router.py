@@ -70,7 +70,7 @@ def selection(
         standards,
         repo.concepts(),
         repo.assessments(),
-        repo.questions(),
+        repo.question_slots(),
         repo.history(user_id),
         random.Random(),
     )
@@ -98,7 +98,7 @@ def list_units(user: User, repo: Repo) -> list[dict[str, object]]:
     links = repo.standards()
     concepts = repo.concepts()
     assessments = repo.assessments()
-    questions = repo.questions()
+    questions = repo.question_slots()
     return [
         {
             **unit.model_dump(),
@@ -174,7 +174,8 @@ def get_diagnosis(diagnosis_id: UUID, user: User, repo: Repo) -> dict[str, objec
     items = sorted(
         repo.items(user.id, diagnosis_id), key=lambda i: (i.stage, i.position)
     )
-    questions = {q.id: q for q in repo.questions()}
+    question_ids = [item.question_id for item in items]
+    questions = {q.id: q for q in repo.questions_by_ids(question_ids)}
     answers = {
         a.diagnosis_item_id: a for a in repo.answers(user.id, [i.id for i in items])
     }
@@ -238,7 +239,7 @@ def save_answer(
         item.stage == 1 and diagnosis.stage1_submitted_at is not None
     ):
         raise HTTPException(status_code=409, detail="Stage is not accepting answers")
-    question = next(q for q in repo.questions() if q.id == item.question_id)
+    question = repo.questions_by_ids([item.question_id])[0]
     if (question.question_type == "multiple_choice") != (
         body.selected_choice is not None
     ):

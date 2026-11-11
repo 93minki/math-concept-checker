@@ -23,6 +23,7 @@ from app.diagnoses.schemas import (
     MisconceptionRow,
     Question,
     QuestionChoice,
+    QuestionSlot,
     ReportRow,
     RubricRow,
     StandardLink,
@@ -45,7 +46,8 @@ class DiagnosesRepository(Protocol):
     def standards(self) -> list[StandardLink]: ...
     def concepts(self) -> list[Concept]: ...
     def assessments(self) -> list[Assessment]: ...
-    def questions(self) -> list[Question]: ...
+    def question_slots(self) -> list[QuestionSlot]: ...
+    def questions_by_ids(self, ids: list[UUID]) -> list[Question]: ...
     def history(self, user_id: UUID) -> dict[UUID, datetime]: ...
     def in_progress(self, user_id: UUID) -> list[Diagnosis]: ...
     def list_diagnoses(
@@ -162,11 +164,25 @@ class SupabaseDiagnoses:
             TypeAdapter(list[Assessment]),
         )
 
-    def questions(self) -> list[Question]:
+    def question_slots(self) -> list[QuestionSlot]:
         return self._pages(
             "questions",
-            "id,assessment_item_id,variant,question_type,body,explanation,model_answer,hard_condition,hard_condition_reason,difficulty,status",
-            TypeAdapter(list[Question]),
+            "id,assessment_item_id,variant,question_type,difficulty,status",
+            TypeAdapter(list[QuestionSlot]),
+        )
+
+    def questions_by_ids(self, ids: list[UUID]) -> list[Question]:
+        if not ids:
+            return []
+        return TypeAdapter(list[Question]).validate_python(
+            self.client.table("questions")
+            .select(
+                "id,assessment_item_id,variant,question_type,body,explanation,"
+                "model_answer,hard_condition,hard_condition_reason,difficulty,status"
+            )
+            .in_("id", [str(question_id) for question_id in dict.fromkeys(ids)])
+            .execute()
+            .data
         )
 
     def history(self, user_id: UUID) -> dict[UUID, datetime]:

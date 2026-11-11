@@ -8,6 +8,11 @@ from fastapi import Depends, Header, HTTPException
 
 from app.settings import Settings, get_settings
 
+# Clock skew allowed between Supabase Auth and this server (RFC 7519 4.1.4
+# allows a small leeway). Signature checks are unaffected. User decision
+# 2026-11-11; 10 seconds has no further basis.
+CLOCK_SKEW_SECONDS = 10
+
 
 @dataclass(frozen=True)
 class AuthUser:
@@ -49,6 +54,7 @@ def get_current_user(
             audience="authenticated",
             issuer=f"{str(settings.supabase_url).rstrip('/')}/auth/v1",
             options={"require": ["exp", "sub"]},
+            leeway=CLOCK_SKEW_SECONDS,
         )
         return AuthUser(id=UUID(claims["sub"]))
     except (jwt.PyJWTError, ValueError, KeyError, TypeError) as exc:

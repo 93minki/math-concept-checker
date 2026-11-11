@@ -72,14 +72,18 @@ def token(
     audience: str = "authenticated",
     issuer: str = ISSUER,
     kid: str = "test-key",
+    issued_at: datetime | None = None,
 ) -> str:
+    claims: dict[str, object] = {
+        "sub": str(USER_ID),
+        "aud": audience,
+        "iss": issuer,
+        "exp": expires or datetime.now(UTC) + timedelta(minutes=5),
+    }
+    if issued_at is not None:
+        claims["iat"] = issued_at
     return jwt.encode(
-        {
-            "sub": str(USER_ID),
-            "aud": audience,
-            "iss": issuer,
-            "exp": expires or datetime.now(UTC) + timedelta(minutes=5),
-        },
+        claims,
         private_key,
         algorithm="ES256",
         headers={"kid": kid},
@@ -97,7 +101,17 @@ def test_missing_or_malformed_header(
 
 
 @pytest.mark.parametrize(
-    "failure", ["signature", "expired", "aud", "iss", "unknown-kid", "no-exp", "hs256"]
+    "failure",
+    [
+        "signature",
+        "expired",
+        "future-iat",
+        "aud",
+        "iss",
+        "unknown-kid",
+        "no-exp",
+        "hs256",
+    ],
 )
 def test_invalid_token(
     client: tuple[TestClient, ec.EllipticCurvePrivateKey], failure: str
@@ -106,7 +120,12 @@ def test_invalid_token(
     if failure == "signature":
         encoded = token(ec.generate_private_key(ec.SECP256R1()))
     elif failure == "expired":
-        encoded = token(private_key, expires=datetime.now(UTC) - timedelta(seconds=1))
+        # Beyond the 10-second clock-skew leeway (app/auth.py).
+        encoded = token(private_key, expires=datetime.now(UTC) - timedelta(seconds=30))
+    elif failure == "future-iat":
+        encoded = token(
+            private_key, issued_at=datetime.now(UTC) + timedelta(seconds=30)
+        )
     elif failure == "aud":
         encoded = token(private_key, audience="other")
     elif failure == "iss":
@@ -174,3 +193,23 @@ def test_cors_preflight(
         assert response.headers["access-control-allow-origin"] == origin
     else:
         assert "access-control-allow-origin" not in response.headers
+
+
+@pytest.mark.parametrize(
+    "case",
+    ["iat-5s-ahead", "exp-5s-ago"],
+)
+def test_small_clock_skew_is_accepted(
+    client: tuple[TestClient, ec.EllipticCurvePrivateKey], case: str
+) -> None:
+    # A server clock a few seconds behind Supabase must not reject fresh
+    # tokens (2026-11-11 dev E2E 401, docs/TEST_LOG.md).
+    test_client, private_key = client
+    now = datetime.now(UTC)
+    encoded = (
+        token(private_key, issued_at=now + timedelta(seconds=5))
+        if case == "iat-5s-ahead"
+        else token(private_key, expires=now - timedelta(seconds=5))
+    )
+    response = test_client.get("/me", headers={"Authorization": f"Bearer {encoded}"})
+    assert response.status_code != 401

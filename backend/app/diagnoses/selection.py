@@ -2,7 +2,7 @@ import random
 from datetime import datetime
 from uuid import UUID
 
-from app.diagnoses.schemas import Assessment, Concept, Question, UnitStatus
+from app.diagnoses.schemas import Assessment, Concept, QuestionSlot, UnitStatus
 
 LEVELS = ["정의 이해", "성질 적용", "오개념 판별", "이유 설명"]
 
@@ -11,7 +11,7 @@ def select_questions(
     standards: list[str],
     concepts: list[Concept],
     assessments: list[Assessment],
-    questions: list[Question],
+    questions: list[QuestionSlot],
     history: dict[UUID, datetime],
     rng: random.Random,
 ) -> tuple[UnitStatus, list[UUID]]:

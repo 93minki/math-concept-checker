@@ -19,6 +19,7 @@ from app.diagnoses.schemas import (
     MisconceptionRow,
     Question,
     QuestionChoice,
+    QuestionSlot,
     ReportRow,
     RubricRow,
     StandardLink,
@@ -32,6 +33,7 @@ pytest_plugins = ["test_auth"]
 
 NOW = datetime.now(UTC)
 QUESTION = uuid4()
+EXTRA_QUESTION = uuid4()
 
 
 class FakeDiagnoses:
@@ -39,7 +41,7 @@ class FakeDiagnoses:
         self.rows: dict[UUID, Diagnosis] = {}
         self.item_rows: list[Item] = []
         self.answer_rows: dict[int, AnswerRow] = {}
-        self.events: list[str] = []
+        self.events: list[str | tuple[str, tuple[UUID, ...]]] = []
         self.conflict = False
         self.written = False
         self.grade_rows: dict[int, GradingRow] = {}
@@ -89,7 +91,7 @@ class FakeDiagnoses:
             )
         ]
 
-    def questions(self) -> list[Question]:
+    def _all_questions(self) -> list[Question]:
         return [
             Question(
                 id=QUESTION,
@@ -99,8 +101,28 @@ class FakeDiagnoses:
                 body="문제",
                 difficulty="normal",
                 status="approved",
-            )
+            ),
+            Question(
+                id=EXTRA_QUESTION,
+                assessment_item_id="unused",
+                variant=1,
+                question_type="multiple_choice",
+                body="다른 문제",
+                difficulty="normal",
+                status="approved",
+            ),
         ]
+
+    def question_slots(self) -> list[QuestionSlot]:
+        self.events.append("question_slots")
+        return [
+            QuestionSlot.model_validate(q.model_dump()) for q in self._all_questions()
+        ]
+
+    def questions_by_ids(self, ids: list[UUID]) -> list[Question]:
+        self.events.append(("questions_by_ids", tuple(ids)))
+        wanted = set(ids)
+        return [q for q in self._all_questions() if q.id in wanted]
 
     def history(self, user_id: UUID) -> dict[UUID, datetime]:
         return {}
@@ -251,7 +273,7 @@ class FakeDiagnoses:
             d.stage1_submitted_at = NOW
         d.status = "stage2" if question_ids else "completed"
         for position, qid in enumerate(question_ids, 1):
-            question = next(q for q in self.questions() if q.id == qid)
+            question = next(q for q in self._all_questions() if q.id == qid)
             self.item_rows.append(
                 Item(
                     id=len(self.item_rows) + 1,
@@ -364,6 +386,37 @@ def test_api(client: tuple[TestClient, ec.EllipticCurvePrivateKey]) -> None:
     )
     assert preflight.status_code == 200
     assert "PUT" in preflight.headers["access-control-allow-methods"]
+
+
+def test_question_bank_load_split(
+    client: tuple[TestClient, ec.EllipticCurvePrivateKey],
+) -> None:
+    tc, key = client
+    profiles = FakeProfiles()
+    profiles.complete_signup(USER_ID)
+    repo = FakeDiagnoses()
+    app.dependency_overrides[get_profiles] = lambda: profiles
+    app.dependency_overrides[get_diagnoses] = lambda: repo
+    headers = {"Authorization": f"Bearer {token(key)}"}
+
+    repo.events.clear()
+    assert tc.get("/units", headers=headers).status_code == 200
+    assert "question_slots" in repo.events
+    assert not any(event[0] == "questions_by_ids" for event in repo.events)
+
+    repo.events.clear()
+    start = tc.post("/diagnoses", headers=headers, json={"display_unit_id": 1})
+    assert start.status_code == 201
+    did = start.json()["diagnosis_id"]
+    assert "question_slots" in repo.events
+    assert not any(event[0] == "questions_by_ids" for event in repo.events)
+
+    repo.events.clear()
+    assert tc.get(f"/diagnoses/{did}", headers=headers).status_code == 200
+    by_ids = [event for event in repo.events if event[0] == "questions_by_ids"]
+    assert len(by_ids) == 1
+    assert set(by_ids[0][1]) == {QUESTION}
+    assert EXTRA_QUESTION not in set(by_ids[0][1])
 
 
 def test_restart_written_and_expiry(

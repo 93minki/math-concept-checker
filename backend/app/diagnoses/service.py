@@ -17,6 +17,7 @@ from app.ai.schemas import (
     Question as AIQuestion,
 )
 from app.ai.scoring import score_choice, score_written
+from app.ai.terms import earliest_standard
 from app.diagnoses.ai import DiagnosisAI
 from app.diagnoses.repository import DiagnosesRepository
 from app.diagnoses.schemas import (
@@ -43,7 +44,8 @@ def grade_items(
     items: list[Item],
     answers: dict[int, AnswerRow],
 ) -> list[GradingRow]:
-    questions = {q.id: q for q in repo.questions()}
+    question_ids = [item.question_id for item in items]
+    questions = {q.id: q for q in repo.questions_by_ids(question_ids)}
     assessments = {a.id: a for a in repo.assessments()}
     misconceptions = repo.misconceptions()
     result: list[GradingRow] = []
@@ -137,7 +139,7 @@ def pick_hard(
 ) -> list[UUID]:
     passed = {g.diagnosis_item_id for g in gradings if g.passed}
     history = repo.history(user_id)
-    questions = repo.questions()
+    questions = repo.question_slots()
     rng = random.Random()
     chosen: list[UUID] = []
     for item in sorted(items, key=lambda i: i.position):
@@ -308,13 +310,6 @@ def create_report(
     contexts = [load_concept(code) for code in codes]
     if not contexts:
         raise ValueError("No concept data")
-    terms = contexts[0].terms.model_copy(
-        update={
-            "not_yet_learned": sorted(
-                {term for c in contexts for term in c.terms.not_yet_learned}
-            )
-        }
-    )
     unit = next(u for u in repo.units() if u.id == diagnosis.display_unit_id)
     unit_data = contexts[0].display_unit.model_copy(
         update={
@@ -327,7 +322,7 @@ def create_report(
     # IDs in report inputs are global, matching these DB-derived entries.
     context = contexts[0].model_copy(
         update={
-            "terms": terms,
+            "standard_code": earliest_standard(standards),
             "display_unit": unit_data,
             "misconceptions": [
                 Misconception(id=m.id, concept_ids=m.concept_ids, text=m.content)

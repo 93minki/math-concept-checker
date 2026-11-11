@@ -8,6 +8,7 @@ from app.bank.curriculum import load_curriculum
 from app.bank.operations import change_status, generate
 from app.bank.repository import get_repository
 from app.bank.review import render_review
+from app.bank.transfer import export_bank, import_bank
 
 
 def main() -> None:
@@ -39,6 +40,13 @@ def main() -> None:
     disable.add_argument("ids", nargs="+")
     backlog = commands.add_parser("backlog")
     backlog.add_argument("--standard", required=True)
+    export = commands.add_parser("export")
+    selection = export.add_mutually_exclusive_group(required=True)
+    selection.add_argument("--standard")
+    selection.add_argument("--all", action="store_true")
+    export.add_argument("--out", type=Path, required=True)
+    importing = commands.add_parser("import")
+    importing.add_argument("file", type=Path)
     args = parser.parse_args()
     try:
         if args.command == "load-curriculum":
@@ -56,7 +64,12 @@ def main() -> None:
         ):
             parser.error("--max-cost-usd 또는 --fake가 필요합니다")
         repo = get_repository()
-        if args.command == "generate":
+        if args.command == "export":
+            export_bank(repo, args.out, args.standard)
+            print(args.out)
+        elif args.command == "import":
+            import_bank(repo, args.file)
+        elif args.command == "generate":
             generate(
                 repo,
                 args.standard,

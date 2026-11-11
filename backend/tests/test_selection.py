@@ -4,7 +4,7 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from uuid import uuid4
 
-from app.diagnoses.schemas import Assessment, Concept, Question
+from app.diagnoses.schemas import Assessment, Concept, QuestionSlot
 from app.diagnoses.selection import select_questions
 
 
@@ -32,12 +32,11 @@ def test_selection() -> None:
         ),
     ]
     questions = [
-        Question(
+        QuestionSlot(
             id=q,
             assessment_item_id=a,
             variant=v,
             question_type="multiple_choice",
-            body="문제",
             difficulty="normal",
             status="approved",
         )

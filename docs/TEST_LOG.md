@@ -148,3 +148,10 @@
 - 원인 분류: 환경·설정
 - 원인: PC 시계가 약 2초 늦었다 (`sntp time.apple.com` +1.97s). Supabase가 막 발급한 토큰의 `iat`가 백엔드 기준 미래가 되어, PyJWT 2.15.1 `_validate_iat`가 `ImmatureSignatureError`를 냈고 `backend/app/auth.py`가 leeway 0으로 이를 401로 바꿨다.
 - 해결: 사용자가 `sudo sntp -sS time.apple.com`으로 시계를 맞춘 뒤 3개 모두 통과. 코드에 허용 오차(`leeway`)를 둘지는 결정 대기 (`docs/PROGRESS.md`).
+
+### 2026-11-11 — frontend/e2e-dev/access.spec.ts, flow.spec.ts (desktop·mobile) (재발)
+- 작업: 계획 "확장 준비" 8단계 검수, F-05·F-03·F-08
+- 증상: 같은 날 오전 기록과 같다. access는 `POST /signup/complete` 401, flow는 단원 목록에서 180초 시간 초과.
+- 원인 분류: 환경·설정
+- 원인: 오전에 `sntp -sS`로 맞춘 PC 시계가 약 2시간 뒤 다시 약 2초 늦어졌다 (`sntp time.apple.com` +2.02s). 토큰 `iat`가 백엔드 기준 미래가 되어 PyJWT가 거부했다 (`backend/app/auth.py`, leeway 0). 같은 원인 2회째.
+- 해결: 사용자가 시계를 다시 맞춘 뒤 통과. 재발 방지로 백엔드 토큰 검증에 시각 허용 오차 10초를 두었다 (사용자 결정 2026-11-11, `backend/app/auth.py` `CLOCK_SKEW_SECONDS`, 경계 테스트 `tests/test_auth.py`).

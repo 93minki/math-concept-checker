@@ -58,6 +58,9 @@ class MemoryBank:
     def insert_question(self, payload: Row) -> None:
         self.insert("questions", {**payload, "status": "validated"})
 
+    def import_question(self, payload: Row) -> None:
+        raise NotImplementedError
+
 
 def test_curriculum_data_and_idempotent_load() -> None:
     standards, units, concepts = read_data()
