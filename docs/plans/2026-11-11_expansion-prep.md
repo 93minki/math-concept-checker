@@ -5,7 +5,7 @@
 - 상태: 완료
 - 이슈: #15 (https://github.com/93minki/math-concept-checker/issues/15)
 - 브랜치: plan/2026-11-11_expansion-prep
-- PR: (PR 생성 후 링크)
+- PR: #16 (https://github.com/93minki/math-concept-checker/pull/16)
 - 마일스톤: M2 문제 은행·진단
 
 ## 목표
