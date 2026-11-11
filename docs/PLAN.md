@@ -111,6 +111,9 @@
 ## 진행 메모
 - 2026-11-11: 회사 PC 환경 맞춤. 검사 9개 통과 (pytest 116, Vitest 46, Playwright 16). `pnpm test:e2e:dev`는 처음에 3개 실패했다. 원인은 PC 시계가 약 2초 늦은 것이었다 (`sntp time.apple.com` +1.97s). Supabase가 방금 발급한 토큰의 `iat`가 미래가 되고, PyJWT 2.15.1 `_validate_iat`가 `ImmatureSignatureError`를 내 백엔드가 401을 돌려줬다(`backend/app/auth.py:43-52`, leeway 0). 사용자가 시계를 맞춘 뒤 3개 모두 통과했다.
   - 제안(범위 밖, 결정 필요): 서버 시계 차이에 견디도록 `jwt.decode`에 몇 초의 `leeway`를 두는 것. 운영 서버에서도 같은 일이 생길 수 있다.
+- 2026-11-11: 1~5단계 완료. 1단계 문서(`9c37b89`), 2단계 Prettier(Cursor, `a175c2d`, 포맷만 바뀐 것을 공백 제거 비교로 확인), 3단계 목록 API(Codex, `aa3b135`), 4단계 목록 화면(Codex)·5단계 로그인 흐름 E2E(Opus)(`82ba612`). 검사 10개 통과 (pytest 118, Vitest 53, Playwright 18), `pnpm test:e2e:dev` 3개 통과.
+  - Cursor는 명령마다 실행 승인을 기다린다. Opus가 명령 내용을 확인하고 pane에 승인 키를 보냈다.
+  - 사용자 요청으로 `backend/Makefile`(개발 서버 실행)을 함께 올렸다 (`7ffb0a9`).
 
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
