@@ -71,17 +71,23 @@ def test_curriculum_data_and_idempotent_load() -> None:
         "03": 19,
         "04": 9,
     }
-    assert (
-        next(s["text"] for s in standards if s["code"] == "9수02-03")
-        == concepts[0].standard_text
-    )
+    texts = {s["code"]: s["text"] for s in standards}
+    assert {c.standard_code for c in concepts} >= {"9수02-03"}
+    for concept in concepts:
+        assert texts[concept.standard_code] == concept.standard_text
     repo = MemoryBank()
     load_curriculum(repo)
     counts = {k: len(v) for k, v in repo.tables.items()}
     load_curriculum(repo)
     assert counts == {k: len(v) for k, v in repo.tables.items()}
-    assert repo.tables["misconceptions"][0]["id"] == "9수02-03-M1"
-    assert repo.tables["misconception_concepts"][0]["misconception_id"] == "9수02-03-M1"
+    # Misconception IDs are prefixed with their standard (docs/DESIGN.md).
+    assert all(
+        str(row["id"]).startswith(f"{row['standard_code']}-M")
+        for row in repo.tables["misconceptions"]
+    )
+    assert "9수02-03-M1" in {
+        row["misconception_id"] for row in repo.tables["misconception_concepts"]
+    }
 
 
 def test_invalid_data_prevents_writes(monkeypatch: pytest.MonkeyPatch) -> None:
