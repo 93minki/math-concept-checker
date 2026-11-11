@@ -17,6 +17,7 @@ from app.ai.schemas import (
     Question as AIQuestion,
 )
 from app.ai.scoring import score_choice, score_written
+from app.ai.terms import earliest_standard
 from app.diagnoses.ai import DiagnosisAI
 from app.diagnoses.repository import DiagnosesRepository
 from app.diagnoses.schemas import (
@@ -309,13 +310,6 @@ def create_report(
     contexts = [load_concept(code) for code in codes]
     if not contexts:
         raise ValueError("No concept data")
-    terms = contexts[0].terms.model_copy(
-        update={
-            "not_yet_learned": sorted(
-                {term for c in contexts for term in c.terms.not_yet_learned}
-            )
-        }
-    )
     unit = next(u for u in repo.units() if u.id == diagnosis.display_unit_id)
     unit_data = contexts[0].display_unit.model_copy(
         update={
@@ -328,7 +322,7 @@ def create_report(
     # IDs in report inputs are global, matching these DB-derived entries.
     context = contexts[0].model_copy(
         update={
-            "terms": terms,
+            "standard_code": earliest_standard(standards),
             "display_unit": unit_data,
             "misconceptions": [
                 Misconception(id=m.id, concept_ids=m.concept_ids, text=m.content)

@@ -26,6 +26,7 @@ from app.ai.schemas import (
     load_concept,
 )
 from app.ai.scoring import Score, score_written
+from app.ai.terms import earliest_standard, find_banned_terms, term_rules
 from app.ai.validators import ValidationIssue, validate_question
 
 
@@ -182,7 +183,14 @@ def _context(
         ),
         "formal_terms": ", ".join(concept.terms.formal),
         "teaching_only_terms": ", ".join(concept.terms.teaching_only),
-        "not_yet_learned_terms": ", ".join(concept.terms.not_yet_learned),
+        "not_yet_learned_terms": ", ".join(
+            sorted(
+                (
+                    *term_rules(concept.standard_code)[0],
+                    *term_rules(concept.standard_code)[1],
+                )
+            )
+        ),
         "hard_conditions": render_hard_conditions(item.level, difficulty),
         "existing_variants": existing_variants,
     }
@@ -368,10 +376,15 @@ def validate_report(
         m for result in report_input.concepts for m in result.misconception_ids
     )
     allowed_c = {result.concept_id for result in report_input.concepts}
+    standard = earliest_standard(
+        [
+            concept.standard_code,
+            *(result.concept_id.split("-C")[0] for result in report_input.concepts),
+        ]
+    )
     issues = [
         ValidationIssue("not_yet_learned", term)
-        for term in concept.terms.not_yet_learned
-        if term in text
+        for term in find_banned_terms(text, standard)
     ]
     issues.extend(
         ValidationIssue("unknown_misconception", identifier)
@@ -404,12 +417,20 @@ def write_report(
     concept = concept_data or load_concept(
         report_input.concepts[0].concept_id.split("-C")[0]
     )
+    standard = earliest_standard(
+        [
+            concept.standard_code,
+            *(result.concept_id.split("-C")[0] for result in report_input.concepts),
+        ]
+    )
     prompt = load_prompt(
         "write_report",
         {
             "grade": concept.display_unit.grade,
             "display_unit": concept.display_unit.name,
-            "not_yet_learned_terms": ", ".join(concept.terms.not_yet_learned),
+            "not_yet_learned_terms": ", ".join(
+                sorted((*term_rules(standard)[0], *term_rules(standard)[1]))
+            ),
             "misconceptions": json.dumps(
                 [
                     {"id": m.id, "text": m.text}

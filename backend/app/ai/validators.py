@@ -7,11 +7,13 @@ from typing import Protocol
 
 from app.ai.hard import HARD_CONDITIONS
 from app.ai.schemas import ConceptData, Question
+from app.ai.terms import find_banned_terms
 
 KATEX_SCRIPT = (
     Path(__file__).resolve().parents[3] / "frontend" / "scripts" / "katex-check.mjs"
 )
 FORMULA = re.compile(r"\$([^$]+)\$")
+RUBRIC_LABEL = re.compile(r"^\s*(?:필수\s*[:：]|\(필수\)|\[필수\]|【필수】)")
 
 
 @dataclass(frozen=True)
@@ -110,6 +112,8 @@ def validate_question(
         if not question.model_answer or not question.model_answer.strip():
             add("model_answer", "Written question requires model answer")
         for element in question.rubric:
+            if RUBRIC_LABEL.match(element.description):
+                add("rubric_label", "Rubric description starts with a required label")
             for identifier in element.related_misconception_ids:
                 if not valid_misconception(identifier):
                     add("misconception", f"Invalid misconception: {identifier}")
@@ -122,9 +126,13 @@ def validate_question(
     for notation in concepts.terms.forbidden_notation:
         if any(notation in value for value in texts):
             add("forbidden_notation", f"Forbidden notation: {notation}")
-    for term in concepts.terms.not_yet_learned:
-        if any(term in value for value in texts):
-            add("not_yet_learned", f"Term not yet learned: {term}")
+    banned = {
+        term
+        for value in texts
+        for term in find_banned_terms(value, concepts.standard_code)
+    }
+    for term in sorted(banned):
+        add("not_yet_learned", f"Term not yet learned: {term}")
     formulas = [match for value in texts for match in FORMULA.findall(value)]
     issues.extend((checker or KatexChecker()).check(formulas))
 

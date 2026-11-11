@@ -251,6 +251,29 @@ def test_common_rules() -> None:
     )
 
 
+@pytest.mark.parametrize(
+    "label", ["필수:", "필수 :", "필수：", "(필수)", "[필수]", "【필수】"]
+)
+def test_rubric_required_label(label: str) -> None:
+    q = good_question().model_copy(
+        update={
+            "type": "written",
+            "rubric": [
+                RubricElement(
+                    no=1,
+                    description=f"  {label} 풀이",
+                    points=1,
+                    required=True,
+                    related_misconception_ids=[],
+                )
+            ],
+        }
+    )
+    assert "rubric_label" in codes(q)
+    q.rubric[0].description = "풀이에는 필수 과정이 있어요"
+    assert "rubric_label" not in codes(q)
+
+
 def test_real_katex() -> None:
     assert KatexChecker().check([r"x+1=2"]) == []
     assert [issue.code for issue in KatexChecker().check([r"\overparen{AB}"])] == [

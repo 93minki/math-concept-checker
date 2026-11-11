@@ -27,7 +27,6 @@ class Misconception(BaseModel):
 class Terms(BaseModel):
     formal: list[str]
     teaching_only: list[str]
-    not_yet_learned: list[str]
     forbidden_notation: list[str]
 
 
