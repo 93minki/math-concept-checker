@@ -1,0 +1,1425 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수01-05-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T06:48:58.691470+00:00",
+          "issues": [
+            "계산 단계에서 쓰인 성질을 식별하는 문제로, 정수와 유리수의 덧셈·뺄셈을 직접 계산할 수 있는지는 측정하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:49:30.307988+00:00",
+          "issues": [
+            "계산 과정이 모두 주어져 있어 학생이 정수와 유리수의 계산을 직접 할 수 있는지 측정하지 못한다. 정답은 계산 없이 성질을 판별하여 고를 수 있다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:49:59.753125+00:00",
+          "issues": [
+            "처음 수를 구하는 식만 고르게 하므로 유리수의 덧셈·뺄셈을 실제로 계산할 수 있는지 측정하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T06:49:59.976847+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T07:21:09.282835+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수01-05-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-11T07:21:31.175143+00:00",
+          "issues": [
+            "보기 ③: M2만으로는 7이 나오지 않는다. 음수를 빼는 계산을 바르게 바꾸면 (-4)+3=-1이며, 7을 얻으려면 빼기를 같은 음수의 덧셈으로 바꾸는 별도의 오류도 필요하다. 따라서 M2를 독립적으로 판별하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T07:21:56.608352+00:00",
+          "issues": [
+            "정답 ④는 음수를 빼는 계산만 바로잡으면 고를 수 있어, 두 음수의 덧셈에 곱셈의 부호 규칙을 적용하는 오류(M2)를 판별하는지는 확인할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T07:22:17.973572+00:00",
+          "issues": [
+            "보기 ②: M2만 적용해서는 11이 나오지 않는다. 음수의 뺄셈을 올바르게 바꾸면 (-7)+4=-3이므로 M2가 적용될 음수끼리의 덧셈이 없다. 11은 M1과 M2를 함께 적용해야 나온다.",
+            "M2만 가진 학생도 정답 ③을 고를 수 있어 M1과 M2를 각각 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T07:22:19.924382+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": null,
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수01-05-C4-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T06:57:54.751732+00:00",
+          "issues": [
+            "분배법칙을 적용한 식이 이미 주어져 있어 계산 법칙을 이용해 계산을 간단히 하는 능력을 측정하기 어렵다. 원래 식에서 역산해도 빈칸을 구할 수 있다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:58:31.884021+00:00",
+          "issues": [
+            "계산을 간단히 하는 과정이 모두 주어져 있어, 학생이 계산 법칙을 이용해 직접 계산을 간단히 할 수 있는지는 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:59:01.130810+00:00",
+          "issues": [
+            "완성된 계산 과정에서 사용된 법칙의 이름만 판단하므로, 법칙을 이용해 계산을 간단히 하는 능력을 직접 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T06:59:01.672458+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v7",
+      "resolved_at": "2026-11-11T07:22:55.400213+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T07:14:49.24909+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C1-성질적용",
+      "body": "다음은 $(-3)-(-2)+(-4)$를 계산한 과정이다. 각 단계는 바로 앞 줄을 보고 판단할 때, 옳지 않은 단계는?\n\n처음: $(-3)-(-2)+(-4)$\n㉠: $(-3)+2+(-4)$\n㉡: $(-3)+(-4)+2$\n㉢: $7+2$\n㉣: $9$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 1,
+          "text": "㉠"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "㉡"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "㉢"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "㉣"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않은 단계가 없다."
+        }
+      ],
+      "created_at": "2026-11-11T06:48:20.795266+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "㉢에서 $(-3)+(-4)$를 $7$로 잘못 계산했다. 두 음수를 더하면 $-7$이므로, 바르게 계산하면 $(-7)+2=-5$이다. ㉠에서는 음수를 빼는 것을 양수를 더하는 것으로 바꾸었다. 음수를 빼도 그냥 빼야 한다고 생각하면 ㉠이 틀렸다고 고를 수 있다. ㉡은 덧셈의 순서를 바꾼 것이고, ㉣은 바로 앞 줄의 $7+2$를 바르게 계산한 것이다.",
+      "generated_at": "2026-11-11T06:48:20.282145+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "여러 계산 단계 중 옳지 않은 단계를 찾게 했다. 각 단계에서 바로 앞 줄을 바르게 바꾸었는지 판단해야 한다.",
+      "id": "eb797e9d-6121-46a8-a87a-ecc9675073e1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:48:01.984041+00:00",
+          "issues": [
+            "③은 ②에서 앞의 두 항에 괄호만 표시했을 뿐 결합 순서를 바꾸지 않았으므로, 결합법칙을 썼다는 해설이 잘못되었다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:48:20.281801+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:26:34.72129+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C1-성질적용",
+      "body": "수 카드 두 장에 적힌 수의 합은 $-\\frac{1}{4}$이다. 한 장에는 $-\\frac{3}{4}$이 적혀 있고, 다른 한 장은 뒤집혀 있어 수가 보이지 않는다.\n\n$-\\frac{3}{4}$이 적힌 카드를 $\\frac{3}{4}$이 적힌 카드로 바꾸었다. 이제 두 카드에 적힌 수의 합은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-\\frac{5}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 2,
+          "text": "$-\\frac{1}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\frac{1}{4}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\frac{5}{4}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\frac{7}{4}$"
+        }
+      ],
+      "created_at": "2026-11-11T07:21:09.388412+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "뒤집힌 카드에 적힌 수는 $-\\frac{1}{4}-(-\\frac{3}{4})=\\frac{1}{2}$이다. 따라서 새로 구한 합은 $\\frac{1}{2}+\\frac{3}{4}=\\frac{5}{4}$이다.\n\n②를 골랐다면 $-\\frac{3}{4}$을 빼는 것을 $\\frac{3}{4}$을 빼는 것과 같다고 생각했을 수 있다. 음수를 뺄 때는 그 수의 부호를 바꾸어 더해야 한다.",
+      "generated_at": "2026-11-11T07:21:09.217653+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "주어진 합과 보이는 카드의 수를 이용해 뒤집힌 카드의 수를 거꾸로 찾고, 바뀐 카드와의 합을 구한다.",
+      "id": "01371564-b390-43d0-9c91-0c77c24a1e03",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T07:21:09.217546+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.300063+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C1-성질적용",
+      "body": "$(-7)-(-3)+(+7)$에서 뺄셈을 덧셈으로 바꾸고, 교환법칙과 결합법칙을 이용하여 계산하기 편하게 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 1,
+          "text": "$((-7)+(+7))+(-3)$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$((-7)+(+7))+(+3)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$((+7)+(+7))+(-3)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$((-7)+(-7))+(+3)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$((-7)+(-7))+(-3)$"
+        }
+      ],
+      "created_at": "2026-11-11T06:46:50.347281+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-(-3)$은 $(+3)$을 더하는 것과 같습니다. 따라서 $(-7)+(+3)+(+7)$입니다. 교환법칙과 결합법칙을 이용하면 $((-7)+(+7))+(+3)$으로 나타낼 수 있습니다. ①은 $-(-3)$을 $+(-3)$으로 잘못 바꾼 것입니다.",
+      "generated_at": "2026-11-11T06:46:50.121643+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "e0a298bd-6d54-4896-bbc1-7df49a119c85",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:46:50.121494+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.375855+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C1-성질적용",
+      "body": "어떤 유리수에 $(-0.6)$을 더한 다음 $(-0.4)$를 더합니다. 결합법칙을 이용하여 이를 한 번의 덧셈으로 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "그 수에 $(-1)$을 더한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M2",
+          "no": 2,
+          "text": "그 수에 $(+1)$을 더한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "그 수에 $(-0.2)$를 더한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "그 수에 $(+0.2)$를 더한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "그 수에 $(-0.6)$을 더한다."
+        }
+      ],
+      "created_at": "2026-11-11T06:47:34.412393+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "결합법칙에 따라 먼저 $(-0.6)+(-0.4)$를 계산하면 $(-1)$입니다. 따라서 그 수에 $(-1)$을 더하면 됩니다. ②는 두 음수를 더할 때 곱셈의 부호 규칙을 잘못 쓴 것입니다.",
+      "generated_at": "2026-11-11T06:47:34.201458+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "bdeb9e64-1057-4dcb-b1ad-cd1494badd79",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:47:15.068968+00:00",
+          "issues": [
+            "뺄셈을 덧셈으로 바꾼 식만 고르면 되므로, 유리수의 계산을 실제로 수행할 수 있는지는 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:47:34.201129+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.406258+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C1-오개념판별",
+      "body": "두 학생이 다음과 같이 말했다.\n\n지우: 음수를 빼는 것은 그 음수의 부호를 바꾸어 더하는 것과 같아.\n민서: 음수 두 개를 더하면 양수가 돼.\n\n두 학생의 말에 대한 판단과 그 까닭이 모두 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M2",
+          "no": 1,
+          "text": "두 학생의 말이 모두 옳다. $(-3)+(-2)=5$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "지우의 말만 옳다. $3-(-2)=3+2=5$이고, $(-3)+(-2)=-5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 3,
+          "text": "민서의 말만 옳다. $3-(-2)=1$이고, $(-3)+(-2)=5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 4,
+          "text": "두 학생의 말이 모두 틀리다. $3-(-2)=1$이고, $(-3)+(-2)=-5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "지우의 말만 옳다. $3-(-2)=5$이고, $(-3)+(-2)=-1$이다."
+        }
+      ],
+      "created_at": "2026-11-11T06:51:29.726829+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "지우의 말은 옳다. 음수를 뺄 때는 그 음수의 부호를 바꾸어 더한다. 예를 들어 $3-(-2)=3+2=5$이다. 민서의 말은 틀리다. 음수 두 개를 더하면 음수가 되므로 $(-3)+(-2)=-5$이다.\n\n①과 ③은 음수 두 개를 더할 때 곱셈의 부호 규칙을 잘못 쓴 것이다. ③과 ④는 음수를 뺄 때 그 수의 부호를 바꾸지 않고 뺀 것이다. ⑤에서 음수 두 개를 더한 결과는 $-1$이 아니라 $-5$이다.",
+      "generated_at": "2026-11-11T06:51:29.493321+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 학생의 말을 보고 각각 옳은지 판단하게 했다. 판단뿐 아니라 그 까닭으로 제시한 계산도 함께 살펴야 한다.",
+      "id": "5e484592-63e9-45a1-9eb8-69d6ba161eff",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:51:29.493000+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.431458+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C1-오개념판별",
+      "body": "서준이가 다음과 같이 계산했다.\n\nㄱ. $(-4)-(-1)=(-4)+(-1)$\nㄴ. $(-4)+(-1)=5$\n\n서준이의 계산에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄱ과 ㄴ 모두 옳지 않다. 바르게 계산한 답은 $-3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 2,
+          "text": "ㄱ은 옳고 ㄴ은 옳지 않다. 바르게 계산한 답은 $-5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M2",
+          "no": 3,
+          "text": "ㄱ은 옳지 않고 ㄴ은 옳다. ㄱ을 고치면 답은 $-3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M2",
+          "no": 4,
+          "text": "ㄱ과 ㄴ 모두 옳다. 답은 $5$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄱ과 ㄴ 모두 옳지 않다. 바르게 계산한 답은 $3$이다."
+        }
+      ],
+      "created_at": "2026-11-11T06:52:44.102416+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "ㄱ에서는 음수 $-1$을 빼므로 $+1$을 더해야 한다. ㄴ에서는 음수끼리 더하므로 $(-4)+(-1)=-5$이다. 따라서 두 계산 모두 옳지 않다. 바르게 계산하면 $(-4)-(-1)=(-4)+(+1)=-3$이다.\n\n②와 ④는 음수를 뺄 때 부호를 바꾸어 더해야 한다는 것을 놓친 생각이다. ③과 ④는 음수끼리 더할 때 곱셈의 부호 규칙을 잘못 쓴 생각이다. ⑤는 고친 계산에서 서로 다른 부호의 두 수를 더하는 방법을 잘못 쓴 것이다.",
+      "generated_at": "2026-11-11T06:52:43.514866+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "서준이의 두 계산을 각각 살펴보고 옳고 그름을 판단하게 했다. 음수를 빼는 방법과 음수끼리 더하는 방법을 구별해야 한다.",
+      "id": "d53438b9-a6bc-4937-b36d-295b588ea60e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:52:02.308825+00:00",
+          "issues": [
+            "보기 ①: M1만 적용하면 ㄱ은 옳고 ㄴ은 틀리며 결과는 -7이므로 ②에 해당한다. ①에는 M2도 필요하다.",
+            "보기 ③: M2만 적용하면 ㄱ은 틀리고 ㄴ은 옳다고 판단하지만, 원래 식의 결과는 -3이다. +7을 고르려면 틀렸다고 판단한 ㄱ의 결과를 그대로 쓰는 추가 오류가 필요하다.",
+            "M2만 가진 학생이 고를 보기가 없어 M2를 독립적으로 판별하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:52:24.490587+00:00",
+          "issues": [
+            "보기 ④: M1만 따르면 첫째 단계는 옳고 둘째 단계는 틀리므로 보기 ①을 고르게 된다. 보기 ④를 고르려면 M2도 함께 적용해야 한다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:52:43.514700+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수01-05-C1-오개념판별",
+      "body": "$(-5)-(-3)$을 계산하는 방법으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "음수를 빼므로 $(-5)+(+3)$으로 바꾸어 계산하면 $-2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 2,
+          "text": "음수를 빼는 것을 양수를 빼는 것으로 바꾸어 $(-5)-(+3)=-8$로 계산한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M2",
+          "no": 3,
+          "text": "$(-5)+(+3)$으로 바꾼 뒤, 덧셈에서 두 수의 부호가 다르면 음수이므로 $-8$로 계산한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(-5)+(+3)$으로 바꾼 뒤, $+8$로 계산한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "빼기를 덧셈으로 바꿀 때 $-3$의 부호를 그대로 두어 $(-5)+(-3)=-8$로 계산한다."
+        }
+      ],
+      "created_at": "2026-11-11T06:50:25.466055+00:00",
+      "difficulty": "normal",
+      "disabled_at": "2026-11-11T07:14:46.69117+00:00",
+      "explanation": "음수를 빼는 것은 그 음수의 부호를 바꾼 수를 더하는 것과 같다. 따라서 $(-5)-(-3)=(-5)+(+3)=-2$이다. 2번은 음수를 빼는 것을 양수를 빼는 것으로 잘못 바꾸었다. 3번은 곱셈의 부호 규칙을 덧셈에 잘못 사용했다.",
+      "generated_at": "2026-11-11T06:50:24.949015+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4d9bf0af-c4a3-4d36-85ce-0be6880933e0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T06:50:24.948724+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.466765+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C1-오개념판별",
+      "body": "두 학생이 다음과 같이 계산했습니다.\n\n민지: $6-(-2)=6-2=4$\n준호: $(-6)+(-2)=8$\n\n두 학생의 계산에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "두 학생 모두 옳게 계산했다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 2,
+          "text": "민지만 옳게 계산했다. 음수를 뺄 때는 그 수에서 마이너스 부호만 빼고 계산한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M2",
+          "no": 3,
+          "text": "준호만 옳게 계산했다. 음수끼리 더하면 양수가 된다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 학생 모두 잘못 계산했다. 음수를 빼는 것은 양수를 더하는 것과 같고, 음수끼리 더하면 음수가 된다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 학생 모두 잘못 계산했다. 음수를 빼면 언제나 음수가 되고, 음수끼리 더하면 $0$이 된다."
+        }
+      ],
+      "created_at": "2026-11-11T06:51:04.261566+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "민지는 음수를 빼는 것을 양수를 빼는 것으로 잘못 생각했습니다. 음수를 빼는 것은 양수를 더하는 것과 같으므로 $6-(-2)=6+2=8$입니다. 준호는 음수끼리 더할 때 곱셈의 부호 규칙을 잘못 썼습니다. 두 음수를 더하면 음수가 되므로 $(-6)+(-2)=-8$입니다.",
+      "generated_at": "2026-11-11T06:51:04.061685+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "17c43d54-8ab4-4860-a139-6750825965ad",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:50:44.903259+00:00",
+          "issues": [
+            "보기 1: M1만 적용하면 첫째는 맞고 둘째는 틀리다고 판단하므로 보기 2를 고른다. 보기 1은 M1과 M2를 모두 적용한 결과이다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:51:04.061521+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.496089+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C2-성질적용",
+      "body": "다음은 한 학생의 계산 과정이다. 처음으로 잘못된 단계와 그 까닭을 바르게 짝 지은 것은? 각 단계는 바로 앞의 식을 바꾸는 과정을 뜻한다.\n\n$-2^2\\div\\left(-\\frac{2}{3}\\right)$\n\n(가) $=-4\\div\\left(-\\frac{2}{3}\\right)$\n\n(나) $=-4\\times\\frac{2}{3}$\n\n(다) $=-\\frac{8}{3}$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M3",
+          "no": 1,
+          "text": "(가), $-2^2$은 $4$이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "(가), $-2^2$은 $-2$이기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "(나), $-\\frac{2}{3}$의 역수는 $-\\frac{3}{2}$이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "(나), $-\\frac{2}{3}$의 역수는 $\\frac{3}{2}$이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M4",
+          "no": 5,
+          "text": "틀린 단계가 없다. $-\\frac{2}{3}$의 역수는 $\\frac{2}{3}$이다."
+        }
+      ],
+      "created_at": "2026-11-11T06:53:38.245016+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "(가)는 맞다. $-2^2$은 $-(2^2)$이므로 $-4$이다. (나)에서는 $-\\frac{2}{3}$의 역수인 $-\\frac{3}{2}$를 곱해야 한다. 따라서 처음으로 잘못된 단계는 (나)이다. ①처럼 $-2^2$을 $(-2)^2$과 같게 보면 안 된다. ⑤처럼 역수를 부호만 바꾼 수로 생각해도 안 된다.",
+      "generated_at": "2026-11-11T06:53:38.029223+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "여러 계산 단계에서 처음으로 잘못된 단계와 그 까닭을 함께 판단하게 했다.",
+      "id": "697a14c4-aee8-4dc9-ab0a-bd43477ea6c2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:53:38.028972+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.529833+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C2-성질적용",
+      "body": "다음 계산 결과가 $-\\frac{3}{2}$가 되도록 □에 들어갈 수를 고르시오.\n\n$(-3)^2\\div\\square=-\\frac{3}{2}$",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-\\frac{27}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M4",
+          "no": 4,
+          "text": "$\\frac{27}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$-\\frac{2}{3}$"
+        }
+      ],
+      "created_at": "2026-11-11T06:53:57.59102+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$(-3)^2=9$이므로 $9$를 □에 들어갈 수로 나누면 $-\\frac{3}{2}$가 됩니다. 따라서 □에 들어갈 수는 $9\\div\\left(-\\frac{3}{2}\\right)=-6$입니다.\n\n④를 골랐다면 $-\\frac{3}{2}$의 역수를 $\\frac{3}{2}$로 잘못 생각했을 수 있습니다. $-\\frac{3}{2}$의 역수는 $-\\frac{2}{3}$입니다.",
+      "generated_at": "2026-11-11T06:53:57.381162+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "나눗셈의 결과를 주고, 그 결과가 되도록 나누는 수를 거꾸로 찾게 했다.",
+      "id": "db37a721-f5ea-4daf-9526-25a8341a825b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:53:57.380970+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.554226+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C2-성질적용",
+      "body": "$-3^2\\div(-2)$를 곱셈으로 바르게 고친 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$(-9)\\times\\left(-\\frac12\\right)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M3",
+          "no": 2,
+          "text": "$9\\times\\left(-\\frac12\\right)$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M4",
+          "no": 3,
+          "text": "$(-9)\\times2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(-9)\\times\\frac12$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(-9)\\times(-2)$"
+        }
+      ],
+      "created_at": "2026-11-11T06:52:57.991705+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-3^2$은 $-(3\\times3)$이므로 $-9$이다. 또 $-2$로 나누는 것은 그 역수인 $-\\frac12$을 곱하는 것과 같다. 따라서 정답은 ①이다.\n②는 $-3^2$을 $(-3)^2$과 같게 생각한 것이다. ③은 $-2$의 역수를 부호만 바꾼 $2$로 잘못 생각한 것이다.",
+      "generated_at": "2026-11-11T06:52:57.769587+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "57b439d2-e553-4eb2-917a-5303ae94fc7d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:52:57.769326+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.583361+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C2-성질적용",
+      "body": "어떤 수에 $-\\frac{3}{2}$를 곱했더니 $\\frac{3}{4}$가 되었다. 어떤 수는?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-\\frac{1}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\frac{1}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-\\frac{9}{8}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M4",
+          "no": 4,
+          "text": "$\\frac{9}{8}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$-2$"
+        }
+      ],
+      "created_at": "2026-11-11T06:53:14.716479+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "어떤 수는 $\\frac{3}{4}\\div\\left(-\\frac{3}{2}\\right)$로 구할 수 있다. $-\\frac{3}{2}$의 역수는 $-\\frac{2}{3}$이므로 $\\frac{3}{4}\\times\\left(-\\frac{2}{3}\\right)=-\\frac{1}{2}$이다. ④는 역수를 구할 때 부호만 바꾸어 $\\frac{3}{2}$로 잘못 생각한 경우이다.",
+      "generated_at": "2026-11-11T06:53:14.500287+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "14a1c937-2a75-46f7-a17a-4d1a2691e083",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:53:14.500103+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:26:34.748713+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C3-이유설명",
+      "body": "수직선에서 $-2-(-3)$을 다음 두 방법으로 구합니다. 뺄셈에서는 결과에 뺀 수를 더하면 처음 수가 됩니다.\n\n- 방법 1: 어떤 수에서 왼쪽으로 $3$만큼 이동했더니 $-2$에 도착했습니다. 그 어떤 수를 찾습니다.\n- 방법 2: $-2$에서 오른쪽으로 $3$만큼 이동하여 도착한 수를 찾습니다.\n\n각 방법으로 찾은 수를 쓰세요. 또 두 방법으로 찾은 수가 같은 이유를 수직선에서의 이동을 이용하여 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T07:22:39.236705+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "방법 1에서 왼쪽으로 $3$만큼 이동하여 $-2$에 도착하려면 $+1$에서 출발해야 합니다. 방법 2에서도 $-2$에서 오른쪽으로 $3$만큼 이동하면 $+1$에 도착합니다. 오른쪽으로 $3$만큼 이동하는 것은 왼쪽으로 $3$만큼 이동한 것을 되돌리는 이동이므로 두 방법으로 찾은 수는 같습니다.\n\n음수를 빼는 것을 왼쪽으로 이동하는 것으로 잘못 생각하면 $-5$를 얻을 수 있습니다. 하지만 $-5$에 뺀 수인 $-3$을 더하면 처음 수인 $-2$가 되지 않습니다.",
+      "generated_at": "2026-11-11T07:22:38.928897+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "방법 1과 방법 2를 비교하여 같은 수를 찾는 이유를 수직선에서의 이동으로 설명하게 했다.",
+      "id": "caf394d1-55af-4b9e-92c6-f5340f6760f3",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 방법으로 찾은 수는 모두 $+1$입니다. 방법 1에서 찾은 수로부터 왼쪽으로 $3$만큼 이동하면 $-2$에 도착합니다. 이를 되돌리려면 $-2$에서 오른쪽으로 $3$만큼 이동해야 합니다. 이것은 방법 2의 이동과 같으므로 두 방법으로 찾은 수는 같습니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 방법으로 찾은 수를 모두 $+1$이라고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": false
+        },
+        {
+          "description": "방법 1에서 찾은 수로부터 왼쪽으로 $3$만큼 이동하면 $-2$에 도착함을 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "방법 2의 오른쪽 이동이 방법 1의 왼쪽 이동을 되돌리므로 두 방법으로 찾은 수가 같다고 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T07:22:38.928787+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수01-05-C3-이유설명",
+      "body": "어떤 수에서 다른 수를 뺀 결과에 뺀 수를 더하면 처음 수가 됩니다.\n\n$a$는 유리수이고 $b$는 양의 유리수입니다. $a$와 $b$가 어떤 수이든 $a-(-b)$가 $a+b$와 같아지는 이유를 수직선에서의 움직임을 이용하여 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T06:54:50.864774+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T07:14:46.744635+00:00",
+      "explanation": "$a-(-b)$를 구할 때는 결과에 $-b$를 더하면 $a$가 되어야 합니다. $-b$를 더하면 수직선에서 왼쪽으로 $b$만큼 움직입니다. 따라서 결과는 $a$에서 오른쪽으로 $b$만큼 떨어진 $a+b$입니다.\n\n음수를 뺄 때도 왼쪽으로 움직인다고 생각하여 $a-b$로 계산하면 안 됩니다. 예를 들어 $-1-(-2)$를 $-3$으로 계산하면, $-3$에 $-2$를 더한 값은 처음 수인 $-1$이 아닙니다.",
+      "generated_at": "2026-11-11T06:54:50.518882+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "특정한 수를 넣어 계산하는 대신, $a$가 유리수이고 $b$가 양의 유리수인 모든 경우에 같은 까닭을 설명하도록 했다.",
+      "id": "f2db9d5b-373c-4291-9782-aa3a8be2b492",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$a-(-b)$의 결과에 $-b$를 더하면 $a$가 되어야 합니다. $-b$를 더하는 것은 수직선에서 왼쪽으로 $b$만큼 움직이는 것입니다. 왼쪽으로 $b$만큼 움직여 $a$에 도착하려면 $a$에서 오른쪽으로 $b$만큼 떨어진 곳에서 출발해야 합니다. 이 수는 $a+b$이므로 $a-(-b)=a+b$입니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$a-(-b)$의 결과에 $-b$를 더하면 $a$가 된다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$-b$를 더하는 것은 수직선에서 왼쪽으로 $b$만큼 움직이는 것이라고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "왼쪽으로 $b$만큼 움직여 $a$에 도착하는 수는 $a$에서 오른쪽으로 $b$만큼 떨어진 $a+b$라고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T06:54:50.518714+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.631724+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C3-이유설명",
+      "body": "빨간 카드 한 장은 $+1$, 파란 카드 한 장은 $-1$을 나타냅니다. 빨간 카드 한 장과 파란 카드 한 장을 함께 없애도 전체가 나타내는 수는 달라지지 않습니다.\n\n빨간 카드 2장과 파란 카드 3장이 있습니다. 다음 두 방법으로 카드를 바꿉니다.\n\n- 방법 1: 파란 카드 2장을 꺼냅니다.\n- 방법 2: 빨간 카드 2장을 넣습니다.\n\n각 방법을 쓴 뒤 카드가 나타내는 수를 구하세요. 또 처음에 파란 카드가 2장 이상 있다면, 빨간 카드와 파란 카드가 각각 몇 장이든 두 방법의 결과가 같은 수를 나타내는 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T06:56:06.153263+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "방법 1에서는 빨간 카드 2장과 파란 카드 1장이 남으므로 $+1$을 나타냅니다. 방법 2에서는 빨간 카드 4장과 파란 카드 3장이 있으므로 $+1$을 나타냅니다.\n\n처음 카드의 장수가 달라도 방법 1을 쓴 뒤 빨간 카드 2장과 파란 카드 2장을 함께 넣으면 방법 2를 쓴 것과 같은 카드가 됩니다. 함께 넣은 카드는 전체가 나타내는 수를 바꾸지 않으므로 두 방법의 결과는 같습니다.\n\n파란 카드 2장을 꺼내는 것을 $2$를 빼는 것으로 생각하면 잘못입니다. 파란 카드 2장은 $-2$를 나타내므로, 이를 꺼내는 것은 $-2$를 빼는 것입니다.",
+      "generated_at": "2026-11-11T06:56:05.636762+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "카드를 꺼내는 방법과 넣는 방법을 비교하여 결과가 같은 이유를 설명하게 했다. 처음 카드의 장수가 달라도 같은 이유가 성립함을 설명해야 한다.",
+      "id": "2ee6aae3-4fbd-4e02-8458-2a103550524a",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 방법 모두 카드는 $+1$을 나타냅니다.\n\n처음에 파란 카드가 2장 이상 있다면, 방법 1을 쓴 뒤 빨간 카드 2장과 파란 카드 2장을 함께 넣을 수 있습니다. 그러면 처음 카드에서 파란 카드 2장을 꺼냈다가 다시 넣고 빨간 카드 2장을 넣은 것이므로, 방법 2를 쓴 것과 카드가 같아집니다. 함께 넣은 빨간 카드와 파란 카드는 전체가 나타내는 수를 바꾸지 않습니다. 따라서 처음 카드가 각각 몇 장이든 두 방법의 결과는 같은 수를 나타냅니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 2,
+      "rubric": [
+        {
+          "description": "두 방법으로 바꾼 카드가 각각 $+1$을 나타낸다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": false
+        },
+        {
+          "description": "방법 1을 쓴 뒤 빨간 카드 2장과 파란 카드 2장을 함께 넣으면 방법 2를 쓴 것과 카드가 같아짐을 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "빨간 카드와 파란 카드를 같은 장수만큼 함께 넣어도 나타내는 수가 바뀌지 않으므로 두 방법의 결과가 같다고 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:55:14.392904+00:00",
+          "issues": [
+            "수직선이나 상황 모델을 이용한 직관적 설명을 측정하려는 의도와 달리, 분배법칙을 이용한 대수적 설명만 요구한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:55:35.202351+00:00",
+          "issues": [
+            "분배법칙을 이용한 대수적 설명만 요구하므로, 수직선이나 상황 모델을 이용해 사칙계산의 원리를 직관적으로 설명하는 능력을 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:56:05.636385+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.672404+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C3-이유설명",
+      "body": "$3-(-2)$가 $3+2$와 같은 이유를 수직선을 이용하여 설명하고, 그 결과를 구하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:54:12.529754+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$3-(-2)$는 $-2$를 더하면 $3$이 되는 수이다. 수직선에서 $3$으로부터 왼쪽으로 $2$만큼 가는 것을 거꾸로 생각하면 오른쪽으로 $2$만큼 가야 한다. 따라서 $3-(-2)=3+2=5$이다. 음수의 부호를 무시하고 $3-2$로 계산하면 $1$이 되지만, $1$에 $-2$를 더하면 $3$이 되지 않는다.",
+      "generated_at": "2026-11-11T06:54:12.289477+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9cee8cd5-c38e-4da2-82dc-a68efb264e0f",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$3-(-2)$는 $-2$를 더하면 $3$이 되는 수이다. 수직선에서 $-2$를 더할 때는 왼쪽으로 $2$만큼 가므로, 거꾸로 $3$에서 오른쪽으로 $2$만큼 가면 그 수를 찾을 수 있다. 이것은 $3$에 $2$를 더하는 것과 같으므로 결과는 $5$이다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$3-(-2)$를 $-2$를 더하면 $3$이 되는 수로 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "수직선에서 $-2$를 더할 때와 반대로 $3$에서 오른쪽으로 $2$만큼 가므로 $3+2$와 같다고 설명하고, 결과를 $5$로 구한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:54:12.289352+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.702172+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C3-이유설명",
+      "body": "점수판에 $+1$점 카드 1장과 $-1$점 카드 5장이 있습니다. 전체 점수는 $-4$점입니다.\n\n여기에서 $-1$점 카드 5장을 모두 빼는 것은 $-4-(-5)$로 나타낼 수 있습니다. 이 계산이 $-4+5$와 같은 이유를 카드와 점수를 이용하여 설명하고, 계산 결과를 구하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T06:54:30.749891+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-1$점 카드 1장을 빼면 전체 점수가 1점 올라갑니다. 따라서 5장을 빼면 전체 점수가 5점 올라가므로, 5점을 더하는 것과 같습니다. 계산 결과는 $1$입니다.\n\n음수인 $-5$를 빼면서 그냥 5점을 뺀다고 생각하면 $-9$가 됩니다. 하지만 $-1$점 카드를 빼면 점수는 내려가는 것이 아니라 올라갑니다.",
+      "generated_at": "2026-11-11T06:54:30.170647+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "5b8e4dcf-cf15-41a3-bd3b-5a8e30a47807",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$-1$점 카드 1장을 빼면 전체 점수가 1점 올라갑니다. 5장을 빼면 점수가 5점 올라가므로, $-4-(-5)$는 $-4+5$와 같습니다. 계산 결과는 $1$입니다.",
+      "prompt_version": "v7",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$-1$점 카드 5장을 빼면 전체 점수가 5점 올라가므로 5점을 더하는 것과 같다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "계산 결과를 $1$로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수01-05-M1"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:54:30.170470+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.734463+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C4-성질적용",
+      "body": "다음은 계산을 간단히 하려는 과정이다.\n\n$(-3)\\times(4+5)+7+(-7)$\n\n① $=(-3)\\times(4+5)+(-7)+7$\n\n② $=(-3)\\times(4+5)+\\{(-7)+7\\}$\n\n③ $=(-3)\\times4+5+\\{(-7)+7\\}$\n\n④ $=-12+5+0$\n\n처음으로 잘못된 단계는? 잘못된 단계가 없으면 ⑤를 고르시오.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "①"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "②"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "③"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "④"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M5",
+          "no": 5,
+          "text": "잘못된 단계가 없다."
+        }
+      ],
+      "created_at": "2026-11-11T06:57:31.837339+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "①에서는 덧셈의 교환법칙을, ②에서는 덧셈의 결합법칙을 썼다. ③에서는 분배법칙을 잘못 썼다. 괄호 안의 $4$와 $5$ 모두에 $-3$을 곱해야 한다.\n\n⑤를 골랐다면 $4$에만 $-3$을 곱하고 $5$는 그대로 두어도 된다고 생각했을 수 있다.",
+      "generated_at": "2026-11-11T06:57:31.640221+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "여러 계산 단계에서 처음으로 잘못된 단계를 찾게 한다. 각 단계에서 계산 법칙을 바르게 썼는지 살펴야 한다.",
+      "id": "ad59926e-05a6-4f79-be32-e6c748260161",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:57:31.640114+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:26:34.814682+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C4-성질적용",
+      "body": "다음 계산의 결과가 $0$이 되도록 $\\square$ 안에 들어갈 수를 구하려고 한다. 분배법칙을 이용하여 계산할 때, 알맞은 수는?\n\n$\\left(-\\dfrac{3}{4}\\right)\\times(8+\\square)+\\left(-\\dfrac{3}{4}\\right)\\times 4$",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-12$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M5",
+          "no": 4,
+          "text": "$9$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12$"
+        }
+      ],
+      "created_at": "2026-11-11T07:22:55.499166+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "분배법칙을 이용하면 주어진 식은 $\\left(-\\dfrac{3}{4}\\right)\\times(8+\\square+4)$로 나타낼 수 있다. 계산 결과가 $0$이 되려면 $8+\\square+4=0$이어야 하므로 $\\square=-12$이다.\n\n④를 골랐다면 첫 번째 괄호 안의 $8$에만 $-\\dfrac{3}{4}$를 곱하고, $\\square$에는 곱하지 않았을 수 있다. 괄호 안의 두 수에 모두 $-\\dfrac{3}{4}$를 곱해야 한다.",
+      "generated_at": "2026-11-11T07:22:55.277808+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "계산 결과를 $0$으로 주고, 그 결과가 되게 하는 네모 안의 수를 찾게 했다.",
+      "id": "ce8e32da-227c-49a9-bf03-52ff4b6ac498",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T07:22:55.277693+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.766064+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C4-성질적용",
+      "body": "$(-4)\\times\\left(25+\\frac{1}{2}\\right)$을 분배법칙을 이용하여 계산하기 편하게 바꾼 것으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M5",
+          "no": 1,
+          "text": "$(-4)\\times25+\\frac{1}{2}$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$(-4)\\times25+(-4)\\times\\frac{1}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(-4)\\times25-(-4)\\times\\frac{1}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$4\\times25+(-4)\\times\\frac{1}{2}$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(-4)\\times\\left(25\\times\\frac{1}{2}\\right)$"
+        }
+      ],
+      "created_at": "2026-11-11T06:56:53.780209+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "분배법칙을 이용하면 괄호 안의 두 수 모두에 $-4$를 곱한다. 따라서 $(-4)\\times25+(-4)\\times\\frac{1}{2}$로 바꿀 수 있다. ①은 $25$에만 $-4$를 곱하고 $\\frac{1}{2}$에는 곱하지 않았다.",
+      "generated_at": "2026-11-11T06:56:53.295009+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3cacda40-d913-460e-9a12-b6e7a04e7392",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:56:24.268532+00:00",
+          "issues": [
+            "분배법칙에 따라 식을 바꾼 보기를 고르기만 하면 되므로, 계산 법칙을 이용해 계산을 간단히 하는 능력을 직접 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T06:56:39.626008+00:00",
+          "issues": [
+            "분배법칙으로 바르게 변형한 식을 고르는 문제로, 계산 법칙을 이용해 실제 계산을 간단히 하는 능력을 측정하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T06:56:53.294799+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T07:14:49.791674+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C4-성질적용",
+      "body": "민지는 $(-6)\\times0.7+(-6)\\times0.3$을 분배법칙을 이용하여 간단히 계산하려고 한다. 계산 과정이 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수01-05-M5",
+          "no": 1,
+          "text": "$(-6)\\times0.7+0.3=-3.9$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$(-6)\\times(0.7+0.3)=-6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(-6)\\times(0.7-0.3)=-2.4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(-6-6)\\times(0.7+0.3)=-12$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(-6)\\times(0.7+0.3)=6$"
+        }
+      ],
+      "created_at": "2026-11-11T06:57:12.317687+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$(-6)$에 $0.7$과 $0.3$을 각각 곱하여 더한 것이므로, $(-6)\\times(0.7+0.3)$으로 바꿀 수 있다. 따라서 답은 $-6$이다. ①은 $0.3$에도 $(-6)$을 곱해야 하는데, 그대로 더한 잘못이다.",
+      "generated_at": "2026-11-11T06:57:12.106759+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "354352e6-05a9-4ae4-8600-29ff2f21b490",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v7",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T06:57:12.106450+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

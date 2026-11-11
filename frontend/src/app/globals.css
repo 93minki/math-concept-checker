@@ -143,6 +143,41 @@ a {
 .button-row button {
   flex: 1;
 }
+.save-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 1.5em;
+}
+.save-status-label {
+  font-size: 0.875rem;
+  opacity: 0.75;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+}
+.submit-dialog {
+  width: min(100vw - 32px, 360px);
+  max-width: 100%;
+  border: 1px solid #888;
+  border-radius: 12px;
+  padding: 16px;
+  margin: auto;
+}
+/* Only an open dialog is laid out; a closed <dialog> must stay display:none
+   or it covers the page (2026-11-11 dev E2E). */
+.submit-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.submit-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+.submit-dialog button:disabled {
+  opacity: 1;
+}
 .math-text {
   white-space: pre-line;
   overflow-wrap: anywhere;

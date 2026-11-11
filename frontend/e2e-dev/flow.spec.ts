@@ -65,6 +65,8 @@ async function solve(page: Page) {
       exact: true,
     });
     await expect(forward).toBeDisabled();
+    // The nav row must not move when answering/saving (2026-11-11 manual check).
+    const navBefore = (await forward.boundingBox())?.y;
     bodies.push(await page.locator(".question").innerText());
     const radio = page.getByRole("radio").first();
     if (await radio.count()) {
@@ -74,8 +76,9 @@ async function solve(page: Page) {
       answerTypes.push("written");
       await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
     }
-    await expect(page.getByText("저장했어요", { exact: true })).toBeVisible();
+    await expect(page.getByText("저장됨", { exact: true })).toBeVisible();
     await expect(forward).toBeEnabled();
+    expect((await forward.boundingBox())?.y).toBe(navBefore);
     if (i < count - 1)
       await page.getByRole("button", { name: "다음", exact: true }).click();
   }
