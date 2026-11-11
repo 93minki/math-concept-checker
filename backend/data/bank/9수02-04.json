@@ -1,0 +1,2194 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수02-04-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-11T03:54:00.419476+00:00",
+          "issues": [
+            "주어진 관계를 식으로 바꾸지 않아도 보기 ③에서 일차방정식의 정의를 바로 확인하여 답할 수 있으므로, 밝힌 고난이도 조건 definition-b를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:54:24.912129+00:00",
+          "issues": [
+            "괄호와 양변의 문자를 정리하면 바로 일차방정식임을 확인할 수 있는 일반적인 사례로, 정의의 조건을 하나하나 따져야 하는 경계 사례가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T03:54:47.506694+00:00",
+          "issues": [
+            "모든 선택지가 같은 식 또는 그 일부를 제시하므로, 상황을 식으로 바꾸지 않고 일차방정식의 정의만 확인해 정답을 고를 수 있다. 따라서 밝힌 고난도 조건 definition-b를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T03:54:47.843646+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v6",
+      "resolved_at": "2026-11-11T04:46:50.542926+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T03:56:02.880567+00:00",
+          "issues": [
+            "양변에 3을 곱하는 식의 변형만 묻고 해를 구하지 않으므로, 일차방정식을 풀 수 있는지 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:56:15.159066+00:00",
+          "issues": [
+            "양변에 3을 곱한 식만 묻고 방정식의 해를 구하게 하지 않아, 일차방정식을 풀 수 있는지를 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T03:56:29.133147+00:00",
+          "issues": [
+            "양변에 3을 곱한 식만 묻고 방정식의 해를 구하지 않으므로, 일차방정식을 풀 수 있는지 확인하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T03:56:29.354063+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v6",
+      "resolved_at": "2026-11-11T04:47:04.975253+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T03:56:42.491284+00:00",
+          "issues": [
+            "양변에 3을 곱하는 한 단계만 묻고 방정식의 해를 구하게 하지 않아, 일차방정식을 풀 수 있는지를 직접 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:56:58.441606+00:00",
+          "issues": [
+            "양변에 3을 곱한 식만 고르는 문제이므로 일차방정식을 끝까지 풀 수 있는지 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T03:57:10.001351+00:00",
+          "issues": [
+            "양변에 3을 곱한 식만 묻고 방정식의 해를 구하게 하지 않아, 일차방정식을 풀 수 있는지를 직접 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T03:57:10.153557+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v6",
+      "resolved_at": "2026-11-11T04:47:16.769752+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-11T03:57:21.828220+00:00",
+          "issues": [
+            "양변에 3을 곱한 식만 고르는 문제로, 일차방정식을 풀어 해를 구할 수 있는지 측정하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:57:33.100080+00:00",
+          "issues": [
+            "양변에 3을 곱한 식만 묻고 방정식의 해를 구하게 하지 않아, 일차방정식을 풀 수 있는지 직접 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T03:57:45.068845+00:00",
+          "issues": [
+            "양변에 3을 곱한 식을 고르는 문제로, 방정식의 해를 구하는 능력을 직접 평가하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T03:57:45.463569+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v6",
+      "resolved_at": "2026-11-11T04:47:31.863954+00:00",
+      "variant": 3
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T04:51:28.318752+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C1-정의이해",
+      "body": "같은 가격인 공책과 다른 물건을 다음과 같이 샀다.\n\n- 가: 공책 $3$권과 $700$원짜리 펜 $1$개\n- 나: 공책 $2$권과 $1900$원짜리 파일 $1$개\n\n가와 나의 전체 가격은 같다. 공책 한 권의 가격을 $x$원이라 할 때, 이 관계를 나타낸 식과 그 식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3x+700=2x+1900$이고, 양변에 모두 $x$가 있으므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M3",
+          "no": 2,
+          "text": "$3x+700=2x+1900$이고, 문자가 있는 등식은 모두 일차방정식이므로 이 식도 일차방정식이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3x+700=2x+1900$이고, $x-1200=0$으로 나타낼 수 있으므로 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3x+700=2x+1900$이고, 양변에서 $x$ 앞에 있는 수가 서로 다르므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$3x+700=2x+1900+700$이고, 이 식은 일차방정식이다."
+        }
+      ],
+      "created_at": "2026-11-11T04:46:50.57698+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가와 나의 전체 가격은 각각 $3x+700$원과 $2x+1900$원이다. 두 가격이 같으므로 $3x+700=2x+1900$이다. 이 식을 한쪽으로 옮겨 간단히 하면 $x-1200=0$이므로 일차방정식이다. 양변에 모두 문자가 있어도 일차방정식일 수 있다. 또 문자가 있는 등식이라고 해서 모두 일차방정식인 것은 아니다. 식을 간단히 했을 때 문자가 어떻게 남는지 살펴야 한다. ⑤의 식은 나의 가격에 $700$원을 더했으므로 주어진 관계를 나타내지 않는다.",
+      "generated_at": "2026-11-11T04:46:50.401522+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "두 구매의 전체 가격이 같다는 말을 식으로 나타낸 뒤, 그 식을 간단히 하여 일차방정식인지 판단해야 한다.",
+      "id": "d9a63a4a-b6a3-48cd-9501-b5bf9171401d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:46:50.401326+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.339431+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C1-정의이해",
+      "body": "두 식 $x+4$와 $2x-2$가 서로 같다는 등식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "양변에 문자가 있으므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M3",
+          "no": 2,
+          "text": "문자가 있는 등식은 문자 항이 모두 없어지더라도 일차방정식이므로, 이 등식도 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "등호가 있으면 문자가 없어도 일차방정식이므로, 이 등식도 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "등식이 참이 되는 $x$의 값이 $6$이므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "양변의 문자 항을 한쪽으로 모으면 일차식이 $0$과 같은 꼴이 되므로 일차방정식이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:55:28.752822+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "등식은 $x+4=2x-2$이다. 양변의 문자 항을 한쪽으로 모으면 $-x+6=0$이 된다. 따라서 이 등식은 일차방정식이다. 문자 항이 모두 없어지는 등식은 일차방정식이 아니다. 문자가 있다는 것만으로 일차방정식이라고 판단할 수는 없다.",
+      "generated_at": "2026-11-11T03:55:28.605828+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "2번과 3번 보기에서 문자 항이 모두 없어지거나 문자가 없는 등식을 생각하게 한다. 등호나 문자의 유무만으로 판단하지 않고 일차방정식의 뜻을 따져야 한다.",
+      "id": "9b528b8e-2f00-4c5b-8555-b73ac1afaa9a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:55:28.605512+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.374578+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C1-정의이해",
+      "body": "어떤 수에 $3$을 더한 값의 $2$배는 그 수보다 $10$만큼 크다. 어떤 수를 $x$라 할 때, 이 관계를 나타낸 식과 그 식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2(x+3)=x+10$이고, 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2x+3=x+10$이고, 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2(x+3)=10$이고, 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2(x+3)=x+10$이지만, 양변에 모두 문자가 있으므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M3",
+          "no": 5,
+          "text": "$2(x+3)=x+10$이고, 문자가 있는 등식은 모두 일차방정식이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:55:50.817336+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "어떤 수에 $3$을 더한 값의 $2$배는 $2(x+3)$이고, 그 수보다 $10$만큼 큰 수는 $x+10$이다. 따라서 식은 $2(x+3)=x+10$이다. 이 식의 양변을 한쪽으로 모아 간단히 하면 $x-4=0$이므로 일차방정식이다. 양변에 모두 문자가 있어도 일차방정식이 될 수 있다. 문자가 있는 등식이라도 간단히 하면 문자가 없어질 수 있으므로, 모두 일차방정식인 것은 아니다.",
+      "generated_at": "2026-11-11T03:55:50.652504+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "말로 주어진 수의 관계를 식으로 나타낸 뒤, 그 식이 일차방정식인지 판단하게 한다.",
+      "id": "c44a8e5a-6af2-47d5-8d93-99e3d74ac186",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:55:50.652415+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.405039+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C1-정의이해",
+      "body": "방정식 $x+2=2x-1$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M3",
+          "no": 1,
+          "text": "문자가 있는 등식은 모두 일차방정식이므로 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "문자가 양변에 있으므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "문자가 있는 항을 한쪽으로 모아 간단히 하면 $x$의 차수가 1이므로 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "일차방정식에는 괄호가 꼭 있어야 하므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "일차방정식에서는 문자의 계수가 모두 1이어야 하므로 일차방정식이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T03:53:04.073681+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "문자가 있는 항을 한쪽으로 모아 간단히 하면 $x$의 차수가 1이므로 일차방정식이다. 문자가 있는 등식이라도 문자가 모두 없어지는 경우가 있으므로, 모두 일차방정식인 것은 아니다. 또 문자가 양변에 있거나 괄호가 있어도 일차방정식일 수 있다. 문자의 계수가 반드시 1이어야 하는 것도 아니다.",
+      "generated_at": "2026-11-11T03:53:03.928507+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "717f254d-ca44-4360-ab94-05fc5b98c331",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:53:03.928306+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.428469+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C1-정의이해",
+      "body": "방정식 $3(x-2)=9$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M3",
+          "no": 1,
+          "text": "문자가 있는 등식은 모두 일차방정식이므로 이 식도 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "괄호가 있으므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "문자 앞의 수가 $1$이어야 하므로 일차방정식이 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "모든 항을 한쪽으로 모으면 $3x-15=0$이 되므로 일차방정식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "숫자만 있는 항이 있으므로 일차방정식이 아니다."
+        }
+      ],
+      "created_at": "2026-11-11T03:53:19.858927+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "괄호를 풀고 모든 항을 한쪽으로 모으면 $3x-15=0$이 된다. 이 식은 $x$의 차수가 $1$인 방정식이므로 일차방정식이다. ①처럼 문자가 있는 등식은 모두 일차방정식이라고 생각하면 안 된다.",
+      "generated_at": "2026-11-11T03:53:19.726826+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d86e7e90-d278-47fe-a2b3-2caa29a3ec39",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:53:19.726606+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.472987+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C1-정의이해",
+      "body": "방정식 $2x+5=11$이 일차방정식인 이유로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M3",
+          "no": 1,
+          "text": "문자가 있는 등식은 모두 일차방정식이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "양변에 모두 수가 있기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "양변의 항을 한쪽으로 모아 간단히 하면 $x$의 차수가 $1$인 식이 $0$과 같아지기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "해가 자연수이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "양변에 같은 수를 더할 수 있기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:53:34.263254+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변의 항을 한쪽으로 모아 간단히 하면 $2x-6=0$이 된다. 이때 $x$의 차수는 $1$이다. 따라서 주어진 방정식은 일차방정식이다. 문자가 있는 등식이라고 해서 모두 일차방정식인 것은 아니다.",
+      "generated_at": "2026-11-11T03:53:34.122183+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4d5d0e88-f2bb-4001-aedc-6ed5a8b3ebd2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:53:34.122028+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.49689+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "body": "다음은 일차방정식 $x+\\frac{1}{2}=3$을 푼 과정이다.\n\n(가) 양변에 $2$를 곱하여 $2x+1=6$\n(나) 양변에서 $1$을 빼어 $2x=5$\n(다) 양변에서 $2$를 빼어 $x=3$\n\n처음으로 잘못된 단계와 그 이유를 바르게 말한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 1,
+          "text": "(가)가 처음으로 잘못되었다. 왼쪽의 $\\frac{1}{2}$에는 $2$를 곱하지 않아야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "(나)가 처음으로 잘못되었다. 오른쪽에 $1$을 더해야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "(다)가 처음으로 잘못되었다. $2x=5$의 양변을 $2$로 나누어야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "(다)가 처음으로 잘못되었다. $2x=5$의 양변에 $2$를 곱해야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 5,
+          "text": "잘못된 단계가 없다. $2x=5$에서 양변에 곱해진 $2$를 빼면 $x=3$이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:58:03.702833+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "(가)에서는 왼쪽의 $x$와 $\\frac{1}{2}$에 모두 $2$를 곱해야 하므로 $2x+1=6$이 맞다. (나)도 맞다. (다)에서는 $2x=5$의 양변을 $2$로 나누어야 하므로 $x=\\frac{5}{2}$이다. 따라서 정답은 3번이다.\n\n1번처럼 왼쪽의 일부에만 $2$를 곱하면 안 된다. 5번처럼 $2x$에서 $x$를 구할 때 $2$를 빼면 안 된다.",
+      "generated_at": "2026-11-11T03:58:03.528499+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "세 풀이 단계 중 처음으로 잘못된 단계를 찾고, 그 단계에서 어떤 계산을 해야 하는지 판단하게 했다.",
+      "id": "f18f4813-5c3b-44cd-91c3-6fb412d01cd5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:58:03.528263+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.520786+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "body": "두 일차방정식의 해가 서로 같습니다. $\\square$ 안에 알맞은 수를 고르세요.\n\n$2-\\frac{x}{3}=-1$\n\n$\\frac{x-1}{2}=\\square+1$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 1,
+          "text": "$1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5$"
+        }
+      ],
+      "created_at": "2026-11-11T03:58:22.391457+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫 번째 식의 양변에 $3$을 곱하면 $6-x=-3$이므로 $x=9$입니다. 이를 두 번째 식에 넣으면 $4=\\square+1$이므로 $\\square=3$입니다.\n\n①은 첫 번째 식에서 $2$에 $3$을 곱하지 않고 $2-x=-3$으로 잘못 바꾸면 나올 수 있습니다.",
+      "generated_at": "2026-11-11T03:58:22.246539+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 방정식의 해가 같다는 사실을 이용해 빈칸에 들어갈 수를 거꾸로 찾게 합니다.",
+      "id": "a6e13031-0fb5-4855-9a6c-eba788b4748f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:58:22.246365+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.542622+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "body": "다음은 일차방정식을 푸는 과정의 일부이다.\n\n(가) $4(x-1)=2x+6$\n\n(나) $2x-4=6$\n\n(다) $2x=10$\n\n(가)에서 (나)로 바꾸는 방법과 (다)에서 구한 $x$의 값을 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 1,
+          "text": "괄호를 푼 뒤 양변에서 $2x$를 뺀다. $x=8$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "괄호를 푼 뒤 양변에서 $2x$를 뺀다. $x=5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "괄호를 푼 뒤 양변에서 $2$를 뺀다. $x=5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "괄호를 푼 뒤 양변에 $2x$를 더한다. $x=5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "괄호를 푼 뒤 양변에서 $2x$를 뺀다. $x=12$"
+        }
+      ],
+      "created_at": "2026-11-11T03:58:50.597238+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "괄호를 풀면 $4x-4=2x+6$이다. 양변에서 $2x$를 빼면 (나)가 된다. 또 (다)의 양변을 $2$로 나누면 $x=5$이다. 따라서 정답은 2번이다.\n\n1번처럼 $10$에서 $2$를 빼면 안 된다. $2x$는 $2$와 $x$를 곱한 것이므로 양변을 $2$로 나누어야 한다.",
+      "generated_at": "2026-11-11T03:58:50.448538+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "(가)에서 (나)로 바꾸는 데 쓰인 방법을 판단하고, (다)에서 양변을 나누어 해를 구하게 한다.",
+      "id": "53babcad-e383-4ccf-8ef7-6395e75a93a6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:58:50.448364+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.563611+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "body": "다음 일차방정식을 풀 때, $x$의 값은?\n\n$\\dfrac{x-1}{2}+1=0.25x+2$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 5,
+          "text": "$9$"
+        }
+      ],
+      "created_at": "2026-11-11T04:47:05.021386+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변의 모든 항에 $4$를 곱하면 $2(x-1)+4=x+8$입니다. 괄호를 풀면 $2x+2=x+8$이므로 $x=6$입니다.\n\n왼쪽의 $1$에 $4$를 곱하지 않으면 $2(x-1)+1=x+8$이 되어 $x=9$가 나옵니다.",
+      "generated_at": "2026-11-11T04:47:04.896441+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c03c0c4a-c273-4bcf-a9bb-2e15af1c09da",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:47:04.896160+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.587693+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "body": "다음 일차방정식의 해를 구하시오.\n\n$0.5(x+2)=\\dfrac{x+6}{3}+2$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x=4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 2,
+          "text": "$x=8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x=14$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x=18$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x=20$"
+        }
+      ],
+      "created_at": "2026-11-11T04:47:16.814349+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변에 $6$을 곱하면 $3(x+2)=2(x+6)+12$입니다. 이를 풀면 $3x+6=2x+24$이므로 $x=18$입니다.\n\n양변에 $6$을 곱할 때 오른쪽의 $2$에 $6$을 곱하지 않으면 $3(x+2)=2(x+6)+2$가 되어 $x=8$을 고를 수 있습니다.",
+      "generated_at": "2026-11-11T04:47:16.690698+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "5d8d89d3-6d0d-4b55-870d-2db3ea6bd132",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:47:16.690522+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.617262+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-성질적용",
+      "body": "다음 일차방정식의 해는?\n\n$0.3(x-4)=\\dfrac{x}{5}+3$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 1,
+          "text": "$15$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$30$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$38$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$42$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$52$"
+        }
+      ],
+      "created_at": "2026-11-11T04:47:31.909722+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변에 $10$을 곱하면 $3(x-4)=2x+30$입니다. 괄호를 풀면 $3x-12=2x+30$이므로 $x=42$입니다.\n\n①은 양변에 $10$을 곱할 때 오른쪽의 $3$에는 $10$을 곱하지 않아 나온 답입니다. 모든 항에 $10$을 곱해야 합니다.",
+      "generated_at": "2026-11-11T04:47:31.774527+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "6f3baab0-807b-49c5-8fe2-4d8b1a0c5a85",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:47:31.774341+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.642523+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-오개념판별",
+      "body": "다음은 민수가 일차방정식을 푼 과정이다.\n\n$\\dfrac{3x}{2}+1=4$\n\n첫 번째: $3x+1=8$\n\n두 번째: $3x=7$\n\n세 번째: $x=7-3=4$\n\n각 단계가 바로 앞의 식에서 올바르게 구해졌는지 판단하였다. 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 1,
+          "text": "첫 번째만 잘못이다. $3x+2=8$로 고치면 세 번째 단계는 그대로 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 2,
+          "text": "세 번째만 잘못이다. $x=\\dfrac{7}{3}$으로 고치면 앞의 두 단계는 모두 옳다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫 번째와 세 번째가 잘못이다. 첫 번째를 $3x+2=8$로 고친 뒤 $x=\\dfrac{6}{3}$으로 구한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 4,
+          "text": "첫 번째와 세 번째가 잘못이다. 첫 번째를 $3x+2=8$로 고친 뒤 $x=6-3$으로 구한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "첫 번째와 두 번째만 잘못이다. 첫 번째를 $3x+2=8$, 두 번째를 $3x=8+2$로 고친다."
+        }
+      ],
+      "created_at": "2026-11-11T04:00:11.322337+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫 번째 단계에서는 양변의 모든 항에 $2$를 곱해야 하므로 $3x+2=8$이 된다. 두 번째 단계는 바로 앞의 식 $3x+1=8$에서 $3x=7$을 올바르게 구했다. 세 번째 단계에서는 $3$을 빼는 것이 아니라 양변을 $3$으로 나누어야 한다.\n\n따라서 처음 식부터 바르게 풀면 $3x+2=8$, $3x=6$, $x=2$이다. ①과 ④는 $x$에 곱해진 $3$을 빼야 한다고 잘못 생각한 것이다. ②는 분모를 없앨 때 $1$에도 $2$를 곱해야 한다는 것을 놓친 것이다. ⑤는 $+2$를 우변으로 옮길 때 $-2$가 되어야 한다는 것을 놓쳤다.",
+      "generated_at": "2026-11-11T04:00:11.176196+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민수의 풀이에서 각 단계가 바로 앞의 식으로부터 올바르게 구해졌는지 판단하게 한다. 분모를 없앨 때와 곱해진 수를 처리할 때의 오류를 함께 살펴야 한다.",
+      "id": "c2da8c47-880c-46fc-a634-d51e8c77d23b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:00:11.175999+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.675414+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-오개념판별",
+      "body": "일차방정식 $\\dfrac{x+1}{3}=x-1$을 풀면서 세 학생이 다음과 같이 말했다.\n\n가: 양변에 $3$을 곱하면 $x+1=3x-1$이 된다.\n\n나: $2x=4$에서 $2$를 오른쪽으로 옮기면 $x=4-2=2$가 된다.\n\n다: 양변에 $3$을 곱하면 $x+1=3x-3$이 되고, 이를 풀면 $x=2$가 된다.\n\n옳은 방법으로 말한 학생만을 모두 고른 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 1,
+          "text": "가"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 2,
+          "text": "나"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "다"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 4,
+          "text": "가, 나"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 5,
+          "text": "나, 다"
+        }
+      ],
+      "created_at": "2026-11-11T04:00:56.897404+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "양변에 $3$을 곱할 때 오른쪽의 $x$와 $-1$에도 각각 $3$을 곱해야 한다. 따라서 $x+1=3x-3$이므로 가의 말은 옳지 않다. 이를 풀면 $2x=4$, $x=2$이므로 다의 말은 옳다.\n\n나처럼 $2x=4$에서 곱해진 $2$를 빼서는 안 된다. 양변을 $2$로 나누어야 한다. 나의 답이 우연히 $2$로 같더라도 푸는 방법은 옳지 않다.",
+      "generated_at": "2026-11-11T04:00:56.694156+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "세 학생의 풀이 방법이 옳은지 각각 판단하게 한다. 특히 나의 답은 우연히 맞지만 풀이 방법은 옳지 않다.",
+      "id": "27f7085c-95b2-4210-b400-25d224e082ef",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:00:35.527825+00:00",
+          "issues": [
+            "원래 방정식의 해만 구하면 두 풀이에서 분모 제거와 이항의 오류를 각각 판별하지 않고도 ⑤를 고를 수 있다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T04:00:56.693866+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.699957+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-오개념판별",
+      "body": "어떤 수에 $3$을 곱하고 $2$로 나눈 다음 $1$을 빼니 $2$가 되었다. 지우는 어떤 수를 $x$로 놓고 다음과 같이 구했다.\n\n$\\dfrac{3x}{2}-1=2$\n$3x-1=4$\n$3x=5$\n$x=5-3=2$\n\n지우가 구한 수는 맞다. 지우의 풀이에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 1,
+          "text": "구한 수가 맞으므로 풀이의 모든 부분이 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 2,
+          "text": "분모를 없앤 식은 틀렸지만, $3x=5$에서 $x=5-3$으로 구한 것은 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 3,
+          "text": "분모를 없앤 식은 옳지만, $3x=5$에서는 $5$를 $3$으로 나누어야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "분모를 없애면 $3x-2=4$이다. 또 $3x=6$에서는 $6$을 $3$으로 나누어야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 5,
+          "text": "분모를 없애면 $3x-2=2$이다. 또 $3x=5$에서는 $5$를 $3$으로 나누어야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T04:01:30.672808+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "분모를 없애려고 양변에 $2$를 곱할 때는 $-1$에도 $2$를 곱해야 한다. 따라서 $3x-2=4$가 되고, 이를 풀면 $3x=6$, $x=2$이다.\n\n지우의 풀이에서는 $-1$에 $2$를 곱하지 않았다. 또 $3x=5$에서 $x$를 구하려면 $5$에서 $3$을 빼는 것이 아니라 $5$를 $3$으로 나누어야 한다. 답이 우연히 맞았더라도 풀이가 옳은 것은 아니다.",
+      "generated_at": "2026-11-11T04:01:30.300234+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "답은 맞지만 두 곳에서 잘못 계산한 학생의 풀이를 보고 그 풀이를 판단하게 했다.",
+      "id": "d3d91b0a-42cb-4f25-8eeb-3557d52e61d6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:01:30.299843+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.726011+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-오개념판별",
+      "body": "일차방정식 $\\frac{2x}{3}+2=6$을 푸는 과정이 바른 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 1,
+          "text": "$2x+2=18 \\rightarrow 2x=16 \\rightarrow x=8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 2,
+          "text": "$2x+6=18 \\rightarrow 2x=12 \\rightarrow x=12-2=10$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2x+6=18 \\rightarrow 2x=24 \\rightarrow x=12$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2x+6=18 \\rightarrow 2x=12 \\rightarrow x=6$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2x+6=18 \\rightarrow 2x=12 \\rightarrow x=24$"
+        }
+      ],
+      "created_at": "2026-11-11T03:59:12.713598+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "양변의 모든 항에 $3$을 곱하면 $2x+6=18$이다. 여기서 $6$을 우변으로 옮기면 $2x=12$이고, 양변을 $2$로 나누면 $x=6$이다.\n①은 좌변의 $2$에 $3$을 곱하지 않았다. ②는 $2x=12$에서 $2$를 빼면 $x$를 구할 수 있다고 잘못 생각했다. ③은 $6$을 우변으로 옮길 때 부호를 바꾸지 않았다. ⑤는 $2$로 나누지 않고 곱했다.",
+      "generated_at": "2026-11-11T03:59:12.590942+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1bdf6371-aea7-4479-904a-c5be34de4992",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:59:12.590837+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.754552+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-오개념판별",
+      "body": "두 학생이 일차방정식 $\\frac{3x}{4}+2=8$을 풀었다.\n\n민수: 양변에 $4$를 곱하면 $3x+2=32$야.\n\n지연: 양변에 $4$를 곱하면 $3x+8=32$야. 따라서 $3x=24$이고, $x=24-3=21$이야.\n\n두 학생의 풀이에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 1,
+          "text": "민수와 지연의 풀이는 모두 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 2,
+          "text": "민수의 풀이는 옳다. 지연은 $24$를 $3$으로 나누어야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "민수는 $2$에도 $4$를 곱해야 한다. 지연은 $24$를 $3$으로 나누어야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 4,
+          "text": "민수는 $2$에도 $4$를 곱해야 한다. 지연의 풀이는 옳다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "민수는 $3x$를 $12x$로 써야 한다. 지연은 $24$를 $3$으로 나누어야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T03:59:29.945334+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "민수는 $2$에도 $4$를 곱해야 하는데 곱하지 않았다. 지연은 $3x=24$까지는 바르게 구했지만, $x$에 곱해진 $3$을 빼서는 안 된다. 양변을 $3$으로 나누어 $x=8$을 구해야 한다. 따라서 정답은 ③이다.",
+      "generated_at": "2026-11-11T03:59:29.8189+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "725cb21b-f7ba-4da6-83a5-61c84bad12e1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:59:29.818678+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.780693+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C2-오개념판별",
+      "body": "다음은 일차방정식 $\\frac{2x-1}{3}-2=1$을 푼 과정이다.\n\n양변에 $3$을 곱하면 $2x-1-6=3$ ⋯ ㉠\n이를 풀면 $2x=10$ ⋯ ㉡\n따라서 $x=10-2=8$ ⋯ ㉢\n\n이 풀이에서 틀린 곳과 그에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 1,
+          "text": "㉠이 틀렸다. $2x-1-2=3$으로 고쳐야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M1",
+          "no": 2,
+          "text": "㉠이 틀렸다. $2x-1-6=1$로 고쳐야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "㉡이 틀렸다. $2x=4$로 고쳐야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M2",
+          "no": 4,
+          "text": "틀린 곳이 없다. $2x=10$에서 $x=10-2=8$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "㉢이 틀렸다. $2x=10$의 양변을 $2$로 나누어 $x=5$로 고쳐야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T03:59:49.234178+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "㉠과 ㉡은 옳다. ㉢에서는 $2x=10$의 양변을 $2$로 나누어야 하므로 $x=5$이다. $2x$는 $2$와 $x$를 곱한 것이므로 $10$에서 $2$를 빼면 안 된다. 또한 ㉠에서 양변에 $3$을 곱할 때는 $-2$와 오른쪽의 $1$에도 각각 $3$을 곱해야 한다.",
+      "generated_at": "2026-11-11T03:59:49.095334+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c39693c9-9ee2-4242-a809-f63926b7a6b1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:59:49.095191+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.805596+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-성질적용",
+      "body": "연필 한 자루의 가격은 지우개 한 개의 가격의 $3$배보다 $200$원 쌉니다. 연필 한 자루와 지우개 한 개를 함께 사면 $1800$원입니다.\n연필 한 자루의 가격을 $x$원으로 놓고 일차방정식을 세워 구한 연필 한 자루의 가격은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$400$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$700$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$1100$원"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$1300$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M5",
+          "no": 5,
+          "text": "$500$원"
+        }
+      ],
+      "created_at": "2026-11-11T04:02:31.923912+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "지우개 한 개의 가격은 $(1800-x)$원입니다. 연필의 가격은 지우개 가격의 $3$배보다 $200$원 싸므로 $x=3(1800-x)-200$입니다. 이를 풀면 $x=1300$입니다.\n⑤를 골랐다면 지우개의 가격이 연필 가격의 $3$배보다 $200$원 싸다고 거꾸로 생각했을 수 있습니다.",
+      "generated_at": "2026-11-11T04:02:31.755509+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 물건의 가격 관계를 일차방정식으로 나타내어 적용해야 한다. 연필 가격을 $x$로 놓았을 때 지우개 가격을 먼저 $(1800-x)$로 나타내야 한다.",
+      "id": "1c64409c-32fe-4ae5-bd63-4794c668e3cc",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:02:31.755295+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-04-C3-성질적용",
+      "body": "어떤 수에 $4$를 더한 다음, 그 결과를 $3$배 하려고 합니다. 그런데 잘못하여 어떤 수를 먼저 $3$배 하고 $4$를 더했더니 $22$가 나왔습니다.\n\n처음 생각한 대로 계산하면 얼마가 나옵니까?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$10$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$18$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M5",
+          "no": 3,
+          "text": "$22$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$26$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$30$"
+        }
+      ],
+      "created_at": "2026-11-11T04:03:01.318465+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T04:51:25.500181+00:00",
+      "explanation": "어떤 수를 $x$라고 하면 잘못 계산한 식은 $3x+4=22$입니다. 이를 풀면 $x=6$입니다. 처음 생각한 대로 계산하면 $(6+4)\\times3=30$입니다.\n\n$22$를 고른 경우, 잘못 계산한 식을 $3(x+4)=22$로 나타냈을 수 있습니다. 하지만 잘못 계산할 때는 $3$배를 먼저 했으므로 $3x+4=22$로 나타내야 합니다.",
+      "generated_at": "2026-11-11T04:03:01.16423+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "잘못 계산한 결과를 이용해 처음 수를 거꾸로 구한 뒤, 처음 생각한 순서대로 다시 계산해야 합니다.",
+      "id": "0e28f07e-b177-429e-a077-89a82eec0f08",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T04:03:01.163921+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:53:43.678281+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-성질적용",
+      "body": "민지는 일정한 빠르기로 분당 $60$미터씩 걷습니다. 민지가 출발하고 $2$분 뒤에 지우가 같은 지점에서 같은 방향으로 걷기 시작했습니다. 지우도 일정한 빠르기로 걸었고, 출발한 지 $4$분 만에 민지를 따라잡았습니다.\n\n지우가 $1$분 동안 걸은 거리는 몇 미터입니까?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M5",
+          "no": 1,
+          "text": "$40$미터"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$60$미터"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$80$미터"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$90$미터"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$120$미터"
+        }
+      ],
+      "created_at": "2026-11-11T04:52:32.329447+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "지우가 민지를 따라잡을 때까지 민지는 $2+4=6$분 동안 걸었습니다. 지우가 $1$분 동안 걸은 거리를 $x$미터라고 하면, 두 사람이 걸은 거리가 같으므로 $4x=60\\times6$입니다. 이를 풀면 $x=90$입니다.\n\n①을 고른 경우, 민지가 걸은 시간과 지우가 걸은 시간을 거꾸로 써서 $6x=60\\times4$로 생각하지 않았는지 살펴봅니다.",
+      "generated_at": "2026-11-11T04:52:32.147109+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 사람이 걸은 시간을 각각 파악하고, 따라잡는 지점까지 걸은 거리가 같다는 상황을 일차방정식으로 나타내야 합니다.",
+      "id": "cfa3e3f5-46a3-4358-a999-dd56d517000c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:52:32.146847+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.841317+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-성질적용",
+      "body": "책장 A와 책장 B에 책이 모두 $36$권 있습니다. A에서 B로 책 $3$권을 옮겼더니 A에 남은 책은 B에 있는 책의 $2$배가 되었습니다.\n\n처음에 B에 있던 책은 몇 권입니까?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$9$권"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10$권"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12$권"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$18$권"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M5",
+          "no": 5,
+          "text": "$21$권"
+        }
+      ],
+      "created_at": "2026-11-11T04:03:24.461645+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "처음에 B에 있던 책을 $x$권으로 놓으면 A에 있던 책은 $(36-x)$권입니다. 책을 옮긴 뒤에는 A에 $(33-x)$권, B에 $(x+3)$권이 있습니다.\n\n따라서 $33-x=2(x+3)$이고, 이를 풀면 $x=9$입니다.\n\n$21$권을 고른 경우, 책을 옮긴 뒤 B의 책이 A의 책의 $2$배라고 거꾸로 생각했을 수 있습니다.",
+      "generated_at": "2026-11-11T04:03:24.305552+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "책을 옮긴 뒤 두 책장의 책 수를 처음 B의 책 수로 나타내어 일차방정식을 세우고 적용해야 합니다.",
+      "id": "ecd8cc35-0127-4a95-8f53-552e60dbf752",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:03:24.305463+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.862707+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-성질적용",
+      "body": "연필 한 자루의 가격은 지우개 한 개의 가격의 $3$배입니다. 연필 한 자루와 지우개 한 개의 가격을 합하면 $2400$원입니다. 연필 한 자루의 가격은 얼마입니까?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M5",
+          "no": 1,
+          "text": "$600$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$800$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$1200$원"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$1800$원"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2400$원"
+        }
+      ],
+      "created_at": "2026-11-11T04:01:43.557849+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "연필 한 자루의 가격을 $x$원이라고 하면 지우개 한 개의 가격은 $\\frac{x}{3}$원입니다. 따라서 $x+\\frac{x}{3}=2400$이고, $x=1800$입니다. 정답은 ④입니다.\n①은 연필의 가격을 $x$원으로 놓고 지우개의 가격을 잘못하여 $3x$원으로 나타낸 경우에 나올 수 있습니다. 연필이 지우개보다 $3$배 비싸므로 지우개의 가격은 연필 가격의 $\\frac{1}{3}$입니다.",
+      "generated_at": "2026-11-11T04:01:43.441369+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b0e8f194-896e-44cb-b1f3-ad20b890ddf6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:01:43.441284+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:53:43.723509+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-성질적용",
+      "body": "형의 나이는 동생의 나이의 $2$배보다 $3$살 많습니다. 형의 나이는 $19$살입니다. 동생의 나이는 몇 살입니까?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$살"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$8$살"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$11$살"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$16$살"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M5",
+          "no": 5,
+          "text": "$41$살"
+        }
+      ],
+      "created_at": "2026-11-11T04:52:13.778777+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "동생의 나이를 $x$살이라고 하면 형의 나이는 $(2x+3)$살입니다. 따라서 $2x+3=19$이고, 이를 풀면 $x=8$입니다. 동생의 나이를 거꾸로 형의 나이의 $2$배보다 $3$살 많다고 생각하면 $41$살을 고를 수 있습니다.",
+      "generated_at": "2026-11-11T04:52:13.418558+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "44c184a6-40a5-4401-ad30-9f0ee8b2b7d2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:52:13.418309+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-04-C3-성질적용",
+      "body": "형의 나이는 동생 나이의 $2$배보다 $3$살 많습니다. 형은 $17$살입니다. 동생은 몇 살입니까?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$살"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$7$살"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8$살"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M5",
+          "no": 4,
+          "text": "$10$살"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$14$살"
+        }
+      ],
+      "created_at": "2026-11-11T04:01:57.672548+00:00",
+      "difficulty": "normal",
+      "disabled_at": "2026-11-11T04:51:25.536299+00:00",
+      "explanation": "동생의 나이를 $x$살이라고 하면 형의 나이는 $(2x+3)$살입니다. 따라서 $2x+3=17$이고, 이를 풀면 $x=7$입니다. $10$살을 고른 경우에는 $3$살 많다는 것을 $3$살 적다고 잘못 생각했을 수 있습니다.",
+      "generated_at": "2026-11-11T04:01:57.391178+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "63afa418-bde6-41ab-82d6-dcea3887f45c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T04:01:57.391000+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.898331+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-성질적용",
+      "body": "민지는 일정한 빠르기로 $3$분 동안 걸었습니다. 걸은 거리와 남은 거리를 합하면 $900$m입니다. 남은 거리는 걸은 거리보다 $180$m 더 깁니다. 민지는 $1$분에 몇 m씩 걸었습니까?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$60$m"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$90$m"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$120$m"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$150$m"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-04-M5",
+          "no": 5,
+          "text": "$180$m"
+        }
+      ],
+      "created_at": "2026-11-11T04:02:15.45223+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "민지가 $1$분에 $x$m씩 걸었다고 하면 걸은 거리는 $3x$m, 남은 거리는 $(3x+180)$m입니다. 따라서 $3x+(3x+180)=900$입니다. 이를 풀면 $x=120$입니다. $180$m씩 걸었다고 답하면 남은 거리가 걸은 거리보다 $180$m 짧다고 잘못 생각한 것입니다.",
+      "generated_at": "2026-11-11T04:02:15.252925+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "e11386a7-e818-4311-8205-2219360ed12a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:02:15.252755+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-04-C3-이유설명",
+      "body": "두 상자 A, B에 구슬이 모두 $14$개 있다. A의 구슬 수는 B의 구슬 수의 $2$배보다 $1$개 많다고 한다.\n\nB의 구슬 수를 $x$개로 놓고, 두 학생이 각각 다음 식을 세웠다.\n\n민서: $2x+1+x=14$\n준호: $14-x=2x+1$\n\n두 식을 각각 세운 이유를 설명하시오. 또 $x$에 어떤 수를 넣어도 두 식이 함께 맞거나 함께 맞지 않는 이유를 설명하시오. 식을 풀고, 구한 수가 구슬 수로 적합한지도 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T04:04:35.481246+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-11T04:51:25.573437+00:00",
+      "explanation": "B에 구슬이 $x$개라면 A에는 $2x+1$개가 있다. 두 상자의 구슬 수를 더하면 $14$개이므로 민서의 식을 세울 수 있다. 또 전체 $14$개에서 B의 $x$개를 빼면 A의 구슬 수이므로 준호의 식을 세울 수 있다.\n\n준호의 식에서 양변에 $x$를 더하면 민서의 식이 된다. 따라서 $x$에 어떤 수를 넣어도 두 식은 함께 맞거나 함께 맞지 않는다. 식을 풀면 $x=\\frac{13}{3}$이다. 구슬 수는 온전한 개수여야 하므로 이 수는 B의 구슬 수로 적합하지 않다. 따라서 말한 내용에 맞게 구슬을 나눌 수 없다.\n\nA의 구슬 수를 $2x+1$이 아닌 다른 식으로 나타내면 어느 상자의 구슬 수가 다른 상자의 $2$배보다 $1$개 많은지 거꾸로 생각한 것일 수 있다. 또한 $\\frac{13}{3}$을 그대로 구슬 수로 답하면 구한 수가 실제 구슬의 개수로 가능한지 확인하지 않은 것이다.",
+      "generated_at": "2026-11-11T04:04:35.333843+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 학생이 식을 세운 방법을 비교하고, 어떤 수를 넣어도 두 식이 함께 맞거나 함께 맞지 않는 이유를 설명하게 했다.",
+      "id": "7f146b88-da01-4fd3-824d-ed40079fdc1d",
+      "model": "gpt-6.1-terra",
+      "model_answer": "B의 구슬 수가 $x$개이므로 A의 구슬 수는 $2x+1$개이다. 두 상자의 구슬 수의 합이 $14$개이므로 $2x+1+x=14$이다. 또 전체 $14$개에서 B의 구슬 $x$개를 빼면 A의 구슬 수이므로 $14-x=2x+1$이다.\n\n두 식은 한 식의 양변에 $x$를 더하거나 양변에서 $x$를 빼면 서로 바뀐다. 따라서 $x$에 어떤 수를 넣어도 두 식은 함께 맞거나 함께 맞지 않는다.\n\n식을 풀면 $x=\\frac{13}{3}$이다. 구슬 수는 온전한 개수여야 하므로 $\\frac{13}{3}$개는 적합하지 않다. 따라서 말한 내용에 맞게 구슬을 나눌 수 없다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "A의 구슬 수를 $2x+1$개로 나타내고, 두 상자의 합이 $14$개라는 뜻으로 민서의 식을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "전체 $14$개에서 B의 구슬 수를 뺀 것이 A의 구슬 수라는 뜻으로 준호의 식을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "한 식의 양변에 $x$를 더하거나 양변에서 $x$를 빼면 다른 식이 됨을 이용하여, 어떤 수를 넣어도 두 식이 함께 맞거나 함께 맞지 않는 이유를 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "식을 풀어 $x=\\frac{13}{3}$을 구한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$\\frac{13}{3}$은 온전한 구슬의 개수가 아니므로 말한 내용에 맞게 구슬을 나눌 수 없다고 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-11T04:04:35.333416+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:53:43.747002+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-이유설명",
+      "body": "민지는 자전거를 타거나 걸어서 $13\\text{ km}$를 가는 계획을 세우려 한다. 자전거를 탈 때의 속력은 시속 $4\\text{ km}$이고, 걸을 때의 속력은 시속 $2\\text{ km}$이다. 쉬는 시간 없이 두 방법으로 이동한 시간이 모두 $3$시간이 되게 하려고 한다.\n\n자전거를 타는 시간을 $x$시간으로 놓는 방법과 걷는 시간을 $t$시간으로 놓는 방법으로 각각 일차방정식을 세워 푸시오. 두 식을 세운 이유와 두 방법이 같은 결과를 나타내는 이유를 설명하시오. 또 구한 시간이 계획에 맞는지 확인하고, 이런 계획을 세울 수 있는지 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T04:53:01.703774+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "자전거를 타는 시간을 $x$시간으로 놓으면 걷는 시간은 $3-x$시간이다. 따라서 이동한 거리를 나타내면 $4x+2(3-x)=13$이고, 이를 풀면 $x=3.5$이다.\n\n걷는 시간을 $t$시간으로 놓으면 자전거를 타는 시간은 $3-t$시간이다. 따라서 $2t+4(3-t)=13$이고, 이를 풀면 $t=-0.5$이다. 두 방법은 같은 두 이동 시간을 다른 쪽에서 나타낸 것이다.\n\n자전거를 타는 시간이 전체 시간인 $3$시간보다 크고, 걷는 시간은 음수이다. 따라서 이런 계획은 세울 수 없다. 식에서 구한 수만 보고 계획을 세울 수 있다고 답하면 시간이 상황에 맞는지 확인하지 않은 것이다.",
+      "generated_at": "2026-11-11T04:53:01.587608+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "문제에서 자전거를 타는 시간을 놓는 방법과 걷는 시간을 놓는 방법이 같은 결과를 나타내는 이유를 비교하여 설명하도록 했다.",
+      "id": "ef660023-d507-470d-bf2a-81d5b6973369",
+      "model": "gpt-6.1-terra",
+      "model_answer": "자전거를 타는 시간을 $x$시간으로 놓으면 걷는 시간은 $3-x$시간이다. 두 방법으로 이동한 거리를 더하면 $13\\text{ km}$이므로 $4x+2(3-x)=13$이다. 이를 풀면 $x=3.5$이다.\n\n걷는 시간을 $t$시간으로 놓으면 자전거를 타는 시간은 $3-t$시간이다. 두 거리를 더하면 $13\\text{ km}$이므로 $2t+4(3-t)=13$이다. 이를 풀면 $t=-0.5$이다.\n\n두 방법 모두 한쪽 시간을 전체 $3$시간에서 빼서 다른 쪽 시간을 구한다. 첫 번째 방법에서 걷는 시간은 $3-3.5=-0.5$시간이므로 두 방법은 같은 결과를 나타낸다.\n\n자전거를 타는 $3.5$시간은 전체 $3$시간보다 크고, 걷는 시간은 음수이다. 따라서 이런 계획은 세울 수 없다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "자전거를 타는 시간을 $x$시간으로 놓고, 걷는 시간과 두 이동 거리를 이용하여 $4x+2(3-x)=13$을 세운 이유를 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "걷는 시간을 $t$시간으로 놓고, 자전거를 타는 시간과 두 이동 거리를 이용하여 $2t+4(3-t)=13$을 세운 이유를 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 식을 풀어 각각 $x=3.5$, $t=-0.5$를 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "한쪽 시간을 전체 시간에서 빼면 다른 쪽 시간이 됨을 이용하여 두 방법이 같은 결과를 나타내는 이유를 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "구한 시간이 상황에 맞지 않는 이유를 들어 이런 계획을 세울 수 없다고 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:53:01.587377+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.924027+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-이유설명",
+      "body": "같은 가격인 연필 $3$자루를 사고 포장비 $300$원을 더해 모두 $2700$원을 냈다. 연필 한 자루의 가격은 원 단위의 자연수이다.\n\n1. 연필 한 자루의 가격을 $x$원으로 놓고 일차방정식을 세워 푸시오. 식을 세운 이유와 구한 수가 상황에 맞는 이유도 설명하시오.\n\n2. 한 학생이 “일차방정식에서 구한 수는 언제나 문제의 답이 된다.”라고 말했다. 위 상황에서 총금액만 $2800$원으로 바꾸어 생각해 보자. 이 학생의 말이 틀렸음을 식을 세워 보이고, 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T04:04:56.571579+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "연필 $3$자루의 가격은 $3x$원이고, 여기에 포장비를 더한 금액이 총금액이다. 총금액이 $2700$원일 때 구한 $800$원은 원 단위의 자연수이며, 실제로 $3$자루의 가격에 포장비를 더하면 $2700$원이다.\n\n총금액이 $2800$원이면 식에서 구한 수는 $\\frac{2500}{3}$이다. 이 수는 원 단위의 자연수가 아니므로 연필 한 자루의 가격으로 쓸 수 없다. 식에서 수를 구한 뒤에는 그 수가 문제 상황에 맞는지 확인해야 한다.",
+      "generated_at": "2026-11-11T04:04:56.427273+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "2번에서 총금액을 바꾼 상황을 이용해 식에서 구한 수가 문제의 답이 되지 않는 예를 보이게 한다.",
+      "id": "6985099d-4054-434d-a9a4-3cdcb46dbfe1",
+      "model": "gpt-6.1-terra",
+      "model_answer": "1. 연필 $3$자루의 가격은 $3x$원이므로 $3x+300=2700$이다. 이 식을 풀면 $x=800$이다. $800$은 원 단위의 자연수이고, $800\\times3+300=2700$이므로 상황에 맞는다. 따라서 연필 한 자루의 가격은 $800$원이다.\n\n2. 총금액이 $2800$원이면 $3x+300=2800$이다. 이 식을 풀면 $x=\\frac{2500}{3}$이다. 이 수는 원 단위의 자연수가 아니므로 연필 한 자루의 가격으로 쓸 수 없다. 따라서 식에서 구한 수가 문제의 답이 되지 않는 때도 있다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "연필 $3$자루의 가격에 포장비를 더한 금액이 총금액임을 설명하고, $3x+300=2700$을 세운다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$x=800$을 구하고, 이 수가 원 단위의 자연수이며 총금액에도 맞음을 확인한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "바뀐 총금액에 대해 $3x+300=2800$을 세우고 $x=\\frac{2500}{3}$을 구한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$\\frac{2500}{3}$이 원 단위의 자연수가 아니므로 연필 가격으로 쓸 수 없다고 설명하여 학생의 말이 틀렸음을 보인다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:04:56.427011+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.954129+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-이유설명",
+      "body": "현재 어머니는 $28$살이고, 자녀는 $8$살이다.\n\n1. 어머니의 나이가 자녀의 나이의 $3$배가 되는 때는 몇 년 후인지 구하시오. $x$년 후라고 놓고 일차방정식을 세워 푸시오. 식을 세운 이유와 구한 수가 상황에 맞는 이유도 설명하시오.\n\n2. 한 학생이 “현재 어머니의 나이가 자녀의 나이의 $3$배보다 $4$살 많으면, 언제나 $4$년 후에 어머니의 나이는 자녀의 나이의 $3$배가 된다.”라고 말했다. 위의 어머니와 자녀의 나이를 이용하여 이 말이 틀렸음을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-11T04:05:54.256738+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$x$년 후의 나이는 어머니가 $(28+x)$살, 자녀가 $(8+x)$살이다. 어머니의 나이가 자녀 나이의 $3$배이므로 $28+x=3(8+x)$이다. 자녀의 나이가 어머니 나이의 $3$배라고 식을 세우지 않도록 주의한다.\n\n이 식을 풀면 $x=2$이다. $2$년 후 두 사람의 나이는 각각 $30$살과 $10$살이므로 상황에 맞는다. 구한 수를 답하기 전에 실제 나이로 확인해야 한다.\n\n현재 $28=3\\times8+4$이지만, $4$년 후에는 어머니가 $32$살, 자녀가 $12$살이다. $32$는 $12$의 $3$배가 아니므로 학생의 말은 틀렸다.",
+      "generated_at": "2026-11-11T04:05:53.724743+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "2번에서 주어진 두 사람의 나이를 반례로 이용해 학생의 말이 틀렸음을 설명하게 한다.",
+      "id": "2d4d269a-d0a1-4691-83cd-b11adc7467ab",
+      "model": "gpt-6.1-terra",
+      "model_answer": "1. $x$년 후 어머니는 $(28+x)$살, 자녀는 $(8+x)$살이다. 어머니의 나이가 자녀 나이의 $3$배이므로 $28+x=3(8+x)$이다. 이를 풀면 $x=2$이다. $2$년 후 어머니는 $30$살, 자녀는 $10$살이고, $30=3\\times10$이므로 상황에 맞는다. 따라서 $2$년 후이다.\n\n2. 현재 $28=3\\times8+4$이므로 두 사람의 나이는 학생이 말한 내용에 맞는다. 하지만 $4$년 후 어머니는 $32$살, 자녀는 $12$살이고, $32$는 $12$의 $3$배가 아니다. 따라서 학생의 말은 틀렸다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "$x$년 후 두 사람의 나이를 각각 $(28+x)$살과 $(8+x)$살로 나타낸다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "어머니의 나이가 자녀 나이의 $3$배라는 관계를 이용하여 $28+x=3(8+x)$를 세운다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "식을 풀어 $x=2$를 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "$2$년 후 두 사람의 나이가 각각 $30$살과 $10$살임을 구하고, 어머니의 나이가 자녀 나이의 $3$배임을 확인한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "현재 나이가 $28=3\\times8+4$를 만족하지만 $4$년 후의 나이 $32$살과 $12$살은 $3$배 관계가 아님을 보여 학생의 말이 틀렸다고 설명한다.",
+          "no": 5,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:05:31.739207+00:00",
+          "issues": [
+            "‘두 시간 동안 달린 거리’가 52km라고 되어 있어 전체 3시간의 거리라는 모범 답안의 해석과 다르다. 처음 2시간의 거리라면 2x=52이므로 x=26이다.",
+            "채점 기준은 3시간 동안의 거리 합을 확인하게 하므로, 주어진 2시간의 거리 조건에 해가 맞는지 평가하지 못한다.",
+            "‘어떤 양수이든’이라는 조건을 붙였지만, 요구하는 이유는 거리=속력×시간을 바로 적용한 일반적인 식 세우기와 구별되지 않는다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T04:05:53.724340+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.979812+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-이유설명",
+      "body": "상자에 연필이 들어 있습니다. 연필을 더 넣었더니 연필 수가 처음의 $3$배보다 $2$자루 많은 $20$자루가 되었습니다.\n\n처음에 있던 연필은 몇 자루인지 구하세요. 식을 세운 까닭과 구한 수가 문제 상황에 맞는지도 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T04:03:38.957331+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "처음 연필 수를 $x$자루라고 하면 처음의 $3$배보다 $2$자루 많은 수는 $3x+2$입니다. 이것이 $20$이므로 $3x+2=20$을 풀면 $x=6$입니다. $6$은 연필의 개수로 알맞고, $3\\times 6+2=20$이므로 문제의 내용에도 맞습니다. 처음의 수와 나중의 수를 거꾸로 생각하거나, 구한 수가 연필의 개수로 알맞은지 확인하지 않으면 안 됩니다.",
+      "generated_at": "2026-11-11T04:03:38.808419+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "cea0056b-cf0b-4af9-8fe3-6f4d0f66d4f9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "처음 연필 수를 $x$자루라고 하면 처음의 $3$배보다 $2$자루 많은 수는 $3x+2$입니다. 따라서 $3x+2=20$이고, 이를 풀면 $x=6$입니다. $6$은 연필의 개수로 알맞고, $3\\times 6+2=20$이므로 문제의 내용에도 맞습니다. 따라서 처음에 있던 연필은 $6$자루입니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "처음 연필 수를 $x$자루로 놓고, 처음의 $3$배보다 $2$자루 많은 수가 $3x+2$임을 설명하여 $3x+2=20$을 세운다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "방정식을 풀어 처음 연필 수가 $6$자루라고 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$6$이 연필의 개수로 알맞고, $3\\times 6+2=20$으로 문제의 내용에도 맞음을 확인한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:03:38.808251+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:29.003414+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-이유설명",
+      "body": "같은 가격인 공책 $4$권을 주문했습니다. 공책값과 배송비 $500$원을 합하여 $10500$원을 냈습니다. 공책 한 권의 가격은 몇 원인가요?\n\n일차방정식을 세운 까닭을 쓰고, 구한 가격이 문제 상황에 맞는지 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T04:03:54.526403+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "공책 한 권의 가격을 $x$원이라고 하면 공책 $4$권의 가격은 $4x$원입니다. 배송비 $500$원은 한 번만 더하므로 $4x+500=10500$입니다. 이를 풀면 $x=2500$입니다. $2500$원은 가격으로 알맞고, 공책값과 배송비를 합하면 $4\\times2500+500=10500$원입니다. 답을 구한 뒤에는 이처럼 가격이 될 수 있는 수인지, 낸 금액과 맞는지 확인해야 합니다.",
+      "generated_at": "2026-11-11T04:03:54.385431+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d9860e56-5429-413b-8e70-583f1f42b26c",
+      "model": "gpt-6.1-terra",
+      "model_answer": "공책 한 권의 가격을 $x$원이라고 하면 $4$권의 가격은 $4x$원입니다. 여기에 배송비 $500$원을 더하면 $10500$원이므로 $4x+500=10500$입니다. 이를 풀면 $x=2500$입니다.\n\n$2500$원은 가격으로 알맞고, $4\\times2500+500=10500$이므로 낸 금액과도 맞습니다. 따라서 공책 한 권의 가격은 $2500$원입니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "공책 한 권의 가격을 문자로 놓고, 공책값과 배송비의 합을 이용하여 식을 세운 까닭을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "세운 식을 풀어 공책 한 권의 가격이 $2500$원임을 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$2500$원이 가격으로 알맞고, 공책값과 배송비를 합하면 $10500$원이 됨을 확인한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:03:54.385314+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:29.028117+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-04-C3-이유설명",
+      "body": "현재 형의 나이는 동생의 나이의 $3$배입니다. $6$년 후에는 형의 나이가 동생의 나이의 $2$배가 됩니다. 두 사람의 나이는 모두 만 나이로 나타냅니다.\n\n현재 동생의 나이를 구하세요. 일차방정식을 세운 까닭과 구한 나이가 문제 상황에 맞는지도 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T04:04:10.903378+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "현재 동생의 나이를 $x$세라고 하면 형의 나이는 $3x$세입니다. $6$년 후의 나이는 각각 $(x+6)$세, $(3x+6)$세입니다. 그때 형의 나이가 동생의 나이의 $2$배이므로 $3x+6=2(x+6)$입니다. 이를 풀면 $x=6$입니다.\n\n현재 동생은 $6$세, 형은 $18$세입니다. $6$년 후에는 각각 $12$세, $24$세이므로 구한 나이는 문제 상황에 맞습니다.\n\n구한 수가 나이로 알맞은지, 주어진 관계에 맞는지 확인해야 합니다. 또 $6$년 후에는 동생이 아니라 형의 나이가 $2$배라는 점에 주의해야 합니다.",
+      "generated_at": "2026-11-11T04:04:10.738122+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ede8906b-183a-4d84-8236-561bc72764de",
+      "model": "gpt-6.1-terra",
+      "model_answer": "현재 동생의 나이를 $x$세라고 하면 현재 형의 나이는 $3x$세입니다. $6$년 후 동생의 나이는 $(x+6)$세, 형의 나이는 $(3x+6)$세입니다. 그때 형의 나이가 동생의 나이의 $2$배이므로 $3x+6=2(x+6)$입니다. 이를 풀면 $x=6$입니다.\n\n따라서 현재 동생은 $6$세입니다. 형은 $18$세이고, $6$년 후에는 동생이 $12$세, 형이 $24$세입니다. 두 나이는 모두 알맞고 $24$는 $12$의 $2$배이므로 문제 상황에 맞습니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "현재 동생의 나이를 $x$세로 놓고, $6$년 후 두 사람의 나이를 이용하여 $3x+6=2(x+6)$을 세운 까닭을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M5"
+          ],
+          "required": true
+        },
+        {
+          "description": "일차방정식을 풀어 현재 동생의 나이가 $6$세임을 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "구한 나이가 알맞음을 밝히고, $6$년 후 형과 동생의 나이가 각각 $24$세와 $12$세로 주어진 관계에 맞음을 확인한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-04-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:04:10.738020+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    }
+  ]
+}

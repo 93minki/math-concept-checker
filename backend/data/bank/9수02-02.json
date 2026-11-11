@@ -1,0 +1,1475 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수02-02-C3-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-11T03:50:48.389200+00:00",
+          "issues": [
+            "문항과 채점 기준은 동류항을 각각 계산하는 이유만 요구하며, 서로 다른 문자 항을 계수끼리 합칠 수 없는 이유를 분배법칙으로 설명하도록 요구하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:51:09.958567+00:00",
+          "issues": [
+            "문제와 채점 기준은 동류항을 각각 분배법칙으로 계산하게 하지만, 동류항끼리만 더할 수 있는 이유를 설명하도록 요구하지 않는다. 모범 답안도 그 이유를 설명하지 않고 만점을 받을 수 있다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-11T03:51:31.884812+00:00",
+          "issues": [
+            "동류항을 분배법칙으로 정리하고 특정 반례를 제시하도록 하지만, 서로 다른 문자항의 계수를 왜 합칠 수 없는지는 설명하도록 요구하지 않는다. 따라서 의도한 이유 설명을 충분히 측정하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-11T03:51:32.067546+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v6",
+      "resolved_at": "2026-11-11T04:46:20.863488+00:00",
+      "variant": 1
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-11T04:51:27.655923+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C1-정의이해",
+      "body": "다음 식을 각각 간단히 한 후, 옳은 설명을 고르시오.\n\nㄱ. $2(x+1)-2x$\nㄴ. $3-x-3$\nㄷ. $2x-(x-1)$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "ㄱ은 처음 식에 $x$가 있으므로 일차식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 2,
+          "text": "ㄴ은 항이 하나이므로 일차식이 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄴ은 일차식이고, $x$의 계수는 $-1$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 4,
+          "text": "ㄷ은 항이 두 개이므로 차수가 $2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M3",
+          "no": 5,
+          "text": "ㄴ은 일차식이고, $x$의 계수는 $1$이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:45:09.03045+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "각 식을 간단히 하면 ㄱ은 $2$, ㄴ은 $-x$, ㄷ은 $x+1$이다.\n\nㄱ은 문자가 없는 수이므로 일차식이 아니다. ㄴ은 항이 하나이지만 차수가 $1$이므로 일차식이다. ㄴ에서 $x$의 계수는 부호를 포함한 $-1$이다. ㄷ은 항이 두 개이지만 차수는 $1$이다. 항의 개수와 식의 차수는 다르다. 따라서 정답은 ③이다.",
+      "generated_at": "2026-11-11T03:45:08.785887+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "ㄱ은 처음에 문자가 있지만 간단히 하면 수가 되고, ㄴ은 항이 하나인 일차식이다. 각 식을 간단히 한 후 일차식의 뜻을 따져야 한다.",
+      "id": "e588ca77-21f7-4a58-a8fb-fd86905fc308",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:45:08.785585+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.680662+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C1-정의이해",
+      "body": "길이가 $4$cm보다 긴 끈이 있다. 처음 끈의 길이를 $x$cm라 하자. 이 끈에서 $4$cm를 자르고 남은 끈의 길이에서 처음 끈의 길이의 $2$배를 뺀 수를 식으로 나타내어 간단히 했다. 이 식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "일차식이며, $x$의 계수는 $-1$, 상수항은 $-4$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M3",
+          "no": 2,
+          "text": "일차식이며, $x$의 계수는 $1$, 상수항은 $-4$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M3",
+          "no": 3,
+          "text": "일차식이며, $x$의 계수는 $0$, 상수항은 $-4$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 4,
+          "text": "항이 $2$개이므로 차수는 $2$이고, 일차식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "일차식이며, $x$의 계수는 $-1$, 상수항은 $4$이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:45:28.602892+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "남은 끈의 길이는 $(x-4)$cm이다. 구하는 식을 간단히 하면 $(x-4)-2x=-x-4$이다. $-x$의 계수는 부호를 포함한 $-1$이고, 상수항은 $-4$이다. 이 식의 차수는 $1$이므로 일차식이다.\n②는 계수에서 부호를 빠뜨렸고, ③은 문자 앞에 수가 보이지 않아 계수를 $0$으로 잘못 생각했다. ④는 항의 개수를 차수로 잘못 생각했다. ⑤는 상수항의 부호를 잘못 생각했다.",
+      "generated_at": "2026-11-11T03:45:28.386565+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "끈의 길이에 대한 설명을 식으로 나타낸 뒤, 그 식의 계수와 상수항, 차수를 판단해야 한다.",
+      "id": "fbb49215-3bcf-4ae1-8cbc-c17a84bde634",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:45:28.386442+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.715734+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C1-정의이해",
+      "body": "두 식 $-x$와 $6$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-x$는 항이 한 개인 일차식이고, 계수는 $-1$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M3",
+          "no": 2,
+          "text": "$-x$는 일차식이고, 계수는 $1$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 3,
+          "text": "$-x$는 항이 한 개뿐이므로 일차식이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 4,
+          "text": "$6$은 항이 한 개이므로 일차식이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 5,
+          "text": "$-x$의 계수는 $-1$이고, 차수도 $-1$이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:45:52.47732+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$-x$는 항이 한 개이고, $-x=(-1)\\times x$이므로 계수는 $-1$이다. 차수는 $1$이므로 일차식이다. 따라서 정답은 ①이다.\n②에서 계수의 부호를 빼고 생각했다. ③과 ④에서 항의 개수로 일차식인지 판단했다. 항이 한 개여도 차수가 $1$이면 일차식이다. $6$은 차수가 $0$이므로 일차식이 아니다. ⑤에서는 계수와 차수를 혼동했다.",
+      "generated_at": "2026-11-11T03:45:52.07609+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "항이 한 개인 일차식 $-x$와 문자가 없는 식 $6$을 살펴보게 한다. 항의 개수가 아닌 차수로 일차식인지 판단해야 한다.",
+      "id": "96bbfb15-408d-4451-8c87-65dd3e01aee7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:45:52.075832+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.738065+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C1-정의이해",
+      "body": "식 $-3x+5$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M3",
+          "no": 1,
+          "text": "$x$의 계수는 $3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 2,
+          "text": "차수는 $3$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 3,
+          "text": "차수는 $2$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "상수항은 $-5$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "항은 $-3x$와 $5$이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:44:13.973825+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-3x+5$의 항은 $-3x$와 $5$이므로 ⑤가 옳습니다. $x$의 계수는 부호를 포함한 $-3$이고, 상수항은 $5$입니다. 문자 $x$가 한 번 곱해져 있으므로 차수는 $1$입니다. 계수나 항의 개수를 차수로 생각하지 않도록 주의합니다.",
+      "generated_at": "2026-11-11T03:44:13.617435+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d7a4c5e5-1d7e-494a-9de8-1517412b9550",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:44:13.616693+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.767046+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C1-정의이해",
+      "body": "일차식 $-x$의 계수와 차수를 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M3",
+          "no": 1,
+          "text": "계수: $1$, 차수: $1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M3",
+          "no": 2,
+          "text": "계수: $0$, 차수: $1$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "계수: $-1$, 차수: $1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 4,
+          "text": "계수: $-1$, 차수: $-1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "계수: $-1$, 차수: $0$"
+        }
+      ],
+      "created_at": "2026-11-11T03:44:25.955984+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$-x$는 $-1$에 $x$를 곱한 식이므로 계수는 $-1$이다. $x$가 한 번 곱해져 있으므로 차수는 $1$이다. 계수를 $1$로 보면 부호를 빠뜨린 것이고, $0$으로 보면 문자 앞에 수가 쓰여 있지 않아 계수가 없다고 생각한 것이다. 차수를 $-1$로 보면 차수와 계수를 혼동한 것이다.",
+      "generated_at": "2026-11-11T03:44:25.670134+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "fbb2a713-085e-44bb-9373-1584236c11cd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:44:25.669842+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.791413+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C1-정의이해",
+      "body": "두 항으로 이루어진 식이 있다. 한 항은 $-4$이고, $x$의 계수는 $1$이다. 이 식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M3",
+          "no": 1,
+          "text": "$-x-4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x+4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M4",
+          "no": 3,
+          "text": "$4x-4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x-4$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x-1$"
+        }
+      ],
+      "created_at": "2026-11-11T03:44:50.208289+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$의 계수가 $1$인 항은 $x$이다. 따라서 식은 $x-4$이다. $-x$의 계수는 부호를 포함한 $-1$이다. $4x$의 계수는 $4$이고 차수는 $1$이다. 계수와 차수를 혼동하지 않도록 주의한다. $x+4$와 $x-1$에는 항 $-4$가 없다.",
+      "generated_at": "2026-11-11T03:44:49.982396+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "cb0b4fa2-7b00-476c-8945-776085247efb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:44:49.982017+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.818746+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C2-오개념판별",
+      "body": "민서는 식을 다음과 같이 계산했다.\n\n$2(x+3)-(x+2)=x+4=5x$\n\n민서의 계산 과정을 보고 옳게 말한 것은? 각 단계에서 문자의 값에 관계없이 항상 같은 식인지 생각하자.",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 1,
+          "text": "두 단계가 모두 옳다. $x$와 $4$를 합하면 $5x$이기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "첫 번째 단계가 틀렸다. 괄호 앞에 뺄셈 기호가 있어도 괄호 안의 $+2$는 그대로 $+2$가 되기 때문이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫 번째 단계는 옳고 두 번째 단계는 틀렸다. $x$와 $4$는 동류항이 아니기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "첫 번째 단계는 옳고 두 번째 단계는 틀렸다. 계수가 $1$인 항은 다른 항과 합칠 수 없기 때문이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "첫 번째 단계가 틀렸다. $2x$와 $-x$는 계수가 다르므로 동류항이 아니기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-11T03:47:01.305953+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$2(x+3)-(x+2)=2x+6-x-2=x+4$이므로 첫 번째 단계는 옳다. 하지만 $x$와 $4$는 동류항이 아니므로 $5x$로 합칠 수 없다. ①은 문자와 수를 서로 다른 항인데도 하나의 항으로 합친 잘못이다. ⑤와 달리 $2x$와 $-x$는 계수가 달라도 동류항이다.",
+      "generated_at": "2026-11-11T03:47:01.171814+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민서의 두 단계 계산을 보고 각 단계의 옳고 그름과 그 이유를 함께 판단하게 했다.",
+      "id": "ef4d6421-9fc9-44d4-981e-8ab0fb3ce598",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:47:01.171660+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.846305+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C2-오개념판별",
+      "body": "두 학생이 다음과 같이 말했다.\n\n지우: $a=1$, $b=1$일 때 $2a+3b=5a$야. 따라서 $a$, $b$의 값에 관계없이 $2a+3b=5a$야.\n\n서준: $2a$와 $3a$는 계수가 달라도 동류항이야. 따라서 $2a+3a=5a$야.\n\n두 학생의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 1,
+          "text": "둘 다 옳다. $2a+3b$도 계수를 더해 $5a$로 쓸 수 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "지우만 옳다. 확인한 값에서 같으면 언제나 같고, 계수가 다르면 동류항이 아니다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "서준만 옳다. $2a$와 $3b$는 동류항이 아니지만, $2a$와 $3a$는 동류항이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "서준만 옳다. $2a$와 $3b$는 문자가 다르므로 $2a+3b$ 자체를 식으로 쓸 수 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "둘 다 옳지 않다. 각각의 식에서 두 항의 계수가 서로 다르므로 더할 수 없다."
+        }
+      ],
+      "created_at": "2026-11-11T03:47:24.015792+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정답은 3번이다. $2a$와 $3b$는 동류항이 아니므로 $5a$로 합칠 수 없다. 예를 들어 $a=1$, $b=2$이면 $2a+3b=8$이지만 $5a=5$이다. 한 가지 값에서 같다고 해서 언제나 같은 것은 아니다.\n\n한편 $2a$와 $3a$는 계수가 달라도 문자 부분이 같으므로 동류항이다. 따라서 $2a+3a=5a$이다. 1번처럼 서로 다른 문자 부분을 가진 항까지 합쳐서는 안 된다. 또 동류항이 아닌 항도 $2a+3b$와 같이 더한 식으로 쓸 수 있다.",
+      "generated_at": "2026-11-11T03:47:23.869166+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "지우와 서준의 말을 보고 각각의 판단이 옳은지 살펴보게 했다. 한 가지 값에서 같다는 사실과 동류항의 뜻을 구별해야 한다.",
+      "id": "7962582a-1814-4ca1-beef-498824d4118c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:47:23.868950+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.884028+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C2-오개념판별",
+      "body": "다음은 식 $5m-2n-2m$에 대한 수아의 말이다.\n\n“$-2n$과 $-2m$은 앞에 붙은 수가 같으므로 합쳐서 $-4n$으로 쓸 수 있어. 따라서 주어진 식은 $5m-4n$이야.”\n\n수아의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 1,
+          "text": "옳다. 앞에 붙은 수가 같으면 동류항이므로 $5m-4n$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 2,
+          "text": "옳다. 문자가 달라도 빼는 항끼리는 합칠 수 있으므로 $5m-4n$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 3,
+          "text": "틀리다. $-2n$과 $-2m$을 합치면 $-4m$이므로 주어진 식은 $m$이다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. $5m$과 $-2m$이 동류항이므로 주어진 식은 $3m-2n$이다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. 앞에 붙은 수가 다른 항은 합칠 수 없으므로 주어진 식에서 합칠 수 있는 항이 없다."
+        }
+      ],
+      "created_at": "2026-11-11T03:47:45.885611+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$-2n$과 $-2m$은 앞에 붙은 수는 같지만 문자가 다르므로 동류항이 아니다. 따라서 하나의 항으로 합칠 수 없다. 반면 $5m$과 $-2m$은 문자가 같으므로 합칠 수 있다. 주어진 식은 $3m-2n$이다.\n\n①, ②, ③은 문자가 다른 두 항을 하나의 항으로 합친 잘못이 있다. ⑤는 앞에 붙은 수가 다르더라도 문자가 같으면 동류항임을 놓쳤다.",
+      "generated_at": "2026-11-11T03:47:45.7476+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "수아의 말을 보고 문자가 다른 항을 합친 판단이 옳은지 판단하게 했다.",
+      "id": "fc8975b1-bb47-4e91-beae-d2dc3262ee2b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:47:45.747456+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.909568+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C2-오개념판별",
+      "body": "민지는 $3x+2+4x$를 $9x$로 계산했습니다. 민지의 계산이 잘못된 이유로 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3x$와 $4x$는 계수가 다르므로 더할 수 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 2,
+          "text": "세 항은 모두 동류항이지만, 수를 잘못 더했다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2$는 문자가 없으므로 $3x$, $4x$와 동류항이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3x$와 $4x$를 더하면 $7$이므로 $9x$가 될 수 없다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "상수항은 다른 항과 더하지 않고 식에서 빼야 한다."
+        }
+      ],
+      "created_at": "2026-11-11T03:46:07.440887+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$3x$와 $4x$는 동류항이므로 더하면 $7x$입니다. 하지만 $2$는 문자가 없으므로 $3x$, $4x$와 동류항이 아닙니다. 따라서 바르게 계산하면 $7x+2$입니다. ②처럼 세 항을 모두 동류항으로 생각하면 안 됩니다.",
+      "generated_at": "2026-11-11T03:46:07.159653+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "cba0db3d-d311-4d21-a745-950caf4b8078",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:46:07.159394+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.948436+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C2-오개념판별",
+      "body": "식 $5a-2b+a$의 항에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 1,
+          "text": "$5a$와 $-2b$는 동류항이므로 $3a$로 합칠 수 있다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$5a$와 $a$는 동류항이므로 $6a$로 합칠 수 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 3,
+          "text": "$-2b$와 $a$는 동류항이므로 $-b$로 합칠 수 있다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$5a$와 $a$는 계수가 달라서 동류항이 아니다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "세 항은 모두 계수가 다르므로 동류항이 없다."
+        }
+      ],
+      "created_at": "2026-11-11T03:46:22.366474+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$5a$와 $a$는 문자가 같은 동류항이므로 $6a$로 합칠 수 있습니다. ①과 ③은 문자가 다른 항을 합칠 수 있다고 잘못 생각한 것입니다. ④와 ⑤처럼 계수가 다르더라도 문자가 같으면 동류항입니다.",
+      "generated_at": "2026-11-11T03:46:22.209624+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "6cdd9d20-b7d2-4244-89a9-44cf8fa9bd23",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:46:22.209467+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.973793+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C2-오개념판별",
+      "body": "문자 $a$, $b$에 어떤 수를 넣어도 항상 옳은 등식은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 1,
+          "text": "$2a+3b=5a$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 2,
+          "text": "$2a+3b=5b$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2a+3b=2a+2b$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2a+3b=2(a+b)+b$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2a+3b=3a+2b$"
+        }
+      ],
+      "created_at": "2026-11-11T03:46:45.293696+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$2(a+b)+b=2a+2b+b=2a+3b$이므로 정답은 ④입니다. $2a$와 $3b$는 문자가 달라 동류항이 아닙니다. 따라서 두 항을 하나로 합쳐 $5a$ 또는 $5b$로 나타낼 수 없습니다.",
+      "generated_at": "2026-11-11T03:46:45.152451+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "34d26c6a-27d3-4100-8831-8547b8fe4094",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:46:45.152292+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:27.99589+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-성질적용",
+      "body": "어떤 일차식을 $3x-2$에서 빼면 $x+3$이 됩니다. 이 관계는 $x$에 어떤 수를 넣어도 성립합니다. 어떤 일차식으로 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2x-5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M2",
+          "no": 2,
+          "text": "$2x+1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 3,
+          "text": "$-3x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x-5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4x-5$"
+        }
+      ],
+      "created_at": "2026-11-11T03:48:37.235304+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "구하는 일차식은 $(3x-2)-(x+3)=2x-5$입니다. 따라서 정답은 ①입니다. ②는 괄호 앞의 $-$를 $x$에만 적용하고 $+3$에는 적용하지 않은 경우입니다. ③은 동류항이 아닌 $2x$와 $-5$를 하나의 항으로 합친 경우입니다.",
+      "generated_at": "2026-11-11T03:48:37.099275+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "뺄셈의 결과를 주고, 뺀 일차식을 거꾸로 찾게 한다.",
+      "id": "9ef2270a-a55c-4c3b-a442-b9903620f547",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:48:37.099039+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.018606+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-성질적용",
+      "body": "다음은 식을 계산한 과정입니다.\n\n첫째 줄: $2(a+3)-(a-2)$\n둘째 줄: $2a+6-a-2$\n셋째 줄: $a+4$\n\n처음으로 잘못 계산한 곳과 그 이유를 바르게 말한 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "첫째 줄에서 둘째 줄: $2(a+3)$을 $2a+3$으로 써야 한다."
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "첫째 줄에서 둘째 줄: $-(a-2)$를 $-a+2$로 써야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫째 줄에서 둘째 줄: $-(a-2)$를 $a+2$로 써야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "둘째 줄에서 셋째 줄: $2a-a$를 $2a$로 써야 한다."
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M2",
+          "no": 5,
+          "text": "모든 줄에서 바르게 계산했다."
+        }
+      ],
+      "created_at": "2026-11-11T03:48:53.426254+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫째 줄에서 둘째 줄로 갈 때 처음 잘못 계산했습니다. $-(a-2)$는 $-a+2$로 써야 합니다. 따라서 바르게 계산하면 $2a+6-a+2=a+8$입니다.\n\n⑤를 골랐다면 괄호 앞의 빼기를 첫째 항 $a$에만 적용했는지 살펴보세요. 괄호 안의 두 항 모두에 적용해야 합니다.",
+      "generated_at": "2026-11-11T03:48:53.276308+00:00",
+      "hard_condition": "application-c",
+      "hard_condition_reason": "여러 계산 단계 중 처음 잘못 계산한 곳과 그 이유를 함께 판단해야 한다.",
+      "id": "6f8f7589-adf2-4585-88e0-66eb8761b236",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:48:53.276134+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.057896+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-성질적용",
+      "body": "공책 한 권의 가격은 $x$원, 연필 한 자루의 가격은 $y$원입니다. 어느 가게에서 오전에는 공책 3권과 연필 1자루를 팔고, 오후에는 공책 1권과 연필 2자루를 팔았습니다.\n\n오전 판매 금액에서 오후 판매 금액을 뺀 식으로 알맞은 것은?",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M2",
+          "no": 1,
+          "text": "$2x+y$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4x+3y$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2x-y$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 4,
+          "text": "$x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2x-2y$"
+        }
+      ],
+      "created_at": "2026-11-11T03:49:13.8032+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "오전 판매 금액은 $3x+y$원이고, 오후 판매 금액은 $x+2y$원입니다. 따라서 $(3x+y)-(x+2y)=2x-y$입니다.\n\n1번은 괄호 앞의 빼기를 첫째 항에만 적용한 것입니다. 4번은 $2x$와 $-y$를 하나의 항으로 합친 것입니다. 두 항은 동류항이 아니므로 합칠 수 없습니다.",
+      "generated_at": "2026-11-11T03:49:13.653608+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 시간대의 판매 금액을 각각 식으로 나타낸 뒤, 오전 금액에서 오후 금액을 빼야 한다.",
+      "id": "33173fe0-1292-4c59-9110-d0f5629fd456",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:49:13.653453+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.08243+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-성질적용",
+      "body": "다음을 계산한 결과로 옳은 것은?\n\n$2(x+3)-(x-2)$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x+2$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M2",
+          "no": 2,
+          "text": "$x+4$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x+8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3x+8$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 5,
+          "text": "$9x$"
+        }
+      ],
+      "created_at": "2026-11-11T03:47:56.340834+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "괄호를 풀면 $2x+6-x+2$입니다. 동류항끼리 계산하면 $x+8$이므로 정답은 ③입니다.\n\n②는 뒤의 괄호를 풀 때 $x$의 부호만 바꾸고 $-2$의 부호는 바꾸지 않은 결과입니다. ⑤는 $x$와 $8$을 하나의 항으로 잘못 합친 결과입니다.",
+      "generated_at": "2026-11-11T03:47:56.193688+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d0eb127b-2d2b-42b9-b91d-a5c71d2b5b6e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:47:56.193446+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.10731+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-성질적용",
+      "body": "다음을 계산한 결과로 옳은 것은?\n\n$(3a+2b)-(a-4b)$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M2",
+          "no": 1,
+          "text": "$2a-2b$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 2,
+          "text": "$8a$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2a+6b$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$4a+6b$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2a-6b$"
+        }
+      ],
+      "created_at": "2026-11-11T03:48:08.913019+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "괄호 앞의 빼기를 괄호 안의 두 항에 모두 적용하면 $3a+2b-a+4b$입니다. 동류항끼리 계산하면 $2a+6b$입니다.\n①은 $-4b$의 부호를 바꾸지 않은 것입니다. ②는 서로 다른 문자가 붙은 항을 하나로 합친 것입니다.",
+      "generated_at": "2026-11-11T03:48:08.740558+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f5e2fe01-96e7-4dab-b168-b109ec3f3714",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:48:08.740252+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.129219+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-성질적용",
+      "body": "다음을 계산한 결과로 옳은 것은?\n\n$(8x-4)\\div 2-(x+3)$",
+      "choices": [
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M2",
+          "no": 1,
+          "text": "$3x+1$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": "9수02-02-M1",
+          "no": 2,
+          "text": "$-2x$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3x-7$"
+        },
+        {
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3x-5$"
+        },
+        {
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5x-5$"
+        }
+      ],
+      "created_at": "2026-11-11T03:48:22.513345+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$(8x-4)\\div 2=4x-2$이고, 괄호 앞의 빼기를 괄호 안의 두 항에 모두 적용하면 $-(x+3)=-x-3$입니다. 따라서 계산 결과는 $4x-2-x-3=3x-5$입니다.\n\n①은 괄호 안의 첫째 항에만 빼기를 적용한 것입니다. ②는 동류항이 아닌 $3x$와 $-5$를 하나의 항으로 합친 것입니다.",
+      "generated_at": "2026-11-11T03:48:22.387047+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "549d4663-34e8-4d26-ad38-63bbe2c2400b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v6",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:48:22.386895+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.153045+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-이유설명",
+      "body": "$a$와 $b$에는 각각 수를 넣을 수 있습니다. 식 $(4a+2b+5)-a$를 보고 한 학생이 말했습니다.\n\n“먼저 $4a$에서 $a$를 빼면 $3a$야. 남은 수 $3$, $2$, $5$를 모두 더하면 되니까 계산 결과는 $10a$야.”\n\n1. $4a-a$가 $a$의 모든 값에서 $3a$와 같은 이유를 분배법칙으로 설명하세요.\n2. 학생의 말이 틀렸음을 $a$와 $b$에 각각 수를 넣어 보이세요. 또 $3a$, $2b$, $5$를 학생이 말한 방법으로 합칠 수 없는 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T04:46:20.794085+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$4a-a$는 같은 문자 $a$를 곱한 항끼리의 뺄셈이므로 분배법칙을 이용하면 $(4-1)a=3a$입니다. 따라서 주어진 식은 $3a+2b+5$입니다.\n\n$a=0$, $b=1$을 넣으면 이 식의 값은 $7$이지만, $10a$의 값은 $0$입니다. 두 식은 항상 같지 않습니다.\n\n학생은 $2b$와 $5$도 $a$를 곱한 항처럼 생각하여 수를 모두 더했습니다. 하지만 $2b$에는 $a$가 아니라 $b$가 곱해져 있고, $5$에는 문자가 곱해져 있지 않습니다. 따라서 세 항에 같은 문자 $a$를 곱한 것으로 보고 수를 더할 수 없습니다.",
+      "generated_at": "2026-11-11T04:46:20.509909+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "1번에서 $4a-a=3a$가 특정한 수뿐 아니라 $a$의 모든 값에서 성립하는 이유를 분배법칙으로 설명하게 한다.",
+      "id": "8db19562-dcbe-476b-97b8-928f6e1f6fd5",
+      "model": "gpt-6.1-terra",
+      "model_answer": "분배법칙에 따라 $4a-a=(4-1)a=3a$이므로 $a$의 모든 값에서 같습니다.\n\n$a=0$, $b=1$을 넣으면 $(4a+2b+5)-a=7$이고 $10a=0$이므로 학생의 말은 틀렸습니다.\n\n$3a$와 달리 $2b$에는 $b$가 곱해져 있고, $5$에는 문자가 곱해져 있지 않습니다. 따라서 세 항을 모두 같은 문자 $a$를 곱한 항으로 보고 앞의 수와 상수항을 더할 수 없습니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$4a-a=(4-1)a=3a$와 같이 분배법칙을 이용하여 $a$의 모든 값에서 성립하는 이유를 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$a$와 $b$에 알맞은 수를 넣어 주어진 식과 $10a$의 값이 다름을 보인다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "$2b$에는 $a$가 아닌 $b$가 곱해져 있고 $5$에는 문자가 곱해져 있지 않으므로, 세 항을 모두 $a$를 곱한 항으로 보고 합칠 수 없다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T04:46:20.509702+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.18143+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-이유설명",
+      "body": "민지는 다음과 같이 말했습니다.\n\n“$3x+2x$는 $5x$와 같아. 그러니 $3x+2$도 $5x$와 같아.”\n\n민지의 첫 번째 말이 $x$의 모든 값에서 맞는 이유를 분배법칙을 이용하여 설명하세요. 또 두 번째 말이 틀렸음을 $x$의 값을 하나 골라 보이고, 두 번째 식에는 첫 번째 식과 같은 방법을 쓸 수 없는 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T03:51:48.795185+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$3x+2x$의 두 항에는 모두 $x$가 곱해져 있습니다. 따라서 분배법칙을 거꾸로 이용하면 $(3+2)x=5x$입니다.\n\n하지만 $3x+2$에서 $2$는 $2x$가 아닙니다. 동류항이 아닌 두 항의 수만 더하여 $5x$로 쓰면 안 됩니다. 예를 들어 $x=0$이면 $3x+2$는 $2$이고, $5x$는 $0$입니다.",
+      "generated_at": "2026-11-11T03:51:48.655809+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "첫 번째 말이 특정 값뿐 아니라 $x$의 모든 값에서 맞는 이유를 분배법칙으로 설명하도록 했다. 두 번째 말에는 맞지 않는 값을 찾아 보도록 했다.",
+      "id": "8039bb80-391b-4f97-b1bf-82532b3ab576",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$3x+2x=(3+2)x=5x$이므로 첫 번째 말은 $x$의 모든 값에서 맞습니다. 두 번째 말에서 $x=0$이면 $3x+2=2$이고 $5x=0$이므로 두 식의 값이 다릅니다. $3x+2$의 $2$에는 $x$가 곱해져 있지 않으므로 첫 번째 식처럼 분배법칙을 거꾸로 이용할 수 없습니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$3x+2x=(3+2)x=5x$와 같이 분배법칙을 이용하여 첫 번째 말이 모든 $x$의 값에서 맞는 이유를 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$x$의 값을 하나 골라 $3x+2$와 $5x$의 값이 다름을 보인다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "$3x+2$의 $2$에는 $x$가 곱해져 있지 않다는 점을 들어 첫 번째 식과 같은 방법을 쓸 수 없는 이유를 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:51:48.655550+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.205638+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-이유설명",
+      "body": "두 학생이 $2(x+y)-(x-y)$를 계산했습니다. $x$와 $y$에는 각각 수를 넣을 수 있습니다.\n\n가: $2x+2y-x+y=x+3y$\n나: $(2-1)x+(2+1)y=x+3y$\n\n두 풀이가 $x$와 $y$의 모든 값에서 같은 결과를 내는 이유를 설명하세요. 괄호 앞의 빼기와 분배법칙을 이용하여 설명해야 합니다.\n\n또, 결과인 $x+3y$를 $4x$로 쓸 수 없음을 $x$와 $y$에 알맞은 수를 넣어 보이세요.",
+      "choices": [],
+      "created_at": "2026-11-11T03:52:44.05812+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "괄호 앞에서 $(x-y)$를 빼면 $x$는 빼고 $y$는 더하게 됩니다. 따라서 두 풀이 모두 $2x+2y-x+y$를 계산한 것입니다. 분배법칙에 따라 $2x-x=(2-1)x$, $2y+y=(2+1)y$입니다.\n\n$x$와 $y$는 서로 다른 수일 수 있습니다. 따라서 $x+3y$를 언제나 $4x$로 쓸 수는 없습니다. 또 괄호 앞의 빼기를 첫째 항에만 적용하면 $y$의 부호를 잘못 계산하게 됩니다.",
+      "generated_at": "2026-11-11T03:52:43.693347+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 학생의 풀이가 같은 결과를 내는 이유를 괄호 앞의 빼기와 분배법칙을 이용하여 비교해 설명하도록 했다.",
+      "id": "c7668d44-ce94-46bc-845b-2b4393c268cd",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$-(x-y)=-x+y$이므로 가의 풀이는 $2x+2y-x+y$를 계산한 것입니다. 나의 풀이도 $x$가 있는 항과 $y$가 있는 항을 각각 모은 것입니다. 분배법칙에 따라 $2x-x=(2-1)x$, $2y+y=(2+1)y$이므로 두 풀이는 $x$와 $y$의 모든 값에서 같은 결과를 냅니다.\n\n$x=1$, $y=0$을 넣으면 $x+3y=1$이고 $4x=4$입니다. 따라서 $x+3y$를 언제나 $4x$로 쓸 수는 없습니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "$-(x-y)=-x+y$임을 이용하여 괄호 앞의 빼기가 두 항에 어떻게 적용되는지 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-02-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "분배법칙을 이용해 같은 문자가 있는 항을 각각 모으면 나의 풀이가 됨을 설명하고, 두 풀이가 모든 값에서 같은 결과를 내는 이유를 밝힌다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "$x$와 $y$에 수를 넣어 $x+3y$와 $4x$의 값이 다름을 보인다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:52:21.525556+00:00",
+          "issues": [
+            "서로 다른 문자의 항을 합칠 수 없는 이유를 분배법칙과 연결해 설명하도록 요구하지 않는다. 채점 기준상 합칠 수 없다고만 써도 되어, 동류항끼리만 더할 수 있는 이유를 설명하는지 측정하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:52:43.692910+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 3
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.229489+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-이유설명",
+      "body": "$2x+3x+4$를 계산하려고 합니다. $2x$와 $3x$를 하나의 항으로 나타낼 수 있는 이유를 분배법칙을 이용하여 설명하세요. 또 $4$를 $x$가 있는 항과 합쳐 $9x$로 나타낼 수 없는 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T03:49:26.498393+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$2x$와 $3x$는 각각 $x$의 $2$배와 $3$배입니다. 분배법칙을 이용하면 $2x+3x=(2+3)x=5x$입니다. 하지만 $4$는 $x$가 있는 항이 아니므로 $5x$와 합쳐 $9x$로 나타낼 수 없습니다. 예를 들어 $x=2$일 때 $5x+4=14$이지만 $9x=18$입니다.",
+      "generated_at": "2026-11-11T03:49:26.361814+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "bfc51d0e-d024-4bda-9e8a-026af8ea21e1",
+      "model": "gpt-6.1-terra",
+      "model_answer": "분배법칙을 이용하면 $2x+3x=(2+3)x=5x$입니다. $4$는 $x$의 몇 배를 나타내는 항이 아니므로 $5x$와 합쳐 $9x$로 나타낼 수 없습니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$2x+3x=(2+3)x=5x$와 같이 분배법칙을 이용하여 두 항을 합칠 수 있는 이유를 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$4$에는 $x$가 없음을 설명하거나 알맞은 수를 이용하여 $5x+4$와 $9x$가 다름을 보인다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:49:26.361596+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.254357+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-이유설명",
+      "body": "식 $6a-2b-3a$를 계산하려고 합니다.\n$a$가 있는 두 항을 하나로 나타내고, 그 이유를 분배법칙을 이용하여 설명하세요. 또 남은 두 항을 $a$가 있는 하나의 항으로 합칠 수 없는 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-11T03:50:05.390646+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$6a-3a$는 분배법칙에 따라 $(6-3)a=3a$입니다. 따라서 주어진 식은 $3a-2b$입니다.\n$a$와 $b$는 서로 다른 값을 가질 수 있으므로 $3a$와 $-2b$를 $a$가 있는 하나의 항으로 합칠 수 없습니다. 두 항의 수만 계산해 $a$로 나타내는 것은 문자가 서로 다르다는 점을 놓친 것입니다.",
+      "generated_at": "2026-11-11T03:50:04.792591+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d8e8af22-01b7-4ce5-85c7-7d7885911aae",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$6a-3a=(6-3)a=3a$이므로 주어진 식은 $3a-2b$입니다. $a$와 $b$는 서로 다른 값을 가질 수 있으므로 $3a$와 $-2b$를 $a$가 있는 하나의 항으로 합칠 수 없습니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "$6a-3a=(6-3)a=3a$와 같이 분배법칙을 이용하여 두 항을 합치는 이유를 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$a$와 $b$가 서로 다른 값을 가질 수 있으므로 $3a$와 $-2b$를 $a$가 있는 하나의 항으로 합칠 수 없다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "주어진 식을 $3a-2b$로 나타낸다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:49:46.304494+00:00",
+          "issues": [
+            "분배법칙으로 동류항을 합칠 수 있는 이유는 묻지만, 서로 다른 문자를 가진 항을 하나로 합칠 수 없는 이유는 수를 대입해 확인하도록만 하여 분배법칙에 근거한 설명을 요구하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-11T03:50:04.792239+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T04:51:28.297573+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-02-C3-이유설명",
+      "body": "한 상자에 연필이 $x$자루씩 들어 있습니다. 이런 상자 $9$개에서 상자 $7$개에 든 연필을 모두 꺼냈습니다.\n\n남은 연필 수는 $9x-7x$로 나타낼 수 있습니다. 이 식에서 계수끼리 빼서 하나의 항으로 나타낼 수 있는 이유를 분배법칙을 이용하여 설명하고, 남은 연필 수를 식으로 나타내세요.",
+      "choices": [],
+      "created_at": "2026-11-11T03:50:22.547801+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$9x$와 $7x$는 모두 $x$의 몇 배이므로 분배법칙을 이용하면 $(9-7)x$로 나타낼 수 있습니다. 따라서 남은 연필은 $2x$자루입니다.\n\n예를 들어 $9x-7$에서 $7$은 $7x$와 달리 $x$의 몇 배로 나타낸 항이 아닙니다. 따라서 $9x-7$을 $2x$로 나타낼 수는 없습니다.",
+      "generated_at": "2026-11-11T03:50:22.39877+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "48900829-22cc-43a4-8716-0927727a18f8",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$9x$와 $7x$는 모두 $x$의 몇 배입니다. 분배법칙을 이용하면 $9x-7x=(9-7)x=2x$입니다. 따라서 남은 연필은 $2x$자루입니다.",
+      "prompt_version": "v6",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$9x$와 $7x$가 모두 $x$의 몇 배임을 밝히고, 분배법칙을 이용하여 $9x-7x=(9-7)x$가 됨을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "남은 연필 수를 $2x$자루로 나타낸다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-11T03:50:22.398535+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 3
+    }
+  ]
+}
