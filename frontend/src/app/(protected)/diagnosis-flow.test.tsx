@@ -34,6 +34,14 @@ vi.mock("@/lib/diagnosis-api", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@/lib/diagnosis-api")>()),
   ...mocks,
 }));
+vi.mock("@/lib/env", () => ({
+  publicEnv: {
+    NEXT_PUBLIC_SUPABASE_URL: "https://abcdefghijklmnopqrst.supabase.co",
+    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:
+      "sb_publishable_EXAMPLE0000000000000000_abcd1234",
+    NEXT_PUBLIC_API_BASE_URL: "http://localhost:8000",
+  },
+}));
 const units: Unit[] = [
   {
     id: 1,
@@ -131,22 +139,81 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
   );
   expect(mocks.push).toHaveBeenCalledWith("/diagnoses/new");
 });
+test("객관식은 답하기 전에는 다음이 꺼져 있고 안내가 보인다", async () => {
+  render(<DiagnosisView id="d" />);
+  const next = await screen.findByRole("button", { name: "다음" });
+  expect((next as HTMLButtonElement).disabled).toBe(true);
+  expect(
+    screen.getByText("답을 고르면 다음 문제로 넘어갈 수 있어요"),
+  ).toBeTruthy();
+  fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
+  expect(
+    (screen.getByRole("button", { name: "다음" }) as HTMLButtonElement)
+      .disabled,
+  ).toBe(false);
+  expect(
+    screen.queryByText("답을 고르면 다음 문제로 넘어갈 수 있어요"),
+  ).toBeNull();
+});
+const twoWritten: Diagnosis = {
+  ...diagnosis,
+  items: [
+    { ...diagnosis.items[1], id: 1, position: 1, body: "첫 서술" },
+    { ...diagnosis.items[1], id: 2, position: 2, body: "둘 서술" },
+  ],
+};
+test("서술형은 공백만이면 다음이 꺼지고 글자를 쓰면 켜진다", async () => {
+  mocks.getDiagnosis.mockResolvedValue(twoWritten);
+  render(<DiagnosisView id="d" />);
+  await screen.findByText("1 / 2");
+  expect(
+    (screen.getByRole("button", { name: "다음" }) as HTMLButtonElement)
+      .disabled,
+  ).toBe(true);
+  expect(
+    screen.getByText("답을 쓰면 다음 문제로 넘어갈 수 있어요"),
+  ).toBeTruthy();
+  const input = screen.getByLabelText("풀이와 답");
+  fireEvent.change(input, { target: { value: "   " } });
+  expect(
+    (screen.getByRole("button", { name: "다음" }) as HTMLButtonElement)
+      .disabled,
+  ).toBe(true);
+  fireEvent.change(input, { target: { value: "답" } });
+  expect(
+    (screen.getByRole("button", { name: "다음" }) as HTMLButtonElement)
+      .disabled,
+  ).toBe(false);
+  expect(
+    screen.queryByText("답을 쓰면 다음 문제로 넘어갈 수 있어요"),
+  ).toBeNull();
+});
+test("마지막 문제는 답하기 전 제출이 꺼지고 안내가 보인다", async () => {
+  mocks.getDiagnosis.mockResolvedValue(twoWritten);
+  render(<DiagnosisView id="d" />);
+  const input = await screen.findByLabelText("풀이와 답");
+  fireEvent.change(input, { target: { value: "첫 답" } });
+  fireEvent.click(screen.getByRole("button", { name: "다음" }));
+  await screen.findByText("2 / 2");
+  const submit = screen.getByRole("button", { name: "제출하기" });
+  expect((submit as HTMLButtonElement).disabled).toBe(true);
+  expect(screen.getByText("답을 쓰면 제출할 수 있어요")).toBeTruthy();
+  fireEvent.change(screen.getByLabelText("풀이와 답"), {
+    target: { value: "둘째" },
+  });
+  expect((submit as HTMLButtonElement).disabled).toBe(false);
+  expect(screen.queryByText("답을 쓰면 제출할 수 있어요")).toBeNull();
+});
 test("첫 문제에는 다음만 있고 마지막 문제에는 제출하기만 있다", async () => {
   render(<DiagnosisView id="d" />);
   await screen.findByRole("button", { name: "다음" });
   expect(screen.queryByRole("button", { name: "제출하기" })).toBeNull();
+  fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
   fireEvent.click(screen.getByRole("button", { name: "다음" }));
   expect(await screen.findByRole("button", { name: "제출하기" })).toBeTruthy();
   expect(screen.queryByRole("button", { name: "다음" })).toBeNull();
   fireEvent.click(screen.getByRole("button", { name: "이전" }));
   await screen.findByRole("button", { name: "다음" });
-});
-test("마지막 문제에서 미답이 있으면 번호를 보이고 제출은 꺼져 있다", async () => {
-  render(<DiagnosisView id="d" />);
-  fireEvent.click(await screen.findByRole("button", { name: "다음" }));
-  expect(await screen.findByText("아직 답하지 않은 문제: 1, 2번")).toBeTruthy();
-  const submit = screen.getByRole("button", { name: "제출하기" });
-  expect((submit as HTMLButtonElement).disabled).toBe(true);
 });
 test("답을 저장하고 모두 답해야 제출한다", async () => {
   render(<DiagnosisView id="d" />);
@@ -162,10 +229,10 @@ test("답을 저장하고 모두 답해야 제출한다", async () => {
   const input = screen.getByLabelText("풀이와 답");
   fireEvent.change(input, { target: { value: "  " } });
   expect((submit as HTMLButtonElement).disabled).toBe(true);
-  expect(screen.getByText("아직 답하지 않은 문제: 2번")).toBeTruthy();
+  expect(screen.getByText("답을 쓰면 제출할 수 있어요")).toBeTruthy();
   fireEvent.change(input, { target: { value: "답이에요" } });
   expect((submit as HTMLButtonElement).disabled).toBe(false);
-  expect(screen.queryByText(/아직 답하지 않은 문제/)).toBeNull();
+  expect(screen.queryByText("답을 쓰면 제출할 수 있어요")).toBeNull();
   mocks.submitStage.mockResolvedValue({
     status: "stage2",
     report_ready: false,

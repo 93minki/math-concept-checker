@@ -231,9 +231,17 @@ export default function DiagnosisView({ id }: { id: string }) {
     ) &&
     !readonly;
   const isLast = index === stageItems.length - 1;
-  const unansweredPositions = stageItems.flatMap((value, position) =>
-    answers[value.id] && answered(answers[value.id]) ? [] : [position + 1],
-  );
+  const currentAnswered = !!(answer && answered(answer));
+  const navigationHint =
+    !currentAnswered && item
+      ? isLast
+        ? item.question_type === "written"
+          ? "답을 쓰면 제출할 수 있어요"
+          : "답을 고르면 제출할 수 있어요"
+        : item.question_type === "written"
+          ? "답을 쓰면 다음 문제로 넘어갈 수 있어요"
+          : "답을 고르면 다음 문제로 넘어갈 수 있어요"
+      : null;
   return (
     <div className="stack">
       <Link className="study-link" href="/">
@@ -321,11 +329,7 @@ export default function DiagnosisView({ id }: { id: string }) {
                   </button>
                 </div>
               )}
-              {isLast && unansweredPositions.length > 0 && (
-                <p role="status">
-                  아직 답하지 않은 문제: {unansweredPositions.join(", ")}번
-                </p>
-              )}
+              {navigationHint && <p role="status">{navigationHint}</p>}
               <div className="button-row">
                 <button
                   disabled={index === 0 || busy}
@@ -341,7 +345,10 @@ export default function DiagnosisView({ id }: { id: string }) {
                     제출하기
                   </button>
                 ) : (
-                  <button disabled={busy} onClick={() => void move(index + 1)}>
+                  <button
+                    disabled={!currentAnswered || busy}
+                    onClick={() => void move(index + 1)}
+                  >
                     다음
                   </button>
                 )}
