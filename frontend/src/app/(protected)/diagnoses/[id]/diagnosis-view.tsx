@@ -27,6 +27,11 @@ const answered = (answer: AnswerInput) =>
   "selected_choice" in answer
     ? answer.selected_choice > 0
     : answer.written_text.trim().length > 0;
+const saveStatusLabel = (state: SaveState | undefined) => {
+  if (state === "saving") return "저장 중…";
+  if (state === "saved") return "저장됨";
+  return "\u00a0";
+};
 
 export default function DiagnosisView({ id }: { id: string }) {
   const router = useRouter();
@@ -42,6 +47,8 @@ export default function DiagnosisView({ id }: { id: string }) {
   const [error, setError] = useState("");
   const [confirm, setConfirm] = useState(false);
   const [busy, setBusy] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const submitButtonRef = useRef<HTMLButtonElement>(null);
   const [stageNotice, setStageNotice] = useState(false);
   const readonly =
     !!diagnosis &&
@@ -163,6 +170,49 @@ export default function DiagnosisView({ id }: { id: string }) {
       Object.values(currentTimers).forEach(clearTimeout);
     };
   }, [id]);
+  const closeConfirm = useCallback(() => {
+    setConfirm(false);
+    queueMicrotask(() => submitButtonRef.current?.focus());
+  }, []);
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (confirm) {
+      if (typeof dialog.showModal === "function") {
+        if (!dialog.open) dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+      const focus = () =>
+        dialog
+          .querySelector<HTMLButtonElement>("[data-submit-confirm]")
+          ?.focus();
+      focus();
+      queueMicrotask(focus);
+    } else if (dialog.open) {
+      if (typeof dialog.close === "function") {
+        dialog.close();
+      } else {
+        dialog.open = false;
+      }
+    }
+  }, [confirm]);
+  useEffect(() => {
+    if (!confirm) return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    const dismiss = (event: PointerEvent) => {
+      const rect = dialog.getBoundingClientRect();
+      const inside =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
+      if (!inside) closeConfirm();
+    };
+    document.addEventListener("pointerdown", dismiss);
+    return () => document.removeEventListener("pointerdown", dismiss);
+  }, [confirm, closeConfirm]);
   function update(item: Item, input: AnswerInput) {
     latest.current = { ...latest.current, [item.id]: input };
     setAnswers(latest.current);
@@ -242,6 +292,8 @@ export default function DiagnosisView({ id }: { id: string }) {
           ? "답을 쓰면 다음 문제로 넘어갈 수 있어요"
           : "답을 고르면 다음 문제로 넘어갈 수 있어요"
       : null;
+  const statusLineRight =
+    navigationHint ?? (item ? saveStatusLabel(states[item.id]) : "\u00a0");
   return (
     <div className="stack">
       <Link className="study-link" href="/">
@@ -300,6 +352,18 @@ export default function DiagnosisView({ id }: { id: string }) {
                   ))}
                 </fieldset>
               )}
+              {!readonly && item.question_type === "multiple_choice" && (
+                <div className="save-status-row">
+                  <span aria-hidden="true">{"\u00a0"}</span>
+                  <span
+                    role="status"
+                    aria-live="polite"
+                    className="save-status-label"
+                  >
+                    {statusLineRight}
+                  </span>
+                </div>
+              )}
               {item.question_type === "written" && "written_text" in answer && (
                 <>
                   <label htmlFor="answer">풀이와 답</label>
@@ -312,14 +376,21 @@ export default function DiagnosisView({ id }: { id: string }) {
                       update(item, { written_text: e.target.value })
                     }
                   />
-                  <p>{answer.written_text.length} / 1000자</p>
+                  {!readonly ? (
+                    <div className="save-status-row">
+                      <span>{answer.written_text.length} / 1000자</span>
+                      <span
+                        role="status"
+                        aria-live="polite"
+                        className="save-status-label"
+                      >
+                        {statusLineRight}
+                      </span>
+                    </div>
+                  ) : (
+                    <p>{answer.written_text.length} / 1000자</p>
+                  )}
                 </>
-              )}
-              {!readonly && states[item.id] === "saving" && (
-                <p role="status">저장하고 있어요</p>
-              )}
-              {!readonly && states[item.id] === "saved" && (
-                <p role="status">저장했어요</p>
               )}
               {!readonly && states[item.id] === "error" && (
                 <div role="alert">
@@ -329,7 +400,6 @@ export default function DiagnosisView({ id }: { id: string }) {
                   </button>
                 </div>
               )}
-              {navigationHint && <p role="status">{navigationHint}</p>}
               <div className="button-row">
                 <button
                   disabled={index === 0 || busy}
@@ -339,6 +409,7 @@ export default function DiagnosisView({ id }: { id: string }) {
                 </button>
                 {isLast ? (
                   <button
+                    ref={submitButtonRef}
                     disabled={!canSubmit || busy}
                     onClick={() => setConfirm(true)}
                   >
@@ -355,16 +426,32 @@ export default function DiagnosisView({ id }: { id: string }) {
               </div>
             </section>
           )}
-          {confirm && !readonly && (
-            <Notice role="dialog" label="제출 확인">
-              <p>답안을 제출할까요? 제출하면 고칠 수 없어요.</p>
-              <button disabled={busy} onClick={() => void submit()}>
-                제출할게요
-              </button>
-              <button disabled={busy} onClick={() => setConfirm(false)}>
-                돌아가기
-              </button>
-            </Notice>
+          {!readonly && (
+            <dialog
+              ref={dialogRef}
+              className="submit-dialog"
+              aria-label="제출 확인"
+              onClose={closeConfirm}
+              onCancel={(event) => {
+                event.preventDefault();
+                closeConfirm();
+              }}
+            >
+              <p>답안을 제출할까요? 제출하면 답을 고칠 수 없어요.</p>
+              <div className="button-row">
+                <button
+                  type="button"
+                  data-submit-confirm
+                  disabled={busy}
+                  onClick={() => void submit()}
+                >
+                  제출할게요
+                </button>
+                <button type="button" disabled={busy} onClick={closeConfirm}>
+                  계속 풀기
+                </button>
+              </div>
+            </dialog>
           )}
         </>
       )}
