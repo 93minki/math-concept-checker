@@ -115,30 +115,35 @@
       "body": "다음은 다섯 학생이 제곱근에 관해 한 말이다. 옳게 말한 학생은 누구인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 1,
           "text": "민지: $25$의 제곱근은 $5$뿐이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 2,
           "text": "준호: 제곱근 $25$는 $5$와 $-5$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M4",
           "no": 3,
           "text": "서연: $-25$의 제곱근은 $-5$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "지우: $0$의 제곱근은 두 개야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -149,6 +154,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$25$의 제곱근은 $5$와 $-5$이고, 제곱근 $25$는 $5$이다. 따라서 제곱근 $25$가 아닌 $25$의 제곱근은 $-5$이므로 정답은 ⑤이다.\n①은 양수의 제곱근을 양수 하나만 있다고 잘못 생각했다.\n②는 $25$의 제곱근과 제곱근 $25$를 같게 생각했다.\n③은 음수의 제곱근이 있다고 잘못 생각했다. $(-5)^2=25$이다.\n④에서 $0$의 제곱근은 $0$ 하나이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:18:25.10981+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 말을 비교하여 옳은 말을 판단하게 했다. 특히 ⑤에서는 $25$의 제곱근과 제곱근 $25$의 차이를 살펴야 한다.",
@@ -176,30 +182,35 @@
       "body": "민수는 다음과 같이 말했다.\n\n“$25$의 제곱근 중 하나는 $-5$이다. 따라서 제곱근 $25$는 $-5$이다.”\n\n민수의 말에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 1,
           "text": "$25$의 제곱근은 $5$뿐이므로, 앞부분부터 틀렸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 2,
           "text": "$-5$는 $25$의 제곱근이므로, 민수의 말은 모두 옳다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$-5$는 $25$의 제곱근이지만, 제곱근 $25$는 $5$이므로 마지막 부분이 틀렸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$-5$를 제곱하면 $-25$이므로, 앞부분부터 틀렸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -210,6 +221,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$(-5)^2=25$이므로 $-5$는 $25$의 제곱근이다. 하지만 제곱근 $25$는 양수인 $5$를 뜻한다. 따라서 민수의 앞부분은 옳고, 마지막 부분은 틀렸다.\n\n①을 고른 경우 양수의 제곱근이 양수 하나뿐이라고 잘못 생각한 것이다. ②를 고른 경우 ‘$25$의 제곱근’과 ‘제곱근 $25$’를 같은 뜻으로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T15:34:06.889389+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수의 말에서 옳은 부분과 틀린 부분을 구별하고, 앞부분에서 마지막 부분을 이끌어 낼 수 있는지 판단해야 한다.",
@@ -237,30 +249,35 @@
       "body": "민수는 다음과 같이 말하였다.\n\n“$\\sqrt{36}$을 제곱하면 $36$이야. 따라서 $36$의 제곱근은 $\\sqrt{36}$뿐이야.”\n\n민수의 말에 대한 판단과 그 까닭으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 1,
           "text": "맞아. $6$을 제곱하면 $36$이기 때문이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 2,
           "text": "맞아. $\\sqrt{36}$이 $6$과 $-6$을 모두 나타내기 때문이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "틀려. $-\\sqrt{36}$도 $36$의 제곱근이기 때문이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "틀려. $36$의 제곱근은 $-6$ 하나뿐이기 때문이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M4",
           "no": 5,
@@ -271,6 +288,7 @@
       "difficulty": "hard",
       "disabled_at": "2026-11-11T15:32:57.3779+00:00",
       "explanation": "$\\sqrt{36}=6$이고, $-\\sqrt{36}=-6$이다. $6$과 $-6$을 각각 제곱하면 모두 $36$이므로 $36$의 제곱근은 두 개이다. 따라서 민수의 말은 틀리고, 정답은 3번이다.\n\n1번은 양수의 제곱근을 양수 하나뿐이라고 생각한 것이다. 2번은 $\\sqrt{36}$이 두 수를 모두 나타낸다고 생각한 것이다. $\\sqrt{36}$은 양수 $6$만 나타낸다. 4번은 $6$도 $36$의 제곱근이라는 것을 놓친 것이다. 5번은 $-6$을 제곱한 값을 $-36$으로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T15:01:01.920578+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수가 제곱근을 하나만 찾은 주장을 제시하고, 그 주장의 옳고 그름과 까닭을 함께 판단하게 했다.",
@@ -317,30 +335,35 @@
       "body": "제곱근에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 1,
           "text": "$25$의 제곱근은 $5$뿐이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 2,
           "text": "$\\sqrt{16}$은 $4$와 $-4$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M4",
           "no": 3,
           "text": "$-9$의 제곱근은 $-3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$0$의 제곱근은 없다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -351,6 +374,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "① $25$의 제곱근은 $5$와 $-5$이다. 양수의 제곱근을 양수 하나만 생각하면 안 된다.\n② $\\sqrt{16}$은 $4$이다. $16$의 제곱근은 $4$와 $-4$이지만, $\\sqrt{16}$은 양수 하나를 나타낸다.\n③ 어떤 수를 제곱해도 $-9$가 되지 않는다. 음수의 제곱근은 생각하지 않는다.\n④ $0$의 제곱근은 $0$이다.\n⑤ $7$과 $-7$을 각각 제곱하면 모두 $49$이므로 옳다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:17:36.671827+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -378,30 +402,35 @@
       "body": "한 장의 카드에 적힌 말을 보고, 그 말이 나타내는 수를 모두 적었습니다. 카드의 말과 적은 수가 바르게 짝 지어진 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "카드: $25$의 제곱근 → 적은 수: $5$, $-5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 2,
           "text": "카드: $25$의 제곱근 → 적은 수: $5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 3,
           "text": "카드: 제곱근 $25$ → 적은 수: $5$, $-5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M4",
           "no": 4,
           "text": "카드: $-25$의 제곱근 → 적은 수: $-5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -412,6 +441,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$25$의 제곱근은 제곱하여 $25$가 되는 수이므로 $5$와 $-5$이다. ②는 양수의 제곱근을 양수 하나만 생각한 것이다. ③에서 제곱근 $25$는 $5$ 하나이다. ④에서는 음수의 제곱근이 있다고 생각했지만, 제곱하여 $-25$가 되는 수는 없다. ⑤에서 $0$의 제곱근은 $0$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:18:05.039795+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -439,30 +469,35 @@
       "body": "다음 네 물음의 답을 차례대로 바르게 나타낸 것은? 제곱근이 있는 경우에는 모두 구한다.\n\nㄱ. $(-3)^2$의 제곱근은?\nㄴ. 제곱근 $16$, 즉 $\\sqrt{16}$의 값은?\nㄷ. $0$의 제곱근은?\nㄹ. $-9$의 제곱근은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$3$, $-3$ / $4$ / $0$ / 생각하지 않는다"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 2,
           "text": "$3$ / $4$ / $0$ / 생각하지 않는다"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 3,
           "text": "$3$, $-3$ / $4$, $-4$ / $0$ / 생각하지 않는다"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M4",
           "no": 4,
           "text": "$3$, $-3$ / $4$ / $0$ / $-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -473,6 +508,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$(-3)^2=9$이고 $3$과 $-3$을 각각 제곱하면 $9$이므로 ㄱ은 $3$, $-3$이다. $\\sqrt{16}$은 $4$이므로 ㄴ은 $4$이다. $0$의 제곱근은 $0$이고, 음수의 제곱근은 생각하지 않으므로 ㄷ은 $0$, ㄹ은 ‘생각하지 않는다’이다. 따라서 정답은 ①이다.\n\n②는 양수의 제곱근을 양수 하나만 있다고 생각한 경우이다. ③은 $\\sqrt{16}$과 $16$의 제곱근을 혼동한 경우이다. ④는 음수에도 제곱근이 있다고 생각한 경우이다. ⑤와 달리 $0$의 제곱근은 $0$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:58:56.825388+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "$(-3)^2$의 제곱근과 $\\sqrt{16}$의 값을 구별해야 한다. 또 $0$과 음수의 제곱근을 각각 따져야 한다.",
@@ -500,30 +536,35 @@
       "body": "넓이가 $36\\text{ cm}^2$인 정사각형이 있다. 이 정사각형의 한 변의 길이와 제곱근에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 1,
           "text": "한 변의 길이는 $6\\text{ cm}$이고, $36$의 제곱근은 $6$뿐이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "한 변의 길이는 $6\\text{ cm}$ 또는 $-6\\text{ cm}$이고, $36$의 제곱근은 $6$과 $-6$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 3,
           "text": "한 변의 길이는 $6\\text{ cm}$이고, $\\sqrt{36}$의 값은 $6$과 $-6$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "한 변의 길이는 $6\\text{ cm}$이고, $36$의 제곱근은 $6$과 $-6$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M4",
           "no": 5,
@@ -534,6 +575,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "정사각형의 한 변의 길이는 양수이므로 $6\\text{ cm}$이다. $6$과 $-6$을 각각 제곱하면 모두 $36$이므로 $36$의 제곱근은 $6$과 $-6$이다. 따라서 정답은 ④이다.\n①은 양수의 제곱근을 양수 하나만 있다고 생각한 것이다. ②는 길이가 음수일 수 있다고 생각한 것이다. ③은 $36$의 제곱근과 $\\sqrt{36}$의 값을 혼동한 것이다. $\\sqrt{36}$의 값은 $6$이다. ⑤에서 $-6$을 제곱하면 $36$이므로 $-36$의 제곱근이 아니다. 음수의 제곱근은 생각하지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:59:19.72946+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "정사각형의 넓이에서 한 변의 길이를 찾고, 그 길이와 수의 제곱근을 구별해야 한다.",
@@ -561,30 +603,35 @@
       "body": "$25$의 제곱근을 모두 나타낸 것과 $\\sqrt{25}$의 값을 차례로 바르게 짝 지은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 1,
           "text": "$5$, $5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 2,
           "text": "$5$와 $-5$, $5$와 $-5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$5$와 $-5$, $5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$5$와 $-5$, $-5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -595,6 +642,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$5$와 $-5$는 각각 제곱하면 $25$이므로, $25$의 제곱근은 $5$와 $-5$이다. $\\sqrt{25}$는 이 중 양수인 $5$를 나타낸다. ①은 $25$의 제곱근을 양수 하나만 있다고 생각한 것이다. ②는 $\\sqrt{25}$가 두 수를 모두 나타낸다고 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:14:28.174526+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -622,30 +670,35 @@
       "body": "$36$의 제곱근에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M1",
           "no": 1,
           "text": "$36$의 제곱근은 $6$뿐이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M2",
           "no": 2,
           "text": "$\\sqrt{36}$은 $6$과 $-6$을 모두 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$-6$은 $36$의 제곱근이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$36$의 제곱근은 $36$과 $-36$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -656,6 +709,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$6$과 $-6$을 각각 제곱하면 $36$이므로 둘 다 $36$의 제곱근이다. 따라서 ③이 옳다. ①은 양수의 제곱근이 하나뿐이라고 잘못 생각한 것이다. ②는 $36$의 제곱근과 $\\sqrt{36}$을 혼동한 것이다. $\\sqrt{36}$은 양수인 $6$만 나타낸다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:14:42.278093+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -683,30 +737,35 @@
       "body": "어떤 수는 $25$의 음의 제곱근이다. 이 수를 제곱한 수의 양의 제곱근에서 처음 수를 뺀 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$-10$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$-5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M3",
           "no": 3,
           "text": "$0$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -717,6 +776,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$25$의 음의 제곱근은 $-5$이다. 따라서 구하는 값은 $\\sqrt{(-5)^2}-(-5)=5+5=10$이다. $\\sqrt{(-5)^2}$을 $-5$로 생각하면 $0$을 고를 수 있다. 하지만 $\\sqrt{(-5)^2}$은 양수인 $5$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:20:38.230452+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "문장으로 주어진 과정을 식 $\\sqrt{(-5)^2}-(-5)$으로 나타낸 뒤 제곱근의 성질을 적용해야 한다.",
@@ -744,30 +804,35 @@
       "body": "어떤 기계에 수를 넣으면 다음과 같이 계산하여 출력한다.\n\n넣은 수를 제곱한 다음, 그 결과의 양의 제곱근을 출력한다.\n\n이 기계에 $-\\sqrt{7}$과 $\\sqrt{3}$을 각각 넣었다. 두 출력 중 큰 수에서 작은 수를 빼면 얼마인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\sqrt{7}-\\sqrt{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M3",
           "no": 2,
           "text": "$\\sqrt{7}+\\sqrt{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\sqrt{3}-\\sqrt{7}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -778,6 +843,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$-\\sqrt{7}$을 넣으면 $(-\\sqrt{7})^2=7$이므로 $\\sqrt{7}$이 출력된다. $\\sqrt{3}$을 넣으면 $(\\sqrt{3})^2=3$이므로 $\\sqrt{3}$이 출력된다. $\\sqrt{7}>\\sqrt{3}$이므로 답은 $\\sqrt{7}-\\sqrt{3}$이다.\n\n②는 첫 번째 출력을 $-\\sqrt{7}$로 잘못 생각한 경우이다. 제곱한 결과의 양의 제곱근은 음수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:21:03.01097+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "기계의 계산 방법을 문장으로 주었다. 각 출력에 해당하는 식을 생각하고 제곱근의 성질을 적용해야 한다.",
@@ -805,30 +871,35 @@
       "body": "$\\sqrt{(-6)^2}$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$-36$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M3",
           "no": 2,
           "text": "$-6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$0$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -839,6 +910,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(-6)^2=36$이고, $\\sqrt{36}=6$입니다. 따라서 정답은 ④입니다. ②를 골랐다면 제곱하기 전의 부호를 그대로 썼을 수 있습니다. $\\sqrt{36}$은 양수이므로 $-6$이 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:20:11.984749+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -866,30 +938,35 @@
       "body": "$-\\sqrt{(-5)^2}$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$-25$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$-5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$0$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M3",
           "no": 4,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -900,6 +977,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(-5)^2=25$이고 $\\sqrt{25}=5$이므로 $-\\sqrt{(-5)^2}=-5$이다. $5$를 골랐다면 $\\sqrt{(-5)^2}$을 $-5$로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:20:23.177742+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -927,30 +1005,35 @@
       "body": "$a>0$일 때, 민수는 $\\sqrt{(-a)^2}=-a$라고 말했습니다. 민수의 말에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M3",
           "no": 1,
           "text": "옳다. 제곱하기 전의 수가 $-a$이므로 $\\sqrt{(-a)^2}$은 $-a$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "옳다. $-a$는 $(-a)^2$의 제곱근 중 하나이므로 $\\sqrt{(-a)^2}$은 $-a$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "틀리다. $\\sqrt{(-a)^2}$은 양수이므로 $a$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "틀리다. $(-a)^2$의 제곱근은 두 개이므로 $\\sqrt{(-a)^2}$은 $a$와 $-a$ 두 수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -961,6 +1044,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$-a$를 제곱하면 $a$를 제곱한 것과 같습니다. $a>0$이므로 $\\sqrt{(-a)^2}=a$입니다. 따라서 정답은 ③입니다. ①은 제곱하기 전의 수가 $-a$라는 이유로 근호 앞에 음의 부호를 붙인 생각입니다. $(-a)^2$의 제곱근은 $a$와 $-a$이지만, $\\sqrt{(-a)^2}$은 그중 양수인 $a$ 하나를 나타냅니다. 또 $(-a)^2$은 양수입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:21:58.25049+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수가 $\\sqrt{(-a)^2}$을 $-a$라고 한 말을 보고, 그 말의 옳고 그름과 까닭을 판단하게 했다.",
@@ -988,30 +1072,35 @@
       "body": "다섯 학생이 제곱해서 $25$가 되는 수에 관해 이야기하고 있습니다. 옳게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M3",
           "no": 1,
           "text": "민지: $\\sqrt{(-5)^2}=-5$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "준호: $\\sqrt{(-5)^2}$는 $25$의 두 제곱근을 모두 나타내."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "서윤: $25$의 두 제곱근은 $\\sqrt{(-5)^2}$와 $-\\sqrt{(-5)^2}$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "지우: $25$의 제곱근은 $5$ 하나뿐이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1022,6 +1111,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$(-5)^2=25$이고, $25$의 양의 제곱근은 $5$입니다. 따라서 $\\sqrt{(-5)^2}=5$, $-\\sqrt{(-5)^2}=-5$입니다. $25$의 제곱근은 $5$와 $-5$이므로 ③이 옳습니다.\n①처럼 생각하면 제곱하기 전의 부호를 그대로 가져오는 잘못을 하게 됩니다. $\\sqrt{25}$는 두 제곱근 중 양수인 $5$만 나타냅니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:22:58.286842+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 말을 비교하여 옳은 말을 고르게 했다. 특히 ①에서 제곱하기 전의 음수 부호를 그대로 가져온 말을 판단해야 한다.",
@@ -1057,30 +1147,35 @@
       "body": "$\\sqrt{(-5)^2}$의 값으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M3",
           "no": 1,
           "text": "$-5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$25$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$-25$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1091,6 +1186,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(-5)^2=25$이고 $\\sqrt{25}=5$입니다. ①은 제곱하기 전의 음의 부호를 그대로 붙인 생각입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:21:16.693121+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1118,30 +1214,35 @@
       "body": "민지는 $\\sqrt{(-4)^2}=-4$라고 썼다. 민지가 쓴 식에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M3",
           "no": 1,
           "text": "제곱하기 전 수가 $-4$이므로 민지의 식은 옳다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$(-4)^2=16$이고 $\\sqrt{16}=4$이므로 민지의 식은 옳지 않다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$(-4)^2=16$이고 $\\sqrt{16}=16$이므로 민지의 식은 옳지 않다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(-4)^2=-16$이므로 민지는 제곱을 잘못했다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1152,6 +1253,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(-4)^2=16$이고 $\\sqrt{16}=4$이므로 민지의 식은 옳지 않다. ①은 제곱하기 전 수의 부호를 그대로 가져온 잘못된 생각이다. 근호가 나타내는 값은 음수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:21:32.112645+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1179,30 +1281,35 @@
       "body": "어떤 수는 $-4$보다 크고 $-3$보다 작다. 이 수를 제곱하면 자연수가 된다. 이러한 수는 모두 몇 개인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M5",
           "no": 1,
           "text": "$0$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$5$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$6$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1213,6 +1320,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "이 수를 제곱한 자연수를 $n$이라고 하면, 이 수는 $-\\sqrt{n}$이다. 따라서 $-4<-\\sqrt{n}<-3$이므로 $3<\\sqrt{n}<4$이다. $3=\\sqrt{9}$, $4=\\sqrt{16}$이므로 $9<n<16$이다. $n$은 $10$, $11$, $12$, $13$, $14$, $15$로 모두 $6$개이다.\n$3$과 $4$ 사이에 자연수가 없으므로 $0$개라고 생각했다면, $\\sqrt{n}$ 대신 근호 안의 $n$을 $3$, $4$와 바로 비교한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:24:34.264359+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "문장으로 주어진 수의 범위와 제곱했을 때의 특징을 근호를 이용한 식으로 바꾸어 개수를 구한다.",
@@ -1248,30 +1356,35 @@
       "body": "100 이하의 자연수 $n$에 대하여 세 수 $-\\sqrt{10}$, $-\\sqrt{n}$, $-2$를 작은 수부터 크기순으로 쓰면 다음과 같다.\n\n$-\\sqrt{10} < -\\sqrt{n} < -2$\n\n이때 $n$으로 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M5",
           "no": 1,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$10$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M6",
           "no": 5,
@@ -1282,6 +1395,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$-2=-\\sqrt{4}$이다. 따라서 $-\\sqrt{10} < -\\sqrt{n} < -\\sqrt{4}$이므로 $4<n<10$이다. 보기 중 알맞은 수는 $7$이다.\n\n$3$을 골랐다면 $-\\sqrt{3}$과 $-2$를 비교할 때 근호 안의 $3$과 $2$를 그대로 비교했을 수 있다. $12$를 골랐다면 음수인 제곱근끼리 비교할 때 근호 안의 수가 클수록 더 크다고 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:25:03.656328+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "세 수의 크기순을 주고 그 순서가 되게 하는 자연수 $n$을 찾게 한다.",
@@ -1309,30 +1423,35 @@
       "body": "세 수 $-\\sqrt{7}$, $-2$, $-\\sqrt{3}$을 작은 수부터 차례로 나열한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$-\\sqrt{7}<-2<-\\sqrt{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M5",
           "no": 2,
           "text": "$-\\sqrt{7}<-\\sqrt{3}<-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$-2<-\\sqrt{7}<-\\sqrt{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$-2<-\\sqrt{3}<-\\sqrt{7}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M6",
           "no": 5,
@@ -1343,6 +1462,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$2=\\sqrt{4}$이고 $3<4<7$이므로 $\\sqrt{3}<\\sqrt{4}<\\sqrt{7}$입니다. 따라서 $-\\sqrt{7}<-2<-\\sqrt{3}$입니다.\n②는 근호 안의 수와 근호가 없는 수를 그대로 비교한 경우입니다. ⑤는 음수인 두 제곱근을 비교할 때 근호 안의 수가 클수록 더 크다고 생각한 경우입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:23:17.962073+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1370,30 +1490,35 @@
       "body": "$\\sqrt{5}<n<\\sqrt{20}$을 만족하는 자연수 $n$의 개수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$1$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$3$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-07-M5",
           "no": 5,
@@ -1404,6 +1529,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\sqrt{4}<\\sqrt{5}<\\sqrt{9}$이므로 $2<\\sqrt{5}<3$입니다. 또 $\\sqrt{16}<\\sqrt{20}<\\sqrt{25}$이므로 $4<\\sqrt{20}<5$입니다. 따라서 자연수 $n$은 $3$, $4$로 모두 $2$개입니다. ⑤는 근호 안의 수를 $n$과 그대로 비교하여 $5<n<20$으로 잘못 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:23:30.980763+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1434,6 +1560,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "예를 들어 $4$와 $9$를 고르면, $4<9$이지만 $-\\sqrt{4}=-2$, $-\\sqrt{9}=-3$이므로 $-\\sqrt{4}>-\\sqrt{9}$이다. 따라서 민수의 말은 틀렸다. 근호 안의 수가 크더라도 앞에 마이너스가 붙은 수는 더 작을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:26:27.803093+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민수의 말이 틀렸음을 서로 다른 두 자연수를 골라 보이게 한다. 고른 수를 이용하여 실제 대소 관계의 이유도 설명하게 한다.",
@@ -1497,6 +1624,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$4=\\sqrt{16}$이므로 $4$와 $\\sqrt{15}$의 비교는 $\\sqrt{16}$과 $\\sqrt{15}$의 비교와 같다. $16>15$이므로 $4>\\sqrt{15}$이다.\n\n두 수를 제곱해도 각각 $16$과 $15$가 된다. 두 수는 모두 양수이므로 제곱한 수의 대소 관계와 처음 두 수의 대소 관계가 같다. 두 방법은 모두 $16$과 $15$의 대소 관계를 이용하므로 같은 결과를 낸다.\n\n$4$와 근호 안의 $15$를 그대로 비교하여 $4<\\sqrt{15}$라고 하면 안 된다. $4$와 비교해야 하는 수는 $15$가 아니라 $\\sqrt{15}$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:26:52.163119+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "두 방법으로 비교하는 과정을 각각 설명하고, 두 방법이 같은 결과를 내는 까닭을 비교하여 설명하도록 했다.",
@@ -1551,6 +1679,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$4=\\sqrt{16}$이고 $16<19$이므로 $\\sqrt{16}<\\sqrt{19}$이다. 따라서 $4<\\sqrt{19}$이다. $4<19$라는 사실만으로 $4$와 $\\sqrt{19}$의 크기를 비교해서는 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:25:16.763417+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1600,6 +1729,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$2<5$이므로 $\\sqrt{2}<\\sqrt{5}$이다. 따라서 수직선에서 $-\\sqrt{2}$가 $-\\sqrt{5}$보다 $0$에 더 가깝고, 더 오른쪽에 있다. 그러므로 $-\\sqrt{2}>-\\sqrt{5}$이다. 근호 안의 수가 더 크다는 이유로 $-\\sqrt{5}$가 더 크다고 생각하면, 두 수가 음수라는 점을 놓친 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:25:31.709322+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

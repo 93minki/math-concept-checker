@@ -114,30 +114,35 @@
       "body": "상자 안에 빨간 구슬과 파란 구슬이 들어 있다. 구슬 수에 관해 다음 두 가지를 알았다.\n\n| 구분 | 구슬 수에 관한 말 |\n|---|---|\n| 첫째 | 빨간 구슬 수에 파란 구슬 수의 2배를 더하면 9이다. |\n| 둘째 | 빨간 구슬은 파란 구슬보다 3개 더 많다. |\n\n빨간 구슬 수를 $x$, 파란 구슬 수를 $y$라고 할 때, 두 문장을 나타내는 연립방정식의 해 $(x, y)$로 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 1,
           "text": "$(3, 3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 2,
           "text": "$(4, 1)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$(2, 5)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$(5, 2)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 5,
@@ -148,6 +153,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "첫째 문장은 $x+2y=9$, 둘째 문장은 $x-y=3$으로 나타낼 수 있다. $(5, 2)$는 두 방정식을 모두 참이 되게 한다.\n\n$(3, 3)$과 $(1, 4)$는 첫째 방정식만, $(4, 1)$은 둘째 방정식만 참이 되게 한다. 이들을 고른 학생은 한 방정식만 참이 되어도 연립방정식의 해라고 생각한 것이다. $(2, 5)$는 두 방정식 중 어느 것도 참이 되게 하지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:34.514293+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "표에 구슬 수에 관한 두 문장을 제시했다. 각 문장을 식으로 나타내고, 두 식을 모두 참이 되게 하는 순서쌍을 판단해야 한다.",
@@ -175,30 +181,35 @@
       "body": "두 미지수 $x$, $y$에 대한 연립방정식이 있다. 이 연립방정식의 두 방정식은 각각 표의 말로 나타낼 수 있다.\n\n| 구분 | 방정식을 나타내는 말 |\n|---|---|\n| 첫째 | $x$와 $y$를 더하면 $6$이다. |\n| 둘째 | $x$의 $2$배에서 $y$를 빼면 $3$이다. |\n\n다음 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 1,
           "text": "$(4, 2)$는 연립방정식의 해이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 2,
           "text": "$(2, 1)$은 연립방정식의 해이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(3, 3)$은 연립방정식의 해이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(3, 2)$는 연립방정식의 해이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -209,6 +220,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "표의 두 말을 식으로 나타내면 $x+y=6$, $2x-y=3$이다. $(3, 3)$을 대입하면 두 식이 모두 참이므로 연립방정식의 해이다.\n\n$(4, 2)$는 첫째 식만, $(2, 1)$은 둘째 식만 참이 되게 한다. 한 식만 참이 되게 하는 순서쌍은 연립방정식의 해가 아니다. $(3, 2)$와 $(3, 4)$는 두 식을 모두 참이 되게 하지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:09.120403+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "표에 두 방정식을 말로 나타냈다. 각 말을 식으로 나타내고, 순서쌍이 두 식을 모두 참이 되게 하는지 판단해야 한다.",
@@ -236,30 +248,35 @@
       "body": "다음 연립방정식의 해에 대한 설명으로 옳은 것은?\n\n$\\begin{cases}x+y=5\\\\x-y=1\\end{cases}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 1,
           "text": "첫째 식만 참이 되게 하는 순서쌍이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "두 식을 모두 참이 되게 하는 순서쌍이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 3,
           "text": "둘째 식만 참이 되게 하는 순서쌍이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 4,
           "text": "두 식 중 적어도 하나를 참이 되게 하는 순서쌍이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -270,6 +287,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "연립방정식의 해는 두 식을 동시에 참이 되게 하는 순서쌍이다. 예를 들어 $(3,2)$를 두 식에 넣으면 모두 참이다.\n\n$(5,0)$은 첫째 식만, $(2,1)$은 둘째 식만 참이 되게 하므로 연립방정식의 해가 아니다. 한 식만 참이 되어도 된다고 생각하면 ①, ③, ④를 고를 수 있다. 또 두 식을 각각 참이 되게 하는 서로 다른 순서쌍 두 개를 고르는 것도 연립방정식의 해를 구한 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:22:29.112102+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -297,30 +315,35 @@
       "body": "다음 연립방정식의 해인 순서쌍 $(x, y)$를 고르시오.\n\n$\\begin{cases}x+2y=8\\\\3x+y=9\\end{cases}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 1,
           "text": "$(4, 2)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M1",
           "no": 2,
           "text": "$(3, 0)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(2, 3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(3, 2)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -331,6 +354,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "연립방정식의 해는 두 방정식을 모두 참이 되게 하는 순서쌍이다. $(2, 3)$을 대입하면 $2+2\\times3=8$, $3\\times2+3=9$이므로 정답은 ③이다.\n\n$(4, 2)$는 첫째 방정식만, $(3, 0)$은 둘째 방정식만 참이 되게 한다. 두 방정식 중 하나만 참이 되게 해서는 연립방정식의 해가 될 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:22:45.919998+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -358,30 +382,35 @@
       "body": "연필 한 자루와 지우개 한 개의 가격의 합은 1400원이다. 연필 3자루와 지우개 2개를 사면, 연필 1자루와 지우개 4개를 살 때보다 400원을 더 낸다. 연필 한 자루의 가격은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "500원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 2,
           "text": "600원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "700원"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "800원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -392,6 +421,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "연필 한 자루의 가격을 $x$원, 지우개 한 개의 가격을 $y$원이라 하자. 두 관계를 식으로 나타내면 $x+y=1400$, $3x+2y=x+4y+400$이다. 두 번째 식을 정리하면 $x-y=200$이다. $x+y=1400$에서 $x-y=200$을 변끼리 빼면 $2y=1200$이므로 $y=600$이다. 따라서 $x=800$이다.\n②를 골랐다면 두 식을 변끼리 뺄 때 $1400-200$을 $1400+200$으로 계산하지 않았는지 살펴보자.",
+      "figure": null,
       "generated_at": "2026-11-11T11:26:53.377284+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "두 구매 상황의 가격 차이를 포함한 관계를 식으로 나타내고, 연립방정식을 풀어 가격을 구한다.",
@@ -419,30 +449,35 @@
       "body": "다음 연립방정식의 해가 방정식 $ax+y=9$의 해이기도 하다. 수 $a$의 값은?\n\n$\\begin{cases}2x+y=7\\\\x+y=5\\end{cases}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 2,
           "text": "$\\frac{4}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M2",
           "no": 3,
           "text": "$\\frac{11}{7}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -453,6 +488,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "첫째 식에서 둘째 식을 변끼리 빼면 $x=2$이다. 이를 $x+y=5$에 대입하면 $y=3$이다. $ax+y=9$에 대입하면 $2a+3=9$이므로 $a=3$이다.\n\n두 식을 뺄 때 우변을 빼지 않고 더하면 $x=12$가 되어 ②를 고를 수 있다. 둘째 식의 양변에 $2$를 곱할 때 우변은 그대로 두면 $x=7$, $y=-2$를 얻어 ③을 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:27:18.365735+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "연립방정식의 해가 다른 방정식의 해이기도 하다는 것을 이용하여 $a$의 값을 거꾸로 구한다.",
@@ -480,30 +516,35 @@
       "body": "다음 연립방정식의 해 $(x, y)$를 구하시오.\n$\\begin{cases}x+y=5\\\\2x+y=7\\end{cases}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M2",
           "no": 1,
           "text": "$(7, -2)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$(3, 2)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(2, 3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 4,
           "text": "$(12, -7)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -514,6 +555,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "첫째 식의 양변에 $2$를 곱하면 $2x+2y=10$이다. 이 식에서 둘째 식을 빼면 $y=3$이다. 이를 첫째 식에 대입하면 $x=2$이다. 따라서 정답은 ③이다.\n①은 첫째 식에 $2$를 곱할 때 우변에는 곱하지 않은 경우이다. ④는 둘째 식에서 첫째 식을 뺄 때 우변의 $5$를 빼지 않고 더한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:26:06.817444+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -541,30 +583,35 @@
       "body": "다음 연립방정식의 해 $(x, y)$를 구하시오.\n$\\begin{cases}5x-2y=18\\\\2x-2y=6\\end{cases}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$(1, 4)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$(4, -1)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(4, 1)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 4,
           "text": "$(8, 5)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -575,6 +622,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "첫째 식에서 둘째 식을 변끼리 빼면 $3x=12$이므로 $x=4$입니다. 이를 둘째 식에 대입하면 $8-2y=6$이므로 $y=1$입니다. 따라서 해는 $(4, 1)$입니다.\n$(8, 5)$를 골랐다면 두 식을 변끼리 뺄 때 우변의 $6$을 빼지 않고 더하지 않았는지 확인해 보세요.",
+      "figure": null,
       "generated_at": "2026-11-11T11:26:27.818821+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -602,30 +650,35 @@
       "body": "다음 연립방정식에 대한 학생들의 말 중 옳은 것은?\n\n$\\begin{cases}x+y=4 & \\cdots \\text{㉠}\\\\2x-y=2 & \\cdots \\text{㉡}\\end{cases}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M2",
           "no": 1,
           "text": "㉠의 양변에 $2$를 곱하면 $2x+2y=4$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 2,
           "text": "㉡에서 ㉠을 변끼리 빼면 $x-2y=6$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "㉠에서 구한 $y=4-x$를 ㉡에 대입하면 $2x-(4-x)=2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M4",
           "no": 4,
           "text": "㉠에서 구한 $y=4-x$를 ㉡에 대입하면 $2x-4-x=2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -636,6 +689,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "㉠의 양변에 $2$를 곱하면 $2x+2y=8$이다. ㉡에서 ㉠을 변끼리 빼면 $x-2y=-2$이다. ㉠에서 구한 $y=4-x$를 ㉡에 대입하면 $2x-(4-x)=2$이므로 ③이 옳다.\n\n①은 양변에 $2$를 곱할 때 우변에 곱하지 않았다. ②는 우변을 뺄 때 $2-4$가 아니라 $2+4$로 계산했다. ④는 대입할 때 $4-x$에 괄호를 쓰지 않아 $-y$를 잘못 나타냈다. ⑤에서 $x=2$는 맞지만, $x=2$인 모든 순서쌍이 해는 아니다. 예를 들어 $(2,0)$은 ㉠을 만족하지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:29:52.944721+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "한 연립방정식에 대한 학생들의 말 다섯 개를 비교하여 옳은 말을 판단하게 했다.",
@@ -663,30 +717,35 @@
       "body": "다음 연립방정식을 푼 학생의 풀이를 살펴보자.\n\n$\\begin{cases}x-y=2 & \\cdots \\text{㉠}\\\\2x-3y=3 & \\cdots \\text{㉡}\\end{cases}$\n\n[학생의 풀이]\n㉠에서 $y=x-2$이다. 이를 ㉡에 대입하면 $2x-3x-2=3$이다. 따라서 $x=-5$, $y=-7$이다.\n\n학생의 풀이를 살펴보고, 옳게 말한 것을 고르시오.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M2",
           "no": 1,
           "text": "㉠의 양변에 $2$를 곱하면 $2x-2y=2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 2,
           "text": "㉠의 양변에 $2$를 곱한 식에서 ㉡을 변끼리 빼면 $y=7$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M4",
           "no": 3,
           "text": "학생이 $y=x-2$를 ㉡에 대입하여 얻은 식은 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "이 연립방정식에서 $y=1$이므로 해는 $(1,3)$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -697,6 +756,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "정답은 ⑤이다. $-3$을 $x-2$의 각 항에 곱해야 하므로, 대입한 식은 $2x-3(x-2)=3$, 즉 $2x-3x+6=3$이다. 이를 풀면 $x=3$, $y=1$이다.\n\n① ㉠의 양변에 $2$를 곱하면 우변에도 $2$를 곱해야 하므로 $2x-2y=4$이다.\n② $2\\times\\text{㉠}$에서 ㉡을 빼면 우변은 $4-3$이므로 $y=1$이다. 우변을 더하면 안 된다.\n③ 대입할 때 괄호를 쓰지 않아 $-3$을 $-2$에 곱하지 않았다.\n④ $y=1$은 맞지만 해의 순서를 바꾸었다. 해는 $(3,1)$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:30:21.297195+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다른 학생의 대입 풀이를 살펴보고, 그 풀이와 관련된 말이 옳은지 판단하게 했다.",
@@ -724,30 +784,35 @@
       "body": "연립방정식 $(가)\\;3x+2y=8$, $(나)\\;-x+y=-1$을 푸는 과정이다. 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M2",
           "no": 1,
           "text": "$(가)의 양변에 $2$를 곱하면 $6x+4y=8$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 2,
           "text": "$(가)에서 $(나)의 양변에 $2$를 곱한 식을 변끼리 빼면 $5x=6$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M4",
           "no": 3,
           "text": "$(나)를 $y=x-1$로 나타내어 $(가)에 대입하면 $3x+2x-1=8$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$(나)를 $y=x-1$로 나타내어 $(가)에 대입하면 $3x+2(x-1)=8$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -758,6 +823,7 @@
       "difficulty": "normal",
       "disabled_at": "2026-11-11T11:38:29.14064+00:00",
       "explanation": "$(나)에서 $y=x-1$이므로 이를 $(가)에 대입하면 $3x+2(x-1)=8$이다. 따라서 정답은 ④이다.\n① 우변의 $8$에도 $2$를 곱해야 한다.\n② $(나)의 양변에 $2$를 곱한 식은 $-2x+2y=-2$이다. 우변도 빼야 하므로 $8-(-2)=10$이다.\n③ $2$는 $x$와 $-1$ 모두에 곱해야 한다.\n⑤ $8$에 $3$을 곱하면 $24$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:27:49.333385+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -785,30 +851,35 @@
       "body": "다음 연립방정식을 풀 때, 옳게 계산한 것은 어느 것인가?\n\n$x+y=4$ ⋯ ㉠\n$2x-y=2$ ⋯ ㉡",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M2",
           "no": 1,
           "text": "㉠의 양변에 $2$를 곱하면 $2x+2y=4$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 2,
           "text": "㉠에서 ㉡을 변끼리 빼면 $-x+2y=6$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M4",
           "no": 3,
           "text": "㉠을 $y=4-x$로 나타내어 ㉡에 대입하면 $2x-4-x=2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "㉠과 ㉡을 변끼리 더하면 $3x=6$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -819,6 +890,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "㉠과 ㉡을 변끼리 더하면 $3x=6$이므로 정답은 ④이다.\n①은 ㉠의 우변에도 $2$를 곱해야 한다. ②는 우변을 뺄 때도 $4-2$로 계산해야 한다. ③은 $y=4-x$를 대입할 때 $4-x$ 전체에 앞의 $-$를 붙여야 한다. ⑤는 우변을 더한 값이 틀렸다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:26.833519+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -846,30 +918,35 @@
       "body": "수첩 한 권의 가격은 $x$천 원, 펜 한 자루의 가격은 $y$천 원이다. 수첩 두 권과 펜 한 자루의 가격의 합은 $8$천 원이고, 수첩 한 권은 펜 한 자루보다 $1$천 원 비싸다.\n\n이 관계를 식으로 나타내면 다음과 같다.\n$2x+y=8$ ⋯ ㉠\n$x-y=1$ ⋯ ㉡\n\n이 연립방정식을 푸는 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M2",
           "no": 1,
           "text": "㉠의 양변에 $2$를 곱하면 $4x+2y=8$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M3",
           "no": 2,
           "text": "㉠에서 ㉡의 양변에 $2$를 곱한 식을 변끼리 빼면 $3y=10$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "㉠에서 ㉡의 양변에 $2$를 곱한 식을 변끼리 빼면 $3y=6$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "연립방정식의 해는 $x=2$, $y=3$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M4",
           "no": 5,
@@ -880,6 +957,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "㉡의 양변에 $2$를 곱하면 $2x-2y=2$이다. ㉠에서 이 식을 변끼리 빼면 $3y=6$이므로 정답은 ③이다.\n\n①은 ㉠의 양변에 $2$를 곱할 때 우변에 곱하지 않았다. ②는 식을 변끼리 뺄 때 우변에서 $2$를 빼지 않고 더했다. ⑤는 $x=y+1$을 대입할 때 $y+1$ 전체에 $2$를 곱하지 않았다.\n\n③에서 $y=2$이고, 이를 ㉡에 대입하면 $x=3$이다. 따라서 ④도 옳지 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:56.295398+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -907,30 +985,35 @@
       "body": "상자 A와 상자 B에 연필이 모두 $36$자루 들어 있다. 상자 A에서 상자 B로 연필 $3$자루를 옮겼더니, 상자 B의 연필 수가 상자 A의 연필 수의 $2$배가 되었다.\n\n처음 상자 A와 상자 B에 들어 있던 연필 수를 각각 $x$자루, $y$자루로 놓고 연립방정식을 세워 보자. 처음 상자 A에 들어 있던 연필은 몇 자루인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$12$자루"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$15$자루"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$18$자루"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$21$자루"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M5",
           "no": 5,
@@ -941,6 +1024,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "처음 두 상자의 연필은 모두 $36$자루이므로 $x+y=36$이다. 옮긴 뒤 상자 A에는 $(x-3)$자루, 상자 B에는 $(y+3)$자루가 있다. 이때 상자 B의 연필 수가 상자 A의 연필 수의 $2$배이므로 $y+3=2(x-3)$이다.\n\n두 식을 연립하여 풀면 $x=15$, $y=21$이다. 따라서 처음 상자 A에 들어 있던 연필은 $15$자루이다.\n\n상자 A의 연필 수가 상자 B의 연필 수의 $2$배라고 거꾸로 생각하여 $x-3=2(y+3)$으로 세우면 $27$자루를 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:31:19.665755+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "연필을 옮긴 뒤의 배 관계를 처음 연필 수를 나타내는 식으로 바꾸어야 한다. 세운 연립방정식을 풀어 처음 상자 A의 연필 수를 구한다.",
@@ -968,30 +1052,35 @@
       "body": "성인 입장권 $2$장과 청소년 입장권 $3$장의 가격을 더하면 $18700$원이다. 성인 입장권 $3$장의 가격은 청소년 입장권 $2$장의 가격의 $2$배이다.\n\n성인 입장권과 청소년 입장권 한 장의 가격을 각각 $x$원, $y$원으로 놓고 연립방정식을 세워 풀어 보자. 성인 입장권 한 장의 가격은 몇 원인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M5",
           "no": 1,
           "text": "$1700$원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$3300$원"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$4400$원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$5100$원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1002,6 +1091,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "입장권 가격을 더하면 $2x+3y=18700$이다. 성인 입장권 $3$장의 가격이 청소년 입장권 $2$장의 가격의 $2$배이므로 $3x=2\\times 2y$이다.\n\n$2x+3y=18700$, $3x=4y$를 풀면 $x=4400$, $y=3300$이다. 따라서 성인 입장권 한 장의 가격은 $4400$원이다.\n\n$1700$원을 골랐다면 배 관계를 거꾸로 생각하여 $2y=2\\times 3x$로 식을 세웠을 수 있다. $2$배인 쪽은 청소년 입장권 $2$장의 가격이 아니라 성인 입장권 $3$장의 가격이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:31:49.945533+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "입장권의 전체 가격과 여러 장의 가격 사이의 배 관계를 각각 식으로 나타내어 풀어야 한다. 특히 한 장의 가격이 아니라 여러 장의 가격을 비교해야 한다.",
@@ -1029,30 +1119,35 @@
       "body": "빨간색 색연필과 파란색 색연필이 모두 $24$자루 있다. 파란색 색연필의 수는 빨간색 색연필의 수의 $3$배이다. 연립방정식을 세워 풀 때, 빨간색 색연필은 몇 자루인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$자루"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$6$자루"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$8$자루"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$12$자루"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M5",
           "no": 5,
@@ -1063,6 +1158,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "빨간색 색연필의 수를 $x$자루, 파란색 색연필의 수를 $y$자루라고 하면 $x+y=24$, $y=3x$이다. 이를 풀면 $x=6$, $y=18$이다. 따라서 빨간색 색연필은 $6$자루이다. $18$자루를 고른 학생은 배 관계를 거꾸로 생각하여 $x=3y$로 식을 세웠을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:30:32.964454+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1090,30 +1186,35 @@
       "body": "어느 전시회의 입장권은 어른용이 한 장에 $2000$원, 어린이용이 한 장에 $1000$원이다. 팔린 어른용 입장권의 수는 어린이용 입장권의 수의 $2$배이고, 두 종류의 입장권을 판 금액의 합은 $20000$원이다. 연립방정식을 세워 풀 때, 팔린 어른용 입장권은 몇 장인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$장"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-13-M5",
           "no": 2,
           "text": "$5$장"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$6$장"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$8$장"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1124,6 +1225,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "팔린 어른용 입장권의 수를 $x$장, 어린이용 입장권의 수를 $y$장이라고 하면 $x=2y$, $2000x+1000y=20000$이다. 이를 풀면 $x=8$, $y=4$이므로 어른용 입장권은 $8$장이다. ②를 골랐다면 어른용 입장권의 수가 어린이용의 $2$배라는 관계를 거꾸로 생각하여 $y=2x$로 세웠을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:30:53.062626+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1154,6 +1256,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "전체가 $30$명이므로 $x+y=30$이다. 어른 수가 아이 수의 $2$배이므로 $x=2y$이다. 아이 수의 $2$배가 어른 수이므로 $2x=y$로 세우면 두 수의 관계를 거꾸로 나타낸 것이다.\n\n$x=2y$를 첫째 식에 대입하면 $3y=30$이므로 $y=10$, $x=20$이다. $20+10=30$이고 $20=2×10$이므로 구한 수는 두 관계를 모두 만족한다.\n\n어른이 $18$명, 아이가 $12$명이면 전체는 $30$명이고 어른이 더 많다. 하지만 $18$은 $12$의 $2$배가 아니므로 민수의 말은 틀렸다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:33:10.872975+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "3번에서 민수의 말이 틀렸음을 구체적인 수를 들어 설명하게 한다.",
@@ -1217,6 +1320,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "첫 번째 가격의 합에서 $2x+y=3500$, 두 번째 가격의 합에서 $x+2y=2500$을 얻는다. 가감법은 한 식의 양변에 같은 수를 곱한 뒤 다른 식과 빼서 한 미지수를 없앤다. 대입법은 한 식에서 같은 값을 나타내는 식을 다른 식에 넣는다. 두 방법 모두 처음의 두 식을 함께 만족하는 해를 구하므로 결과가 같다.\n\n공책과 펜의 개수를 바꾸어 곱하면 가격의 합을 잘못 나타내게 된다. 공책 $2$권은 $2x$원이고, 펜 $2$자루는 $2y$원임에 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:33:39.953429+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "2번에서 가감법과 대입법으로 각각 풀고, 두 방법으로 얻은 해가 왜 같은지 비교하여 설명하게 한다.",
@@ -1276,6 +1380,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "빨간 구슬 수를 $x$개, 파란 구슬 수를 $y$개라고 하면 전체 구슬 수로부터 $x+y=24$입니다. 빨간 구슬이 파란 구슬의 $2$배이므로 $x=2y$입니다. 이를 풀면 $x=16$, $y=8$입니다. $16+8=24$이고 $16=2×8$이므로 두 관계에 모두 맞습니다.\n\n배 관계를 거꾸로 생각하면 $y=2x$로 식을 세울 수 있습니다. 하지만 이 식은 파란 구슬이 빨간 구슬의 $2$배라는 뜻입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:32:14.699008+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1346,6 +1451,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "공책 한 권의 가격을 $x$원, 연필 한 자루의 가격을 $y$원이라고 하면, 첫 번째 가격에서 $2x+3y=3900$, 두 번째 가격에서 $3x+2y=4600$입니다. 두 식을 풀면 $x=1200$, $y=500$입니다.\n\n공책 $2$권과 연필 $3$자루의 가격은 $2\\times1200+3\\times500=3900$원입니다. 공책 $3$권과 연필 $2$자루의 가격은 $3\\times1200+2\\times500=4600$원입니다. 따라서 구한 답은 두 가격에 모두 맞습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:32:38.636605+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

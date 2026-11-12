@@ -8,30 +8,35 @@
       "body": "한 원에 중심각의 크기가 각각 $60^\\circ$, $180^\\circ$인 두 부채꼴이 있다. 큰 부채꼴의 호의 양 끝을 잇는 현의 길이는 작은 부채꼴의 호의 양 끝을 잇는 현의 길이의 $2$배이다. 두 호의 길이의 차가 $4\\pi\\text{ cm}$일 때, 작은 부채꼴의 호의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\pi\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2\\pi\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$3\\pi\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M1",
           "no": 4,
           "text": "$4\\pi\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -40,8 +45,9 @@
       ],
       "created_at": "2026-11-11T08:31:43.64761+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.8538+00:00",
       "explanation": "한 원에서 호의 길이는 중심각의 크기에 정비례한다. 두 중심각의 크기의 비가 $1:3$이므로 두 호의 길이의 비도 $1:3$이다. 따라서 두 호의 길이의 차인 $4\\pi\\text{ cm}$는 작은 호의 길이의 $2$배이다. 작은 호의 길이는 $2\\pi\\text{ cm}$이다.\n\n④는 현의 길이의 비가 $1:2$이므로 호의 길이의 비도 $1:2$라고 잘못 생각한 경우이다. 현의 길이는 중심각의 크기에 정비례하지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:31:41.575704+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 호의 길이의 차를 주고 작은 호의 길이를 거꾸로 구하게 했다. 현의 길이의 비와 호의 길이의 비를 구별해야 한다.",
@@ -52,10 +58,159 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:31:41.575220+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.372688+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-성질적용",
+      "body": "다음 그림에서 선분 $\\mathrm{AB}$는 원 $\\mathrm{O}$의 지름이고 길이는 $12\\text{ cm}$입니다. 점 $\\mathrm{C}$는 지름 $\\mathrm{AB}$ 위쪽의 원 위에 있습니다. 호 $\\mathrm{AC}$의 길이가 호 $\\mathrm{CB}$의 길이의 $2$배일 때, 현 $\\mathrm{CB}$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 2,
+          "text": "$4\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T03:37:05.274023+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "호 $\\mathrm{AC}$의 길이가 호 $\\mathrm{CB}$의 길이의 $2$배이므로 중심각 $\\angle\\mathrm{AOC}$의 크기도 $\\angle\\mathrm{COB}$의 크기의 $2$배입니다. 두 중심각의 크기의 합은 $180°$이므로 $\\angle\\mathrm{COB}=60°$입니다. $\\mathrm{OB}=\\mathrm{OC}$이므로 삼각형 $\\mathrm{OBC}$는 정삼각형입니다. 따라서 $\\mathrm{CB}=\\mathrm{OB}=6\\text{ cm}$입니다.\n②는 현의 길이도 호의 길이에 정비례한다고 생각하여 $12\\div3=4$로 구한 것입니다. 현의 길이는 호의 길이에 정비례하지 않습니다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B",
+              "C"
+            ],
+            "radius": 6.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.196152423
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "12 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:37:05.184048+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 호의 길이에 관한 문장을 중심각의 크기 사이의 관계로 바꾸어 적용한 뒤, 현의 길이를 구해야 합니다.",
+      "id": "a4ad28a4-069d-4fd2-836f-314b8a07dca7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:37:05.183455+00:00",
           "issues": [],
           "number": 1
         }
@@ -69,30 +224,35 @@
       "body": "한 원의 중심을 $O$라 하자. 원 위의 서로 다른 두 점 $A$, $B$와 두 반지름 $OA$, $OB$로 원을 두 부채꼴 $P$, $Q$로 나눈다. 두 부채꼴의 호의 양 끝을 이은 현은 모두 $AB$이다.\n\n부채꼴 $P$의 호의 길이는 부채꼴 $Q$의 호의 길이의 $\\frac{1}{4}$이다. 부채꼴 $P$의 중심각의 크기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$45^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$60^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$72^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$90^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M1",
           "no": 5,
@@ -101,8 +261,9 @@
       ],
       "created_at": "2026-11-11T08:32:30.092328+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.936129+00:00",
       "explanation": "두 중심각의 크기의 합은 $360^\\circ$이다. 한 원에서 중심각의 크기는 호의 길이에 정비례하므로, $P$와 $Q$의 중심각의 크기의 비는 $1:4$이다. 따라서 $P$의 중심각의 크기는 $360^\\circ\\times\\frac{1}{5}=72^\\circ$이다.\n\n⑤를 골랐다면 두 부채꼴의 현이 같으므로 중심각도 같다고 생각했을 수 있다. 하지만 두 부채꼴은 같은 현을 가져도 호의 길이가 다르다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:32:27.934204+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "두 부채꼴이 원을 나눈다는 말에서 중심각의 크기의 합이 $360^\\circ$임을 알아야 한다. 호의 길이의 비를 중심각의 크기의 비로 바꾸어 답을 구한다.",
@@ -113,10 +274,167 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:32:27.933882+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.409595+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-성질적용",
+      "body": "다음 그림에서 원 $\\mathrm{O}$의 반지름과 현 $\\mathrm{AB}$의 길이는 각각 $5\\text{ cm}$입니다. 점 $\\mathrm{A}$를 지나는 호 $\\mathrm{BC}$의 길이는 호 $\\mathrm{AB}$의 길이의 $2$배입니다. 현 $\\mathrm{BC}$의 길이를 $x\\text{ cm}$라 할 때, 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$0<x<5$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x=5$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5<x<10$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 4,
+          "text": "$x=10$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x>10$"
+        }
+      ],
+      "created_at": "2026-11-12T03:37:56.284957+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\mathrm{OA}=\\mathrm{OB}=\\mathrm{AB}=5\\text{ cm}$이므로 삼각형 $\\mathrm{OAB}$는 정삼각형입니다. 따라서 각 $\\mathrm{AOB}$는 $60°$입니다. 점 $\\mathrm{A}$를 지나는 호 $\\mathrm{BC}$의 길이가 호 $\\mathrm{AB}$의 길이의 $2$배이므로 각 $\\mathrm{BOC}$는 $120°$입니다. 삼각형 $\\mathrm{OBC}$에서 나머지 두 각은 각각 $30°$이므로, $120°$의 맞은편에 있는 현 $\\mathrm{BC}$는 반지름보다 깁니다. 또 삼각형의 한 변의 길이는 나머지 두 변의 길이의 합보다 작으므로 $x<10$입니다. 따라서 정답은 ③입니다. 호의 길이가 $2$배라고 해서 현의 길이도 $2$배가 되는 것은 아닙니다. 이를 현에도 적용하면 ④를 고를 수 있습니다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B",
+              "C"
+            ],
+            "radius": 5.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 2.5,
+            "y": 4.330127
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 2.5,
+            "y": -4.330127
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "5 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:37:56.182151+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "호의 길이에 관한 문장을 중심각의 크기로 바꾸어 적용해야 한다. 이어서 삼각형의 변의 길이를 비교하여 현의 길이가 속하는 범위를 구한다.",
+      "id": "f7ac2fc0-d97f-4eb6-b43f-3fd0d934960b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:37:56.181549+00:00",
           "issues": [],
           "number": 1
         }
@@ -130,30 +448,35 @@
       "body": "반지름이 $6$ cm인 원이 있다. 이 원에서 중심각의 크기가 $60^\\circ$인 부채꼴의 호의 길이는 $2\\pi$ cm이고, 이 호의 양 끝을 이은 현의 길이는 $6$ cm이다.\n\n이 원에서 중심각의 크기가 $180^\\circ$인 부채꼴의 호의 길이와 이 호의 양 끝을 이은 현의 길이를 차례로 구하면?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4\\pi$ cm, $12$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6\\pi$ cm, $6$ cm"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$6\\pi$ cm, $12$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M1",
           "no": 4,
           "text": "$6\\pi$ cm, $18$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -162,8 +485,9 @@
       ],
       "created_at": "2026-11-11T08:30:49.233956+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.965889+00:00",
       "explanation": "중심각의 크기가 $60^\\circ$에서 $180^\\circ$로 $3$배가 되므로 호의 길이는 $2\\pi\\times 3=6\\pi$ cm이다. $180^\\circ$인 부채꼴의 호의 양 끝을 이은 현은 원의 중심을 지나므로 그 길이는 지름인 $12$ cm이다. 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각하면 $6\\times 3=18$ cm로 구할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:30:47.162024+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -174,12 +498,178 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:30:47.161961+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.44392+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-성질적용",
+      "body": "다음 그림에서 원 $O$의 선분 $AC$는 지름이고, $\\angle AOB=60°$입니다. 현 $AB$의 길이는 $6\\text{ cm}$, 현 $AC$의 길이는 $12\\text{ cm}$입니다. 호 $AB$의 길이가 $2\\pi\\text{ cm}$일 때, 점 $B$를 지나는 호 $AC$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 3,
+          "text": "$4\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\pi\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T03:36:14.663711+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "호 $AB$의 중심각은 $60°$이고, 점 $B$를 지나는 호 $AC$의 중심각은 $180°$입니다. 한 원에서 호의 길이는 중심각의 크기에 정비례하므로 구하는 길이는 $2\\pi\\times 3=6\\pi\\text{ cm}$입니다. 현 $AC$의 길이가 현 $AB$의 길이의 $2$배라고 해서 호의 길이도 $2$배라고 생각하면 안 됩니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B",
+              "C"
+            ],
+            "radius": 6.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.196152423
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -6.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:36:14.576869+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f4b75712-dd42-4e1b-9b2b-5d0e7d17fd57",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:35:52.378450+00:00",
+          "issues": [
+            "호가 제시되지 않고 중심각과 호의 관계를 이용할 필요도 없다. 삼각형 OAB가 정삼각형임을 이용해 지름을 구하는 문제이므로 측정하려는 이해를 재지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:36:14.576621+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 1
@@ -191,30 +681,35 @@
       "body": "한 원에 두 부채꼴 가와 나가 있다. 가와 나의 호는 양 끝점이 같다.\n\n가의 중심각의 크기는 $120^\\circ$이고 호의 길이는 $4$ cm이다. 나의 중심각의 크기는 $240^\\circ$이다.\n\n나의 호의 길이와, 나의 호의 양 끝을 이은 현의 길이가 가의 호의 양 끝을 이은 현의 길이의 몇 배인지 차례로 고르면?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$ cm, $1$배"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6$ cm, $1$배"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$8$ cm, $1$배"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M1",
           "no": 4,
           "text": "$8$ cm, $2$배"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -223,8 +718,9 @@
       ],
       "created_at": "2026-11-11T08:31:14.391894+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:15.006116+00:00",
       "explanation": "나의 중심각의 크기는 가의 $2$배이다. 한 원에서 호의 길이는 중심각의 크기에 정비례하므로 나의 호의 길이는 $4\\times 2=8$ cm이다.\n\n두 호의 양 끝점이 같으므로 두 호의 양 끝을 이은 현도 같다. 따라서 현의 길이는 $1$배이다.\n\n④는 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:31:12.309192+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -235,10 +731,215 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:31:12.308734+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.469614+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-성질적용",
+      "body": "다음 그림은 원 $O$를 나타낸 것이다. $\\angle AOB=60°$이고, 호 $AB$의 길이는 $2\\pi\\text{ cm}$, 호 $CD$의 길이는 $3\\pi\\text{ cm}$이다. 현 $AB$의 길이는 $6\\text{ cm}$이고, 현 $CD$의 길이는 약 $8.5\\text{ cm}$이다. $\\angle COD$의 크기는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$60°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$75°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 3,
+          "text": "$85°$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$90°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$120°$"
+        }
+      ],
+      "created_at": "2026-11-12T03:36:43.314056+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "한 원에서 중심각의 크기는 그 중심각에 대한 호의 길이에 정비례한다. 따라서 $\\angle COD=60°\\times\\dfrac{3\\pi}{2\\pi}=90°$이다.\n③을 골랐다면 현의 길이도 중심각의 크기에 정비례한다고 생각했을 수 있다. 현의 길이는 중심각의 크기에 정비례하지 않는다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          },
+          {
+            "from": "C",
+            "label": "x",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [
+          {
+            "center": "O",
+            "from": "A",
+            "label": "2π cm",
+            "to": "B",
+            "trace": true
+          },
+          {
+            "center": "O",
+            "from": "C",
+            "label": "3π cm",
+            "to": "D",
+            "trace": true
+          }
+        ],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "radius": 6.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.196152423
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": -6.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "약 8.5 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:36:43.208869+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "523b0c44-680e-4b08-8041-d7bf373820dd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:36:43.208335+00:00",
           "issues": [],
           "number": 1
         }
@@ -252,30 +953,35 @@
       "body": "한 원에서 중심각의 크기가 각각 $60^\\circ$, $180^\\circ$인 두 부채꼴을 생각하자. 각 부채꼴에서 호의 양 끝을 이은 선분은 현이다.\n\n민수는 다음과 같이 말했다.\n“$180^\\circ$인 부채꼴의 호의 길이는 $60^\\circ$인 부채꼴의 호의 길이의 $3$배야. 현의 길이도 $3$배야.”\n\n민수의 말에 대한 판단과 그 까닭이 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M1",
           "no": 1,
           "text": "호와 현에 대한 말이 모두 옳다. 같은 원에서는 호와 현의 길이가 모두 중심각의 크기에 정비례하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "호에 대한 말만 옳다. $60^\\circ$인 부채꼴의 현은 반지름과 길이가 같고, $180^\\circ$인 부채꼴의 현은 지름이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "호에 대한 말만 옳다. $60^\\circ$와 $180^\\circ$인 부채꼴의 현은 모두 반지름과 길이가 같기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "호에 대한 말만 옳다. $60^\\circ$와 $180^\\circ$인 부채꼴의 현은 모두 지름과 길이가 같기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -284,8 +990,9 @@
       ],
       "created_at": "2026-11-11T08:34:16.158364+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.477302+00:00",
       "explanation": "같은 원에서 호의 길이는 중심각의 크기에 정비례한다. 따라서 $180^\\circ$인 부채꼴의 호의 길이는 $60^\\circ$인 부채꼴의 호의 길이의 $3$배이다.\n\n$60^\\circ$인 부채꼴의 두 반지름과 현으로 이루어진 삼각형은 정삼각형이다. 따라서 이 현의 길이는 반지름과 같다. $180^\\circ$인 부채꼴의 현은 지름이므로 길이가 반지름의 $2$배이다. 두 현의 길이는 $3$배가 아니라 $2$배이다.\n\n①은 현의 길이도 호의 길이처럼 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:34:14.081921+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수가 호와 현의 길이에 대해 한 말을 각각 판단하고, 판단의 까닭까지 고르게 했다.",
@@ -296,7 +1003,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:34:14.081559+00:00",
@@ -307,36 +1014,381 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:42.499653+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-오개념판별",
+      "body": "그림과 같이 중심이 $O$인 원 위에 세 점 $A$, $B$, $C$가 있다. $\\angle AOB=60°$, $\\angle AOC=120°$이다. 호 $AB$와 호 $AC$는 각각 짧은 쪽의 호를 뜻한다.\n\n민지는 다음과 같이 말했다.\n\n“중심각의 크기가 $2$배이므로 호 $AC$의 길이는 호 $AB$의 길이의 $2$배야. 현 $AC$의 길이도 현 $AB$의 길이의 $2$배야.”\n\n민지의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 1,
+          "text": "호의 길이에 대한 말과 현의 길이에 대한 말이 모두 옳다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "호의 길이에 대한 말이 틀리다. 두 호의 길이는 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "호의 길이에 대한 말이 틀리다. 호 $AC$의 길이는 호 $AB$의 길이의 $3$배이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "호의 길이에 대한 말은 옳지만, 현의 길이에 대한 말은 틀리다. 두 현의 길이는 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "호의 길이에 대한 말은 옳지만, 현의 길이에 대한 말은 틀리다. 현 $AC$의 길이는 현 $AB$의 길이의 $2$배보다 작다."
+        }
+      ],
+      "created_at": "2026-11-12T03:39:29.465373+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "한 원에서 호의 길이는 중심각의 크기에 정비례한다. 따라서 호 $AC$의 길이는 호 $AB$의 길이의 $2$배이다.\n\n$OA=OB$이고 $\\angle AOB=60°$이므로 삼각형 $OAB$는 정삼각형이다. 따라서 $AB=OA$이다. 또 $OC=OA$이므로 $OA+OC=2AB$이다. 삼각형 $OAC$에서 $AC<OA+OC$이므로 $AC<2AB$이다.\n\n①은 호의 길이뿐 아니라 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          },
+          {
+            "from": "A",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B",
+              "C"
+            ],
+            "radius": 4.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 2.0,
+            "y": 3.464102
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -2.0,
+            "y": 3.464102
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:39:29.345269+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지가 중심각과 호의 길이, 현의 길이를 비교한 말을 보고 각각 옳은지 판단하게 했다.",
+      "id": "5b8fba1a-5693-4d18-aa48-8dba07c5aebe",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:39:29.344885+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.527157+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-오개념판별",
+      "body": "그림과 같이 중심이 $O$인 원에서 $AC$는 지름이고, $\\angle AOB=90°$이다. 호 $AB$는 짧은 쪽의 호이고, 호 $AC$는 $B$를 지나는 반원이다.\n\n지우는 이렇게 말했다.\n\n“호 $AB$의 길이는 호 $AC$의 길이의 절반이야. 따라서 현 $AB$의 길이도 지름 $AC$의 길이의 절반이야.”\n\n지우의 말에 대한 판단과 그 이유로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 1,
+          "text": "옳다. 중심각의 크기가 절반이므로 현의 길이도 절반이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "틀리다. 호 $AB$의 길이는 호 $AC$의 길이의 $\\dfrac14$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "틀리다. $AB=BC$이고 $AB+BC>AC$이므로 $AB$는 $AC$의 절반보다 길다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. 현 $AB$의 길이는 지름 $AC$의 길이보다 길다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳다. $AB=BC$이므로 $AB+BC=AC$이다."
+        }
+      ],
+      "created_at": "2026-11-12T03:39:58.683091+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle AOB$와 $\\angle BOC$는 모두 $90°$이므로 호 $AB$의 길이는 호 $AC$의 길이의 절반이다. 하지만 현의 길이는 중심각의 크기에 정비례하지 않는다.\n\n반지름의 길이는 모두 같고 두 중심각의 크기도 같으므로 삼각형 $AOB$와 삼각형 $COB$는 합동이다. 따라서 $AB=BC$이다. 삼각형 $ABC$에서 $AB+BC>AC$이므로 $AB$는 $AC$의 절반보다 길다. 정답은 ③이다.\n\n①은 호의 길이가 절반이면 현의 길이도 절반이라고 잘못 생각한 것이다. ②는 호의 길이의 비를 잘못 구했고, ④는 현 $AB$가 지름보다 길다고 잘못 생각했다. ⑤는 $AB$와 $BC$를 더한 길이가 $AC$와 같다고 잘못 생각했다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "90°",
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B",
+              "C"
+            ],
+            "radius": 3.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -3.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:39:58.578477+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "지우가 호의 길이에서 현의 길이를 추론한 말을 보고 판단하게 한다. 삼각형의 성질을 이용해 현의 길이가 지름의 절반이 아님을 살펴보아야 한다.",
+      "id": "259528c7-db46-4858-a662-918dcacf95c3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:39:58.578186+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.417568+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-06-C1-오개념판별",
       "body": "원 위의 서로 다른 두 점 $A$, $B$가 원을 두 호로 나눈다. 두 호에 대한 부채꼴의 중심각은 각각 $120^\\circ$, $240^\\circ$이다.\n\n각 호의 양 끝을 이은 현에 대하여 학생들이 다음과 같이 말했다. 옳은 말은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M1",
           "no": 1,
           "text": "$240^\\circ$인 호의 현은 $120^\\circ$인 호의 현보다 길이가 $2$배야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "두 호의 길이는 서로 같아."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "두 부채꼴의 넓이는 서로 같아."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$240^\\circ$인 호의 길이는 $120^\\circ$인 호의 길이의 $3$배야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -345,8 +1397,9 @@
       ],
       "created_at": "2026-11-11T08:34:37.810983+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.520749+00:00",
       "explanation": "한 원에서 호의 길이와 부채꼴의 넓이는 각각 중심각의 크기에 정비례한다. 따라서 $240^\\circ$인 부채꼴의 호의 길이와 넓이는 각각 $120^\\circ$인 부채꼴의 $2$배이다.\n\n두 호의 양 끝은 모두 $A$, $B$이므로 두 호의 현은 같은 선분이다. 따라서 현의 길이는 서로 같다. ①은 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:34:35.738051+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "같은 두 점을 양 끝으로 하는 두 호를 살펴보고, 호와 현에 대한 학생들의 말 중 옳은 것을 판단하게 했다.",
@@ -357,7 +1410,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:34:35.737961+00:00",
@@ -368,36 +1421,215 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:42.563918+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-오개념판별",
+      "body": "다음 그림에서 $O$는 원의 중심이고, $\\angle AOB=60°$, $\\angle BOC=60°$이다. 호 $AB$와 호 $AC$는 각각 중심각 $\\angle AOB$와 $\\angle AOC$에 해당하는 호이다.\n\n민수는 “현 $AC$의 길이는 현 $AB$의 길이의 $2$배이다.”라고 말했다. 민수의 말에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 1,
+          "text": "옳다. 중심각의 크기가 $2$배이면 현의 길이도 $2$배이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. 현 $AC$는 원의 지름이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳지 않다. 호 $AC$와 호 $AB$의 길이가 같기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳지 않다. 호 $AC$의 길이는 호 $AB$의 길이의 $3$배이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. 호 $AC$의 길이는 호 $AB$의 길이의 $2$배이지만, 현 $AC$의 길이는 현 $AB$의 길이의 $2$배보다 작다."
+        }
+      ],
+      "created_at": "2026-11-12T03:38:38.698794+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle AOC=120°$이므로 호 $AC$의 길이는 호 $AB$의 길이의 $2$배이다. 그러나 현의 길이는 중심각의 크기에 정비례하지 않는다.\n\n삼각형 $OAB$는 세 변의 길이가 같으므로 $AB=OA$이다. 또 삼각형 $OAC$에서 $AC<OA+OC=2OA=2AB$이다. 따라서 현 $AC$의 길이는 현 $AB$의 길이의 $2$배보다 작다.\n\n①은 호의 길이뿐 아니라 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          },
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B",
+              "C"
+            ],
+            "radius": 4.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 2.0,
+            "y": 3.464101615
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -2.0,
+            "y": 3.464101615
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:38:38.631689+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "584a5762-ca58-4f96-896e-b5637bef04bd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:38:38.631440+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.452187+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-06-C1-오개념판별",
       "body": "한 원에 중심각이 $60^\\circ$인 부채꼴과 $180^\\circ$인 부채꼴이 있다. 각 부채꼴에서 호의 양 끝을 이은 현을 생각하자.\n\n중심각이 $180^\\circ$인 부채꼴의 호와 현의 길이는 각각 중심각이 $60^\\circ$인 부채꼴의 호와 현의 길이의 몇 배인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "호: $3$배, 현: $2$배"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M1",
           "no": 2,
           "text": "호: $3$배, 현: $3$배"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "호: $3$배, 현: $1$배"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "호: $2$배, 현: $2$배"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -406,8 +1638,9 @@
       ],
       "created_at": "2026-11-11T08:32:46.899594+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.565125+00:00",
       "explanation": "호의 길이는 중심각의 크기에 정비례하므로 $3$배이다.\n\n중심각이 $60^\\circ$인 부채꼴에서 중심과 호의 양 끝을 이은 삼각형은 정삼각형이다. 따라서 현의 길이는 반지름과 같다. 중심각이 $180^\\circ$인 부채꼴의 현은 지름이므로 반지름의 $2$배이다. 따라서 현의 길이는 $2$배이다.\n\n②는 현의 길이도 호의 길이처럼 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:32:44.814417+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -418,7 +1651,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:32:44.814210+00:00",
@@ -435,30 +1668,35 @@
       "body": "한 원 위의 서로 다른 두 점 $A$, $B$를 양 끝으로 하는 두 호가 있다. 한 호의 중심각은 $120^\\circ$이고, 다른 호의 중심각은 $240^\\circ$이다.\n\n각 호의 양 끝을 이은 현의 길이에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "길이가 같다. 두 현이 같은 현이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M1",
           "no": 2,
           "text": "$240^\\circ$에 대한 현의 길이가 두 배이다. 중심각의 크기가 두 배이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "길이가 같다. 두 중심각의 크기가 같기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "길이가 다르다. 두 호의 길이가 다르기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -467,8 +1705,9 @@
       ],
       "created_at": "2026-11-11T08:33:48.654292+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.589461+00:00",
       "explanation": "두 호의 양 끝이 모두 $A$, $B$이므로 두 현은 같은 현이다. 따라서 길이가 같다.\n\n②처럼 중심각이 두 배이면 현의 길이도 두 배라고 생각할 수 있지만, 현의 길이는 중심각의 크기에 정비례하지 않는다. ③에서 두 중심각의 크기는 다르다. ④에서 두 호의 길이는 다르지만 두 현은 같다. ⑤에서 한 원에 있는 현의 길이가 모두 같은 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:33:46.574738+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -479,7 +1718,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:33:14.243691+00:00",
@@ -498,36 +1737,183 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:42.592689+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C1-오개념판별",
+      "body": "다음 그림에서 $O$는 원의 중심이고, $\\angle AOB=120°$이다. 두 반지름 $OA$, $OB$는 원을 작은 부채꼴과 큰 부채꼴로 나눈다. 두 부채꼴의 호의 길이와 현의 길이를 비교한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M1",
+          "no": 1,
+          "text": "큰 부채꼴의 호의 길이와 현의 길이는 각각 작은 부채꼴의 호의 길이와 현의 길이의 $2$배이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "큰 부채꼴의 호의 길이는 작은 부채꼴의 호의 길이의 $2$배이고, 두 부채꼴의 현의 길이는 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 부채꼴의 호의 길이는 같고, 현의 길이도 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "큰 부채꼴의 호의 길이는 작은 부채꼴의 호의 길이의 $3$배이고, 두 부채꼴의 현의 길이는 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "큰 부채꼴의 호의 길이는 작은 부채꼴의 호의 길이의 $\\frac{1}{2}$배이고, 두 부채꼴의 현의 길이는 같다."
+        }
+      ],
+      "created_at": "2026-11-12T03:39:02.069991+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "큰 부채꼴의 중심각은 $360°-120°=240°$이다. 중심각의 크기가 $2$배이므로 큰 부채꼴의 호의 길이는 작은 부채꼴의 호의 길이의 $2$배이다. 두 부채꼴의 현은 모두 $AB$이므로 길이가 같다. ①은 현의 길이도 중심각의 크기에 정비례한다고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B"
+            ],
+            "radius": 4.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": -2.0,
+            "y": 3.464101615
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:39:01.983885+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b782f88a-5360-498a-a5e2-52361759bf98",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:39:01.983596+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.503692+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-06-C2-성질적용",
       "body": "두 부채꼴 $A$, $B$의 호의 길이는 서로 같다. $A$의 반지름은 $6\\text{ cm}$이고 넓이는 $12\\pi\\text{ cm}^2$이다. $B$의 지름은 $18\\text{ cm}$이다. $B$의 넓이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$9\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$12\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$18\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M3",
           "no": 4,
           "text": "$36\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M2",
           "no": 5,
@@ -536,8 +1922,9 @@
       ],
       "created_at": "2026-11-11T08:35:18.488668+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.477315+00:00",
       "explanation": "$A$는 넓이가 $36\\pi\\text{ cm}^2$인 원의 $\\frac{1}{3}$이므로, 호의 길이는 $12\\pi\\times\\frac{1}{3}=4\\pi\\text{ cm}$이다. $B$의 반지름은 $9\\text{ cm}$이고, 원의 둘레는 $18\\pi\\text{ cm}$이다. 따라서 $B$는 원의 $\\frac{4\\pi}{18\\pi}=\\frac{2}{9}$이므로, 넓이는 $81\\pi\\times\\frac{2}{9}=18\\pi\\text{ cm}^2$이다.\n④는 $B$의 지름을 반지름으로 잘못 사용한 경우이다. ⑤는 $A$의 넓이 $12\\pi$를 호의 길이로 잘못 사용한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:35:16.426294+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "$A$의 넓이로부터 호의 길이를 거꾸로 구한 뒤, 같은 호의 길이를 이용하여 $B$의 넓이를 구한다.",
@@ -548,7 +1935,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:35:16.426224+00:00",
@@ -559,36 +1946,325 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:42.628657+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-성질적용",
+      "body": "그림과 같은 부채꼴 $OAB$의 중심각의 크기는 $60°$이고 넓이는 $6\\pi\\text{ cm}^2$이다. 호 $AB$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M2",
+          "no": 4,
+          "text": "$6\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\pi\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T03:38:53.911565+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "반지름의 길이를 $r\\text{ cm}$라 하면 부채꼴의 넓이는 $\\pi r^2\\times\\dfrac{60}{360}=6\\pi$이다. 따라서 $r^2=36$이고 $r=6$이다. 호 $AB$의 길이는 $2\\pi\\times6\\times\\dfrac{60}{360}=2\\pi\\text{ cm}$이다.\n④는 넓이와 호의 길이를 같은 것으로 잘못 생각한 경우이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [
+          {
+            "center": "O",
+            "from": "A",
+            "label": "?",
+            "to": "B",
+            "trace": true
+          }
+        ],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.196152423
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:38:53.843593+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "부채꼴의 넓이와 중심각이 주어졌을 때 반지름을 거꾸로 구한 뒤 호의 길이를 구하게 한다.",
+      "id": "76926f83-2305-4807-be1b-fd21214250da",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:38:53.843379+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.655283+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-성질적용",
+      "body": "그림과 같이 두 부채꼴 $OAB$와 $OCD$의 중심은 $O$이고, 점 $C$와 $D$는 각각 선분 $OA$와 $OB$ 위에 있다. $OA=6\\text{ cm}$, $OD=3\\text{ cm}$이다. 큰 부채꼴의 넓이는 작은 부채꼴의 넓이보다 $9\\pi\\text{ cm}^2$ 크다.\n\n큰 부채꼴 $OAB$의 호 $AB$의 길이와 넓이를 차례로 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M2",
+          "no": 1,
+          "text": "$4\\pi\\text{ cm}$, $4\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\pi\\text{ cm}$, $12\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2\\pi\\text{ cm}$, $6\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6\\pi\\text{ cm}$, $18\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M3",
+          "no": 5,
+          "text": "$8\\pi\\text{ cm}$, $48\\pi\\text{ cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-12T03:39:22.51681+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 부채꼴의 중심각이 같으므로 넓이의 비는 $6^2:3^2=4:1$이다. 넓이의 차가 $9\\pi\\text{ cm}^2$이므로 작은 부채꼴의 넓이는 $3\\pi\\text{ cm}^2$, 큰 부채꼴의 넓이는 $12\\pi\\text{ cm}^2$이다.\n\n큰 부채꼴의 넓이는 반지름이 $6\\text{ cm}$인 원의 넓이 $36\\pi\\text{ cm}^2$의 $\\frac13$이다. 따라서 호 $AB$의 길이도 이 원의 둘레의 $\\frac13$이므로 $12\\pi\\times\\frac13=4\\pi\\text{ cm}$이다. 정답은 ②이다.\n\n①은 넓이를 구할 때 호의 길이 공식을 사용한 경우이다. ⑤는 중심각을 구한 뒤 반지름 대신 지름을 사용하여 호의 길이와 넓이를 구한 경우이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [
+          {
+            "center": "O",
+            "from": "A",
+            "label": null,
+            "to": "B",
+            "trace": true
+          },
+          {
+            "center": "O",
+            "from": "C",
+            "label": null,
+            "to": "D",
+            "trace": true
+          }
+        ],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": -3.0,
+            "y": 5.196152423
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": -1.5,
+            "y": 2.598076211
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "3 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:39:22.410838+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 부채꼴의 넓이의 차를 주고, 이를 거꾸로 이용하여 큰 부채꼴의 넓이와 호의 길이를 구하게 한다.",
+      "id": "8db140d4-3e90-4bc4-a731-78def53bafbf",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:39:22.410700+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.529867+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-06-C2-성질적용",
       "body": "어느 부채꼴의 호의 길이는 $4\\pi\\text{ cm}$이고 넓이는 $20\\pi\\text{ cm}^2$이다. 이 부채꼴의 중심각의 크기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$36^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$60^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$72^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$90^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M3",
           "no": 5,
@@ -597,8 +2273,9 @@
       ],
       "created_at": "2026-11-11T08:35:45.104127+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.515557+00:00",
       "explanation": "부채꼴의 넓이를 호의 길이로 나눈 값은 반지름의 절반과 같다. 따라서 반지름은 $(20\\pi\\div4\\pi)\\times2=10\\text{ cm}$이다. 원 둘레는 $20\\pi\\text{ cm}$이므로 중심각의 크기는 $360^\\circ\\times\\dfrac{4\\pi}{20\\pi}=72^\\circ$이다.\n⑤는 넓이를 구하는 식에서 반지름 대신 지름을 사용하여 지름을 $10\\text{ cm}$로 잘못 구한 경우이다. 이때 반지름을 $5\\text{ cm}$로 잘못 생각하면 $144^\\circ$가 나온다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:35:43.035845+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "호의 길이와 넓이를 먼저 주고, 이를 이용하여 반지름과 중심각을 거꾸로 구하게 했다.",
@@ -609,7 +2286,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:35:43.035572+00:00",
@@ -626,30 +2303,35 @@
       "body": "지름이 $12\\text{ cm}$인 원에서 중심각의 크기가 $120°$인 부채꼴의 넓이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M2",
           "no": 1,
           "text": "$4\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$12\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$24\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M3",
           "no": 5,
@@ -658,8 +2340,9 @@
       ],
       "created_at": "2026-11-11T08:34:48.513927+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.547923+00:00",
       "explanation": "반지름은 $6\\text{ cm}$입니다. 부채꼴의 넓이는 $\\pi\\times 6^2\\times\\frac{120}{360}=12\\pi\\text{ cm}^2$입니다.\n①은 호의 길이를 구하는 식으로 넓이를 구한 것입니다. ⑤는 반지름 대신 지름을 사용하여 넓이를 구한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:34:46.428608+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -670,7 +2353,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:34:46.428234+00:00",
@@ -681,36 +2364,305 @@
       "variant": 1
     },
     {
-      "approved_at": "2026-11-11T09:08:58.58328+00:00",
+      "approved_at": "2026-11-12T03:53:42.699564+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-06-C2-성질적용",
-      "body": "반지름이 $8\\text{ cm}$이고 중심각의 크기가 $90°$인 부채꼴이 있습니다. 이 부채꼴의 호의 길이는?",
+      "body": "다음 그림의 부채꼴 $OAB$에서 반지름은 $6\\text{ cm}$이고 중심각의 크기는 $120°$이다. 부채꼴 $OAB$의 넓이는?",
       "choices": [
         {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M2",
+          "no": 1,
+          "text": "$4\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$24\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M3",
+          "no": 5,
+          "text": "$48\\pi\\text{ cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-12T03:38:16.936285+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "부채꼴의 넓이는 원의 넓이의 $\\dfrac{120}{360}$이므로 $\\pi\\times6^2\\times\\dfrac{120}{360}=12\\pi\\text{ cm}^2$이다. ①은 넓이 대신 호의 길이를 구한 것이다. ⑤는 반지름 대신 지름인 $12\\text{ cm}$를 넣어 구한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [
+          {
+            "center": "O",
+            "from": "A",
+            "label": null,
+            "to": "B",
+            "trace": true
+          }
+        ],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": -3.0,
+            "y": 5.196152423
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:38:16.863297+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9125c117-723a-4366-8212-a82c93c904bd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:38:16.862957+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.723378+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-성질적용",
+      "body": "다음 그림의 부채꼴 $OAB$에서 반지름은 $8\\text{ cm}$이고 중심각의 크기는 $90°$이다. 호 $AB$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2\\pi\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$4\\pi\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$6\\pi\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-06-M3",
           "no": 4,
           "text": "$8\\pi\\text{ cm}$"
         },
         {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$16\\pi\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T03:38:32.475738+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "호 $AB$의 길이는 원주의 $\\dfrac{90}{360}$이므로 $2\\pi\\times8\\times\\dfrac{90}{360}=4\\pi\\text{ cm}$이다. ④는 반지름 $8\\text{ cm}$ 대신 지름 $16\\text{ cm}$를 사용하여 구한 값이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "90°",
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [
+          {
+            "center": "O",
+            "from": "A",
+            "label": null,
+            "to": "B",
+            "trace": true
+          }
+        ],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 8.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "8 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:38:32.04835+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1f149eed-ea73-4a77-9f43-e7795cc43b77",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:38:32.048070+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-11T09:08:58.58328+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-성질적용",
+      "body": "반지름이 $8\\text{ cm}$이고 중심각의 크기가 $90°$인 부채꼴이 있습니다. 이 부채꼴의 호의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-06-M3",
+          "no": 4,
+          "text": "$8\\pi\\text{ cm}$"
+        },
+        {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -719,8 +2671,9 @@
       ],
       "created_at": "2026-11-11T08:34:59.917519+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.586894+00:00",
       "explanation": "호의 길이는 원주의 $\\dfrac{90}{360}$이므로 $2\\pi\\times 8\\times\\dfrac{90}{360}=4\\pi\\text{ cm}$입니다. ④는 반지름 $8\\text{ cm}$ 대신 지름 $16\\text{ cm}$를 넣어 계산한 경우입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:34:57.825719+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -731,7 +2684,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:34:57.825535+00:00",
@@ -742,6 +2695,149 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:42.760344+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-이유설명",
+      "body": "다음 그림은 중심이 $O$인 원과 부채꼴 $OAB$를 나타낸 것이다. $OA=6\\,\\mathrm{cm}$이고 중심각 $AOB$의 크기는 $120°$이다.\n\n두 학생이 부채꼴 $OAB$의 넓이를 각각 다음과 같이 구했다.\n\n가: $\\pi\\times6^2\\times\\dfrac{120}{360}$\n\n나: $\\left(2\\pi\\times6\\times\\dfrac{120}{360}\\right)\\times\\dfrac{6}{2}$\n\n두 식이 모두 부채꼴 $OAB$의 넓이를 나타내는 이유를 설명하시오. 단, 두 식을 계산하여 같은 수가 나옴을 보이는 데 그치지 말고 원 전체와 비교하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:39:36.450789+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "부채꼴 $OAB$의 중심각은 원 전체의 중심각의 $\\dfrac13$이다. 따라서 호 $AB$의 길이와 부채꼴 $OAB$의 넓이도 각각 원 전체의 원주와 넓이의 $\\dfrac13$이다.\n\n원 전체의 원주는 $12\\pi\\,\\mathrm{cm}$이고 넓이는 $36\\pi\\,\\mathrm{cm}^2$이다. 원 전체에서도 원주에 반지름을 곱하고 $2$로 나누면 넓이가 된다. 호의 길이와 부채꼴의 넓이는 원 전체의 같은 비율이므로 부채꼴에서도 호의 길이에 반지름을 곱하고 $2$로 나누면 넓이가 된다.\n\n호의 길이를 구한 식 자체는 넓이가 아니다. 또 그림의 $6\\,\\mathrm{cm}$는 지름이 아니라 반지름이므로 반지름 자리에 지름을 넣지 않도록 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B"
+            ],
+            "radius": 6.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": -3.0,
+            "y": 5.196152423
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:39:36.339383+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "원의 넓이를 이용하는 풀이와 호의 길이를 이용하는 풀이가 모두 부채꼴의 넓이를 나타내는 이유를 원 전체와 비교하여 설명하게 한다.",
+      "id": "10bc01ac-7819-413f-80c0-ae2ebc871b25",
+      "model": "gpt-6.1-terra",
+      "model_answer": "중심각 $AOB$는 $360°$의 $\\dfrac13$이므로 호 $AB$의 길이와 부채꼴 $OAB$의 넓이는 각각 원주와 원의 넓이의 $\\dfrac13$이다. 가의 식은 원의 넓이의 $\\dfrac13$을 구한 것이다.\n\n원주 $12\\pi\\,\\mathrm{cm}$에 반지름 $6\\,\\mathrm{cm}$를 곱하고 $2$로 나누면 원의 넓이 $36\\pi\\,\\mathrm{cm}^2$가 된다. 호 $AB$의 길이도 원주의 $\\dfrac13$이므로, 나의 식은 원의 넓이의 $\\dfrac13$을 구한 것이다. 따라서 두 식은 모두 부채꼴의 넓이 $12\\pi\\,\\mathrm{cm}^2$를 나타낸다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "중심각이 원 전체의 $\\dfrac13$이므로 호의 길이와 부채꼴의 넓이가 각각 원주와 원의 넓이의 $\\dfrac13$임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "가의 식이 원의 넓이의 $\\dfrac13$을 구한 것임을 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "원주에 반지름을 곱하고 $2$로 나누면 원의 넓이가 됨을 이용하여 나의 식도 원의 넓이의 $\\dfrac13$을 나타냄을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-06-M2",
+            "9수03-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "부채꼴의 넓이를 $12\\pi\\,\\mathrm{cm}^2$로 쓴다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M2",
+            "9수03-06-M3"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:39:09.656073+00:00",
+          "issues": [
+            "모범 답안과 해설에서 넓이가 둘레 또는 호의 길이의 3배라고 하여 단위가 다른 양을 직접 비교한다. 계산값은 12π cm²로 맞지만, 각각 cm²와 cm로 나타낸 수치가 3배라고 하거나 호의 길이에 3 cm를 곱한다고 설명해야 한다. 채점 기준 3에도 같은 문제가 있다.",
+            "single_correct_answer: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:39:36.339176+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.608157+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-06-C2-이유설명",
@@ -749,8 +2845,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:36:36.116156+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.483611+00:00",
       "explanation": "원 전체의 둘레는 $12\\pi\\text{ cm}$이고 넓이는 $36\\pi\\text{ cm}^2$이다. 중심각 $120°$는 $360°$의 $\\frac{1}{3}$이므로 호의 길이와 부채꼴의 넓이는 각각 원 전체의 $\\frac{1}{3}$이다.\n\n방법 가로 구한 넓이는 $36\\pi\\times\\frac{1}{3}=12\\pi\\text{ cm}^2$이다. 방법 나에서는 호의 길이가 $12\\pi\\times\\frac{1}{3}=4\\pi\\text{ cm}$이므로 넓이는 $4\\pi\\times6\\div2=12\\pi\\text{ cm}^2$이다.\n\n원 전체에서도 둘레에 반지름을 곱하고 $2$로 나누면 넓이가 된다. 호의 길이와 부채꼴의 넓이는 각각 원 전체의 같은 비율이므로, 방법 나도 방법 가와 같은 결과를 낸다. 원의 둘레나 호의 길이만 구한 것은 넓이를 구한 것이 아님에 주의한다. 또 계산할 때 지름이 아닌 반지름 $6\\text{ cm}$를 사용해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:36:35.965986+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "문제에서 두 방법으로 구한 넓이가 같음을 보이고, 원 전체와 비교하여 같은 결과가 나오는 이유를 설명하게 한다.",
@@ -788,7 +2885,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:36:35.965811+00:00",
@@ -806,8 +2903,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:37:01.16047+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.533296+00:00",
       "explanation": "두 부채꼴은 중심각의 크기가 같지만 반지름이 다르므로 원 전체의 둘레가 다르다. 각 부채꼴의 호의 길이는 원 전체의 둘레의 $\\frac{90}{360}$, 즉 $\\frac14$이다. 따라서 호의 길이는 각각 $2\\pi\\text{ cm}$, $4\\pi\\text{ cm}$이다. 중심각의 크기가 같아도 호의 길이는 다를 수 있다.\n\n호의 길이를 구할 때 넓이를 구하는 식을 쓰지 않도록 주의한다. 또 원의 둘레를 구할 때 지름을 반지름으로 잘못 넣지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:37:01.007468+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "중심각의 크기는 같지만 반지름이 다른 두 부채꼴을 예로 들어 학생의 말이 틀렸음을 보이게 했다.",
@@ -845,7 +2943,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:37:01.007214+00:00",
@@ -856,6 +2954,307 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:42.784765+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-이유설명",
+      "body": "다음 그림은 중심이 각각 $O$, $P$인 두 원과 부채꼴 $OAB$, $PCD$를 나타낸 것이다. $OA=6\\,\\mathrm{cm}$, $PC=3\\,\\mathrm{cm}$이고, 중심각 $AOB$와 $CPD$의 크기는 각각 $60°$, $120°$이다.\n\n민지는 다음과 같이 말했다.\n\n“호의 길이가 같은 두 부채꼴은 넓이도 항상 같아.”\n\n민지의 말이 옳은지 판단하시오. 옳지 않다면 그림의 두 부채꼴을 이용하여 반례를 보이시오. 각 부채꼴의 호의 길이와 넓이를 원 전체와 비교하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:40:04.320923+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "부채꼴 $OAB$의 중심각은 $360°$의 $\\dfrac16$이고, 부채꼴 $PCD$의 중심각은 $360°$의 $\\dfrac13$이다. 따라서 각 부채꼴의 호의 길이와 넓이도 각각 원 전체의 $\\dfrac16$, $\\dfrac13$이다.\n\n두 호의 길이는 각각 $12\\pi\\times\\dfrac16=2\\pi\\,\\mathrm{cm}$, $6\\pi\\times\\dfrac13=2\\pi\\,\\mathrm{cm}$로 같다. 그러나 두 부채꼴의 넓이는 각각 $36\\pi\\times\\dfrac16=6\\pi\\,\\mathrm{cm}^2$, $9\\pi\\times\\dfrac13=3\\pi\\,\\mathrm{cm}^2$로 다르다. 따라서 그림의 두 부채꼴은 민지의 말이 옳지 않음을 보여 주는 반례이다. 호의 길이가 같아도 반지름이 다르면 넓이가 같지 않을 수 있다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          },
+          {
+            "from": "C",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "P"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B"
+            ],
+            "radius": 6.0
+          },
+          {
+            "center": "P",
+            "dashed": false,
+            "points_on": [
+              "C",
+              "D"
+            ],
+            "radius": 3.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.196152423
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 10.5,
+            "y": 2.598076211
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": "3 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:40:04.218001+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민지의 말이 옳지 않다면 그림의 두 부채꼴을 반례로 이용하여 설명하도록 했다.",
+      "id": "fe8cfe7b-2410-4d0e-943c-fc2d53d21cc3",
+      "model": "gpt-6.1-terra",
+      "model_answer": "민지의 말은 옳지 않다. 두 중심각은 각각 $360°$의 $\\dfrac16$, $\\dfrac13$이다. 따라서 두 호의 길이는 각각 $12\\pi\\times\\dfrac16=2\\pi\\,\\mathrm{cm}$, $6\\pi\\times\\dfrac13=2\\pi\\,\\mathrm{cm}$로 같다. 두 부채꼴의 넓이는 각각 $36\\pi\\times\\dfrac16=6\\pi\\,\\mathrm{cm}^2$, $9\\pi\\times\\dfrac13=3\\pi\\,\\mathrm{cm}^2$로 다르다. 그러므로 그림의 두 부채꼴은 반례이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "각 중심각을 $360°$와 비교하여 두 호의 길이가 모두 $2\\pi\\,\\mathrm{cm}$임을 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "각 중심각을 $360°$와 비교하여 두 부채꼴의 넓이가 각각 $6\\pi\\,\\mathrm{cm}^2$, $3\\pi\\,\\mathrm{cm}^2$임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-06-M2",
+            "9수03-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 호의 길이는 같지만 두 부채꼴의 넓이는 다르므로 민지의 말이 옳지 않다고 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:40:04.217897+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.81282+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-이유설명",
+      "body": "다음 그림은 중심이 $O$이고 반지름이 $6\\,\\text{cm}$인 원이다. 부채꼴 $OAB$의 중심각의 크기는 $60^\\circ$이다. 호 $AB$의 길이를 구하고, 원 전체와 비교하여 그 길이를 구한 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:38:20.815041+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "원 전체의 둘레는 $2\\pi\\times 6=12\\pi\\,\\text{cm}$이다. $60^\\circ$는 원 전체의 중심각 $360^\\circ$의 $\\frac16$이므로 호 $AB$의 길이도 원 전체 둘레의 $\\frac16$이다. 따라서 호 $AB$의 길이는 $12\\pi\\times\\frac16=2\\pi\\,\\text{cm}$이다. $6\\,\\text{cm}$를 지름으로 생각하면 원 전체의 둘레를 잘못 구하게 된다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B"
+            ],
+            "radius": 6.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.196152423
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:38:20.750397+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "13c86778-a5ef-4226-879c-30699920b7aa",
+      "model": "gpt-6.1-terra",
+      "model_answer": "원 전체의 둘레는 $2\\pi\\times 6=12\\pi\\,\\text{cm}$이다. $60^\\circ$는 $360^\\circ$의 $\\frac16$이므로 호 $AB$의 길이도 원 전체 둘레의 $\\frac16$이다. 따라서 호 $AB$의 길이는 $12\\pi\\times\\frac16=2\\pi\\,\\text{cm}$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "반지름을 이용하여 원 전체의 둘레를 $12\\pi\\,\\text{cm}$로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$60^\\circ$가 $360^\\circ$의 $\\frac16$이므로 호 $AB$의 길이도 원 전체 둘레의 $\\frac16$이라고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "호 $AB$의 길이를 $2\\pi\\,\\text{cm}$로 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:38:20.750145+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.657834+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-06-C2-이유설명",
@@ -863,8 +3262,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:35:58.512436+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.569769+00:00",
       "explanation": "원의 중심각 $360^\\circ$에 대한 원주는 $12\\pi\\text{ cm}$이다. $120^\\circ$는 $360^\\circ$의 $\\frac{1}{3}$이므로 호의 길이도 원주의 $\\frac{1}{3}$이다. 원주를 구할 때 지름을 반지름 자리에 넣지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:35:56.426677+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -899,7 +3299,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:35:56.426480+00:00",
@@ -910,6 +3310,122 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:42.84099+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-06-C2-이유설명",
+      "body": "다음 그림은 중심이 $O$이고 반지름이 $3\\,\\text{cm}$인 원이다. 부채꼴 $OAB$의 중심각의 크기는 $120^\\circ$이다. 부채꼴 $OAB$의 넓이를 구하고, 원 전체와 비교하여 그 넓이를 구한 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:38:38.321795+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "중심각 $120^\\circ$는 원 전체의 중심각 $360^\\circ$의 $\\frac{1}{3}$이다. 따라서 부채꼴의 넓이도 원의 넓이의 $\\frac{1}{3}$이다. 원의 넓이는 $9\\pi\\,\\text{cm}^2$이므로 부채꼴의 넓이는 $3\\pi\\,\\text{cm}^2$이다. 호의 길이를 구하는 식을 쓰면 넓이가 아니라 길이를 구하게 된다. 또 원의 넓이를 구할 때 지름 $6\\,\\text{cm}$가 아니라 반지름 $3\\,\\text{cm}$를 써야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "O"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B"
+            ],
+            "radius": 3.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": -1.5,
+            "y": 2.598076211
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "3 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:38:38.242745+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8ade3a26-39ca-488f-8d72-2c7b17cdb50b",
+      "model": "gpt-6.1-terra",
+      "model_answer": "중심각 $120^\\circ$는 $360^\\circ$의 $\\frac{1}{3}$이므로 부채꼴 $OAB$의 넓이는 원의 넓이의 $\\frac{1}{3}$이다. 따라서 넓이는 $3\\times3\\times\\pi\\times\\frac{1}{3}=3\\pi\\,\\text{cm}^2$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "중심각이 원 전체의 중심각의 $\\frac{1}{3}$이므로 부채꼴의 넓이도 원의 넓이의 $\\frac{1}{3}$이라고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "부채꼴의 넓이를 $3\\pi\\,\\text{cm}^2$으로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-06-M2",
+            "9수03-06-M3"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:38:38.242249+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.682324+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-06-C2-이유설명",
@@ -917,8 +3433,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:36:13.822633+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:38:00.602779+00:00",
       "explanation": "원의 반지름은 $5\\text{ cm}$이므로 원 전체의 넓이는 $25\\pi\\text{ cm}^2$이다. 부채꼴의 중심각 $72^\\circ$는 원 전체의 중심각 $360^\\circ$의 $\\frac{1}{5}$이다. 따라서 부채꼴의 넓이도 원 전체 넓이의 $\\frac{1}{5}$이므로 $5\\pi\\text{ cm}^2$이다.\n지름 $10\\text{ cm}$를 반지름으로 쓰면 원의 넓이를 잘못 구하게 된다. 또 원의 둘레를 이용하면 호의 길이를 구하게 되므로, 넓이를 구할 때는 원 전체의 넓이를 이용해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:36:11.740795+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -957,7 +3474,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:36:11.740464+00:00",

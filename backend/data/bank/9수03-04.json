@@ -34,9 +34,250 @@
       "prompt_version": "v7",
       "resolved_at": "2026-11-11T09:38:28.09417+00:00",
       "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T03:25:21.479478+00:00",
+          "issues": [
+            "M1은 판별하지만, 두 변과 끼인각이 아닌 각을 이용하는 M2를 판별할 조건이나 보기가 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:25:52.633900+00:00",
+          "issues": [
+            "세 쌍의 각이 같은 경우만 제시하여 M1은 판별할 수 있지만, 두 변과 끼인각이 아닌 각에 관한 M2는 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T03:26:23.105583+00:00",
+          "issues": [
+            "세 각이 같으면 합동이라는 오개념 M1은 판별하지만, 두 변과 끼인각이 아닌 각이 같으면 합동이라는 오개념 M2는 판별하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T03:26:23.344119+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T04:32:04.946012+00:00",
+          "issues": [
+            "세 각이 같으면 합동이라고 보는 오개념 M1은 판별할 수 있지만, 두 변과 끼인각이 아닌 각을 합동 조건으로 보는 오개념 M2는 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:32:36.337444+00:00",
+          "issues": [
+            "②의 ‘반드시 합동이 아니다’는 ‘반드시 합동인 것은 아니다’로도 해석되어 ③과 함께 정답이 될 수 있다.",
+            "M1 오개념은 확인할 수 있지만, 두 변과 끼인각이 아닌 각에 관한 조건이 없어 M2 오개념은 가려낼 수 없다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:33:09.789582+00:00",
+          "issues": [
+            "세 각이 같으면 합동이라고 보는 오개념 M1은 판별할 수 있지만, 두 변과 끼인각이 아닌 각이 같으면 합동이라고 보는 오개념 M2를 판별할 조건과 보기가 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:33:09.93505+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
     }
   ],
   "questions": [
+    {
+      "approved_at": "2026-11-12T03:31:11.11917+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C1-정의이해",
+      "body": "그림의 두 삼각형은 크기와 모양이 같다. $\\triangle ABC$를 오려서 뒤집어 포개었더니 점 $A$는 점 $E$에, 점 $B$는 점 $F$에, 점 $C$는 점 $D$에 겹쳤다. 이를 합동 기호를 사용하여 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 1,
+          "text": "$\\triangle ABC\\equiv\\triangle DEF$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\triangle BCA\\equiv\\triangle FDE$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 3,
+          "text": "$\\triangle CAB\\equiv\\triangle DFE$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 4,
+          "text": "$\\triangle BAC\\equiv\\triangle EFD$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 5,
+          "text": "$\\triangle ACB\\equiv\\triangle EFD$"
+        }
+      ],
+      "created_at": "2026-11-12T03:25:26.713193+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "포개었을 때 $A$와 $E$, $B$와 $F$, $C$와 $D$가 각각 겹친다. 따라서 합동 기호 양쪽에서 같은 자리에 놓인 꼭짓점이 서로 겹치도록 써야 한다. $B$, $C$, $A$에 겹치는 점을 차례로 쓰면 $F$, $D$, $E$이므로 정답은 ②이다. 두 삼각형이 합동이라는 것만 생각하고 꼭짓점의 순서를 따지지 않으면 다른 보기를 고를 수 있다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 11.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:25:26.477566+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "오려서 포개었을 때 겹치는 꼭짓점을 말로 주고, 이를 합동 기호를 사용한 식으로 나타내게 했다. 세 꼭짓점의 순서를 모두 살펴보아야 한다.",
+      "id": "3cddee6e-651d-4ce9-b7f9-990ca63e7912",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:25:26.477374+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
     {
       "approved_at": "2026-11-11T09:27:00.710623+00:00",
       "approved_by": "master",
@@ -44,30 +285,35 @@
       "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$를 완전히 포개었다. 이때 점 $A$는 점 $E$에, 점 $B$는 점 $D$에, 점 $C$는 점 $F$에 겹쳤다.\n\n서로 겹친 점이 식에서 같은 순서에 놓이도록 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 1,
           "text": "$\\triangle ABC\\equiv\\triangle DEF$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\triangle BCA\\equiv\\triangle DFE$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 3,
           "text": "$\\triangle CAB\\equiv\\triangle FDE$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 4,
           "text": "$\\triangle ACB\\equiv\\triangle EDF$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 5,
@@ -76,8 +322,9 @@
       ],
       "created_at": "2026-11-11T09:15:38.749619+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.796393+00:00",
       "explanation": "겹친 점을 차례로 쓰면 $B$와 $D$, $C$와 $F$, $A$와 $E$이다. 따라서 정답은 $\\triangle BCA\\equiv\\triangle DFE$인 2번이다.\n\n합동 기호를 쓸 때 꼭짓점의 순서를 마음대로 쓰면 겹친 점이 같은 순서에 놓이지 않을 수 있다. 예를 들어 1번에서는 겹친 점 $A$와 $E$가 같은 순서에 놓이지 않았다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:15:38.645127+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "서로 겹친 점을 글로 제시하고, 이를 합동 기호를 사용한 식으로 나타내게 했다. 보기마다 꼭짓점의 순서가 달라 겹친 점을 하나씩 살펴야 한다.",
@@ -88,7 +335,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:15:38.644910+00:00",
@@ -99,36 +346,262 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:31:11.148627+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C1-정의이해",
+      "body": "다음 그림의 세 삼각형은 모양이 같다. 짧은 선이 같은 개수만큼 그어진 변의 길이는 서로 같다. 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 1,
+          "text": "$\\triangle ABC\\equiv\\triangle DFE$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\triangle BAC\\equiv\\triangle EDF$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\triangle ABC$와 $\\triangle GHI$는 모양이 같으므로 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\triangle ABC$와 $\\triangle DEF$는 놓인 방향이 다르므로 합동이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 5,
+          "text": "$\\triangle ABC\\equiv\\triangle FDE$"
+        }
+      ],
+      "created_at": "2026-11-12T03:26:49.027774+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "변에 그어진 표시를 보면 $\\triangle ABC$와 $\\triangle DEF$는 크기와 모양이 같다. 점 $B$, $A$, $C$는 차례로 점 $E$, $D$, $F$에 겹치므로 ②가 옳다. ①과 ⑤는 합동인 삼각형의 이름을 썼지만, 겹치는 점을 같은 순서에 쓰지 않았다. 또한 모양이 같아도 크기가 다르면 합동이 아니다. $\\overline{AB}=4$, $\\overline{GH}=8$이므로 ③은 옳지 않다. 놓인 방향이 달라도 포개어 완전히 겹칠 수 있으므로 ④도 옳지 않다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 11.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 10.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "H",
+            "show_name": true,
+            "x": 8.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "I",
+            "show_name": true,
+            "x": 2.0,
+            "y": 10.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 3,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 3,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "H"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "I"
+          },
+          {
+            "dashed": false,
+            "from": "H",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "I"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:26:48.579433+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "모양은 같지만 크기가 다른 두 삼각형과 놓인 방향은 다르지만 합동인 두 삼각형을 함께 제시하여 합동의 뜻을 따져 보게 한다.",
+      "id": "1f8adb23-faed-4b85-9207-b8041ef1e0f0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:26:09.498992+00:00",
+          "issues": [
+            "대응하는 각과 변을 각각 확인하는 일반 문제로, 정의의 조건을 하나하나 따져 판단해야 하는 경계 사례가 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:26:48.579295+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:27:00.747259+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C1-정의이해",
       "body": "두 삼각형의 각 변의 길이는 다음과 같다.\n\n| 삼각형 | 변의 길이 |\n|---|---|\n| $\\triangle PQR$ | $\\overline{PQ}=4$, $\\overline{QR}=5$, $\\overline{RP}=6$ |\n| $\\triangle XYZ$ | $\\overline{XY}=5$, $\\overline{YZ}=6$, $\\overline{ZX}=4$ |\n\n두 삼각형의 합동을 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 1,
           "text": "$\\triangle PQR\\equiv\\triangle XYZ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\triangle QPR\\equiv\\triangle XZY$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 3,
           "text": "$\\triangle RQP\\equiv\\triangle YZX$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 4,
           "text": "$\\triangle PRQ\\equiv\\triangle ZXY$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 5,
@@ -137,8 +610,9 @@
       ],
       "created_at": "2026-11-11T09:15:57.932805+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.834438+00:00",
       "explanation": "길이가 같은 변끼리 짝 지으면 $\\overline{PQ}$와 $\\overline{ZX}$, $\\overline{QR}$와 $\\overline{XY}$, $\\overline{RP}$와 $\\overline{YZ}$가 각각 짝이 된다. 따라서 점 $P$는 점 $Z$와, 점 $Q$는 점 $X$와, 점 $R$은 점 $Y$와 짝이 된다. 그러므로 $\\triangle QPR\\equiv\\triangle XZY$이다. 나머지 보기처럼 두 삼각형의 꼭짓점을 아무 순서로나 쓰면 짝이 되는 점이 같은 자리에 놓이지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:15:57.852811+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "표에 주어진 변의 길이로 짝이 되는 꼭짓점을 찾고, 이를 바탕으로 합동을 나타낸 식을 고르게 한다.",
@@ -149,7 +623,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:15:57.852625+00:00",
@@ -166,30 +640,35 @@
       "body": "$\\triangle ABC \\equiv \\triangle DEF$이다. 이 식이 나타내는 대로 두 삼각형을 겹칠 때, 점 $B$와 겹치는 점과 변 $\\overline{BC}$와 겹치는 변을 순서대로 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 1,
           "text": "점 $D$, 변 $\\overline{DE}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 2,
           "text": "점 $F$, 변 $\\overline{DF}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "점 $E$, 변 $\\overline{EF}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 4,
           "text": "점 $D$, 변 $\\overline{DF}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 5,
@@ -198,8 +677,9 @@
       ],
       "created_at": "2026-11-11T09:14:42.912174+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.864794+00:00",
       "explanation": "합동을 나타내는 식에서 같은 자리에 있는 꼭짓점끼리 겹칩니다. 따라서 점 $A$는 점 $D$와, 점 $B$는 점 $E$와, 점 $C$는 점 $F$와 겹칩니다. 그러므로 점 $B$와 겹치는 점은 $E$이고, 변 $\\overline{BC}$와 겹치는 변은 $\\overline{EF}$입니다. 예를 들어 1번을 골랐다면 식에 쓰인 꼭짓점의 순서를 살피지 않고 점 $B$가 점 $D$와 겹친다고 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:14:42.672622+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -210,7 +690,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:14:42.672139+00:00",
@@ -221,36 +701,377 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:31:11.181782+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C1-정의이해",
+      "body": "그림의 두 삼각형은 서로 포개었을 때 같은 표시가 있는 변끼리 겹친다. 두 삼각형의 합동을 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 1,
+          "text": "$\\triangle ABC\\equiv\\triangle DEF$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 2,
+          "text": "$\\triangle ABC\\equiv\\triangle EDF$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\triangle ABC\\equiv\\triangle EFD$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 4,
+          "text": "$\\triangle ABC\\equiv\\triangle FDE$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 5,
+          "text": "$\\triangle ABC\\equiv\\triangle FED$"
+        }
+      ],
+      "created_at": "2026-11-12T03:24:41.410282+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "같은 표시가 있는 변끼리 포개면 꼭짓점 $A$는 $E$에, $B$는 $F$에, $C$는 $D$에 겹친다. 따라서 $\\triangle ABC\\equiv\\triangle EFD$이다. 합동인 삼각형을 기호로 나타낼 때 꼭짓점의 순서를 생각하지 않고 쓰면 다른 보기를 고를 수 있다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 9.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 3,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 3,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:24:40.969112+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ea3d63f6-87dd-460d-91e4-9d4f7289c704",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:24:40.968897+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:31:11.205608+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C1-정의이해",
+      "body": "그림의 두 삼각형은 $\\triangle ABC\\equiv\\triangle DFE$이다. 두 삼각형을 완전히 포갤 때, 점 $B$와 겹치는 점과 변 $AC$와 겹치는 변을 차례로 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "점 $F$, 변 $DE$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 2,
+          "text": "점 $D$, 변 $EF$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M3",
+          "no": 3,
+          "text": "점 $E$, 변 $DF$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "점 $F$, 변 $DF$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "점 $D$, 변 $DE$"
+        }
+      ],
+      "created_at": "2026-11-12T03:25:04.924145+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "합동 기호에서 같은 순서에 놓인 점끼리 겹친다. 따라서 점 $A$는 점 $D$와, 점 $B$는 점 $F$와, 점 $C$는 점 $E$와 겹친다. 그러므로 점 $B$와 겹치는 점은 $F$이고, 변 $AC$와 겹치는 변은 $DE$이다. ②나 ③을 골랐다면 합동 기호에서 점을 쓴 순서를 살피지 않고 겹치는 점과 변을 정한 것은 아닌지 확인해 보자.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 9.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 11.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 9.0,
+            "y": -1.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:25:04.724009+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "38ea258c-c535-40dd-bd15-1aeb56fdf985",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:25:04.723568+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:27:00.812926+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C1-정의이해",
       "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$를 완전히 겹쳤더니 점 $A$는 점 $E$에, 점 $B$는 점 $F$에, 점 $C$는 점 $D$에 겹쳤다. 두 삼각형의 합동을 기호로 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M3",
           "no": 1,
           "text": "$\\triangle ABC \\equiv \\triangle DEF$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\triangle ABC \\equiv \\triangle EDF$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$\\triangle ABC \\equiv \\triangle EFD$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\triangle ABC \\equiv \\triangle FED$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -259,8 +1080,9 @@
       ],
       "created_at": "2026-11-11T09:15:13.453905+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.899589+00:00",
       "explanation": "합동을 기호로 나타낼 때는 겹치는 꼭짓점을 같은 자리에 쓴다. $A$와 $E$, $B$와 $F$, $C$와 $D$가 겹치므로 $\\triangle ABC \\equiv \\triangle EFD$이다. 1번은 꼭짓점이 겹치는 순서를 생각하지 않고 쓴 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:15:12.963109+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -271,7 +1093,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:15:12.962511+00:00",
@@ -282,36 +1104,242 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:31:11.240348+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-성질적용",
+      "body": "다음 그림에서 표시된 각의 크기는 각각 같다. 즉, $\\angle A=\\angle D$, $\\angle B=\\angle E$이다. 그림은 두 삼각형의 모양만 나타낸 것이며, 변의 길이가 같다는 것은 알 수 없다.\n\n다음 중 하나를 더 알면 $\\triangle ABC\\equiv\\triangle DEF$임을 반드시 알 수 있는 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\overline{AC}=\\overline{DE}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\overline{AB}=\\overline{EF}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 3,
+          "text": "$\\angle C=\\angle F$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\overline{BC}=\\overline{DF}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\overline{BC}=\\overline{EF}$"
+        }
+      ],
+      "created_at": "2026-11-12T03:25:57.075627+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\overline{BC}=\\overline{EF}$이면 한 변의 길이와 그 양 끝 각의 크기가 각각 같으므로 두 삼각형은 합동이다.\n\n③처럼 세 쌍의 각의 크기가 각각 같아도 두 삼각형의 크기가 다를 수 있다. 나머지 보기에서는 서로 같은 위치에 있지 않은 두 변의 길이가 같다. 이 경우에도 두 삼각형의 크기가 다를 수 있다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 2,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 2,
+            "right": false,
+            "to": "D",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 11.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 8.0,
+            "y": 2.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:25:56.76851+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 삼각형이 합동임을 알기 위해 무엇을 더 알아야 하는지 거꾸로 찾게 한다.",
+      "id": "45ec1898-3424-4323-bfdc-af9ac77e02e2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:25:56.768284+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:27:00.846991+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C2-성질적용",
       "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에서 $\\overline{AB}=\\overline{DE}=5$, $\\overline{BC}=\\overline{EF}=4$이다. 다음 중 하나를 추가로 알면 반드시 $\\triangle ABC\\equiv\\triangle DEF$라고 할 수 있는 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M2",
           "no": 1,
           "text": "$\\angle A=\\angle D=30°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\angle B=\\angle D=30°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\angle A=\\angle E=30°$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\angle B=\\angle E=60°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -320,8 +1348,9 @@
       ],
       "created_at": "2026-11-11T09:19:39.451172+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.753459+00:00",
       "explanation": "④에서는 길이가 각각 같은 두 변 사이의 각이 $\\angle B$와 $\\angle E$이다. 따라서 SAS로 $\\triangle ABC\\equiv\\triangle DEF$이다.\n①의 $\\angle A$와 $\\angle D$는 길이가 주어진 두 변 사이의 각이 아니다. 두 변의 길이와 그 사이에 있지 않은 각의 크기가 각각 같아도 합동이 아닐 수 있다.\n②, ③, ⑤에서는 크기를 비교한 두 각이 합동인 두 삼각형에서 같은 자리에 있는 각이 아니다. 따라서 주어진 내용만으로는 합동이라고 할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:19:39.35432+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 삼각형이 합동이라고 판별할 수 있도록 추가로 알아야 할 내용을 거꾸로 찾게 했다. 길이가 주어진 두 변 사이에 있는 각을 골라야 한다.",
@@ -332,7 +1361,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:18:11.578109+00:00",
@@ -359,36 +1388,196 @@
       "variant": 1
     },
     {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수03-04-C2-성질적용",
+      "body": "그림에서 점 $G$는 선분 $BC$ 위에 있고, $\\overline{AG}=\\overline{AC}$입니다.\n\n각 보기와 같이 $\\triangle DEF$를 만들 때, $\\triangle ABC\\equiv\\triangle DEF$라고 반드시 나타낼 수 있는 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 1,
+          "text": "$\\overline{DE}=6$, $\\overline{DF}=5$, $\\angle E=\\angle B$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 2,
+          "text": "$\\angle D=\\angle A$, $\\angle E=\\angle B$, $\\angle F=\\angle C$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\overline{DE}=5$, $\\overline{DF}=6$, $\\overline{EF}=8$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\overline{DE}=6$, $\\overline{DF}=5$, $\\overline{EF}=8$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\overline{DE}=8$, $\\overline{DF}=5$, $\\overline{EF}=6$"
+        }
+      ],
+      "created_at": "2026-11-12T03:28:39.474198+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T03:31:12.728047+00:00",
+      "explanation": "④에서는 세 쌍의 변의 길이가 순서에 맞게 각각 같으므로 SSS로 $\\triangle ABC\\equiv\\triangle DEF$입니다.\n\n①은 $\\triangle DEF$를 그림의 $\\triangle ABG$와 같게 만들어도 성립합니다. 하지만 $\\triangle ABC$와 $\\triangle ABG$는 합동이 아닙니다. 두 쌍의 변과 끼인각이 아닌 한 쌍의 각이 각각 같다고 해서 반드시 합동인 것은 아닙니다.\n\n②처럼 세 쌍의 각의 크기가 각각 같아도 크기가 다른 삼각형을 만들 수 있습니다. ③과 ⑤는 세 변의 길이가 각각 $5$, $6$, $8$이지만, 합동 기호에 적힌 꼭짓점의 순서에 맞지 않습니다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 6.25,
+            "y": 4.993746
+          },
+          {
+            "dot": true,
+            "id": "G",
+            "show_name": true,
+            "x": 1.07421875,
+            "y": 0.858613
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "G"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:28:39.246398+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "합동 기호를 주고 그 순서에 맞게 합동을 나타낼 수 있는 보기의 정보를 찾게 한다. 그림의 작은 삼각형을 이용하여 두 변과 끼인각이 아닌 각이 같은 경우도 비교하게 한다.",
+      "id": "3802c5af-c405-45b8-aa1d-b3c66cc66dba",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T03:26:53.061455+00:00",
+          "issues": [
+            "해설의 ⑤ 설명이 틀렸다. ∠A는 주어진 두 변 AB와 AC의 끼인각이다.",
+            "③은 남은 대응변의 일치를 SSS 조건에 바로 대조하면 고를 수 있어, 성질을 직접 확인하는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:27:49.162000+00:00",
+          "issues": [
+            "보기 ②: 오개념 M2에서 나오는 답이 아니다. M2대로 판단해도 ㄱ, ㄴ, ㄷ을 고르게 된다.",
+            "보기 ③: 오개념 M2에서 나오는 답이 아니다. M2대로 판단해도 ㄱ, ㄴ, ㄷ을 고르게 된다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T03:28:39.246099+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:46:02.767228+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C2-성질적용",
       "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에서 $\\angle A=\\angle D=40^\\circ$, $\\angle B=\\angle E=60^\\circ$이다. 다음 중 하나를 더 알면 반드시 $\\triangle ABC\\equiv\\triangle DEF$라고 할 수 있는 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\overline{AB}=\\overline{EF}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\overline{AC}=\\overline{DE}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\overline{BC}=\\overline{DF}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M1",
           "no": 4,
           "text": "$\\angle C=\\angle F$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -397,8 +1586,9 @@
       ],
       "created_at": "2026-11-11T09:38:28.084968+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.81316+00:00",
       "explanation": "⑤를 더 알면 한 변의 길이와 그 양 끝 각의 크기가 각각 같으므로 ASA로 합동이다.\n①~③은 같은 위치의 변끼리 길이가 같은 것이 아니다. 이 경우 크기가 다른 두 삼각형도 만들 수 있다.\n④에서 세 쌍의 각의 크기가 모두 같더라도 두 삼각형의 크기는 다를 수 있다. 각의 크기만 비교해서 합동이라고 할 수는 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:38:28.010723+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 삼각형이 주어진 순서대로 합동이라는 결과를 얻기 위해 더 알아야 할 것을 찾게 했다. 주어진 두 쌍의 각과 보기에 있는 변의 위치를 함께 살펴야 한다.",
@@ -409,10 +1599,240 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:38:28.010419+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:45:39.928558+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-성질적용",
+      "body": "다음 그림에서 같은 표시가 있는 변의 길이는 서로 같고, 같은 표시가 있는 각의 크기는 서로 같다. 그림의 모양만으로 표시되지 않은 길이나 각의 크기가 같다고 판단하지 않는다.\n\n$\\triangle ABC\\equiv\\triangle GHI$임을 반드시 알기 위해, 다음 중 하나를 더 알아야 한다. 알맞은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\angle EDF=\\angle HGI$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 2,
+          "text": "$\\angle DEF=\\angle GHI$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 3,
+          "text": "$\\angle DFE=\\angle GIH$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\angle EDF=\\angle GHI$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\angle DEF=\\angle HGI$"
+        }
+      ],
+      "created_at": "2026-11-12T04:32:50.697178+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 $\\overline{AB}=\\overline{GH}$, $\\overline{AC}=\\overline{GI}$이고 $\\angle BAC=\\angle EDF$이다. ①을 더 알면 두 쌍의 변과 그 끼인각의 크기가 각각 같으므로 SAS로 $\\triangle ABC\\equiv\\triangle GHI$이다.\n\n②와 ③에서 주어진 각은 표시된 두 변의 끼인각이 아니다. 두 쌍의 변과 끼인각이 아닌 한 쌍의 각이 각각 같다는 것만으로는 두 삼각형이 반드시 합동이라고 할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.6,
+            "y": 3.666061
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 8.6,
+            "y": 3.666061
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": true,
+            "x": 3.5,
+            "y": 5.0
+          },
+          {
+            "dot": false,
+            "id": "H",
+            "show_name": true,
+            "x": 8.5,
+            "y": 5.0
+          },
+          {
+            "dot": false,
+            "id": "I",
+            "show_name": true,
+            "x": 7.276,
+            "y": 6.319782
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "H"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "I"
+          },
+          {
+            "dashed": false,
+            "from": "H",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "I"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:32:50.120281+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 삼각형이 합동이라는 결과를 주고, 이를 반드시 알기 위해 더 필요한 각의 크기 관계를 찾게 한다. 가운데 삼각형의 각 표시를 이용해 끼인각을 찾아야 한다.",
+      "id": "eb132004-eaa1-4bfc-bc17-c9ca80b0023e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:32:50.119722+00:00",
           "issues": [],
           "number": 1
         }
@@ -426,30 +1846,35 @@
       "body": "다음은 두 삼각형 $\\triangle ABC$와 $\\triangle DEF$의 변의 길이나 각의 크기를 나타낸 것이다. 이것만으로 두 삼각형이 항상 합동이라고 할 수 있는 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\overline{AB}=\\overline{DE}=7$, $\\overline{BC}=\\overline{EF}=5$, $\\angle B=\\angle E=60°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M2",
           "no": 2,
           "text": "$\\overline{AB}=\\overline{DE}=7$, $\\overline{BC}=\\overline{EF}=5$, $\\angle A=\\angle D=30°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M1",
           "no": 3,
           "text": "$\\angle A=\\angle D=40°$, $\\angle B=\\angle E=60°$, $\\angle C=\\angle F=80°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\overline{AB}=\\overline{DE}=7$, $\\overline{BC}=\\overline{EF}=5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -458,8 +1883,9 @@
       ],
       "created_at": "2026-11-11T09:16:19.950605+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.85273+00:00",
       "explanation": "①에서는 두 쌍의 변의 길이가 각각 같고, 그 두 변 사이에 있는 각의 크기도 같다. 따라서 SAS로 두 삼각형은 합동이다.\n②에서는 크기가 같은 각이 길이가 같은 두 변 사이에 있지 않다. 이때는 합동이 아닌 두 삼각형이 만들어질 수도 있다.\n③에서는 세 쌍의 각의 크기가 각각 같아도 삼각형의 크기가 다를 수 있다. ④와 ⑤도 주어진 것만으로는 항상 합동이라고 할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:16:19.610001+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -470,10 +1896,195 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:16:19.609819+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:31:11.279769+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-성질적용",
+      "body": "그림에서 길이가 표시된 변의 길이는 각각 $3$, $4$이고, $∠A$와 $∠D$는 직각이다. 옳은 것을 고르시오.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$△ABC≡△DFE$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 쌍의 변의 길이와 그 끼인각의 크기가 각각 같으므로 $△ABC≡△DEF$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 3,
+          "text": "두 쌍의 변의 길이가 각각 같고, 그 끼인각이 아닌 한 쌍의 각의 크기도 같으면 두 삼각형은 항상 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 4,
+          "text": "세 쌍의 각의 크기가 각각 같으면 두 삼각형은 항상 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$△ABC$와 $△DEF$는 완전히 포개지지 않는다."
+        }
+      ],
+      "created_at": "2026-11-12T03:24:52.644226+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{AB}=\\overline{DE}=4$, $\\overline{AC}=\\overline{DF}=3$이고, 두 변의 끼인각인 $∠A$와 $∠D$는 모두 직각이다. 따라서 $△ABC≡△DEF$이다.\n①에서는 $\\overline{AB}$와 $\\overline{DF}$의 길이가 다르므로 합동을 나타내는 순서가 잘못되었다.\n③처럼 끼인각이 아닌 각을 이용하거나 ④처럼 세 쌍의 각만 이용하면 두 삼각형이 항상 합동인 것은 아니다. ⑤와 달리 두 삼각형은 돌려서 포개면 완전히 겹친다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 9.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:24:52.276943+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9ec9ea48-a132-405c-9741-a3ac1474008d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:24:52.276668+00:00",
           "issues": [],
           "number": 1
         }
@@ -487,30 +2098,35 @@
       "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에서 $\\angle A=\\angle D=50°$, $\\angle B=\\angle E=60°$, $\\overline{AB}=6$이다. 다음 중 어느 하나를 더 알면 $\\triangle ABC\\equiv\\triangle DEF$라고 할 수 있는가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M1",
           "no": 1,
           "text": "$\\angle C=\\angle F$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\overline{DE}=6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\overline{DF}=6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\overline{EF}=6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -519,8 +2135,9 @@
       ],
       "created_at": "2026-11-11T09:17:31.765625+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.877814+00:00",
       "explanation": "$\\overline{DE}=6$이면 $\\overline{AB}=\\overline{DE}$이고, 이 변의 양 끝에 있는 각의 크기가 각각 같다. 따라서 두 삼각형은 ASA로 합동이다. ①처럼 세 쌍의 각의 크기가 각각 같아도 두 삼각형의 크기가 다를 수 있다. ③과 ④는 $\\overline{AB}$와 같은 위치에 있지 않은 변의 길이를 알려 준다. ⑤에서는 같은 위치에 있는 $\\overline{AB}$와 $\\overline{DE}$의 길이가 다르다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:17:31.655238+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -531,7 +2148,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:17:07.257203+00:00",
@@ -549,36 +2166,411 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:31:11.316587+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-성질적용",
+      "body": "그림에서 $\\overline{AB}=\\overline{DE}$이고, $\\angle BAC=\\angle EDF$이다. 다음 중 한 가지만 더 알면 $\\triangle ABC$와 $\\triangle DEF$가 반드시 합동이라고 할 수 있는 것은? 그림의 표시와 각 보기의 내용만 이용하여 판단하시오.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 1,
+          "text": "$\\overline{BC}=\\overline{EF}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\overline{AC}=\\overline{DE}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\angle ABC=\\angle BCA$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\overline{AC}=\\overline{DF}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\angle DEF=\\angle EFD$"
+        }
+      ],
+      "created_at": "2026-11-12T03:25:24.520373+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "④에서는 $\\overline{AB}=\\overline{DE}$, $\\overline{AC}=\\overline{DF}$이고, 그 두 변 사이의 각도 같다. 따라서 두 삼각형은 SAS로 합동이다. ①에서는 길이가 같은 두 변 사이의 각이 주어지지 않았으므로 반드시 합동이라고 할 수 없다. 나머지 보기의 내용만으로도 두 삼각형이 반드시 합동인 것은 아니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 2.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 13.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 10.0,
+            "y": 3.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:25:24.287013+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c07b2c27-2072-439c-8c97-b9f3d8d046c8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:25:24.286399+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:31:11.346604+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "body": "다음 그림의 표시와 삼각형의 합동에 관하여 학생들이 한 말 중 옳은 것은? 단, 그림에서 표시하지 않은 길이와 각의 크기는 재지 않는다.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 1,
+          "text": "그림에서 표시된 두 변의 길이와 한 각의 크기가 각각 같으므로 두 삼각형은 반드시 합동이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 2,
+          "text": "두 삼각형의 세 각의 크기가 각각 같다는 것만 알아도 두 삼각형은 반드시 합동이야."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "그림에 표시된 길이와 각의 크기만으로는 두 삼각형이 합동이라고 할 수 없어."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 삼각형에서 두 변의 길이와 그 끼인각의 크기가 각각 같아도 두 삼각형은 합동이 아닐 수 있어."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "그림에서 표시된 한 쌍의 각의 크기가 같으므로 두 삼각형은 반드시 합동이야."
+        }
+      ],
+      "created_at": "2026-11-12T03:27:00.495657+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에 표시된 같은 길이의 두 변 사이에 있는 각은 $\\angle A$와 $\\angle D$이다. 표시된 $\\angle B$와 $\\angle E$는 끼인각이 아니다. 이처럼 두 변과 끼인각이 아닌 각의 크기가 각각 같아도 두 삼각형이 항상 합동인 것은 아니다. 따라서 ③이 옳다.\n①은 끼인각이 아닌 각을 끼인각처럼 생각한 것이다. ②는 세 각의 크기가 각각 같으면 크기도 같다고 생각한 것이다. 세 각의 크기가 같아도 삼각형의 크기는 다를 수 있다. ④에서는 두 변과 그 끼인각이 각각 같으므로 반드시 합동이다. ⑤에서는 한 쌍의 각만 같을 뿐이므로 반드시 합동이라고 할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "45°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "D",
+            "label": "45°",
+            "marks": 0,
+            "right": false,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 3.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 11.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 8.0,
+            "y": 1.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:27:00.263652+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "학생들이 삼각형의 합동에 관해 한 말을 제시하고, 그중 옳은 말을 고르게 했다.",
+      "id": "37c75f0e-71f9-40d2-bf73-4949f9e4913a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:27:00.263253+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:27:00.978841+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C2-오개념판별",
       "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에 대해 다섯 학생이 말하였다. 옳게 말한 학생은 누구인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M1",
           "no": 1,
           "text": "민수: $\\angle A=\\angle D=50^\\circ$, $\\angle B=\\angle E=60^\\circ$, $\\angle C=\\angle F=70^\\circ$이면 두 삼각형은 합동이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M2",
           "no": 2,
           "text": "지우: $\\overline{AB}=\\overline{DE}=4$, $\\overline{BC}=\\overline{EF}=3$, $\\angle A=\\angle D=30^\\circ$이면 두 삼각형은 합동이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "서준: $\\overline{AB}=\\overline{DE}=4$, $\\overline{BC}=\\overline{EF}=3$, $\\angle B=\\angle E=70^\\circ$이어도 두 삼각형이 합동인지 알 수 없어."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "하린: $\\overline{AB}=\\overline{DE}=4$, $\\angle A=\\angle D=50^\\circ$, $\\angle B=\\angle E=60^\\circ$이면 두 삼각형은 합동이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -587,8 +2579,9 @@
       ],
       "created_at": "2026-11-11T09:24:02.333723+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.754588+00:00",
       "explanation": "④에서는 한 변의 길이와 그 양 끝 각의 크기가 각각 같으므로 두 삼각형은 ASA 합동이다.\n①처럼 세 각의 크기가 각각 같아도 삼각형의 크기가 다를 수 있다. 따라서 꼭 합동인 것은 아니다.\n②에서 주어진 각은 길이가 같은 두 변의 끼인각이 아니다. 이때는 합동이 아닌 두 삼각형을 그릴 수도 있다. 두 변과 끼인각이 아닌 각이 각각 같으면 언제나 합동이라고 생각한 것이 잘못이다.\n③에서는 두 변과 그 끼인각이 각각 같으므로 SAS 합동이다. ⑤에서는 한 변과 한 각만 같으므로 합동인지 알 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:24:02.242825+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생이 각각 주어진 길이와 각의 크기로 합동인지 판단한 말을 보고 옳은 말을 고르게 했다.",
@@ -599,7 +2592,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:24:02.242418+00:00",
@@ -610,36 +2603,333 @@
       "variant": 1
     },
     {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "body": "다음 그림에서 같은 눈금이 있는 두 선분의 길이는 같다. 점 $C$는 선분 $AD$ 위에 있다. 그림의 각 표시와 길이를 보고, 학생의 두 주장에 대한 설명으로 옳은 것을 고르시오.\n\n학생의 주장\n(가) 두 삼각형의 세 쌍의 각의 크기가 각각 같으면 항상 합동이다.\n(나) 두 삼각형의 두 쌍의 변의 길이가 각각 같고, 끼인각이 아닌 한 쌍의 각의 크기가 같으면 항상 합동이다.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 1,
+          "text": "(가)는 옳다. 세 쌍의 각의 크기가 각각 같으면 두 삼각형은 항상 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 2,
+          "text": "(나)는 옳다. 두 쌍의 변과 끼인각이 아닌 한 쌍의 각이 각각 같아도 두 삼각형은 항상 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "(가)는 틀리다. $\\triangle ABC$와 $\\triangle ABD$가 그 까닭을 보여 준다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "(나)는 틀리다. $\\triangle PQR$와 $\\triangle STU$가 그 까닭을 보여 준다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "(가), (나)는 모두 틀리다. $\\triangle PQR$와 $\\triangle STU$는 (가)가, $\\triangle ABC$와 $\\triangle ABD$는 (나)가 틀림을 보여 준다."
+        }
+      ],
+      "created_at": "2026-11-12T03:28:31.527425+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T03:31:12.766648+00:00",
+      "explanation": "정답은 ⑤이다.\n\n$\\triangle PQR$와 $\\triangle STU$는 세 쌍의 각의 크기가 각각 같지만, $\\overline{PQ}=2$, $\\overline{ST}=4$이므로 합동이 아니다. 따라서 (가)는 틀리다. 세 쌍의 각의 크기가 각각 같더라도 크기가 다른 삼각형이 있을 수 있다.\n\n$\\triangle ABC$와 $\\triangle ABD$에서 $\\overline{AB}$는 공통이고 $\\overline{BC}=\\overline{BD}$이다. 또 $C$가 선분 $AD$ 위에 있으므로 $\\angle BAC=\\angle BAD$이다. 이 각은 두 변 $\\overline{AB}$, $\\overline{BC}$에 끼인각이 아니다. 두 삼각형은 $\\overline{AC}=2$, $\\overline{AD}=3$이고 나머지 두 변의 길이는 각각 같으므로 합동이 아니다. 따라서 (나)도 틀리다. 두 변의 길이가 각각 같을 때는 주어진 각이 그 두 변에 끼인각인지 살펴야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "Q",
+            "label": null,
+            "marks": 1,
+            "right": true,
+            "to": "R",
+            "vertex": "P"
+          },
+          {
+            "from": "T",
+            "label": null,
+            "marks": 1,
+            "right": true,
+            "to": "U",
+            "vertex": "S"
+          },
+          {
+            "from": "R",
+            "label": null,
+            "marks": 2,
+            "right": false,
+            "to": "P",
+            "vertex": "Q"
+          },
+          {
+            "from": "U",
+            "label": null,
+            "marks": 2,
+            "right": false,
+            "to": "S",
+            "vertex": "T"
+          },
+          {
+            "from": "P",
+            "label": null,
+            "marks": 3,
+            "right": false,
+            "to": "Q",
+            "vertex": "R"
+          },
+          {
+            "from": "S",
+            "label": null,
+            "marks": 3,
+            "right": false,
+            "to": "T",
+            "vertex": "U"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.0,
+            "y": 1.732050808
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 1.5,
+            "y": 2.598076211
+          },
+          {
+            "dot": false,
+            "id": "P",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "Q",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "R",
+            "show_name": true,
+            "x": 7.0,
+            "y": 1.5
+          },
+          {
+            "dot": false,
+            "id": "S",
+            "show_name": true,
+            "x": 11.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "T",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "U",
+            "show_name": true,
+            "x": 11.0,
+            "y": 3.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "1",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": "2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "Q"
+          },
+          {
+            "dashed": false,
+            "from": "Q",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "R"
+          },
+          {
+            "dashed": false,
+            "from": "R",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "P"
+          },
+          {
+            "dashed": false,
+            "from": "S",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "T"
+          },
+          {
+            "dashed": false,
+            "from": "T",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "U"
+          },
+          {
+            "dashed": false,
+            "from": "U",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "S"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:28:30.828446+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "학생의 두 주장이 옳은지 판단하고, 각각에 알맞은 그림 속 삼각형을 찾아 설명하게 한다.",
+      "id": "33b86098-c949-4378-9aaf-90a13096e0c0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T03:27:43.419378+00:00",
+          "issues": [
+            "보기 ②: M2는 끼인각이 아닌 각이어도 합동이라고 판단하는 오개념인데, 이 보기는 주어진 각을 끼인각으로 잘못 판별한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:28:30.828103+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:27:01.033618+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C2-오개념판별",
       "body": "다음 두 쌍의 삼각형이 있다.\n\n(가) $\\triangle PQR$와 $\\triangle STU$에서 $\\angle P=\\angle S=50^\\circ$, $\\angle Q=\\angle T=60^\\circ$, $\\angle R=\\angle U=70^\\circ$이다.\n\n(나) $\\triangle ABC$와 $\\triangle DEF$에서 $\\overline{AB}=\\overline{DE}=4$, $\\overline{AC}=\\overline{DF}=3$, $\\angle B=\\angle E=30^\\circ$이다.\n\n민지는 “(가)는 세 각의 크기가 각각 같고, (나)는 두 변의 길이와 한 각의 크기가 각각 같으므로 두 쌍 모두 합동이다.”라고 말했다. 민지의 말을 살펴보고, 옳게 판단한 것을 고르시오.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M1",
           "no": 1,
           "text": "(가)만 합동이다. 세 각의 크기가 각각 같으면 합동이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M2",
           "no": 2,
           "text": "(나)만 합동이다. 두 변의 길이와 끼인각이 아닌 한 각의 크기가 각각 같으면 합동이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "두 쌍 모두 합동인지 알 수 없다. 합동을 알려면 반드시 세 변의 길이를 모두 알아야 하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "두 쌍 모두 합동인지 알 수 없다. 합동을 알려면 반드시 세 각의 크기를 모두 알아야 하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -648,8 +2938,9 @@
       ],
       "created_at": "2026-11-11T09:24:43.219669+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.812073+00:00",
       "explanation": "(가)는 세 각의 크기가 각각 같아도 삼각형의 크기가 다를 수 있다. 따라서 합동인지 알 수 없다. ①은 세 각의 크기가 각각 같으면 합동이라고 잘못 생각한 것이다.\n\n(나)에서 같은 크기인 각은 주어진 두 변 사이의 각이 아니다. 주어진 길이와 각의 크기로 모양이 다른 삼각형을 그릴 수 있으므로 합동인지 알 수 없다. ②는 두 변의 길이와 끼인각이 아닌 각의 크기가 각각 같으면 합동이라고 잘못 생각한 것이다.\n\n합동을 알기 위해 반드시 세 변의 길이나 세 각의 크기를 모두 알아야 하는 것은 아니다. 따라서 ③과 ④의 이유도 옳지 않다. 정답은 ⑤이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:24:42.718119+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민지의 말을 살펴보고 두 쌍의 삼각형이 각각 합동인지 판단하게 했다. 두 주장이 모두 옳지 않음을 알고 그 이유까지 골라야 한다.",
@@ -660,7 +2951,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:24:42.717948+00:00",
@@ -677,30 +2968,35 @@
       "body": "다음은 두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에 대하여 각각 알려진 내용이다. 이 내용만으로 두 삼각형이 반드시 합동이라고 할 수 있는 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M1",
           "no": 1,
           "text": "$\\angle A=\\angle D=60°$, $\\angle B=\\angle E=60°$, $\\angle C=\\angle F=60°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M2",
           "no": 2,
           "text": "$\\overline{AB}=\\overline{DE}=5$, $\\overline{BC}=\\overline{EF}=3$, $\\angle A=\\angle D=30°$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$\\overline{AB}=\\overline{DE}=5$, $\\overline{BC}=\\overline{EF}=3$, $\\angle B=\\angle E=60°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\overline{AB}=\\overline{DE}=5$, $\\overline{BC}=\\overline{EF}=3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -709,8 +3005,9 @@
       ],
       "created_at": "2026-11-11T09:22:14.235558+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.862092+00:00",
       "explanation": "3번은 두 변의 길이와 그 사이에 있는 각의 크기가 각각 같으므로 SAS로 합동이다.\n1번은 세 각의 크기가 모두 같아도 크기가 다른 삼각형을 만들 수 있다. 2번에서 주어진 각은 두 변 사이에 있는 각이 아니므로 반드시 합동이라고 할 수 없다. 4번과 5번도 합동인지 알기에 주어진 내용이 부족하다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:22:14.149427+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -721,10 +3018,195 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:22:14.149085+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:31:11.378837+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "body": "그림에서 $\\overline{AB}=\\overline{DE}$, $\\overline{AC}=\\overline{DF}$이고, $\\angle B=\\angle E=60°$이다. 다음 설명 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 1,
+          "text": "두 변의 길이와 끼인각이 아닌 각의 크기가 각각 같으므로 두 삼각형은 반드시 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "주어진 각은 길이가 같은 두 변 사이의 끼인각이 아니므로, 두 삼각형이 반드시 합동이라고 할 수 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 3,
+          "text": "두 삼각형은 세 각의 크기가 각각 같으면 반드시 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 삼각형은 두 변의 길이가 각각 같으면 반드시 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 삼각형은 두 변의 길이와 그 끼인각의 크기가 각각 같아도 합동이 아닐 수 있다."
+        }
+      ],
+      "created_at": "2026-11-12T03:24:53.261735+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "주어진 $\\angle B$와 $\\angle E$는 각각 길이가 같은 두 변 사이에 끼인각이 아니다. 따라서 주어진 두 변의 길이와 한 각의 크기만으로는 두 삼각형이 반드시 합동이라고 할 수 없다. ①처럼 끼인각이 아닌 각을 이용하여 SAS 합동이라고 판단할 수는 없다. ③처럼 세 각의 크기가 각각 같더라도 삼각형의 크기가 다를 수 있다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "D",
+            "label": "60°",
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.5,
+            "y": 0.8660254
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 11.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 8.5,
+            "y": 2.5980762
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:24:53.031849+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d893c04f-d3cb-4ccb-963b-50ed4d4ff326",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:24:53.031568+00:00",
           "issues": [],
           "number": 1
         }
@@ -738,30 +3220,35 @@
       "body": "다음은 두 쌍의 삼각형에 대해 알려진 내용이다.\n\n가. $\\triangle ABC$와 $\\triangle DEF$에서 $\\angle A$, $\\angle B$, $\\angle C$, $\\angle D$, $\\angle E$, $\\angle F$의 크기는 모두 $60°$이다. 또 $\\overline{AB}=3$, $\\overline{DE}=6$이다.\n\n나. $\\triangle PQR$와 $\\triangle STU$에서 $\\overline{PQ}=\\overline{ST}=8$, $\\overline{PR}=\\overline{SU}=5$, $\\angle Q=\\angle T=30°$이다.\n\n가와 나에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M1",
           "no": 1,
           "text": "가의 두 삼각형은 세 각의 크기가 각각 같으므로 합동이고, 나의 두 삼각형은 반드시 합동이라고 할 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-04-M2",
           "no": 2,
           "text": "가의 두 삼각형은 합동이 아니고, 나의 두 삼각형은 두 변의 길이와 한 각의 크기가 각각 같으므로 합동이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "가의 두 삼각형은 합동이 아니고, 나의 두 삼각형은 반드시 합동이라고 할 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "가의 두 삼각형은 합동이 아니고, 나에서는 $\\overline{QR}$와 $\\overline{TU}$의 길이가 반드시 다르므로 두 삼각형이 합동이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -770,8 +3257,9 @@
       ],
       "created_at": "2026-11-11T09:23:31.090599+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.898491+00:00",
       "explanation": "가에서는 세 각의 크기가 모두 같아도 $\\overline{AB}$와 $\\overline{DE}$의 길이가 다르므로 두 삼각형은 합동이 아니다. 세 각의 크기가 각각 같다는 것만으로는 합동이라고 할 수 없다.\n\n나에서 크기를 알고 있는 각은 길이를 알고 있는 두 변의 끼인각이 아니다. 주어진 내용에 맞는 삼각형을 서로 합동이 되게 그릴 수도 있고, 합동이 아니게 그릴 수도 있다. 따라서 반드시 합동이라고 할 수는 없다. 두 변과 끼인각이 아닌 각의 크기가 각각 같다는 것만으로는 합동이라고 할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:23:30.972574+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -782,7 +3270,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:22:54.811507+00:00",
@@ -802,6 +3290,186 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:31:11.416624+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-이유설명",
+      "body": "그림의 두 삼각형에서 $\\overline{AB}=\\overline{DE}=4\\text{ cm}$, $\\overline{AC}=\\overline{DF}=3\\text{ cm}$, $\\overline{BC}=\\overline{EF}=5\\text{ cm}$이고, $\\angle BAC$와 $\\angle EDF$는 직각이다.\n\n두 사람이 이 두 삼각형이 합동임을 알아보았다. 한 사람은 세 쌍의 변을 살펴보았고, 다른 사람은 두 쌍의 변과 한 쌍의 각을 살펴보았다.\n\n각 사람이 어떤 삼각형의 합동 조건을 이용하여 합동이라고 할 수 있는지 설명하시오. 또 두 방법이 같은 결과를 내는 까닭을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:26:16.485837+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "세 쌍의 변을 살펴보면 각각의 길이가 같으므로 SSS 합동이다. 길이가 각각 같은 두 쌍의 변 $\\overline{AB}$와 $\\overline{DE}$, $\\overline{AC}$와 $\\overline{DF}$의 끼인각도 같으므로 SAS 합동이다.\n\n세 변의 길이로도, 두 변의 길이와 그 끼인각의 크기로도 삼각형의 크기와 모양이 하나로 정해진다. 따라서 같은 두 삼각형에 대해 어느 방법을 써도 합동이라는 결과가 나온다. 두 변과 한 각을 살펴볼 때는 그 각이 두 변의 끼인각인지 확인해야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 8.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 8.0,
+            "y": -1.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 11.0,
+            "y": 3.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "5 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "3 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "5 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:26:15.965766+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "본문에서 세 쌍의 변을 살펴본 방법과 두 쌍의 변 및 한 쌍의 각을 살펴본 방법이 같은 결과를 내는 까닭을 비교하여 설명하도록 했다.",
+      "id": "20852137-a033-4627-afb0-668c96e7a121",
+      "model": "gpt-6.1-terra",
+      "model_answer": "세 쌍의 변을 살펴본 사람은 $\\overline{AB}=\\overline{DE}$, $\\overline{AC}=\\overline{DF}$, $\\overline{BC}=\\overline{EF}$이므로 SSS 합동을 이용한다. 다른 사람은 $\\overline{AB}=\\overline{DE}$, $\\overline{AC}=\\overline{DF}$이고 그 끼인각 $\\angle BAC$와 $\\angle EDF$가 같으므로 SAS 합동을 이용한다.\n\n세 변의 길이로도 삼각형의 크기와 모양이 하나로 정해지고, 두 변의 길이와 그 끼인각의 크기로도 하나로 정해진다. 두 방법 모두 주어진 같은 두 삼각형을 비교하므로 합동이라는 같은 결과가 나온다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "길이가 같은 세 쌍의 변을 밝히고 SSS 합동이라고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "길이가 같은 두 쌍의 변과 그 끼인각을 밝히고 SAS 합동이라고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-04-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법에서 각각 살펴본 부분만으로 삼각형의 크기와 모양이 하나로 정해진다는 점을 이용하여, 같은 두 삼각형을 비교하므로 결과가 같다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:25:42.108988+00:00",
+          "issues": [
+            "1번은 SAS 또는 ASA 합동 조건을 사용한 설명도 정답인데, 채점 기준은 세 쌍의 변과 SSS 합동만 요구하여 다른 올바른 설명을 인정하지 않는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:26:15.965503+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:27:01.120751+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C2-이유설명",
@@ -809,8 +3477,9 @@
       "choices": [],
       "created_at": "2026-11-11T09:25:44.21835+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.796022+00:00",
       "explanation": "$\\overline{AB}$와 $\\overline{DE}$의 길이가 같고, 그 양 끝에 있는 각의 크기도 각각 같다. 따라서 ASA 합동 조건으로 두 삼각형은 합동이다.\n\n세 각의 크기만 같아서는 합동이라고 할 수 없다. 예를 들어 한 변의 길이가 각각 $2$, $4$인 두 정삼각형은 세 각의 크기가 모두 $60°$이지만 합동이 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:25:44.095508+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민수의 말이 틀렸음을 보이는 두 삼각형의 예를 직접 들고 이유를 설명하게 한다.",
@@ -845,7 +3514,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:25:44.095274+00:00",
@@ -863,8 +3532,9 @@
       "choices": [],
       "created_at": "2026-11-11T09:26:11.374295+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.853298+00:00",
       "explanation": "$\\overline{AB}=\\overline{FD}$, $\\overline{BC}=\\overline{DE}$, $\\overline{CA}=\\overline{EF}$이므로 SSS로 합동이다. 또 길이가 같은 두 쌍의 변 $\\overline{AB}$와 $\\overline{FD}$, $\\overline{BC}$와 $\\overline{DE}$ 사이의 각 $\\angle B$와 $\\angle D$가 같으므로 SAS로도 합동이다.\n\n두 방법에서 포개지는 꼭짓점의 짝은 모두 $A$와 $F$, $B$와 $D$, $C$와 $E$이다. 따라서 같은 순서로 합동을 나타낼 수 있다. 두 쌍의 변과 한 쌍의 각이 각각 같더라도, 그 각이 두 변 사이의 각이 아니라면 SAS로 합동이라고 할 수는 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:26:11.278103+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "변의 길이만 이용하는 방법과 변의 길이와 각의 크기를 함께 이용하는 방법을 비교하게 한다. 두 방법이 같은 결과를 내는 까닭을 꼭짓점의 짝을 이용해 설명하도록 했다.",
@@ -899,12 +3569,208 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:26:11.277880+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:31:11.450711+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-이유설명",
+      "body": "다음 그림에서 $\\overline{AB}=\\overline{DE}=4\\text{ cm}$, $\\overline{AC}=\\overline{DF}=2\\text{ cm}$이다. 또 $\\angle BAC=\\angle EDF=60°$, $\\angle ABC=\\angle DEF=30°$이다.\n\n민지는 길이가 $4\\text{ cm}$인 변과 $2\\text{ cm}$인 변, 그리고 $60°$인 각을 살펴보았다. 지우는 길이가 $4\\text{ cm}$인 변과 $60°$, $30°$인 각을 살펴보았다.\n\n각 사람이 어떤 삼각형의 합동 조건을 이용하여 두 삼각형이 합동이라고 할 수 있는지 설명하시오. 또 두 방법이 같은 합동 관계를 나타내는 까닭을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:27:26.815257+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "민지가 살펴본 $60°$인 각은 길이가 $4\\text{ cm}$인 변과 $2\\text{ cm}$인 변 사이의 각이다. 따라서 두 삼각형은 SAS 합동이다. 지우가 살펴본 길이가 $4\\text{ cm}$인 변의 양 끝 각은 각각 $60°$, $30°$이므로 두 삼각형은 ASA 합동이다.\n\n두 방법은 살펴본 부분이 다르지만, 각각 $A$와 $D$, $B$와 $E$, $C$와 $F$를 짝 지어 두 삼각형이 합동임을 보여 준다. 두 변과 한 각을 살펴볼 때 그 각이 두 변 사이의 각인지 확인해야 한다. 또 세 쌍의 각의 크기만 각각 같다고 해서 두 삼각형이 합동인 것은 아니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": "60°",
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "C",
+            "label": "30°",
+            "marks": 2,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          },
+          {
+            "from": "F",
+            "label": "30°",
+            "marks": 2,
+            "right": false,
+            "to": "D",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.0,
+            "y": 1.732051
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 11.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 8.0,
+            "y": 1.732051
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "2 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "2 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:27:26.549518+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "민지와 지우가 살펴본 부분을 비교하여 각각 이용한 합동 조건을 밝히고, 두 방법이 같은 합동 관계를 나타내는 까닭을 설명하게 한다.",
+      "id": "c54c08ec-d20e-4b0d-aec5-160fa4188870",
+      "model": "gpt-6.1-terra",
+      "model_answer": "민지가 살펴본 두 쌍의 변의 길이는 각각 $4\\text{ cm}$, $2\\text{ cm}$이고, 그 두 변 사이의 각은 각각 $60°$로 같다. 따라서 SAS 합동이다.\n\n지우가 살펴본 두 변의 길이는 $4\\text{ cm}$로 같고, 각 변의 양 끝 각은 각각 $60°$, $30°$로 같다. 따라서 ASA 합동이다.\n\n두 방법은 각각 두 삼각형이 합동임을 보여 주고, 모두 $A$와 $D$, $B$와 $E$, $C$와 $F$를 짝 짓는다. 따라서 두 방법 모두 $\\triangle ABC\\equiv\\triangle DEF$라는 같은 합동 관계를 나타낸다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "두 쌍의 변의 길이와 그 사이의 각이 각각 같음을 밝히고, 민지가 SAS 합동을 이용했다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-04-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "한 쌍의 변의 길이와 그 양 끝 각의 크기가 각각 같음을 밝히고, 지우가 ASA 합동을 이용했다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 방법이 각각 합동임을 보여 주며 세 점을 같은 순서로 짝 짓기 때문에 같은 합동 관계를 나타낸다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:26:56.375909+00:00",
+          "issues": [
+            "1번은 ASA 합동 조건으로도 설명할 수 있지만, 채점 기준은 두 쌍의 변과 끼인각 및 SAS를 필수로 요구하므로 올바른 ASA 풀이를 인정하지 않는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:27:26.549232+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 2
@@ -917,8 +3783,9 @@
       "choices": [],
       "created_at": "2026-11-11T09:25:00.137416+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.924105+00:00",
       "explanation": "$\\overline{AB}$와 $\\overline{BC}$ 사이의 각은 $\\angle ABC$이고, $\\overline{DE}$와 $\\overline{EF}$ 사이의 각은 $\\angle DEF$이다. 두 쌍의 변의 길이가 각각 같고 그 끼인각의 크기도 같으므로 SAS로 합동이다. 두 변 사이에 있지 않은 각이 같다는 것만으로는 항상 합동이라고 할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:25:00.057593+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -946,7 +3813,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:25:00.057423+00:00",
@@ -957,6 +3824,359 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:31:11.479313+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-이유설명",
+      "body": "다음 그림에서 $\\overline{AB}=\\overline{DE}=4$, $\\overline{AC}=\\overline{DF}=5$, $\\angle BAC=\\angle EDF=60°$이다. 두 삼각형이 합동인지 판단하고, 그 이유를 설명하시오. 합동이라면 이용한 삼각형의 합동 조건도 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:24:46.715751+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{AB}=\\overline{DE}=4$, $\\overline{AC}=\\overline{DF}=5$이고, 이 두 변 사이의 각의 크기는 각각 $60°$이다. 따라서 두 삼각형은 SAS 합동 조건에 따라 합동이다. 두 쌍의 변의 길이가 같더라도 그 사이에 있지 않은 각의 크기가 같다는 것만으로는 항상 합동이라고 할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": "60°",
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 2.5,
+            "y": 4.330127
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 10.5,
+            "y": 4.330127
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:24:46.495893+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "61944076-59d1-417c-97ee-c29b05c56675",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\overline{AB}=\\overline{DE}=4$, $\\overline{AC}=\\overline{DF}=5$이고, 이 두 변 사이의 각인 $\\angle BAC$와 $\\angle EDF$의 크기가 각각 $60°$이다. 따라서 SAS 합동 조건에 따라 $\\triangle ABC\\equiv\\triangle DEF$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "길이가 같은 두 쌍의 변을 $\\overline{AB}$와 $\\overline{DE}$, $\\overline{AC}$와 $\\overline{DF}$로 바르게 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$\\angle BAC$와 $\\angle EDF$가 각각 두 변 사이의 각이며 크기가 같다고 썼다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-04-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "SAS 합동 조건을 이용하여 두 삼각형이 합동이라고 썼다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:24:46.495671+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:31:11.50426+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-이유설명",
+      "body": "다음 그림에서 $\\overline{AB}=\\overline{DE}=6$, $\\angle BAC=\\angle EDF=45^\\circ$, $\\angle ABC=\\angle DEF=60^\\circ$이다. 두 삼각형이 합동인지 판단하고, 그 이유를 설명하시오. 합동이라면 이용한 삼각형의 합동 조건도 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:25:09.497925+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{AB}$와 $\\overline{DE}$의 길이가 같고, 그 양 끝의 각의 크기가 각각 같다. 따라서 ASA 합동 조건에 따라 $\\triangle ABC\\equiv\\triangle DEF$이다. 세 쌍의 각의 크기가 각각 같다는 것만으로는 두 삼각형의 크기까지 같다고 할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "45°",
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "A",
+            "label": "60°",
+            "marks": 2,
+            "right": false,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "E",
+            "label": "45°",
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "D",
+            "label": "60°",
+            "marks": 2,
+            "right": false,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 3.803848,
+            "y": 3.803848
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 10.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 16.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 13.803848,
+            "y": 3.803848
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:25:09.293881+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3e037943-5d70-4638-a733-1e235e69a339",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\overline{AB}=\\overline{DE}=6$이고, 이 변의 양 끝의 각의 크기가 각각 $45^\\circ$, $60^\\circ$로 같다. 따라서 ASA 합동 조건에 따라 $\\triangle ABC\\equiv\\triangle DEF$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "길이가 같은 한 쌍의 변과 그 양 끝의 각의 크기가 각각 같음을 설명하였다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "ASA 합동 조건을 이용하여 두 삼각형이 합동이라고 판단하였다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:25:09.293620+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:27:01.215728+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C2-이유설명",
@@ -964,8 +4184,9 @@
       "choices": [],
       "created_at": "2026-11-11T09:25:16.550073+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:24:19.960216+00:00",
       "explanation": "길이가 같은 두 변 $\\overline{PQ}$와 $\\overline{XY}$의 양 끝에 있는 각의 크기가 각각 같다. 따라서 $ASA$ 합동 조건으로 $\\triangle PQR\\equiv\\triangle XYZ$이다. 각의 크기만 같다는 사실로는 두 삼각형이 합동이라고 할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:25:16.467342+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -993,7 +4214,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:25:16.467126+00:00",

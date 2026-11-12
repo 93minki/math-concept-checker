@@ -207,6 +207,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x-2y+4=0$을 $y$에 대한 식으로 바꾸면 $y=\\frac{1}{2}x+2$입니다. 두 식은 같은 좌표를 넣었을 때 함께 성립하거나 함께 성립하지 않습니다. 따라서 방정식의 해를 좌표로 하는 점과 일차함수의 그래프 위의 점은 같습니다.\n\n$(2, 3)$은 두 식을 모두 만족하지만 $(3, 2)$는 어느 식도 만족하지 않습니다. 좌표를 넣을 때는 첫째 수를 $x$에, 둘째 수를 $y$에 넣어야 합니다. 두 수를 바꾸어 넣으면 두 점에 대한 결과를 반대로 생각할 수 있습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:42:51.964986+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "두 학생의 확인 방법을 비교하고, 어느 점에 대해서도 두 방법의 결과가 같은 이유를 설명하게 했다.",
@@ -268,6 +269,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "방정식 $2x+y-4=0$에서 $2x$와 $-4$를 오른쪽으로 옮기면 $y=-2x+4$가 된다. 따라서 어느 수를 $x$에 넣어도 두 식을 만족시키는 $y$의 값은 같다. 방정식의 해를 좌표로 하는 점은 모두 일차함수의 그래프 위에 있고, 그래프 위의 점의 좌표도 모두 방정식의 해이다. 예를 들어 $(-1,6)$은 $x$좌표가 양수는 아니지만 두 식을 모두 만족시킨다. 점의 좌표를 대입할 때는 $x$좌표와 $y$좌표를 바꾸지 않아야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:46:46.36282+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민지의 말이 틀렸음을 보여 주는 점을 찾고 그 이유를 쓰게 했다.",
@@ -337,6 +339,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "방정식을 $y$에 대한 식으로 나타내면 $y=2x-3$이다. 두 식은 같은 $x$, $y$의 값을 나타내므로, 한 식을 만족하는 값은 다른 식도 만족한다. 점 $(2,1)$에서는 $x=2$, $y=1$을 넣어야 한다. 좌표를 바꾸어 $x=1$, $y=2$를 넣으면 다른 점을 살펴보게 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:47.940226+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -391,6 +394,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$5x+4y-20=0$의 양변을 계산하면 $y=-\\frac{5}{4}x+5$가 된다. 두 식은 같은 좌표를 대입했을 때 함께 성립한다. 따라서 방정식의 해를 좌표로 하는 점 전체는 일차함수의 그래프와 같다.\n\n점 $A(4,0)$에서는 $x=4$, $y=0$이다. 이를 두 식에 넣으면 모두 성립한다. 점 $B(0,4)$에서는 $x=0$, $y=4$이므로 식이 성립하지 않는다. 좌표를 바꾸어 대입하면 $A$와 $B$를 잘못 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:44:11.987457+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -451,30 +455,35 @@
       "body": "두 수 $x$, $y$에 대하여 $y$는 $x$의 두 배보다 $1$만큼 크다. 이 관계를 만족하는 모든 순서쌍 $(x, y)$를 좌표로 하는 점 전체에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$(0, 1)$과 $(1, 3)$을 지나는 직선이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M3",
           "no": 2,
           "text": "$(1, 0)$과 $(3, 1)$을 지나는 직선이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$(1, 0)$과 $(1, 3)$을 지나는 직선이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(0, 1)$과 $(3, 1)$을 지나는 직선이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -485,6 +494,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "주어진 관계를 식으로 나타내면 $y=2x+1$이다. 이 식의 해를 좌표로 하는 점 전체는 $(0, 1)$과 $(1, 3)$을 지나는 직선이다. ②는 두 점의 $x$좌표와 $y$좌표를 서로 바꾸어 생각한 것이다. 예를 들어 $(3, 1)$에서는 $x=3$, $y=1$을 대입해야 하므로 주어진 관계가 성립하지 않는다. ③의 $(1, 0)$, ④의 $(3, 1)$, ⑤의 $(1, 2)$도 주어진 관계를 만족하지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:57.69539+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "두 수의 관계를 말로 제시하고 이를 식으로 나타내어 점의 좌표를 판단하게 했다.",
@@ -512,30 +522,35 @@
       "body": "다음 표는 한 직선 위의 두 점의 좌표를 나타낸 것이다.\n\n| $x$좌표 | $0$ | $2$ |\n|---|---|---|\n| $y$좌표 | $2$ | $1$ |\n\n세 점 $P(3, 0.5)$, $Q(1, 2)$, $R(2, 0)$이 있다. 이 직선과 세 점의 위치에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "직선은 오른쪽으로 갈수록 내려가고, $P$만 직선 위에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M3",
           "no": 2,
           "text": "직선은 오른쪽으로 갈수록 내려가고, $Q$와 $R$만 직선 위에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "직선은 오른쪽으로 갈수록 내려가고, $P$와 $Q$만 직선 위에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "직선은 오른쪽으로 갈수록 올라가고, $P$만 직선 위에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -546,6 +561,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "표의 두 점을 지나는 직선의 방정식은 $x+2y=4$이다. 이를 $y=-0.5x+2$로 나타낼 수 있으므로 직선은 오른쪽으로 갈수록 내려간다.\n\n각 점의 $x$좌표와 $y$좌표를 차례로 대입하면 $P$는 방정식을 만족하지만, $Q$와 $R$는 만족하지 않는다. 따라서 $P$만 직선 위에 있다.\n\n②는 각 점의 $x$좌표와 $y$좌표를 바꾸어 대입했을 때 고를 수 있다. 점의 좌표를 대입할 때는 순서를 바꾸지 않아야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:29.660707+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "표에 주어진 두 점의 좌표로 직선의 방정식을 구해야 한다. 이어서 각 점의 좌표를 순서에 맞게 대입하여 직선 위에 있는지 판단한다.",
@@ -573,30 +589,35 @@
       "body": "일차방정식 $2x+y=5$의 그래프에 대하여, 점 $(1, 3)$이 그래프 위에 있는지 바르게 판단한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "그래프 위에 있다. $1+3=4$이므로 $x+y=4$를 만족하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "그래프 위에 있지 않다. $2\\times1+3=5$이므로 방정식의 해가 아니기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "그래프 위에 있다. $x=1$, $y=3$을 대입하면 $2\\times1+3=5$이므로 방정식의 해이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M3",
           "no": 4,
           "text": "그래프 위에 있지 않다. $x=3$, $y=1$을 대입하면 $2\\times3+1=7$이므로 방정식을 만족하지 않기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -607,6 +628,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "점 $(1, 3)$의 $x$좌표는 $1$, $y$좌표는 $3$이다. $x=1$, $y=3$을 대입하면 $2\\times1+3=5$이므로 이 순서쌍은 방정식의 해이다. 따라서 점 $(1, 3)$은 그래프 위에 있다. ④는 $x$좌표와 $y$좌표를 바꾸어 대입한 판단이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:20.376223+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -634,30 +656,35 @@
       "body": "일차방정식 $3x-y=5$의 그래프가 지나는 점을 바르게 나타낸 것은?\n세 점은 $A(2, 1)$, $B(1, 2)$, $C(0, 0)$이다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "세 점 중 $A$만 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M3",
           "no": 2,
           "text": "세 점 중 $B$만 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "세 점 중 $C$만 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "세 점 중 $A$와 $B$만 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -668,6 +695,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "점의 $x$좌표와 $y$좌표를 각각 $x$, $y$에 대입하여 방정식이 성립하면 그 점은 그래프 위에 있다. $A$는 $3\\times2-1=5$이므로 그래프 위에 있다. $B$는 $3\\times1-2=1$이고, $C$는 $3\\times0-0=0$이므로 그래프 위에 있지 않다. ②를 골랐다면 $B$의 $x$좌표와 $y$좌표를 바꾸어 대입하지 않았는지 확인해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:38.644913+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -695,30 +723,35 @@
       "body": "미지수가 $x$, $y$인 일차방정식 $2x+3y+k=0$의 해를 좌표로 하는 점 전체가 이루는 직선이 점 $(3, -4)$를 지난다. 이 직선에 대한 설명으로 옳은 것은? (단, $k$는 수이다.)",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M2",
           "no": 1,
           "text": "기울기가 양수이고, $y$절편은 $-2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "기울기가 음수이고, $y$절편은 $-2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "기울기가 음수이고, $y$절편은 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "기울기가 양수이고, $y$절편은 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -729,6 +762,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "점 $(3, -4)$의 좌표를 방정식에 대입하면 $6-12+k=0$이므로 $k=6$이다. 따라서 $2x+3y+6=0$을 $y$에 대해 풀면 $y=-\\frac{2}{3}x-2$이다. 기울기는 음수이고 $y$절편은 $-2$이므로 정답은 ②이다. ①은 $2x$를 오른쪽으로 옮길 때 부호를 바꾸지 않아 기울기를 양수로 잘못 구한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:47:36.325257+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "직선이 지나는 점의 좌표를 이용해 방정식의 수 $k$를 거꾸로 구한 뒤 직선의 기울기와 $y$절편을 판단하게 한다.",
@@ -756,30 +790,35 @@
       "body": "미지수가 $x$, $y$인 일차방정식 $x+2y+k=0$의 해를 좌표로 하는 점 전체가 이루는 직선이 있다. 이 직선의 $x$절편은 $y$절편보다 $1$만큼 크다. 이 직선에 대한 설명으로 옳은 것은? (단, $k$는 수이다.)",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$x$절편은 $-2$, $y$절편은 $1$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$x$절편은 $2$, $y$절편은 $1$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M2",
           "no": 3,
           "text": "$x$절편은 $\\frac{2}{3}$, $y$절편은 $-\\frac{1}{3}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x$절편은 $-2$, $y$절편은 $-1$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -790,6 +829,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "주어진 식을 $y$에 대해 풀면 $y=-\\frac{1}{2}x-\\frac{k}{2}$이다. 따라서 $x$절편은 $-k$, $y$절편은 $-\\frac{k}{2}$이다. $-k=-\\frac{k}{2}+1$이므로 $k=-2$이다. 따라서 $x$절편은 $2$, $y$절편은 $1$이다.\n③은 $x$를 옮길 때 부호를 바꾸지 않아 $y=\\frac{1}{2}x-\\frac{k}{2}$로 잘못 쓴 뒤 구할 수 있는 답이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:08.626758+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 절편의 관계를 이용해 거꾸로 $k$를 구하고 직선의 위치를 찾게 했다.",
@@ -817,30 +857,35 @@
       "body": "방정식 $3x+2y-4=0$의 해를 좌표로 하는 점 전체가 이루는 직선에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M2",
           "no": 1,
           "text": "기울기는 $\\frac{3}{2}$이고 $y$절편은 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "기울기는 $-\\frac{3}{2}$이고 $y$절편은 $-2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "기울기는 $-\\frac{2}{3}$이고 $y$절편은 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "기울기는 $-\\frac{3}{2}$이고 $y$절편은 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -851,6 +896,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$3x+2y-4=0$을 $y$에 대해 풀면 $2y=-3x+4$, 즉 $y=-\\frac{3}{2}x+2$이다. 따라서 기울기는 $-\\frac{3}{2}$이고 $y$절편은 $2$이다. ①은 $3x$를 오른쪽으로 옮길 때 부호를 바꾸지 않은 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:46:59.415196+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -878,30 +924,35 @@
       "body": "방정식 $2x-y+4=0$의 해를 좌표로 하는 점 전체를 나타내는 일차함수의 그래프는 어느 것인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "점 $(0, 4)$를 지나고, 오른쪽으로 갈수록 위로 향한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M2",
           "no": 2,
           "text": "점 $(0, 4)$를 지나고, 오른쪽으로 갈수록 아래로 향한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "점 $(0, -4)$를 지나고, 오른쪽으로 갈수록 위로 향한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "점 $(0, -4)$를 지나고, 오른쪽으로 갈수록 아래로 향한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -912,6 +963,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "주어진 식을 $y-2x=4$로 바꾸고 $y$에 대해 풀면 $y=2x+4$이다. 따라서 그래프는 점 $(0, 4)$를 지나고, 오른쪽으로 갈수록 위로 향한다. ②는 $-2x$를 오른쪽으로 옮길 때 부호를 바꾸지 않아 $y=-2x+4$로 잘못 구한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:47:18.068204+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -939,30 +991,35 @@
       "body": "지훈이는 방정식 $2x+y-3=0$을 $y=2x+3$으로 바꾸었다. 지훈이의 식에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M2",
           "no": 1,
           "text": "$2x$의 부호를 바꾸지 않았으므로 지훈이의 식은 맞다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "두 식의 그래프가 모두 $(0,3)$을 지나므로 지훈이의 식은 맞다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(1,1)$은 처음 방정식은 만족하지만 지훈이의 식은 만족하지 않으므로 지훈이의 식은 틀리다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "두 식의 그래프의 기울기가 다르므로 $y$절편도 다르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -973,6 +1030,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$2x+y-3=0$을 $y$에 대해 풀면 $y=-2x+3$이다. 점 $(1,1)$은 처음 방정식은 만족하지만 지훈이의 식은 만족하지 않는다. 따라서 정답은 3번이다. 1번처럼 생각했다면 $2x$를 오른쪽으로 옮길 때 부호를 바꾸지 않은 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:21.839535+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "지훈이가 바꾼 식을 보고 그 식에 대한 설명이 옳은지 판단하게 했다.",
@@ -1000,30 +1058,35 @@
       "body": "민서는 방정식 $x-2y+4=0$의 그래프가 점 $(0,2)$를 지나므로, 이 그래프가 $y=-\\frac{1}{2}x+2$의 그래프와 같다고 말한다. 민서의 말에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M2",
           "no": 1,
           "text": "옳다. 주어진 방정식을 $y$에 대해 풀면 $y=-\\frac{1}{2}x+2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "옳다. 두 그래프가 한 점을 함께 지나면 두 그래프는 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "옳지 않다. 주어진 방정식의 그래프는 점 $(0,-2)$를 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "옳지 않다. 두 그래프는 기울기와 $y$절편이 모두 다르다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1034,6 +1097,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x-2y+4=0$에서 $-2y=-x-4$이므로 $y=\\frac{1}{2}x+2$이다. 두 그래프의 $y$절편은 $2$로 같지만 기울기는 각각 $\\frac{1}{2}$과 $-\\frac{1}{2}$로 다르다. 따라서 두 그래프는 같지 않다. ①은 $x$를 오른쪽으로 옮길 때 부호를 바꾸지 않은 식이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:50:34.953701+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "한 점을 함께 지나므로 두 그래프가 같다는 민서의 주장을 판단하게 했다. 방정식을 $y$에 대해 푼 뒤 기울기와 $y$절편을 함께 살펴야 한다.",
@@ -1069,30 +1133,35 @@
       "body": "민수는 방정식 $2x+3y-9=0$의 해를 좌표로 하는 점 전체가 기울기가 $\\frac{2}{3}$이고 $(0,3)$을 지나는 직선이라고 했다. 민수의 생각을 살펴보고, 원래 방정식의 해를 좌표로 하는 점 전체가 이루는 직선으로 옳은 것을 고르시오.",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "기울기가 $-\\frac{2}{3}$이고 $(0,3)$을 지나는 직선"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M2",
           "no": 2,
           "text": "기울기가 $\\frac{2}{3}$이고 $(0,3)$을 지나는 직선"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "기울기가 $-\\frac{2}{3}$이고 $(0,-3)$을 지나는 직선"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "기울기가 $-2$이고 $(0,3)$을 지나는 직선"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1103,6 +1172,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$2x+3y-9=0$에서 $2x$와 $-9$를 오른쪽으로 옮기면 $3y=-2x+9$이다. 양쪽을 $3$으로 나누면 $y=-\\frac{2}{3}x+3$이다. 따라서 기울기는 $-\\frac{2}{3}$이고 $(0,3)$을 지난다. 민수처럼 ②를 골랐다면 $2x$를 오른쪽으로 옮길 때 부호를 바꾸지 않았을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:36.359395+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1130,30 +1200,35 @@
       "body": "방정식 $4x-2y+6=0$의 해를 좌표로 하는 점 전체가 이루는 직선은 어느 것인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$(0,-3)$과 $(1,-1)$을 지나는 직선"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M2",
           "no": 2,
           "text": "$(0,3)$과 $(1,1)$을 지나는 직선"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(0,3)$과 $(1,5)$를 지나는 직선"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(0,3)$과 $(1,7)$을 지나는 직선"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1164,6 +1239,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$4x-2y+6=0$에서 $-2y=-4x-6$이므로 $y=2x+3$이다. 이 직선은 $(0,3)$과 $(1,5)$를 지난다. ②는 $y=-2x+3$의 그래프이다. $4x$를 오른쪽으로 옮길 때 부호를 바꾸지 않으면 이 식이 나온다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:56.977437+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1191,30 +1267,35 @@
       "body": "점 $A(-2,3)$을 지나고 $x$축에 평행한 직선을 $l$이라고 한다. 점 $B(4,-1)$을 지나고 $y$축에 평행한 직선을 $m$이라고 한다. 두 직선의 방정식과 두 직선이 만나는 점을 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$l: y=3$, $m: x=4$, 만나는 점 $(4,3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M1",
           "no": 2,
           "text": "$l: x=-2$, $m: y=-1$, 만나는 점 $(-2,-1)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$l: y=-2$, $m: x=-1$, 만나는 점 $(-1,-2)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$l: y=3$, $m: x=4$, 만나는 점 $(3,4)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1225,6 +1306,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x$축에 평행한 직선 위의 점은 모두 $y$좌표가 같다. 따라서 $l$의 방정식은 $y=3$이다. $y$축에 평행한 직선 위의 점은 모두 $x$좌표가 같으므로 $m$의 방정식은 $x=4$이다. 두 직선이 만나는 점은 $(4,3)$이다. ②는 $x$축과 $y$축에 평행한 직선의 방정식을 서로 바꾸어 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:43:36.331287+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "각 직선이 지나는 점과 평행한 축을 문장으로 주었다. 이를 두 직선의 방정식으로 나타낸 뒤, 두 직선이 만나는 점까지 찾아야 한다.",
@@ -1252,30 +1334,35 @@
       "body": "직선 $y=3$과 만나지 않는 직선 중에서 점 $P(-2,1)$을 지나는 직선의 방정식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$y=1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M1",
           "no": 2,
           "text": "$x=-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$y=-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x=1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1286,6 +1373,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "직선 $y=3$은 $x$축에 평행하다. 이 직선과 만나지 않는 직선은 $x$축에 평행해야 한다. 점 $P(-2,1)$을 지나는 직선의 방정식은 $y=1$이다. $x=-2$는 점 $P$를 지나지만 $y$축에 평행하므로 직선 $y=3$과 만난다. $x=-2$를 고른 것은 평행한 방향을 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:44:00.498126+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "직선 $y=3$과 만나지 않는다는 사실에서 구하는 직선의 방향을 거꾸로 판단하고, 지나는 점을 이용해 방정식을 찾는다.",
@@ -1313,30 +1401,35 @@
       "body": "점 $(2, -3)$을 지나고 $x$축에 평행한 직선의 방정식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$x=-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M1",
           "no": 2,
           "text": "$x=2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$y=-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1347,6 +1440,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$축에 평행한 직선 위의 점은 모두 $y$좌표가 같습니다. 주어진 점의 $y$좌표가 $-3$이므로 직선의 방정식은 $y=-3$입니다. $x=2$는 주어진 점을 지나지만 $y$축에 평행한 직선입니다. 이 식을 골랐다면 $x$축에 평행한 직선과 $y$축에 평행한 직선을 바꾸어 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:43:02.230632+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1374,30 +1468,35 @@
       "body": "직선의 방정식 $x=-4$의 그래프에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-17-M1",
           "no": 1,
           "text": "$x$축에 평행하고 점 $(-4, 0)$을 지나는 직선이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$y$축에 평행하고 점 $(-4, 0)$을 지나는 직선이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x$축에 평행하고 점 $(0, -4)$를 지나는 직선이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y$축에 평행하고 점 $(4, 0)$을 지나는 직선이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1408,6 +1507,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x=-4$의 그래프 위의 점은 모두 $x$좌표가 $-4$입니다. 따라서 그래프는 점 $(-4, 0)$을 지나고 $y$축에 평행합니다. ①은 $x=-4$의 그래프가 평행한 방향을 잘못 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:43:14.591418+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

@@ -185,6 +185,18 @@ a {
 .katex-display > .katex {
   white-space: normal;
 }
+.problem-sheet {
+  background: #fff;
+  color: #111;
+  color-scheme: light;
+  border: 1px solid #888;
+  border-radius: 12px;
+  padding: 16px;
+}
+.problem-sheet .choice:has(input:checked) {
+  border-color: #1559a8;
+  background: #e8f2ff;
+}
 .question {
   line-height: 1.6;
   min-width: 0;

@@ -599,30 +599,35 @@
       "body": "다섯 학생이 일차함수에 대해 다음과 같이 말했다. 옳게 말한 학생은 누구인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "민지: $y=3x$는 $y=3x+0$으로 나타낼 수 있으므로 일차함수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M1",
           "no": 2,
           "text": "서준: $y=x-x+1$은 식에 $x$가 있으므로 일차함수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 3,
           "text": "지우: $y=0x+4$는 $x$의 계수가 $0$이어도 일차함수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M3",
           "no": 4,
           "text": "도윤: $y=-2x$는 $b$가 $0$이므로 일차함수가 아니야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -633,6 +638,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "일차함수는 $y=ax+b$의 꼴로 나타낼 수 있고, $a\\ne 0$이어야 한다. ①은 $y=3x+0$으로 나타낼 수 있으므로 일차함수이다. ②는 $x$가 쓰여 있어도 $y=1$이므로 일차함수가 아니다. ③은 $a=0$이므로 일차함수가 아니다. ④는 $b=0$이어도 $a\\ne 0$이므로 일차함수이다. ⑤에서 $a=2$, $b=3$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:01.000523+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 말을 보고 각각의 판단이 옳은지 살펴본 뒤, 옳게 말한 학생을 고르게 했다.",
@@ -669,30 +675,35 @@
       "body": "한 학생이 세 식을 보고 다음과 같이 판단했다.\n\n- $y=x^2+1$은 일차함수가 아니다.\n- $y=5$는 일차함수가 아니다.\n- $y=-2x$는 일차함수가 아니다.\n\n이 학생의 판단에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M1",
           "no": 1,
           "text": "$y=x^2+1$에는 $x$가 있으므로 일차함수가 아니라고 판단한 것은 틀리다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 2,
           "text": "$y=5$는 $y=0x+5$로 나타낼 수 있으므로 일차함수가 아니라고 판단한 것은 틀리다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M3",
           "no": 3,
           "text": "$y=-2x$는 상수항이 없으므로 일차함수가 아니라고 판단한 것은 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=-2x$는 $x$의 계수가 음수이므로 일차함수가 아니라고 판단한 것은 옳다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -703,6 +714,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "일차함수는 $y=ax+b$ 꼴로 나타낼 수 있고, $a\\ne 0$인 함수이다. $y=-2x$는 $a=-2$, $b=0$인 일차함수이므로 ⑤가 옳다.\n\n①은 식에 $x$가 있기만 하면 일차함수라고 잘못 생각한 것이다. $y=x^2+1$은 일차함수가 아니다. ②는 $a=0$이어도 일차함수라고 잘못 생각한 것이다. $y=5$는 $y=0x+5$이므로 일차함수가 아니다. ③은 상수항이 0이면 일차함수가 아니라고 잘못 생각한 것이다. ④와 달리 $a$는 음수여도 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:28:43.449167+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "한 학생이 세 식을 일차함수인지 판단한 내용을 제시했다. 각 판단에 대한 설명의 옳고 그름을 살펴 정답을 고르게 했다.",
@@ -746,30 +758,35 @@
       "body": "일차함수에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M1",
           "no": 1,
           "text": "$y=x-x+3$은 식에 $x$가 있으므로 일차함수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 2,
           "text": "$y=4$는 $x$의 계수가 $0$이어도 일차함수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M3",
           "no": 3,
           "text": "$y=2x$는 수만 있는 항이 없으므로 일차함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=-2x+3$은 $x$의 계수가 음수이므로 일차함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -780,6 +797,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "일차함수는 $y=ax+b$의 꼴이고, $a$가 $0$이 아닌 함수이다. ⑤에서는 $a=-1$이므로 일차함수이다.\n①은 식에 $x$가 있다는 이유만으로 일차함수라고 생각한 것이다. $x-x=0$이므로 $y=3$이다.\n②는 $x$의 계수가 $0$이어도 일차함수라고 생각한 것이다.\n③은 수만 있는 항이 있어야 일차함수라고 생각한 것이다. $y=2x$는 $b=0$인 일차함수이다.\n④에서 $x$의 계수는 음수이지만 $0$이 아니므로 일차함수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:46:07.455478+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -807,30 +825,35 @@
       "body": "다섯 학생이 각각 식을 보고 일차함수인지 판단했다. 잘못 판단한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M1",
           "no": 1,
           "text": "$y=x^2+1$은 일차함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 2,
           "text": "$y=5$는 일차함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M3",
           "no": 3,
           "text": "$y=-2x$는 일차함수이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$y=3x-1$은 일차함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -841,6 +864,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$y=3x-1$은 $y=ax+b$에서 $a=3$, $b=-1$인 일차함수이므로 ④의 판단이 잘못되었다.\n①을 골랐다면 식에 $x$가 있으면 모두 일차함수라고 잘못 생각한 것이다. ②를 골랐다면 $x$의 계수가 $0$인 식도 일차함수라고 잘못 생각한 것이다. ③을 골랐다면 수만으로 이루어진 항이 없는 $y=-2x$는 일차함수가 아니라고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:43:27.215946+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -879,30 +903,35 @@
       "body": "$x$와 $y$ 사이의 관계를 나타낸 다음 식 중에서 $y$가 $x$의 일차함수인 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 1,
           "text": "$y+2x=2x+4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$y+x=y+x$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2y+x=2y+x+1$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$y+3=x+3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -913,6 +942,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "④를 간단히 하면 $y=x$이다. 이는 $y=ax+b$에서 $a=1$, $b=0$인 일차함수이다.\n①은 $y=4$가 된다. 식에 $x$가 있다고 해서 일차함수인 것은 아니다. $x$의 계수가 0이면 일차함수가 아니다.\n②는 어떤 $x$, $y$에 대해서도 참이므로 $x$의 값에 따라 $y$의 값이 하나로 정해지지 않는다.\n③은 어떤 $x$, $y$에 대해서도 참이 될 수 없다.\n⑤는 $x=2$가 되며, $y$의 값이 하나로 정해지지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:56.987539+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "양변이 같은 식, 참이 될 수 없는 등식, $y$의 값이 하나로 정해지지 않는 식을 보기로 제시했다. 각 식을 살펴보고 일차함수인지를 판단해야 한다.",
@@ -940,30 +970,35 @@
       "body": "각 보기에서 $x$는 어떤 수든 될 수 있습니다. $y$가 $x$의 일차함수인 관계는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 1,
           "text": "$x$에 $3$을 더한 수에서 $x$를 빼면 $y$가 된다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$x$의 두 배에 $4$를 더한 다음 $4$를 빼면 $y$가 된다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x$에 $1$을 더한 수는 $x$에 $2$를 더한 수와 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x$와 $y$의 합은 $y$와 $x$의 합과 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -974,6 +1009,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "②는 $y=2x$이므로 일차함수입니다. $x$의 계수가 $0$이 아니면 $y=2x+0$처럼 더하는 수가 $0$이어도 일차함수입니다.\n①은 $y=3$입니다. 이를 일차함수라고 생각했다면, $x$의 계수가 $0$인 경우도 일차함수라고 생각한 것입니다.\n③은 어떤 $x$에 대해서도 성립하지 않습니다. ④는 하나의 $x$에 여러 $y$가 가능합니다. ⑤는 $x=1$일 때만 성립하고, 이때 $y$는 어떤 수든 될 수 있습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:45:40.702022+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "③은 성립하지 않는 등식이고, ④는 언제나 성립하는 등식입니다. 각각이 $x$에 따른 $y$의 일차함수를 나타내는지 따져야 합니다.",
@@ -1019,30 +1055,35 @@
       "body": "학생들이 주어진 식을 보고 $y$가 $x$의 일차함수인지 말하였다. 옳게 말한 학생을 고르시오.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M3",
           "no": 1,
           "text": "민수: $y=4x$는 수만 있는 항이 없으므로 일차함수가 아니야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M1",
           "no": 2,
           "text": "지은: $y=\\frac{2}{x}$는 식에 $x$가 있으므로 일차함수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 3,
           "text": "서준: $y=3x-3x+5$는 식에 $x$가 있으므로 일차함수야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "하린: $y=7-2x$는 $y=-2x+7$이므로 일차함수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M1",
           "no": 5,
@@ -1053,6 +1094,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "일차함수는 $y=ax+b$ 꼴이고 $a\\ne 0$인 함수이다. $y=7-2x$는 $y=-2x+7$이므로 일차함수이다. $y=4x$는 수만 있는 항이 없어도 일차함수이다. 식에 $x$가 있다고 해서 모두 일차함수는 아니다. $y=3x-3x+5$는 간단히 하면 $y=5$이므로 일차함수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:42:38.562534+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1096,30 +1138,35 @@
       "body": "다음 중 $y$가 $x$의 일차함수인 것을 고르시오.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M1",
           "no": 1,
           "text": "$y=x-x+3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 2,
           "text": "$y=0x+2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$y=2x-x$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 4,
           "text": "$y=5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M2",
           "no": 5,
@@ -1130,6 +1177,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "일차함수는 $y=ax+b$ 꼴이고 $a\\ne 0$인 함수이다. ③은 $y=x$이므로 일차함수이다. ①은 $y=3$, ②는 $y=2$, ④는 $y=5$, ⑤는 $y=2$이므로 일차함수가 아니다. 식에 $x$가 보인다는 것만으로 일차함수라고 할 수는 없다. 또 $x$의 계수가 $0$이면 일차함수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:38.019263+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1157,30 +1205,35 @@
       "body": "일차함수 $y=ax$의 그래프를 $y$축의 방향으로 $-3$만큼 평행이동한 그래프가 점 $(2, 1)$을 지난다. 이때 $a$의 값은? (단, $a\\ne 0$)",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M4",
           "no": 2,
           "text": "$-1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$1$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1191,6 +1244,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "평행이동한 그래프의 식은 $y=ax-3$이다. 이 그래프가 점 $(2, 1)$을 지나므로 $1=2a-3$이다. 따라서 $a=2$이다.\n②를 골랐다면 $-3$만큼 이동할 때 $3$을 빼지 않고 더했는지 확인해 보자.",
+      "figure": null,
       "generated_at": "2026-11-11T12:46:11.858735+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "평행이동한 그래프가 지나는 점이 주어졌을 때, 원래 식의 $a$를 거꾸로 구한다.",
@@ -1218,30 +1272,35 @@
       "body": "$y=2x$의 그래프를 $y$축의 방향으로 평행이동했다. 옮긴 그래프는 $y=-x+3$의 그래프 위의 점 중 $x$좌표가 $-1$인 점을 지난다. $y$축의 방향으로 얼마만큼 평행이동했는가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M4",
           "no": 1,
           "text": "$-6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$-4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1252,6 +1311,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$y=-x+3$에 $x=-1$을 대입하면 $y=4$이다. 따라서 옮긴 그래프는 점 $(-1, 4)$를 지난다. $y=2x$에서 $x=-1$일 때 $y=-2$이므로, $y$축의 방향으로 $6$만큼 평행이동해야 한다. $-6$을 고른 것은 평행이동한 방향을 반대로 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:46:26.889502+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "평행이동한 그래프가 지나는 점을 다른 그래프의 식과 $x$좌표로 주고, 평행이동한 값을 거꾸로 구하게 했다.",
@@ -1279,30 +1339,35 @@
       "body": "$y=2x$의 그래프를 아래쪽으로 $3$만큼 평행이동한 그래프의 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$y=2x-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M4",
           "no": 2,
           "text": "$y=2x+3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$y=-2x-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=2x-1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1313,6 +1378,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "아래쪽으로 $3$만큼 평행이동하면 각 점의 $y$좌표가 $3$만큼 작아진다. 따라서 식은 $y=2x-3$이다. $y=2x+3$은 이동 방향의 부호를 반대로 생각한 것으로, 위쪽으로 $3$만큼 평행이동한 식이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:45:43.426783+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1340,30 +1406,35 @@
       "body": "$y=-x$의 그래프는 점 $(3, -3)$을 지난다. 이 그래프를 위쪽으로 $5$만큼 평행이동한 그래프 위의 점 중에서 $x$좌표가 $3$인 점은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M4",
           "no": 1,
           "text": "$(3, -8)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$(3, -3)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(3, 2)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(3, 5)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1374,6 +1445,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "위쪽으로 $5$만큼 평행이동하면 $x$좌표는 그대로이고 $y$좌표는 $5$만큼 커진다. 따라서 구하는 점은 $(3, -3+5)$, 즉 $(3, 2)$이다. ①은 위쪽으로 옮겨야 하는데 아래쪽으로 옮긴 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:45:56.642872+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1401,30 +1473,35 @@
       "body": "민지는 다음과 같이 말했습니다.\n\n“$y=-2x$의 그래프를 $y$축의 방향으로 $-3$만큼 평행이동하면 $y=-2x+3$의 그래프가 돼.”\n\n민지의 말에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M4",
           "no": 1,
           "text": "옳다. 아래로 $3$만큼 옮기면 $y$의 값에 $3$을 더한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "옳지 않다. 옮긴 그래프의 식은 $y=2x-3$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "옳지 않다. 옮긴 그래프의 식은 $y=-2x-3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "옳지 않다. 옮긴 그래프의 식은 $y=-2x$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1435,6 +1512,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$y$축의 방향으로 $-3$만큼 평행이동하면 각 점의 $y$좌표에서 $3$을 빼야 합니다. 따라서 옮긴 그래프의 식은 $y=-2x-3$입니다. 예를 들어, 원래 그래프의 점 $(0,0)$은 $(0,-3)$으로 옮겨집니다.\n\n①을 골랐다면 아래로 $3$만큼 옮길 때 $3$을 빼지 않고 더한다고 잘못 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:47:23.622488+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민지가 평행이동한 그래프의 식을 잘못 말한 상황을 제시하고, 그 말에 대한 판단을 고르게 했다.",
@@ -1462,30 +1540,35 @@
       "body": "소연이는 어떤 일차함수의 그래프를 $y$축의 방향으로 $2$만큼 평행이동한 그래프가 $y=3x+2$일 때, 원래 그래프가 $y=3x+4$라고 말했습니다.\n\n소연이의 말에 대해 바르게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M4",
           "no": 1,
           "text": "지호: 맞아. 원래 그래프는 $y=3x+4$의 그래프야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "유나: 틀려. 원래 그래프는 $y=3x$의 그래프야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "민서: 틀려. 원래 그래프는 $y=3x-2$의 그래프야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "도윤: 틀려. 원래 그래프는 $y=3x+2$의 그래프야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1496,6 +1579,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$y$축의 방향으로 $2$만큼 평행이동하면 각 점의 $y$좌표가 $2$만큼 커진다. 따라서 원래 그래프는 $y=3x$의 그래프이므로 정답은 ②이다.\n\n①은 위로 $2$만큼 옮길 때 식에서 $2$를 빼야 한다고 생각한 것이다. $y=3x+4$의 그래프를 위로 $2$만큼 옮기면 $y=3x+6$의 그래프가 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:48:45.690918+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "소연이의 주장을 보고 옳고 그름을 판단하게 한다. 평행이동한 뒤의 식에서 원래 식을 찾아야 한다.",
@@ -1541,30 +1625,35 @@
       "body": "$y=3x$의 그래프를 $y$축의 방향으로 $-2$만큼 평행이동한 그래프의 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M4",
           "no": 1,
           "text": "$y=3x+2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$y=3x-1$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$y=3x-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=3x-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1575,6 +1664,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$y=3x$의 그래프 위의 점 $(0, 0)$은 평행이동하면 $(0, -2)$가 된다. 따라서 구하는 식은 $y=3x-2$이다. $y=3x+2$를 골랐다면 아래로 평행이동한 것을 위로 평행이동한 것으로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:46:37.905949+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1602,30 +1692,35 @@
       "body": "일차함수 $y=-2x+4$의 그래프는 $y=-2x$의 그래프를 어떻게 평행이동한 것인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$y$축의 방향으로 $+4$만큼 평행이동한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-15-M4",
           "no": 2,
           "text": "$y$축의 방향으로 $-4$만큼 평행이동한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$y$축의 방향으로 $+2$만큼 평행이동한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y$축의 방향으로 $-2$만큼 평행이동한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1636,6 +1731,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "같은 $x$의 값에 대하여 $y=-2x+4$의 $y$의 값은 $y=-2x$의 $y$의 값보다 $4$만큼 큽니다. 따라서 $y$축의 방향으로 $+4$만큼 평행이동한 것입니다. $-4$만큼 평행이동했다고 생각하면 이동하는 방향을 반대로 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:46:50.153362+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1666,6 +1762,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "같은 $x$의 값을 넣으면 두 식은 모두 그 값에 $-2$를 곱한다. 두 번째 식에서는 거기에 $3$을 더 빼므로, 두 번째 그래프의 점은 첫 번째 그래프의 점보다 항상 아래에 있다. 따라서 평행이동한 방향은 위가 아니라 아래이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:50:16.421458+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "표로 비교하는 방법과 두 점의 좌표로 비교하는 방법을 수행한 뒤, 두 방법이 같은 결과를 주는 이유를 설명하게 한다.",
@@ -1736,6 +1833,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "표에서 같은 $x$에 대한 두 $y$의 값의 차는 모두 $2$이다. 다른 $x$의 값에 대해서도 $y=3x$의 값에 $2$를 더하면 $y=3x+2$의 값이 된다. 따라서 민지의 말은 옳지 않다. 그래프 위의 각 점에서 $x$좌표는 그대로이고 $y$좌표만 $2$ 커지므로, 그래프는 $y$축의 방향으로 위로 $2$만큼 평행이동한다. 아래로 이동한다고 생각하면 $y$좌표가 $2$ 작아진다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:51:16.837753+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "표에 나온 값뿐 아니라 모든 $x$의 값에 대해 민지의 말이 옳지 않은 이유를 설명하도록 했다.",
@@ -1805,6 +1903,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "같은 $x$의 값에서 $y=-2x-3$의 $y$의 값은 $y=-2x$의 $y$의 값보다 항상 $3$만큼 작다. 따라서 그래프를 $y$축의 방향으로 아래쪽으로 $3$만큼 평행이동한다. 위쪽으로 $3$만큼 이동한다고 생각했다면 $y$의 값이 작아지는 방향을 반대로 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:49:02.617833+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1861,6 +1960,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "표에서 같은 $x$에 대한 두 $y$의 값을 비교하면 각각 $4$만큼 차이가 난다. $y=x+4$에서는 $y=x$의 값에 늘 $4$를 더하므로 그래프를 위쪽으로 $4$만큼 평행이동한다. 아래쪽으로 이동한다고 생각했다면 $y$의 값이 커지는 방향을 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:49:18.664839+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

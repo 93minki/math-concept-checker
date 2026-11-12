@@ -8,30 +8,35 @@
       "body": "어느 반 학생들이 읽은 책의 수를 줄기와 잎 그림으로 나타내었다. 줄기는 십의 자리, 잎은 일의 자리 숫자이다. 예를 들어 $2\\mid 3$은 $23$권을 뜻한다.\n\n줄기 $2$ | 잎 $1$ □ $3$ $7$\n줄기 $3$ | 잎 $0$ $1$ $2$ $4$ $4$ $7$\n\n□에는 잎 $2$가 몇 개 있었는지 지워져 있다. 잎 $2$가 $0$개일 수도 있다. 나머지 잎은 모두 나타내었다.\n\n$22$권 이상 $34$권 미만인 학생은 $34$권 이상 $40$권 미만인 학생보다 $3$명 더 많다. □에 지워진 잎 $2$는 몇 개인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$0$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$1$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$3$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M2",
           "no": 5,
@@ -42,6 +47,7 @@
       "difficulty": "hard",
       "disabled_at": "2026-11-11T09:40:07.631106+00:00",
       "explanation": "$34$권 이상 $40$권 미만인 학생은 $34$권, $34$권, $37$권을 읽은 $3$명이다. 따라서 $22$권 이상 $34$권 미만인 학생은 $6$명이다.\n\n이 범위에서 지워지지 않은 잎은 $23$권, $30$권, $31$권, $32$권을 나타내므로 $4$개이다. 따라서 지워진 잎 $2$는 $2$개이다.\n\n⑤를 골랐다면 각 범위의 잎에 적힌 숫자를 더했을 수 있다. 학생 수는 잎에 적힌 숫자의 합이 아니라 잎의 개수로 센다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:08:25.922118+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 범위의 학생 수 차이가 주어지고, 지워진 잎의 개수를 거꾸로 찾게 한다.",
@@ -78,30 +84,35 @@
       "body": "다음은 민지가 $14$일 동안 하루에 읽은 책의 쪽수를 나타낸 줄기와 잎 그림이다. 줄기는 십의 자리 숫자이고, 잎은 일의 자리 숫자이다.\n\n줄기 $1$ | 잎 $0$ $1$ $1$ $2$ $3$ $4$ $5$ $7$\n줄기 $2$ | 잎 $0$ $1$ $2$ $3$ $5$ $8$\n\n하루에 읽은 쪽수가 아래 범위에 속하는 날이 $6$일인 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$15$ 이상 $20$ 미만"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M2",
           "no": 2,
           "text": "$20$ 이상 $25$ 미만"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$10$ 이상 $15$ 미만"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$25$ 이상 $30$ 미만"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -112,6 +123,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$10$ 이상 $15$ 미만에 속하는 쪽수는 $10$, $11$, $11$, $12$, $13$, $14$이다. 따라서 그 날은 $6$일이다.\n\n$20$ 이상 $25$ 미만에 속하는 잎은 $0$, $1$, $2$, $3$의 $4$개이므로 그 날은 $4$일이다. 잎에 적힌 숫자를 더해 $6$일이라고 세지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:41:06.193802+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "날의 수를 $6$일로 주고, 그 수에 맞는 쪽수의 범위를 거꾸로 찾게 한다.",
@@ -139,30 +151,35 @@
       "body": "행사에서 학생들이 받은 점수를 잘못 기록하였다. 모든 점수의 십의 자리와 일의 자리를 서로 바꾸어 적은 것이다. 잘못 적은 점수를 줄기와 잎 그림으로 나타내면 다음과 같다. 줄기는 십의 자리, 잎은 일의 자리 숫자이다.\n\n줄기 $1$ | 잎 $2$ $2$ $5$\n줄기 $2$ | 잎 $1$ $2$ $5$\n줄기 $3$ | 잎 $2$ $4$ $5$\n줄기 $4$ | 잎 $2$ $5$ $5$\n줄기 $5$ | 잎 $1$ $2$ $5$\n\n실제 점수가 $20$점 이상 $30$점 미만인 학생은 몇 명인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$명"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$5$명"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$6$명"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$10$명"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M2",
           "no": 5,
@@ -173,6 +190,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "실제 점수의 십의 자리가 $2$이면 잘못 적은 점수의 일의 자리가 $2$이다. 따라서 잎 $2$의 개수를 세면 $6$개이므로 정답은 $6$명이다.\n\n잎 $2$를 모두 더해 $12$명이라고 했다면, 잎의 개수가 아니라 잎에 적힌 숫자의 합을 학생 수로 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:09:02.500133+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "자리를 바꾸어 잘못 적은 점수의 줄기와 잎 그림에서 실제 점수의 십의 자리가 $2$인 자료를 거꾸로 찾아야 한다.",
@@ -200,30 +218,35 @@
       "body": "어느 학급 학생들의 독서 시간을 줄기와 잎 그림으로 나타냈다. 줄기는 십의 자리, 잎은 일의 자리를 나타낸다.\n\n줄기 $1$ | 잎 $2\\ 4\\ 8$\n줄기 $2$ | 잎 $0\\ 1\\ 1\\ 3$\n줄기 $3$ | 잎 $2\\ 5$\n\n예를 들어 $1$ | $2$는 $12$분을 나타낸다. 독서 시간이 $20$분 이상 $30$분 미만인 학생은 몇 명인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3$명"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$4$명"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M2",
           "no": 3,
           "text": "$5$명"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$6$명"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -234,6 +257,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "줄기 $2$에 있는 잎은 $0$, $1$, $1$, $3$으로 모두 $4$개이다. 따라서 독서 시간이 $20$분 이상 $30$분 미만인 학생은 $4$명이다. 잎에 적힌 숫자를 더해 $5$명이라고 하면 안 된다. 학생 수는 잎의 개수로 세어야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:06:42.63253+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -261,30 +285,35 @@
       "body": "화분에 심은 식물의 키를 줄기와 잎 그림으로 나타냈다. 줄기는 십의 자리, 잎은 일의 자리를 나타낸다.\n\n줄기 $3$ | 잎 $5$ $8$ $9$\n줄기 $4$ | 잎 $1$ $2$ $2$ $7$ $9$\n줄기 $5$ | 잎 $0$ $3$\n\n예를 들어 $3$ | $5$는 $35$cm를 나타낸다. 키가 $42$cm인 식물은 몇 개인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$1$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$3$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M2",
           "no": 4,
           "text": "$4$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -295,6 +324,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "줄기 $4$에 있는 잎 $2$는 각각 $42$cm를 나타낸다. 잎 $2$가 $2$개이므로 정답은 ②이다. ④를 골랐다면 잎 $2$의 개수를 세지 않고 $2$와 $2$를 더했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:06:58.172616+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -322,30 +352,35 @@
       "body": "학생 $10$명의 하루 독서 시간은 다음과 같다. 단위는 분이다.\n$4, 9, 10, 14, 19, 20, 20, 25, 29, 30$\n\n여기에 학생 한 명의 독서 시간을 더한 뒤 도수분포표를 만들었다. 그 일부는 다음과 같다.\n계급 $10$ 이상 $20$ 미만: 도수 $4$\n계급 $20$ 이상 $30$ 미만: 도수 $4$\n\n더한 학생의 독서 시간으로 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$분"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$10$분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$20$분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$25$분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 5,
@@ -356,6 +391,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "처음 $10$명의 자료에서 $10$ 이상 $20$ 미만인 시간은 $10, 14, 19$로 $3$개이다. $20$ 이상 $30$ 미만인 시간은 $20, 20, 25, 29$로 $4$개이다. 따라서 더한 시간은 $10$ 이상 $20$ 미만이어야 하므로 정답은 ②이다.\n\n$30$을 고른 경우, 각 계급에서 앞의 수는 빼고 뒤의 수는 넣었는지 살펴보자. 예를 들어 $20$은 $10$ 이상 $20$ 미만이 아니라 $20$ 이상 $30$ 미만에 들어간다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:10:40.954534+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "자료 한 개를 더한 뒤의 도수를 주고, 처음 자료와 비교하여 더한 시간을 거꾸로 찾게 한다.",
@@ -390,30 +426,35 @@
       "body": "화분에 심은 식물의 키를 조사하여 도수분포표로 나타냈다. 단위는 cm이다.\n\n계급 $10$ 이상 $15$ 미만: 도수 $3$\n계급 $15$ 이상 $20$ 미만: 도수 $4$\n계급 $20$ 이상 $25$ 미만: 도수 $5$\n계급 $25$ 이상 $30$ 미만: 도수 $3$\n\n키가 정확히 $15$ cm인 식물은 $2$개이고, 정확히 $25$ cm인 식물은 $1$개이다. 키가 $15$ cm보다 크고 $25$ cm보다 작거나 같은 식물은 모두 몇 개인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$6$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$7$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$8$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 4,
           "text": "$9$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -424,6 +465,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$15$ 이상 $25$ 미만인 식물은 $4+5=9$개이다. 여기에서 키가 정확히 $15$ cm인 $2$개를 빼고, 정확히 $25$ cm인 $1$개를 더하면 $9-2+1=8$개이다.\n\n$9$개를 고른 경우, $15$를 앞 계급에 넣고 $25$를 $20$ 이상 $25$ 미만인 계급에 넣었는지 살펴보자. $15$는 $15$ 이상 $20$ 미만인 계급에, $25$는 $25$ 이상 $30$ 미만인 계급에 들어간다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:11:05.951257+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "문장으로 주어진 키의 범위를 표의 계급과 비교하고, 양 끝의 키에 해당하는 식물의 수를 알맞게 빼거나 더해야 한다.",
@@ -451,30 +493,35 @@
       "body": "학생 $9$명이 책을 읽은 시간은 다음과 같다.\n$8$분, $10$분, $10$분, $12$분, $15$분, $18$분, $19$분, $20$분, $23$분\n\n이 자료로 도수분포표를 만들 때, $10$분 이상 $20$분 미만인 계급의 도수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 2,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 3,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 5,
@@ -485,6 +532,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$10$분 이상 $20$분 미만인 자료는 $10$분, $10$분, $12$분, $15$분, $18$분, $19$분으로 $6$개이다. $10$분은 이 계급에 들어가지만 $20$분은 들어가지 않는다. $10$분을 빼거나 $20$분을 넣으면 도수를 잘못 구할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:09:19.362829+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -512,30 +560,35 @@
       "body": "화분 $14$개의 높이를 나타낸 도수분포표는 다음과 같다.\n\n$0$cm 이상 $5$cm 미만: 도수 $2$\n$5$cm 이상 $10$cm 미만: 도수 $4$\n$10$cm 이상 $15$cm 미만: 도수 $5$\n$15$cm 이상 $20$cm 미만: 도수 $3$\n\n높이가 각각 $10$cm, $15$cm인 화분 $2$개를 이 표에 더하려고 한다. 두 화분을 더한 후 $10$cm 이상 $15$cm 미만인 계급의 도수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 2,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 4,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -546,6 +599,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$10$cm는 $10$cm 이상 $15$cm 미만인 계급에 들어가지만, $15$cm는 들어가지 않는다. 따라서 이 계급의 도수는 $5+1=6$이다.\n\n$5$를 골랐다면 $10$cm를 이 계급에 넣지 않았을 수 있다. $7$을 골랐다면 $15$cm도 이 계급에 넣었을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:09:35.954121+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -573,30 +627,35 @@
       "body": "어느 모둠 학생 $8$명의 독서 시간은 다음과 같다. 단위는 분이다.\n$12, 18, 20, 23, 27, 30, 34, 38$\n\n이 자료를 다음 세 계급으로 나누어 도수분포표를 만들려고 한다.\n10 이상 20 미만\n20 이상 30 미만\n30 이상 40 미만\n\n다섯 학생이 각 계급의 도수를 차례로 말하고, 그렇게 생각한 이유를 설명했다. 옳게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 1,
           "text": "민지: 도수는 $3, 2, 3$이야. $20$을 10 이상 20 미만에 넣었어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 2,
           "text": "서준: 도수는 $2, 4, 2$야. $30$을 20 이상 30 미만에 넣었어."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "지우: 도수는 $2, 3, 3$이야. $20$과 $30$을 각각 그 수 이상으로 시작하는 계급에 넣었어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "하린: 도수는 $2, 2, 3$이야. $20$을 어느 계급에도 넣지 않았어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 5,
@@ -607,6 +666,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$20$은 $20$ 이상 $30$ 미만에, $30$은 $30$ 이상 $40$ 미만에 넣는다. 따라서 각 계급의 도수는 차례로 $2, 3, 3$이다.\n1번은 $20$을 앞 계급에 잘못 넣었고, 2번은 $30$을 앞 계급에 잘못 넣었다. 4번처럼 $20$을 빠뜨리거나 5번처럼 $30$을 두 계급에 모두 넣어서도 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:12:41.654721+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생이 말한 도수와 그 이유를 함께 보고 옳은 주장을 판단하게 했다. 특히 계급의 끝에 있는 두 수를 서로 다른 방식으로 잘못 넣은 주장을 비교해야 한다.",
@@ -642,30 +702,35 @@
       "body": "구슬 $12$개의 지름을 재었더니 다음과 같았다. 단위는 $\\mathrm{mm}$이다.\n$4, 5, 5, 6, 9, 10, 10, 11, 14, 15, 16, 19$\n\n민지는 이 자료를 다음과 같이 도수분포표로 나타냈다.\n$0$ 이상 $5$ 미만: 도수 $3$\n$5$ 이상 $10$ 미만: 도수 $2$\n$10$ 이상 $15$ 미만: 도수 $4$\n$15$ 이상 $20$ 미만: 도수 $3$\n\n민지의 표가 맞는지와 그 까닭을 옳게 말한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "맞다. 도수의 총합이 자료의 수와 같으면 각 계급의 도수도 반드시 맞기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 2,
           "text": "맞다. $5$ 두 개를 $0$ 이상 $5$ 미만에 넣는 것이 맞기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 3,
           "text": "맞지 않다. $5$ 두 개를 $0$ 이상 $5$ 미만과 $5$ 이상 $10$ 미만에 모두 넣어야 하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "맞지 않다. $5$ 두 개를 두 계급 어디에도 넣지 않아야 하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -676,6 +741,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$5$는 $0$ 이상 $5$ 미만에 들어가지 않고, $5$ 이상 $10$ 미만에 들어간다. 따라서 첫째 계급의 도수는 $1$, 둘째 계급의 도수는 $4$이다. 민지의 표는 도수의 총합이 $12$로 맞지만, 각 계급의 도수가 모두 맞는 것은 아니다. $5$를 앞 계급에 넣거나 두 계급 모두에 넣으면 안 된다. 두 계급 어디에도 넣지 않는 것도 잘못이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:13:22.236863+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민지가 만든 도수분포표를 보고 맞는지와 그 까닭을 판단하게 했다. 도수의 총합은 맞지만 계급에 자료를 잘못 넣은 표를 살펴보아야 한다.",
@@ -703,30 +769,35 @@
       "body": "학생 $9$명이 하루 동안 책을 읽은 시간은 다음과 같다. 단위는 분이다.\n$11, 14, 15, 17, 20, 22, 24, 25, 27$\n\n이 자료를 다음 계급으로 나누어 도수분포표를 만들려고 한다.\n$10$ 이상 $15$ 미만\n$15$ 이상 $20$ 미만\n$20$ 이상 $25$ 미만\n$25$ 이상 $30$ 미만\n\n각 계급의 도수를 위에서부터 차례로 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 1,
           "text": "$3, 1, 3, 2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 2,
           "text": "$2, 3, 2, 2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2, 2, 3, 2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 4,
           "text": "$2, 2, 4, 1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -737,6 +808,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "‘이상’은 그 수를 포함하고, ‘미만’은 그 수를 포함하지 않는다. 따라서 $15$는 둘째 계급, $20$은 셋째 계급, $25$는 넷째 계급에 넣는다. 도수는 차례로 $2, 2, 3, 2$이므로 정답은 ③이다.\n①은 $15$를, ②는 $20$을, ④는 $25$를 앞 계급에 잘못 넣은 것이다. ⑤는 도수의 합이 $8$이므로 자료의 수 $9$와 다르다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:11:23.876133+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -764,30 +836,35 @@
       "body": "화분의 키를 조사하여 만든 도수분포표는 다음과 같다. 키의 단위는 cm이다.\n\n$10$ 이상 $20$ 미만: 도수 $3$\n$20$ 이상 $30$ 미만: 도수 $4$\n$30$ 이상 $40$ 미만: 도수 $2$\n\n이 자료에 키가 $20$cm인 화분이 한 개 있다. 이 화분을 도수에 어떻게 세었는지 바르게 말한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 1,
           "text": "$10$ 이상 $20$ 미만인 계급의 도수에 한 번 센다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$20$ 이상 $30$ 미만인 계급의 도수에 한 번 센다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M1",
           "no": 3,
           "text": "$10$ 이상 $20$ 미만인 계급과 $20$ 이상 $30$ 미만인 계급의 도수에 각각 한 번씩 센다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "어느 계급의 도수에도 세지 않는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -798,6 +875,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$20$은 $20$ 이상이고 $30$ 미만이므로 $20$ 이상 $30$ 미만인 계급의 도수에 한 번 센다. $20$은 $20$ 미만이 아니므로 $10$ 이상 $20$ 미만인 계급에는 세지 않는다. ①이나 ③을 골랐다면 $20$을 $20$ 미만인 계급에도 넣을 수 있다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:11:45.271248+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -825,30 +903,35 @@
       "body": "다음은 세 자료를 나타낸 도수분포표이다.\n\nA: $0$ 이상 $2$ 미만: 도수 $1$\nA: $2$ 이상 $4$ 미만: 도수 $5$\nA: $4$ 이상 $6$ 미만: 도수 $0$\n\nB: $0$ 이상 $3$ 미만: 도수 $1$\nB: $3$ 이상 $6$ 미만: 도수 $3$\n\nC: $0$ 이상 $3$ 미만: 도수 $2$\nC: $3$ 이상 $6$ 미만: 도수 $4$\n\n각 도수분포표로 히스토그램과 도수분포다각형을 각각 그린다고 하자. 옳은 것을 모두 고른 것은?\n\nㄱ. A와 C의 도수의 총합은 같다.\nㄴ. A의 히스토그램에서 직사각형의 넓이의 합, A의 도수분포다각형과 가로축 사이의 넓이, B의 도수분포다각형과 가로축 사이의 넓이는 모두 같다.\nㄷ. B와 C는 계급의 크기가 같으므로 히스토그램에서 직사각형의 넓이의 합도 같다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M3",
           "no": 1,
           "text": "ㄱ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "ㄴ"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "ㄱ, ㄴ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "ㄱ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -859,6 +942,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "A의 도수의 총합은 $6$, B는 $4$, C는 $6$이므로 ㄱ은 옳다.\n\n히스토그램에서 직사각형의 넓이의 합은 계급의 크기에 도수의 총합을 곱한 것이다. 따라서 A는 $2\\times 6=12$, B는 $3\\times 4=12$, C는 $3\\times 6=18$이다. 같은 도수분포표로 그린 도수분포다각형과 가로축 사이의 넓이는 이 넓이의 합과 같다. 따라서 ㄴ은 옳고 ㄷ은 옳지 않다.\n\n①을 고른 학생은 같은 도수분포표로 그린 히스토그램의 넓이의 합과 도수분포다각형의 넓이가 다르다고 생각했을 수 있다. 두 넓이는 서로 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:14:36.044317+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "ㄴ과 ㄷ에서 계급의 크기와 도수의 총합이 각각 달라도 넓이가 같을 수 있고, 계급의 크기가 같아도 넓이가 다를 수 있는 사례를 판단한다.",
@@ -886,30 +970,35 @@
       "body": "다음은 어느 자료를 나타낸 도수분포표이다.\n\n$10$ 이상 $15$ 미만: 도수 $1$\n$15$ 이상 $20$ 미만: 도수 □\n$20$ 이상 $25$ 미만: 도수 △\n\n자료 중 $15$ 이상인 수는 $15$와 $20$뿐이고, $15$는 $2$개이다. 이 도수분포표로 그린 도수분포다각형과 가로축 사이의 넓이는 $30$이다.\n\n□와 △에 들어갈 수를 차례로 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2, 2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2, 3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2, 5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M3",
           "no": 4,
           "text": "$2, 9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -920,6 +1009,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "계급의 크기는 $5$이다. 히스토그램에서 직사각형의 넓이의 합은 도수분포다각형과 가로축 사이의 넓이와 같으므로 $30$이다. 따라서 도수의 총합은 $30\\div 5=6$이다.\n\n$15$는 $15$ 이상 $20$ 미만인 계급에 속한다. 이 계급의 자료는 모두 $15$이므로 □는 $2$이다. 따라서 △는 $6-1-2=3$이다.\n\n④를 고른 학생은 히스토그램에서 직사각형의 넓이의 합이 도수분포다각형과 가로축 사이의 넓이의 두 배라고 잘못 생각했을 수 있다. 두 넓이는 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:15:43.707267+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "도수분포표와 넓이의 성질을 이용해 도수의 총합을 구해야 한다. 또 자료에 대한 설명과 계급의 경계를 살펴 빈칸의 도수를 판단해야 한다.",
@@ -955,30 +1045,35 @@
       "body": "다음은 어느 반 학생들의 통학 시간을 나타낸 도수분포표이다.\n\n계급 $0$분 이상 $5$분 미만: 도수 $2$\n계급 $5$분 이상 $10$분 미만: 도수 $4$\n계급 $10$분 이상 $15$분 미만: 도수 $3$\n계급 $15$분 이상 $20$분 미만: 도수 $1$\n\n이 표로 히스토그램과 도수분포다각형을 각각 나타냈다. 히스토그램의 직사각형의 넓이의 합을 $A$라 하고, 도수분포다각형과 도수 $0$을 나타내는 가로선 사이의 넓이를 $B$라 하자. $A$와 $B$를 바르게 짝 지은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$A=10$, $B=10$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M3",
           "no": 2,
           "text": "$A=50$, $B=25$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$A=50$, $B=50$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M3",
           "no": 4,
           "text": "$A=50$, $B=100$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -989,6 +1084,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "계급의 크기는 $5$이고 도수의 총합은 $10$이다. 따라서 $A=5\\times 10=50$이다. 도수분포다각형과 도수 $0$을 나타내는 가로선 사이의 넓이는 히스토그램의 직사각형의 넓이의 합과 같으므로 $B=50$이다. ②나 ④를 고르면 두 넓이가 다르다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:13:42.662801+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1016,30 +1112,35 @@
       "body": "다음은 화분에 있는 잎의 길이를 나타낸 도수분포표이다.\n\n계급 $10$cm 이상 $12$cm 미만: 도수 $3$\n계급 $12$cm 이상 $14$cm 미만: 도수 $5$\n계급 $14$cm 이상 $16$cm 미만: 도수 $4$\n\n이 표로 히스토그램과 도수분포다각형을 각각 나타냈다. 이에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "히스토그램에서 첫째 계급을 나타내는 직사각형의 가로 길이는 $3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-02-M3",
           "no": 2,
           "text": "도수분포다각형과 도수 $0$을 나타내는 가로선 사이의 넓이는 히스토그램의 직사각형의 넓이의 합의 반이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "히스토그램의 직사각형의 넓이의 합은 도수분포다각형과 도수 $0$을 나타내는 가로선 사이의 넓이와 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "히스토그램의 직사각형의 넓이의 합은 $12$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1050,6 +1151,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "계급의 크기는 $2$이고 도수의 총합은 $12$이다. 따라서 히스토그램의 직사각형의 넓이의 합은 $2\\times 12=24$이다. 이 넓이는 도수분포다각형과 도수 $0$을 나타내는 가로선 사이의 넓이와 같으므로 정답은 ③이다.\n\n②는 두 넓이가 같지 않고 한쪽이 다른 쪽의 반이라고 잘못 생각한 것이다. ①과 ⑤에서 첫째 계급을 나타내는 직사각형의 가로 길이는 $2$, 세로 길이는 $3$이다. ④의 넓이는 $12$가 아니라 $24$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:14:01.526524+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

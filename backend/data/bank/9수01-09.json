@@ -187,36 +187,123 @@
   ],
   "questions": [
     {
+      "approved_at": "2026-11-12T03:13:02.438033+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C1-정의이해",
+      "body": "다음 수직선 위의 점 $A$를 보자. 점 $A$와, 점 $A$가 나타내는 수보다 $1$ 작은 수를 나타내는 점 사이에 있는 점이 나타내는 수를 아래에서 모두 고른 것은?\n\n㉠ $\\sqrt{2}$  ㉡ $\\sqrt{4}$  ㉢ $\\frac{3}{2}$  ㉣ $\\sqrt{1}$",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "㉠만"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-09-M1",
+          "no": 2,
+          "text": "㉢만"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "㉠, ㉢"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "㉠, ㉡, ㉢"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "㉠, ㉢, ㉣"
+        }
+      ],
+      "created_at": "2026-11-12T03:05:48.576936+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $A$가 나타내는 수는 $2$이고, 그보다 $1$ 작은 수는 $1$이다. $1<\\sqrt{2}<2$이고 $1<\\frac{3}{2}<2$이므로 ㉠과 ㉢이 알맞다. $\\sqrt{4}=2$, $\\sqrt{1}=1$이므로 ㉡과 ㉣은 두 점 사이에 있지 않다.\n\n㉢만 고른 것은 무리수인 $\\sqrt{2}$를 수직선 위에 나타낼 수 없다고 잘못 생각한 경우이다. 무리수도 수직선 위의 한 점으로 나타낼 수 있다.",
+      "figure": {
+        "kind": "number_line",
+        "label_step": 1.0,
+        "max": 4.0,
+        "min": 0.0,
+        "points": [
+          {
+            "filled": null,
+            "label": "A",
+            "x": 2.0
+          }
+        ],
+        "rays": [],
+        "segments": [],
+        "tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T03:05:48.197338+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "두 점 사이에 있는 수를 고를 때 양 끝의 수와 같은 ㉡, ㉣을 제외해야 한다. 또 근호가 있어도 정수인 수와 무리수를 구별해야 한다.",
+      "id": "658bca88-38f3-4c3c-8bde-cc509a48a692",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:05:48.196981+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T15:40:43.133463+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수01-09-C1-정의이해",
       "body": "수직선에서 $2$를 나타내는 점과 $3$을 나타내는 점 사이의 모든 점을 색칠하였다. 또 $2$를 나타내는 점은 색칠하고, $3$을 나타내는 점은 색칠하지 않았다.\n\n이에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2$와 $3$을 나타내는 점은 모두 색칠되어 있지 않다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M1",
           "no": 2,
           "text": "색칠한 점 중에는 무리수를 나타내는 점이 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "색칠한 점 중에는 실수를 나타내지 않는 점이 있다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "색칠한 점이 나타내는 실수 $x$는 $2\\leq x<3$이고, $\\sqrt{5}$를 나타내는 점도 색칠되어 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -225,8 +312,9 @@
       ],
       "created_at": "2026-11-11T14:33:16.113218+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:31.153311+00:00",
       "explanation": "색칠한 점이 나타내는 실수 $x$는 $2$를 포함하고 $3$을 포함하지 않으므로 $2\\leq x<3$이다. 또 $4<5<9$이므로 $2<\\sqrt{5}<3$이다. 따라서 $\\sqrt{5}$를 나타내는 점도 색칠되어 있다.\n\n무리수를 나타내는 점이 없다고 생각했다면 수직선 위에는 무리수를 나타내는 점도 있다는 것을 놓친 것이다. 수직선 위의 모든 점은 실수를 나타낸다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:33:12.025231+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "색칠한 범위를 말로 제시하고, 양 끝점이 포함되는지 살펴 식으로 나타내어 판단하게 했다. 또한 그 범위에 있는 무리수를 나타내는 점도 확인해야 한다.",
@@ -237,7 +325,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:33:12.025107+00:00",
@@ -248,36 +336,133 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:13:02.484737+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C1-정의이해",
+      "body": "다음 수직선 위에 세 점 $A$, $B$, $C$가 있다. 옳은 설명은? 두 점 사이에는 그 두 점을 포함하지 않는다.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-09-M1",
+          "no": 1,
+          "text": "$A$와 $B$ 사이에는 유리수를 나타내는 점만 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-\\sqrt{9}$를 나타내는 점은 $A$와 $B$ 사이에 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-\\sqrt{5}$를 나타내는 점은 $A$와 $B$ 사이에 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$-\\sqrt{4}$를 나타내는 점은 $A$와 $B$ 사이에 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$-\\sqrt{2}$를 나타내는 점은 $A$와 $B$ 사이에 있다."
+        }
+      ],
+      "created_at": "2026-11-12T03:06:10.324855+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 $A$는 $-3$, $B$는 $-2$, $C$는 $-1$을 나타낸다. $4<5<9$이므로 $-3<-\\sqrt{5}<-2$이다. 따라서 $-\\sqrt{5}$를 나타내는 점은 $A$와 $B$ 사이에 있다.\n$-\\sqrt{9}=-3$과 $-\\sqrt{4}=-2$이므로 각각 $A$와 $B$를 나타낸다. 또 $-\\sqrt{2}$를 나타내는 점은 $B$와 $C$ 사이에 있다.\n수직선에는 유리수뿐 아니라 무리수를 나타내는 점도 있다. 따라서 $A$와 $B$ 사이에 유리수를 나타내는 점만 있다고 생각하면 안 된다.",
+      "figure": {
+        "kind": "number_line",
+        "label_step": 1.0,
+        "max": 0.0,
+        "min": -4.0,
+        "points": [
+          {
+            "filled": null,
+            "label": "A",
+            "x": -3.0
+          },
+          {
+            "filled": null,
+            "label": "B",
+            "x": -2.0
+          },
+          {
+            "filled": null,
+            "label": "C",
+            "x": -1.0
+          }
+        ],
+        "rays": [],
+        "segments": [],
+        "tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T03:06:09.992082+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "$A$와 $B$를 나타내는 수를 근호로 나타낸 보기를 넣어, 두 점 자체는 두 점 사이에 포함되지 않음을 따져 보게 했다.",
+      "id": "5540b8aa-2cef-4f24-843f-561bafd965bf",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:06:09.991853+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T15:40:43.162172+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수01-09-C1-정의이해",
       "body": "수직선 위에서 다음과 같이 점을 찾는다.\n\nㄱ. $0$을 나타내는 점에서 거리가 $0$인 점\nㄴ. $0$을 나타내는 점에서 거리가 $\\sqrt{17}$인 점\n\nㄱ과 ㄴ에서 찾은 점에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M1",
           "no": 1,
           "text": "ㄱ에서 찾은 점은 한 개이고, ㄴ에서 찾은 점은 없다. 무리수를 나타내는 점은 수직선에 없기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "ㄱ에서 찾은 점은 한 개이고, ㄴ에서 찾은 점은 두 개이다. ㄴ의 두 점은 각각 $-4$와 $-3$ 사이, $3$과 $4$ 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "ㄱ에서 찾은 점은 한 개이고, ㄴ에서 찾은 점은 두 개이다. ㄴ의 두 점은 각각 $-5$와 $-4$ 사이, $4$와 $5$ 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "ㄱ과 ㄴ에서 찾은 점은 각각 두 개이다. ㄴ의 두 점은 각각 $-5$와 $-4$ 사이, $4$와 $5$ 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -286,8 +471,9 @@
       ],
       "created_at": "2026-11-11T14:34:08.792907+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:31.180303+00:00",
       "explanation": "$0$에서 거리가 $0$인 점은 $0$을 나타내는 점 하나뿐이다. 따라서 ㄱ에서 찾은 점은 한 개이다.\n\n$4^2<17<5^2$이므로 $4<\\sqrt{17}<5$이다. ㄴ에서 찾은 두 점은 $-\\sqrt{17}$과 $\\sqrt{17}$을 나타낸다. 따라서 각각 $-5$와 $-4$ 사이, $4$와 $5$ 사이에 있다.\n\n①은 무리수를 나타내는 점이 수직선에 없다고 잘못 생각한 것이다. 무리수도 수직선 위의 점으로 나타낼 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:34:04.693428+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "ㄱ에서는 거리가 $0$일 때 점이 하나뿐임을 따져야 한다. ㄴ에서는 거리가 $0$보다 커 양쪽에 점이 있음을 함께 따져야 한다.",
@@ -298,7 +484,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:33:36.547733+00:00",
@@ -323,30 +509,35 @@
       "body": "수직선과 실수에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M1",
           "no": 1,
           "text": "수직선에는 유리수만 나타낼 수 있으므로 $\\sqrt{7}$을 나타내는 점은 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "수직선의 모든 점은 실수를 나타내며, $\\sqrt{7}$을 나타내는 점은 $1$과 $2$ 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "수직선의 모든 점은 실수를 나타내며, $\\sqrt{7}$을 나타내는 점은 $2$와 $3$ 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "수직선의 모든 점은 실수를 나타내며, $\\sqrt{7}$을 나타내는 점은 $3$과 $4$ 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -355,8 +546,9 @@
       ],
       "created_at": "2026-11-11T14:32:35.507327+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:31.211904+00:00",
       "explanation": "$2$를 제곱하면 $4$, $3$을 제곱하면 $9$입니다. 따라서 $\\sqrt{7}$은 $2$와 $3$ 사이에 있습니다. 수직선의 모든 점은 실수를 나타냅니다. 수직선에 유리수만 나타낼 수 있다고 생각하면 무리수인 $\\sqrt{7}$을 나타내는 점이 없다고 잘못 판단할 수 있습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:32:31.35722+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -367,10 +559,92 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:32:31.357052+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:13:02.519419+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C1-정의이해",
+      "body": "다음 그림은 수직선 위의 점 $P$를 나타낸 것이다. 점 $P$가 나타내는 수와 수직선에 대한 설명이 모두 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$1$이고, 무리수도 수직선 위의 한 점으로 나타낼 수 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\frac{3}{2}$이고, 무리수도 수직선 위의 한 점으로 나타낼 수 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-09-M1",
+          "no": 3,
+          "text": "$\\frac{3}{2}$이고, 무리수는 수직선 위의 점으로 나타낼 수 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2$이고, 무리수도 수직선 위의 한 점으로 나타낼 수 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$-\\frac{3}{2}$이고, 무리수도 수직선 위의 한 점으로 나타낼 수 있다."
+        }
+      ],
+      "created_at": "2026-11-12T03:04:36.105842+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점 $P$는 $1$과 $2$의 한가운데에 있으므로 나타내는 수는 $\\frac{3}{2}$이다. 무리수를 포함한 모든 실수는 수직선 위의 한 점으로 나타낼 수 있다. ③은 무리수를 수직선 위의 점으로 나타낼 수 없다고 잘못 생각한 것이다.",
+      "figure": {
+        "kind": "number_line",
+        "label_step": 1.0,
+        "max": 3.0,
+        "min": -1.0,
+        "points": [
+          {
+            "filled": null,
+            "label": "P",
+            "x": 1.5
+          }
+        ],
+        "rays": [],
+        "segments": [],
+        "tick_step": 0.5
+      },
+      "generated_at": "2026-11-12T03:04:35.937276+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "66aced77-9bc5-46ac-8a01-944ab59c277b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:04:35.936901+00:00",
           "issues": [],
           "number": 1
         }
@@ -384,30 +658,35 @@
       "body": "민지는 $\\sqrt{7}$을 수직선에 나타내려고 한다. $\\sqrt{7}$을 나타내는 점에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M1",
           "no": 1,
           "text": "$\\sqrt{7}$은 무리수이므로 수직선에 나타낼 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$-3$과 $-2$를 나타내는 두 점 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$1$과 $2$를 나타내는 두 점 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$2$와 $3$을 나타내는 두 점 사이에 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -416,8 +695,9 @@
       ],
       "created_at": "2026-11-11T14:32:52.069957+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:31.24838+00:00",
       "explanation": "$2^2=4$, $3^2=9$이고 $4<7<9$이므로 $2<\\sqrt{7}<3$이다. 따라서 정답은 ④이다. ①을 골랐다면 무리수는 수직선 위의 점으로 나타낼 수 없다고 잘못 생각한 것이다. 무리수도 수직선 위의 한 점으로 나타낼 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:32:47.969997+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -428,12 +708,103 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:32:47.969795+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:13:02.559697+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-09-C1-정의이해",
+      "body": "다음 수직선 위의 점 $A$가 나타내는 수의 양의 제곱근을 생각하자. 이 제곱근을 나타내는 점에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$0$과 $1$ 사이에 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$1$과 $2$ 사이에 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2$와 $3$ 사이에 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3$과 $4$ 사이에 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-09-M1",
+          "no": 5,
+          "text": "무리수이므로 수직선 위에 없다."
+        }
+      ],
+      "created_at": "2026-11-12T03:05:25.0021+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점 $A$가 나타내는 수는 $3$이므로 그 양의 제곱근은 $\\sqrt{3}$이다. $1^2<3<2^2$이므로 $1<\\sqrt{3}<2$이다. 무리수도 수직선 위의 한 점으로 나타낼 수 있으므로 ⑤는 옳지 않다.",
+      "figure": {
+        "kind": "number_line",
+        "label_step": 1.0,
+        "max": 5.0,
+        "min": -1.0,
+        "points": [
+          {
+            "filled": null,
+            "label": "A",
+            "x": 3.0
+          }
+        ],
+        "rays": [],
+        "segments": [],
+        "tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T03:05:24.622203+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "aa99647c-b3b8-430b-8c9e-c9cf36a94d5d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:05:05.558875+00:00",
+          "issues": [
+            "유리수인 점 A의 값을 읽고 제곱근을 계산하여 풀 수 있어, 무리수의 위치나 실수와 수직선의 관계에 대한 이해를 확인하지 못한다.",
+            "보기 ⑤: 오개념 M1은 근호가 있는 수가 모두 무리수라는 생각을 뜻하지 않는다. M1을 가진 학생도 -√2.25가 유리수임을 알면 ③을 고를 수 있다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:05:24.622042+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 2
@@ -445,30 +816,35 @@
       "body": "정수 $n$은 $4$, $5$, $6$, $7$, $8$ 중 하나이다. $3+\\sqrt{n}$이 $4+\\sqrt{3}$보다 작을 때, $n$의 값으로 가장 큰 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M2",
           "no": 5,
@@ -479,6 +855,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$3+\\sqrt{n}<4+\\sqrt{3}$은 $\\sqrt{n}<1+\\sqrt{3}$과 같다. 두 수가 모두 양수이므로 제곱하여 비교할 수 있다.\n\n$(1+\\sqrt{3})^2=4+2\\sqrt{3}$이다. $9<12<16$이므로 $3<2\\sqrt{3}<4$이다. 따라서 $7<4+2\\sqrt{3}<8$이다. 즉, $\\sqrt{7}<1+\\sqrt{3}<\\sqrt{8}$이므로 가장 큰 $n$은 $7$이다.\n\n⑤는 근호 안의 수만 비교하여 $n>3$이면 $3+\\sqrt{n}$이 항상 더 크다고 생각한 경우이다. 근호 밖의 수도 함께 비교해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:59:30.22239+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 수의 대소 관계를 주고 이를 만족하는 가장 큰 $n$을 찾게 했다. 여러 값을 단순히 거꾸로 계산하는 것이 아니라 근호가 있는 두 수를 비교해야 한다.",
@@ -514,30 +891,35 @@
       "body": "세 곳 $A$, $B$, $C$의 기온은 다음과 같다.\n\n- $A$: $0\\,^{\\circ}\\mathrm{C}$보다 $\\sqrt{5}\\,^{\\circ}\\mathrm{C}$ 낮다.\n- $B$: $0\\,^{\\circ}\\mathrm{C}$보다 $2\\,^{\\circ}\\mathrm{C}$ 낮다.\n- $C$: $0\\,^{\\circ}\\mathrm{C}$보다 $(3-\\sqrt{2})\\,^{\\circ}\\mathrm{C}$ 낮다.\n\n기온이 낮은 곳부터 높은 곳까지 차례로 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$A$, $B$, $C$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$A$, $C$, $B$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$B$, $A$, $C$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$B$, $C$, $A$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M3",
           "no": 5,
@@ -548,6 +930,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "각 기온은 $A$가 $-\\sqrt{5}\\,^{\\circ}\\mathrm{C}$, $B$가 $-2\\,^{\\circ}\\mathrm{C}$, $C$가 $(\\sqrt{2}-3)\\,^{\\circ}\\mathrm{C}$이다.\n\n$\\sqrt{5}>2$이므로 $-\\sqrt{5}<-2$이다. 또 $\\sqrt{2}>1$이므로 $\\sqrt{2}-3>-2$이다. 따라서 기온이 낮은 곳부터 $A$, $B$, $C$이다.\n\n⑤는 음수에서 절댓값이 클수록 더 크다고 잘못 생각하면 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:36:36.084506+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "문장으로 주어진 세 기온을 각각 수로 나타낸 뒤, 근호가 있는 음수의 대소를 비교해야 한다.",
@@ -575,30 +958,35 @@
       "body": "세 수 $-\\sqrt{7}$, $-3$, $-\\sqrt{10}$을 작은 수부터 큰 수의 순서로 나열한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$-3<-\\sqrt{7}<-\\sqrt{10}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M3",
           "no": 2,
           "text": "$-\\sqrt{7}<-3<-\\sqrt{10}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$-\\sqrt{10}<-3<-\\sqrt{7}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$-\\sqrt{10}<-\\sqrt{7}<-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -609,6 +997,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$7<9<10$이므로 $\\sqrt{7}<3<\\sqrt{10}$이다. 각 수에 음의 부호를 붙이면 크기의 순서가 반대가 되므로 $-\\sqrt{10}<-3<-\\sqrt{7}$이다. ②처럼 음의 부호를 붙이기 전의 수가 클수록 음수도 크다고 생각하지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:34:16.297075+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -636,30 +1025,35 @@
       "body": "$\\sqrt{5}<n<\\sqrt{2}+\\sqrt{3}$을 만족하는 정수 $n$은? 단, $\\sqrt{2}=1.414\\ldots$, $\\sqrt{3}=1.732\\ldots$, $\\sqrt{5}=2.236\\ldots$이다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M4",
           "no": 5,
@@ -670,6 +1064,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\sqrt{5}=2.236\\ldots$이고 $\\sqrt{2}+\\sqrt{3}=3.146\\ldots$이므로 그 사이에 있는 정수는 $3$이다. $\\sqrt{2}+\\sqrt{3}$을 $\\sqrt{5}$로 잘못 생각하면 두 수가 같아서 그 사이에 정수가 없다고 생각할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:34:40.59577+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -697,30 +1092,35 @@
       "body": "다섯 학생의 주장 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M2",
           "no": 1,
           "text": "$5>3$이므로 $2+\\sqrt{5}>3+\\sqrt{3}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M3",
           "no": 2,
           "text": "$\\sqrt{7}>2$이므로 $-\\sqrt{7}>-2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M4",
           "no": 3,
           "text": "$\\sqrt{2}+\\sqrt{7}=\\sqrt{9}$이므로 $\\sqrt{2}+\\sqrt{7}=3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$11>9$이므로 $\\sqrt{11}>4$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -731,6 +1131,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "① $\\sqrt{5}<2.5$, $\\sqrt{3}>1.5$이므로 $2+\\sqrt{5}<4.5<3+\\sqrt{3}$입니다. 근호 안의 수만 비교하면 안 됩니다.\n② $\\sqrt{7}>2$이므로 $-\\sqrt{7}<-2$입니다. 음수끼리는 절댓값이 큰 수가 더 작습니다.\n③ $\\sqrt{2}>1$, $\\sqrt{7}>2$이므로 $\\sqrt{2}+\\sqrt{7}>3$입니다. 근호 안의 두 수를 더하여 하나의 근호로 나타낼 수는 없습니다.\n④ $9<11<16$이므로 $3<\\sqrt{11}<4$입니다. $\\sqrt{11}>3$이라고 해서 $\\sqrt{11}>4$인 것은 아닙니다.\n⑤ $\\sqrt{6}<\\sqrt{7}$이므로 $-\\sqrt{6}>-\\sqrt{7}$입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:39:19.182615+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생이 두 수의 크기를 비교한 주장과 그 까닭을 보고, 옳은 주장을 고르게 했다.",
@@ -758,30 +1159,35 @@
       "body": "민지는 두 수 $-\\sqrt{5}$와 $-2$를 비교하며 다음과 같이 말했다.\n\n“$\\sqrt{5}>2$이므로 $-\\sqrt{5}$의 절댓값이 $-2$의 절댓값보다 커. 따라서 $-\\sqrt{5}>-2$야.”\n\n민지의 말에 대한 판단과 그 까닭으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M3",
           "no": 1,
           "text": "옳다. 음수도 절댓값이 큰 수가 더 크기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "틀리다. 음수끼리는 절댓값이 큰 수가 더 작기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "틀리다. 음수는 모두 양수보다 작기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "옳다. $-\\sqrt{5}$가 $-2$보다 $0$에 가깝기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -792,6 +1198,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$5>4$이므로 $\\sqrt{5}>2$이다. 하지만 음수끼리는 절댓값이 큰 수가 더 작다. 따라서 $-\\sqrt{5}<-2$이고, 민지의 말은 틀리다.\n\n①은 음수도 절댓값이 큰 수가 더 크다고 잘못 생각한 것이다. ④는 $-\\sqrt{5}$가 $-2$보다 $0$에 가깝다고 잘못 생각한 것이다. ③과 ⑤의 까닭만으로는 두 수 중 어느 수가 더 작은지 알 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T15:39:47.476844+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민지의 비교와 그 까닭을 보고 말의 옳고 그름을 판단하게 했다. 보기에는 판단과 까닭을 함께 제시했다.",
@@ -826,30 +1233,35 @@
       "body": "다음은 두 수의 크기를 비교한 학생들의 말이다. 옳은 말은 어느 것인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M2",
           "no": 1,
           "text": "$3>2$이므로 $1+\\sqrt{3}>2+\\sqrt{2}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M3",
           "no": 2,
           "text": "$\\sqrt{5}>2$이므로 $-\\sqrt{5}>-2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M4",
           "no": 3,
           "text": "$4+5=9$이므로 $\\sqrt{4}+\\sqrt{5}=\\sqrt{9}$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$7<9$이므로 $\\sqrt{7}<3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -860,6 +1272,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "① $1+\\sqrt{3}<3$이고 $2+\\sqrt{2}>3$이다. 근호 안의 수만 비교해서는 안 된다.\n② $\\sqrt{5}>2$이므로 $-\\sqrt{5}<-2$이다. 음수끼리는 절댓값이 큰 수가 더 작다.\n③ $\\sqrt{4}+\\sqrt{5}=2+\\sqrt{5}>3$이고 $\\sqrt{9}=3$이다. 두 제곱근의 합을 근호 안의 수를 더한 제곱근으로 바꿀 수 없다.\n④ $7<9$이므로 $\\sqrt{7}<\\sqrt{9}=3$이다.\n⑤ $10>9$이므로 $\\sqrt{10}>\\sqrt{9}=3$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:36:56.024526+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -887,30 +1300,35 @@
       "body": "두 수 $-\\sqrt{7}$과 $-3$의 크기 비교와 그 까닭이 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$-\\sqrt{7}>-3$. $\\sqrt{7}<3$이고 음수는 $0$에서 가까울수록 크기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-09-M3",
           "no": 2,
           "text": "$-\\sqrt{7}<-3$. $\\sqrt{7}<3$이고 음수는 $0$에서 멀수록 크기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$-\\sqrt{7}<-3$. $\\sqrt{7}>3$이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$-\\sqrt{7}=-3$. $\\sqrt{7}$을 반올림하여 일의 자리까지 나타내면 $3$이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -921,6 +1339,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$7<9$이므로 $\\sqrt{7}<3$이다. 음수는 $0$에서 가까울수록 크므로 $-\\sqrt{7}>-3$이다. ②처럼 음수가 $0$에서 멀수록 크다고 생각하면 크기를 반대로 판단하게 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T15:00:05.864686+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -951,6 +1370,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "주어진 범위를 이용하면 $2+\\sqrt{7}<4.646$이고 $3+\\sqrt{3}>4.732$이다. 따라서 $2+\\sqrt{7}<3+\\sqrt{3}$이다.\n\n두 수에서 $2+\\sqrt{3}$을 빼면 각각 $\\sqrt{7}-\\sqrt{3}$과 $1$이 된다. 주어진 범위에서 $\\sqrt{7}-\\sqrt{3}<2.646-1.732=0.914<1$이다. 두 수에서 같은 수를 빼도 두 수의 크기 관계는 바뀌지 않으므로 두 방법의 결과는 같다.\n\n근호 안의 수만 비교하면 근호 밖의 수가 두 수의 크기에 미치는 영향을 놓친다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:43:22.486639+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "물음 3에서 두 방법으로 비교한 결과가 같은 이유를 설명하게 한다. 두 수에서 같은 수를 빼도 크기 관계가 바뀌지 않음을 이용해야 한다.",
@@ -1012,6 +1432,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$5>4$이므로 $\\sqrt{5}>2$입니다. 두 수 앞에 마이너스를 붙이면 크고 작음이 바뀌므로 $-\\sqrt{5}<-2$입니다. 하지만 두 수를 각각 제곱하면 $5>4$입니다. 따라서 민지의 말은 옳지 않습니다.\n\n$-\\sqrt{5}$가 $-2$보다 $0$에서 더 멀리 있다고 해서 더 큰 것은 아닙니다. 두 수 모두 음수일 때는 $0$에서 더 멀리 있는 수가 더 작습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:45:19.420725+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "두 실수의 크기를 비교하고 각각 제곱한 수의 크기와 비교하여 민지의 말이 옳지 않음을 보이게 했다.",
@@ -1084,6 +1505,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$2^2=4<5$이므로 $2<\\sqrt{5}$입니다. 두 수에 각각 음의 부호를 붙이면 크기 관계가 바뀌므로 $-\\sqrt{5}<-2$입니다. 음수는 수직선에서 $0$으로부터 멀수록 작습니다. 따라서 $-\\sqrt{5}$가 $-2$보다 크다고 하면 잘못입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:42:41.116166+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1133,6 +1555,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$3<2^2$이므로 $\\sqrt{3}<2$이다. 따라서 $2+\\sqrt{3}<4$이다. 또 $1^2<2$이므로 $1<\\sqrt{2}$이고, $4<3+\\sqrt{2}$이다. 그러므로 $2+\\sqrt{3}<3+\\sqrt{2}$이다.\n근호 안의 수끼리만 비교하여 $2+\\sqrt{3}$이 더 크다고 판단하면, 근호 밖에 더해진 수의 크기를 살피지 않은 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:42:56.154112+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

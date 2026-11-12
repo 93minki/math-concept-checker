@@ -1,4 +1,5 @@
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -54,9 +55,10 @@ def test_figure_references_and_variants(
     first_line = next(
         line for line in text.splitlines() if line.startswith("| 9수03-19-C1 |")
     )
+    cleaned_line = re.sub(r"\s*\[그림:[^]]+\]", "", first_line)
     text = text.replace(
         first_line,
-        first_line[:-2] + " [그림: 보기, number_line, coordinate_plane] |",
+        cleaned_line[:-2] + " [그림: 보기, number_line, coordinate_plane] |",
         1,
     )
     text = text.replace("| M1 | C1 |", "| M1 | C1, C2 |")

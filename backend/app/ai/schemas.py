@@ -2,10 +2,18 @@ import re
 from pathlib import Path
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, ConfigDict, Field
 
 FigureKind = Literal[
-    "number_line", "coordinate_plane", "bar_chart", "frequency", "boxplot", "scatter"
+    "number_line",
+    "coordinate_plane",
+    "bar_chart",
+    "frequency",
+    "boxplot",
+    "scatter",
+    "geometry",
+    "solid",
+    "net",
 ]
 
 
@@ -70,6 +78,23 @@ class QuadraticGraph(FigureBase):
     label: str | None
 
 
+class GraphPoint(FigureBase):
+    x: float
+    y: float
+
+
+class PolylineGraph(FigureBase):
+    type: Literal["polyline"]
+    points: list[GraphPoint]
+    label: str | None
+
+
+class InverseGraph(FigureBase):
+    type: Literal["inverse"]
+    k: float
+    label: str | None
+
+
 class CoordinatePlane(FigureBase):
     kind: Literal["coordinate_plane"]
     x_min: float
@@ -79,13 +104,19 @@ class CoordinatePlane(FigureBase):
     tick_step: float
     show_tick_labels: bool
     points: list[CoordinatePoint]
-    graphs: list[LinearGraph | VerticalGraph | QuadraticGraph]
+    graphs: list[
+        LinearGraph | VerticalGraph | QuadraticGraph | PolylineGraph | InverseGraph
+    ]
+    x_label: str | None = None
+    y_label: str | None = None
+    y_tick_step: float | None = None
 
 
 class BarChart(FigureBase):
     kind: Literal["bar_chart"]
     categories: list[str]
     values: list[float]
+    y_min: float | None = None
     y_max: float
     y_step: float
     x_label: str | None
@@ -96,7 +127,10 @@ class Frequency(FigureBase):
     kind: Literal["frequency"]
     class_start: float
     class_width: float
-    frequencies: list[StrictInt]
+    frequencies: list[float]
+    relative: bool | None = None
+    compare_frequencies: list[float] | None = None
+    series_labels: list[str] | None = None
     show_bars: bool
     show_polygon: bool
     y_step: float
@@ -139,7 +173,121 @@ class Scatter(FigureBase):
     points: list[ScatterPoint]
 
 
-Figure = NumberLine | CoordinatePlane | BarChart | Frequency | Boxplot | Scatter
+class GeometryPoint(FigureBase):
+    id: str
+    x: float
+    y: float
+    show_name: bool
+    dot: bool
+
+
+class GeometrySegment(FigureBase):
+    from_: str = Field(alias="from")
+    to: str
+    dashed: bool
+    ticks: int
+    parallel_marks: int
+    label: str | None
+
+
+class GeometryLine(FigureBase):
+    from_: str = Field(alias="from")
+    through: str
+    type: Literal["line", "ray"]
+    dashed: bool
+    parallel_marks: int
+    label: str | None
+
+
+class GeometryPolygon(FigureBase):
+    vertices: list[str]
+    shaded: bool
+
+
+class GeometryCircle(FigureBase):
+    center: str
+    radius: float
+    dashed: bool
+    points_on: list[str]
+
+
+class GeometryArc(FigureBase):
+    center: str
+    from_: str = Field(alias="from")
+    to: str
+    trace: bool
+    label: str | None
+
+
+class GeometryAngle(FigureBase):
+    vertex: str
+    from_: str = Field(alias="from")
+    to: str
+    label: str | None
+    right: bool
+    marks: Literal[0, 1, 2, 3]
+
+
+class Geometry(FigureBase):
+    kind: Literal["geometry"]
+    points: list[GeometryPoint]
+    segments: list[GeometrySegment]
+    lines: list[GeometryLine]
+    polygons: list[GeometryPolygon]
+    circles: list[GeometryCircle]
+    arcs: list[GeometryArc]
+    angles: list[GeometryAngle]
+
+
+class DimensionLabel(FigureBase):
+    part: Literal["width", "depth", "height", "radius", "top_radius", "slant"]
+    text: str
+
+
+class Solid(FigureBase):
+    kind: Literal["solid"]
+    shape: Literal[
+        "cuboid",
+        "prism",
+        "pyramid",
+        "frustum",
+        "cylinder",
+        "cone",
+        "cone_frustum",
+        "sphere",
+        "hemisphere",
+    ]
+    base_sides: int | None
+    width: float | None
+    depth: float | None
+    height: float | None
+    radius: float | None
+    top_radius: float | None
+    vertex_names: list[str] | None
+    labels: list[DimensionLabel]
+    show_axis: bool
+
+
+class Net(FigureBase):
+    kind: Literal["net"]
+    shape: Literal["cylinder", "cone"]
+    radius: float
+    height: float | None
+    slant: float | None
+    labels: list[DimensionLabel]
+
+
+Figure = (
+    NumberLine
+    | CoordinatePlane
+    | BarChart
+    | Frequency
+    | Boxplot
+    | Scatter
+    | Geometry
+    | Solid
+    | Net
+)
 
 
 class Concept(BaseModel):

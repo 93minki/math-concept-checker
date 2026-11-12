@@ -68,6 +68,41 @@
       "assessment_item_id": "9수03-13-C1-오개념판별",
       "attempts": [
         {
+          "at": "2026-11-12T04:40:10.675609+00:00",
+          "issues": [
+            "M1에 해당하는 보기는 있지만, 세 쌍의 대응변의 길이의 차가 같으면 닮음이라고 보는 오개념 M2를 판별할 보기가 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:41:05.861633+00:00",
+          "issues": [
+            "M1을 판별하는 보기는 있지만, 세 쌍의 대응변의 길이의 차가 같으면 닮음이라고 보는 M2를 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:41:58.430914+00:00",
+          "issues": [
+            "M1은 판별할 수 있지만, 세 쌍의 대응변의 길이의 차가 같으면 닮음이라고 보는 M2를 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:41:59.453494+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
           "at": "2026-11-11T11:52:19.952506+00:00",
           "issues": [
             "generate: RateLimitError"
@@ -132,6 +167,41 @@
       "assessment_item_id": "9수03-13-C1-오개념판별",
       "attempts": [
         {
+          "at": "2026-11-12T04:09:28.129907+00:00",
+          "issues": [
+            "세 변의 길이의 차가 같으면 닮음이라고 보는 오개념 M2를 판별할 수 있는 보기가 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:10:14.489360+00:00",
+          "issues": [
+            "figure_geometry_ticks: Invalid figure: geometry_ticks",
+            "figure_geometry_lengths: Invalid figure: geometry_lengths"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:11:10.896232+00:00",
+          "issues": [
+            "M1을 가려내는 보기는 있지만, 세 변의 길이의 차가 같으면 닮음이라고 보는 오개념 M2를 가려낼 조건이나 보기가 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:11:10.989757+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
           "at": "2026-11-11T11:51:44.160433+00:00",
           "issues": [
             "generate: RateLimitError"
@@ -190,6 +260,40 @@
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
       "resolved_at": "2026-11-11T13:01:23.239687+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T04:04:20.141285+00:00",
+          "issues": [
+            "해설에서 EF=10이면 닮고 EF=2.8이면 닮지 않는다고 단정한 것은 틀리다. 예를 들어 주어진 조건과 BC=1.4를 함께 만족할 때는 EF=10이면 닮지 않고 EF=2.8이면 닮는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:04:46.423558+00:00",
+          "issues": [
+            "M2에 해당하는 보기만 있고 M1을 판별할 조건이나 보기가 없어 두 오개념을 모두 가려내려는 의도를 충족하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:05:37.594974+00:00",
+          "issues": [
+            "M1을 드러내는 보기는 있지만, 세 변의 길이의 차가 같으면 닮음이라고 보는 M2를 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:05:37.697849+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T04:39:17.757548+00:00",
       "variant": 1
     },
     {
@@ -644,6 +748,41 @@
       "assessment_item_id": "9수03-13-C2-성질적용",
       "attempts": [
         {
+          "at": "2026-11-12T04:05:11.328419+00:00",
+          "issues": [
+            "application-a에 해당하지 않는다. 주어진 대응변의 길이의 비를 이용해 다른 대응변의 길이를 구하는 일반적인 닮음 문제이며, 결과로부터 조건을 거꾸로 찾지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:05:57.279808+00:00",
+          "issues": [
+            "닮음을 확인한 뒤 주어진 세 변의 길이를 비례식에 대입해 AD를 구하는 일반적인 길이 구하기 문제이다. DE를 6으로 만들도록 묻는 표현만으로는 결과에서 조건을 거꾸로 찾는 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:06:29.651818+00:00",
+          "issues": [
+            "주어진 DE의 길이로 AD의 길이를 구하는 것은 대응변의 비를 이용하는 일반적인 길이 구하기이다. 결과를 거꾸로 이용해 조건을 찾는 문제로 구별되지 않아 application-a를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:06:29.726422+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T04:39:57.973847+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "attempts": [
+        {
           "at": "2026-11-11T11:53:49.719943+00:00",
           "issues": [
             "generate: RateLimitError"
@@ -841,30 +980,35 @@
       "body": "다음은 다섯 학생의 주장이다. 옳은 주장을 한 학생은 누구인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M1",
           "no": 1,
           "text": "민수: $AB=5$, $AC=BC=4$인 $\\triangle ABC$가 있다. 점 $D$는 $\\overline{BC}$ 위의 점이고 $B$, $C$와 다르며, $AD=4$이다. $AB$는 공통이고 $AC=AD$이며 $\\angle ABC=\\angle ABD$이므로 $\\triangle ABC$와 $\\triangle ABD$는 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M2",
           "no": 2,
           "text": "서연: 세 변의 길이가 각각 $4$, $5$, $6$인 삼각형과 각각 $6$, $7$, $8$인 삼각형은 짝 지은 세 쌍의 변의 길이의 차가 모두 $2$이므로 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "지우: $AB=3$, $AC=4$, $DE=6$, $DF=8$이고 $\\angle BAC=\\angle EDF$이면 $\\triangle ABC$와 $\\triangle DEF$는 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "현우: 두 삼각형에서 두 쌍의 각의 크기가 각각 같아도 변의 길이를 모르면 닮음인지 알 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -873,8 +1017,9 @@
       ],
       "created_at": "2026-11-11T13:02:42.846174+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.467144+00:00",
       "explanation": "③에서 $AB:DE=AC:DF=1:2$이고, 두 변이 이루는 각의 크기도 같다. 따라서 두 삼각형은 닮음이다.\n①에서 같은 크기인 각은 길이가 같은 두 변이 이루는 각이 아니다. 실제로 $\\triangle ABC$는 길이가 같은 두 변이 있지만, $\\triangle ABD$는 세 변의 길이가 모두 다르므로 닮음이 아니다.\n②에서 세 쌍의 변의 길이의 차는 모두 $2$이지만, $4:6$과 $5:7$은 같지 않다. 길이의 차가 같다고 해서 닮음은 아니다.\n④에서는 두 쌍의 각의 크기가 각각 같으므로 닮음이라고 할 수 있다. ⑤에서는 한 쌍의 각만으로는 닮음인지 알 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:02:42.746754+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 주장을 비교하여 옳은 주장을 고르게 했다. 특히 ①과 ②에서 두 변과 끼인각이 아닌 각을 이용한 주장과 변의 길이의 차를 이용한 주장을 각각 판단해야 한다.",
@@ -885,12 +1030,205 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:02:42.746607+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:55.544206+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "body": "다음 그림에서 $\\angle ABC=\\angle DEF$이다. 그림의 삼각형과 닮음에 관해 말한 학생들의 주장 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "$AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이므로 그림의 두 삼각형은 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 2,
+          "text": "그림과 관계없이, 세 변의 길이가 $4$, $5$, $6$인 삼각형과 $6$, $7$, $8$인 삼각형은 세 변의 길이의 차가 각각 $2$이므로 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "그림의 두 삼각형은 크기가 같은 각이 한 쌍 있으므로 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "그림의 두 삼각형은 가장 짧은 변의 길이의 비와 가장 긴 변의 길이의 비가 다르므로 닮음이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "그림의 두 삼각형에서 가장 긴 변의 길이의 비가 $7:16$이므로 두 삼각형은 닮음이고 닮음비는 $7:16$이다."
+        }
+      ],
+      "created_at": "2026-11-12T04:08:38.370675+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T04:18:30.040896+00:00",
+      "explanation": "두 삼각형에서 가장 짧은 변의 길이의 비는 $3:10$이고, 가장 긴 변의 길이의 비는 $7:16$이다. 이 두 비가 다르므로 두 삼각형은 닮음이 아니다. 따라서 ④가 옳다.\n①에서 크기가 같은 각은 길이의 비가 같은 두 변 사이에 있지 않다. 이 사실만으로 닮음이라고 할 수 없다. ②에서 제시한 두 삼각형은 세 변의 길이의 차가 모두 $2$이지만, 작은 변부터 비교한 길이의 비는 모두 같지 않다. 따라서 닮음이 아니다. ③과 ⑤도 제시한 사실만으로는 닮음이라고 할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.642857,
+            "y": 1.855769
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 10.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 24.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 11.428571,
+            "y": 9.897433
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "7",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "14",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "16",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:08:37.977333+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 주장 중 옳은 것을 고르게 한다. 두 변의 비와 끼인각이 아닌 각을 이용한 주장과 세 변의 길이의 차를 이용한 주장을 구별해야 한다.",
+      "id": "ebbe6a04-d9f8-4b79-b641-3eeb5f30f745",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T04:07:44.114023+00:00",
+          "issues": [
+            "세 쌍의 대응변의 길이의 차가 같으면 닮음이라고 보는 오개념 M2를 판별할 수 있는 보기가 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:08:37.977037+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 1
@@ -902,30 +1240,35 @@
       "body": "다음은 한 학생이 공책에 적은 두 메모이다.\n\n첫째 메모: $AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이면, $\\triangle ABC$와 $\\triangle DEF$는 반드시 닮음이다.\n\n둘째 메모: 세 변의 길이가 각각 $3$, $4$, $5$인 삼각형과 $5$, $6$, $7$인 삼각형은 반드시 닮음이다.\n\n두 메모에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M1",
           "no": 1,
           "text": "첫째 메모에서는 두 쌍의 변의 길이의 비가 같고 한 쌍의 각의 크기가 같으므로 판단이 언제나 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M2",
           "no": 2,
           "text": "둘째 메모에서는 세 쌍의 변의 길이가 각각 $2$씩 차이 나므로 두 삼각형은 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "첫째 메모에서 크기가 같다고 한 각은 길이의 비를 비교한 두 변 사이의 각이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M1",
           "no": 4,
           "text": "첫째 메모에서는 나머지 한 쌍의 변의 길이의 비 $BC:EF$도 반드시 $AB:DE$와 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M2",
           "no": 5,
@@ -934,8 +1277,9 @@
       ],
       "created_at": "2026-11-11T13:05:59.874469+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.507368+00:00",
       "explanation": "첫째 메모에서 크기가 같다고 한 각은 길이의 비를 비교한 두 변 사이의 각이 아니다. 따라서 주어진 내용만으로는 닮음인지 판별할 수 없다.\n\n예를 들어 $AB=AC$이고 $\\angle ABC=\\angle ACB=70^\\circ$인 삼각형 $ABC$를 생각하자. 점 $D$는 선분 $BC$ 위에 있고, $\\angle BAD=10^\\circ$이다. $\\triangle ABD$와 $\\triangle ACD$에서는 $AB=AC$, $AD=AD$, $\\angle ABD=\\angle ACD$이다. 하지만 두 삼각형의 세 각의 크기는 각각 $10^\\circ$, $70^\\circ$, $100^\\circ$와 $30^\\circ$, $70^\\circ$, $80^\\circ$이므로 닮음이 아니다. ①과 ④는 끼인각이 아닌 각이 같아도 닮음이라고 잘못 생각한 것이다.\n\n둘째 메모에서는 세 변의 길이가 각각 $2$씩 차이 나지만, $3:5$와 $4:6$은 같지 않다. ②와 ⑤는 세 변의 길이의 차가 같으면 닮음이라고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:05:59.561793+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "한 학생이 적은 두 메모를 보고 그 판단에 대한 설명이 옳은지 살펴보게 했다.",
@@ -946,7 +1290,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:03:55.079708+00:00",
@@ -979,30 +1323,35 @@
       "body": "다음은 두 삼각형의 닮음에 대한 학생들의 말이다. 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "두 쌍의 각의 크기가 각각 같으면 두 삼각형은 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M1",
           "no": 2,
           "text": "$AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이면 $\\triangle ABC$와 $\\triangle DEF$는 반드시 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M2",
           "no": 3,
           "text": "세 변의 길이가 $3$, $4$, $5$인 삼각형과 $5$, $6$, $7$인 삼각형은 세 변의 길이 차가 모두 $2$이므로 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "한 쌍의 각의 크기가 같으면 두 삼각형은 반드시 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1011,8 +1360,9 @@
       ],
       "created_at": "2026-11-11T13:01:23.051417+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.538859+00:00",
       "explanation": "① 두 삼각형에서 두 쌍의 각의 크기가 각각 같으면 두 삼각형은 닮음이다.\n② 길이의 비가 같은 두 쌍의 변은 $\\overline{AB}$와 $\\overline{DE}$, $\\overline{AC}$와 $\\overline{DF}$이다. 이 변의 끼인각인 $\\angle BAC$와 $\\angle EDF$가 각각 같은지는 알 수 없다. 끼인각이 아닌 각의 크기가 같다는 것만으로는 닮음이라고 할 수 없다.\n③ 세 변의 길이 차가 모두 $2$이지만, $3:5$, $4:6$, $5:7$은 서로 같지 않다. 길이의 차가 같다는 것을 길이의 비가 같다는 것과 잘못 생각했다.\n④ 한 쌍의 각의 크기만 같아서는 닮음이라고 할 수 없다.\n⑤ 두 쌍의 변의 길이의 비만 같아서는 닮음이라고 할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:01:22.702279+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1023,7 +1373,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:01:22.702179+00:00",
@@ -1034,36 +1384,392 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:45:40.142138+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "body": "다음 그림을 보고 삼각형의 닮음에 관하여 설명한 것 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "두 삼각형에서 두 쌍의 변의 길이의 비가 같고 끼인각이 아닌 한 쌍의 각의 크기가 같으면 항상 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 2,
+          "text": "$\\triangle ABC$와 $\\triangle DEF$는 세 쌍의 변의 길이의 차가 모두 $2$이므로 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\triangle ABC$와 $\\triangle DEF$는 가장 긴 변의 길이가 다르므로 닮음이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\triangle ABC$와 $\\triangle DEF$는 길이가 짧은 변부터 차례로 비교할 때 $4:6$과 $5:7$이 다르므로 닮음이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\triangle ABC$와 $\\triangle DEF$는 가장 짧은 변의 길이의 비가 $4:6$이므로 닮음이다."
+        }
+      ],
+      "created_at": "2026-11-12T04:39:17.747224+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "① 두 쌍의 변의 길이의 비가 같더라도, 크기가 같은 각이 그 두 변의 끼인각이 아니면 항상 닮음인 것은 아니다.\n② 길이의 차가 모두 $2$로 같아도 닮음이라고 할 수 없다.\n③ 가장 긴 변의 길이가 달라도 닮음일 수 있다.\n④ 두 삼각형에서 길이가 짧은 변부터 차례로 비교하면 $4:6$과 $5:7$이 다르므로 닮음이 아니다.\n⑤ 한 쌍의 변의 길이의 비만으로는 닮음을 알 수 없다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 3.75,
+            "y": 3.30718914
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 16.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 12.8125,
+            "y": 5.08329
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "7",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:39:17.569833+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4ba8ef1f-bd32-4cec-8692-6e584ade76a6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:38:37.203449+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:39:17.569073+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:55.591181+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-오개념판별",
+      "body": "다음 그림을 보고 삼각형의 닮음에 관하여 말한 학생 중 옳게 말한 학생은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "민수: 두 삼각형에서 두 쌍의 변의 길이의 비가 같고, 그 끼인각이 아닌 한 쌍의 각의 크기가 같으면 항상 닮음이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 2,
+          "text": "지은: 두 삼각형에서 짝 지은 세 쌍의 변의 길이의 차가 모두 같으면 항상 닮음이야."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "서준: 그림의 두 삼각형은 세 쌍의 변의 길이의 비가 모두 같으므로 닮음이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "하은: 그림의 두 삼각형은 크기가 다르므로 닮음이 아니야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "유진: 두 삼각형에서 한 쌍의 각의 크기만 같으면 항상 닮음이야."
+        }
+      ],
+      "created_at": "2026-11-12T04:06:55.69841+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "③ $AB:DE=AC:DF=BC:EF=1:2$이므로 두 삼각형은 닮음이다. ①에서 두 쌍의 변의 길이의 비가 같아도, 크기가 같은 각이 그 두 변의 끼인각이 아니면 반드시 닮음인 것은 아니다. ②에서 세 쌍의 변의 길이의 차가 같아도 변의 길이의 비가 모두 같지는 않을 수 있다. 예를 들어 세 변의 길이가 각각 $3, 4, 5$인 삼각형과 $5, 6, 7$인 삼각형은 닮음이 아니다. ④ 크기가 달라도 모양이 같으면 닮음이다. ⑤ 한 쌍의 각의 크기만 같아서는 닮음인지 알 수 없다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 7.0,
+            "y": 6.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:06:55.573946+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c06beeca-8616-4fac-a4a0-d674eace06a1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:06:25.439313+00:00",
+          "issues": [
+            "보기 ②와 ③: M1을 가진 학생도 그림의 두 삼각형이 닮음이 아니라는 ③을 옳다고 판단할 수 있다. 따라서 ②와 ③을 모두 옳다고 볼 수 있어 M1을 판별하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:06:55.573457+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:47.689191+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C1-오개념판별",
       "body": "다음 중 주어진 내용만으로 두 삼각형이 반드시 닮음이라고 할 수 있는 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "한 삼각형의 세 변의 길이는 $3$, $4$, $5$이고, 다른 삼각형의 세 변의 길이는 $6$, $8$, $11$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M1",
           "no": 2,
           "text": "$\\triangle ABC$와 $\\triangle DEF$에서 $AB=4$, $AC=3$, $DE=8$, $DF=6$이고, $\\angle ABC=\\angle DEF=30^\\circ$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "한 삼각형의 세 변의 길이는 $4$, $6$, $7$이고, 다른 삼각형의 세 변의 길이는 $8$, $12$, $14$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M2",
           "no": 4,
           "text": "한 삼각형의 세 변의 길이는 $4$, $5$, $6$이고, 다른 삼각형의 세 변의 길이는 $6$, $7$, $8$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1072,8 +1778,9 @@
       ],
       "created_at": "2026-11-11T13:01:53.730104+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.578991+00:00",
       "explanation": "③에서는 세 변의 길이의 비가 모두 $1:2$이므로 두 삼각형은 닮음이다.\n②에서 길이의 비가 같은 두 변 사이의 각은 주어지지 않았다. 따라서 닮음이라고 할 수 없다. ④에서는 짝 지은 세 변의 길이의 차가 모두 $2$이지만, 길이의 비는 모두 같지 않다. 차가 같다는 것만으로는 닮음이라고 할 수 없다. ①과 ⑤에서도 세 변의 길이의 비가 모두 같지 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:01:53.67761+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1084,7 +1791,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:01:53.677518+00:00",
@@ -1102,8 +1809,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:07:14.916366+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.435302+00:00",
       "explanation": "$AB:AD=AC:AE=2:1$이고, $\\angle BAC=\\angle DAE$이다. 따라서 두 쌍의 변과 그 끼인각을 이용하면 두 삼각형은 닮음이다. 이때 변 $AB$는 $AD$와, 변 $AC$는 $AE$와 짝을 이룬다.\n\n$BC:DE$도 $2:1$이므로 세 쌍의 변을 이용해도 두 삼각형은 닮음이다. 이 방법에서도 $AB$는 $AD$와, $AC$는 $AE$와 짝을 이루므로 꼭짓점은 두 방법 모두 $A$와 $A$, $B$와 $D$, $C$와 $E$로 짝 지어진다.\n\n두 쌍의 변을 이용할 때는 크기가 같은 각이 그 변들의 끼인각인지 확인해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:07:14.895023+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "두 학생의 방법을 각각 사용한 뒤, 두 방법에서 짝 지은 꼭짓점이 같은 이유를 비교하여 설명하게 한다.",
@@ -1140,7 +1848,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:07:14.894784+00:00",
@@ -1151,6 +1859,342 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:14:55.618055+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "body": "그림에서 점 $D$는 선분 $AB$의 양 끝이 아닌 점이고, 점 $E$는 선분 $AC$의 양 끝이 아닌 점이다.\n\n(1) $\\triangle ADE$와 $\\triangle ABC$는 닮음인지 판별하고, 그 이유를 쓰시오.\n\n(2) 점 $D$를 선분 $AB$의 양 끝이 아닌 아무 곳에나 다시 잡고, 점 $E$도 선분 $AC$의 양 끝이 아닌 곳에 $\\dfrac{BD}{BA}=\\dfrac{CE}{CA}$가 되도록 다시 잡는다. 이때에도 두 삼각형에 대해 (1)에서 판별한 결과가 항상 성립하는지 이유와 함께 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:05:32.355361+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "(1) 그림에서 $AD:AB=3:6=1:2$, $AE:AC=2:4=1:2$이다. 또 두 쌍의 변이 이루는 각은 모두 $\\angle A$이다. 따라서 $\\triangle ADE$와 $\\triangle ABC$는 닮음이다.\n\n(2) $\\dfrac{BD}{BA}=\\dfrac{CE}{CA}=k$라고 하면, $\\dfrac{AD}{AB}=1-k$, $\\dfrac{AE}{AC}=1-k$이다. 두 쌍의 변의 길이의 비가 같고 그 변들이 이루는 각이 같으므로 두 삼각형은 항상 닮음이다.\n\n두 쌍의 변의 길이의 비가 같더라도, 그 변들이 이루는 각이 같다는 것을 확인해야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 2.0,
+            "y": 3.464101615
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 1.0,
+            "y": 1.732050808
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:05:31.960566+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "(2)에서 점 D를 선분 AB의 양 끝이 아닌 아무 곳에나 잡아도 두 삼각형이 닮음인 이유를 설명하게 한다.",
+      "id": "f96b7df2-f18a-4431-8bee-f19a7b162c61",
+      "model": "gpt-6.1-terra",
+      "model_answer": "(1) $AD:AB=3:6=1:2$, $AE:AC=2:4=1:2$이고, 두 쌍의 변이 이루는 각은 모두 $\\angle A$이다. 따라서 $\\triangle ADE$와 $\\triangle ABC$는 닮음이다.\n\n(2) 항상 닮음이다. $\\dfrac{BD}{BA}=\\dfrac{CE}{CA}=k$라고 하면 $\\dfrac{AD}{AB}=1-k=\\dfrac{AE}{AC}$이다. 이 두 쌍의 변이 이루는 각은 모두 $\\angle A$이므로 두 삼각형은 닮음이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "(1)에서 두 쌍의 변의 길이의 비가 같고 그 변들이 이루는 각이 같음을 밝혀 닮음으로 판별한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-13-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "(2)에서 주어진 비가 같음을 이용하여 $\\dfrac{AD}{AB}=\\dfrac{AE}{AC}$임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "(2)에서 두 쌍의 변이 이루는 각이 같음을 밝혀 두 삼각형이 항상 닮음이라고 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:05:31.960089+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:55.651988+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "body": "그림과 같이 두 삼각형 $ABC$, $DEF$가 있다.\n\n(1) 두 삼각형은 닮음인지 판별하고, 그 이유를 쓰시오.\n\n(2) 점 $A$, $B$, $D$, $E$는 그대로 두고, $AC=3$, $DF=6$을 유지하면서 점 $C$와 $F$를 다시 잡는다. 이때 $\\angle BAC$와 $\\angle EDF$의 크기의 합은 $120°$이다. 두 삼각형에 대해 (1)의 결과가 항상 성립하는가? 그렇지 않다면 반례를 들어 이유를 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:06:11.68144+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "(1) $AB:DE=AC:DF=1:2$이고, 그 끼인각인 $\\angle BAC$와 $\\angle EDF$의 크기가 모두 $60°$이므로 두 삼각형은 닮음이다.\n\n(2) 두 각의 크기가 각각 $40°$, $80°$인 경우를 생각할 수 있다. 이등변삼각형의 성질을 이용하면 $\\triangle ABC$의 세 각은 $40°$, $70°$, $70°$이고, $\\triangle DEF$의 세 각은 $80°$, $50°$, $50°$이다. 같은 크기의 각이 없으므로 두 삼각형은 닮음이 아니다.\n\n두 쌍의 변의 길이의 비가 같더라도 끼인각이 아닌 각의 크기가 같은 것만으로 닮음이라고 할 수는 없다. 또 변의 길이의 차가 같은 것과 길이의 비가 같은 것은 다르다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": "60°",
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.5,
+            "y": 2.598076
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 11.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 8.0,
+            "y": 5.196152
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:06:11.598784+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "(2)에서 두 각의 크기의 합이 $120°$일 때에도 닮음이 항상 성립한다는 생각이 틀렸음을 반례로 설명하게 한다.",
+      "id": "33f80833-68fd-407a-9eaa-1669d2f6f930",
+      "model": "gpt-6.1-terra",
+      "model_answer": "(1) $AB:DE=AC:DF=1:2$이고 그 끼인각의 크기가 같으므로 $\\triangle ABC\\sim\\triangle DEF$이다.\n\n(2) 항상 성립하지는 않는다. 예를 들어 $\\angle BAC=40°$, $\\angle EDF=80°$이면 두 각의 크기의 합은 $120°$이다. 이때 두 삼각형의 세 각의 크기는 각각 $40°$, $70°$, $70°$와 $80°$, $50°$, $50°$이므로 두 삼각형은 닮음이 아니다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 쌍의 변의 길이의 비와 그 끼인각을 근거로 두 삼각형이 닮음이라고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-13-M1",
+            "9수03-13-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "(2)에서 두 각의 크기의 합이 $120°$인 반례를 제시한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "제시한 반례에서 두 삼각형이 닮음이 아닌 이유를 각의 크기 등을 이용하여 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-13-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:06:11.598311+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:47.749182+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C1-이유설명",
@@ -1158,8 +2202,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:07:41.152547+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.502025+00:00",
       "explanation": "$\\triangle ABC$와 $\\triangle DEF$는 세 쌍의 변의 길이의 비가 모두 $1:2$이므로 닮음이다.\n\n$\\triangle ABC$와 $\\triangle GHI$에서 짧은 변부터 차례로 짝 지으면 길이의 차는 모두 $2$이다. 하지만 짧은 변끼리의 길이의 비는 $3:5$이고, 그다음으로 짧은 변끼리의 길이의 비는 $4:6$이므로 두 삼각형은 닮음이 아니다. 길이의 차가 같은 것과 길이의 비가 같은 것은 다르다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:07:40.959111+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "2번에서 주어진 삼각형 중 두 개를 골라 학생의 말이 틀렸음을 설명하게 한다. 길이의 차가 모두 같아도 닮음이 아닌 예를 찾아야 한다.",
@@ -1196,7 +2241,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:07:40.958983+00:00",
@@ -1207,6 +2252,187 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:14:55.690971+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "body": "다음 그림의 두 삼각형 $\\triangle ABC$와 $\\triangle DEF$가 닮음인지 판별하고, 그 이유를 한두 문장으로 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:04:37.647571+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB:DE=4:8=1:2$, $AC:DF=3:6=1:2$이고, 두 변의 끼인각은 각각 $60°$로 같다. 따라서 $\\triangle ABC$와 $\\triangle DEF$는 닮음이다. 두 쌍의 변의 길이의 비가 같더라도 그 끼인각이 아닌 각의 크기가 같은 것만으로는 닮음이라고 할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.5,
+            "y": 2.598076211
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 10.0,
+            "y": 5.196152423
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:04:37.529524+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "10c87cce-ff86-4d09-be36-2fa27b00192a",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$AB:DE=AC:DF=1:2$이고, 그 끼인각 $\\angle BAC$와 $\\angle EDF$의 크기가 모두 $60°$이다. 따라서 $\\triangle ABC$와 $\\triangle DEF$는 닮음이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 2,
+      "rubric": [
+        {
+          "description": "$AB:DE$와 $AC:DF$가 같음을 나타냈다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "비를 구한 두 변의 끼인각의 크기가 같음을 밝히고, 두 삼각형이 닮음이라고 판별했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:03:53.720345+00:00",
+          "issues": [
+            "문제에서 두 삼각형이 닮음이라고 미리 밝혀 닮음인지 판별하는 답을 드러낸다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:04:17.902298+00:00",
+          "issues": [
+            "문제 문장에서 두 삼각형이 닮음이라고 미리 밝혀, 답을 드러내지 않도록 한 조건을 위반한다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:04:37.529153+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:24:47.780205+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C1-이유설명",
@@ -1214,8 +2440,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:06:20.72753+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.540828+00:00",
       "explanation": "$AB:DE=AC:DF=2:3$이고, 두 변의 끼인각인 $\\angle BAC$와 $\\angle EDF$의 크기가 같다. 따라서 삼각형의 닮음 조건에 따라 $\\triangle ABC$와 $\\triangle DEF$는 닮음이다.\n\n두 쌍의 변의 길이의 비가 같더라도 끼인각이 아닌 각의 크기가 같다는 것만으로는 닮음이라고 할 수 없다. 또 세 쌍의 변의 길이의 차가 같다는 것만으로도 닮음이라고 할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:06:20.705084+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1252,7 +2479,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:06:20.704982+00:00",
@@ -1270,8 +2497,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:06:39.727019+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.572735+00:00",
       "explanation": "$AB:DE=BC:EF=CA:FD=1:2$이다. 세 쌍의 변의 길이의 비가 모두 같으므로 두 삼각형은 SSS 닮음이다.\n\n각 변의 길이의 차가 같다는 것만으로는 닮음이라고 할 수 없다. 예를 들어 세 변의 길이가 $3$, $4$, $5$인 삼각형과 $5$, $6$, $7$인 삼각형은 각 변의 길이의 차가 $2$이지만 닮음이 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:06:39.672718+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1299,7 +2527,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:06:39.672637+00:00",
@@ -1310,36 +2538,394 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:14:55.726954+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-이유설명",
+      "body": "다음 그림에서 점 $D$는 선분 $AB$ 위에 있고, 점 $E$는 선분 $AC$ 위에 있습니다. 두 삼각형 $ADE$와 $ABC$가 닮음인지 판별하고, 그림에 표시된 길이와 각을 이용하여 그 이유를 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:05:00.875717+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB=6$, $AC=8$이므로 $AD:AB=AE:AC=1:2$입니다. 또 두 삼각형은 그 끼인각 $\\angle A$를 공유합니다. 따라서 두 삼각형은 닮음입니다. 길이의 비가 같은 두 쌍의 변을 찾았더라도, 그 변의 끼인각이 아닌 각이 같다는 것만으로는 닮음이라고 할 수 없습니다. 또 변의 길이의 차가 같다는 것만으로도 닮음이라고 할 수 없습니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 6.92820323
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 2.0,
+            "y": 3.46410162
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:05:00.775426+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f4a09115-9a57-4fab-a30f-816b22bb5738",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$AD:AB=3:6=1:2$, $AE:AC=4:8=1:2$이고, 두 삼각형의 끼인각 $\\angle A$는 같습니다. 따라서 $\\triangle ADE$와 $\\triangle ABC$는 닮음입니다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$AD:AB$와 $AE:AC$가 같음을 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "비교한 두 쌍의 변의 끼인각이 두 삼각형에서 같음을 썼다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-13-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 삼각형이 닮음이라고 판별했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:05:00.775062+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:14:55.765+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "다음 그림의 두 삼각형에 대하여 옳게 말한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "닮음이다. $AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "닮음이다. $AB:DE=BC:EF$이고 $\\angle ABC=\\angle DEF$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "닮음이다. 같은 크기의 각이 한 쌍 있기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "닮음이 아니다. 두 삼각형의 변의 길이를 작은 것부터 차례로 비교하면 세 비가 같지 않기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "닮음이 아니다. 두 삼각형에서 길이가 같은 변이 없기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T04:09:12.732852+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T04:18:29.985863+00:00",
+      "explanation": "두 삼각형의 변의 길이를 작은 것부터 차례로 비교하면 $3:2.8$, $4:6$, $5:8$이다. 세 비가 같지 않으므로 두 삼각형은 닮음이 아니다. ①에서는 $AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이지만, 같은 크기의 각이 비를 비교한 두 변의 끼인각이 아니다. 따라서 이것만으로 닮음이라고 할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 12.76,
+            "y": 1.68
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "2.8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:09:12.645051+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "두 쌍의 변의 길이의 비와 한 쌍의 각의 크기가 같지만, 그 각은 비를 비교한 두 변의 끼인각이 아니다. 세 변의 길이까지 살펴 닮음인지 판단해야 한다.",
+      "id": "6ff21871-daca-483c-9f3d-2e530c4487bf",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T04:08:25.387093+00:00",
+          "issues": [
+            "보기 ⑤도 옳다. 두 삼각형은 닮음이 아니고, DE−AB=5와 EF−BC=4이므로 짝 지은 변의 길이의 차도 다르다. 보기에는 길이의 차가 다르기 때문에 닮음이 아니라는 잘못된 추론이 명시되어 있지 않다.",
+            "single_correct_answer: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:09:12.644468+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T12:07:07.834045+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C1-정의이해",
       "body": "다음에서 주어진 내용만으로 두 삼각형이 반드시 닮음이라고 할 수 있는 것을 모두 고른 것은?\n\nㄱ. $AB=4$, $BC=6$, $DE=6$, $EF=9$이고 $\\angle ABC=\\angle DEF$인 두 삼각형 $ABC$와 $DEF$\n\nㄴ. $GH=JK=17$, $GI=JL=10$이고 $\\angle GHI=\\angle JKL$인 두 삼각형 $GHI$와 $JKL$\n\nㄷ. 세 변의 길이가 각각 $3$, $4$, $5$인 삼각형과 각각 $5$, $6$, $7$인 삼각형",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "ㄱ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M1",
           "no": 2,
           "text": "ㄱ, ㄴ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M2",
           "no": 3,
           "text": "ㄱ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "ㄴ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1348,8 +2934,9 @@
       ],
       "created_at": "2026-11-11T11:50:41.559716+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.460497+00:00",
       "explanation": "ㄱ에서 $AB:DE=BC:EF=2:3$이고, 그 끼인각인 $\\angle ABC$와 $\\angle DEF$의 크기가 같다. 따라서 두 삼각형은 닮음이다.\n\nㄴ에서 길이가 주어진 두 변의 끼인각은 $\\angle HGI$와 $\\angle KJL$이다. 크기가 같다고 주어진 각은 이 끼인각이 아니므로, 두 삼각형이 반드시 닮음인 것은 아니다. 예를 들어 $G$와 $J$를 $(8, 3)$, $H$와 $K$를 $(0, -12)$, $I$를 $(0, -3)$, $L$을 $(0, 9)$에 놓으면 주어진 내용을 만족하지만 두 삼각형은 닮음이 아니다.\n\nㄷ에서는 작은 변부터 차례로 비교하면 길이의 차가 모두 $2$이다. 하지만 길이의 비는 모두 같지 않으므로 두 삼각형은 닮음이 아니다. 길이의 차가 같은 것과 길이의 비가 같은 것을 혼동하지 않아야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:50:41.405552+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "ㄱ과 ㄴ을 비교하며 길이의 비가 같은 두 쌍의 변과 크기가 같은 각을 하나하나 확인해야 한다. ㄷ에서는 변의 길이의 차가 같은 것과 비가 같은 것을 구별해야 한다.",
@@ -1360,7 +2947,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:50:41.405433+00:00",
@@ -1371,36 +2958,419 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:45:40.176166+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "다음 그림에서 같은 표시가 있는 두 각의 크기는 같다. 두 삼각형이 닮음인지와 그 이유를 옳게 말한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "닮음이다. $AC:DF=BC:EF$이고 $\\angle ABC=\\angle DEF$이므로."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "닮음이다. $AC:DF=AB:DE=BC:EF$이므로."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "닮음이다. 같은 크기의 각이 한 쌍 있으므로."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "닮음이 아니다. 각 삼각형의 세 변을 짧은 것부터 차례로 비교하면 길이의 비가 모두 같지 않으므로."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "닮음이 아니다. 두 삼각형에서 같은 크기의 각을 한 쌍도 찾을 수 없으므로."
+        }
+      ],
+      "created_at": "2026-11-12T04:39:17.76533+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "각 삼각형의 세 변을 짧은 것부터 차례로 비교하면 길이의 비는 $4:4$, $5:4$, $6:6$이다. 이 비가 모두 같지 않으므로 두 삼각형은 닮음이 아니다. ①에서는 두 쌍의 변의 길이의 비가 같고 한 쌍의 각의 크기가 같지만, 그 각은 길이의 비가 같은 두 변의 끼인각이 아니다. 따라서 이것만으로 닮음이라고 할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "D",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 3.75,
+            "y": 3.3071891388
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 12.0,
+            "y": 2.6457513111
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:39:17.648775+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "두 쌍의 변의 길이의 비와 한 쌍의 각의 크기가 각각 같지만, 그 각이 두 변의 끼인각이 아닌 사례이다. 각 삼각형의 세 변의 길이도 비교하여 닮음이 아님을 판단해야 한다.",
+      "id": "df448530-ac07-4f1f-a0b5-e26640e45be7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:38:45.872264+00:00",
+          "issues": [
+            "닮음이 아닌 사례에서 변의 길이의 비만 확인하므로, 어느 삼각형의 닮음 조건에 해당하는지 판단하는 측정 의도를 평가하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:39:17.648511+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:55.789547+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "다음 그림에서 $\\angle BAC=90°$이다. 두 삼각형이 닮음인지와 그 이유를 모두 옳게 말한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M2",
+          "no": 1,
+          "text": "닮음이다. 짧은 변부터 차례로 짝을 지으면 변의 길이의 차가 모두 $2$이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "닮음이다. 각 삼각형에서 가장 짧은 변과 가장 긴 변의 길이의 비가 같기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "닮음이 아니다. 짝을 지은 두 변의 길이가 한 쌍이라도 다르면 닮음이 될 수 없기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "닮음이다. 가장 짧은 변끼리의 길이의 비와 두 번째로 짧은 변끼리의 길이의 비가 같기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "닮음이 아니다. 가장 짧은 변끼리의 길이의 비와 가장 긴 변끼리의 길이의 비가 다르기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T04:10:43.999318+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정답은 ⑤이다. 닮은 두 삼각형에서는 긴 변끼리, 짧은 변끼리 짝을 지었을 때 변의 길이의 비가 모두 같아야 한다. 그런데 $3:5$와 $5:7$은 같지 않으므로 두 삼각형은 닮지 않다.\n①처럼 세 변의 길이의 차가 모두 같아도 닮음이라고 할 수는 없다. 닮음인지 알아볼 때는 길이의 차가 아니라 길이의 비를 살펴야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 16.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 11.714286,
+            "y": 4.199125
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "7",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:10:43.596811+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "두 삼각형에서 짧은 변부터 짝을 지으면 길이의 차는 모두 같지만 길이의 비는 같지 않다. 차가 같은 것과 비가 같은 것을 구별하여 닮음인지 판단해야 한다.",
+      "id": "9a5a923a-8092-4c6f-820a-92a80b56f7c0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:10:02.229953+00:00",
+          "issues": [
+            "닮음이 아닌 경우만 제시하여 어느 닮음 조건에 해당하는지 판별하는 측정 의도를 평가하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:10:43.596263+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:47.834818+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C1-정의이해",
       "body": "두 삼각형 $ABC$와 $DEF$에서 $AB=5$, $BC=4$, $DE=10$, $EF=8$이고 $\\angle BAC=\\angle EDF$이다. 다음 설명 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M1",
           "no": 1,
           "text": "더 알아야 할 것 없이, 두 쌍의 변의 길이의 비와 $\\angle BAC=\\angle EDF$를 이용하여 닮음이라고 할 수 있다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\angle ABC=\\angle DEF$를 더 알면, 두 쌍의 변의 길이의 비와 그 끼인각을 이용하여 닮음이라고 할 수 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\angle ABC=\\angle DEF$를 더 알면 두 삼각형은 닮음이고, $AC:DF=5:4$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\angle ACB=\\angle DFE$를 더 알아도 두 삼각형이 닮음인지 알 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1409,8 +3379,9 @@
       ],
       "created_at": "2026-11-11T13:00:43.877844+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.499799+00:00",
       "explanation": "주어진 두 쌍의 변의 길이의 비는 $AB:DE=BC:EF=1:2$이다. $\\angle ABC=\\angle DEF$를 더 알면 이 각들은 각각 그 두 변의 끼인각이므로 두 삼각형은 닮음이다.\n①에서 주어진 $\\angle BAC$와 $\\angle EDF$는 비를 비교한 두 변의 끼인각이 아니다. 따라서 처음 주어진 내용만으로는 닮음이라고 할 수 없다. ③에서는 두 삼각형의 닮음비가 $1:2$이므로 $AC:DF=1:2$이다. ④에서는 각 두 쌍의 크기가 같으므로 닮음이다. ⑤에서는 ②와 같이 닮음이라고 할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:00:43.706823+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "길이의 비를 비교한 두 변과 같다고 주어진 각을 살펴, 그 각이 두 변의 끼인각인지 판단해야 한다.",
@@ -1421,7 +3392,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:00:43.706578+00:00",
@@ -1438,30 +3409,35 @@
       "body": "두 삼각형 $\\triangle ABC$와 $\\triangle DEF$에서 $AB=6$, $AC=4$, $DE=9$, $DF=6$이고, $\\angle BAC=\\angle EDF=50^\\circ$이다. 두 삼각형에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "두 쌍의 변의 길이의 비가 같고 그 끼인각의 크기가 같으므로 SAS 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M1",
           "no": 2,
           "text": "두 쌍의 변의 길이의 비가 같고 한 쌍의 각의 크기가 같으면, 그 각의 위치에 관계없이 항상 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "주어진 세 쌍의 변의 길이의 비가 같으므로 SSS 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "주어진 두 쌍의 각의 크기가 각각 같으므로 AA 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1470,8 +3446,9 @@
       ],
       "created_at": "2026-11-11T11:49:18.319726+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.534275+00:00",
       "explanation": "$AB:DE=AC:DF=2:3$이고, 이 변들의 끼인각인 $\\angle BAC$와 $\\angle EDF$의 크기가 같다. 따라서 두 삼각형은 SAS 닮음이다. ②처럼 두 쌍의 변의 길이의 비가 같더라도, 크기가 같은 각이 끼인각이 아니면 항상 닮음이라고 할 수는 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:18.171376+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1482,7 +3459,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:49:18.171239+00:00",
@@ -1493,36 +3470,467 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:14:55.813348+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "다음 그림의 두 삼각형에 대한 설명으로 옳은 것은? 닮음을 판단할 때에는 각 보기에 적힌 사실만 이용한다.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 1,
+          "text": "$AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이므로 두 삼각형은 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\angle BAC=\\angle EDF=90°$이므로 두 삼각형은 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$AB:DE=AC:DF=BC:EF$이므로 두 삼각형은 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$AB$와 $DE$의 길이가 다르므로 두 삼각형은 닮음이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$BC$와 $EF$의 길이의 차가 $5$이므로 두 삼각형은 닮음이 아니다."
+        }
+      ],
+      "created_at": "2026-11-12T04:06:01.470908+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB:DE=AC:DF=BC:EF=1:2$이다. 따라서 세 쌍의 변의 길이의 비가 같으므로 두 삼각형은 닮음이다.\n①에서 $\\angle ABC$와 $\\angle DEF$는 적힌 두 변 사이의 각이 아니다. 두 쌍의 변의 길이의 비와 끼인각이 아닌 한 쌍의 각만으로는 닮음을 판단할 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "90°",
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": "90°",
+            "marks": 0,
+            "right": true,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "D",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 7.0,
+            "y": 6.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:06:01.387597+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "205197f9-b5eb-4fa4-a1cb-a86ad28e3e9e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:04:13.516190+00:00",
+          "issues": [
+            "두 삼각형이 닮음이 아니므로 닮음 여부는 판별하지만, 어느 닮음 조건에 해당하는지 판단하는 측정 의도는 평가하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:05:08.182497+00:00",
+          "issues": [
+            "①도 옳다. 비가 같은 변 중 같은 각의 대변이 다른 변보다 길어 닮음이 보장된다. 또한 그림의 두 쌍의 같은 각으로도 AA 닮음임을 알 수 있다. 따라서 ①과 ②가 모두 옳으며, ①을 오답으로 처리하여 닮음 조건의 이해를 정확히 측정할 수 없다.",
+            "single_correct_answer: false",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:06:01.387396+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:55.83685+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C1-정의이해",
+      "body": "다음 그림의 두 삼각형이 닮음인지 판단한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\angle BAC=\\angle EDF$이므로 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M1",
+          "no": 2,
+          "text": "$AB:DE=AC:DF$이고 $\\angle ABC=\\angle DEF$이므로 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$AB:DE=AC:DF$이고 $\\angle BAC=\\angle EDF$이므로 닮음이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$AB$와 $DE$의 길이가 다르므로 닮음이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$AB:DE$와 $AC:DF$가 서로 다르므로 닮음이 아니다."
+        }
+      ],
+      "created_at": "2026-11-12T04:07:35.141848+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB:DE=5:10=1:2$이고 $AC:DF=3:6=1:2$이다. 또 두 변 $AB$, $AC$의 끼인각과 두 변 $DE$, $DF$의 끼인각은 모두 $60°$이다. 따라서 두 삼각형은 닮음이다.\n②에서 이용한 각은 길이의 비를 비교한 두 변의 끼인각이 아니다. 두 쌍의 변의 길이의 비가 같더라도 끼인각이 아닌 각의 크기가 같은 것만으로는 닮음인지 알 수 없다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.5,
+            "y": 2.598076211
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 18.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 11.0,
+            "y": 5.196152423
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:07:34.80273+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a0d69022-2d9b-4ca0-a175-1e3043482560",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:06:45.685874+00:00",
+          "issues": [
+            "figure_geometry_lengths: Invalid figure: geometry_lengths"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:07:34.802084+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T12:07:07.917947+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C1-정의이해",
       "body": "다음 중 옳은 것은? 각 보기에서 두 삼각형의 세 변의 길이를 작은 것부터 차례로 나타내었다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M2",
           "no": 1,
           "text": "세 변의 길이가 $3, 4, 5$인 삼각형과 $5, 6, 7$인 삼각형은 길이의 차가 모두 $2$이므로 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "세 변의 길이가 $4, 6, 8$인 삼각형과 $6, 9, 12$인 삼각형은 세 쌍의 길이의 비가 모두 같으므로 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "세 변의 길이가 $3, 4, 5$인 삼각형과 $6, 8, 11$인 삼각형은 두 쌍의 길이의 비가 같으므로 닮음이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "세 변의 길이가 $4, 6, 8$인 삼각형과 $6, 9, 12$인 삼각형은 변의 길이가 모두 같지는 않으므로 닮음이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1531,8 +3939,9 @@
       ],
       "created_at": "2026-11-11T11:49:44.702122+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.564098+00:00",
       "explanation": "②에서 작은 변부터 차례로 비교하면 길이의 비가 모두 $2:3$이므로 두 삼각형은 닮음이다. ①처럼 세 변의 길이의 차가 모두 같더라도 길이의 비가 모두 같지 않으면 닮음이 아니다. ③에서는 $5:11$이 나머지 두 쌍의 길이의 비와 다르다. ④에서는 길이가 서로 달라도 세 쌍의 길이의 비가 같으므로 닮음이다. ⑤에서도 세 쌍의 길이의 비가 모두 $1:2$이므로 닮음이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:44.562791+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1543,7 +3952,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:49:44.562638+00:00",
@@ -1554,36 +3963,235 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:45:40.208511+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "body": "그림과 같이 두 직선 $AB$, $CD$가 점 $O$에서 만난다. 점 $B$는 점 $O$를 사이에 두고 점 $A$의 반대쪽에 있고, 점 $D$는 점 $O$를 사이에 두고 점 $C$의 반대쪽에 있다. $OA=4$, $OC=3$, $OD=6$이다.\n\n$\\angle OAC=\\angle ODB$가 되게 하려면 $OB$의 길이를 얼마로 해야 하는가?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\dfrac{9}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M3",
+          "no": 5,
+          "text": "$8$"
+        }
+      ],
+      "created_at": "2026-11-12T04:39:57.970522+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle AOC=\\angle DOB$이고 $\\angle OAC=\\angle ODB$이므로 $\\triangle OAC$와 $\\triangle ODB$는 닮음이다. 따라서 $OA$와 $OD$, $OC$와 $OB$를 각각 짝지으면 $4:6=3:OB$이다. 이를 풀면 $OB=\\dfrac{9}{2}$이다.\n\n⑤는 각의 크기를 확인하지 않고 위치가 비슷한 $OA$와 $OB$, $OC$와 $OD$를 각각 짝지어 구한 값이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "O",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "O",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -4.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 4.5,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 0.6,
+            "y": 2.93938769134
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": -1.2,
+            "y": -5.87877538268
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "O"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "O"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:39:57.61599+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 각의 크기가 같아지는 결과를 제시하고, 그때 필요한 길이를 거꾸로 구하게 한다.",
+      "id": "1b18ad3f-dd3e-4cba-8781-a30136fa89ff",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:38:29.209060+00:00",
+          "issues": [
+            "application-a 미충족: CD=3.5는 닮은 삼각형의 주어진 변의 길이이고, OD는 대응변의 비로 바로 구하는 미지의 길이이다. 조건을 거꾸로 찾는 문제로 일반적인 길이 구하기 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:39:07.400015+00:00",
+          "issues": [
+            "application-a에 해당하지 않는다. 주어진 두 둘레로 닮음비를 구하는 것은 닮은 도형의 둘레의 비가 닮음비와 같다는 성질을 바로 적용하는 것이며, 결과로부터 닮음의 조건을 거꾸로 찾는 문제와 구별된다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:39:57.615709+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:24:47.874822+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C2-성질적용",
       "body": "삼각형 $ABC$에서 $AB=9$, $AC=12$, $BC=10$이다. 점 $D$는 선분 $AB$ 위에 있고, 점 $E$는 선분 $AC$ 위에 있다. 단, $D$와 $E$는 각 선분의 양 끝점이 아니다. 또 $\\angle ADE=\\angle ACB$이다.\n\n$DE=5$가 되도록 점 $D$를 잡으려고 한다. 이때 $AD$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M3",
           "no": 3,
           "text": "$\\dfrac{9}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1592,8 +4200,9 @@
       ],
       "created_at": "2026-11-11T13:09:06.848339+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.481764+00:00",
       "explanation": "$\\angle DAE=\\angle CAB$이고 $\\angle ADE=\\angle ACB$이므로 $\\triangle ADE\\sim\\triangle ACB$이다. 따라서 $AD$와 짝이 되는 변은 $AC$이고, $DE$와 짝이 되는 변은 $CB$이다.\n\n$DE:CB=5:10=1:2$이므로 $AD:AC=1:2$이다. 따라서 $AD=6$이다.\n\n선분이 놓인 모양만 보고 $AD$를 $AB$와 짝 지으면 $AD=\\dfrac{9}{2}$라고 생각할 수 있다. 하지만 $AD$와 짝이 되는 변은 $AC$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:09:06.812781+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "$DE$의 길이가 5가 되는 결과를 제시하고, 그 결과를 얻기 위해 점 $D$를 어디에 잡아야 하는지 $AD$의 길이로 구하게 했다.",
@@ -1604,7 +4213,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:09:06.812607+00:00",
@@ -1621,30 +4230,35 @@
       "body": "서로 한 직선 위에 놓이지 않은 두 곧은 막대 $\\overline{BC}$와 $\\overline{DE}$가 점 $A$에서 만난다. 점 $A$는 두 막대 각각의 양 끝점이 아니다.\n\n$AB=5$, $AD=4$, $AE=10$이고 $\\angle ABD=\\angle AEC$이다. 막대 $\\overline{BC}$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$10$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$13$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$15$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M3",
           "no": 5,
@@ -1653,8 +4267,9 @@
       ],
       "created_at": "2026-11-11T13:11:20.546304+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.518962+00:00",
       "explanation": "$\\angle BAD=\\angle EAC$이고 $\\angle ABD=\\angle AEC$이므로 $\\triangle ABD\\sim\\triangle AEC$이다. 따라서 $AB$와 $AE$, $AD$와 $AC$를 각각 짝지으면 $5:10=4:AC$이다. 그러므로 $AC=8$이다.\n\n점 $A$는 막대 $\\overline{BC}$의 양 끝점 사이에 있으므로 $BC=AB+AC=13$이다.\n\n각의 크기를 살피지 않고 위치가 비슷한 $AB$와 $AC$, $AD$와 $AE$를 짝지으면 $AC=12.5$로 잘못 구하여 $BC=17.5$를 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:11:20.533657+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "두 막대가 중간에서 만나는 상황을 이용해 $BC=AB+AC$로 나타내야 한다. 닮은 두 삼각형에서 변을 바르게 짝지어 $AC$를 구한 뒤 막대 전체의 길이를 구한다.",
@@ -1665,7 +4280,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:09:46.564013+00:00",
@@ -1692,36 +4307,203 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:14:55.860469+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "body": "그림과 같이 $AB=6$, $AC=8$인 삼각형 $ABC$가 있다. 점 $D$는 선분 $AB$ 위에, 점 $E$는 선분 $AC$ 위에 있다. 점 $D$를 잡고, $\\angle ADE=\\angle ACB$가 되도록 점 $E$를 잡는다.\n\n$AE=3$이 되게 하려면 $BD$를 얼마로 해야 하는가? 단, $D$와 $E$는 삼각형 $ABC$의 꼭짓점이 아니다.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\dfrac{3}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M3",
+          "no": 4,
+          "text": "$\\dfrac{15}{4}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4$"
+        }
+      ],
+      "created_at": "2026-11-12T04:07:06.553429+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle DAE=\\angle CAB$이고 $\\angle ADE=\\angle ACB$이므로 $\\triangle ADE$와 $\\triangle ACB$는 닮음이다. 따라서 $AD$는 $AC$와, $AE$는 $AB$와 짝을 이룬다.\n\n$AD:8=3:6$이므로 $AD=4$이다. 따라서 $BD=6-4=2$이다.\n\n④는 $AD$를 $AB$와 짝지어 $AD:6=3:8$로 계산한 경우이다. 크기가 같은 각을 살펴 변을 짝지어야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "E",
+            "vertex": "D"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 4.8,
+            "y": 6.4
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 1.8,
+            "y": 2.4
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:07:06.44579+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "$AE$가 3이 되는 결과를 주고, 그 결과를 얻기 위해 $BD$를 얼마로 해야 하는지 거꾸로 찾게 한다.",
+      "id": "e021389a-e457-4193-8eaa-8bf468c86f74",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:07:06.445513+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.01889+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C2-성질적용",
       "body": "삼각형 $ABC$에서 점 $D$는 선분 $AB$ 위에 있고 $A$, $B$와 다르다. 점 $E$는 선분 $AC$ 위에 있고 $A$, $C$와 다르다. $\\angle ABC=\\angle AED$, $AB=6$, $AD=4$, $AE=3$일 때, $AC$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M3",
           "no": 1,
           "text": "$4.5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1730,8 +4512,9 @@
       ],
       "created_at": "2026-11-11T13:08:03.358919+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.562816+00:00",
       "explanation": "$\\angle BAC=\\angle DAE$이고 $\\angle ABC=\\angle AED$이므로 $\\triangle ABC\\sim\\triangle AED$이다. 따라서 $AB$와 $AE$, $AC$와 $AD$가 각각 짝을 이루므로 $6:3=AC:4$이다. 이를 풀면 $AC=8$이다. ①은 각의 크기를 확인하지 않고 위치가 비슷한 $AB$와 $AD$, $AC$와 $AE$를 짝지어 구한 값이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:08:03.339158+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1742,7 +4525,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:08:03.339067+00:00",
@@ -1753,36 +4536,389 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:14:55.887228+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "body": "다음 그림에서 점 $D$는 $\\overline{AB}$ 위에 있고, 점 $E$는 $\\overline{AC}$ 위에 있다. $\\angle ADE=\\angle ACB$이고, $AB=10$, $AD=3$, $AC=6$, $DE=5$이다. $BC=x$일 때, $x$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\dfrac{15}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\dfrac{25}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M3",
+          "no": 5,
+          "text": "$\\dfrac{50}{3}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:04:04.591294+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle DAE=\\angle CAB$이고 $\\angle ADE=\\angle ACB$이므로 $\\triangle ADE$와 $\\triangle ACB$는 닮음이다. 따라서 $AD$는 $AC$와, $DE$는 $CB$와 짝이 된다. $3:6=5:x$이므로 $x=10$이다. ⑤는 각의 크기를 확인하지 않고 $AD$를 $AB$와 짝지어 $3:10=5:x$로 계산한 경우이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "E",
+            "vertex": "D"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 10.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 1.8,
+            "y": 5.7236352085
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 1.5,
+            "y": 4.7696960071
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:04:04.486244+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "bda560dc-0360-4f8d-86c4-622724507474",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:04:04.486109+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:55.949007+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-13-C2-성질적용",
+      "body": "다음 그림에서 점 $O$는 선분 $AC$와 선분 $BD$가 만나는 점이다. $\\angle OAB=\\angle ODC$, $OA=6$, $OB=4$, $OC=2$이다. 닮음을 이용하여 $OD$의 길이를 구한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-13-M3",
+          "no": 2,
+          "text": "$\\dfrac{4}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4$"
+        }
+      ],
+      "created_at": "2026-11-12T04:04:30.701373+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle AOB=\\angle DOC$이고 $\\angle OAB=\\angle ODC$이므로 $\\triangle OAB\\sim\\triangle ODC$이다. 따라서 $OA:OD=OB:OC$이므로 $6:OD=4:2$이다. 이를 풀면 $OD=3$이다.\n②를 골랐다면 그림에서 위치가 비슷해 보이는 $OA$와 $OC$를 짝지었을 수 있다. 크기가 같은 각을 살펴보면 $OA$는 $OD$와, $OB$는 $OC$와 짝지어야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "O",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "A"
+          },
+          {
+            "from": "O",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": -2.4,
+            "y": -3.2
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 2.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 1.8,
+            "y": 2.4
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:04:30.614347+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8e0478f9-77f2-4b35-989f-89ec855f3588",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$3$",
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:04:30.614184+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.046322+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-13-C2-성질적용",
       "body": "서로 다른 네 점 $A$, $B$, $C$, $D$가 있다. 점 $O$는 선분 $AC$ 위에 있고 $A$, $C$와 다르다. 또 점 $O$는 선분 $BD$ 위에 있고 $B$, $D$와 다르다. 세 점 $A$, $O$, $B$는 한 직선 위에 있지 않다.\n\n$\\angle OAB=\\angle ODC$, $AO=4$, $BO=6$, $DO=8$일 때, $CO$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-13-M3",
           "no": 2,
           "text": "$\\dfrac{16}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1791,8 +4927,9 @@
       ],
       "created_at": "2026-11-11T13:08:27.959972+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:03:28.59402+00:00",
       "explanation": "맞꼭지각이므로 $\\angle AOB=\\angle DOC$이다. 또 $\\angle OAB=\\angle ODC$이므로 $\\triangle AOB$와 $\\triangle DOC$는 닮음이다.\n\n따라서 $AO$와 $DO$, $BO$와 $CO$를 각각 짝지으면 $4:8=6:CO$이다. 그러므로 $CO=12$이다.\n\n②는 같은 크기의 각을 살피지 않고 선분 $AC$와 $BD$에서 위치가 비슷한 변끼리 짝지어 $4:CO=6:8$로 계산한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:08:27.925126+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1803,7 +4940,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:08:27.924979+00:00",

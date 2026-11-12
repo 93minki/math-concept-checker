@@ -119,30 +119,35 @@
       "body": "다음 세 소수를 보고 옳은 설명을 고르시오.\n\n$x=0.424242$, $y=0.4\\dot{2}$, $z=0.\\dot{4}\\dot{2}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$x$는 순환소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M1",
           "no": 2,
           "text": "$y$의 순환마디는 $42$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$y$와 $z$는 같은 수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$z$의 순환마디는 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -153,6 +158,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x$는 소수점 아래 숫자가 끝나므로 유한소수이다. $y=0.4222\\cdots$이고 $z=0.424242\\cdots$이므로 $y$와 $z$는 서로 다르다. $y$에서 끝없이 되풀이되는 숫자는 $2$이므로 순환마디는 $2$이다. ②를 골랐다면 순환마디가 소수점 바로 뒤에서 시작한다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:35.607868+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "숫자 $42$가 여러 번 나타나지만 끝나는 소수와, 점의 위치에 따라 되풀이되는 부분이 다른 두 순환소수를 비교하게 했다.",
@@ -180,30 +186,35 @@
       "body": "어떤 소수는 소수점 아래 첫째 자리가 $2$이고, 그 뒤에는 $3$, $4$가 이 순서대로 끝없이 되풀이된다. 이 소수에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "유한소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M1",
           "no": 2,
           "text": "순환마디는 $23$이고, $0.\\dot{2}\\dot{3}$으로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "순환마디는 $34$이고, $0.2\\dot{3}\\dot{4}$로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "순환마디는 $34$이고, $0.23\\dot{4}$로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -214,6 +225,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "소수점 아래 첫째 자리의 $2$는 되풀이되지 않는다. 그 뒤의 $34$가 끝없이 되풀이되므로 순환마디는 $34$이고, $0.2\\dot{3}\\dot{4}$로 나타낸다. ②처럼 $23$을 순환마디로 잡으면 소수점 바로 뒤부터 $23$이 되풀이되는 다른 수가 된다. ④의 표기는 $4$만 되풀이되는 수를 나타낸다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:24:55.253462+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "소수의 각 자리와 되풀이되는 부분을 말로 제시했다. 이를 점 표기로 바꾸고 순환마디를 판단해야 한다.",
@@ -241,30 +253,35 @@
       "body": "소수 $0.3777\\cdots$에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "유한소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "순환하지 않는 무한소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M1",
           "no": 3,
           "text": "순환소수이고, 순환마디는 $37$이며 $0.\\dot{3}\\dot{7}$로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "순환소수이고, 순환마디는 $7$이며 $0.3\\dot{7}$로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -275,6 +292,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$0.3777\\cdots$는 $7$이 끝없이 반복되는 순환소수이다. 순환마디는 $7$이므로 $0.3\\dot{7}$로 나타낸다. ③처럼 소수점 바로 뒤부터 순환마디로 잡으면 안 된다. $0.\\dot{3}\\dot{7}$은 $0.373737\\cdots$을 나타낸다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:22:19.496946+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -302,30 +320,35 @@
       "body": "점을 찍어 나타낸 순환소수 $1.2\\dot{3}\\dot{4}$를 풀어 쓴 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M1",
           "no": 1,
           "text": "$1.234234234\\cdots$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$1.23232323\\cdots$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$1.2343434\\cdots$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$1.24343434\\cdots$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -336,6 +359,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$1.2\\dot{3}\\dot{4}$는 소수점 아래의 $2$ 다음에 $34$가 계속 반복되는 수입니다. 따라서 $1.2343434\\cdots$입니다. ①은 소수점 바로 뒤의 $2$부터 반복된다고 잘못 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:17.386161+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -363,30 +387,35 @@
       "body": "$a$는 $9$, $21$, $42$, $63$ 중 하나이다. 두 분수 $\\frac{a}{180}$과 $\\frac{a}{84}$를 모두 유한소수로 나타낼 수 있을 때, $a$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$21$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$42$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$63$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 5,
@@ -397,6 +426,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$180=2^2\\times3^2\\times5$이므로 $\\frac{a}{180}$을 유한소수로 나타내려면 $a$는 $9$의 배수여야 한다. 또 $84=2^2\\times3\\times7$이므로 $\\frac{a}{84}$를 유한소수로 나타내려면 $a$는 $21$의 배수여야 한다. 두 가지를 모두 만족하는 수는 $63$이다. 실제로 $\\frac{63}{180}=\\frac{7}{20}$, $\\frac{63}{84}=\\frac{3}{4}$이다. ⑤를 골랐다면 분수를 기약분수로 고치지 않고 처음 분모만 보고 판단했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:25:51.266465+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 분수가 모두 유한소수가 된다는 결과에서 분자에 들어갈 수를 거꾸로 찾게 한다.",
@@ -424,30 +454,35 @@
       "body": "$420$보다 작은 자연수 $a$에 대하여, $\\frac{a}{420}$을 유한소수로 나타낼 수 있다. 이때 $a$의 값 중 가장 작은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$14$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$21$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$42$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 5,
@@ -458,6 +493,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$420=2^2\\times3\\times5\\times7$이다. 기약분수의 분모에 소인수 $3$과 $7$이 남지 않으려면 $a$는 $3$과 $7$의 공통인 배수여야 한다. 가장 작은 수는 $21$이고, $\\frac{21}{420}=\\frac{1}{20}$이므로 유한소수로 나타낼 수 있다. $42$도 가능하지만 가장 작은 수는 아니다. ⑤는 처음 분모에 $3$과 $7$이 있다는 것만 보고 약분할 수 있음을 놓친 생각이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:55.574798+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "유한소수로 나타낼 수 있다는 결과를 주고, 이를 만족하는 가장 작은 분자를 찾게 한다.",
@@ -501,30 +537,35 @@
       "body": "$12$ 이상 $18$ 이하인 자연수 $n$에 대하여, 분수 $\\frac{12}{n}$을 유한소수로 나타낼 수 있는 $n$의 개수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 1,
           "text": "$1$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$2$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$3$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 4,
           "text": "$4$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -535,6 +576,7 @@
       "difficulty": "hard",
       "disabled_at": "2026-11-11T11:41:00.8444+00:00",
       "explanation": "$\\frac{12}{12}=1.0$, $\\frac{12}{15}=\\frac{4}{5}$, $\\frac{12}{16}=\\frac{3}{4}$이므로 유한소수로 나타낼 수 있다. 나머지는 기약분수로 고치면 차례로 $\\frac{12}{13}$, $\\frac{6}{7}$, $\\frac{12}{17}$, $\\frac{2}{3}$이다. 이 분수들은 분모에 $2$나 $5$가 아닌 소인수가 있으므로 유한소수로 나타낼 수 없다. 따라서 $n$은 $12$, $15$, $16$의 $3$개이다.\n\n처음 분모만 보고 $2$나 $5$가 아닌 소인수가 있는 분수를 모두 제외하면 $1$개라고 잘못 생각할 수 있다. 또 분모가 짝수이면 유한소수로 나타낼 수 있다고 생각하면 $4$개라고 잘못 셀 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:26:36.785376+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "유한소수로 나타낼 수 있다는 결과를 이용하여 가능한 분모를 찾고 그 개수를 구한다.",
@@ -570,30 +612,35 @@
       "body": "다음 중 유한소수로 나타낼 수 없는 분수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 1,
           "text": "$\\frac{6}{15}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{1}{6}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{3}{20}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{7}{40}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -604,6 +651,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "기약분수로 고쳤을 때 분모의 소인수가 $2$나 $5$뿐이면 유한소수로 나타낼 수 있다. $\\frac{6}{15}=\\frac{2}{5}$이고, $\\frac{3}{20}$, $\\frac{7}{40}$, $\\frac{9}{25}$도 분모의 소인수가 $2$나 $5$뿐이다. $\\frac{1}{6}$은 기약분수이고 분모에 소인수 $3$이 있으므로 유한소수로 나타낼 수 없다.\n①을 골랐다면 약분하기 전의 분모만 보고 판단한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:25:10.304461+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -631,30 +679,35 @@
       "body": "분수 $\\frac{6}{a}$를 유한소수로 나타내려고 한다. $a$에 들어갈 수 있는 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 2,
           "text": "$14$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$15$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 4,
           "text": "$18$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -665,6 +718,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\frac{6}{15}=\\frac{2}{5}$이므로 유한소수로 나타낼 수 있다. 나머지는 기약분수로 고치면 분모에 $2$나 $5$가 아닌 소인수가 있다. ②나 ④를 골랐다면 처음 분모가 짝수이므로 유한소수가 된다고 잘못 생각했을 수 있다. 처음 분모가 아니라 기약분수의 분모를 살펴보아야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:25:31.297329+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -692,30 +746,35 @@
       "body": "다섯 학생이 분수를 유한소수로 나타낼 수 있는지 말하였다. 옳게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 1,
           "text": "$\\frac{6}{30}$은 분모에 소인수 $3$이 있으므로 유한소수로 나타낼 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 2,
           "text": "$\\frac{7}{28}$은 분모에 소인수 $7$이 있으므로 유한소수로 나타낼 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 3,
           "text": "$\\frac{1}{6}$은 분모가 짝수이므로 유한소수로 나타낼 수 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 4,
           "text": "$\\frac{1}{8}$은 분모가 $10$의 약수가 아니므로 유한소수로 나타낼 수 없다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -726,6 +785,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$\\frac{3}{18}$을 기약분수로 고치면 $\\frac{1}{6}$이다. 분모 $6$에는 $2$와 $5$가 아닌 소인수 $3$이 있으므로 유한소수로 나타낼 수 없다. 따라서 정답은 ⑤이다.\n①과 ②는 기약분수로 고치기 전의 분모만 보고 판단했다. 각각 $\\frac{1}{5}$와 $\\frac{1}{4}$로 고치면 유한소수로 나타낼 수 있다.\n③은 분모가 짝수이기만 하면 유한소수로 나타낼 수 있다고 잘못 생각했다. $6$에는 소인수 $3$이 있으므로 $\\frac{1}{6}$은 유한소수로 나타낼 수 없다.\n④는 분모가 $10$의 약수여야만 유한소수로 나타낼 수 있다고 잘못 생각했다. $8$의 소인수는 $2$뿐이므로 $\\frac{1}{8}$은 유한소수로 나타낼 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:27:37.795046+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생이 분수를 유한소수로 나타낼 수 있는지 말한 내용과 그 이유를 보고 옳고 그름을 판단하게 했다.",
@@ -753,30 +813,35 @@
       "body": "민수는 “분모에 $2$와 $5$ 이외의 소인수가 있으면 그 분수는 유한소수로 나타낼 수 없어.”라고 말하였다. 민수의 말이 옳지 않음을 보여 주는 분수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{7}{28}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 2,
           "text": "$\\frac{1}{14}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{3}{20}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{1}{25}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -787,6 +852,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$\\frac{7}{28}$의 분모에는 소인수 $7$이 있지만, 기약분수로 고치면 $\\frac{1}{4}$이므로 유한소수로 나타낼 수 있다. 따라서 민수의 말이 옳지 않음을 보여 준다. $\\frac{1}{14}$는 분모가 짝수이지만 분모에 소인수 $7$이 있으므로 유한소수로 나타낼 수 없다. $\\frac{3}{20}$과 $\\frac{1}{25}$는 유한소수로 나타낼 수 있지만, 분모에 $2$와 $5$ 이외의 소인수가 없다. $\\frac{1}{15}$는 유한소수로 나타낼 수 없으므로 민수의 말이 옳지 않음을 보여 주지 못한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:44:58.864688+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다른 학생의 말을 살펴보고, 그 말이 옳지 않음을 보여 주는 분수를 고르게 했다.",
@@ -814,30 +880,35 @@
       "body": "$\\frac{9}{60}$을 유한소수로 나타낼 수 있는지 알아보려고 한다. 다음 중 판단과 그 이유가 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "나타낼 수 있다. 기약분수 $\\frac{3}{20}$의 분모의 소인수가 $2$와 $5$뿐이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 2,
           "text": "나타낼 수 없다. 처음 분모 $60$의 소인수에 $3$이 있기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 3,
           "text": "나타낼 수 없다. 기약분수 $\\frac{3}{20}$의 분모가 $10$의 약수가 아니기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 4,
           "text": "나타낼 수 있다. 처음 분모 $60$이 짝수이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -848,6 +919,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\frac{9}{60}=\\frac{3}{20}$이고, $20$의 소인수는 $2$와 $5$뿐이다. 따라서 유한소수로 나타낼 수 있으므로 정답은 ①이다.\n②는 기약분수로 고치기 전의 분모만 보고 판단했다. ③은 기약분수의 분모가 $10$의 약수여야 한다고 잘못 생각했다. ④는 분모가 짝수이면 항상 유한소수로 나타낼 수 있다고 잘못 생각했다. 예를 들어 $\\frac{1}{6}$은 분모가 짝수이지만 유한소수로 나타낼 수 없다. ⑤는 약분을 잘못했다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:26:56.289033+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -875,30 +947,35 @@
       "body": "친구가 $\\frac{3}{12}$을 포함한 여러 분수를 유한소수로 나타낼 수 있는지 알아보려고 한다. 친구에게 해 줄 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 1,
           "text": "처음 분모에 $2$와 $5$ 이외의 소인수가 있으면 유한소수로 나타낼 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 2,
           "text": "분모가 짝수이면 언제나 유한소수로 나타낼 수 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 3,
           "text": "유한소수로 나타내려면 기약분수의 분모가 반드시 $10$의 약수여야 한다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "기약분수의 분모가 $1$이거나 분모의 소인수가 $2$ 또는 $5$뿐이면 유한소수로 나타낼 수 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -909,6 +986,7 @@
       "difficulty": "normal",
       "disabled_at": "2026-11-11T11:41:00.961592+00:00",
       "explanation": "분수를 기약분수로 고친 뒤 분모를 살펴보아야 한다. 분모가 $1$이거나 분모의 소인수가 $2$ 또는 $5$뿐이면 유한소수로 나타낼 수 있다. 따라서 정답은 ④이다.\n① 처음 분모만 살펴보면 안 된다. 예를 들어 $\\frac{3}{12}=\\frac{1}{4}$이므로 유한소수로 나타낼 수 있다.\n② 분모가 짝수여도 항상 유한소수가 되는 것은 아니다. $\\frac{1}{6}$은 유한소수로 나타낼 수 없다.\n③ 분모가 $10$의 약수일 필요는 없다. $\\frac{1}{8}$은 유한소수로 나타낼 수 있다.\n⑤ 분모가 홀수여도 유한소수로 나타낼 수 있다. 예를 들어 $\\frac{1}{5}=0.2$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:27:20.073676+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -936,30 +1014,35 @@
       "body": "다음은 분수를 유한소수로 나타낼 수 있는지에 대한 학생들의 말이다. 옳은 말을 한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M2",
           "no": 1,
           "text": "$\\frac{6}{24}$는 분모에 소인수 $3$이 있으므로 유한소수로 나타낼 수 없어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M3",
           "no": 2,
           "text": "$\\frac{1}{6}$은 분모가 짝수이므로 유한소수로 나타낼 수 있어."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{1}{25}$는 분모의 소인수가 $5$뿐이므로 유한소수로 나타낼 수 있어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{1}{15}$는 분모에 소인수 $5$가 있으므로 유한소수로 나타낼 수 있어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -970,6 +1053,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\frac{1}{25}$의 분모의 소인수는 $5$뿐이므로 유한소수로 나타낼 수 있다. $\\frac{6}{24}$는 기약분수 $\\frac{1}{4}$로 고친 뒤 판별해야 한다. 분모가 짝수여도 $\\frac{1}{6}$처럼 분모에 $2$, $5$가 아닌 소인수가 있으면 유한소수로 나타낼 수 없다. $\\frac{1}{15}$의 분모에는 소인수 $3$이 있고, $\\frac{1}{8}$의 분모의 소인수는 $2$뿐이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:44:27.527784+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -997,30 +1081,35 @@
       "body": "다음 식에서 $\\square$ 안에 알맞은 수는?\n\n$0.1\\dot{2}+\\square=\\frac{1}{2}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{17}{45}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M5",
           "no": 2,
           "text": "$\\frac{25}{66}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{19}{45}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{7}{18}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1031,6 +1120,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x=0.1\\dot{2}$라 하면 $10x=1.\\dot{2}$, $100x=12.\\dot{2}$입니다. 두 식을 빼면 $90x=11$이므로 $x=\\frac{11}{90}$입니다. 따라서 $\\square=\\frac{1}{2}-\\frac{11}{90}=\\frac{17}{45}$입니다.\n\n②는 순환하지 않는 부분을 생각하지 않고 $0.1\\dot{2}$를 $\\frac{12}{99}$로 잘못 나타내어 계산한 값입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:30:14.981118+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 수의 합을 주고 순환소수에 더할 수를 거꾸로 구하게 했다. 순환소수를 직접 분수로 고친 뒤 빈칸의 값을 계산해야 한다.",
@@ -1058,30 +1148,35 @@
       "body": "한 자리 자연수 $a$에 대하여 $0.\\dot{a}=\\frac{2}{3}$이다. $0.1\\dot{a}$를 분수로 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{1}{15}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{1}{6}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M5",
           "no": 3,
           "text": "$\\frac{16}{99}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{16}{90}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1092,6 +1187,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x=0.\\dot{a}$라고 하면 $10x-x=a$이므로 $a=9x=6$이다. 따라서 $y=0.1\\dot{6}$이라고 하면 $10y=1.\\dot{6}$, $100y=16.\\dot{6}$이다. 두 식을 빼면 $90y=15$이므로 $y=\\frac{1}{6}$이다. $\\frac{16}{99}$를 골랐다면 순환하지 않는 부분 $1$을 무시하고 $16$ 전체가 반복된다고 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:30:59.696221+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "순환소수의 값으로 분수가 주어져 있다. 이 값에서 숫자 $a$를 거꾸로 구한 뒤 다른 순환소수를 분수로 나타내야 한다.",
@@ -1129,30 +1225,35 @@
       "body": "순환소수 $0.2\\dot{3}$을 분수로 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{2}{9}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{7}{30}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M5",
           "no": 3,
           "text": "$\\frac{23}{99}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{23}{90}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1163,6 +1264,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x=0.2\\dot{3}$이라 하면 $10x=2.\\dot{3}$, $100x=23.\\dot{3}$입니다. 두 식을 빼면 $90x=21$이므로 $x=\\frac{7}{30}$입니다.\n$\\frac{23}{99}$는 순환하지 않는 부분을 무시하고 $23$이 반복된다고 생각한 것입니다. 주어진 수에서는 $3$만 반복됩니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:29:28.099031+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1190,30 +1292,35 @@
       "body": "순환소수 $0.1\\dot{2}\\dot{7}$을 분수로 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{7}{50}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{7}{55}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{126}{999}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{127}{990}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M5",
           "no": 5,
@@ -1224,6 +1331,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x=0.1\\dot{2}\\dot{7}$이라 하면 $1000x=127.\\dot{2}\\dot{7}$, $10x=1.\\dot{2}\\dot{7}$이다. 두 식의 양변을 각각 빼면 $990x=126$이므로 $x=\\frac{7}{55}$이다.\n$\\frac{127}{999}$는 순환하지 않는 숫자 $1$까지 순환하는 것으로 생각하여 분모를 $999$로 만든 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:29:43.189102+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1251,30 +1359,35 @@
       "body": "민지는 “끝없이 이어지는 소수는 모두 분수로 나타낼 수 없어.”라고 주장했다. 민지의 주장에 대한 판단과 그 까닭이 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M4",
           "no": 1,
           "text": "옳다. 소수가 끝없이 이어지면 분수로 나타낼 수 없기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "옳지 않다. 모든 무한소수는 순환소수이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "옳지 않다. 순환소수는 분수로 나타낼 수 있지만 유한소수는 분수로 나타낼 수 없기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "옳지 않다. 순환하지 않는 무한소수도 모두 분수로 나타낼 수 있기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1285,6 +1398,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x=0.3\\dot{4}$라고 하면 $10x=3.444\\cdots$, $100x=34.444\\cdots$이다. 두 식을 빼면 $90x=31$이므로 $x=\\frac{31}{90}$이다. 따라서 순환소수는 끝없이 이어져도 분수로 나타낼 수 있다. ①은 소수가 끝없이 이어지면 분수로 나타낼 수 없다고 잘못 생각한 것이다. ②는 모든 무한소수가 순환소수라고 잘못 생각한 것이다. ③의 유한소수도 분수로 나타낼 수 있다. ④의 순환하지 않는 무한소수는 분수로 나타낼 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:32:37.502193+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민지의 주장을 보고 옳고 그름을 판단하게 했다. 판단뿐 아니라 그 까닭도 함께 살펴보아야 한다.",
@@ -1320,30 +1434,35 @@
       "body": "세 학생이 다음과 같이 말했습니다.\n\nㄱ. 지우: $0.1\\dot{6}$은 $\\frac{1}{6}$이야.\nㄴ. 수빈: $0.1\\dot{6}$은 끝없이 이어지므로 분수로 나타낼 수 없어.\nㄷ. 현우: 분수를 소수로 나타냈을 때 무한소수라면, 그 소수는 순환소수야.\n\n옳게 말한 학생을 모두 고른 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "ㄱ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M4",
           "no": 2,
           "text": "ㄴ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "ㄷ"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "ㄱ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M4",
           "no": 5,
@@ -1354,6 +1473,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x=0.1\\dot{6}$이라 하면 $10x=1.\\dot{6}$, $100x=16.\\dot{6}$입니다. 두 식을 빼면 $90x=15$이므로 $x=\\frac{1}{6}$입니다. 따라서 ㄱ은 옳습니다.\nㄴ은 소수가 끝없이 이어져도 분수로 나타낼 수 있다는 점을 놓쳤습니다. 분수를 소수로 나타내면 유한소수 또는 순환소수가 되므로 ㄷ도 옳습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:33:12.557032+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "세 학생의 말을 보고 각각 옳은지 판단한 뒤, 옳은 말을 모두 골라야 합니다.",
@@ -1381,30 +1501,35 @@
       "body": "민지는 $0.\\dot{3}$이 끝없이 이어지므로 분수로 나타낼 수 없다고 말했습니다. 민지의 생각을 바르게 판단한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M4",
           "no": 1,
           "text": "맞아. 끝없이 이어지는 소수는 모두 분수로 나타낼 수 없어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "틀려. $0.\\dot{3}=\\frac{3}{10}$이므로 분수로 나타낼 수 있어."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "틀려. $0.\\dot{3}=\\frac{1}{3}$이므로 분수로 나타낼 수 있어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "틀려. $0.\\dot{3}=\\frac{1}{30}$이므로 분수로 나타낼 수 있어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1415,6 +1540,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x=0.\\dot{3}$이라고 하면 $10x=3.\\dot{3}$입니다. 따라서 $9x=3$이므로 $x=\\frac{1}{3}$입니다. 민지는 끝없이 이어지는 소수는 모두 분수로 나타낼 수 없다고 잘못 생각했습니다. 순환소수는 끝없이 이어지지만 분수로 나타낼 수 있습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:31:22.635166+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1442,30 +1568,35 @@
       "body": "다음 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$0.125$는 분수로 나타낼 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-06-M4",
           "no": 2,
           "text": "$0.\\dot{2}\\dot{7}$은 끝없이 이어지므로 분수로 나타낼 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$0.\\dot{2}\\dot{7}=\\dfrac{27}{100}$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$0.\\dot{2}\\dot{7}=\\dfrac{3}{11}$이므로 $0.\\dot{2}\\dot{7}$은 유리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1476,6 +1607,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x=0.\\dot{2}\\dot{7}$이라 하면 $100x=27.2727\\cdots$입니다. 두 식을 빼면 $99x=27$이므로 $x=\\dfrac{3}{11}$입니다. 따라서 ④가 옳습니다.\n②는 소수가 끝없이 이어지면 분수로 나타낼 수 없다고 잘못 생각한 것입니다. 순환소수는 끝없이 이어지지만 분수로 나타낼 수 있습니다.\n①에서 $0.125=\\dfrac{1}{8}$입니다. ③에서 $\\dfrac{27}{100}=0.27$입니다. ⑤에서 순환마디는 $27$입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:31:38.627576+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1506,6 +1638,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$0.3\\dot{4}=0.3444\\cdots$는 끝없이 이어지는 소수입니다. 이 수에 각각 $10$과 $100$을 곱하면 소수점 아래 부분이 같아집니다. 두 수를 빼면 $0.3\\dot{4}=\\dfrac{31}{90}$임을 알 수 있습니다. 따라서 이 수는 유리수이므로 민수의 말은 틀렸습니다.\n\n소수가 끝없이 이어지더라도 분수로 나타낼 수 있습니다. 끝없이 이어진다는 이유만으로 유리수가 아니라고 생각하면 안 됩니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:34:01.720821+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민수의 말에 맞지 않는 수로 $0.3\\dot{4}$를 사용하여, 그 말이 틀렸음을 설명하게 했다.",
@@ -1553,6 +1686,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "지수의 식은 $990x=122$입니다. 현우의 식 $10x=1+y$의 양변에 $99$를 곱하면 $990x=99+99y$입니다. 여기에 $99y=23$을 쓰면 $990x=122$가 됩니다. 따라서 두 풀이에서 같은 식을 얻습니다.\n\n$x=\\frac{122}{990}=\\frac{61}{495}$이므로 $x$는 유리수입니다. 소수가 끝없이 이어져도 분수로 나타낼 수 있는 수가 있습니다. 끝없이 이어진다는 이유만으로 분수로 나타낼 수 없다고 생각하면 안 됩니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:34:24.580437+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "두 학생의 풀이가 같은 결과를 내는 이유를 식을 비교하여 설명하도록 했다.",
@@ -1607,6 +1741,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$0.\\dot{6}$은 $\\frac{2}{3}$으로 나타낼 수 있으므로 유리수이다. 소수가 끝없이 이어진다는 이유만으로 분수로 나타낼 수 없다고 생각하면 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:33:23.869271+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1656,6 +1791,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$2$를 $11$로 나누면 소수 첫째 자리에서 나머지가 $9$이고, 둘째 자리에서 나머지가 다시 $2$가 된다. 따라서 같은 나눗셈이 되풀이되어 $\\frac{2}{11}=0.\\dot{1}\\dot{8}$이다. 끝없이 이어지는 소수는 모두 분수로 나타낼 수 없다고 생각하면 안 된다. 이 순환소수는 분수 $\\frac{2}{11}$과 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:33:37.574891+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

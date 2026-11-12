@@ -8,30 +8,35 @@
       "body": "한 변의 길이가 $x$인 정사각형이 있다. 이 정사각형의 한 변의 길이를 $3$만큼 늘려 정사각형 ㄱ을 만든다.\n\n또 처음 정사각형의 한 변의 길이보다 $2$만큼 짧은 길이와 $2$만큼 긴 길이를 가로와 세로로 하여 직사각형 ㄴ을 만든다.\n\n$x>2$일 때, ㄱ의 넓이에서 ㄴ의 넓이를 뺀 것을 전개한 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M1",
           "no": 1,
           "text": "$13$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$3x+13$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$6x+5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$6x+13$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -42,6 +47,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "ㄱ의 넓이는 $(x+3)^2=x^2+6x+9$이다. ㄴ의 넓이는 $(x-2)(x+2)=x^2-4$이다. 따라서 넓이의 차는 $(x^2+6x+9)-(x^2-4)=6x+13$이다.\n\n$(x+3)^2$을 전개할 때 가운데 항 $6x$를 빠뜨리면 $13$을 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:14:56.947508+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "문장으로 주어진 두 도형의 길이를 각각 넓이의 식으로 나타내야 한다. 두 넓이의 차를 구할 때 서로 다른 곱셈 공식을 적용한다.",
@@ -69,30 +75,35 @@
       "body": "어떤 정수 $x$를 정해 다음과 같이 두 값을 구한다.\n\nㄱ: $x$에 $2$를 더한 수와 $x$에서 $3$을 뺀 수를 곱한다.\nㄴ: $x$에서 $1$을 뺀 수를 제곱한다.\n\nㄱ에서 ㄴ을 뺀 값을 전개한 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M1",
           "no": 1,
           "text": "$-x-7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M2",
           "no": 2,
           "text": "$-4x-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$-x+7$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$x-7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -103,6 +114,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "ㄱ은 $(x+2)(x-3)=x^2-x-6$이고, ㄴ은 $(x-1)^2=x^2-2x+1$이다. 따라서 ㄱ에서 ㄴ을 빼면 $x-7$이므로 정답은 ④이다.\n\n①은 ㄴ을 전개할 때 가운데 항 $-2x$를 빠뜨린 경우이다. ②는 ㄱ을 전개할 때 $x$의 계수와 상수항을 서로 바꾼 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:15:17.236543+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "말로 나타낸 두 값을 각각 곱셈식과 제곱식으로 바꾼 뒤, 전개하여 비교해야 한다.",
@@ -130,30 +142,35 @@
       "body": "다음 식을 전개한 것은?\n\n$(x+2)(x+4)$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$x^2+8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$x^2+2x+8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M2",
           "no": 3,
           "text": "$x^2+8x+6$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$x^2+6x+8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -164,6 +181,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(x+2)(x+4)=x^2+(2+4)x+2\\times 4=x^2+6x+8$이다. 따라서 정답은 ④이다.\n\n③은 $x$의 계수에 $2\\times 4$를 쓰고, 수만 있는 항에 $2+4$를 쓴 것이다. 두 수의 합과 곱을 바꾸어 쓰지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:14:25.827598+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -191,30 +209,35 @@
       "body": "다음 식을 전개한 것은?\n\n$(2x-3)^2$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M1",
           "no": 1,
           "text": "$4x^2+9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4x^2-6x+9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$4x^2+12x+9$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$4x^2-12x+9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -225,6 +248,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(2x-3)^2=(2x)^2-2\\times 2x\\times 3+3^2=4x^2-12x+9$이므로 정답은 ④입니다. ①은 가운데 항 $-12x$를 빠뜨린 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:14:38.629434+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -252,30 +276,35 @@
       "body": "다음 두 식에 대한 학생들의 말 중 옳은 것은?\n\n$(x+2)^2$, $(x+1)(x+3)$",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "두 식을 각각 전개하면 $x$의 계수가 서로 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M1",
           "no": 2,
           "text": "첫째 식을 전개하면 $x$인 항은 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M2",
           "no": 3,
           "text": "둘째 식을 전개하면 $x$의 계수는 $3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "첫째 식을 전개하면 상수항은 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M2",
           "no": 5,
@@ -286,6 +315,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$(x+2)^2=x^2+4x+4$이고, $(x+1)(x+3)=x^2+4x+3$이다. 따라서 두 전개식에서 $x$의 계수는 모두 $4$이므로 ①이 옳다.\n\n②는 첫째 식을 전개할 때 가운데 항을 빠뜨린 생각이다. ③과 ⑤는 둘째 식을 전개할 때 $x$의 계수와 상수항을 바꾸어 쓴 생각이다. ④는 첫째 식에서 $2$도 제곱해야 한다는 것을 놓친 생각이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:18:07.240434+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 식을 전개한 결과에 대한 학생들의 말에서 옳은 것을 고르게 했다. 가운데 항을 빠뜨리는 생각과 계수와 상수항을 바꾸는 생각을 구별할 수 있다.",
@@ -322,30 +352,35 @@
       "body": "두 학생이 다음과 같이 전개했다.\n\n민수: $(x-4)^2=x^2+16$\n지우: $(x-2)(x+3)=x^2+x-6$\n\n두 학생의 풀이에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M1",
           "no": 1,
           "text": "민수의 풀이는 옳다. $x$와 $-4$를 각각 제곱하여 더했기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M2",
           "no": 2,
           "text": "지우의 풀이는 틀렸다. $x$의 계수는 $-6$, 상수항은 $1$이어야 하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "민수의 풀이는 틀렸다. 상수항이 $-16$이어야 하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "지우의 풀이는 틀렸다. 상수항이 $6$이어야 하기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -356,6 +391,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$(x-4)^2=x^2-8x+16$이므로 민수는 $-8x$를 빠뜨렸다. 따라서 ⑤가 옳다.\n①은 각 항을 제곱한 항만 쓰고 가운데 항을 빠뜨린 생각이다.\n$(x-2)(x+3)=x^2+x-6$이므로 지우의 풀이는 옳다. ②는 $x$의 계수인 $1$과 상수항인 $-6$을 서로 바꾼 생각이다.\n③에서 $-4$의 제곱은 $16$이다. ④에서 $-2$와 $3$의 곱은 $-6$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:18:25.722453+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 학생의 전개를 보고 각 풀이에 대한 설명의 옳고 그름을 판단하게 했다.",
@@ -383,30 +419,35 @@
       "body": "다항식의 곱을 전개할 때의 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M1",
           "no": 1,
           "text": "$(x+2)^2$을 전개할 때는 $x$와 $2$를 각각 제곱한 항만 더한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$(x+2)^2$을 전개하면 $x^2$의 계수는 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(x+2)^2$을 전개할 때 $x$와 $2$의 곱은 두 번 더해진다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M2",
           "no": 4,
           "text": "$(x+2)(x+3)$을 전개하면 $x$의 계수는 $2\\times3$이고 상수항은 $2+3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -417,6 +458,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(x+2)^2=(x+2)(x+2)$에서 $x$와 $2$의 곱은 두 번 더해진다. 따라서 정답은 ③이다.\n①은 두 항을 각각 제곱한 항만 더하고, $x$와 $2$의 곱을 빠뜨렸다.\n②에서 $x^2$의 계수는 $1$이다.\n④에서는 $x$의 계수와 상수항을 바꾸어 생각했다. $x$의 계수는 $2+3$, 상수항은 $2\\times3$이다.\n⑤에서 상수항은 $2\\times3=6$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:16:01.384705+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -452,30 +494,35 @@
       "body": "민수와 지수는 각각 다음과 같이 전개했다.\n\n민수: $(x+3)^2=x^2+9$\n지수: $(x+2)(x+4)=x^2+8x+6$\n\n두 사람의 식을 살펴보고 한 말로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M1",
           "no": 1,
           "text": "민수의 식은 가운데 항이 없어도 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M2",
           "no": 2,
           "text": "지수의 식은 $x$의 계수를 $2\\times4$, 수만 있는 항을 $2+4$로 썼으므로 옳다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "민수의 식에는 $6x$가 빠졌다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "민수의 식에는 $9$ 대신 $6$을 써야 한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -486,6 +533,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "민수의 식은 $(x+3)^2=x^2+6x+9$이므로 $6x$가 빠졌다. 합의 제곱을 전개할 때 두 항을 각각 제곱한 것만 더하면 가운데 항을 빠뜨리게 된다.\n\n지수의 식은 $(x+2)(x+4)=x^2+6x+8$이어야 한다. $x$의 계수는 $2+4$이고 수만 있는 항은 $2\\times4$이다. 이 둘을 바꾸어 쓰면 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:17:05.357913+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -521,30 +569,35 @@
       "body": "두 직사각형의 넓이는 각각 $x^2+5x+6$, $x^2+7x+10$입니다. 각 변의 길이는 $x$에 양의 정수를 더한 식이고, 이 정수는 $x$의 값에 따라 바뀌지 않습니다. $x$는 양수입니다.\n\n두 직사각형에서 길이가 같은 변이 하나 있습니다. 그 변의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$x+1$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$x+2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x+3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 4,
           "text": "$x+5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -555,6 +608,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "첫째 직사각형의 넓이를 인수분해하면 $x^2+5x+6=(x+2)(x+3)$입니다. 둘째 직사각형의 넓이를 인수분해하면 $x^2+7x+10=(x+2)(x+5)$입니다. 따라서 길이가 같은 변의 길이는 $x+2$입니다.\n\n$x+5$를 고른 경우, 첫째 식에서 합이 $5$이고 곱이 $6$인 두 수 대신 합이 $6$이고 곱이 $5$인 두 수 $1$, $5$를 사용했을 수 있습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:20:54.617115+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "두 직사각형의 넓이와 변의 길이 사이의 관계를 식으로 나타내고, 각 넓이를 인수분해하여 길이가 같은 변을 찾게 한다.",
@@ -582,30 +636,35 @@
       "body": "수 $x$를 넣으면 다음 순서로 계산한 값을 내보내는 기계가 있습니다.\n\n• 넣은 수에 $2$를 더한 다음 제곱합니다.\n• 그 값에서 $9$를 뺀 다음 $2$배 합니다.\n\n기계가 내보내는 값을 식으로 나타내고, 끝까지 인수분해한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$2(x+5)(x-1)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 2,
           "text": "$2(x^2+4x-5)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 3,
           "text": "$2(x-1)(x-4)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2(x+3)(x+1)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -616,6 +675,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "기계가 내보내는 값은 $2\\{(x+2)^2-9\\}$입니다. 이를 인수분해하면 $2(x+2+3)(x+2-3)=2(x+5)(x-1)$입니다.\n\n②는 공통인수 $2$로 묶었지만 $x^2+4x-5$를 더 인수분해할 수 있습니다. ③은 합이 $4$이고 곱이 $-5$인 두 수를 찾아야 하는데, 합이 $-5$이고 곱이 $4$인 두 수를 사용한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:21:15.401747+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "기계의 계산 순서를 식으로 나타낸 뒤, 제곱의 차와 공통인수를 이용해 끝까지 인수분해해야 한다.",
@@ -643,30 +703,35 @@
       "body": "$x^2+4x-5$를 인수분해한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$(x+1)(x-5)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 2,
           "text": "$(x-1)(x-4)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(x+5)(x-1)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(x+1)(x+5)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -677,6 +742,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "합이 $4$이고 곱이 $-5$인 두 수는 $5$와 $-1$이다. 따라서 $x^2+4x-5=(x+5)(x-1)$이다.\n②는 합이 $-5$이고 곱이 $4$인 두 수를 사용한 것이다. 합과 곱을 바꾸어 생각하지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:19:56.416854+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -704,30 +770,35 @@
       "body": "$2x^2-18y^2$을 끝까지 인수분해한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 1,
           "text": "$2(x^2-9y^2)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2(x-3y)(x+3y)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2(x-2y)(x+2y)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2(x-3y)^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -738,6 +809,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "먼저 $2$를 묶으면 $2(x^2-9y^2)$이다. $x^2-9y^2$은 $(x-3y)(x+3y)$로 인수분해할 수 있다. 따라서 정답은 ②이다. ①은 $2$를 묶은 뒤 더 인수분해할 수 있는데도 멈춘 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:20:09.661656+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -765,30 +837,35 @@
       "body": "민수는 다음과 같이 인수분해하고, 두 식 모두 끝까지 인수분해했다고 말했다.\n\n첫째 식: $x^2+6x+5=(x+2)(x+3)$\n\n둘째 식: $2x^2-18=2(x^2-9)$\n\n민수의 풀이에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 1,
           "text": "첫째 식은 $2+3=5$이고 $2\\times3=6$이므로 맞다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 2,
           "text": "둘째 식은 공통인수 $2$로 묶었으므로 끝까지 인수분해한 것이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "첫째 식의 오른쪽을 $(x-1)(x-5)$로 바꾸면 맞다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "둘째 식의 오른쪽을 전개하면 $2x^2-9$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -799,6 +876,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "첫째 식의 오른쪽을 전개하면 $x^2+5x+6$이므로 첫째 식은 틀리다. $x^2+6x+5$를 인수분해하려면 합이 $6$이고 곱이 $5$인 두 수를 찾아야 한다. 따라서 $x^2+6x+5=(x+1)(x+5)$이다. ①은 두 수의 합과 곱을 바꾸어 생각한 것이다.\n\n둘째 식의 오른쪽을 전개하면 $2x^2-18$이므로 양쪽이 같다. 하지만 $x^2-9=(x+3)(x-3)$으로 더 인수분해할 수 있다. 따라서 $2x^2-18=2(x+3)(x-3)$이다. ②는 공통인수로 묶은 뒤 더 인수분해할 수 있는지 살피지 않은 것이다.\n\n③의 $(x-1)(x-5)$를 전개하면 $x^2-6x+5$이다. 따라서 정답은 ⑤이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:22:24.4223+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수의 두 풀이와 끝까지 인수분해했다는 말을 보고, 각 보기에 제시된 판단의 옳고 그름을 살피게 했다.",
@@ -826,30 +904,35 @@
       "body": "다섯 학생이 $2x^2+10x+12$를 끝까지 인수분해한 결과에 대해 말하였다. 옳게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 1,
           "text": "가은: $2(x^2+5x+6)$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 2,
           "text": "나래: $2(x+1)(x+5)$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "다온: $(x+2)(x+3)$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "라온: $2(x-2)(x-3)$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -860,6 +943,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$2x^2+10x+12=2(x^2+5x+6)=2(x+2)(x+3)$이므로 정답은 ⑤이다.\n①은 $x^2+5x+6$을 더 인수분해할 수 있는데 멈추었다.\n②는 곱이 $5$이고 합이 $6$인 두 수 $1$, $5$를 썼다. 곱이 $6$이고 합이 $5$인 두 수를 써야 한다.\n③은 앞의 $2$를 빠뜨렸다.\n④를 전개하면 $2x^2-10x+12$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:22:56.28919+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생이 끝까지 인수분해한 결과라고 말한 식을 비교하여 옳은 주장을 고르게 했다.",
@@ -887,30 +971,35 @@
       "body": "다항식 $2x^2+10x+12$를 끝까지 인수분해하는 문제에서 두 학생이 다음과 같이 답했다.\n\n민수: $2(x^2+5x+6)$\n지우: $2(x+1)(x+5)$\n\n두 학생의 답에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 1,
           "text": "민수의 답은 끝까지 인수분해한 것이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 2,
           "text": "지우의 답은 끝까지 인수분해한 것이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "민수의 답은 더 인수분해할 수 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "민수의 답을 전개하면 처음 식과 다르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -921,6 +1010,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "민수의 답은 처음 식과 같지만, $x^2+5x+6=(x+2)(x+3)$이므로 더 인수분해할 수 있다. 따라서 ③이 옳다.\n\n①은 인수분해를 끝까지 하지 않은 것이다. 지우의 답을 전개하면 $2x^2+12x+10$이므로 처음 식과 다르다. ②처럼 생각했다면 $x^2+5x+6$에서 합이 $5$, 곱이 $6$인 두 수를 찾아야 하는데, 합이 $6$, 곱이 $5$인 두 수를 찾은 것이다. 끝까지 인수분해한 답은 $2(x+2)(x+3)$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:21:33.508425+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -948,30 +1038,35 @@
       "body": "$3x^2+18x+15$를 공통인수 $3$으로 묶으면 $3(x^2+6x+5)$이다. 이 식을 끝까지 인수분해하려고 한다. 다음 중 옳은 방법은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 1,
           "text": "$3(x^2+6x+5)$에서 더 인수분해하지 않고 끝낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 2,
           "text": "괄호 안을 인수분해할 때 합이 $5$이고 곱이 $6$인 두 수를 사용한다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "괄호 안을 인수분해할 때 합이 $6$이고 곱이 $5$인 두 수를 사용한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "괄호 안을 인수분해할 때 합이 $-6$이고 곱이 $5$인 두 수를 사용한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -982,6 +1077,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "괄호 안의 식을 더 인수분해해야 한다. 합이 $6$이고 곱이 $5$인 두 수는 $1$과 $5$이므로, 끝까지 인수분해하면 $3(x+1)(x+5)$이다. ①은 괄호 안을 더 인수분해하지 않고 멈춘 것이다. ②는 두 수의 합과 곱을 바꾸어 생각한 것이다. ④와 ⑤는 괄호 안의 식에서 두 수의 합이나 곱을 잘못 찾은 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:21:57.505366+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1009,30 +1105,35 @@
       "body": "$2x^2-18$을 다음과 같이 끝까지 인수분해하려고 한다. 옳은 것은?\n\n단, 괄호 안의 식에서 공통인수를 더 묶을 수 있으면 끝까지 인수분해한 것이 아니다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 1,
           "text": "$2(x^2-9)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 2,
           "text": "$(2x+6)(x-3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2(x-3)^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$2(x+3)(x-3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1043,6 +1144,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$2x^2-18=2(x^2-9)=2(x+3)(x-3)$이므로 정답은 ④이다.\n①은 $x^2-9$를 더 인수분해할 수 있는데 멈추었다. ②는 주어진 식과 같지만 $2x+6$에서 공통인수 $2$를 더 묶을 수 있는데 멈추었다. ③과 ⑤를 전개하면 각각 $2x^2-12x+18$, $2x^2+18$이므로 주어진 식과 다르다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:19:13.06349+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "주어진 식과 같지만 더 인수분해할 수 있는 식과 주어진 식과 같지 않은 식을 함께 제시했다. 곱으로 나타내는 것과 끝까지 인수분해하는 것을 구별해야 한다.",
@@ -1070,30 +1172,35 @@
       "body": "다음 중 왼쪽 식을 오른쪽 식과 같이 끝까지 인수분해한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 1,
           "text": "$x^2+5x+6=(x+1)(x+5)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 2,
           "text": "$2x^2+4x=2(x^2+2x)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$(x+1)(x+2)=x^2+3x+2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$x^2-y^2=(x+y)(x-y)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1104,6 +1211,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "인수분해는 식을 인수의 곱으로 나타내는 것이다.\n① 오른쪽을 전개하면 $x^2+6x+5$이다. 두 수의 합과 곱을 바꾸어 생각하면 이 보기를 고를 수 있다.\n② 오른쪽의 괄호 안에서 $x$를 더 묶을 수 있다. 끝까지 인수분해하면 $2x(x+2)$이다.\n③ 왼쪽의 곱을 오른쪽과 같이 전개한 것이다.\n④ 오른쪽을 전개하면 왼쪽과 같고, 더 인수분해할 수 없다.\n⑤ 양쪽이 같지만 오른쪽은 인수의 곱으로 나타낸 식이 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:19:33.59764+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "참이 아닌 등식, 전개한 등식, 양변이 같은 식을 함께 제시했다. 등식이 참인지와 오른쪽이 끝까지 인수분해된 곱인지 각각 따져야 한다.",
@@ -1131,30 +1239,35 @@
       "body": "다항식 $2x^2-18$을 인수분해한 것 중, 더 이상 인수분해할 수 없을 때까지 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M3",
           "no": 1,
           "text": "$2(x^2-9)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2(x+3)(x-3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2(x-3)^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(2x+3)(x-3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1165,6 +1278,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "인수분해는 다항식을 인수들의 곱으로 나타내는 것입니다. $2x^2-18=2(x^2-9)=2(x+3)(x-3)$이므로 정답은 2번입니다.\n1번은 주어진 식과 같지만, $x^2-9$를 더 인수분해할 수 있습니다. 곱으로 나타냈다는 이유만으로 인수분해를 끝냈다고 생각하지 않도록 주의합니다.\n3번과 4번은 전개하면 주어진 식과 다릅니다. 5번은 인수들의 곱으로 나타내지 않았습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:18:40.748737+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1192,30 +1306,35 @@
       "body": "다항식 $x^2+5x+6$의 인수인 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-19-M4",
           "no": 1,
           "text": "$x+1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$x-2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$x+2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1226,6 +1345,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "인수는 어떤 식을 곱으로 나타낼 때 곱해지는 각각의 식이다. $x^2+5x+6=(x+2)(x+3)$이므로 정답은 ③이다. ①을 고른 경우, 곱이 $5$이고 합이 $6$인 두 수를 찾았을 수 있다. 하지만 인수분해할 때는 합이 $5$이고 곱이 $6$인 두 수를 찾아야 한다. 실제로 $(x+1)(x+5)=x^2+6x+5$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:18:53.793961+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1256,6 +1376,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$(x+1)(x+6)$을 전개하면 $x^2+7x+6$이다. 처음 식인 $x^2+5x+6$과 $x^2$의 계수와 문자 없는 항은 같지만, $x$의 계수가 다르다. 따라서 민수의 말은 틀렸다.\n\n$x^2+5x+6=(x+2)(x+3)$이다. 오른쪽을 전개하면 처음 식이 나온다. 인수분해는 식을 곱의 꼴로 나타내고, 전개는 그 곱을 다시 풀어 쓰는 계산이다. 따라서 두 계산은 서로 거꾸로 하는 관계이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:24:02.227612+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민수의 말이 틀렸음을 보여 주는 두 일차식의 곱을 직접 만들고 그 까닭을 설명하게 했다.",
@@ -1315,6 +1436,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "가에서는 먼저 $2$를 묶고, $x^2-9$를 인수분해한다. 나에서는 먼저 두 식의 곱으로 나타내고, $2x-6$에서 $2$를 묶는다. 순서는 다르지만 두 방법 모두 $2(x+3)(x-3)$이 된다.\n\n중간에 나온 식의 모양이 다르다고 해서 최종 결과도 다르다고 생각할 수 있다. 하지만 각 식을 끝까지 인수분해하면 같은 결과를 얻는다. 이 결과를 전개하면 처음 식인 $2x^2-18$이 나온다. 인수분해와 전개는 서로 거꾸로 하는 계산이므로, 전개하여 인수분해한 결과를 확인할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:24:28.429421+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "두 방법에서 계산한 순서를 비교하여 같은 결과에 이르는 까닭을 설명하게 한다.",
@@ -1374,6 +1496,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(x+3)(x-4)$를 전개하면 $x^2-4x+3x-12=x^2-x-12$이다. 처음 식과 같으므로 민지의 인수분해는 맞다. 이 식에서 인수분해는 처음 식을 곱의 꼴로 바꾸고, 전개는 그 곱의 꼴을 다시 처음 식으로 바꾼다. 두 계산은 서로 거꾸로 하는 관계이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:23:11.831365+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1419,6 +1542,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x^2+6x+8$을 인수분해하면 $(x+2)(x+4)$이다. 이를 전개하면 $x^2+4x+2x+8=x^2+6x+8$이므로 처음 식으로 돌아온다. 인수분해는 식을 곱으로 나타내는 계산이고, 전개는 그 곱을 풀어 쓰는 계산이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:23:28.008633+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

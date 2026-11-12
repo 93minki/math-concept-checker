@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
 
+from app.ai.figure_validation import geometry_errors, net_errors, solid_errors
 from app.ai.hard import HARD_CONDITIONS
 from app.ai.schemas import (
     BarChart,
@@ -13,10 +14,15 @@ from app.ai.schemas import (
     CoordinatePlane,
     Figure,
     Frequency,
+    Geometry,
+    InverseGraph,
+    Net,
     NumberLine,
+    PolylineGraph,
     QuadraticGraph,
     Question,
     Scatter,
+    Solid,
 )
 from app.ai.terms import find_banned_terms
 
@@ -100,7 +106,14 @@ def validate_figure(figure: Figure, standard_code: str) -> list[ValidationIssue]
     elif isinstance(figure, CoordinatePlane):
         check(
             axis(figure.x_min, figure.x_max, figure.tick_step, 25)
-            and axis(figure.y_min, figure.y_max, figure.tick_step, 25)
+            and axis(
+                figure.y_min,
+                figure.y_max,
+                figure.y_tick_step
+                if figure.y_tick_step is not None
+                else figure.tick_step,
+                25,
+            )
             and figure.x_min <= 0 <= figure.x_max
             and figure.y_min <= 0 <= figure.y_max,
             "coordinate_axis",
@@ -118,6 +131,25 @@ def validate_figure(figure: Figure, standard_code: str) -> list[ValidationIssue]
             all(not isinstance(g, QuadraticGraph) or g.a != 0 for g in figure.graphs),
             "quadratic_coefficient",
         )
+        check(
+            all(
+                (not isinstance(g, InverseGraph) or g.k != 0)
+                and (
+                    not isinstance(g, PolylineGraph)
+                    or (
+                        2 <= len(g.points) <= 12
+                        and all(
+                            figure.x_min <= p.x <= figure.x_max
+                            and figure.y_min <= p.y <= figure.y_max
+                            for p in g.points
+                        )
+                    )
+                )
+                for g in figure.graphs
+            ),
+            "coordinate_graph",
+        )
+        labels.extend([figure.x_label, figure.y_label])
         labels.extend(p.label for p in figure.points)
         labels.extend(g.label for g in figure.graphs)
     elif isinstance(figure, BarChart):
@@ -127,9 +159,12 @@ def validate_figure(figure: Figure, standard_code: str) -> list[ValidationIssue]
             "bar_count",
         )
         check(
-            figure.y_max > 0
+            figure.y_max > (figure.y_min if figure.y_min is not None else 0)
             and figure.y_step > 0
-            and all(0 <= v <= figure.y_max for v in figure.values),
+            and all(
+                (figure.y_min if figure.y_min is not None else 0) <= v <= figure.y_max
+                for v in figure.values
+            ),
             "bar_values",
         )
         labels.extend([*figure.categories, figure.x_label, figure.y_label])
@@ -145,7 +180,41 @@ def validate_figure(figure: Figure, standard_code: str) -> list[ValidationIssue]
             and (figure.show_bars or figure.show_polygon),
             "frequency_axes",
         )
-        labels.extend([figure.x_label, figure.y_label])
+        groups = [figure.frequencies] + (
+            [figure.compare_frequencies]
+            if figure.compare_frequencies is not None
+            else []
+        )
+        check(
+            all(
+                all(
+                    v >= 0 and (v <= 1 if figure.relative else v.is_integer())
+                    for v in group
+                )
+                and (not figure.relative or abs(sum(group) - 1) <= 0.01)
+                for group in groups
+            ),
+            "frequency_distribution",
+        )
+        check(
+            figure.compare_frequencies is None
+            or (
+                len(figure.compare_frequencies) == len(figure.frequencies)
+                and figure.show_polygon
+                and figure.series_labels is not None
+                and len(figure.series_labels) == 2
+            ),
+            "frequency_compare",
+        )
+        check(
+            figure.series_labels is None
+            or (
+                figure.compare_frequencies is not None
+                and len(figure.series_labels) == 2
+            ),
+            "frequency_labels",
+        )
+        labels.extend([figure.x_label, figure.y_label, *(figure.series_labels or [])])
     elif isinstance(figure, Boxplot):
         check(axis(figure.axis_min, figure.axis_max, figure.axis_step), "boxplot_axis")
         check(1 <= len(figure.series) <= 3, "boxplot_count")
@@ -179,6 +248,27 @@ def validate_figure(figure: Figure, standard_code: str) -> list[ValidationIssue]
             "scatter_bounds",
         )
         labels.extend([figure.x_label, figure.y_label])
+    elif isinstance(figure, Geometry):
+        for code in geometry_errors(figure):
+            check(False, code)
+        labels.extend(
+            [
+                *(s.label for s in figure.segments),
+                *(line.label for line in figure.lines),
+                *(arc.label for arc in figure.arcs),
+                *(angle.label for angle in figure.angles),
+            ]
+        )
+    elif isinstance(figure, Solid):
+        for code in solid_errors(figure):
+            check(False, code)
+        labels.extend(
+            [*(figure.vertex_names or []), *(label.text for label in figure.labels)]
+        )
+    elif isinstance(figure, Net):
+        for code in net_errors(figure):
+            check(False, code)
+        labels.extend(label.text for label in figure.labels)
     for label in labels:
         if label is None:
             continue

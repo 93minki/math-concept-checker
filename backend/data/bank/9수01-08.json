@@ -81,30 +81,35 @@
       "body": "민수는 다음과 같이 말했습니다.\n\n“근호가 붙은 수는 모두 무리수야. $\\sqrt{2}$도 무리수잖아.”\n\n민수의 말에 대한 판단과 그 까닭으로 가장 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "$\\sqrt{25}$도 근호가 있으므로 무리수야. 따라서 민수의 말은 옳아."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\sqrt{25}$는 근호가 있지만 유리수야. 따라서 민수의 말은 틀려."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\sqrt{2}$는 무리수야. 따라서 민수의 말은 옳아."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4$는 근호가 없고 유리수야. 따라서 민수의 말은 옳아."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -115,6 +120,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$\\sqrt{25}=5$이므로 $\\sqrt{25}$는 유리수입니다. 따라서 근호가 붙은 수가 모두 무리수라는 민수의 말은 틀립니다. 근호가 있다는 이유만으로 무리수라고 판단해서는 안 됩니다. $\\sqrt{2}$가 무리수라는 사실만으로는 근호가 붙은 수가 모두 무리수라고 할 수 없습니다. 또 $\\pi$에 근호가 없다는 사실은 민수의 말이 틀린 까닭이 되지 않습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T15:00:53.75526+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수가 $\\sqrt{2}$를 근거로 내린 주장을 판단하고, 그 주장에 맞는 까닭을 골라야 한다.",
@@ -161,30 +167,35 @@
       "body": "다섯 학생의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "민수: $\\sqrt{25}$는 근호가 있으므로 무리수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M2",
           "no": 2,
           "text": "지아: $0.454545\\ldots$는 끝없이 이어지므로 무리수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "서준: 무리수는 실수가 아니야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "하나: 근호가 없는 수는 모두 유리수야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -195,6 +206,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "정답은 ⑤이다. 순환하지 않는 무한소수는 무리수이고, 무리수는 실수이다.\n① $\\sqrt{25}=5$이므로 유리수이다. 근호가 있다고 모두 무리수인 것은 아니다.\n② $0.454545\\ldots=\\frac{5}{11}$이므로 유리수이다. 끝없이 이어지는 소수라도 순환소수는 유리수이다.\n③ 무리수도 실수이다.\n④ $\\pi$는 근호가 없지만 무리수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:32:36.440314+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 말을 보고 각각 옳은지 판단하게 했다. 특히 ①과 ②에서 근호와 끝없이 이어지는 소수에 대한 생각을 살펴볼 수 있다.",
@@ -222,30 +234,35 @@
       "body": "다음 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "$\\sqrt{16}$은 근호가 있으므로 무리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M2",
           "no": 2,
           "text": "$0.333\\cdots$은 끝없이 이어지는 소수이므로 무리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "원주율 $\\pi$는 유리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\sqrt{2}$는 유리수이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -256,6 +273,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "⑤ 무리수는 소수로 나타내면 순환하지 않는 무한소수이다. ① $\\sqrt{16}=4$이므로 유리수이다. 근호가 있다고 해서 모두 무리수는 아니다. ② $0.333\\cdots$은 순환소수이므로 유리수이다. 끝없이 이어지는 소수가 모두 무리수는 아니다. ③ $\\pi$는 무리수이고, ④ $\\sqrt{2}$도 무리수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:29:54.321078+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -283,30 +301,35 @@
       "body": "민지는 수가 적힌 카드 중 무리수인 카드 한 장을 상자에 넣으려고 한다. 어느 카드를 넣어야 할까?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "$\\sqrt{16}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M2",
           "no": 2,
           "text": "$0.333\\ldots$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{3}{5}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\pi$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -317,6 +340,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\pi$는 무리수이므로 ④를 넣어야 한다. ①의 $\\sqrt{16}$은 $4$이므로 유리수이다. 근호가 붙어 있어도 모두 무리수인 것은 아니다. ②의 $0.333\\ldots$은 순환소수이고 $\\frac{1}{3}$과 같으므로 유리수이다. 끝없이 이어지는 소수라도 순환하면 유리수이다. ③과 ⑤도 유리수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:30:11.008877+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -344,30 +368,35 @@
       "body": "다음 수 중에서 무리수인 것만을 모두 고른 것은?\n\nㄱ. $\\sqrt{49}$\nㄴ. $0.121212\\cdots$\nㄷ. $0.101001000100001\\cdots$\nㄹ. $0.123456777\\cdots$\nㅁ. $\\pi$\n\nㄷ은 $1$ 뒤에 $0$을 한 개, 다시 $1$ 뒤에 $0$을 두 개 쓰는 식으로, $1$ 뒤에 쓰는 $0$의 개수를 한 개씩 늘려 가는 수이다. ㄹ은 $6$ 뒤에 $7$이 끝없이 이어지는 수이다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "ㄱ, ㄷ, ㅁ"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "ㄷ, ㅁ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M2",
           "no": 4,
           "text": "ㄴ, ㄷ, ㄹ, ㅁ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -378,6 +407,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "ㄱ은 $7$이므로 유리수이다. ㄴ은 $12$가 끝없이 반복되고, ㄹ은 처음의 몇 자리를 지난 뒤 $7$이 끝없이 반복되므로 둘 다 순환소수이다. 따라서 ㄴ과 ㄹ은 유리수이다.\nㄷ은 $1$ 뒤에 오는 $0$의 개수가 계속 달라지므로 순환하지 않는 무한소수이다. ㅁ도 무리수이다. 따라서 정답은 ②이다.\n①을 골랐다면 근호가 있는 수는 모두 무리수라고 잘못 생각했을 수 있다. ④를 골랐다면 끝없이 이어지는 소수는 모두 무리수라고 잘못 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:27:57.674474+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "ㄷ과 ㄹ은 모두 끝없이 이어지는 소수이지만, ㄷ은 순환하지 않고 ㄹ은 처음의 몇 자리를 지난 뒤 순환한다. 끝없이 이어지는지뿐 아니라 순환하는지도 살펴야 한다.",
@@ -405,30 +435,35 @@
       "body": "다음 중 수를 분류한 말로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M2",
           "no": 1,
           "text": "$0.272727\\cdots$은 끝없이 이어지는 소수이므로 무리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 2,
           "text": "$\\sqrt{\\frac{16}{25}}$는 근호가 붙어 있으므로 무리수이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$\\pi-3$은 유리수가 아니므로 무리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\pi-3$은 $\\pi$에서 정수를 뺀 수이므로 유리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -439,6 +474,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$0.272727\\cdots$은 순환소수이므로 유리수이다. 끝없이 이어지는 소수가 모두 무리수인 것은 아니다. $\\sqrt{\\frac{16}{25}}=\\frac{4}{5}$이므로 유리수이다. 근호가 붙은 수가 모두 무리수인 것은 아니다.\n$\\pi-3$이 유리수라면 여기에 $3$을 더한 $\\pi$도 유리수가 된다. 그런데 $\\pi$는 무리수이므로 $\\pi-3$은 무리수이다. 또 순환하지 않는 무한소수는 무리수이다. 따라서 정답은 3번이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:58:56.552933+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "끝없이 이어져도 유리수인 소수와 근호가 있어도 유리수인 수를 제시한다. 또한 $\\pi-3$이 유리수인지 무리수의 뜻에 비추어 판단해야 한다.",
@@ -466,30 +502,35 @@
       "body": "다음 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "$\\sqrt{9}$는 근호가 있으므로 무리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M2",
           "no": 2,
           "text": "$0.\\dot{3}$은 끝없이 이어지는 소수이므로 무리수이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "소수로 나타내면 순환하지 않는 무한소수인 수는 무리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "무리수는 실수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -500,6 +541,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "무리수는 유리수가 아닌 수이며, 소수로 나타내면 순환하지 않는 무한소수이다. 따라서 정답은 3번이다. $\\sqrt{9}=3$이므로 근호가 있어도 유리수이다. $0.\\dot{3}$은 끝없이 이어지지만 순환소수이므로 유리수이다. 또 무리수는 실수이고, 소수로 나타내면 끝나는 수는 유리수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:27:07.865747+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -527,30 +569,35 @@
       "body": "어떤 수 $a$를 소수로 나타내면 끝없이 이어지고 순환하지 않는다. 다음은 수에 대한 학생들의 설명이다. 바르게 설명한 학생을 고르시오.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "$\\sqrt{25}$는 근호가 있으므로 무리수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M2",
           "no": 2,
           "text": "$0.\\dot{6}$은 끝없이 이어지는 소수이므로 무리수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$a$는 순환하지 않는 무한소수이므로 유리수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$a$는 끝없이 이어지는 소수이므로 유리수야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -561,6 +608,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$a$는 순환하지 않는 무한소수이므로 무리수이다. $\\sqrt{25}=5$이므로 유리수이다. 근호가 있다고 모두 무리수는 아니다. $0.\\dot{6}$은 순환소수이므로 유리수이다. 끝없이 이어지는 소수라고 해서 모두 무리수는 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:27:35.104518+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -588,30 +636,35 @@
       "body": "다음 일곱 수 중에서 두 수를 지우려고 한다.\n\n$0$, $\\sqrt{9}$, $\\frac{1}{2}$, $\\frac{2}{3}$, $\\pi$, $\\sqrt{2}$, $\\frac{\\pi}{2}$\n\n지우고 남은 다섯 수 중 정수는 $1$개, 정수가 아닌 유리수는 $2$개, 무리수는 $2$개가 되도록 하려면 어느 두 수를 지워야 하는가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$0$, $\\pi$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 2,
           "text": "$\\pi$, $\\sqrt{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M3",
           "no": 3,
           "text": "$0$, $\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$0$, $\\sqrt{9}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -622,6 +675,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$\\sqrt{9}=3$이므로 주어진 수 중 정수는 $0$, $\\sqrt{9}$의 $2$개이다. 정수가 아닌 유리수는 $\\frac{1}{2}$, $\\frac{2}{3}$의 $2$개이고, 무리수는 $\\pi$, $\\sqrt{2}$, $\\frac{\\pi}{2}$의 $3$개이다.\n\n따라서 정수 $1$개와 무리수 $1$개를 지워야 한다. ①의 두 수를 지우면 남은 수의 개수가 알맞다.\n\n②를 골랐다면 근호가 있는 $\\sqrt{9}$를 무리수로 잘못 생각했을 수 있다. ③을 골랐다면 분수 꼴인 $\\frac{\\pi}{2}$를 유리수로 잘못 생각했을 수 있다. $\\frac{\\pi}{2}$는 무리수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:33:49.657573+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "남은 수의 종류별 개수가 주어져 있고, 그에 맞게 지울 두 수를 찾아야 한다.",
@@ -649,30 +703,35 @@
       "body": "다음 여섯 수에 각각 점수를 주려고 한다.\n\n$-4$, $\\sqrt{16}$, $0.3$, $\\sqrt{\\frac{4}{9}}$, $\\sqrt{3}$, $\\frac{\\sqrt{2}}{3}$\n\n정수에는 $3$점, 유리수에는 $2$점, 무리수에는 $1$점을 준다. 한 수가 여러 가지에 해당하면 해당하는 점수를 모두 준다.\n\n여섯 수가 받은 점수의 합은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "$11$점"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$12$점"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$15$점"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$16$점"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M3",
           "no": 5,
@@ -683,6 +742,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "정수는 $-4$, $\\sqrt{16}=4$의 $2$개이다. 유리수는 이 두 정수를 포함하여 $0.3$, $\\sqrt{\\frac{4}{9}}=\\frac{2}{3}$까지 $4$개이다. 무리수는 $\\sqrt{3}$, $\\frac{\\sqrt{2}}{3}$의 $2$개이다.\n\n따라서 점수의 합은 $3\\times2+2\\times4+1\\times2=16$점이다.\n\n①은 근호가 있는 수를 모두 무리수로 잘못 분류하여 나올 수 있다. ②는 정수에 유리수의 점수를 주지 않아 나올 수 있다. ⑤는 $\\frac{\\sqrt{2}}{3}$이 분수 꼴이므로 유리수라고 잘못 생각하여 나올 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:34:11.997339+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "점수를 주는 방법을 읽고 정수, 유리수, 무리수의 개수를 각각 점수와 곱한 뒤 더해야 한다. 정수에 유리수의 점수도 주어야 함을 적용해야 한다.",
@@ -710,30 +770,35 @@
       "body": "다음 다섯 수에서 정수, 유리수, 무리수의 개수를 각각 세어 차례로 나타낸 것은? 정수는 유리수의 개수에도 포함한다.\n\n$-2$, $0.5$, $\\sqrt{9}$, $\\sqrt{2}$, $\\dfrac{\\pi}{2}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "$1$개, $2$개, $3$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$1$개, $3$개, $2$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2$개, $3$개, $2$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M3",
           "no": 4,
           "text": "$2$개, $4$개, $1$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -744,6 +809,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\sqrt{9}=3$이므로 정수는 $-2$, $\\sqrt{9}$로 $2$개이다. 유리수는 이 두 수와 $0.5$로 $3$개이다. $\\sqrt{2}$와 $\\dfrac{\\pi}{2}$는 무리수이므로 $2$개이다. 따라서 정답은 ③이다.\n\n①은 근호가 있는 수를 모두 무리수로 잘못 생각한 경우이다. ④는 분수 꼴인 수를 모두 유리수로 잘못 생각한 경우이다. $\\dfrac{\\pi}{2}$가 유리수라면 여기에 $2$를 곱한 $\\pi$도 유리수가 되어 모순이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:32:52.313374+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -771,30 +837,35 @@
       "body": "다음 여섯 수 중에서 정수가 아닌 유리수의 개수를 $a$, 무리수의 개수를 $b$라고 하자. $a$와 $b$를 차례로 나타낸 것은?\n\n$-4$, $0.6$, $\\sqrt{25}$, $\\sqrt{\\dfrac{4}{9}}$, $\\dfrac{\\pi}{3}$, $\\sqrt{7}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M1",
           "no": 1,
           "text": "$1$, $4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$1$, $3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2$, $2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$3$, $2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-08-M3",
           "no": 5,
@@ -805,6 +876,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\sqrt{25}=5$이고 $\\sqrt{\\dfrac{4}{9}}=\\dfrac{2}{3}$이다. 정수는 $-4$, $5$이고, 정수가 아닌 유리수는 $0.6$, $\\dfrac{2}{3}$이다. 무리수는 $\\dfrac{\\pi}{3}$, $\\sqrt{7}$이다. 따라서 $a=2$, $b=2$이다.\n\n근호가 붙은 수를 모두 무리수로 생각하면 ①을 고를 수 있다. 하지만 근호를 없앨 수 있는 수 중에는 유리수가 있다. 분수 꼴인 수를 모두 유리수로 생각하면 ⑤를 고를 수 있다. 하지만 $\\dfrac{\\pi}{3}$은 무리수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:33:11.664353+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -835,6 +907,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$\\sqrt{25}=5$, $\\sqrt{\\frac{9}{16}}=\\frac{3}{4}$이므로 두 수는 유리수이다. $\\sqrt{2}$를 소수로 나타내면 순환하지 않는 무한소수이므로 무리수이다.\n\n근호가 있다는 이유만으로 무리수라고 판단할 수는 없다. $\\sqrt{25}$와 $\\sqrt{\\frac{9}{16}}$는 근호가 있지만 유리수이므로 민지의 말이 틀렸음을 보여 준다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:35:15.877128+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "주어진 수 중에서 민지의 말이 틀렸음을 보여 주는 수를 모두 찾고 그 이유를 설명하게 한다.",
@@ -891,6 +964,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "넓이가 $\\frac{4}{9}$인 정사각형의 한 변의 길이는 $\\sqrt{\\frac{4}{9}}=\\frac{2}{3}$이다. 분수로 나타낼 수 있으므로 유리수이다. 소수로 나타내면 $0.666\\ldots$으로 끝없이 이어지지만 순환한다.\n\n넓이가 $5$인 정사각형의 한 변의 길이는 $\\sqrt{5}$이다. $\\sqrt{5}$는 순환하지 않는 무한소수이므로 무리수이다.\n\n소수가 끝없이 이어진다는 사실만으로 무리수라고 할 수는 없다. $\\frac{2}{3}$처럼 소수가 끝없이 이어져도 순환하면 유리수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:35:50.076514+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "두 길이 중 하나를 이용하여 지우의 말이 틀렸음을 설명하게 했다. 소수가 끝없이 이어지는 유리수를 찾아 말의 잘못을 보여 주어야 한다.",
@@ -945,6 +1019,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\sqrt{\\frac{25}{36}}=\\frac{5}{6}$이고, $\\frac{5}{6}$은 두 정수의 비로 나타낸 수이므로 유리수이다. 근호가 붙어 있다고 해서 모두 무리수인 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:34:31.161129+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -994,6 +1069,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\sqrt{16}=4$이고, $4$는 $\\frac{4}{1}$로 나타낼 수 있으므로 유리수입니다. 근호가 있는 수라도 근호를 없앤 결과가 유리수일 수 있습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:34:44.555987+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

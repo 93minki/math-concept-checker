@@ -964,36 +964,204 @@
   ],
   "questions": [
     {
+      "approved_at": "2026-11-12T04:31:22.571384+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-성질적용",
+      "body": "다음 그림에서 점 $B$는 선분 $AD$ 위에 있고, $\\angle ABC=90°$이다. $AB=5$, $AC=13$이고, 선분 $BD$의 길이는 선분 $AB$의 길이보다 $4$만큼 길다. $CD$의 길이의 제곱은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$144$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$169$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$225$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$250$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 5,
+          "text": "$275$"
+        }
+      ],
+      "created_at": "2026-11-12T04:17:41.162235+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle ABC=90°$이므로 삼각형 $ABC$의 빗변은 $AC$이다. 따라서 $BC^2=13^2-5^2=144$이다. 또 $BD=5+4=9$이고 $\\angle CBD=90°$이므로 $CD^2=144+9^2=225$이다.\n⑤는 $BC^2$을 구할 때 빗변과 다른 변의 길이의 제곱을 더한 값이다. 빗변이 아닌 변의 길이의 제곱을 구할 때는 빗변의 길이의 제곱에서 다른 변의 길이의 제곱을 빼야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "B"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -5.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 12.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "13",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:17:40.996285+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "선분 BD의 길이를 선분 AB보다 4만큼 길다는 문장에서 구해야 한다. 두 직각삼각형에서 각각 빗변을 확인하여 구한 값을 적용한다.",
+      "id": "b163ad0c-03e3-4cc4-9f17-e327bf8d4867",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:17:13.714179+00:00",
+          "issues": [
+            "빗변과 다른 한 변으로 나머지 변을 두 번 구하는 일반적인 적용이다. 주어진 결과에서 조건을 거꾸로 찾는 사고가 요구되지 않아 application-a를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:17:40.996167+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T12:07:08.048686+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-15-C1-성질적용",
       "body": "삼각형 모양의 종이 $ABC$에서 $\\angle ABC=90°$, $\\overline{AB}=5\\text{ cm}$, $\\overline{AC}=13\\text{ cm}$이다. 점 $D$는 두 점 $A$, $B$ 사이의 선분 $\\overline{AB}$ 위에 있고, $\\overline{AD}=2\\text{ cm}$이다.\n\n선분 $\\overline{CD}$를 한 변으로 하는 정사각형의 넓이는 몇 $\\text{cm}^2$인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$34\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$153\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$169\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$178\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M1",
           "no": 5,
@@ -1002,8 +1170,9 @@
       ],
       "created_at": "2026-11-11T11:49:33.952678+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.299891+00:00",
       "explanation": "삼각형 $ABC$에서 빗변은 $\\overline{AC}$이므로 $\\overline{BC}$의 길이의 제곱은 $13^2-5^2=144$이다.\n\n또 $\\overline{BD}=5-2=3\\text{ cm}$이고, $\\angle DBC=90°$이다. 따라서 정사각형의 넓이는 $\\overline{CD}$의 길이의 제곱과 같으므로 $144+3^2=153\\text{ cm}^2$이다.\n\n⑤는 $\\overline{BC}$의 길이의 제곱을 구할 때 $13^2$에서 $5^2$을 빼지 않고 더한 경우이다. $\\overline{BC}$는 빗변이 아니므로 빼야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:33.818192+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "정사각형의 넓이를 구하는 상황을 선분 $\\overline{CD}$의 길이의 제곱을 구하는 식으로 바꾸어야 한다. 두 직각삼각형에서 각각 빗변을 찾아 성질을 적용해야 한다.",
@@ -1014,7 +1183,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:49:33.818109+00:00",
@@ -1025,36 +1194,196 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:31:22.611737+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-성질적용",
+      "body": "다음 그림과 같은 직사각형 $ABCD$에서 대각선 $AC$의 길이는 $10$이다. 변 $AB$의 길이는 변 $BC$의 길이보다 $2$만큼 길다. 변 $AB$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 2,
+          "text": "$6$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$7$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9$"
+        }
+      ],
+      "created_at": "2026-11-12T04:18:05.00898+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "변 $AB$의 길이가 $8$이면 변 $BC$의 길이는 $6$이다. 직각삼각형 $ABC$에서 빗변은 $AC$이고, $8^2+6^2=10^2$이므로 알맞다. 변 $AB$가 $8$보다 짧으면 변 $BC$도 $6$보다 짧아 두 변의 길이의 제곱의 합이 $10^2$보다 작다. 변 $AB$가 $8$보다 길면 변 $BC$도 $6$보다 길어 두 변의 길이의 제곱의 합이 $10^2$보다 크다. 따라서 답은 $8$이다. $6$을 고른 경우, 두 변의 길이를 더하면 빗변의 길이가 된다고 잘못 생각했을 수 있다. 이때 두 변의 길이는 $6$, $4$이지만 $6^2+4^2$은 $10^2$과 같지 않다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "B"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 8.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:18:04.870575+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "빗변의 길이와 나머지 두 변의 길이 차가 주어졌을 때 각 변의 길이를 거꾸로 찾는다.",
+      "id": "189e0309-c3b9-4640-9b5e-4773b996e89b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:18:04.870346+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T12:07:08.077219+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-15-C1-성질적용",
       "body": "수직인 벽과 평평한 바닥이 직각으로 만난다. 사다리를 벽에 기대었더니 사다리의 아래쪽 끝은 벽에서 $6\\text{ m}$ 떨어져 있고, 위쪽 끝은 벽의 한 점에 닿았다. 이 사다리의 길이는 $10\\text{ m}$이다.\n\n다른 사다리를 같은 벽에 기대어 위쪽 끝이 앞의 사다리와 같은 점에 닿게 하려고 한다. 이때 아래쪽 끝이 벽에서 $15\\text{ m}$ 떨어져 있으려면 다른 사다리의 길이는 몇 $\\text{m}$이어야 하는가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$13\\text{ m}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$15\\text{ m}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$17\\text{ m}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M2",
           "no": 4,
           "text": "$23\\text{ m}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1063,8 +1392,9 @@
       ],
       "created_at": "2026-11-11T11:49:58.128729+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.373952+00:00",
       "explanation": "첫 번째 사다리가 빗변이므로 벽에 닿은 높이의 제곱은 $10^2-6^2=64$이다. 따라서 높이는 $8\\text{ m}$이다.\n\n다른 사다리가 빗변이므로 그 길이의 제곱은 $8^2+15^2=289$이다. $17^2=289$이므로 길이는 $17\\text{ m}$이다.\n\n$23\\text{ m}$를 골랐다면 높이와 바닥에서의 거리를 그대로 더했을 수 있다. 빗변의 길이는 두 길이를 그대로 더하는 것이 아니라, 각 길이의 제곱을 이용하여 구해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:57.98769+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "사다리와 벽, 바닥이 이루는 직각삼각형을 생각해야 한다. 첫 번째 사다리로 벽에 닿은 높이를 구하고, 이를 이용하여 다른 사다리의 길이를 구한다.",
@@ -1075,7 +1405,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:49:57.987581+00:00",
@@ -1086,36 +1416,173 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:31:22.658236+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-성질적용",
+      "body": "다음 그림과 같이 $\\angle A=90^\\circ$인 직각삼각형 $ABC$에서 $x^2$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$25$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$119$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$144$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$169$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 5,
+          "text": "$194$"
+        }
+      ],
+      "created_at": "2026-11-12T04:16:12.220353+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "빗변은 $\\overline{BC}$이므로 $5^2+x^2=13^2$이다. 따라서 $x^2=169-25=144$이다. $194$를 골랐다면 빗변이 아닌 변을 구할 때에도 두 길이의 제곱을 더한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 12.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "13",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:16:12.159762+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "60e8b15e-fb93-4690-a108-4a18c9a297a8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:16:12.159556+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T12:07:08.112321+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-15-C1-성질적용",
       "body": "직각삼각형 $ABC$에서 $\\angle A=90°$, $\\overline{BC}=17$, $\\overline{AB}=8$이다. $\\overline{AC}$의 길이의 제곱은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$81$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$225$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$289$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M1",
           "no": 4,
           "text": "$353$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1124,8 +1591,9 @@
       ],
       "created_at": "2026-11-11T11:48:56.251281+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.410183+00:00",
       "explanation": "$\\angle A=90°$이므로 빗변은 $\\overline{BC}$이다. 피타고라스 정리에 따라 빗변을 한 변으로 하는 정사각형의 넓이 $289$는 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같다. 따라서 $\\overline{AC}$의 길이의 제곱은 $289-64=225$이다. ④는 주어진 두 길이의 제곱을 더한 값이다. 빗변이 아닌 변의 길이의 제곱을 구할 때는 빗변의 길이의 제곱에서 다른 변의 길이의 제곱을 빼야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:56.091187+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1136,7 +1604,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:48:56.091111+00:00",
@@ -1153,30 +1621,35 @@
       "body": "벽과 바닥이 직각으로 만나는 곳에 사다리를 기울여 놓았다. 사다리의 아랫끝은 바닥에, 윗끝은 벽에 닿아 있다. 벽과 바닥이 만나는 곳에서 사다리 아랫끝까지의 거리는 $6\\,\\mathrm{m}$이고, 사다리 윗끝의 높이는 $8\\,\\mathrm{m}$이다. 사다리의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$7\\,\\mathrm{m}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$10\\,\\mathrm{m}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$12\\,\\mathrm{m}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M2",
           "no": 4,
           "text": "$14\\,\\mathrm{m}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1185,8 +1658,9 @@
       ],
       "created_at": "2026-11-11T11:49:09.99496+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.442431+00:00",
       "explanation": "사다리는 직각삼각형의 빗변에 해당한다. 사다리의 길이의 제곱은 $6^2+8^2=100$이다. $10^2=100$이므로 사다리의 길이는 $10\\,\\mathrm{m}$이다. $14\\,\\mathrm{m}$를 골랐다면 두 길이를 그대로 더했을 수 있다. 빗변의 길이를 구할 때는 두 길이를 각각 제곱하여 더해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:09.859014+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1197,10 +1671,142 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:49:09.858847+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:31:22.703604+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-성질적용",
+      "body": "다음 그림과 같이 $\\angle B=90^\\circ$인 직각삼각형 $ABC$에서 $\\overline{AB}=8\\,\\text{cm}$, $\\overline{BC}=15\\,\\text{cm}$이다. $\\overline{AC}$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$15\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$16\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$17\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 4,
+          "text": "$23\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$25\\,\\text{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:16:26.664308+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "직각과 마주 보는 변은 $\\overline{AC}$이다. 피타고라스 정리에 따라 $\\overline{AC}$의 길이의 제곱은 $8^2+15^2=289$이다. $17^2=289$이므로 $\\overline{AC}=17\\,\\text{cm}$이다. ④는 두 변의 길이를 제곱하지 않고 그대로 더한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "B"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 8.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "8 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "15 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:16:26.50843+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "81af77b2-5f6a-41ec-8872-1a6bb03061d3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:16:26.508229+00:00",
           "issues": [],
           "number": 1
         }
@@ -1214,30 +1820,35 @@
       "body": "두 직각삼각형 $ABC$, $DEF$가 있다. $\\angle ABC=90^\\circ$, $AB=8$, $BC=15$이고, $\\angle DEF=90^\\circ$, $DF=13$, $DE=5$이다. 여기서 두 점을 나란히 쓴 기호는 그 두 점을 잇는 선분의 길이를 나타낸다.\n\n다음 중 학생의 말이 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M1",
           "no": 1,
           "text": "지수: $EF^2=13^2+5^2$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M2",
           "no": 2,
           "text": "민호: $AC=8+15$야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "서연: $EF^2=13^2-5^2$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "도윤: $AC^2=15^2-8^2$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1246,8 +1857,9 @@
       ],
       "created_at": "2026-11-11T13:06:25.590401+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.358276+00:00",
       "explanation": "삼각형 $DEF$에서 빗변은 $DF$이므로 $DF^2=DE^2+EF^2$이다. 따라서 $EF^2=13^2-5^2=144$이므로 ③이 옳다.\n\n①은 빗변이 아닌 변의 길이의 제곱을 구할 때도 두 길이의 제곱을 더한 것이다. ②는 길이를 각각 제곱하지 않고 그대로 더해 빗변의 길이로 생각한 것이다.\n\n삼각형 $ABC$에서 빗변은 $AC$이므로 $AC^2=8^2+15^2=289$이고 $AC=17$이다. ④는 빗변의 길이의 제곱을 구할 때 두 변의 길이의 제곱을 뺀 것이다. ⑤는 빗변의 길이의 제곱을 빗변의 길이로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:06:25.564426+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 직각삼각형에서 빗변과 빗변이 아닌 변을 구별하여 각 학생의 말이 옳은지 판단하게 한다.",
@@ -1258,12 +1870,160 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:06:25.564345+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:31:22.777966+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "body": "다음 그림에서 $\\angle ABC=90°$, $\\overline{AB}=5$, $\\overline{AC}=13$, $\\overline{BC}=x$이다.\n\n민수는 “$x^2=13^2+5^2$이야.”라고 말했다. 민수의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 1,
+          "text": "옳다. $x^2$은 주어진 두 길이의 제곱을 더한 값이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 2,
+          "text": "옳지 않다. $5+x=13$이므로 $x=8$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳지 않다. $13^2=5^2+x^2$이므로 $x^2=13^2-5^2$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳다. 빗변의 길이가 $13$이므로 $13^2=5^2+x^2$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. 두 제곱의 차를 구해야 하므로 $x^2=5^2-13^2$이다."
+        }
+      ],
+      "created_at": "2026-11-12T04:17:49.489014+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\overline{AC}$가 빗변이므로 $13^2=5^2+x^2$이다. 따라서 $x^2=13^2-5^2$이므로 민수의 말은 옳지 않다.\n\n①은 빗변이 아닌 변을 구할 때에도 두 길이의 제곱을 더한 것이다. ②는 길이를 제곱하지 않고 그대로 더해 빗변의 길이로 생각한 것이다. ④의 식은 맞지만, 그 식은 민수의 말이 옳다는 이유가 되지 않는다. ⑤는 빗변의 길이의 제곱에서 다른 변의 길이의 제곱을 빼야 한다는 것을 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "B"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 12.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "13",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:17:49.35169+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민수가 빗변이 아닌 변의 길이의 제곱을 잘못 구한 식을 제시하고, 그 말에 대한 판단을 고르게 했다.",
+      "id": "72482319-2e2f-4257-9a30-895c1a3bdd88",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:17:02.759363+00:00",
+          "issues": [
+            "다섯 학생의 식 중 피타고라스 정리를 그대로 나타낸 ③을 고르면 되므로, 성질을 바로 확인하는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:17:26.915069+00:00",
+          "issues": [
+            "학생들의 말이라는 형식이지만 풀이 과정이나 판단 근거 없이 식이나 빗변을 제시하여, 피타고라스 정리를 바로 확인하는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:17:49.351429+00:00",
+          "issues": [],
+          "number": 3
         }
       ],
       "variant": 1
@@ -1275,30 +2035,35 @@
       "body": "직사각형 $ABCD$에서 $AB=6$, $BC=8$, $AC=10$이다. 여기서 두 점을 나란히 쓴 기호는 두 점을 잇는 선분의 길이를 나타낸다.\n\n각 선분 $AB$, $BC$, $AC$를 한 변으로 하는 정사각형을 생각하자. 다음 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M1",
           "no": 1,
           "text": "민수: $BC$를 한 변으로 하는 정사각형의 넓이는 $AC$와 $AB$를 각각 한 변으로 하는 두 정사각형의 넓이를 더하면 구할 수 있어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M2",
           "no": 2,
           "text": "지우: 빗변 $AC$의 길이는 $AB$와 $BC$의 길이를 더한 $6+8$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "서윤: $BC$를 한 변으로 하는 정사각형의 넓이는 $AC$를 한 변으로 하는 정사각형의 넓이에서 $AB$를 한 변으로 하는 정사각형의 넓이를 빼면 구할 수 있어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "도윤: $AB$와 $BC$를 각각 한 변으로 하는 두 정사각형의 넓이의 합은 $BC$를 한 변으로 하는 정사각형의 넓이와 같아."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1307,8 +2072,9 @@
       ],
       "created_at": "2026-11-11T13:07:03.12579+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.391241+00:00",
       "explanation": "선분 $AC$는 직각삼각형 $ABC$의 빗변이다. 각 선분을 한 변으로 하는 정사각형의 넓이는 차례로 $36$, $64$, $100$이다. 따라서 $100-36=64$이므로 ③이 옳다.\n\n①은 빗변이 아닌 변을 한 변으로 하는 정사각형의 넓이를 구할 때 두 넓이를 더했다. ②는 길이를 제곱하지 않고 그대로 더했다. ④에서 두 넓이의 합은 $100$이므로 $64$와 같지 않다. ⑤에서 $100$은 $64$의 두 배가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:07:03.101205+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생이 길이와 정사각형의 넓이에 대해 한 말을 비교하여 옳은 주장을 고르게 했다.",
@@ -1319,10 +2085,173 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:07:03.101116+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:31:22.809276+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "body": "다음 그림에서 점 $A$는 선분 $CD$ 위에 있고, $\\angle BAC=\\angle BAD=90°$이다. $\\overline{AB}=8$, $\\overline{BC}=10$, $\\overline{BD}=17$, $\\overline{AC}=x$, $\\overline{AD}=y$이다.\n\n그림을 보고 학생들이 말한 식 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$x^2+8^2=10^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 2,
+          "text": "$x^2=10^2+8^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 3,
+          "text": "$8+y=17$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y^2+17^2=8^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 5,
+          "text": "$y^2=17^2+8^2$"
+        }
+      ],
+      "created_at": "2026-11-12T04:18:18.087244+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "삼각형 $ABC$에서 빗변은 $BC$이므로 $x^2+8^2=10^2$이다. 따라서 정답은 ①이다.\n\n②와 ⑤는 빗변이 아닌 변의 길이의 제곱을 구할 때도 주어진 두 변의 길이의 제곱을 더한 식이다. ③은 삼각형 $ABD$에서 두 변의 길이를 그대로 더해 빗변의 길이로 나타낸 식이다. ④는 빗변인 $BD$가 아니라 $AB$의 길이의 제곱을 나머지 두 변의 길이의 제곱의 합으로 나타낸 식이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": -15.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "y",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "17",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:18:18.022047+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 직각삼각형에 대해 학생들이 말한 식을 비교하고 옳은 식을 판단하게 한다.",
+      "id": "b70df67a-68fa-47ee-9bdf-cdc783e5c6cb",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:18:18.021787+00:00",
           "issues": [],
           "number": 1
         }
@@ -1336,30 +2265,35 @@
       "body": "$\\angle ABC=90^\\circ$인 직각삼각형 $ABC$가 있다. $\\overline{AC}$의 길이는 $10$, $\\overline{BC}$의 길이는 $8$이다. $\\overline{AB}$의 길이를 $x$라 할 때, 옳은 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M1",
           "no": 1,
           "text": "$x^2=10^2+8^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M2",
           "no": 2,
           "text": "$x+8=10$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$x^2=10^2-8^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x^2+10^2=8^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1368,8 +2302,9 @@
       ],
       "created_at": "2026-11-11T11:50:15.784434+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.426452+00:00",
       "explanation": "빗변은 $\\overline{AC}$이다. 빗변에 만든 정사각형의 넓이 $100$은 나머지 두 변에 만든 정사각형의 넓이의 합과 같다. 따라서 $x^2+64=100$이므로 $x^2=10^2-8^2$이다. ①은 빗변이 아닌 변을 구하면서 두 제곱을 더한 식이다. ②는 길이를 그대로 더한 식이다. ④는 빗변이 아닌 변의 제곱을 두 제곱의 합으로 나타낸 식이다. ⑤는 $8$을 제곱하지 않고 뺀 식이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:50:15.626007+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1380,10 +2315,142 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:50:15.625930+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:31:22.847044+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "body": "다음 그림의 직각삼각형 $ABC$에서 $\\angle A$는 직각이다. $\\overline{AB}$의 길이를 $x$라고 할 때, 피타고라스 정리를 바르게 나타낸 식은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 1,
+          "text": "$x^2=13^2+5^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 2,
+          "text": "$13=x+5$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x^2+5^2=13^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x^2=13^2-5$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$5^2=13^2+x^2$"
+        }
+      ],
+      "created_at": "2026-11-12T04:16:14.362675+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "빗변은 $\\overline{BC}$이므로 $x^2+5^2=13^2$이다. 따라서 정답은 ③이다. ①은 빗변이 아닌 변의 길이의 제곱을 구할 때도 두 길이의 제곱을 더한 식이다. ②는 길이를 제곱하지 않고 그대로 더한 식이다. ④는 $5$를 제곱하지 않았고, ⑤는 빗변이 아닌 $\\overline{AC}$를 빗변처럼 생각한 식이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 5.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "13",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:16:14.310756+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a2b37bbe-abd3-47b3-9355-69cbf9a1304e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:16:14.310533+00:00",
           "issues": [],
           "number": 1
         }
@@ -1397,30 +2464,35 @@
       "body": "두 직각삼각형 가와 나에 대해 학생들이 말하였다.\n\n- 가: 빗변이 아닌 두 변의 길이는 각각 $5$, $12$이다.\n- 나: 빗변의 길이는 $13$이고, 빗변이 아닌 한 변의 길이는 $5$이다.\n\n옳게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M2",
           "no": 1,
           "text": "가의 빗변의 길이는 $5+12=17$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M1",
           "no": 2,
           "text": "나의 나머지 변을 한 변으로 하는 정사각형의 넓이는 $13^2+5^2=194$야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "나의 나머지 변을 한 변으로 하는 정사각형의 넓이는 $13^2-5^2=144$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "나의 나머지 변을 한 변으로 하는 정사각형의 넓이는 $169-25=134$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1429,8 +2501,9 @@
       ],
       "created_at": "2026-11-11T13:06:01.104962+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.454468+00:00",
       "explanation": "가에서 빗변이 아닌 두 변을 한 변으로 하는 정사각형의 넓이는 각각 $25$, $144$이다. 빗변을 한 변으로 하는 정사각형의 넓이는 $25+144=169$이므로 빗변의 길이는 $13$이다. 두 변의 길이를 그대로 더해 $17$이라고 하면 안 된다.\n\n나에서 빗변을 한 변으로 하는 정사각형의 넓이는 $169$이고, 길이가 $5$인 변을 한 변으로 하는 정사각형의 넓이는 $25$이다. 따라서 나머지 변을 한 변으로 하는 정사각형의 넓이는 $169-25=144$이다. 이 넓이를 구할 때 두 넓이를 더하면 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:06:01.054762+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1441,7 +2514,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:05:31.263098+00:00",
@@ -1460,6 +2533,327 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:31:22.878372+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-오개념판별",
+      "body": "다음 그림의 직각삼각형 $PQR$에서 $\\angle P$는 직각이다. $\\overline{PQ}$의 길이는 $12$, $\\overline{PR}$의 길이는 $5$이다. 다섯 학생의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M1",
+          "no": 1,
+          "text": "$12^2$은 빗변의 길이의 제곱과 $5^2$을 더한 값이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-15-M2",
+          "no": 2,
+          "text": "빗변의 길이는 $12+5$이므로 $17$이야."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "빗변의 길이는 $13$이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "빗변의 길이는 $15$야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "빗변의 길이는 $11$이야."
+        }
+      ],
+      "created_at": "2026-11-12T04:16:39.015956+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "빗변은 $\\overline{QR}$이다. 피타고라스 정리에 따라 빗변의 길이의 제곱은 $12^2+5^2=169$이다. $13^2=169$이므로 빗변의 길이는 $13$이다. ①은 빗변이 아닌 변의 길이의 제곱을 구할 때 두 변의 길이의 제곱을 잘못 더했다. ②는 길이를 제곱하지 않고 그대로 더했다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "Q",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "R",
+            "vertex": "P"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "Q",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "R",
+            "show_name": true,
+            "x": 0.0,
+            "y": 5.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "P",
+            "label": "12",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "Q"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "R"
+          },
+          {
+            "dashed": false,
+            "from": "Q",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "R"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:16:38.808781+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a59e0814-6a67-45a3-96b6-b75da95bf50b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:16:38.808393+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:31:22.909038+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "body": "그림에서 삼각형 $ABC$의 각 변을 한 변으로 하는 정사각형을 그렸습니다. 한 학생이 다음과 같이 말했습니다.\n\n“모든 삼각형에서 가장 긴 변을 한 변으로 하는 정사각형의 넓이는 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같다.”\n\n이 학생의 말이 옳은지 판단하고, 그림을 이용하여 그 이유를 넓이로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:21:37.011825+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가장 긴 변 $AB$를 한 변으로 하는 정사각형의 넓이는 $6^2=36$입니다. 나머지 두 정사각형의 넓이의 합은 $5^2+5^2=50$입니다. 두 넓이가 같지 않으므로 학생의 말은 옳지 않습니다. 피타고라스 정리는 모든 삼각형이 아니라 직각삼각형에서 성립합니다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 3.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": false,
+            "x": 0.0,
+            "y": -6.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": false,
+            "x": 6.0,
+            "y": -6.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": false,
+            "x": -4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": false,
+            "x": -1.0,
+            "y": 7.0
+          },
+          {
+            "dot": false,
+            "id": "H",
+            "show_name": false,
+            "x": 10.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "I",
+            "show_name": false,
+            "x": 7.0,
+            "y": 7.0
+          }
+        ],
+        "polygons": [
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "B",
+              "E",
+              "D"
+            ]
+          },
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "C",
+              "G",
+              "F"
+            ]
+          },
+          {
+            "shaded": false,
+            "vertices": [
+              "B",
+              "C",
+              "I",
+              "H"
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:21:36.895484+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "그림의 삼각형을 이용하여 모든 삼각형에 대한 학생의 말이 옳지 않음을 넓이로 설명하게 한다.",
+      "id": "435d22ac-2c47-4451-b7f4-511ca2323414",
+      "model": "gpt-6.1-terra",
+      "model_answer": "학생의 말은 옳지 않다. 가장 긴 변 $AB$를 한 변으로 하는 정사각형의 넓이는 $6^2=36$이고, 나머지 두 정사각형의 넓이의 합은 $5^2+5^2=50$이므로 두 넓이가 같지 않다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "가장 긴 변을 한 변으로 하는 정사각형의 넓이가 $36$임을 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "나머지 두 정사각형의 넓이의 합이 $50$임을 쓴다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 넓이가 같지 않음을 비교하여 학생의 말이 옳지 않다고 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-15-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:21:36.895123+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.772682+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-15-C1-이유설명",
@@ -1467,8 +2861,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:08:11.667857+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.269875+00:00",
       "explanation": "삼각형 B에서 가장 긴 변을 한 변으로 하는 정사각형의 넓이는 $36$이다. 나머지 두 정사각형의 넓이의 합은 $16+25=41$이므로 민수의 말은 옳지 않다. 삼각형 B가 직각삼각형이라면 가장 긴 변이 빗변이므로 두 넓이가 같아야 한다. 따라서 삼각형 B는 직각삼각형이 아니다. 피타고라스 정리의 넓이 관계는 모든 삼각형이 아니라 직각삼각형에서 성립한다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:08:11.638612+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "모든 삼각형에 대해 성립한다는 말이 옳지 않음을 보일 삼각형을 고르고, 넓이를 비교하여 설명하게 한다.",
@@ -1507,7 +2902,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:08:11.638427+00:00",
@@ -1518,6 +2913,235 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:31:22.943086+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "body": "그림의 정사각형 $ABCD$ 안에 정사각형 $EFGH$가 있습니다. 네 모서리의 삼각형은 모두 합동인 직각삼각형입니다.\n\n같은 크기의 정사각형 종이 한 장을 더 준비하여 다음과 같이 잘랐습니다. 왼쪽 변에서 $6$만큼 떨어진 곳과 아래쪽 변에서 $6$만큼 떨어진 곳을 각각 변에 평행하게 잘라 네 부분으로 나눕니다. 이 중 직사각형 두 개를 각각 대각선을 따라 잘라 삼각형 네 개를 떼어 냅니다.\n\n그림에서 네 삼각형을 떼어 내고 남은 부분과 새 종이에서 네 삼각형을 떼어 내고 남은 부분의 넓이를 각각 구하시오. 또 두 넓이가 같은 까닭을 떼어 낸 삼각형의 넓이를 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:22:15.236701+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 남은 정사각형 $EFGH$의 넓이는 $10^2=100$입니다. 새 종이에서 남은 두 정사각형의 넓이의 합은 $6^2+8^2=100$입니다.\n\n두 종이는 모두 한 변의 길이가 $14$인 정사각형입니다. 각각에서 떼어 낸 삼각형은 모두 직각을 낀 두 변의 길이가 $6$, $8$인 직각삼각형입니다. 따라서 두 종이에서 떼어 낸 넓이가 각각 $4\\times(6\\times8\\div2)=96$으로 같으므로 남은 넓이도 같습니다. 직각삼각형이 아닌 삼각형에서도 항상 이와 같은 넓이 관계가 성립하는 것은 아닙니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "H",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 14.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 14.0,
+            "y": 14.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": 14.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 14.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": true,
+            "x": 8.0,
+            "y": 14.0
+          },
+          {
+            "dot": false,
+            "id": "H",
+            "show_name": true,
+            "x": 0.0,
+            "y": 8.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "H"
+          },
+          {
+            "dashed": false,
+            "from": "H",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "H"
+          },
+          {
+            "dashed": false,
+            "from": "H",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:22:14.864504+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "서로 다른 두 자르기 방법에서 남은 부분의 넓이를 비교하고, 처음 넓이와 떼어 낸 넓이가 각각 같다는 점을 이용해 결과가 같은 이유를 설명하게 한다.",
+      "id": "1401450a-e2f3-423b-a0fd-08c49ce6fe1f",
+      "model": "gpt-6.1-terra",
+      "model_answer": "그림에서 남은 부분의 넓이는 $10^2=100$입니다. 새 종이에서 남은 부분은 한 변의 길이가 각각 $6$, $8$인 정사각형 두 개이므로 넓이의 합은 $6^2+8^2=100$입니다. 두 종이의 처음 넓이가 같고 각각에서 넓이가 $6\\times8\\div2=24$인 삼각형 네 개를 떼어 냈으므로 남은 넓이도 같습니다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "그림에서 남은 정사각형의 넓이를 $10^2=100$으로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-15-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "새 종이에서 남은 두 정사각형의 넓이의 합을 $6^2+8^2=100$으로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-15-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "처음 두 종이의 넓이가 같고 각각에서 넓이가 $24$인 삼각형 네 개를 떼어 내므로 남은 넓이가 같다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:22:14.864284+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.824955+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-15-C1-이유설명",
@@ -1525,8 +3149,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:08:53.445357+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.338878+00:00",
       "explanation": "두 종이의 처음 넓이는 각각 $17^2=289$이다. 각 종이에서 잘라 낸 직각삼각형 네 개의 넓이는 $4\\times(5\\times12\\div2)=120$으로 같다. 따라서 남은 부분의 넓이도 각각 $289-120=169$로 같다.\n\n첫째 종이에 남은 정사각형의 넓이는 $13^2=169$이다. 둘째 종이에 남은 두 정사각형의 넓이의 합은 $5^2+12^2=25+144=169$이다. 따라서 이 직각삼각형에서 빗변을 한 변으로 하는 정사각형의 넓이는 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합과 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:08:53.400011+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "두 종이에 남은 부분의 넓이를 서로 다른 방법으로 구해 비교하게 한다. 처음 넓이와 잘라 낸 넓이를 살펴 두 결과가 같은 까닭을 설명해야 한다.",
@@ -1559,7 +3184,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:08:53.399842+00:00",
@@ -1570,6 +3195,263 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:31:22.968103+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "body": "그림에서 $\\angle BAC=90°$이고, $\\triangle ABC$의 각 변을 한 변으로 하는 정사각형을 삼각형 바깥쪽에 그렸다. 세 정사각형의 넓이 사이의 관계를 구체적인 수를 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:20:41.635102+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{AB}$, $\\overline{AC}$, $\\overline{BC}$를 한 변으로 하는 정사각형의 넓이는 각각 $16$, $9$, $25$이다. 따라서 빗변을 한 변으로 하는 정사각형의 넓이는 나머지 두 정사각형의 넓이의 합과 같다. 변의 길이를 그대로 더하는 것이 아니라 각 변을 한 변으로 하는 정사각형의 넓이를 비교해야 한다. 이 관계가 모든 삼각형에서 성립한다고 생각해서도 안 된다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": false,
+            "x": 4.0,
+            "y": -4.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": false,
+            "x": 0.0,
+            "y": -4.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": false,
+            "x": -3.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": false,
+            "x": -3.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "H",
+            "show_name": false,
+            "x": 7.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "I",
+            "show_name": false,
+            "x": 3.0,
+            "y": 7.0
+          }
+        ],
+        "polygons": [
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "B",
+              "D",
+              "E"
+            ]
+          },
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "C",
+              "F",
+              "G"
+            ]
+          },
+          {
+            "shaded": false,
+            "vertices": [
+              "B",
+              "C",
+              "I",
+              "H"
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "H"
+          },
+          {
+            "dashed": false,
+            "from": "H",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "I"
+          },
+          {
+            "dashed": false,
+            "from": "I",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:20:41.350159+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2ffd410a-3f63-4be2-a43c-1be6f3ad18f1",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\overline{AB}$, $\\overline{AC}$, $\\overline{BC}$를 한 변으로 하는 정사각형의 넓이는 각각 $16$, $9$, $25$이다. $16+9=25$이므로 빗변을 한 변으로 하는 정사각형의 넓이는 나머지 두 정사각형의 넓이의 합과 같다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "각 변을 한 변으로 하는 정사각형의 넓이를 각각 $16$, $9$, $25$로 바르게 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-15-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "$16+9=25$를 이용하여 빗변을 한 변으로 하는 정사각형의 넓이와 나머지 두 정사각형의 넓이 사이의 관계를 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-15-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:20:41.349809+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.85394+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-15-C1-이유설명",
@@ -1577,8 +3459,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:07:23.764718+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.371007+00:00",
       "explanation": "세 정사각형의 넓이는 각각 $16$, $25$, $36$이다. $16+25=41$이므로 가장 긴 변을 한 변으로 하는 정사각형의 넓이 $36$과 같지 않다. 피타고라스 정리는 직각삼각형에 성립하며, 모든 삼각형에 적용할 수는 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:07:23.725851+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1606,7 +3489,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:07:23.725618+00:00",
@@ -1624,8 +3507,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:07:44.389071+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.411491+00:00",
       "explanation": "세 정사각형의 넓이는 각각 $25$, $144$, $169$이다. $25+144=169$이므로 빗변을 한 변으로 하는 정사각형의 넓이는 나머지 두 정사각형의 넓이의 합과 같다. 이 관계가 직각이 아닌 삼각형에서도 언제나 성립한다고 생각하지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:07:44.369084+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1651,10 +3535,193 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:07:44.368985+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:31:23.007531+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-15-C1-이유설명",
+      "body": "그림에서 $\\angle BAC=120°$이고, $\\triangle ABC$의 각 변을 한 변으로 하는 정사각형을 삼각형 바깥쪽에 그렸다.\n\n민수는 “모든 삼각형에서 가장 긴 변을 한 변으로 하는 정사각형의 넓이는 나머지 두 정사각형의 넓이의 합과 같다.”라고 말하였다. 그림을 이용하여 민수의 말이 옳지 않은 이유를 구체적인 수로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:21:09.517442+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "세 정사각형의 넓이는 각각 $3^2=9$, $5^2=25$, $7^2=49$이다. 그런데 $9+25=34$이므로 가장 큰 정사각형의 넓이 $49$와 다르다. 피타고라스 정리는 직각삼각형에서 성립하며, 모든 삼각형에서 성립하는 것은 아니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": -1.5,
+            "y": 2.598076211
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": false,
+            "x": 0.0,
+            "y": -5.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": false,
+            "x": 5.0,
+            "y": -5.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": false,
+            "x": -2.598076211,
+            "y": -1.5
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": false,
+            "x": -4.098076211,
+            "y": 1.098076211
+          },
+          {
+            "dot": false,
+            "id": "H",
+            "show_name": false,
+            "x": 7.598076211,
+            "y": 6.5
+          },
+          {
+            "dot": false,
+            "id": "I",
+            "show_name": false,
+            "x": 1.098076211,
+            "y": 9.098076211
+          }
+        ],
+        "polygons": [
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "B",
+              "E",
+              "D"
+            ]
+          },
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "C",
+              "G",
+              "F"
+            ]
+          },
+          {
+            "shaded": false,
+            "vertices": [
+              "B",
+              "C",
+              "I",
+              "H"
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "7",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:21:09.414073+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2d6bf952-4fe3-48d8-9731-c855b1a1329f",
+      "model": "gpt-6.1-terra",
+      "model_answer": "세 정사각형의 넓이는 각각 $9$, $25$, $49$이다. $9+25=34$이고 $34$는 $49$와 다르므로 민수의 말은 옳지 않다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "세 정사각형의 넓이를 각각 $9$, $25$, $49$로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "작은 두 정사각형의 넓이의 합 $34$와 가장 큰 정사각형의 넓이 $49$가 다름을 밝혀 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-15-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:21:09.412891+00:00",
           "issues": [],
           "number": 1
         }
@@ -1668,30 +3735,35 @@
       "body": "삼각형 $ABC$의 둘레는 $24$입니다. 변 $AB$의 길이는 $6$이고, 변 $BC$의 길이는 변 $AB$의 길이보다 $2$ 더 깁니다. 삼각형 $ABC$에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "직각삼각형이고, $\\angle A$가 직각이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "직각삼각형이고, $\\angle B$가 직각이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "직각삼각형이고, $\\angle C$가 직각이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M3",
           "no": 4,
           "text": "$6^2+10^2$이 $8^2$과 다르므로 직각삼각형이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1702,6 +3774,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "변 $BC$의 길이는 $6+2=8$이고, 변 $AC$의 길이는 $24-6-8=10$입니다. 세 변을 한 변으로 하는 정사각형의 넓이를 비교하면 $6^2+8^2=36+64=100=10^2$입니다. 길이가 $6$, $8$인 두 변을 직각으로 만난 두 변으로 하는 삼각형을 만들면 나머지 변의 길이는 $10$입니다. 따라서 세 변의 길이가 같은 삼각형 $ABC$도 직각삼각형입니다. 가장 긴 변 $AC$와 마주 보는 각 $B$가 직각이므로 정답은 ②입니다.\n④는 가장 긴 변이 아닌 길이 $8$인 변을 빗변으로 생각한 것입니다. 빗변은 직각과 마주 보는 가장 긴 변이어야 합니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:10:01.121123+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "변의 길이 사이의 관계와 둘레를 식으로 나타내어 세 변의 길이를 구해야 한다. 그 길이를 비교해 직각삼각형인지 판별하고 직각의 위치도 찾아야 한다.",
@@ -1729,30 +3802,35 @@
       "body": "길이가 $5$, $12$인 두 변을 가진 삼각형을 만들려고 한다. 이 삼각형이 직각삼각형이 되도록 나머지 한 변의 길이를 정하려고 할 때, 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$10$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$13$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$15$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M3",
           "no": 5,
@@ -1763,6 +3841,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "가장 긴 변을 한 변으로 하는 정사각형의 넓이와 나머지 두 변을 각각 한 변으로 하는 정사각형의 넓이의 합을 비교한다.\n\n① $12^2=144$, $5^2+8^2=89$\n② $12^2=144$, $5^2+10^2=125$\n③ $13^2=169$, $5^2+12^2=169$\n④ $15^2=225$, $5^2+12^2=169$\n\n넓이가 같은 것은 ③뿐이다. 길이가 $5$와 $12$인 두 변이 직각을 이루는 삼각형을 생각하면, 빗변을 한 변으로 하는 정사각형의 넓이는 $169$이다. $13^2=169$이므로 빗변의 길이는 $13$이다. 따라서 세 변의 길이가 $5$, $12$, $13$인 삼각형은 직각삼각형이다.\n\n가장 긴 변이 아닌 변을 빗변으로 생각하여 비교하면 ③도 직각삼각형이 아니라고 잘못 판단해 ⑤를 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:11:09.455447+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "직각삼각형이 된다는 결과를 주고, 이를 만족하는 나머지 한 변의 길이를 찾게 한다. 각 길이에서 가장 긴 변을 확인하여 직접 비교해야 한다.",
@@ -1798,30 +3877,35 @@
       "body": "세 변의 길이가 각각 $6$, $8$, $10$인 삼각형이 있다. 이 삼각형이 직각삼각형인지 판별한 것으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$6^2+8^2=10^2$이므로 직각삼각형이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M3",
           "no": 2,
           "text": "$6^2+10^2\\ne 8^2$이므로 직각삼각형이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$6^2+10^2=8^2$이므로 직각삼각형이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$6^2+8^2\\ne 10^2$이므로 직각삼각형이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1832,6 +3916,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "가장 긴 변의 길이는 $10$이다. $6^2+8^2=36+64=100=10^2$이므로 정답은 ①이다.\n\n길이가 $6$, $8$인 두 변이 직각을 이루는 삼각형을 생각해 보자. 두 변을 한 변으로 하는 정사각형의 넓이의 합은 $36+64=100$이다. 따라서 빗변을 한 변으로 하는 정사각형의 넓이도 $100$이고, 빗변의 길이는 $10$이다. 이 삼각형은 문제의 삼각형과 세 변의 길이가 각각 같으므로 모양이 같다. 따라서 문제의 삼각형도 직각삼각형이다.\n\n②는 가장 긴 변이 아닌 길이 $8$인 변을 빗변의 자리에 놓고 비교한 것이다. 직각삼각형의 빗변은 가장 긴 변이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:09:12.513604+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1859,30 +3944,35 @@
       "body": "삼각형 $ABC$에서 $AB=12$, $BC=13$, $CA=5$이다. 이 삼각형에 대해 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "직각삼각형이고, $∠A$가 직각이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "직각삼각형이고, $∠B$가 직각이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "직각삼각형이고, $∠C$가 직각이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M3",
           "no": 4,
           "text": "$5^2+13^2\\ne12^2$이므로 직각삼각형이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1893,6 +3983,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "가장 긴 변은 $BC$이다. $13^2=169$, $12^2+5^2=169$이므로 두 값이 같다. 길이가 $12$, $5$인 두 변이 직각을 이루는 삼각형을 만들면 나머지 변의 길이는 $13$이다. 두 삼각형은 세 변의 길이가 각각 같으므로 합동이다. 따라서 $∠A$가 직각이다.\n④는 가장 긴 변이 아닌 변을 빗변으로 생각하여 잘못 비교한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:09:33.110974+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1920,30 +4011,35 @@
       "body": "삼각형 $ABC$의 세 변의 길이는 $AB=5$, $BC=12$, $AC=13$이다. 이 삼각형에 대한 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M3",
           "no": 1,
           "text": "민수: $5^2+13^2\\ne12^2$이므로 직각삼각형이 아니야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "지우: $5+12\\ne13$이므로 직각삼각형이 아니야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "서연: 세 변의 길이가 모두 다르므로 직각삼각형이 아니야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "도윤: $5^2+12^2=13^2$이므로 직각삼각형이고, $\\angle BAC$가 직각이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1954,6 +4050,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "정답은 ⑤이다. 길이가 $5$와 $12$인 두 변이 직각을 이루는 삼각형을 생각해 보자. 두 변에 각각 만든 정사각형의 넓이는 $25$와 $144$이므로, 빗변에 만든 정사각형의 넓이는 $25+144=169$이다. $13^2=169$이므로 빗변의 길이는 $13$이다. 이 삼각형과 삼각형 $ABC$는 세 변의 길이가 각각 같으므로 합동이다. 따라서 길이가 $5$와 $12$인 두 변이 만나는 $\\angle ABC$가 직각이다.\n①에서 계산한 부등식은 맞지만, 가장 긴 변 $AC$가 아닌 $BC$를 빗변 자리에 놓고 판별한 것이 잘못이다. ②에서는 길이의 합을 비교했고, ③에서는 세 변의 길이가 모두 다르면 직각삼각형이 될 수 없다고 생각했다. ④에서는 식은 맞게 세웠지만 직각의 위치를 잘못 찾았다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:13:26.399694+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 말을 비교하여 직각삼각형인지와 직각의 위치에 대한 판단이 모두 옳은 말을 고르게 했다.",
@@ -1981,30 +4078,35 @@
       "body": "세 변의 길이가 각각 $6$, $8$, $10$인 삼각형이 있다. 민지는 “$6^2+10^2\\ne 8^2$이므로 이 삼각형은 직각삼각형이 아니야.”라고 말했다.\n\n민지의 말에 대한 판단과 그 까닭이 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M3",
           "no": 1,
           "text": "민지의 말은 맞아. 길이가 $8$인 변을 빗변 자리에 놓고 살펴보면 돼."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "민지의 말은 맞아. $6+8\\ne 10$이므로 직각삼각형이 아니야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "민지의 말은 틀려. $6+8>10$이므로 직각삼각형이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "민지의 말은 틀려. $6^2+8^2=10^2$이므로 길이가 $10$인 변을 빗변으로 하는 직각삼각형이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2015,6 +4117,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "가장 긴 변의 길이는 $10$이다. 길이가 $6$, $8$인 두 변을 한 변으로 하는 정사각형의 넓이의 합은 $36+64=100$이고, 길이가 $10$인 변을 한 변으로 하는 정사각형의 넓이도 $100$이다.\n\n길이가 $6$, $8$인 두 변이 직각을 이루는 삼각형을 그리면 빗변을 한 변으로 하는 정사각형의 넓이는 $100$이므로 빗변의 길이는 $10$이다. 이 삼각형과 주어진 삼각형은 세 변의 길이가 각각 같아 합동이다. 따라서 주어진 삼각형도 직각삼각형이다.\n\n민지는 가장 긴 변이 아닌 길이 $8$인 변을 빗변 자리에 놓고 살펴본 것이 잘못이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:13:52.552465+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민지가 가장 긴 변이 아닌 변을 빗변 자리에 놓고 판별한 말을 제시하고, 그 말의 옳고 그름과 까닭을 함께 판단하게 한다.",
@@ -2042,30 +4145,35 @@
       "body": "세 변의 길이가 각각 $5$, $12$, $13$인 삼각형이 있다. 이 삼각형이 직각삼각형인지 판단한 말로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$5+12\\ne13$이므로 직각삼각형이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M3",
           "no": 2,
           "text": "$5^2+13^2\\ne12^2$이므로 직각삼각형이 아니다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$5^2+12^2=13^2$이므로 직각삼각형이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$5^2+12^2=159$이므로 직각삼각형이 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2076,6 +4184,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "가장 긴 변의 길이는 $13$이고, $5^2+12^2=25+144=169=13^2$이다. 길이가 $5$, $12$인 두 변을 직각으로 만나는 변으로 하여 삼각형을 만들면, 나머지 변의 길이는 $13$이다. 따라서 주어진 삼각형은 직각삼각형이다.\n\n②에서는 길이가 $12$인 변을 빗변 자리에 놓았다. 직각삼각형의 빗변은 가장 긴 변이므로 길이가 $13$인 변을 빗변 자리에 놓고 살펴보아야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:11:31.533905+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2103,30 +4212,35 @@
       "body": "세 변의 길이가 각각 $6$, $8$, $10$인 삼각형이 있다. 민수는 “$6^2+10^2\\ne 8^2$이므로 이 삼각형은 직각삼각형이 아니다.”라고 말했다.\n\n민수의 말에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "가장 긴 변의 길이가 $10$이므로 $6^2+8^2=10^2$인지 확인해야 한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-15-M3",
           "no": 2,
           "text": "길이가 $8$인 변을 빗변으로 놓고 확인했으므로 민수의 판별은 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$6+8>10$이므로 이 삼각형은 직각삼각형이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "세 변의 길이의 합이 짝수이므로 이 삼각형은 직각삼각형이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2137,6 +4251,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "가장 긴 변의 길이가 $10$이므로 $6^2+8^2=10^2$인지 확인해야 한다. 실제로 $6^2+8^2=36+64=100=10^2$이다.\n\n두 직각을 낀 변의 길이가 $6$, $8$인 직각삼각형을 생각해 보자. 빗변을 한 변으로 하는 정사각형의 넓이는 $36+64=100$이므로 빗변의 길이는 $10$이다. 이 직각삼각형과 주어진 삼각형은 세 변의 길이가 각각 같아서 합동이다. 따라서 주어진 삼각형도 직각삼각형이다.\n\n②를 고른 학생은 가장 긴 변이 아닌 길이가 $8$인 변을 빗변으로 놓고 판별해도 된다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:13:02.290936+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

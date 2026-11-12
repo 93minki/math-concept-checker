@@ -1,0 +1,16 @@
+그림 데이터 형식 (`kind`로 종류를 고릅니다. 모든 필드를 쓰고, 쓰지 않는 값은 null로 둡니다)
+- number_line(수직선): min, max(보이는 범위), tick_step(눈금 간격), label_step(눈금 숫자를 적는 간격), points[{x, label, filled}], rays[{from, direction("left"/"right"), closed}], segments[{from, to, from_closed, to_closed}]. filled와 closed는 true면 ●(그 수를 포함), false면 ○(포함하지 않음)으로 그려집니다. 점에 ●/○ 표시가 필요 없으면 filled는 null입니다. 반직선은 from에서 direction 쪽으로 끝없이 이어지는 굵은 선입니다.
+- coordinate_plane(좌표평면): x_min, x_max, y_min, y_max, tick_step, show_tick_labels, points[{x, y, label}], graphs[{type:"linear", m, b, label}(y=mx+b) | {type:"vertical", c, label}(x=c) | {type:"quadratic", a, p, q, label}(y=a(x-p)^2+q)]. 원점이 보이게 범위를 잡습니다. 그래프는 보이는 범위에서 잘려 그려집니다.
+- bar_chart(막대그래프): categories, values, y_max, y_step, x_label, y_label
+- frequency(히스토그램·도수분포다각형): class_start(첫 계급의 시작), class_width, frequencies(계급별 도수, 음이 아닌 정수), show_bars(히스토그램), show_polygon(도수분포다각형), y_step, x_label, y_label
+- boxplot(상자그림): axis_min, axis_max, axis_step, series[{label, min, q1, median, q3, max}] (1~3개, 가로 상자그림)
+- scatter(산점도): x_min, x_max, x_step, y_min, y_max, y_step, x_label, y_label, points[{x, y}]
+- 상한: 수직선 눈금 25개·점 8개·반직선과 선분 합계 3개, 좌표평면 축마다 눈금 25개·점 8개·그래프 3개, 막대와 계급 12개, 상자 3개, 산점도 점 40개.
+- 그림 안의 글(label, 축 이름, 범주 이름)은 10자 이하의 일반 글입니다. KaTeX(`$`)와 `<`, `>`를 쓰지 않습니다. 쓰지 않는 글은 null입니다.
+- geometry(평면도형): points[{id, x, y, show_name, dot}](최대 14), segments[{from, to, dashed, ticks, parallel_marks, label}](최대 20), lines[{from, through, type:"line" 또는 "ray", dashed, parallel_marks, label}](최대 6), polygons[{vertices, shaded}](최대 4), circles[{center, radius, dashed, points_on}](최대 3), arcs[{center, from, to, trace, label}](최대 6), angles[{vertex, from, to, label, right, marks}](최대 8). 점 id는 1~3자이고 참조는 모두 존재해야 합니다. 좌표는 -100~100. ticks와 parallel_marks는 0~3, 각 marks는 0~3입니다. 0은 보통 각 표시(호 한 겹)이고, 1~3은 같은 숫자끼리 크기가 같은 각을 나타냅니다. 각과 길이, 평행 표시는 실제 좌표와 일치해야 합니다. 각은 180°보다 작은 쪽이 그려집니다. 보조 점(작도 흔적의 끝점 등)은 show_name을 false로 둡니다. 원 위의 점은 points_on에 넣습니다.
+- solid(입체도형): shape(cuboid, prism, pyramid, frustum, cylinder, cone, cone_frustum, sphere, hemisphere), base_sides, width, depth, height, radius, top_radius, vertex_names, labels[{part, text}], show_axis. 다각형 밑면의 변 수는 3~8. 치수는 양수이며 최대와 최소 비율은 5 이하입니다. 해당하지 않는 수는 null입니다. 모양마다 쓰는 수: cuboid는 width·depth·height, prism·pyramid는 radius(밑면 정다각형의 중심에서 꼭짓점까지 거리)·height, frustum은 radius·top_radius·height, cylinder·cone은 radius·height, cone_frustum은 radius·top_radius·height, sphere·hemisphere는 radius. 그 밖의 수는 모두 null입니다 (예: 삼각기둥에 width·depth를 쓰면 거부됩니다). base_sides는 prism·pyramid·frustum만 쓰고 나머지는 null입니다. 꼭짓점 이름은 밑면 다음 윗면 순서로 씁니다.
+- net(전개도): shape("cylinder" 또는 "cone"), radius, height, slant, labels[{part, text}]. 원기둥은 height, 원뿔은 slant를 쓰고 나머지는 null입니다.
+- coordinate_plane 추가 필드: x_label, y_label, y_tick_step. graphs에는 {type:"polyline", points:[{x,y}], label}(2~12점), {type:"inverse", k, label}(k는 0이 아님)도 쓸 수 있습니다.
+- bar_chart 추가 필드 y_min은 세로축 시작값(null이면 0)입니다.
+- frequency 추가 필드: relative, compare_frequencies, series_labels. relative가 true이면 도수는 0~1이고 각 계열 합은 1±0.01입니다. compare_frequencies는 첫 계열과 같은 계급 수, series_labels는 두 계열 이름입니다. 두 집단을 비교할 때(compare_frequencies를 쓸 때)는 show_bars를 false, show_polygon을 true로 둡니다 (두 도수분포다각형). 도수의 총합이 다른 두 집단은 relative를 true로 두고 상대도수를 씁니다.
+- solid와 net의 labels.part는 width, depth, height, radius, top_radius, slant 중 하나입니다.

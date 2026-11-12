@@ -1,5 +1,40 @@
 {
-  "backlog": [],
+  "backlog": [
+    {
+      "assessment_item_id": "9수03-16-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-12T04:21:32.660548+00:00",
+          "issues": [
+            "보기 ②: M4대로 tan을 마주 보는 변과 빗변의 비로 계산하면 sin B와 tan B가 모두 3/5이다. 민지가 구하려는 값 3/4와 일치하는 보기가 없어 ②를 고르게 되지 않는다.",
+            "보기 ③: M1대로 마주 보는 변과 이웃한 변을 일관되게 바꾸면 민지가 말한 비는 4/3이 되고, 같은 오개념으로 판단한 tan B도 4/3이므로 ③이 아니라 ④를 고르게 된다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:22:06.900466+00:00",
+          "issues": [
+            "보기 ②: M4대로 탄젠트를 마주 보는 변과 빗변의 비로 구하면 tan A=4/5, tan B=3/5이다. 이 경우 보기 ②의 sin B도 3/5이므로, 구하는 값 3/4와 일치하지 않는다. M4만으로 보기 ②를 고르게 되지 않는다."
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:22:47.243475+00:00",
+          "issues": [
+            "보기 ②: M1을 두 기준각에 일관되게 적용하면 ①을 고른다. ②는 각 B에서만 마주 보는 변과 이웃한 변을 바꾼 결과이다.",
+            "보기 ④: M1을 두 기준각에 일관되게 적용하면 ①을 고른다. ④는 각 A에서만 마주 보는 변과 이웃한 변을 바꾼 결과이다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:22:47.338209+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T04:43:18.188915+00:00",
+      "variant": 1
+    }
+  ],
   "questions": [
     {
       "approved_at": "2026-11-11T15:40:39.150508+00:00",
@@ -8,30 +43,35 @@
       "body": "$\\angle C=90°$인 직각삼각형 $ABC$에서 $\\overline{AB}=5$, $\\overline{AC}=4$, $\\overline{BC}=3$이다. $\\angle F=90°$인 직각삼각형 $DEF$에서 $\\overline{DE}=10$, $\\overline{DF}=8$, $\\overline{EF}=6$이다.\n\n다섯 학생의 주장 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 1,
           "text": "$\\sin A=\\frac{4}{5}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M2",
           "no": 2,
           "text": "$\\sin D$의 값은 $\\sin A$의 값보다 크다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M4",
           "no": 3,
           "text": "$\\tan D=\\frac{6}{10}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 4,
           "text": "$\\cos B=\\frac{4}{5}$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -40,8 +80,9 @@
       ],
       "created_at": "2026-11-11T14:38:29.515851+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.351385+00:00",
       "explanation": "$\\angle A$에서 마주 보는 변은 $\\overline{BC}$, 이웃한 변은 $\\overline{AC}$이므로 $\\sin A=\\frac{3}{5}$이다. ①은 두 변을 바꾸어 생각한 것이다.\n\n$\\sin D=\\frac{6}{10}=\\frac{3}{5}$이므로 ②는 옳지 않다. 두 삼각형의 크기는 다르지만, 같은 크기의 각에 대한 삼각비의 값은 같다.\n\n$\\tan D=\\frac{\\overline{EF}}{\\overline{DF}}=\\frac{6}{8}$이다. ③은 탄젠트를 구할 때 이웃한 변이 아닌 빗변으로 나눈 것이다.\n\n$\\angle B$에서 이웃한 변은 $\\overline{BC}$이므로 $\\cos B=\\frac{3}{5}$이다. ④는 마주 보는 변과 이웃한 변을 바꾸어 생각한 것이다.\n\n$\\angle B$에서 마주 보는 변은 $\\overline{AC}$, 이웃한 변은 $\\overline{BC}$이므로 $\\tan B=\\frac{4}{3}$이다. 따라서 정답은 ⑤이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:38:25.422119+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 직각삼각형의 여러 각에 대한 학생들의 주장을 비교하여 옳고 그름을 판단하게 했다. 오답에는 변의 위치를 바꾸는 생각, 삼각형의 크기에 따라 삼각비가 달라진다는 생각, 탄젠트를 빗변으로 나누어 구하는 생각을 담았다.",
@@ -52,12 +93,221 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:38:25.421976+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:31:23.033205+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-오개념판별",
+      "body": "다음 그림의 두 직각삼각형에서 $\\angle C=\\angle F=90^\\circ$, $\\angle A=\\angle D$이다. 다섯 학생의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 1,
+          "text": "민수: $\\sin A=\\dfrac{4}{5}$이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M2",
+          "no": 2,
+          "text": "지우: $\\triangle DEF$가 $\\triangle ABC$보다 크므로 $\\sin D>\\sin A$야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M4",
+          "no": 3,
+          "text": "서준: $\\tan A=\\dfrac{3}{5}$야."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "하은: $\\tan A=\\tan D$야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "유진: $\\sin A$와 $\\sin B$를 구할 때 빗변이 같으므로 $\\sin A=\\sin B$야."
+        }
+      ],
+      "created_at": "2026-11-12T04:22:55.573873+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle A$에서 마주 보는 변은 $\\overline{BC}$, 이웃한 변은 $\\overline{AC}$이다. 따라서 $\\sin A=\\dfrac{3}{5}$, $\\tan A=\\dfrac{3}{4}$이다. 또 $\\tan D=\\dfrac{4.5}{6}=\\dfrac{3}{4}$이므로 ④가 옳다.\n①은 $\\angle A$에 이웃한 변과 마주 보는 변을 바꾸어 생각했다. ②는 같은 각의 사인 값이 삼각형의 크기에 따라 달라진다고 생각했다. ③은 탄젠트를 구할 때 이웃한 변의 길이 대신 빗변의 길이로 나누었다. ⑤에서 두 사인을 구할 때 빗변은 같지만, 마주 보는 변은 다르다. $\\sin B=\\dfrac{4}{5}$이므로 두 값은 같지 않다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "A",
+            "vertex": "C"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "D",
+            "vertex": "F"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "A"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "E",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 12.0,
+            "y": 4.5
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "7.5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "4.5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:22:55.462097+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 비교하여 옳은 주장 하나를 고르게 했다. 기준각과 삼각형의 크기가 바뀔 때 각 주장이 맞는지 판단해야 한다.",
+      "id": "83f2b78b-9c1b-495c-a119-4148be615991",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:22:29.352063+00:00",
+          "issues": [
+            "보기들은 학생의 말로 제시되지만 모두 삼각비 식이나 값의 대소를 직접 확인하는 일반적인 진술이다. 특히 ③은 같은 각의 사인 값이 같다는 성질만으로 바로 고를 수 있어, 학생의 주장이나 풀이를 판단하는 고난도 조건과 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:22:55.461530+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 1
@@ -69,30 +319,35 @@
       "body": "$\\angle C=90^\\circ$인 직각삼각형 $ABC$에서 $\\overline{AB}=13$, $\\overline{AC}=12$, $\\overline{BC}=5$이다.\n\n민수는 “$\\tan A=\\dfrac{5}{13}$이다.”라고 말했다. 민수의 말에 대한 판단과 그 까닭이 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M4",
           "no": 1,
           "text": "옳다. 탄젠트는 마주 보는 변의 길이를 빗변의 길이로 나눈 값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 2,
           "text": "옳지 않다. 탄젠트는 이웃한 변의 길이를 마주 보는 변의 길이로 나눈 값이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "옳지 않다. 탄젠트는 마주 보는 변의 길이를 이웃한 변의 길이로 나눈 값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M2",
           "no": 4,
           "text": "옳지 않다. 각의 크기가 같아도 삼각형의 크기가 달라지면 탄젠트의 값이 달라지기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -101,8 +356,9 @@
       ],
       "created_at": "2026-11-11T14:39:03.701716+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.400493+00:00",
       "explanation": "각 $A$에 마주 보는 변은 $\\overline{BC}$이고, 이웃한 변은 $\\overline{AC}$이다. 따라서 $\\tan A=\\dfrac{5}{12}$이므로 민수의 말은 옳지 않다.\n\n①은 탄젠트를 구할 때 이웃한 변 대신 빗변으로 나누었다. ②는 마주 보는 변과 이웃한 변을 바꾸었다. ④는 각의 크기가 같아도 삼각형의 크기에 따라 삼각비가 달라진다고 생각했다. ⑤는 빗변의 길이를 나누어지는 수로 잘못 썼다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:38:59.612195+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수가 탄젠트를 구한 식을 보고, 그 말이 옳은지와 그 까닭을 함께 판단하도록 했다.",
@@ -113,12 +369,152 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:38:59.612021+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:31:23.069615+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-오개념판별",
+      "body": "다음 그림과 같이 $\\angle C=90^\\circ$인 직각삼각형 $ABC$에서 $\\overline{AC}=4$, $\\overline{BC}=3$, $\\overline{AB}=5$이다. 한 학생이 이 그림을 보고 쓴 내용 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 1,
+          "text": "$\\sin A=\\dfrac{\\overline{AC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 2,
+          "text": "$\\cos A=\\dfrac{\\overline{BC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M4",
+          "no": 3,
+          "text": "$\\tan A=\\dfrac{\\overline{BC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M2",
+          "no": 4,
+          "text": "세 변의 길이를 각각 2배로 늘린 직각삼각형에서 $\\angle A$와 같은 크기의 각에 대한 사인값은 $\\sin A$의 2배이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\cos B=\\dfrac{\\overline{BC}}{\\overline{AB}}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:24:02.178976+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle A$에 대해 마주 보는 변은 $\\overline{BC}$, 이웃한 변은 $\\overline{AC}$이다. 따라서 ①과 ②는 두 변의 역할을 바꾸어 생각한 것이다. ③은 탄젠트를 구할 때 이웃한 변 대신 빗변으로 나누었다. ④에서 세 변의 길이를 각각 2배로 늘려도 변의 길이의 비는 변하지 않으므로 사인값도 변하지 않는다. $\\angle B$에 이웃한 변은 $\\overline{BC}$이고 빗변은 $\\overline{AB}$이므로 ⑤가 옳다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "A",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:24:02.054316+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "한 학생이 쓴 내용을 보고 옳은 것을 고르게 한다. 두 예각을 번갈아 기준으로 삼고, 삼각형의 크기가 변할 때의 사인값도 판단해야 한다.",
+      "id": "fd5487fd-9e03-48a6-9970-561b671bc54e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:23:30.626118+00:00",
+          "issues": [
+            "민지의 주장을 판단하도록 묻지 않는다. 그 주장을 읽지 않고도 삼각비의 정의로 ⑤를 고를 수 있어 제시된 고난이도 조건 misconception-b를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:24:02.053539+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 2
@@ -130,30 +526,35 @@
       "body": "$\\angle C=90°$인 직각삼각형 $ABC$에서 $\\overline{AB}=5$, $\\overline{BC}=3$, $\\overline{AC}=4$이다. $\\angle F=90°$인 직각삼각형 $DEF$에서 $\\overline{DE}=10$, $\\overline{EF}=6$, $\\overline{DF}=8$이다. 다음 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 1,
           "text": "$\\sin A=\\frac45$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M2",
           "no": 2,
           "text": "$\\sin D>\\sin A$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M4",
           "no": 3,
           "text": "$\\tan A=\\frac35$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\sin A=\\sin D$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -162,8 +563,9 @@
       ],
       "created_at": "2026-11-11T14:37:35.953183+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.467396+00:00",
       "explanation": "$\\angle A$에 대해 마주 보는 변은 $\\overline{BC}$, 이웃한 변은 $\\overline{AC}$, 빗변은 $\\overline{AB}$이다. 따라서 $\\sin A=\\frac35$, $\\tan A=\\frac34$, $\\cos A=\\frac45$이다. 또 $\\sin D=\\frac6{10}=\\frac35$이므로 정답은 ④이다.\n①은 마주 보는 변과 이웃한 변을 바꾸어 생각한 것이다. ②는 삼각형이 커지면 같은 각의 삼각비도 커진다고 생각한 것이다. ③은 탄젠트를 구할 때 이웃한 변이 아닌 빗변으로 나눈 것이다. ⑤는 서로 다른 삼각형의 변의 길이를 섞어 쓴 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:37:31.866831+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -174,12 +576,224 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:37:31.866663+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:31:23.096567+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-오개념판별",
+      "body": "다음 그림에서 두 직각삼각형 $ABC$와 $DEF$는 $\\angle C=\\angle F=90°$이고 $\\angle A=\\angle D$이다. 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 1,
+          "text": "$\\sin A=\\dfrac{\\overline{AC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M2",
+          "no": 2,
+          "text": "$\\sin D>\\sin A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M4",
+          "no": 3,
+          "text": "$\\tan A=\\dfrac{\\overline{BC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\cos A=\\dfrac{\\overline{AB}}{\\overline{AC}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\tan A=\\dfrac{\\overline{BC}}{\\overline{AC}}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:21:08.153275+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle A$에 대해 마주 보는 변은 $\\overline{BC}$, 이웃한 변은 $\\overline{AC}$, 빗변은 $\\overline{AB}$이다. 따라서 $\\tan A=\\dfrac{\\overline{BC}}{\\overline{AC}}$이므로 정답은 ⑤이다.\n①은 사인을 구할 때 마주 보는 변과 이웃한 변을 바꾸어 생각했다. ②는 같은 각의 삼각비가 삼각형의 크기에 따라 달라진다고 생각했다. ③은 탄젠트를 구할 때 이웃한 변 대신 빗변으로 나누었다. ④는 코사인을 구할 때 분자와 분모를 거꾸로 썼다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "C"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "E",
+            "vertex": "F"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "A"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "E",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 14.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 14.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:21:07.829536+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f960cf3d-0f0d-4bee-95ac-2e9e7d741ef2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:20:44.385828+00:00",
+          "issues": [
+            "주어진 조건에서는 ∠A=∠D=45°가 가능하다. 이때 AC=BC이므로 ①과 ⑤가 모두 옳다. 그림의 모양만으로 AC≠BC라고 단정할 수 없다.",
+            "45°인 경우 ①과 ⑤가 같은 값을 나타내므로 M1 오개념을 판별할 수 없다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:21:07.829337+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 1
@@ -191,30 +805,35 @@
       "body": "$\\angle B=90^\\circ$, $\\angle A=30^\\circ$인 직각삼각형 $ABC$에서 $\\overline{AB}=\\sqrt{3}$, $\\overline{BC}=1$, $\\overline{AC}=2$이다. 다섯 학생 중 옳게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 1,
           "text": "$\\sin 30^\\circ=\\frac{\\sqrt{3}}{2}$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M2",
           "no": 2,
           "text": "빗변의 길이가 $2$보다 큰 직각삼각형에서 $30^\\circ$의 사인 값은 $\\triangle ABC$에서보다 커."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M4",
           "no": 3,
           "text": "$\\tan 30^\\circ=\\frac{1}{2}$야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\cos 30^\\circ=\\frac{\\sqrt{3}}{2}$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -223,8 +842,9 @@
       ],
       "created_at": "2026-11-11T14:38:06.240992+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.497197+00:00",
       "explanation": "$\\angle A$에 대해 마주 보는 변은 $\\overline{BC}$, 이웃한 변은 $\\overline{AB}$, 빗변은 $\\overline{AC}$이다. 따라서 $\\cos 30^\\circ=\\frac{\\overline{AB}}{\\overline{AC}}=\\frac{\\sqrt{3}}{2}$이므로 ④가 옳다.\n①은 마주 보는 변 대신 이웃한 변을 빗변으로 나누었다. ②는 삼각형의 크기가 달라지면 같은 각의 사인 값도 달라진다고 생각했다. 같은 각의 사인 값은 삼각형의 크기가 달라도 같다. ③은 탄젠트를 구할 때 마주 보는 변을 빗변으로 나누었다. ⑤는 사인을 구할 때 나누는 순서를 거꾸로 했다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:38:02.150685+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -235,10 +855,142 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:38:02.150544+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:31:23.116856+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-오개념판별",
+      "body": "다음 그림은 $\\angle C=90°$인 직각삼각형 $ABC$이다. 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 1,
+          "text": "$\\sin A=\\dfrac{\\overline{AC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\cos A=\\dfrac{\\overline{AC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M4",
+          "no": 3,
+          "text": "$\\tan A=\\dfrac{\\overline{BC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M2",
+          "no": 4,
+          "text": "각의 크기가 같아도 직각삼각형이 커지면 그 각의 사인 값은 커진다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\sin A=\\dfrac{\\overline{AB}}{\\overline{BC}}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:21:31.846137+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "각 $A$에 대해 마주 보는 변은 $\\overline{BC}$, 이웃한 변은 $\\overline{AC}$, 빗변은 $\\overline{AB}$이다. 따라서 코사인은 $\\dfrac{\\overline{AC}}{\\overline{AB}}$이므로 정답은 ②이다.\n①은 마주 보는 변과 이웃한 변을 바꾸어 생각한 것이다. ③은 탄젠트를 구할 때 이웃한 변 대신 빗변으로 나눈 것이다. ④는 삼각형의 크기가 커지면 삼각비의 값도 커진다고 생각한 것이다. 각의 크기가 같으면 직각삼각형은 닮음이므로 삼각비의 값도 같다. ⑤는 사인을 구할 때 나누는 순서를 거꾸로 한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:21:31.754368+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d410c5ea-efa3-49de-ba5f-8683310de62f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:21:31.754221+00:00",
           "issues": [],
           "number": 1
         }
@@ -253,8 +1005,9 @@
       "choices": [],
       "created_at": "2026-11-11T14:40:45.129118+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.628859+00:00",
       "explanation": "두 직각삼각형은 직각의 크기가 같고 $\\angle A=\\angle D$이므로 닮았다. 각 $A$와 $D$에 마주 보는 변의 길이는 각각 $3$, $6$이고 빗변의 길이는 각각 $5$, $10$이다. 두 길이가 모두 $2$배이므로 사인 값은 모두 $\\frac{3}{5}$이다. 따라서 두 삼각형은 민지의 말이 옳지 않음을 보여 주는 예가 된다. 삼각형이 커지면 사인 값도 커진다고 생각하기 쉽지만, 사인은 한 변의 길이가 아니라 두 변의 길이의 비이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:40:41.00196+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민지의 말이 옳지 않음을 두 삼각형을 예로 들어 보이도록 했다.",
@@ -293,7 +1046,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:40:20.416931+00:00",
@@ -312,6 +1065,201 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:31:23.147082+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-이유설명",
+      "body": "그림의 두 직각삼각형에서 $\\angle A=\\angle D$이다.\n\n민수는 $\\sin A$를 구할 때 $\\triangle ABC$를 사용했다. 지우는 $\\angle A=\\angle D$임을 이용하여 $\\triangle DEF$를 사용했다.\n\n두 방법으로 구한 값이 같은지 판단하시오. 또 그 이유를 두 삼각형의 닮음을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:21:34.765929+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 삼각형은 직각의 크기가 같고 $\\angle A=\\angle D$이므로 닮았다. $\\angle A$와 $\\angle D$에서 각각 마주 보는 변은 $\\overline{BC}$와 $\\overline{EF}$이고, 빗변은 $\\overline{AB}$와 $\\overline{DE}$이다. $\\overline{EF}$와 $\\overline{DE}$는 각각 $\\overline{BC}$와 $\\overline{AB}$의 $2$배이므로 두 변의 길이의 비는 같다. 따라서 두 방법으로 구한 사인의 값은 모두 $\\dfrac35$이다. 큰 삼각형의 변이 더 길더라도 두 변이 같은 비율로 길어지므로 사인의 값이 더 커지는 것은 아니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "A"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "E",
+            "vertex": "D"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "C"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "E",
+            "vertex": "F"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 13.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 13.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:21:34.695165+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "각각 다른 직각삼각형을 이용하는 두 방법을 제시하고, 두 방법으로 구한 값이 같은지와 그 이유를 비교하여 설명하도록 했다.",
+      "id": "678f2e88-1776-41bd-92de-df49e85e0925",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 방법으로 구한 값은 같다. 두 삼각형은 직각의 크기가 같고 $\\angle A=\\angle D$이므로 닮았다. $\\angle A$와 $\\angle D$에서 마주 보는 변의 길이는 각각 $3$, $6$이고, 빗변의 길이는 각각 $5$, $10$이다. 큰 삼각형에서 이 두 변은 각각 작은 삼각형의 두 변의 $2$배이므로 길이의 비는 같다. 따라서 두 방법으로 구한 값은 모두 $\\dfrac35$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 직각삼각형에서 한 예각의 크기가 같으므로 두 삼각형이 닮았다고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-16-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "각각의 각에서 마주 보는 변과 빗변을 짝지어, 두 변이 같은 비율로 길어지므로 그 길이의 비가 같다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-16-M1",
+            "9수03-16-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법으로 구한 값이 모두 $\\dfrac35$라고 쓴다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-16-M1",
+            "9수03-16-M2"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:21:34.694784+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T15:40:39.378224+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-16-C1-이유설명",
@@ -319,8 +1267,9 @@
       "choices": [],
       "created_at": "2026-11-11T14:41:48.796885+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.677629+00:00",
       "explanation": "$\\tan D$는 각 $D$에 마주 보는 변의 길이를 이웃한 변의 길이로 나눈 값이므로 $\\frac{36}{15}=\\frac{12}{5}$이다. 빗변 $\\overline{DF}$를 사용하면 탄젠트를 바르게 구한 것이 아니다.\n\n두 삼각형은 두 각의 크기가 각각 같으므로 닮음이다. 삼각형 $ABC$에서 $DEF$로 크기가 바뀔 때 각 $A$에 마주 보는 변과 이웃한 변의 길이는 모두 $3$배가 된다. 따라서 두 변의 길이의 비는 변하지 않는다. 삼각형의 크기가 커져도 같은 크기의 각에 대한 삼각비는 커지지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:41:44.693476+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "큰 삼각형에서 직접 구하는 방법과 작은 삼각형의 값을 이용하는 방법을 비교한다. 두 결과의 관계를 닮음을 이용하여 설명하도록 했다.",
@@ -367,7 +1316,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:41:14.791017+00:00",
@@ -386,6 +1335,209 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:31:23.176527+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-이유설명",
+      "body": "그림에서 $\\angle B=\\angle E=90°$이고 $\\angle A=\\angle D$이다.\n\n서연이는 “$\\triangle DEF$는 $\\triangle ABC$보다 크고, 표시된 각에 마주 보는 변도 더 길다. 따라서 $\\tan D$가 $\\tan A$보다 크다.”라고 말했다.\n\n서연이의 말이 옳은지 판단하고, 두 삼각형을 이용하여 그 이유를 설명하시오. 또 $\\angle A$와 크기가 같은 예각을 가진 더 큰 직각삼각형을 그려도 같은 판단을 할 수 있는지 닮음을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:22:42.473925+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\tan A=\\frac{3}{4}$이고 $\\tan D=\\frac{6}{8}=\\frac{3}{4}$이므로 서연이의 말은 옳지 않다. 서연이는 마주 보는 변이 길어진 것만 생각하고, 이웃한 변도 같은 비율로 길어진다는 것을 생각하지 않았다.\n\n$\\triangle ABC$와 $\\triangle DEF$는 한 각이 직각이고 다른 한 각의 크기도 같으므로 닮음이다. 두 변의 길이가 모두 $2$배가 되어도 그 비는 같다. $\\angle A$와 크기가 같은 예각을 가진 다른 직각삼각형도 $\\triangle ABC$와 닮음이므로, 크기가 달라져도 그 예각의 탄젠트 값은 같다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 14.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 14.0,
+            "y": 6.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:22:42.047431+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "그림의 두 삼각형뿐 아니라 같은 예각을 가진 더 큰 직각삼각형에서도 같은 판단을 할 수 있는 이유를 닮음으로 설명하게 한다.",
+      "id": "db40caa5-73d6-43e7-8ee3-6024d0a2dec9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "서연이의 말은 옳지 않다. $\\tan A=\\frac{3}{4}$이고 $\\tan D=\\frac{6}{8}=\\frac{3}{4}$이다. 두 삼각형은 한 각이 직각이고 $\\angle A=\\angle D$이므로 닮음이다. 표시된 각에 마주 보는 변과 이웃한 변이 모두 $2$배가 되어 그 비는 같다.\n\n더 큰 직각삼각형도 한 각이 직각이고 다른 한 각이 $\\angle A$와 크기가 같으므로 $\\triangle ABC$와 닮음이다. 따라서 그 예각에 마주 보는 변과 이웃한 변은 같은 비율로 길어지므로 탄젠트 값은 변하지 않는다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "서연이의 말이 옳지 않다고 판단하고, 두 탄젠트 값을 각각 올바르게 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-16-M2",
+            "9수03-16-M4"
+          ],
+          "required": false
+        },
+        {
+          "description": "두 삼각형이 닮음인 이유를 두 각의 크기를 이용하여 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-16-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "마주 보는 변과 이웃한 변이 같은 비율로 길어져 탄젠트 값이 같음을 설명하고, 같은 예각을 가진 더 큰 직각삼각형도 닮음이므로 같은 판단을 할 수 있음을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-16-M2",
+            "9수03-16-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:22:15.308188+00:00",
+          "issues": [
+            "∠A와 크기가 같은 예각을 가진 직각삼각형은 모두 △ABC와 닮음이므로, 크기는 달라도 모양을 다르게 그릴 수 없다. 문제에서 불가능한 삼각형을 그렸을 때를 묻는다.",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:22:42.046983+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T15:40:39.41028+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-16-C1-이유설명",
@@ -393,8 +1545,9 @@
       "choices": [],
       "created_at": "2026-11-11T14:39:19.953632+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.709919+00:00",
       "explanation": "두 직각삼각형은 두 각의 크기가 각각 같으므로 닮음이다. $\\angle A$와 $\\angle D$의 마주 보는 변은 $\\overline{BC}$와 $\\overline{EF}$이고, 빗변은 $\\overline{AB}$와 $\\overline{DE}$이다. 각각의 길이가 $2$배이므로 두 사인의 값은 같다. 큰 삼각형의 변이 더 길어도 마주 보는 변과 빗변의 길이의 비가 바뀌는 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:39:15.865607+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -423,7 +1576,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:39:15.865488+00:00",
@@ -434,6 +1587,382 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:31:23.206027+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-이유설명",
+      "body": "다음 그림에서 $\\angle A=\\angle D$이고, $\\angle C=\\angle F=90°$이다. $\\sin A$와 $\\sin D$의 값이 같은지 다른지 판단하시오. 두 삼각형이 어떤 관계인지 밝히고, 그 관계와 변의 길이를 이용하여 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:20:37.479253+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 삼각형은 두 각의 크기가 각각 같으므로 닮음이다. $\\angle A$와 $\\angle D$를 마주 보는 변은 각각 $\\overline{BC}$와 $\\overline{EF}$이고, 빗변은 각각 $\\overline{AB}$와 $\\overline{DE}$이다. $\\overline{EF}$는 $\\overline{BC}$의 $2$배이고 $\\overline{DE}$는 $\\overline{AB}$의 $2$배이므로 두 변의 길이의 비는 같다. 따라서 $\\sin A=\\frac{3}{5}$, $\\sin D=\\frac{6}{10}=\\frac{3}{5}$이다. 삼각형의 크기가 커져도 두 변의 길이가 같은 비율로 커지므로 사인 값은 달라지지 않는다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "A"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "E",
+            "vertex": "D"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "C"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "E",
+            "vertex": "F"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 13.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 13.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:20:36.059861+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "44d9653c-331e-4434-8ed4-5e4cef71277c",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 삼각형은 두 각의 크기가 각각 같으므로 닮음이다. $\\overline{EF}$는 $\\overline{BC}$의 $2$배이고, $\\overline{DE}$는 $\\overline{AB}$의 $2$배이다. 따라서 각을 마주 보는 변과 빗변의 길이의 비가 같으므로 $\\sin A=\\frac{3}{5}=\\frac{6}{10}=\\sin D$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 삼각형이 두 각의 크기가 각각 같아 닮음이라고 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "각을 마주 보는 변과 빗변이 각각 $2$배가 되어 두 길이의 비가 같음을 설명하고, 두 사인 값이 같다고 판단한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-16-M1",
+            "9수03-16-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:20:36.059593+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:31:23.228204+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-이유설명",
+      "body": "다음 그림은 두 경사로를 직각삼각형으로 나타낸 것이다. $\\angle BAC=\\angle EDF$이다. 한 학생은 큰 경사로에서 $\\tan D$의 값이 $\\tan A$의 값보다 크다고 말했다. 이 말이 옳은지 판단하고, 두 삼각형의 닮음과 변의 길이를 이용하여 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:21:09.132411+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle B=\\angle E=90°$이고 $\\angle A=\\angle D$이므로 두 삼각형은 닮았다. $\\overline{DE}$와 $\\overline{EF}$는 각각 $\\overline{AB}$와 $\\overline{BC}$의 $1.5$배이다. 따라서 $\\tan A=\\frac{6}{8}=\\frac{3}{4}$이고 $\\tan D=\\frac{9}{12}=\\frac{3}{4}$이다. 경사로의 크기가 커지더라도 두 변의 길이가 같은 비율로 커지므로 탄젠트의 값은 달라지지 않는다. 탄젠트를 구할 때 빗변이 아니라 기준각에 이웃한 변으로 나누어야 한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "F",
+            "vertex": "E"
+          },
+          {
+            "from": "B",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 8.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 10.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 22.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 22.0,
+            "y": 9.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "8",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "10",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "12",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "9",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": "15",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:21:08.936945+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "03efcebb-d07a-4f38-9fde-5892198ad0ce",
+      "model": "gpt-6.1-terra",
+      "model_answer": "옳지 않다. $\\angle B=\\angle E=90°$이고 $\\angle A=\\angle D$이므로 $\\triangle ABC$와 $\\triangle DEF$는 닮았다. $\\overline{DE}$와 $\\overline{EF}$는 각각 $\\overline{AB}$와 $\\overline{BC}$의 $1.5$배이므로 두 변의 길이의 비는 같다. 따라서 $\\tan A=\\frac{6}{8}=\\frac{3}{4}$이고 $\\tan D=\\frac{9}{12}=\\frac{3}{4}$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 삼각형이 닮은 이유를 같은 각을 이용하여 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-16-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "닮은 두 삼각형에서 관련된 변의 길이가 같은 비율로 커짐을 이용하여 두 탄젠트의 값이 같다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-16-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 탄젠트를 각각 마주 보는 변의 길이를 이웃한 변의 길이로 나눈 값으로 나타낸다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-16-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:21:08.935790+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T15:40:39.439043+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-16-C1-이유설명",
@@ -441,8 +1970,9 @@
       "choices": [],
       "created_at": "2026-11-11T14:39:44.385407+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.746153+00:00",
       "explanation": "두 삼각형은 한 각을 함께 쓰고 각각 직각이 있으므로 닮았다. 작은 삼각형의 각 변의 길이는 큰 삼각형의 해당하는 변의 길이의 $\\frac{1}{3}$이다. 따라서 같은 각에 이웃한 변과 빗변의 길이가 같은 비율로 줄어들어 코사인 값은 같다. 코사인을 구할 때 각에 마주 보는 변을 쓰면 다른 비를 구하게 된다. 삼각형의 크기가 다르다고 해서 삼각비의 값도 달라지는 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:39:40.277627+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -479,7 +2009,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:39:40.277503+00:00",
@@ -496,30 +2026,35 @@
       "body": "$\\angle C=90^\\circ$인 직각삼각형 $ABC$가 있다. 각 $A$에 이웃한 변 중에서 빗변이 아닌 변의 길이를 각 $A$의 맞은편 변의 길이로 나눈 값을 구하려고 한다. 이 값을 언제나 나타내는 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\sin A$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\cos A$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 3,
           "text": "$\\tan A$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M4",
           "no": 4,
           "text": "$\\sin B$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -528,8 +2063,9 @@
       ],
       "created_at": "2026-11-11T14:36:48.546936+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.233269+00:00",
       "explanation": "각 $A$에 이웃한 변 중 빗변이 아닌 변은 $\\overline{AC}$이고, 각 $A$의 맞은편 변은 $\\overline{BC}$이다. 따라서 구하는 값은 $\\dfrac{\\overline{AC}}{\\overline{BC}}$이다. 각 $B$를 기준으로 보면 $\\overline{AC}$는 맞은편 변이고 $\\overline{BC}$는 이웃한 변이므로 이 값은 $\\tan B$이다.\n\n③은 각 $A$의 맞은편 변과 이웃한 변을 거꾸로 나눈 것이다. ④는 각 $B$의 맞은편 변을 이웃한 변이 아닌 빗변으로 나눈 것이다.\n\n예를 들어 $\\overline{AC}=3$, $\\overline{BC}=4$, $\\overline{AB}=5$일 때 구하는 값은 $\\dfrac{3}{4}$이다. 이때 ①, ②, ③, ④는 각각 $\\dfrac{4}{5}$, $\\dfrac{3}{5}$, $\\dfrac{4}{3}$, $\\dfrac{3}{5}$이므로 구하는 값을 언제나 나타내지는 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:36:44.378374+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "두 변의 길이를 나눈 값을 글로 제시했다. 이를 각 $B$에 대한 삼각비로 바꾸어 판단해야 한다.",
@@ -540,7 +2076,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:36:44.378050+00:00",
@@ -551,36 +2087,320 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:45:40.324023+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-정의이해",
+      "body": "다음 그림과 같이 $\\angle C=90^\\circ$인 직각삼각형 $ABC$가 있다. $\\overline{AC}=5$, $\\overline{BC}=12$, $\\overline{AB}=13$이다.\n\n빗변이 아닌 두 변 중 더 긴 변의 길이를 더 짧은 변의 길이로 나눈 값을 삼각비로 옳게 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M4",
+          "no": 1,
+          "text": "$\\sin A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 2,
+          "text": "$\\tan B$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\cos A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\tan 45^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\tan A$"
+        }
+      ],
+      "created_at": "2026-11-12T04:43:18.185741+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "빗변이 아닌 두 변은 $\\overline{AC}$와 $\\overline{BC}$이므로 구하는 값은 $\\frac{12}{5}$이다. 각 $A$에 마주 보는 변은 $\\overline{BC}$이고, 빗변이 아닌 이웃한 변은 $\\overline{AC}$이므로 $\\tan A=\\frac{12}{5}$이다.\n\n①은 더 짧은 변 대신 빗변으로 나눈 것이다. ②는 긴 변과 짧은 변을 바꾸어 나눈 것이다. ③은 $\\frac{5}{13}$이고, ④는 $1$이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 5.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "12",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "13",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:43:18.074612+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "두 변의 길이를 비교한 뒤, 긴 변의 길이를 짧은 변의 길이로 나눈다는 설명을 삼각비로 바꾸어 판단해야 한다.",
+      "id": "e9f9d4a9-415e-4cce-8e7a-743867216c47",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:42:50.326338+00:00",
+          "issues": [
+            "보기 ④: M4에서 나오는 답이 아니다. M4대로 생각하면 tan B도 5/13이므로, 제시된 삼각비 중 5/12에 해당하는 것이 없다고 판단한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:43:18.074030+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:31:23.255041+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-정의이해",
+      "body": "다음 그림과 같이 $\\angle C=90°$인 직각삼각형 $ABC$가 있다. $\\overline{AC}=3$, $\\overline{BC}=4$, $\\overline{AB}=5$이다.\n\n두 수 $P$, $Q$를 다음과 같이 구한다.\n- $P$: $\\angle A$에 마주 보는 변의 길이를 $\\angle B$에 마주 보는 변의 길이로 나눈다.\n- $Q$: $\\angle B$에 마주 보는 변의 길이를 빗변의 길이로 나눈다.\n\n$P$, $Q$를 차례로 옳게 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 1,
+          "text": "$\\tan B$, $\\sin A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M4",
+          "no": 2,
+          "text": "$\\sin A$, $\\sin B$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\tan A$, $\\sin B$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 4,
+          "text": "$\\tan A$, $\\sin A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\cos A$, $\\tan B$"
+        }
+      ],
+      "created_at": "2026-11-12T04:24:06.257512+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle A$에 마주 보는 변은 $\\overline{BC}$이고, $\\angle B$에 마주 보는 변은 $\\overline{AC}$이다. 따라서 $P=\\dfrac{\\overline{BC}}{\\overline{AC}}=\\tan A$, $Q=\\dfrac{\\overline{AC}}{\\overline{AB}}=\\sin B$이다.\n\n①은 두 각에 마주 보는 변을 서로 바꾸어 생각한 경우이다. ②는 탄젠트를 구할 때 이웃한 변 대신 빗변으로 나눈 경우이다. ④는 $Q$를 구할 때 $\\angle B$ 대신 $\\angle A$에 마주 보는 변을 쓴 경우이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:24:06.151031+00:00",
+      "hard_condition": "definition-b",
+      "hard_condition_reason": "두 변의 길이를 나누는 방법을 말로 제시하고, 각각을 삼각비의 식으로 바꾸어 판단하게 한다.",
+      "id": "1ac78103-acf9-41cb-9c99-4eb3ccfb238f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:23:31.415761+00:00",
+          "issues": [
+            "보기 ①: M4에서 나오는 선택지가 아니다. M4대로라면 tan A와 sin A를 모두 BC/AB로 보므로 ㉠의 BC/AC에 해당하지 않는다.",
+            "보기 ⑤: M1에서 나오는 선택지가 아니다. 마주 보는 변과 이웃한 변만 바꾸면 ㉠은 tan B로 판단하며, cos A가 되지는 않는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:24:06.150586+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T15:40:39.513229+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-16-C1-정의이해",
       "body": "$\\angle C=90^\\circ$인 직각삼각형 $ABC$에서 $\\overline{AB}=13$, $\\overline{AC}=12$, $\\overline{BC}=5$이다. 다음 표의 $X$, $Y$를 각각 삼각비로 바르게 나타낸 것은?\n\n| 기호 | 나타내는 값 |\n|---|---|\n| $X$ | 각 $A$의 맞은편 변의 길이를 빗변의 길이로 나눈 값 |\n| $Y$ | 각 $B$의 맞은편 변의 길이를 빗변이 아닌 이웃한 변의 길이로 나눈 값 |",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$X=\\sin A$, $Y=\\tan B$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 2,
           "text": "$X=\\cos A$, $Y=\\tan B$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M4",
           "no": 3,
           "text": "$X=\\sin A$, $Y=\\sin B$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$X=\\sin B$, $Y=\\tan A$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -589,8 +2409,9 @@
       ],
       "created_at": "2026-11-11T14:37:13.187433+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.284926+00:00",
       "explanation": "각 $A$의 맞은편 변은 $BC$이므로 $X=\\dfrac{5}{13}=\\sin A$이다. 각 $B$의 맞은편 변은 $AC$, 빗변이 아닌 이웃한 변은 $BC$이므로 $Y=\\dfrac{12}{5}=\\tan B$이다.\n\n②는 각 $A$의 맞은편 변과 이웃한 변을 바꾸어 생각한 것이다. ③은 탄젠트를 구할 때 맞은편 변의 길이를 빗변의 길이로 나눈 것이다. ④와 ⑤도 표에서 나누는 변의 길이를 잘못 짝 지었다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:37:09.06236+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "표에서 두 각에 대해 변의 길이를 나누는 방법을 각각 읽고, 이를 삼각비로 나타내어 판단해야 한다.",
@@ -601,7 +2422,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:37:09.062234+00:00",
@@ -612,36 +2433,173 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:31:23.295011+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-정의이해",
+      "body": "다음 그림은 $\\angle C=90°$인 직각삼각형 $ABC$이다. $\\tan A$를 세 변의 길이의 비로 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M4",
+          "no": 1,
+          "text": "$\\dfrac{\\overline{BC}}{\\overline{AB}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 2,
+          "text": "$\\dfrac{\\overline{AC}}{\\overline{BC}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\dfrac{\\overline{BC}}{\\overline{AC}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\dfrac{\\overline{AB}}{\\overline{BC}}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\dfrac{\\overline{AC}}{\\overline{AB}}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:20:31.141194+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle A$에 대하여 마주 보는 변은 $\\overline{BC}$이고, 이웃한 변은 $\\overline{AC}$이다. 따라서 $\\tan A=\\dfrac{\\overline{BC}}{\\overline{AC}}$이다. ①은 이웃한 변 대신 빗변을 사용했고, ②는 마주 보는 변과 이웃한 변의 순서를 바꾸었다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:20:30.800966+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2c55c8c6-04ef-4d44-a1ba-4b62b1a3e021",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:20:30.800881+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T15:40:39.538653+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-16-C1-정의이해",
       "body": "$\\angle C=90^\\circ$인 직각삼각형 $ABC$에서 $\\overline{AB}=13$, $\\overline{AC}=12$, $\\overline{BC}=5$이다. $\\tan B$를 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\dfrac{\\overline{BC}}{\\overline{AB}}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 2,
           "text": "$\\dfrac{\\overline{BC}}{\\overline{AC}}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M4",
           "no": 3,
           "text": "$\\dfrac{\\overline{AC}}{\\overline{AB}}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\dfrac{\\overline{AC}}{\\overline{BC}}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -650,8 +2608,9 @@
       ],
       "created_at": "2026-11-11T14:36:09.419567+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.337978+00:00",
       "explanation": "$\\angle B$에 대해 마주 보는 변은 $\\overline{AC}$이고, 빗변이 아닌 이웃한 변은 $\\overline{BC}$이다. 따라서 $\\tan B=\\dfrac{\\overline{AC}}{\\overline{BC}}$이다. ②는 마주 보는 변과 이웃한 변을 바꾸어 쓴 것이다. ③은 탄젠트를 구할 때 이웃한 변 대신 빗변을 쓴 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:36:05.337959+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -662,7 +2621,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:36:05.337795+00:00",
@@ -673,36 +2632,173 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:31:23.325626+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-16-C1-정의이해",
+      "body": "다음 그림은 $\\angle A=90°$인 직각삼각형 $ABC$이다. $\\sin B$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\frac{5}{12}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-16-M1",
+          "no": 2,
+          "text": "$\\frac{12}{13}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\frac{5}{13}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\frac{12}{5}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\frac{13}{5}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:20:45.806988+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle B$에 대해 마주 보는 변은 $\\overline{AC}$이고 빗변은 $\\overline{BC}$이다. 따라서 $\\sin B=\\frac{5}{13}$이다. ②는 마주 보는 변 대신 이웃한 변 $\\overline{AB}$를 사용한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 5.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "12",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "13",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:20:45.354988+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "94bd2c38-570c-46e2-beef-1d72a6c1eed1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:20:45.354667+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T15:40:39.571398+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-16-C1-정의이해",
       "body": "$\\angle Q=90^\\circ$인 직각삼각형 $PQR$에서 $\\overline{PQ}=6$, $\\overline{QR}=8$, $\\overline{PR}=10$이다. $\\cos P$를 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M1",
           "no": 1,
           "text": "$\\dfrac{\\overline{QR}}{\\overline{PR}}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\dfrac{\\overline{QR}}{\\overline{PQ}}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$\\dfrac{\\overline{PQ}}{\\overline{PR}}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\dfrac{\\overline{PR}}{\\overline{PQ}}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -711,8 +2807,9 @@
       ],
       "created_at": "2026-11-11T14:36:24.407826+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:20:12.375835+00:00",
       "explanation": "$\\angle P$에 이웃한 변은 $\\overline{PQ}$이고 빗변은 $\\overline{PR}$이다. 따라서 $\\cos P=\\dfrac{\\overline{PQ}}{\\overline{PR}}$이므로 정답은 ③이다. ①을 골랐다면 $\\angle P$에 이웃한 변과 마주 보는 변을 바꾸어 생각했는지 확인해 보자.",
+      "figure": null,
       "generated_at": "2026-11-11T14:36:20.330013+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -723,7 +2820,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:36:20.329914+00:00",
@@ -740,30 +2837,35 @@
       "body": "바닥과 벽이 직각으로 만나는 곳에 막대 A와 막대 B를 비스듬히 세웠다. 두 막대는 바닥과 벽에 모두 수직인 한 평면 위에 있다. 각 막대의 한 끝은 바닥에, 다른 끝은 벽에 닿아 있다.\n\n막대 A의 길이는 $4$이고, 바닥과 이루는 각의 크기는 $30^\\circ$이다. 막대 B의 길이는 $6$이고, 바닥과 이루는 각의 크기는 $60^\\circ$이다.\n\n막대 A가 벽에 닿은 곳에서 바닥까지의 거리와 막대 B가 바닥에 닿은 곳에서 벽까지의 거리를 비교하려고 한다. 어느 거리가 얼마나 더 긴가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "막대 A에서 구한 거리가 $1$만큼 더 길다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "막대 A에서 구한 거리가 $\\sqrt{3}$만큼 더 길다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "막대 B에서 구한 거리가 $1$만큼 더 길다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M3",
           "no": 4,
           "text": "막대 B에서 구한 거리가 $\\sqrt{3}$만큼 더 길다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -774,6 +2876,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "막대 A가 벽에 닿은 곳에서 바닥까지의 거리는 $4\\sin 30^\\circ=2$이다. 막대 B가 바닥에 닿은 곳에서 벽까지의 거리는 $6\\cos 60^\\circ=3$이다. 따라서 막대 B에서 구한 거리가 $1$만큼 더 길다.\n\n$\\sin 30^\\circ$와 $\\cos 60^\\circ$를 각각 $\\frac{\\sqrt{3}}{2}$로 잘못 알면 두 거리를 $2\\sqrt{3}$과 $3\\sqrt{3}$으로 구하여 ④를 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:42:33.334496+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "막대가 놓인 상황에서 구할 두 거리를 각각 삼각비를 이용한 식으로 나타낸 뒤 크기와 차이를 비교해야 한다.",
@@ -801,30 +2904,35 @@
       "body": "$\\angle C=90^\\circ$인 직각삼각형 $ABC$에서 $\\angle A=30^\\circ$, $\\overline{AB}=8$이다. 점 $D$는 선분 $AC$ 위에 있고, $\\overline{CD}$의 길이는 $\\overline{BC}$의 길이의 절반이다.\n\n$\\overline{AD}$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4\\sqrt{3}-4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M3",
           "no": 2,
           "text": "$4-2\\sqrt{3}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$4\\sqrt{3}-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4\\sqrt{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -835,6 +2943,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$\\sin 30^\\circ=\\dfrac{1}{2}$이므로 $\\overline{BC}=8\\times\\dfrac{1}{2}=4$이다. 따라서 $\\overline{CD}=2$이다.\n\n또 $\\cos 30^\\circ=\\dfrac{\\sqrt{3}}{2}$이므로 $\\overline{AC}=8\\times\\dfrac{\\sqrt{3}}{2}=4\\sqrt{3}$이다. 따라서 $\\overline{AD}=\\overline{AC}-\\overline{CD}=4\\sqrt{3}-2$이다.\n\n$\\sin 30^\\circ$와 $\\sin 60^\\circ$의 값을 바꾸고, $\\cos 30^\\circ$와 $\\cos 60^\\circ$의 값도 바꾸면 $\\overline{BC}=4\\sqrt{3}$, $\\overline{AC}=4$로 잘못 구하여 ②를 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:43:07.175673+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "점 D의 위치를 나타낸 문장을 변의 길이 사이의 식으로 바꾸어야 한다. 두 삼각비를 이용해 필요한 변의 길이를 구한 뒤 비교해야 한다.",
@@ -862,30 +2971,35 @@
       "body": "$2\\sin 30^\\circ+\\sin 90^\\circ$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{3}{2}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M3",
           "no": 4,
           "text": "$1+\\sqrt{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -896,6 +3010,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\sin 30^\\circ=\\frac{1}{2}$이고 $\\sin 90^\\circ=1$이므로 식의 값은 $2\\times\\frac{1}{2}+1=2$입니다. ④는 $\\sin 30^\\circ$를 $\\frac{\\sqrt{3}}{2}$로 잘못 생각한 경우입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:41:56.646554+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -923,30 +3038,35 @@
       "body": "$\\angle C=90^\\circ$인 직각삼각형 $ABC$에서 $\\angle A=30^\\circ$, $\\overline{AB}=8$이다. $\\overline{BC}$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$4\\sqrt{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-16-M3",
           "no": 4,
           "text": "$4\\sqrt{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -957,6 +3077,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$\\sin 30^\\circ=\\dfrac{\\overline{BC}}{\\overline{AB}}=\\dfrac{1}{2}$이므로 $\\overline{BC}=4$이다. $4\\sqrt{3}$을 골랐다면 $\\sin 30^\\circ$의 값을 $\\dfrac{\\sqrt{3}}{2}$로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:42:07.514734+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

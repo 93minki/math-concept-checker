@@ -114,30 +114,35 @@
       "body": "두 학생이 다음과 같이 말했다.\n\n민서: “$1$은 $1$과 자기 자신으로만 나누어떨어지므로 소수야.”\n준호: “홀수는 모두 소수야.”\n\n두 학생의 말을 바르게 판단한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "두 학생의 말은 모두 옳지 않다. $1$의 약수는 하나뿐이고, $15$는 홀수이지만 소수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M1",
           "no": 2,
           "text": "민서의 말만 옳다. $1$의 약수는 $1$ 하나뿐이므로 $1$은 소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M2",
           "no": 3,
           "text": "준호의 말만 옳다. $1$은 소수가 아니지만, 홀수는 모두 소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M1",
           "no": 4,
           "text": "두 학생의 말은 모두 옳다. $1$의 약수는 하나이고, 홀수는 모두 소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -148,6 +153,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$1$의 약수는 $1$ 하나뿐이므로 $1$은 소수가 아니다. 또 $15$는 홀수이지만 $3$으로도 나누어떨어지므로 소수가 아니다. 따라서 두 학생의 말은 모두 옳지 않다.\n\n$1$을 소수로 생각하면 ②나 ④를 고를 수 있다. 홀수는 모두 소수라고 생각하면 ③이나 ④를 고를 수 있다. $1$은 소수도 합성수도 아니므로 ⑤도 옳지 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:00:14.514026+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 학생의 말을 함께 판단하고, 판단한 까닭까지 맞는 보기를 고르게 했다.",
@@ -175,30 +181,35 @@
       "body": "$1$, $2$, $5$, $7$, $25$ 중에서 소수를 모두 골라 적으려고 한다. 지우는 $2$, $5$, $7$, $25$를 적었다.\n\n지우가 적은 것을 어떻게 고치면 소수만 빠짐없이 적은 것이 되는가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$25$만 지운다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M1",
           "no": 2,
           "text": "$25$를 지우고 $1$을 추가한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M2",
           "no": 3,
           "text": "고치지 않는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2$와 $25$를 지운다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -209,6 +220,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "소수는 약수가 $1$과 자기 자신 두 개뿐인 자연수이다. $2$, $5$, $7$은 소수이다. $25$는 $5$로도 나누어떨어지므로 합성수이다. 따라서 $25$만 지우면 된다.\n\n$1$을 추가한다면 $1$을 소수로 잘못 생각한 것이다. $1$의 약수는 $1$ 하나뿐이다. 고치지 않는다면 홀수인 $25$를 소수로 잘못 생각한 것이다. 홀수 중에도 $25$와 같은 합성수가 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:28:58.995151+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "지우가 소수를 골라 적은 결과를 보고, 잘못된 부분을 찾아 고치도록 했다.",
@@ -252,30 +264,35 @@
       "body": "$1, 2, 9, 11$ 중에서 소수만을 빠짐없이 고른 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$11$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2, 11$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M1",
           "no": 4,
           "text": "$1, 2, 11$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M2",
           "no": 5,
@@ -286,6 +303,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "소수는 약수가 $1$과 자기 자신뿐인 자연수로, 약수가 서로 다른 두 개입니다. $2$와 $11$이 소수입니다. $1$은 약수가 $1$ 하나뿐이므로 소수가 아닙니다. 또 $9$는 홀수이지만 $3$으로도 나누어떨어지므로 소수가 아닙니다. 홀수라고 해서 모두 소수인 것은 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:20:00.801965+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -321,30 +339,35 @@
       "body": "두 학생이 다음과 같이 말했습니다.\n\n가: $1$은 소수야.\n나: $15$는 홀수이므로 소수야.\n\n$1$과 $15$에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M1",
           "no": 1,
           "text": "$1$은 소수이고, $15$는 합성수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M2",
           "no": 2,
           "text": "$1$은 소수도 합성수도 아니고, $15$는 소수이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$1$은 소수도 합성수도 아니고, $15$는 합성수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$1$과 $15$는 모두 합성수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -355,6 +378,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$1$의 약수는 $1$ 하나뿐이므로 $1$은 소수도 합성수도 아닙니다. $15$는 $1$, $3$, $5$, $15$를 약수로 가지므로 합성수입니다. 따라서 정답은 ③입니다.\n\n①은 $1$을 소수로 잘못 생각한 것입니다. ②는 홀수는 모두 소수라고 잘못 생각한 것입니다. ④는 $1$을 합성수로, ⑤는 $15$를 합성수가 아니라고 잘못 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T05:59:56.457316+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -382,30 +406,35 @@
       "body": "$2$ 이상의 자연수에 대한 설명이다. 옳은 것만을 모두 고른 것은?\n\nㄱ. 약수가 $1$과 자기 자신뿐인 수는 모두 홀수이다.\nㄴ. $1$과 자기 자신 외에 다른 약수가 하나라도 있으면 합성수이다.\nㄷ. 홀수인 수는 모두 소수이다.\nㄹ. $1$과 자기 자신을 제외한 약수가 하나뿐이면 소수도 합성수도 아니다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "ㄴ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "ㄱ, ㄴ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M2",
           "no": 3,
           "text": "ㄴ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "ㄴ, ㄹ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -416,6 +445,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "ㄱ은 틀리다. $2$는 약수가 $1$과 $2$뿐이지만 짝수이다. ㄴ은 옳다. 약수가 $1$과 자기 자신 외에도 있으면 합성수이다. ㄷ은 틀리다. $9$는 홀수이지만 약수가 $1$, $3$, $9$이므로 합성수이다. 홀수라고 해서 모두 소수는 아니다. ㄹ은 틀리다. 예를 들어 $4$는 $1$과 $4$를 제외한 약수가 $2$ 하나뿐이지만 합성수이다. 따라서 옳은 것은 ㄴ뿐이다.",
+      "figure": null,
       "generated_at": "2026-11-11T05:58:35.73423+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "ㄱ과 ㄷ은 $2$와 $9$를 살펴 소수와 홀수를 구별해야 한다. ㄹ은 $1$과 자기 자신 외의 약수가 하나만 있는 수가 합성수인지 판단하게 한다.",
@@ -452,30 +482,35 @@
       "body": "세 수 $1$, $2$, $25$를 소수, 합성수, 어느 쪽도 아닌 수로 바르게 나눈 것은? 각 수는 한 번씩만 쓴다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M1",
           "no": 1,
           "text": "소수: $1$, $2$ / 합성수: $25$ / 어느 쪽도 아닌 수: 없음"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M2",
           "no": 2,
           "text": "소수: $2$, $25$ / 합성수: 없음 / 어느 쪽도 아닌 수: $1$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "소수: $2$ / 합성수: $25$ / 어느 쪽도 아닌 수: $1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "소수: $25$ / 합성수: $2$ / 어느 쪽도 아닌 수: $1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -486,6 +521,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$1$의 약수는 $1$ 하나뿐이므로 소수도 합성수도 아니다. $2$의 약수는 $1$과 $2$뿐이므로 소수이다. $25$의 약수는 $1$, $5$, $25$이므로 합성수이다. 따라서 정답은 ③이다.\n①처럼 $1$을 소수로 보면 약수가 서로 다른 두 개여야 한다는 점을 놓친 것이다. ②처럼 $25$를 소수로 보면 홀수는 모두 소수라고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T05:58:57.189727+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "$1$은 약수가 하나뿐이고 $2$는 짝수인 소수이다. 두 수를 바르게 나누려면 각각의 약수를 살펴야 한다.",
@@ -513,30 +549,35 @@
       "body": "다음 설명 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M1",
           "no": 1,
           "text": "$1$은 약수가 $1$뿐이므로 소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M2",
           "no": 2,
           "text": "$9$는 홀수이므로 소수이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2$는 약수가 $1$과 $2$뿐이므로 소수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$15$는 약수가 $1$과 $15$뿐이므로 합성수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -547,6 +588,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "소수는 약수가 $1$과 자기 자신뿐인 $2$ 이상의 자연수이다. $2$의 약수는 $1$과 $2$뿐이므로 소수이다.\n$1$은 약수가 하나뿐이므로 소수가 아니다. 또 홀수라고 해서 모두 소수인 것은 아니다. $9$는 $3$으로도 나누어떨어지므로 합성수이다.\n$15$의 약수는 $1$, $3$, $5$, $15$이다. 합성수는 약수가 세 개 이상인 $2$ 이상의 자연수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T05:57:33.566524+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -574,30 +616,35 @@
       "body": "$1$, $2$, $9$를 소수와 합성수로 바르게 구분한 것은? 단, 어느 쪽도 아닌 경우에는 ‘둘 다 아님’으로 표시한다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M1",
           "no": 1,
           "text": "$1$: 소수, $2$: 소수, $9$: 합성수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M2",
           "no": 2,
           "text": "$1$: 둘 다 아님, $2$: 소수, $9$: 소수"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$1$: 둘 다 아님, $2$: 소수, $9$: 합성수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$1$: 합성수, $2$: 소수, $9$: 합성수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -608,6 +655,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$1$의 약수는 $1$뿐이므로 $1$은 소수도 합성수도 아니다. $2$의 약수는 $1$과 $2$뿐이므로 소수이다. $9$의 약수는 $1$, $3$, $9$이므로 합성수이다. $1$을 소수로 보았다면 소수의 약수가 서로 다른 두 개라는 점을 놓친 것이다. $9$를 소수로 보았다면 홀수는 모두 소수라고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T05:57:51.774014+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -635,30 +683,35 @@
       "body": "어떤 자연수를 소수 $2$ 세 개와 소수 $3$ 두 개를 모두 곱하여 나타냈습니다. 이 곱을 거듭제곱으로 나타낸 식과 그 식에 대한 설명이 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M3",
           "no": 1,
           "text": "$2^3\\times 3^2$이고, $2^3$은 $2$와 $3$을 곱한 $6$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$2^2\\times 3^3$이고, $2^2$의 지수 $2$는 곱해진 $2$의 개수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2^3\\times 3^2$이고, $2^3$의 지수 $3$은 곱해진 $3$의 개수이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$2^3\\times 3^2$이고, $3^2$의 지수 $2$는 곱해진 $3$의 개수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -669,6 +722,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$2$가 세 개, $3$이 두 개 곱해져 있으므로 $2^3\\times 3^2$입니다. $3^2$의 지수 $2$는 곱해진 $3$의 개수입니다. ①은 $2^3$을 $2\\times 3$으로 잘못 생각한 것입니다. $2^3$은 $2\\times 2\\times 2=8$입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:21:28.49371+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "소수의 개수를 말로 제시했습니다. 이를 거듭제곱으로 나타내고 지수가 뜻하는 것을 함께 판단해야 합니다.",
@@ -696,30 +750,35 @@
       "body": "소수 $2$와 $3$만을 곱하여 만든 수가 있습니다. $3$은 두 번 곱했고, $2$는 $3$보다 한 번 더 곱했습니다. 이 수와 같은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2^2\\times3^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M3",
           "no": 2,
           "text": "$2\\times3\\times3\\times2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2^3\\times3^3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$2^3\\times3^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -730,6 +789,7 @@
       "difficulty": "hard",
       "disabled_at": "2026-11-11T06:19:17.868802+00:00",
       "explanation": "$3$은 두 번, $2$는 세 번 곱했으므로 이 수는 $2^3\\times3^2$입니다. 따라서 정답은 ④입니다. ②를 골랐다면 거듭제곱을 계산할 때 밑과 지수를 곱했을 수 있습니다. 지수는 밑을 곱한 횟수를 나타냅니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:02:40.453995+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "문장으로 주어진 두 소수의 곱한 횟수를 각각 알아내어 거듭제곱으로 나타내야 합니다.",
@@ -765,30 +825,35 @@
       "body": "어떤 자연수를 소인수분해한 결과가 $5^2\\times 7^2$입니다. 이 수에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M3",
           "no": 1,
           "text": "$5^2$은 $5$와 $2$를 곱한 $10$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$5^2\\times 7^2$은 $(5+5)\\times(7+7)$과 같다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$35^2$은 이 수를 나타내지만 소인수분해한 결과는 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$35^2$은 이 수를 나타내므로 소인수분해한 결과이기도 하다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -799,6 +864,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$5^2\\times 7^2$은 $5\\times 5\\times 7\\times 7$입니다. 이는 $(5\\times 7)\\times(5\\times 7)$, 즉 $35^2$과 같습니다. 하지만 $35$는 소수가 아니므로 $35^2$은 소인수분해한 결과가 아닙니다. 따라서 정답은 ③입니다. ①은 거듭제곱을 밑과 지수의 곱으로 잘못 생각한 것입니다. ②에서 지수는 더하는 횟수가 아니라 같은 수를 곱한 횟수를 나타냅니다. ④는 같은 수를 나타내면 모두 소인수분해한 결과라고 잘못 생각한 것입니다. ⑤에서는 $5\\times 7$을 네 번이 아니라 두 번 곱해야 합니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:03:39.653371+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "같은 수를 나타내는 $35^2$이 소인수분해한 결과인지 판단하게 합니다. 거듭제곱의 뜻과 밑이 소수인지 함께 살펴야 합니다.",
@@ -836,30 +902,35 @@
       "body": "$3^4$의 뜻을 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3+3+3+3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M3",
           "no": 2,
           "text": "$3\\times4$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$3\\times3\\times3\\times3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4\\times4\\times4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -870,6 +941,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$3^4$은 밑 $3$을 지수 $4$개만큼 곱한 것입니다. 따라서 $3\\times3\\times3\\times3$입니다. ②는 밑과 지수를 서로 곱한 것으로, 거듭제곱의 뜻을 잘못 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:01:31.609978+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -897,30 +969,35 @@
       "body": "$40$을 소인수분해하면 $40=2^3\\times5$입니다. 이때 $2^3$에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "밑은 $3$이고 지수는 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$2$를 $3$번 더한 수이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2$를 $3$번 곱한 수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M3",
           "no": 4,
           "text": "$2$와 $3$을 곱한 수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -931,6 +1008,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$2^3$은 밑 $2$를 $3$번 곱한 수이므로 $2\\times2\\times2=8$입니다. ④처럼 밑과 지수를 곱하면 안 됩니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:01:47.044407+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -958,30 +1036,35 @@
       "body": "어떤 자연수에 $12$를 곱한 수를 소인수분해하면 $2^3\\times 3^2\\times 5$입니다. 어떤 자연수를 소인수분해한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M4",
           "no": 1,
           "text": "$2\\times 15$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2\\times 3\\times 5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2^2\\times 3\\times 5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2\\times 3^2\\times 5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -992,6 +1075,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$12=2^2\\times 3$입니다. 주어진 곱에서 $12$를 이루는 $2$ 두 개와 $3$ 한 개를 빼면 $2$, $3$, $5$가 남습니다. 따라서 정답은 $2\\times 3\\times 5$입니다. $2\\times 15$도 같은 수이지만, $15$는 합성수이므로 소인수분해한 것이 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:04:17.030451+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "곱한 수의 소인수분해 결과를 보고, 거꾸로 원래 자연수의 소인수분해를 찾게 했다.",
@@ -1019,30 +1103,35 @@
       "body": "민지는 $180$을 다음과 같이 소인수분해했습니다.\n\n㉠ $180=18\\times 10$\n㉡ $=2\\times 9\\times 2\\times 5$\n㉢ $=2^2\\times 9\\times 5$\n㉣ $=2^2\\times 3\\times 5$\n\n민지의 풀이에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "㉠은 $18\\times 10$이 $180$과 다르므로 틀렸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "㉡은 $18$을 $2\\times 9$로 나타냈으므로 틀렸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M4",
           "no": 3,
           "text": "㉢은 $180$을 소인수분해한 결과이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "㉢에서 ㉣으로 갈 때 $9$를 $3^2$으로 나타내야 한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1053,6 +1142,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "㉢에서 ㉣으로 갈 때 $9$를 $3$으로 바꾼 것이 잘못입니다. $9=3^2$이므로 $180=2^2\\times 3^2\\times 5$입니다. 따라서 정답은 ④입니다.\n\n③에서 $2^2\\times 9\\times 5$는 $180$과 같지만, $9$는 합성수이므로 소인수분해한 결과가 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:05:01.320813+00:00",
       "hard_condition": "application-c",
       "hard_condition_reason": "여러 단계로 제시된 풀이에서 잘못된 부분을 찾고, $9$를 소수의 거듭제곱으로 나타내어 판단해야 한다.",
@@ -1090,30 +1180,35 @@
       "body": "$72$를 소인수분해한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M4",
           "no": 1,
           "text": "$8\\times 3^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$2^2\\times 3^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2^3\\times 3^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2^3\\times 3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1124,6 +1219,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$72=2\\times 2\\times 2\\times 3\\times 3=2^3\\times 3^2$이므로 정답은 ③입니다. ①은 $72$를 나타내지만, $8$은 소수가 아닙니다. 소인수분해할 때는 $8$도 소수의 곱으로 나타내야 합니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:03:50.231626+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1151,30 +1247,35 @@
       "body": "민지는 $90=2\\times3\\times15$로 나타냈다. $90$을 소인수분해한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$2\\times3^2\\times5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-01-M4",
           "no": 2,
           "text": "$2\\times3\\times15$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2^2\\times3\\times5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2\\times3\\times5^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1185,6 +1286,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$15=3\\times5$이므로 $90=2\\times3^2\\times5$이다. ②는 $15$를 그대로 두었는데, $15$는 소수가 아니므로 소인수분해한 것이 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:04:01.649012+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1215,6 +1317,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$A$와 $B$는 소인수가 $2$, $3$으로 같습니다. 하지만 $B$에는 $A$보다 $3$이 한 개 더 있으므로 $B$는 $A$의 약수가 아닙니다. 또 $A$에는 $B$보다 $2$가 한 개 더 있으므로 $A$는 $B$의 약수가 아닙니다. 따라서 민지의 말은 틀렸습니다.\n\n약수인지 판단할 때는 두 수를 각각 곱하여 구하지 않아도 됩니다. 소인수분해한 식에서 소인수의 지수를 비교하면 됩니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:05:46.111423+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "주어진 $A$와 $B$가 민지의 말이 틀렸음을 보여 주는 예임을 설명하게 한다. 두 방향 모두에서 약수가 아닌 이유를 밝혀야 한다.",
@@ -1271,6 +1374,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$12\\times18=2^3\\times3^3$입니다. 예를 들어 $36=2^2\\times3^2$에는 $12$를 만드는 데 필요한 소인수와 $18$을 만드는 데 필요한 소인수가 각각 충분히 있습니다. 하지만 $12\\times18$을 만들기에는 $2$와 $3$이 각각 하나씩 부족합니다. 따라서 $36$은 지수의 말이 틀렸음을 보여 줍니다. 원래 수를 모두 곱한 뒤 나누어 보지 않아도 소인수의 개수를 비교하면 판단할 수 있습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:06:33.73788+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "지수의 말이 틀렸음을 보여 주는 자연수를 직접 찾고, 그 수가 왜 지수의 말에 맞지 않는지 설명하도록 하였다.",
@@ -1336,6 +1440,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$12=2^2\\times 3$이다. $A$의 소인수 중에서 $2$ 두 개와 $3$ 한 개를 묶으면 $12$가 된다. 따라서 $A$는 $12$로 나누어떨어진다. $A$를 계산하여 구하지 않아도 소인수분해 결과로 약수인지 판단할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:05:14.923967+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1383,6 +1488,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$18=2\\times 3^2$이다. $18$로 나누어떨어지려면 소인수 $3$이 적어도 $2$개 있어야 한다. 그런데 $B$에는 소인수 $3$이 $1$개뿐이므로 $18$로 나누어떨어지지 않는다. 소인수분해 결과를 보면 $B$를 직접 구하지 않고도 판단할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:05:27.162562+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

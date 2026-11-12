@@ -66,7 +66,7 @@ def test_prompt_loading(monkeypatch: pytest.MonkeyPatch) -> None:
         "student_answer": "student",
     }
     prompt = load_prompt("grade_written", values)
-    assert prompt.version == PROMPT_VERSION == "v8"
+    assert prompt.version == PROMPT_VERSION == "v9"
     assert "<!--" not in prompt.system + prompt.user
     assert "{{" not in prompt.system + prompt.user
     assert "student" in prompt.user

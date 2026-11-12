@@ -165,30 +165,35 @@
       "body": "민지와 지수는 동쪽과 서쪽으로 걸은 거리를 각각 부호가 있는 수로 나타낸다. 각자 한 방향은 양수로, 그 반대 방향은 음수로 나타낸다.\n\n민지는 동쪽으로 $3$ m 걸은 것을 $-3$ m로 나타냈다. 지수는 서쪽으로 $3$ m 걸은 것을 $-3$ m로 나타냈다.\n\n두 사람이 각자 정한 방법으로 동쪽으로 $2$ m 걸은 것을 나타내려고 한다. 민지와 지수가 나타낼 수를 차례로 바르게 짝 지은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "민지: $-2$ m, 지수: $+2$ m"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "민지: $-2$ m, 지수: $-2$ m"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "민지: $+2$ m, 지수: $+2$ m"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "민지: $+2$ m, 지수: $-2$ m"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M3",
           "no": 5,
@@ -199,6 +204,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "민지는 동쪽을 음수로 나타내므로 $-2$ m이다. 지수는 서쪽을 음수로 나타내므로 동쪽은 양수로 나타낸다. 따라서 $+2$ m이다.\n\n⑤에서 $-3$은 다른 수에서 $3$을 빼라는 뜻이 아니라, 음수 하나를 나타낸다. 이 수와 걸은 방향을 알면 민지가 정한 방법을 알 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:32:41.089146+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "걸은 방향과 이를 나타낸 수를 보고 각 사람이 정한 부호의 방향을 거꾸로 찾아야 한다. 그 방법을 새로운 상황에 적용해 수를 나타낸다.",
@@ -226,30 +232,35 @@
       "body": "어느 건물은 $1$층부터 $10$층까지 있다. 한 층을 기준으로 정하고, 다른 층을 다음 방법으로 나타낸다.\n\n- 기준 층은 $0$으로 나타낸다.\n- 기준 층에서 몇 층 떨어져 있는지를 수에 나타낸다.\n- 기준 층보다 위쪽은 한 부호로, 아래쪽은 그 반대 부호로 나타낸다.\n\n이 방법으로 $8$층을 $-3$, $3$층을 $+2$로 나타냈다. 기준 층과 부호를 정한 방법으로 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "기준 층은 $5$층이고, 위쪽은 음수로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "기준 층은 $5$층이고, 위쪽은 양수로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "기준 층은 $3$층이고, 위쪽은 음수로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "기준 층은 $8$층이고, 위쪽은 양수로 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M3",
           "no": 5,
@@ -260,6 +271,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$8$층을 $-3$으로 나타냈으므로 기준 층은 $8$층에서 세 층 떨어져 있다. $3$층을 $+2$로 나타낸 것도 살펴보면 기준 층은 $5$층이다. $8$층은 기준 층보다 위쪽이고 음수로 나타냈으므로, 위쪽은 음수, 아래쪽은 양수로 나타낸다.\n\n$-3$은 하나의 음수이다. 무엇에서 $3$을 빼야만 쓸 수 있는 것이 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:33:00.427195+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 층을 나타낸 수가 주어졌을 때, 기준 층과 부호를 정한 방법을 거꾸로 찾는다.",
@@ -287,30 +299,35 @@
       "body": "잠수함의 위치를 수면을 기준으로 나타내려고 한다. 수면 위는 양수로, 수면 아래는 음수로 나타낸다. 수면 아래 $3\\,\\mathrm{m}$에 있는 잠수함의 위치를 나타낸 수와 그 뜻으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$+3$: 수면 아래 $3\\,\\mathrm{m}$를 나타내는 수"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$-3$: 수면 아래 $3\\,\\mathrm{m}$를 나타내는 수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M3",
           "no": 3,
           "text": "$-3$: 어떤 수에서 $3$을 빼야만 뜻을 알 수 있는 것"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$-3$: 수면 위 $3\\,\\mathrm{m}$를 나타내는 수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -321,6 +338,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "수면 아래는 음수로 나타내므로 답은 $-3$이다. $-3$은 수면 아래 $3\\,\\mathrm{m}$를 나타내는 하나의 수이다. ③처럼 $-3$의 뜻을 알기 위해 다른 수에서 $3$을 빼야 하는 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:31:48.801457+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -348,30 +366,35 @@
       "body": "가게의 이익과 손해를 천 원 단위의 수로 나타내려고 한다. 이익은 양수로, 손해는 음수로 나타낸다. 손해 $7$천 원을 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$+7$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$-7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$0$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$-8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M3",
           "no": 5,
@@ -382,6 +405,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "손해는 음수로 나타내므로 손해 $7$천 원은 $-7$이다. $-7$에서 $-$는 음의 부호이다. $-7$은 무엇에서 $7$을 빼는 식이 아니라 하나의 수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:32:20.850095+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -420,6 +444,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "수면에서 같은 길이만큼 떨어져 있어도 한 물체는 수면 위에, 다른 물체는 수면 아래에 있을 수 있다. 떨어진 길이만 양수로 적으면 두 위치가 같은 수로 기록된다. 수면 위는 양수, 수면 아래는 음수로 나타내면 두 위치를 구별할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:33:49.99124+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민지의 말이 틀렸음을 보이기 위해 수면 위와 아래의 두 위치를 예로 들고, 양수만으로 기록할 때 생기는 문제를 설명하게 한다.",
@@ -472,6 +497,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "같은 금액의 이익과 손해를 모두 그 금액을 나타내는 양수로 기록하면 두 기록이 같아진다. 이는 금액이 얼마이든 마찬가지다. 이익을 양수로 기록할 때 손해를 음수로 기록하면 두 상황을 구별할 수 있다. 이때 음수 앞의 $-$는 빼기를 나타내는 것이 아니라 손해임을 나타내는 부호이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:34:08.875433+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "금액이 얼마이든 양수로만 기록하면 이익과 손해를 구별하기 어려운 까닭을 설명하도록 했다.",
@@ -519,6 +545,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "이익과 손해는 서로 반대되는 상황이다. 손해 $4$만 원을 $-4$로 나타내면 이익 $4$만 원을 나타내는 $+4$와 구별할 수 있다. 이때 $-4$의 $-$는 빼기를 뜻하는 것이 아니라 손해를 나타내는 음의 부호이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:33:13.550405+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -566,6 +593,7 @@
       "difficulty": "normal",
       "disabled_at": "2026-11-11T07:40:28.268124+00:00",
       "explanation": "두 온도를 모두 $6$으로 기록하면 영상인지 영하인지 알 수 없다. 양수와 음수를 이용하면 영상과 영하를 구별할 수 있다. 영상 $6$℃는 $+6$, 영하 $6$℃는 $-6$으로 기록한다. 이때 $-6$은 무엇에서 $6$을 빼라는 뜻이 아니라 영하 온도를 나타내는 하나의 수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:33:31.799141+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -611,6 +639,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "영상 $7$도와 영하 $7$도는 서로 다른 기온이다. 영하 $7$도를 $-7$로 나타내면 두 기온을 수로 구별할 수 있다. $-7$은 무엇에서 $7$을 빼라는 뜻이 아니라, 영하의 기온을 나타내는 하나의 수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T07:40:51.048503+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -655,30 +684,35 @@
       "body": "정수와 유리수에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M1",
           "no": 1,
           "text": "정수는 유리수가 아니고, $0$은 양수도 음수도 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M2",
           "no": 2,
           "text": "모든 정수는 유리수이고, $0$은 양수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M2",
           "no": 3,
           "text": "모든 정수는 유리수이고, $0$은 음수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "정수가 아닌 유리수는 없고, $0$은 양수도 음수도 아니다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -689,6 +723,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "정수는 모두 분수로 나타낼 수 있으므로 유리수이다. 예를 들어 $-2$는 $\\frac{-2}{1}$로 나타낼 수 있다. 또 $0$은 양수도 음수도 아니다. ①은 정수가 유리수가 아니라고 잘못 생각한 것이다. ②와 ③은 $0$을 양수 또는 음수로 잘못 분류한 것이다. ④와 달리 $\\frac{1}{2}$과 같이 정수가 아닌 유리수도 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:35:34.667898+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -716,30 +751,35 @@
       "body": "수 카드 $-3$, $0$, $\\frac{1}{2}$이 있습니다. 이 카드에서 유리수인 수와 양수인 수를 각각 모두 고른 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M2",
           "no": 1,
           "text": "유리수: $-3$, $0$, $\\frac{1}{2}$ / 양수: $0$, $\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M1",
           "no": 2,
           "text": "유리수: $\\frac{1}{2}$ / 양수: $\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "유리수: $-3$, $0$, $\\frac{1}{2}$ / 양수: $\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "유리수: $-3$, $\\frac{1}{2}$ / 양수: $\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -750,6 +790,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "정수는 모두 유리수이므로 $-3$과 $0$도 유리수입니다. 따라서 세 수는 모두 유리수입니다. 양수는 $\\frac{1}{2}$뿐입니다. $0$은 양수도 음수도 아닙니다. ①은 $0$을 양수로 잘못 보았습니다. ②는 정수를 유리수가 아니라고 잘못 보았습니다. ④는 유리수인 $0$을 빠뜨렸고, ⑤는 음수인 $-3$을 양수로 잘못 보았습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:36:27.511244+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -791,30 +832,35 @@
       "body": "다음 네 수 중 정수가 아닌 유리수를 모두 고른 것은?\n\nㄱ. $\\frac{-3}{3}$　ㄴ. $\\frac{0}{4}$　ㄷ. $-0.5$　ㄹ. $\\frac{-3}{2}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "ㄱ, ㄹ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "ㄴ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "ㄱ, ㄷ, ㄹ"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "ㄷ, ㄹ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M1",
           "no": 5,
@@ -825,6 +871,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "ㄱ은 $-1$이고, ㄴ은 $0$이므로 둘 다 정수이다. ㄷ은 $\\frac{-1}{2}$로 나타낼 수 있으므로 유리수이고, 정수는 아니다. ㄹ도 정수가 아닌 유리수이다. 따라서 정답은 ④이다.\n\n⑤를 골랐다면 분수 꼴로 쓰인 수만 유리수라고 생각했을 수 있다. 소수로 쓰인 $-0.5$도 정수의 분수 꼴로 나타낼 수 있으므로 유리수이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:34:53.534129+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "분수 꼴로 쓰였지만 정수인 수와 소수로 쓰인 유리수를 함께 제시했다. 각 수가 유리수인지, 정수는 아닌지 따져야 한다.",
@@ -852,30 +899,35 @@
       "body": "다음 설명 중 옳은 것만을 있는 대로 고른 것은?\n\nㄱ. 모든 정수는 유리수이다.\nㄴ. $0$은 정수이지만 양수도 음수도 아니다.\nㄷ. 분수 꼴로 쓴 수는 모두 정수가 아니다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M2",
           "no": 1,
           "text": "ㄱ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M1",
           "no": 2,
           "text": "ㄴ"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "ㄱ, ㄴ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "ㄱ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -886,6 +938,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "ㄱ. 정수는 모두 분모가 $1$인 분수로 쓸 수 있으므로 유리수이다.\nㄴ. $0$은 정수이지만 양수도 음수도 아니다.\nㄷ. 분수 꼴로 쓴 $\\frac{8}{2}$는 정수 $4$와 같은 수이므로 옳지 않다.\n\n따라서 정답은 ③이다. ①은 $0$을 양수나 음수라고 잘못 생각했을 수 있다. ②는 정수가 유리수에 포함되지 않는다고 잘못 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:35:20.847769+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "ㄴ에서 $0$의 분류를, ㄷ에서 분수 꼴로 쓴 정수의 분류를 따져야 한다. ㄱ에서는 정수와 유리수의 관계를 판단해야 한다.",
@@ -913,30 +966,35 @@
       "body": "정수와 유리수에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "모든 정수는 유리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M1",
           "no": 2,
           "text": "분수 꼴로 적힌 수만 유리수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M2",
           "no": 3,
           "text": "$0$은 양의 정수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "정수가 아닌 유리수는 모두 음수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -947,6 +1005,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "정수는 모두 분모가 $1$인 분수로 나타낼 수 있으므로 유리수입니다. 따라서 정답은 ①입니다.\n② 유리수는 분수 꼴로 적힌 수만 있는 것이 아닙니다. 예를 들어 $0.5$도 $\\frac{1}{2}$로 나타낼 수 있으므로 유리수입니다.\n③ $0$은 양수도 음수도 아닙니다.\n④ $\\frac{1}{2}$은 정수가 아닌 유리수이면서 양수입니다.\n⑤ $\\frac{1}{2}$은 유리수이지만 정수는 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:34:23.779922+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -974,30 +1033,35 @@
       "body": "다음 다섯 수 중에서 정수가 아닌 유리수를 모두 고른 것은?\n\n$-2$, $0$, $0.5$, $-\\frac{3}{4}$, $3$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-03-M1",
           "no": 1,
           "text": "$-\\frac{3}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$0$, $-\\frac{3}{4}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$0.5$, $-\\frac{3}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$-2$, $0$, $3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1008,6 +1072,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$0.5$는 $\\frac{1}{2}$로 나타낼 수 있으므로 유리수입니다. $-\\frac{3}{4}$도 유리수입니다. 두 수는 정수가 아닙니다. 나머지 $-2$, $0$, $3$은 모두 정수입니다.\n\n①을 골랐다면 분수 꼴로 쓰인 수만 유리수라고 생각했을 수 있습니다. 소수로 쓰인 $0.5$도 유리수입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:34:37.260688+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

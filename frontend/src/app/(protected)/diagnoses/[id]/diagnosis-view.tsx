@@ -330,41 +330,43 @@ export default function DiagnosisView({ id }: { id: string }) {
               <p>
                 {index + 1} / {stageItems.length}
               </p>
-              <div className="question">
-                <ProblemText text={item.body} />
-                {item.figure && <Figure figure={item.figure} />}
+              <div className="problem-sheet stack">
+                <div className="question">
+                  <ProblemText text={item.body} />
+                  {item.figure && <Figure figure={item.figure} />}
+                </div>
+                {item.question_type === "multiple_choice" && (
+                  <fieldset
+                    className={
+                      item.choices.some((choice) => choice.figure)
+                        ? "choice-grid"
+                        : "stack"
+                    }
+                    disabled={readonly || busy}
+                  >
+                    <legend>답을 골라요</legend>
+                    {item.choices.map((choice) => (
+                      <label key={choice.no} className="choice">
+                        <input
+                          type="radio"
+                          name={`item-${item.id}`}
+                          checked={
+                            "selected_choice" in answer &&
+                            answer.selected_choice === choice.no
+                          }
+                          onChange={() =>
+                            update(item, { selected_choice: choice.no })
+                          }
+                        />
+                        <div className="choice-content">
+                          <MathText text={`${choice.no}. ${choice.text}`} />
+                          {choice.figure && <Figure figure={choice.figure} />}
+                        </div>
+                      </label>
+                    ))}
+                  </fieldset>
+                )}
               </div>
-              {item.question_type === "multiple_choice" && (
-                <fieldset
-                  className={
-                    item.choices.some((choice) => choice.figure)
-                      ? "choice-grid"
-                      : "stack"
-                  }
-                  disabled={readonly || busy}
-                >
-                  <legend>답을 골라요</legend>
-                  {item.choices.map((choice) => (
-                    <label key={choice.no} className="choice">
-                      <input
-                        type="radio"
-                        name={`item-${item.id}`}
-                        checked={
-                          "selected_choice" in answer &&
-                          answer.selected_choice === choice.no
-                        }
-                        onChange={() =>
-                          update(item, { selected_choice: choice.no })
-                        }
-                      />
-                      <div className="choice-content">
-                        <MathText text={`${choice.no}. ${choice.text}`} />
-                        {choice.figure && <Figure figure={choice.figure} />}
-                      </div>
-                    </label>
-                  ))}
-                </fieldset>
-              )}
               {!readonly && item.question_type === "multiple_choice" && (
                 <div className="save-status-row">
                   <span aria-hidden="true">{"\u00a0"}</span>

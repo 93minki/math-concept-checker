@@ -941,30 +941,35 @@
       "body": "책갈피 $8$개에 각각 가, 나, 다, 라, 마, 바, 사, 아라고 이름을 붙였다.\n\n빨간 끈이 달린 책갈피는 가, 나, 다, 라, 마이다. 별 그림이 있는 책갈피는 다, 마, 바, 사이다.\n\n이 책갈피 중 빨간 끈이 달려 있거나 별 그림이 있는 것을 하나 고르려고 한다. 두 가지가 모두 있는 책갈피도 고를 수 있다. 고르는 경우의 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$6$가지"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$7$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$8$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M1",
           "no": 4,
           "text": "$9$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M3",
           "no": 5,
@@ -975,6 +980,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "빨간 끈이 달린 책갈피는 $5$개이다. 별 그림이 있으면서 빨간 끈이 없는 책갈피는 바, 사로 $2$개이다. 이 둘은 빨간 끈이 달린 책갈피와 겹치지 않으므로 경우의 수는 $5+2=7$이다.\n\n$9$가지를 고른 경우에는 빨간 끈과 별 그림이 모두 있는 다, 마를 각각 두 번 셌다. $20$가지를 고른 경우에는 책갈피 하나를 고르는데 두 종류의 책갈피 수를 곱했다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:11:44.860895+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "빨간 끈과 별 그림에 관한 상황을 보고 겹치는 책갈피를 찾아야 한다. 겹치지 않게 나눈 뒤 경우의 수를 더하는 식을 세워야 한다.",
@@ -1002,30 +1008,35 @@
       "body": "$1$부터 $12$까지의 자연수가 하나씩 적힌 카드가 $12$장 있다.\n\n이 중 적힌 수가 $2$의 배수이거나 $ㄱ$의 배수인 카드를 한 장 고른다. 두 수의 배수인 카드도 고를 수 있다.\n\n고르는 경우의 수가 $8$일 때, $ㄱ$에 들어갈 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M1",
           "no": 3,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M1",
           "no": 4,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1036,6 +1047,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$2$의 배수가 적힌 카드는 $2, 4, 6, 8, 10, 12$의 $6$장이다.\n\n$ㄱ$이 $3$이면 이 카드 외에 $3, 9$가 적힌 카드도 고를 수 있다. 따라서 경우의 수는 $6+2=8$이다.\n\n$ㄱ$이 $5$이면 $5$가 적힌 카드만 더 고를 수 있어 $7$가지이다. $ㄱ$이 $4, 6, 8$ 중 하나이면 더 고를 수 있는 카드가 없어 각각 $6$가지이다.\n\n$ㄱ$을 $5$ 또는 $6$으로 고른 학생은 두 수의 배수인 카드를 두 번 세지 않았는지 살펴본다. 예를 들어 $ㄱ$이 $6$이면 $6, 12$가 적힌 카드는 이미 $2$의 배수가 적힌 카드에 들어 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:29:05.563364+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "고르는 경우의 수를 $8$로 주고, 그 수가 되도록 $ㄱ$에 들어갈 수를 찾게 했다.",
@@ -1063,30 +1075,35 @@
       "body": "서로 다른 카드가 빨간색 $3$장, 파란색 $4$장, 초록색 $2$장 있다. 이 카드 중 한 장을 고를 때, 빨간색 또는 파란색 카드를 고르는 경우의 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M3",
           "no": 5,
@@ -1097,6 +1114,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "빨간색 카드를 고르는 경우는 $3$가지이고, 파란색 카드를 고르는 경우는 $4$가지이다. 한 장을 고를 때 빨간색과 파란색을 동시에 고를 수 없으므로 경우의 수는 $3+4=7$이다. $3\\times4=12$로 계산하면 빨간색과 파란색 카드를 각각 한 장씩 고르는 것으로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:57.467811+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1124,30 +1142,35 @@
       "body": "학교에서 도서관까지 한 번에 가는 버스 노선이 $5$개, 지하철 노선이 $6$개 있다. 버스나 지하철 중 한 가지만 이용하여 도서관에 가는 경우의 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$10$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$11$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$12$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M3",
           "no": 5,
@@ -1158,6 +1181,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "버스를 이용하는 경우는 $5$가지, 지하철을 이용하는 경우는 $6$가지이다. 한 가지만 이용하므로 두 경우는 겹치지 않는다. 따라서 경우의 수는 $5+6=11$이다. $5\\times6=30$으로 구하면 버스와 지하철 노선을 하나씩 고르는 경우를 센 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:50:12.423962+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1185,30 +1209,35 @@
       "body": "음료 가, 나, 다 중에서 한 가지를 고르고, 간식도 한 가지 고르려고 한다. 어떤 음료를 고르더라도 고를 수 있는 간식의 종류는 모두 같다.\n\n고른 음료와 간식의 짝은 모두 $12$가지이다. 고를 수 있는 간식은 몇 종류인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2$종류"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$3$종류"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$4$종류"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$6$종류"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M2",
           "no": 5,
@@ -1219,6 +1248,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "간식 한 종류마다 음료 가, 나, 다와 짝을 지을 수 있으므로 짝이 $3$가지씩 생긴다. 짝이 모두 $12$가지이므로 간식은 $4$종류이다.\n\n실제로 간식을 ㉠, ㉡, ㉢, ㉣이라고 하면 짝은 다음과 같이 $12$가지이다.\n(가, ㉠), (가, ㉡), (가, ㉢), (가, ㉣), (나, ㉠), (나, ㉡), (나, ㉢), (나, ㉣), (다, ㉠), (다, ㉡), (다, ㉢), (다, ㉣)\n\n$3+9=12$만 생각하여 $9$종류를 고르면 음료와 간식을 하나씩 함께 고른 짝을 세지 않은 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:14:23.765638+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "완성되는 음료와 간식의 짝의 수를 먼저 주고, 간식의 종류 수를 거꾸로 찾게 했다.",
@@ -1246,30 +1276,35 @@
       "body": "출발 지점 $A$, $B$, $C$, $D$ 중 한 곳에서 출발하여 도착 지점 $1$, $2$, $3$ 중 한 곳에 도착한다.\n\n$A$와 $B$에서는 각각 $1$, $2$, $3$으로 갈 수 있다. $C$와 $D$에서는 각각 $1$, $2$로만 갈 수 있다. 갈 수 있는 출발 지점과 도착 지점의 짝마다 이동 방법은 한 가지뿐이다.\n\n이동하는 방법의 경우의 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$8$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M2",
           "no": 2,
           "text": "$9$가지"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$10$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$11$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1280,6 +1315,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$A$ 또는 $B$에서 출발하면 각각 $3$곳으로 갈 수 있으므로 $2\\times3=6$가지이다. $C$ 또는 $D$에서 출발하면 각각 $2$곳으로 갈 수 있으므로 $2\\times2=4$가지이다. 따라서 모두 $6+4=10$가지이다.\n\n출발 지점과 도착 지점의 짝을 모두 쓰면 $(A,1)$, $(A,2)$, $(A,3)$, $(B,1)$, $(B,2)$, $(B,3)$, $(C,1)$, $(C,2)$, $(D,1)$, $(D,2)$이다.\n\n$9$가지를 고른 학생은 출발 지점과 도착 지점을 함께 골라야 하는데, 각각 고르는 경우의 수를 곱하지 않고 $2+3+2+2$로 더했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:14:52.758025+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "출발 지점에 따라 갈 수 있는 도착 지점이 다르므로, 상황을 두 부분으로 나누어 각각 곱하는 식을 세워야 한다.",
@@ -1307,30 +1343,35 @@
       "body": "빵 $3$종류와 음료 $4$종류가 있다. 빵 한 종류와 음료 한 종류를 골라 한 세트로 만든다. 어떤 빵을 골라도 음료 $4$종류 중 하나를 고를 수 있다. 만들 수 있는 서로 다른 세트의 경우의 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M2",
           "no": 2,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$12$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1341,6 +1382,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "빵 한 종류마다 함께 고를 수 있는 음료가 $4$종류씩 있다. 따라서 경우의 수는 $3 \\times 4=12$이다. $3+4=7$로 구하면 빵과 음료를 따로 센 것이므로, 빵과 음료를 하나씩 고르는 세트의 경우를 구할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:13:46.364127+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1368,30 +1410,35 @@
       "body": "동전 한 개를 던지고, $1$부터 $5$까지의 수가 하나씩 적힌 회전판을 한 번 돌린다. 동전의 앞면과 뒷면 중 하나와 회전판에서 나온 수 하나를 함께 기록할 때, 서로 다른 기록의 경우의 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$5$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M2",
           "no": 2,
           "text": "$7$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$8$가지"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$10$가지"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1402,6 +1449,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "동전은 앞면과 뒷면의 $2$가지이다. 각각에 대해 회전판에서 나오는 수는 $5$가지이므로 경우의 수는 $2\\times 5=10$가지이다. $7$가지를 고른 경우에는 두 결과를 함께 기록해야 하는데, 각각의 경우의 수를 더했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:13:58.709801+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1432,6 +1480,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "카드별로 보면 각 카드에 스티커 $2$가지씩을 고를 수 있다. 같은 수인 $2$를 카드 $3$장에 대해 더하므로 $3\\times2=6$이다. 스티커별로 보면 각 스티커에 카드 $3$가지씩을 고를 수 있으므로 $2\\times3=6$이다. 두 방법은 같은 경우들을 다르게 묶어 센 것이므로 결과가 같다.\n\n$3+2=5$로 구하면 카드와 스티커를 따로 세게 된다. 이 문제에서는 카드와 스티커를 함께 고른 한 쌍을 한 가지 경우로 세어야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:17:48.062302+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "카드별로 세는 방법과 스티커별로 세는 방법을 비교하고, 두 방법이 같은 결과를 내는 이유를 설명하게 한다.",
@@ -1512,6 +1561,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "가능한 경우는 $(A,1)$, $(A,2)$, $(B,1)$, $(B,2)$, $(C,1)$, $(C,2)$, $(D,1)$, $(D,2)$이다. 집에서 광장까지 가는 길 $4$가지 각각에 광장에서 도서관까지 가는 길 $2$가지를 짝 지을 수 있으므로 경우의 수는 $4\\times2=8$이다. 빠지거나 겹치는 경우도 없다.\n\n$4+2=6$으로 구하면 두 구간의 길을 따로 세어 더한 것이다. 이렇게 하면 두 구간의 길을 하나씩 짝 지은 경우를 모두 세지 못한다. 따라서 이 상황은 수아의 말이 틀렸음을 보여 주는 반례이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:18:12.846275+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "두 구간의 길의 수를 더하면 된다는 수아의 말에 대해 주어진 상황을 반례로 이용하여 틀렸음을 보이게 했다.",
@@ -1568,6 +1618,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "음료를 하나 고를 때마다 함께 고를 수 있는 빵은 $2$가지이다. 이러한 음료가 $3$가지이므로 경우의 수는 $3\\times 2=6$이다. $3+2=5$로 구하면 음료와 빵을 함께 고르는 경우를 세지 못한다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:15:50.404668+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1632,6 +1683,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "카드에 적힌 수가 $1$일 때 동전은 앞면 또는 뒷면이 나올 수 있으므로 $2$가지이다. 나머지 $2$, $3$, $4$에 대해서도 각각 $2$가지씩 있다. 따라서 경우의 수는 $4\\times 2=8$가지이다.\n\n$4+2$로 구하면 카드의 수 $4$가지와 동전의 면 $2$가지를 따로 더한 것이다. 카드의 수와 동전의 면이 함께 나오는 경우를 센 것이 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:16:07.85711+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1685,30 +1737,35 @@
       "body": "빨간 카드 $3$장과 파란 카드 $2$장이 있다. 카드는 모두 서로 다르다.\n\n민수: 빨간 카드와 파란 카드를 하나씩 고르는 경우의 수는 $3+2$야.\n지수: 빨간 카드와 파란 카드 중에서 카드 한 장만 고르는 경우의 수는 $3\\times2$야.\n\n두 학생의 말에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M2",
           "no": 1,
           "text": "민수의 말은 옳다. 두 색의 카드를 하나씩 고를 때에는 더해야 한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M3",
           "no": 2,
           "text": "지수의 말은 옳다. 두 색의 카드 중에서 한 장만 고를 때에는 곱해야 한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "민수의 말은 틀리다. 두 색의 카드 중에서 한 장만 고르기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "지수의 말은 틀리다. 두 색의 카드를 하나씩 고르기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1719,6 +1776,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "민수는 빨간 카드와 파란 카드를 하나씩 함께 고르므로 $3\\times2$를 해야 한다. 따라서 ⑤가 옳다.\n지수는 두 색 중에서 한 장만 고르므로 $3+2$를 해야 한다.\n①은 두 카드를 함께 고를 때 더한 잘못이고, ②는 한 장만 고를 때 곱한 잘못이다. ③과 ④는 각 학생이 무엇을 고르는지 잘못 보았다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:19:26.215319+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 학생이 같은 카드에 대해 서로 다르게 고르는 상황을 말한다. 각 학생의 식과 그 까닭이 옳은지 판단해야 한다.",
@@ -1746,30 +1804,35 @@
       "body": "집에서 박물관에 가는 방법은 다음과 같다.\n\n- 도서관을 거치지 않고 가는 길은 $4$개이다.\n- 도서관을 거쳐 가려면 집에서 도서관까지 가는 길 $2$개 중 하나를 고르고, 도서관에서 박물관까지 가는 길 $3$개 중 하나를 고른다.\n\n도서관을 거쳐 갈 때에는 앞에서 고른 길과 뒤에서 고른 길을 모두 이어서 갈 수 있다. 고른 길이 하나라도 다르면 서로 다른 방법이다. 이 밖에 다른 방법은 없다.\n\n집에서 박물관에 가는 방법의 경우의 수를 구하는 식에 대해 다섯 학생이 다음과 같이 말했다. 옳게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M2",
           "no": 1,
           "text": "민재: $4+(2+3)$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M3",
           "no": 2,
           "text": "서윤: $4\\times(2\\times3)$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "하린: $4+(2\\times3)$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "도윤: $4+2$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1780,6 +1843,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "도서관을 거쳐 갈 때에는 앞의 길 $2$개 각각에 뒤의 길 $3$개를 이어 갈 수 있으므로 $2\\times3$가지이다. 도서관을 거치지 않는 방법과 거치는 방법 중 하나로 가므로 $4+(2\\times3)=10$가지이다. 따라서 정답은 ③이다.\n\n①은 이어서 가는 두 길의 경우의 수를 더했다. ②는 둘 중 하나로 가는 두 방법의 경우의 수를 곱했다. ④는 도서관에서 박물관까지 가는 길을, ⑤는 집에서 도서관까지 가는 길을 빠뜨렸다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:20:29.122366+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "도서관을 거쳐 가는 방법과 거치지 않는 방법을 함께 살펴보고, 다섯 학생이 제시한 식의 옳고 그름을 판단하게 했다.",
@@ -1815,30 +1879,35 @@
       "body": "서로 다른 볼펜 $3$종류와 서로 다른 공책 $4$종류가 있다. 각 종류의 볼펜과 공책은 충분히 있다.\n\n다음 중 경우의 수를 바르게 말한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "볼펜과 공책을 한 개씩 고르는 경우의 수는 $12$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M2",
           "no": 2,
           "text": "볼펜과 공책을 한 개씩 고르는 경우의 수는 $7$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "볼펜과 공책을 한 개씩 고르는 경우의 수는 $3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M3",
           "no": 4,
           "text": "볼펜이나 공책 중 하나만 고르는 경우의 수는 $12$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1849,6 +1918,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "볼펜과 공책을 한 개씩 고를 때는 볼펜을 고르는 방법마다 공책을 고르는 방법이 $4$가지씩 있다. 따라서 경우의 수는 $3\\times4=12$이다.\n\n볼펜이나 공책 중 하나만 고를 때는 볼펜을 고르는 $3$가지와 공책을 고르는 $4$가지를 합한다. 따라서 경우의 수는 $3+4=7$이다.\n\n②는 두 물건을 모두 고르는데 경우의 수를 더한 것이다. ④는 두 물건 중 하나만 고르는데 경우의 수를 곱한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:18:35.378793+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1876,30 +1946,35 @@
       "body": "운동 시간에 달리기 방법과 스트레칭 방법을 고르려고 한다. 달리기 방법은 서로 다른 $2$가지이고, 스트레칭 방법은 서로 다른 $5$가지이다.\n\n다음 중 경우의 수를 바르게 말한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M2",
           "no": 1,
           "text": "두 종류에서 각각 방법 하나씩을 고를 때, 경우의 수는 $2+5=7$가지이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-05-M3",
           "no": 2,
           "text": "두 종류 중 한 종류에서만 방법 하나를 고를 때, 경우의 수는 $2\\times5=10$가지이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "두 종류에서 각각 방법 하나씩을 고를 때, 경우의 수는 $2\\times5=10$가지이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "두 종류에서 각각 방법 하나씩을 고를 때, 경우의 수는 $2$가지이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1910,6 +1985,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "달리기 방법 하나와 스트레칭 방법 하나를 함께 고를 때는 각 달리기 방법마다 스트레칭 방법 $5$가지를 고를 수 있다. 따라서 경우의 수는 $2\\times5=10$가지이다.\n\n①은 두 방법을 함께 고르는데 각각의 경우의 수를 더한 것이다. ②는 두 종류 중 한 종류에서만 고르는데 각각의 경우의 수를 곱한 것이다. 한 종류에서만 고를 때는 $2+5=7$가지이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:19:05.154912+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

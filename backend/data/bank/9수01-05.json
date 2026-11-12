@@ -115,30 +115,35 @@
       "body": "다음은 $(-3)-(-2)+(-4)$를 계산한 과정이다. 각 단계는 바로 앞 줄을 보고 판단할 때, 옳지 않은 단계는?\n\n처음: $(-3)-(-2)+(-4)$\n㉠: $(-3)+2+(-4)$\n㉡: $(-3)+(-4)+2$\n㉢: $7+2$\n㉣: $9$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M1",
           "no": 1,
           "text": "㉠"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "㉡"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "㉢"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "㉣"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -149,6 +154,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "㉢에서 $(-3)+(-4)$를 $7$로 잘못 계산했다. 두 음수를 더하면 $-7$이므로, 바르게 계산하면 $(-7)+2=-5$이다. ㉠에서는 음수를 빼는 것을 양수를 더하는 것으로 바꾸었다. 음수를 빼도 그냥 빼야 한다고 생각하면 ㉠이 틀렸다고 고를 수 있다. ㉡은 덧셈의 순서를 바꾼 것이고, ㉣은 바로 앞 줄의 $7+2$를 바르게 계산한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:48:20.282145+00:00",
       "hard_condition": "application-c",
       "hard_condition_reason": "여러 계산 단계 중 옳지 않은 단계를 찾게 했다. 각 단계에서 바로 앞 줄을 바르게 바꾸었는지 판단해야 한다.",
@@ -183,30 +189,35 @@
       "body": "수 카드 두 장에 적힌 수의 합은 $-\\frac{1}{4}$이다. 한 장에는 $-\\frac{3}{4}$이 적혀 있고, 다른 한 장은 뒤집혀 있어 수가 보이지 않는다.\n\n$-\\frac{3}{4}$이 적힌 카드를 $\\frac{3}{4}$이 적힌 카드로 바꾸었다. 이제 두 카드에 적힌 수의 합은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$-\\frac{5}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M1",
           "no": 2,
           "text": "$-\\frac{1}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{1}{4}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{5}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -217,6 +228,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "뒤집힌 카드에 적힌 수는 $-\\frac{1}{4}-(-\\frac{3}{4})=\\frac{1}{2}$이다. 따라서 새로 구한 합은 $\\frac{1}{2}+\\frac{3}{4}=\\frac{5}{4}$이다.\n\n②를 골랐다면 $-\\frac{3}{4}$을 빼는 것을 $\\frac{3}{4}$을 빼는 것과 같다고 생각했을 수 있다. 음수를 뺄 때는 그 수의 부호를 바꾸어 더해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T07:21:09.217653+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "주어진 합과 보이는 카드의 수를 이용해 뒤집힌 카드의 수를 거꾸로 찾고, 바뀐 카드와의 합을 구한다.",
@@ -244,30 +256,35 @@
       "body": "$(-7)-(-3)+(+7)$에서 뺄셈을 덧셈으로 바꾸고, 교환법칙과 결합법칙을 이용하여 계산하기 편하게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M1",
           "no": 1,
           "text": "$((-7)+(+7))+(-3)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$((-7)+(+7))+(+3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$((+7)+(+7))+(-3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$((-7)+(-7))+(+3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -278,6 +295,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$-(-3)$은 $(+3)$을 더하는 것과 같습니다. 따라서 $(-7)+(+3)+(+7)$입니다. 교환법칙과 결합법칙을 이용하면 $((-7)+(+7))+(+3)$으로 나타낼 수 있습니다. ①은 $-(-3)$을 $+(-3)$으로 잘못 바꾼 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:46:50.121643+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -305,30 +323,35 @@
       "body": "어떤 유리수에 $(-0.6)$을 더한 다음 $(-0.4)$를 더합니다. 결합법칙을 이용하여 이를 한 번의 덧셈으로 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "그 수에 $(-1)$을 더한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M2",
           "no": 2,
           "text": "그 수에 $(+1)$을 더한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "그 수에 $(-0.2)$를 더한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "그 수에 $(+0.2)$를 더한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -339,6 +362,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "결합법칙에 따라 먼저 $(-0.6)+(-0.4)$를 계산하면 $(-1)$입니다. 따라서 그 수에 $(-1)$을 더하면 됩니다. ②는 두 음수를 더할 때 곱셈의 부호 규칙을 잘못 쓴 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:47:34.201458+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -374,30 +398,35 @@
       "body": "두 학생이 다음과 같이 말했다.\n\n지우: 음수를 빼는 것은 그 음수의 부호를 바꾸어 더하는 것과 같아.\n민서: 음수 두 개를 더하면 양수가 돼.\n\n두 학생의 말에 대한 판단과 그 까닭이 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M2",
           "no": 1,
           "text": "두 학생의 말이 모두 옳다. $(-3)+(-2)=5$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "지우의 말만 옳다. $3-(-2)=3+2=5$이고, $(-3)+(-2)=-5$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M1",
           "no": 3,
           "text": "민서의 말만 옳다. $3-(-2)=1$이고, $(-3)+(-2)=5$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M1",
           "no": 4,
           "text": "두 학생의 말이 모두 틀리다. $3-(-2)=1$이고, $(-3)+(-2)=-5$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -408,6 +437,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "지우의 말은 옳다. 음수를 뺄 때는 그 음수의 부호를 바꾸어 더한다. 예를 들어 $3-(-2)=3+2=5$이다. 민서의 말은 틀리다. 음수 두 개를 더하면 음수가 되므로 $(-3)+(-2)=-5$이다.\n\n①과 ③은 음수 두 개를 더할 때 곱셈의 부호 규칙을 잘못 쓴 것이다. ③과 ④는 음수를 뺄 때 그 수의 부호를 바꾸지 않고 뺀 것이다. ⑤에서 음수 두 개를 더한 결과는 $-1$이 아니라 $-5$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:51:29.493321+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 학생의 말을 보고 각각 옳은지 판단하게 했다. 판단뿐 아니라 그 까닭으로 제시한 계산도 함께 살펴야 한다.",
@@ -435,30 +465,35 @@
       "body": "서준이가 다음과 같이 계산했다.\n\nㄱ. $(-4)-(-1)=(-4)+(-1)$\nㄴ. $(-4)+(-1)=5$\n\n서준이의 계산에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "ㄱ과 ㄴ 모두 옳지 않다. 바르게 계산한 답은 $-3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M1",
           "no": 2,
           "text": "ㄱ은 옳고 ㄴ은 옳지 않다. 바르게 계산한 답은 $-5$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M2",
           "no": 3,
           "text": "ㄱ은 옳지 않고 ㄴ은 옳다. ㄱ을 고치면 답은 $-3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M2",
           "no": 4,
           "text": "ㄱ과 ㄴ 모두 옳다. 답은 $5$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -469,6 +504,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "ㄱ에서는 음수 $-1$을 빼므로 $+1$을 더해야 한다. ㄴ에서는 음수끼리 더하므로 $(-4)+(-1)=-5$이다. 따라서 두 계산 모두 옳지 않다. 바르게 계산하면 $(-4)-(-1)=(-4)+(+1)=-3$이다.\n\n②와 ④는 음수를 뺄 때 부호를 바꾸어 더해야 한다는 것을 놓친 생각이다. ③과 ④는 음수끼리 더할 때 곱셈의 부호 규칙을 잘못 쓴 생각이다. ⑤는 고친 계산에서 서로 다른 부호의 두 수를 더하는 방법을 잘못 쓴 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:52:43.514866+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "서준이의 두 계산을 각각 살펴보고 옳고 그름을 판단하게 했다. 음수를 빼는 방법과 음수끼리 더하는 방법을 구별해야 한다.",
@@ -513,30 +549,35 @@
       "body": "$(-5)-(-3)$을 계산하는 방법으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "음수를 빼므로 $(-5)+(+3)$으로 바꾸어 계산하면 $-2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M1",
           "no": 2,
           "text": "음수를 빼는 것을 양수를 빼는 것으로 바꾸어 $(-5)-(+3)=-8$로 계산한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M2",
           "no": 3,
           "text": "$(-5)+(+3)$으로 바꾼 뒤, 덧셈에서 두 수의 부호가 다르면 음수이므로 $-8$로 계산한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(-5)+(+3)$으로 바꾼 뒤, $+8$로 계산한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -547,6 +588,7 @@
       "difficulty": "normal",
       "disabled_at": "2026-11-11T07:14:46.69117+00:00",
       "explanation": "음수를 빼는 것은 그 음수의 부호를 바꾼 수를 더하는 것과 같다. 따라서 $(-5)-(-3)=(-5)+(+3)=-2$이다. 2번은 음수를 빼는 것을 양수를 빼는 것으로 잘못 바꾸었다. 3번은 곱셈의 부호 규칙을 덧셈에 잘못 사용했다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:50:24.949015+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -574,30 +616,35 @@
       "body": "두 학생이 다음과 같이 계산했습니다.\n\n민지: $6-(-2)=6-2=4$\n준호: $(-6)+(-2)=8$\n\n두 학생의 계산에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "두 학생 모두 옳게 계산했다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M1",
           "no": 2,
           "text": "민지만 옳게 계산했다. 음수를 뺄 때는 그 수에서 마이너스 부호만 빼고 계산한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M2",
           "no": 3,
           "text": "준호만 옳게 계산했다. 음수끼리 더하면 양수가 된다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "두 학생 모두 잘못 계산했다. 음수를 빼는 것은 양수를 더하는 것과 같고, 음수끼리 더하면 음수가 된다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -608,6 +655,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "민지는 음수를 빼는 것을 양수를 빼는 것으로 잘못 생각했습니다. 음수를 빼는 것은 양수를 더하는 것과 같으므로 $6-(-2)=6+2=8$입니다. 준호는 음수끼리 더할 때 곱셈의 부호 규칙을 잘못 썼습니다. 두 음수를 더하면 음수가 되므로 $(-6)+(-2)=-8$입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:51:04.061685+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -642,30 +690,35 @@
       "body": "다음은 한 학생의 계산 과정이다. 처음으로 잘못된 단계와 그 까닭을 바르게 짝 지은 것은? 각 단계는 바로 앞의 식을 바꾸는 과정을 뜻한다.\n\n$-2^2\\div\\left(-\\frac{2}{3}\\right)$\n\n(가) $=-4\\div\\left(-\\frac{2}{3}\\right)$\n\n(나) $=-4\\times\\frac{2}{3}$\n\n(다) $=-\\frac{8}{3}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M3",
           "no": 1,
           "text": "(가), $-2^2$은 $4$이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "(가), $-2^2$은 $-2$이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "(나), $-\\frac{2}{3}$의 역수는 $-\\frac{3}{2}$이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "(나), $-\\frac{2}{3}$의 역수는 $\\frac{3}{2}$이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M4",
           "no": 5,
@@ -676,6 +729,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "(가)는 맞다. $-2^2$은 $-(2^2)$이므로 $-4$이다. (나)에서는 $-\\frac{2}{3}$의 역수인 $-\\frac{3}{2}$를 곱해야 한다. 따라서 처음으로 잘못된 단계는 (나)이다. ①처럼 $-2^2$을 $(-2)^2$과 같게 보면 안 된다. ⑤처럼 역수를 부호만 바꾼 수로 생각해도 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:53:38.029223+00:00",
       "hard_condition": "application-c",
       "hard_condition_reason": "여러 계산 단계에서 처음으로 잘못된 단계와 그 까닭을 함께 판단하게 했다.",
@@ -703,30 +757,35 @@
       "body": "다음 계산 결과가 $-\\frac{3}{2}$가 되도록 □에 들어갈 수를 고르시오.\n\n$(-3)^2\\div\\square=-\\frac{3}{2}$",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$-6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$-\\frac{27}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M4",
           "no": 4,
           "text": "$\\frac{27}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -737,6 +796,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$(-3)^2=9$이므로 $9$를 □에 들어갈 수로 나누면 $-\\frac{3}{2}$가 됩니다. 따라서 □에 들어갈 수는 $9\\div\\left(-\\frac{3}{2}\\right)=-6$입니다.\n\n④를 골랐다면 $-\\frac{3}{2}$의 역수를 $\\frac{3}{2}$로 잘못 생각했을 수 있습니다. $-\\frac{3}{2}$의 역수는 $-\\frac{2}{3}$입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:53:57.381162+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "나눗셈의 결과를 주고, 그 결과가 되도록 나누는 수를 거꾸로 찾게 했다.",
@@ -764,30 +824,35 @@
       "body": "$-3^2\\div(-2)$를 곱셈으로 바르게 고친 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$(-9)\\times\\left(-\\frac12\\right)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M3",
           "no": 2,
           "text": "$9\\times\\left(-\\frac12\\right)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M4",
           "no": 3,
           "text": "$(-9)\\times2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(-9)\\times\\frac12$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -798,6 +863,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$-3^2$은 $-(3\\times3)$이므로 $-9$이다. 또 $-2$로 나누는 것은 그 역수인 $-\\frac12$을 곱하는 것과 같다. 따라서 정답은 ①이다.\n②는 $-3^2$을 $(-3)^2$과 같게 생각한 것이다. ③은 $-2$의 역수를 부호만 바꾼 $2$로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:52:57.769587+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -825,30 +891,35 @@
       "body": "어떤 수에 $-\\frac{3}{2}$를 곱했더니 $\\frac{3}{4}$가 되었다. 어떤 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$-\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$-\\frac{9}{8}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M4",
           "no": 4,
           "text": "$\\frac{9}{8}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -859,6 +930,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "어떤 수는 $\\frac{3}{4}\\div\\left(-\\frac{3}{2}\\right)$로 구할 수 있다. $-\\frac{3}{2}$의 역수는 $-\\frac{2}{3}$이므로 $\\frac{3}{4}\\times\\left(-\\frac{2}{3}\\right)=-\\frac{1}{2}$이다. ④는 역수를 구할 때 부호만 바꾸어 $\\frac{3}{2}$로 잘못 생각한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:53:14.500287+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -889,6 +961,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "방법 1에서 왼쪽으로 $3$만큼 이동하여 $-2$에 도착하려면 $+1$에서 출발해야 합니다. 방법 2에서도 $-2$에서 오른쪽으로 $3$만큼 이동하면 $+1$에 도착합니다. 오른쪽으로 $3$만큼 이동하는 것은 왼쪽으로 $3$만큼 이동한 것을 되돌리는 이동이므로 두 방법으로 찾은 수는 같습니다.\n\n음수를 빼는 것을 왼쪽으로 이동하는 것으로 잘못 생각하면 $-5$를 얻을 수 있습니다. 하지만 $-5$에 뺀 수인 $-3$을 더하면 처음 수인 $-2$가 되지 않습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T07:22:38.928897+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "방법 1과 방법 2를 비교하여 같은 수를 찾는 이유를 수직선에서의 이동으로 설명하게 했다.",
@@ -947,6 +1020,7 @@
       "difficulty": "hard",
       "disabled_at": "2026-11-11T07:14:46.744635+00:00",
       "explanation": "$a-(-b)$를 구할 때는 결과에 $-b$를 더하면 $a$가 되어야 합니다. $-b$를 더하면 수직선에서 왼쪽으로 $b$만큼 움직입니다. 따라서 결과는 $a$에서 오른쪽으로 $b$만큼 떨어진 $a+b$입니다.\n\n음수를 뺄 때도 왼쪽으로 움직인다고 생각하여 $a-b$로 계산하면 안 됩니다. 예를 들어 $-1-(-2)$를 $-3$으로 계산하면, $-3$에 $-2$를 더한 값은 처음 수인 $-1$이 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:54:50.518882+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "특정한 수를 넣어 계산하는 대신, $a$가 유리수이고 $b$가 양의 유리수인 모든 경우에 같은 까닭을 설명하도록 했다.",
@@ -1001,6 +1075,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "방법 1에서는 빨간 카드 2장과 파란 카드 1장이 남으므로 $+1$을 나타냅니다. 방법 2에서는 빨간 카드 4장과 파란 카드 3장이 있으므로 $+1$을 나타냅니다.\n\n처음 카드의 장수가 달라도 방법 1을 쓴 뒤 빨간 카드 2장과 파란 카드 2장을 함께 넣으면 방법 2를 쓴 것과 같은 카드가 됩니다. 함께 넣은 카드는 전체가 나타내는 수를 바꾸지 않으므로 두 방법의 결과는 같습니다.\n\n파란 카드 2장을 꺼내는 것을 $2$를 빼는 것으로 생각하면 잘못입니다. 파란 카드 2장은 $-2$를 나타내므로, 이를 꺼내는 것은 $-2$를 빼는 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:56:05.636762+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "카드를 꺼내는 방법과 넣는 방법을 비교하여 결과가 같은 이유를 설명하게 했다. 처음 카드의 장수가 달라도 같은 이유가 성립함을 설명해야 한다.",
@@ -1073,6 +1148,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$3-(-2)$는 $-2$를 더하면 $3$이 되는 수이다. 수직선에서 $3$으로부터 왼쪽으로 $2$만큼 가는 것을 거꾸로 생각하면 오른쪽으로 $2$만큼 가야 한다. 따라서 $3-(-2)=3+2=5$이다. 음수의 부호를 무시하고 $3-2$로 계산하면 $1$이 되지만, $1$에 $-2$를 더하면 $3$이 되지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:54:12.289477+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1122,6 +1198,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$-1$점 카드 1장을 빼면 전체 점수가 1점 올라갑니다. 따라서 5장을 빼면 전체 점수가 5점 올라가므로, 5점을 더하는 것과 같습니다. 계산 결과는 $1$입니다.\n\n음수인 $-5$를 빼면서 그냥 5점을 뺀다고 생각하면 $-9$가 됩니다. 하지만 $-1$점 카드를 빼면 점수는 내려가는 것이 아니라 올라갑니다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:54:30.170647+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1168,30 +1245,35 @@
       "body": "다음은 계산을 간단히 하려는 과정이다.\n\n$(-3)\\times(4+5)+7+(-7)$\n\n① $=(-3)\\times(4+5)+(-7)+7$\n\n② $=(-3)\\times(4+5)+\\{(-7)+7\\}$\n\n③ $=(-3)\\times4+5+\\{(-7)+7\\}$\n\n④ $=-12+5+0$\n\n처음으로 잘못된 단계는? 잘못된 단계가 없으면 ⑤를 고르시오.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "①"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "②"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "③"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "④"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M5",
           "no": 5,
@@ -1202,6 +1284,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "①에서는 덧셈의 교환법칙을, ②에서는 덧셈의 결합법칙을 썼다. ③에서는 분배법칙을 잘못 썼다. 괄호 안의 $4$와 $5$ 모두에 $-3$을 곱해야 한다.\n\n⑤를 골랐다면 $4$에만 $-3$을 곱하고 $5$는 그대로 두어도 된다고 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:57:31.640221+00:00",
       "hard_condition": "application-c",
       "hard_condition_reason": "여러 계산 단계에서 처음으로 잘못된 단계를 찾게 한다. 각 단계에서 계산 법칙을 바르게 썼는지 살펴야 한다.",
@@ -1229,30 +1312,35 @@
       "body": "다음 계산의 결과가 $0$이 되도록 $\\square$ 안에 들어갈 수를 구하려고 한다. 분배법칙을 이용하여 계산할 때, 알맞은 수는?\n\n$\\left(-\\dfrac{3}{4}\\right)\\times(8+\\square)+\\left(-\\dfrac{3}{4}\\right)\\times 4$",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$-12$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$-4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M5",
           "no": 4,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1263,6 +1351,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "분배법칙을 이용하면 주어진 식은 $\\left(-\\dfrac{3}{4}\\right)\\times(8+\\square+4)$로 나타낼 수 있다. 계산 결과가 $0$이 되려면 $8+\\square+4=0$이어야 하므로 $\\square=-12$이다.\n\n④를 골랐다면 첫 번째 괄호 안의 $8$에만 $-\\dfrac{3}{4}$를 곱하고, $\\square$에는 곱하지 않았을 수 있다. 괄호 안의 두 수에 모두 $-\\dfrac{3}{4}$를 곱해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T07:22:55.277808+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "계산 결과를 $0$으로 주고, 그 결과가 되게 하는 네모 안의 수를 찾게 했다.",
@@ -1290,30 +1379,35 @@
       "body": "$(-4)\\times\\left(25+\\frac{1}{2}\\right)$을 분배법칙을 이용하여 계산하기 편하게 바꾼 것으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M5",
           "no": 1,
           "text": "$(-4)\\times25+\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$(-4)\\times25+(-4)\\times\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$(-4)\\times25-(-4)\\times\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4\\times25+(-4)\\times\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1324,6 +1418,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "분배법칙을 이용하면 괄호 안의 두 수 모두에 $-4$를 곱한다. 따라서 $(-4)\\times25+(-4)\\times\\frac{1}{2}$로 바꿀 수 있다. ①은 $25$에만 $-4$를 곱하고 $\\frac{1}{2}$에는 곱하지 않았다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:56:53.295009+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1367,30 +1462,35 @@
       "body": "민지는 $(-6)\\times0.7+(-6)\\times0.3$을 분배법칙을 이용하여 간단히 계산하려고 한다. 계산 과정이 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수01-05-M5",
           "no": 1,
           "text": "$(-6)\\times0.7+0.3=-3.9$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$(-6)\\times(0.7+0.3)=-6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$(-6)\\times(0.7-0.3)=-2.4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(-6-6)\\times(0.7+0.3)=-12$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1401,6 +1501,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(-6)$에 $0.7$과 $0.3$을 각각 곱하여 더한 것이므로, $(-6)\\times(0.7+0.3)$으로 바꿀 수 있다. 따라서 답은 $-6$이다. ①은 $0.3$에도 $(-6)$을 곱해야 하는데, 그대로 더한 잘못이다.",
+      "figure": null,
       "generated_at": "2026-11-11T06:57:12.106759+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
