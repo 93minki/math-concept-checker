@@ -354,3 +354,36 @@ def test_review_html_orders_questions_and_choices() -> None:
     )
     assert html.index("본문-q1") < html.index("본문-q2") < html.index("본문-q3")
     assert html.index("첫째") < html.index("둘째")
+
+
+def test_review_html_renders_escaped_figures() -> None:
+    figure = {
+        "kind": "boxplot",
+        "axis_min": 0,
+        "axis_max": 10,
+        "axis_step": 1,
+        "series": [
+            {"label": "<script>", "min": 1, "q1": 2, "median": 4, "q3": 7, "max": 9}
+        ],
+    }
+    question: Row = {
+        "id": "q",
+        "assessment_item_id": "a",
+        "difficulty": "normal",
+        "variant": 1,
+        "status": "validated",
+        "body": "문제",
+        "explanation": "",
+        "figure": figure,
+    }
+    choice: Row = {
+        "question_id": "q",
+        "no": 1,
+        "text": "선택",
+        "is_correct": True,
+        "figure": figure,
+    }
+    html = render_review([question], [choice], [], [], [], [])
+    assert html.count("<svg ") == 2
+    assert "&lt;script&gt;" in html
+    assert "<script>" not in html

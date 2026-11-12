@@ -54,7 +54,9 @@ def grade_items(
         answer = answers[item.id]
         if question.question_type == "multiple_choice":
             choices = repo.question_choices(question.id)
-            ai_choices = [Choice.model_validate(c.model_dump()) for c in choices]
+            ai_choices = [
+                Choice.model_validate(c.model_dump(by_alias=True)) for c in choices
+            ]
             if answer.selected_choice is None:
                 raise ValueError("Missing choice")
             score = score_choice(ai_choices, answer.selected_choice)

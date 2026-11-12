@@ -177,7 +177,7 @@ class SupabaseDiagnoses:
         return TypeAdapter(list[Question]).validate_python(
             self.client.table("questions")
             .select(
-                "id,assessment_item_id,variant,question_type,body,explanation,"
+                "id,assessment_item_id,variant,question_type,body,figure,explanation,"
                 "model_answer,hard_condition,hard_condition_reason,difficulty,status"
             )
             .in_("id", [str(question_id) for question_id in dict.fromkeys(ids)])
@@ -260,7 +260,7 @@ class SupabaseDiagnoses:
     def choices(self, question_id: UUID) -> list[Choice]:
         return TypeAdapter(list[Choice]).validate_python(
             self.client.table("question_choices")
-            .select("no,text")
+            .select("no,text,figure")
             .eq("question_id", str(question_id))
             .order("no")
             .execute()
@@ -303,7 +303,7 @@ class SupabaseDiagnoses:
     def question_choices(self, question_id: UUID) -> list[QuestionChoice]:
         response = (
             self.client.table("question_choices")
-            .select("no,text,is_correct,misconception_id")
+            .select("no,text,figure,is_correct,misconception_id")
             .eq("question_id", str(question_id))
             .order("no")
             .execute()

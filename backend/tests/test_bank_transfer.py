@@ -201,3 +201,36 @@ def test_later_conflict_prevents_pending_disable(tmp_path: Path) -> None:
     with pytest.raises(ValueError, match="충돌"):
         import_bank(target, path)
     assert target.writes == 0
+
+
+def test_figures_roundtrip_and_legacy_import(tmp_path: Path) -> None:
+    repo = source()
+    figure = {"kind": "boxplot", "series": []}
+    repo.tables["questions"][1]["figure"] = figure
+    repo.tables["question_choices"][0]["figure"] = figure
+    path = tmp_path / "figures.json"
+    export_bank(repo, path)
+    target = TransferBank()
+    import_bank(target, path)
+    restored = tmp_path / "restored.json"
+    export_bank(target, restored)
+    assert path.read_bytes() == restored.read_bytes()
+    data = json.loads(path.read_text(encoding="utf-8"))
+    for row in data["questions"]:
+        row.pop("figure", None)
+        for choice in row["choices"]:
+            choice.pop("figure", None)
+    path.write_text(json.dumps(data), encoding="utf-8")
+    legacy = TransferBank()
+    import_bank(legacy, path)
+    assert all(row["figure"] is None for row in legacy.tables["questions"])
+
+
+def test_existing_bank_files_import() -> None:
+    directory = Path(__file__).resolve().parents[1] / "data" / "bank"
+    paths = list(directory.glob("*.json"))
+    assert paths
+    for path in paths:
+        repo = TransferBank()
+        import_bank(repo, path)
+        assert import_bank(repo, path)[0] == 0

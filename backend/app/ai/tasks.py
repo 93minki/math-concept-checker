@@ -9,10 +9,11 @@ from pydantic import BaseModel
 
 from app.ai.hard import render_hard_conditions
 from app.ai.pricing import cost_usd
-from app.ai.prompts import Prompt, load_prompt
+from app.ai.prompts import PROMPT_VERSION, PROMPTS, Prompt, load_prompt
 from app.ai.providers.base import StructuredProvider, StructuredResult
 from app.ai.schemas import (
     AssessmentItem,
+    Choice,
     ConceptData,
     Grading,
     GradingDraft,
@@ -151,6 +152,24 @@ def _declared_hard_condition(question: Question) -> str:
     return "없음 (일반 문제)"
 
 
+def _figure_text(name: str, kinds: str = "") -> str:
+    path = PROMPTS / PROMPT_VERSION / f"{name}.md"
+    return path.read_text(encoding="utf-8").strip().replace("{kinds}", kinds)
+
+
+def _figure_instructions(item: AssessmentItem) -> str:
+    if item.figure == "none":
+        return ""
+    place = _figure_text(f"figure_{item.figure}", ", ".join(item.figure_kinds))
+    return f"{place}\n\n{_figure_text('figure_fields')}"
+
+
+def _figure_review_instructions(item: AssessmentItem) -> str:
+    if item.figure == "none":
+        return ""
+    return f"{_figure_text('figure_review')}\n\n{_figure_text('figure_fields')}"
+
+
 def _context(
     concept: ConceptData,
     item: AssessmentItem,
@@ -166,6 +185,8 @@ def _context(
     else:
         existing_variants = "없음"
     return {
+        "figure_instructions": _figure_instructions(item),
+        "figure_review_instructions": _figure_review_instructions(item),
         "standard_code": concept.standard_code,
         "standard_text": concept.standard_text,
         "grade": concept.display_unit.grade,
@@ -231,7 +252,11 @@ def generate_question(
             difficulty=difficulty,
             body=draft.body,
             explanation=draft.explanation,
-            choices=draft.choices,
+            figure=draft.figure,
+            choices=[
+                Choice.model_validate(c.model_dump(by_alias=True))
+                for c in draft.choices
+            ],
             model_answer=draft.model_answer,
             rubric=draft.rubric,
             # A normal question has no hard condition by definition; drop stray
@@ -252,7 +277,7 @@ def generate_question(
             "review_question",
             {
                 **context,
-                "question_json": question.model_dump_json(),
+                "question_json": question.model_dump_json(by_alias=True),
                 "declared_hard_condition": _declared_hard_condition(question),
             },
         )

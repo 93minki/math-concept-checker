@@ -52,7 +52,7 @@ def available_slots(
 def question_payload(
     question: Question, variant: int, model: str, attempts: list[Row]
 ) -> Row:
-    data = question.model_dump()
+    data = question.model_dump(by_alias=True)
     standard = question.assessment_item_id.split("-C", 1)[0]
     for choice in data["choices"]:
         if choice["misconception_id"]:

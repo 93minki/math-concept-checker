@@ -197,8 +197,11 @@ def get_diagnosis(diagnosis_id: UUID, user: User, repo: Repo) -> dict[str, objec
             "position": item.position,
             "question_type": question.question_type,
             "body": question.body,
+            "figure": question.figure.model_dump(by_alias=True)
+            if question.figure
+            else None,
             "choices": [
-                c.model_dump()
+                c.model_dump(by_alias=True)
                 for c in sorted(repo.choices(question.id), key=lambda c: c.no)
             ]
             if question.question_type == "multiple_choice"

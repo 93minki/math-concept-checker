@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MathText } from "@/components/math-text";
+import { ProblemText } from "@/components/problem-text";
+import { Figure } from "@/components/figure";
 import {
   ApiError,
   authRedirect,
@@ -329,10 +331,18 @@ export default function DiagnosisView({ id }: { id: string }) {
                 {index + 1} / {stageItems.length}
               </p>
               <div className="question">
-                <MathText text={item.body} />
+                <ProblemText text={item.body} />
+                {item.figure && <Figure figure={item.figure} />}
               </div>
               {item.question_type === "multiple_choice" && (
-                <fieldset className="stack" disabled={readonly || busy}>
+                <fieldset
+                  className={
+                    item.choices.some((choice) => choice.figure)
+                      ? "choice-grid"
+                      : "stack"
+                  }
+                  disabled={readonly || busy}
+                >
                   <legend>답을 골라요</legend>
                   {item.choices.map((choice) => (
                     <label key={choice.no} className="choice">
@@ -347,7 +357,10 @@ export default function DiagnosisView({ id }: { id: string }) {
                           update(item, { selected_choice: choice.no })
                         }
                       />
-                      <MathText text={`${choice.no}. ${choice.text}`} />
+                      <div className="choice-content">
+                        <MathText text={`${choice.no}. ${choice.text}`} />
+                        {choice.figure && <Figure figure={choice.figure} />}
+                      </div>
                     </label>
                   ))}
                 </fieldset>

@@ -5,6 +5,7 @@ from cryptography.hazmat.primitives.asymmetric import ec
 from fastapi.testclient import TestClient
 from test_auth import USER_ID, FakeProfiles, token
 
+from app.ai.schemas import Boxplot
 from app.diagnoses.repository import AnswerConflict, get_diagnoses
 from app.diagnoses.schemas import (
     Answer,
@@ -31,6 +32,15 @@ from app.profiles import Profile, get_profiles
 
 pytest_plugins = ["test_auth"]
 
+FIGURE = Boxplot.model_validate(
+    {
+        "kind": "boxplot",
+        "axis_min": 0,
+        "axis_max": 10,
+        "axis_step": 1,
+        "series": [{"label": "가", "min": 1, "q1": 2, "median": 3, "q3": 4, "max": 5}],
+    }
+)
 NOW = datetime.now(UTC)
 QUESTION = uuid4()
 EXTRA_QUESTION = uuid4()
@@ -99,6 +109,7 @@ class FakeDiagnoses:
                 variant=1,
                 question_type="written" if self.written else "multiple_choice",
                 body="문제",
+                figure=FIGURE,
                 difficulty="normal",
                 status="approved",
             ),
@@ -181,7 +192,7 @@ class FakeDiagnoses:
         ]
 
     def choices(self, question_id: UUID) -> list[Choice]:
-        return [Choice(no=2, text="나"), Choice(no=1, text="가")]
+        return [Choice(no=2, text="나"), Choice(no=1, text="가", figure=FIGURE)]
 
     def answers(self, user_id: UUID, item_ids: list[int]) -> list[AnswerRow]:
         return [a for i, a in self.answer_rows.items() if i in item_ids]
@@ -323,12 +334,18 @@ def test_api(client: tuple[TestClient, ec.EllipticCurvePrivateKey]) -> None:
     assert detail.status_code == 200
     item = detail.json()["items"][0]
     assert [c["no"] for c in item["choices"]] == [1, 2]
+    assert item["figure"]["kind"] == "boxplot"
+    assert item["choices"][0]["figure"]["kind"] == "boxplot"
+    assert all(
+        "is_correct" not in c and "misconception_id" not in c for c in item["choices"]
+    )
     assert set(item) == {
         "id",
         "stage",
         "position",
         "question_type",
         "body",
+        "figure",
         "choices",
         "answer",
     }

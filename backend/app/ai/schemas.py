@@ -2,7 +2,144 @@ import re
 from pathlib import Path
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
+
+FigureKind = Literal[
+    "number_line", "coordinate_plane", "bar_chart", "frequency", "boxplot", "scatter"
+]
+
+
+class FigureBase(BaseModel):
+    model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
+
+
+class NumberPoint(FigureBase):
+    x: float
+    label: str | None
+    filled: bool | None
+
+
+class Ray(FigureBase):
+    from_: float = Field(alias="from")
+    direction: Literal["left", "right"]
+    closed: bool
+
+
+class Segment(FigureBase):
+    from_: float = Field(alias="from")
+    to: float
+    from_closed: bool
+    to_closed: bool
+
+
+class NumberLine(FigureBase):
+    kind: Literal["number_line"]
+    min: float
+    max: float
+    tick_step: float
+    label_step: float
+    points: list[NumberPoint]
+    rays: list[Ray]
+    segments: list[Segment]
+
+
+class CoordinatePoint(FigureBase):
+    x: float
+    y: float
+    label: str | None
+
+
+class LinearGraph(FigureBase):
+    type: Literal["linear"]
+    m: float
+    b: float
+    label: str | None
+
+
+class VerticalGraph(FigureBase):
+    type: Literal["vertical"]
+    c: float
+    label: str | None
+
+
+class QuadraticGraph(FigureBase):
+    type: Literal["quadratic"]
+    a: float
+    p: float
+    q: float
+    label: str | None
+
+
+class CoordinatePlane(FigureBase):
+    kind: Literal["coordinate_plane"]
+    x_min: float
+    x_max: float
+    y_min: float
+    y_max: float
+    tick_step: float
+    show_tick_labels: bool
+    points: list[CoordinatePoint]
+    graphs: list[LinearGraph | VerticalGraph | QuadraticGraph]
+
+
+class BarChart(FigureBase):
+    kind: Literal["bar_chart"]
+    categories: list[str]
+    values: list[float]
+    y_max: float
+    y_step: float
+    x_label: str | None
+    y_label: str | None
+
+
+class Frequency(FigureBase):
+    kind: Literal["frequency"]
+    class_start: float
+    class_width: float
+    frequencies: list[StrictInt]
+    show_bars: bool
+    show_polygon: bool
+    y_step: float
+    x_label: str | None
+    y_label: str | None
+
+
+class BoxSeries(FigureBase):
+    label: str
+    min: float
+    q1: float
+    median: float
+    q3: float
+    max: float
+
+
+class Boxplot(FigureBase):
+    kind: Literal["boxplot"]
+    axis_min: float
+    axis_max: float
+    axis_step: float
+    series: list[BoxSeries]
+
+
+class ScatterPoint(FigureBase):
+    x: float
+    y: float
+
+
+class Scatter(FigureBase):
+    kind: Literal["scatter"]
+    x_min: float
+    x_max: float
+    x_step: float
+    y_min: float
+    y_max: float
+    y_step: float
+    x_label: str | None
+    y_label: str | None
+    points: list[ScatterPoint]
+
+
+Figure = NumberLine | CoordinatePlane | BarChart | Frequency | Boxplot | Scatter
 
 
 class Concept(BaseModel):
@@ -16,6 +153,8 @@ class AssessmentItem(BaseModel):
     level: str
     type: Literal["multiple_choice", "written"]
     basis: str
+    figure: Literal["none", "body", "choices"] = "none"
+    figure_kinds: list[FigureKind] = Field(default_factory=list)
 
 
 class Misconception(BaseModel):
@@ -63,6 +202,11 @@ class Choice(BaseModel):
     text: str
     is_correct: bool
     misconception_id: str | None
+    figure: Figure | None = None
+
+
+class DraftChoice(Choice):
+    figure: Figure | None = Field()
 
 
 class RubricElement(BaseModel):
@@ -81,6 +225,7 @@ class Question(BaseModel):
     difficulty: Literal["normal", "hard"]
     body: str
     explanation: str
+    figure: Figure | None = None
     choices: list[Choice]
     model_answer: str | None
     rubric: list[RubricElement]
@@ -91,7 +236,8 @@ class Question(BaseModel):
 class QuestionDraft(BaseModel):
     body: str
     explanation: str
-    choices: list[Choice]
+    figure: Figure | None
+    choices: list[DraftChoice]
     model_answer: str | None
     rubric: list[RubricElement]
     hard_condition: str | None
