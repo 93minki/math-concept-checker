@@ -12,5 +12,5 @@
 - net(전개도): shape("cylinder" 또는 "cone"), radius, height, slant, labels[{part, text}]. 원기둥은 height, 원뿔은 slant를 쓰고 나머지는 null입니다.
 - coordinate_plane 추가 필드: x_label, y_label, y_tick_step. graphs에는 {type:"polyline", points:[{x,y}], label}(2~12점), {type:"inverse", k, label}(k는 0이 아님)도 쓸 수 있습니다.
 - bar_chart 추가 필드 y_min은 세로축 시작값(null이면 0)입니다.
-- frequency 추가 필드: relative, compare_frequencies, series_labels. relative가 true이면 도수는 0~1이고 각 계열 합은 1±0.01입니다. compare_frequencies는 첫 계열과 같은 계급 수, series_labels는 두 계열 이름입니다.
+- frequency 추가 필드: relative, compare_frequencies, series_labels. relative가 true이면 도수는 0~1이고 각 계열 합은 1±0.01입니다. compare_frequencies는 첫 계열과 같은 계급 수, series_labels는 두 계열 이름입니다. 두 집단을 비교할 때(compare_frequencies를 쓸 때)는 show_bars를 false, show_polygon을 true로 둡니다 (두 도수분포다각형). 도수의 총합이 다른 두 집단은 relative를 true로 두고 상대도수를 씁니다.
 - solid와 net의 labels.part는 width, depth, height, radius, top_radius, slant 중 하나입니다.
