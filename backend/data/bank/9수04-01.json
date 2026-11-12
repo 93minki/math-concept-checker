@@ -8,30 +8,35 @@
       "body": "다음은 열 개의 자료이다.\n$9, 1, 3, 8, 5, 7, 2, 4, 10, x$\n\n이 자료의 중앙값이 $6$일 때, $x$가 될 수 있는 가장 작은 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 3,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -42,6 +47,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x$를 뺀 아홉 수를 작은 수부터 늘어놓으면 $1, 2, 3, 4, 5, 7, 8, 9, 10$이다.\n$x$가 $5$보다 작으면 가운데 두 수는 모두 $5$ 이하이다. $x$가 $5$ 이상 $7$ 미만이면 가운데 두 수는 $5$와 $x$이므로 중앙값은 $6$보다 작다.\n$x$가 $7$ 이상이면 가운데 두 수는 $5$와 $7$이므로 중앙값은 $6$이다. 따라서 $x$가 될 수 있는 가장 작은 수는 $7$이다.\n$x$가 $6$일 때 가운데 두 수는 $5$와 $6$이다. 이 중 큰 수만 중앙값으로 생각하면 $6$을 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:00:10.407417+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "중앙값을 먼저 주고, 그 중앙값을 만드는 수 중 가장 작은 수를 찾게 한다.",
@@ -69,30 +75,35 @@
       "body": "다음은 학생 $10$명이 지난달에 읽은 책의 수이다.\n$9, 1, 5, 11, 3, 7, 2, 12, 4, 10$\n\n이 자료에서 두 학생의 책 수를 빼고 남은 $8$개의 자료를 살펴보려고 한다. 남은 자료의 중앙값이 $7$이 되도록 빼야 하는 두 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 1,
           "text": "$1, 5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$1, 7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$1, 9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4, 10$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -103,6 +114,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "각 보기의 두 수를 뺀 뒤 남은 자료의 중앙값을 구하면 차례로 $8, 7, 6, 6, 4.5$이다. 따라서 정답은 ②이다.\n\n②의 두 수를 빼고 남은 자료를 크기순으로 나열하면 $2, 3, 4, 5, 9, 10, 11, 12$이다. 가운데 두 수가 $5$와 $9$이므로 중앙값은 $(5+9)\\div 2=7$이다.\n\n①의 두 수를 빼면 가운데 두 수는 $7$과 $9$이다. 이때 $7$만 중앙값으로 고르지 않고, 두 수의 평균인 $8$을 구해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:00:42.004042+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "남은 자료의 중앙값을 먼저 제시하고, 그 값이 되도록 뺄 두 수를 찾게 했다.",
@@ -130,30 +142,35 @@
       "body": "다음은 학생 8명이 읽은 책의 권수이다.\n$9$, $3$, $12$, $6$, $5$, $10$, $7$, $8$\n\n이 자료에서 $12$를 $20$으로 바꾸었다. 바꾼 자료의 중앙값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M1",
           "no": 1,
           "text": "$5.5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 3,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$7.5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 5,
@@ -164,6 +181,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "바꾼 자료를 크기순으로 놓으면 $3$, $5$, $6$, $7$, $8$, $9$, $10$, $20$이다. 가운데 두 값은 $7$과 $8$이므로 중앙값은 $(7+8)\\div 2=7.5$이다. $12$를 바꾸기 전에도 가운데 두 값은 같으므로 중앙값은 바뀌지 않는다.\n\n자료를 크기순으로 놓지 않고 주어진 순서의 가운데 두 값 $6$과 $5$를 이용하면 $5.5$를 고를 수 있다. 가운데 두 값 중 하나만 고르면 $7$ 또는 $8$을 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:59:29.511627+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -191,30 +209,35 @@
       "body": "화분 8개에 있는 식물의 키를 잰 값은 다음과 같다. 단위는 $\\mathrm{cm}$이다.\n\n$4$, $10$, $6$, $14$, $8$, $12$, $16$, $2$\n\n그 후 식물이 모두 각각 $3\\,\\mathrm{cm}$씩 자랐다. 자란 뒤 식물의 키의 중앙값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$10\\,\\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 2,
           "text": "$11\\,\\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$12\\,\\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 4,
           "text": "$13\\,\\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M1",
           "no": 5,
@@ -225,6 +248,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "자란 뒤 식물의 키를 작은 값부터 나열하면 $5$, $7$, $9$, $11$, $13$, $15$, $17$, $19$이다. 가운데 두 값은 $11$과 $13$이므로 중앙값은 $12$이다.\n\n$11$이나 $13$을 골랐다면 가운데 두 값 중 하나를 중앙값으로 생각한 것이다. $14$를 골랐다면 키를 크기순으로 나열하지 않고 주어진 순서에서 가운데 두 값의 평균을 구했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:59:43.858431+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -252,30 +276,35 @@
       "body": "다음은 학생 $8$명이 읽은 책의 수를 조사한 자료이다.\n\n$2, 9, 4, 8, 10, 3, 7, 5$\n\n이 자료의 중앙값을 구하는 방법과 그 결과가 모두 옳은 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M1",
           "no": 1,
           "text": "가람: 주어진 순서에서 가운데 두 값 $8$과 $10$의 평균을 구하면 중앙값은 $9$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 2,
           "text": "나래: 크기순으로 늘어놓은 뒤 가운데 두 값 중 작은 값인 $5$를 고르면 중앙값은 $5$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 3,
           "text": "다온: 크기순으로 늘어놓은 뒤 가운데 두 값 중 큰 값인 $7$을 고르면 중앙값은 $7$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "라온: 항상 가장 작은 값과 가장 큰 값의 평균이 중앙값이므로, 중앙값은 $6$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -286,6 +315,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "자료를 크기순으로 늘어놓으면 $2, 3, 4, 5, 7, 8, 9, 10$이다. 자료가 $8$개이므로 가운데 두 값 $5$와 $7$의 평균인 $6$이 중앙값이다. 따라서 정답은 ⑤이다.\n\n①은 자료를 크기순으로 늘어놓지 않고 주어진 순서의 가운데 두 값을 골랐다. ②와 ③은 가운데 두 값 중 하나만 골랐다. ④는 이 자료에서 우연히 맞는 값을 얻었지만, 가장 작은 값과 가장 큰 값의 평균이 항상 중앙값인 것은 아니다. 예를 들어 $1, 2, 3, 10$의 중앙값은 $2.5$이지만, 가장 작은 값과 가장 큰 값의 평균은 $5.5$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:02:17.252138+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 풀이에서 방법과 결과가 모두 옳은 것을 판단하게 했다. 특히 ④는 결과가 우연히 맞더라도 방법이 옳은지 살펴보아야 한다.",
@@ -313,30 +343,35 @@
       "body": "어느 날 열흘 동안 화분에 핀 꽃의 수를 날짜 순서대로 나타내면 다음과 같다.\n$12, 1, 9, 2, 4, 10, 13, 5, 11, 3$\n\n두 학생이 이 자료의 중앙값에 대해 말하였다.\n가: 주어진 순서에서 가운데 두 값 $4$와 $10$의 평균을 구하면 중앙값은 $7$이야.\n나: 크기 순으로 늘어놓으면 가운데 두 값은 $5$와 $9$야. 그중 하나인 $5$가 중앙값이야.\n\n두 학생의 말에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M1",
           "no": 1,
           "text": "가가 구한 값이 중앙값과 같으므로, 가의 방법은 어떤 자료에도 쓸 수 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "가는 크기 순으로 늘어놓지 않았으므로, 가가 구한 값은 이 자료의 중앙값과 다르다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "가가 구한 값은 이 자료의 중앙값과 우연히 같지만, 가의 방법이 다른 자료에도 늘 맞는 것은 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 4,
           "text": "나는 크기 순으로 늘어놓은 뒤 가운데 두 값 중 작은 값을 골랐으므로 맞다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 5,
@@ -347,6 +382,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "자료를 크기 순으로 늘어놓으면 $1, 2, 3, 4, 5, 9, 10, 11, 12, 13$이다. 가운데 두 값 $5$와 $9$의 평균은 $7$이므로 중앙값은 $7$이다.\n가가 구한 값은 이 자료의 중앙값과 우연히 같다. 하지만 주어진 순서의 가운데 두 값을 쓰는 방법은 다른 자료에도 늘 맞지는 않는다. 나처럼 크기 순으로 늘어놓았더라도 가운데 두 값 중 하나만 고르면 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:02:56.410837+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 학생의 말을 보고 각각의 방법을 판단하게 했다. 크기 순으로 늘어놓지 않은 방법도 우연히 맞을 수 있음을 생각해야 한다.",
@@ -374,30 +410,35 @@
       "body": "어느 날 학생 8명이 읽은 책의 쪽수를 조사하여 다음과 같이 적었다.\n\n$8, 2, 7, 4, 10, 3, 9, 6$\n\n이 자료의 중앙값을 구하는 방법과 그 값이 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M1",
           "no": 1,
           "text": "주어진 순서에서 가운데 두 값 $4$와 $10$의 평균을 구하면 $7$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 2,
           "text": "크기 순으로 늘어놓은 뒤 가운데 두 값 중 작은 값을 고르면 $6$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "크기 순으로 늘어놓은 뒤 가운데 두 값의 평균을 구하면 $6.5$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "크기 순으로 늘어놓은 뒤 가운데 두 값의 합을 구하면 $13$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -408,6 +449,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "자료를 크기 순으로 늘어놓으면 $2, 3, 4, 6, 7, 8, 9, 10$이다. 자료가 $8$개이므로 가운데 두 값인 $6$과 $7$의 평균인 $6.5$가 중앙값이다.\n1번은 자료를 크기 순으로 늘어놓지 않았다. 2번은 가운데 두 값 중 하나만 골랐다. 4번은 가운데 두 값의 합을 구했다. 5번은 평균을 잘못 계산했다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:00:57.960333+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -435,30 +477,35 @@
       "body": "화분 10개에 있는 식물의 키를 차례대로 조사한 결과는 다음과 같습니다. 단위는 $\\mathrm{cm}$입니다.\n\n$11, 17, 13, 19, 25, 9, 21, 15, 23, 27$\n\n이 자료의 중앙값을 구한 학생의 말로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M1",
           "no": 1,
           "text": "주어진 순서에서 가운데 두 수 $25$와 $9$의 평균을 구하면 $17$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 2,
           "text": "크기순으로 늘어놓은 뒤 가운데 두 수 중 작은 수를 고르면 $17$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M2",
           "no": 3,
           "text": "크기순으로 늘어놓은 뒤 가운데 두 수 중 큰 수를 고르면 $19$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "크기순으로 늘어놓은 뒤 가운데 두 수를 더하면 $36$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -469,6 +516,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "자료를 크기순으로 늘어놓으면 $9, 11, 13, 15, 17, 19, 21, 23, 25, 27$입니다. 자료가 10개이므로 가운데 두 수인 $17$과 $19$의 평균 $18$이 중앙값입니다.\n\n①은 자료를 크기순으로 늘어놓지 않고 주어진 순서에서 가운데 두 수를 골랐습니다. ②와 ③은 가운데 두 수 중 하나만 골랐습니다. ④는 가운데 두 수를 더한 뒤 $2$로 나누지 않았습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:01:53.778654+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -505,30 +553,35 @@
       "body": "다음은 학생 $10$명이 받은 연필의 수를 조사한 자료이다.\n$2, 5, 8, 2, 9, 5, 2, 8, 5, 9$\n\n이 자료의 최빈값을 모두 고른 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2, 5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M3",
           "no": 4,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M3",
           "no": 5,
@@ -539,6 +592,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$2$와 $5$는 각각 $3$번씩 나와 가장 많이 나왔다. 따라서 최빈값은 $2$와 $5$이다. $3$은 가장 많이 나온 횟수이지, 최빈값이 아니다. $9$는 자료에서 가장 큰 값이지만 가장 많이 나온 값은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:03:37.122172+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "가장 많이 나온 값이 두 개인 자료를 제시했다. 두 값의 횟수를 비교하고, 최빈값을 하나만 골라도 되는지 판단해야 한다.",
@@ -566,30 +620,35 @@
       "body": "학생 $10$명에게 가장 좋아하는 색을 한 가지씩 물었습니다. 결과는 다음과 같습니다.\n\n빨강: $3$명\n파랑: $3$명\n노랑: $2$명\n초록: $2$명\n\n다른 학생 한 명에게 같은 질문을 했더니 노랑이라고 답했습니다. 이 학생의 답까지 합친 자료의 최빈값을 모두 고른 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M3",
           "no": 1,
           "text": "$3$명"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "노랑"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "빨강, 파랑"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "빨강, 파랑, 노랑"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -600,6 +659,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "한 명의 답을 더하면 빨강, 파랑, 노랑을 답한 학생이 각각 $3$명이고, 초록을 답한 학생은 $2$명입니다. 가장 많이 나온 색은 빨강, 파랑, 노랑이므로 최빈값은 이 세 가지입니다. $3$명은 답한 학생의 수이지 최빈값인 색이 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:03:53.749664+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "한 명의 답을 더하면 세 가지 색이 같은 횟수로 가장 많이 나옵니다. 가장 많이 나온 색을 빠짐없이 찾아야 하는 사례입니다.",
@@ -627,30 +687,35 @@
       "body": "다음은 학생 $10$명이 지난주에 읽은 책의 수를 나타낸 자료이다.\n$1, 2, 2, 2, 2, 3, 5, 5, 7, 8$\n\n이 자료의 최빈값에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M3",
           "no": 1,
           "text": "가장 큰 수인 $8$이 최빈값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M3",
           "no": 2,
           "text": "가장 많이 나온 횟수인 $4$가 최빈값이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "가장 많이 나온 수인 $2$가 최빈값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "가운데 두 수의 평균인 $2.5$가 최빈값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -661,6 +726,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$2$가 $4$번 나와 가장 많이 나왔으므로 최빈값은 $2$이다. $4$는 $2$가 나온 횟수이고, $8$은 자료에서 가장 큰 수이다. 최빈값은 가장 많이 나온 횟수나 가장 큰 수가 아니라, 가장 많이 나온 값이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:03:09.700488+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -688,30 +754,35 @@
       "body": "주사위 한 개를 $10$번 던져 나온 눈의 수를 나타내었다.\n눈의 수 $1$: $2$번\n눈의 수 $2$: $1$번\n눈의 수 $3$: $1$번\n눈의 수 $4$: $3$번\n눈의 수 $5$: $1$번\n눈의 수 $6$: $2$번\n\n이 자료의 최빈값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M3",
           "no": 2,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-01-M3",
           "no": 5,
@@ -722,6 +793,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "가장 많이 나온 눈의 수는 $4$이므로 최빈값은 $4$이다. $3$은 $4$가 나온 횟수이지 최빈값이 아니다. $6$은 나온 눈의 수 중 가장 크지만, 가장 많이 나오지는 않았다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:03:23.452378+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -752,6 +824,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "평균은 $10$개이고 중앙값은 $6$개이다. 여덟 학급의 상자 수는 $4$개부터 $8$개까지이므로, 이 범위를 나타내기에는 중앙값이 더 알맞다. 평균은 $42$개의 영향을 받아 이 범위에서 벗어난다.\n\n하지만 모은 상자를 아홉 학급에 똑같이 나눌 때 학급당 상자 수를 알아보는 목적이라면 평균이 알맞다. 모두 $90$개이므로 학급당 $10$개씩 나눌 수 있다. 따라서 중앙값이 어떤 목적에나 더 알맞은 것은 아니다. 큰 수가 있어도 평균이 언제나 자료를 가장 잘 나타낸다고 생각하는 것도 잘못이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:06:00.317508+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "2번에서 같은 자료를 이용해 평균이 더 알맞은 목적을 들고, 어떤 목적에나 중앙값이 더 알맞다는 말을 반박하게 한다.",
@@ -813,6 +886,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$\\square$에 어떤 수가 들어가더라도 가운데 두 수는 $5$와 $6$이므로 중앙값은 $5.5$분이다. 빈칸을 뺀 아홉 수의 합은 $48$이다. 빈칸에 들어가는 수가 적어도 $42$이므로 평균은 적어도 $(48+42)\\div 10=9$분이다. 아홉 명의 기다린 시간은 $3$분부터 $8$분까지이므로, 많은 손님의 기다린 시간을 나타내기에는 중앙값이 더 알맞다. 평균이 언제나 자료를 가장 잘 나타낸다고 생각하면 큰 수 하나가 평균에 미치는 영향을 놓칠 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:06:28.756559+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "빈칸에 들어갈 수 있는 모든 수에 대하여 대푯값을 선택한 이유를 설명하도록 했다.",
@@ -869,6 +943,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "중앙값은 가운데에 있는 $10$분이다. $9$명 중 $8$명의 시간은 $8$분부터 $12$분까지인데, 한 학생의 시간은 $55$분이다. 이 큰 값 때문에 평균은 $15$분이 된다. 따라서 보통 걸리는 시간을 나타내기에는 중앙값이 더 알맞다. 평균이 언제나 자료를 가장 잘 나타낸다고 생각하면, 큰 값이 평균에 미치는 영향을 놓칠 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:04:59.749501+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -930,6 +1005,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "자료를 크기순으로 놓으면 가운데 두 값이 모두 $6$이므로 중앙값은 $6$이다. 평균은 $10$인데, 다른 날보다 훨씬 많이 팔린 $48$권의 영향을 받아 커졌다. 또 최빈값은 $4, 5, 6, 7$로 여러 개여서 하나의 수로 나타내기 어렵다. 따라서 보통 팔리는 공책 수를 하나의 수로 나타내기에는 중앙값이 알맞다. 평균이 언제나 가장 알맞다고 생각하면 $48$권이 평균에 미치는 영향을 놓칠 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:05:26.272811+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

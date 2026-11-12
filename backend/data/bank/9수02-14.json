@@ -106,30 +106,35 @@
       "body": "다음 표와 규칙을 보고 학생들이 각각 말하였다. 옳게 말한 학생은 누구인가?\n\n표: $x$의 값이 $1$, $2$, $3$일 때 $y$의 값은 차례로 $4$, $4$, $7$이다.\n\n규칙: $x$는 $1$, $2$, $3$ 중 하나이고, $y$는 $x$의 약수이다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M1",
           "no": 1,
           "text": "지우: 표에서 $y$는 $x$의 함수가 아니야. 서로 다른 $x$에서 $y$의 값이 같기 때문이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 2,
           "text": "민수: 규칙에서 $y$는 $x$의 함수야. $y$의 값을 정하는 규칙이 있기 때문이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M3",
           "no": 3,
           "text": "서연: 표에서 $y$는 $x$의 함수가 아니야. 식이 주어지지 않았기 때문이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "준호: 규칙에서 $y$는 $x$의 함수야. $x=1$일 때 $y$가 하나이기 때문이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -140,6 +145,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "표에서는 $x$의 값 하나에 $y$의 값이 하나씩 정해지므로 $y$는 $x$의 함수이다. 서로 다른 $x$에서 $y$의 값이 같아도 괜찮다. 또 식이 주어지지 않아도 함수인지 판단할 수 있다.\n\n규칙에서는 $x=2$일 때 $y$가 $1$과 $2$로 여러 개이므로 $y$는 $x$의 함수가 아니다. 값을 정하는 규칙이 있다는 사실이나 $x=1$일 때 $y$가 하나라는 사실만으로는 함수라고 할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:45:37.053247+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "표와 규칙에 대한 다섯 학생의 주장을 비교하여 옳게 말한 학생을 고르게 하였다.",
@@ -167,30 +173,35 @@
       "body": "도서관에서 4월 4일, 5일, 6일에 빌려준 책을 조사하였다.\n\n- 4일에는 30쪽인 책 두 권을 빌려주었다.\n- 5일에는 20쪽인 책 한 권과 50쪽인 책 한 권을 빌려주었다.\n- 6일에는 40쪽인 책 한 권을 빌려주었다.\n\n날짜의 일 부분을 $x$로 나타낸다. 즉, $x$는 $4$, $5$, $6$ 중 하나이다. 다음 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M1",
           "no": 1,
           "text": "4일과 5일에 빌려준 책의 권수가 같으므로, 책의 권수는 $x$의 함수가 아니야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 2,
           "text": "각 날짜에 빌려준 책의 쪽수를 찾는 규칙이 있으므로, 책의 쪽수는 $x$의 함수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M3",
           "no": 3,
           "text": "날짜마다 빌려준 책의 권수가 글로만 주어지고 식으로 나타나 있지 않으므로, 책의 권수는 $x$의 함수가 아니야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "각 날짜에 빌려준 책의 권수가 하나씩 정해지므로, 책의 권수는 $x$의 함수야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -201,6 +212,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x$가 $4$, $5$, $6$일 때 빌려준 책의 권수는 각각 $2$, $2$, $1$이다. 각 $x$의 값에 책의 권수가 하나씩 정해지므로 책의 권수는 $x$의 함수이다. 서로 다른 날짜의 책의 권수가 같아도 된다.\n\n①은 서로 다른 $x$의 값에 같은 값이 정해지면 함수가 아니라고 잘못 생각했다. ②는 책의 쪽수를 찾는 규칙이 있으므로 함수라고 생각했지만, 5일에는 책의 쪽수가 $20$과 $50$으로 두 가지이다. ③은 식으로 나타내지 않으면 함수가 아니라고 잘못 생각했다. ⑤는 6일만 확인했다. 5일에는 책의 쪽수가 두 가지이므로 책의 쪽수는 $x$의 함수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:46:10.20616+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "같은 도서관 기록을 보고 학생들이 책의 권수와 쪽수에 대해 한 말을 판단하게 한다. 각 날짜를 살펴보고 함수가 되는 까닭을 구별해야 한다.",
@@ -228,30 +240,35 @@
       "body": "다음 A와 B에서 $y$가 $x$의 함수인지 판단한 설명으로 옳은 것은?\n\nA: $x$와 $y$의 값이 다음 표와 같다.\n\n| $x$ | 1 | 2 | 3 |\n|---|---|---|---|\n| $y$ | 4 | 4 | 5 |\n\nB: $x$는 2, 3, 4 중 하나이고, $y$는 $x$의 약수이다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M1",
           "no": 1,
           "text": "A는 서로 다른 $x$의 값에 같은 $y$의 값이 있으므로 함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 2,
           "text": "B는 $y$가 $x$의 약수라는 규칙이 있으므로 함수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M3",
           "no": 3,
           "text": "A는 식이 아닌 표로 주어졌으므로 함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "A는 $x$의 값 하나마다 $y$의 값이 하나씩 정해지므로 함수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -262,6 +279,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "정답은 4번이다. A에서는 $x$의 값 하나마다 $y$의 값이 하나씩 정해진다. 서로 다른 $x$의 값에 같은 $y$의 값이 정해져도 함수이므로 1번은 틀리다. B에서는 $x=2$일 때 $y$가 1과 2로 여러 개이므로, 약수라는 규칙이 있어도 함수가 아니다. 따라서 2번은 틀리다. 식이 아닌 표로 주어져도 함수일 수 있으므로 3번도 틀리다. A에서 $x=2$일 때 $y=4$이므로 5번은 틀리다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:44:01.677172+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -289,30 +307,35 @@
       "body": "다음 표는 $x$와 $y$의 값을 나타낸다.\n\n| $x$ | $1$ | $2$ | $3$ |\n|---|---|---|---|\n| $y$ | $8$ | $6$ | $9$ |\n\n각 보기에서 $x$는 $1$, $2$, $3$ 중 하나이다. $y$가 $x$의 함수인지 판단한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M1",
           "no": 1,
           "text": "$y$가 항상 $7$이면, 서로 다른 $x$의 값에 같은 $y$의 값이 짝 지어지므로 함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 2,
           "text": "$x$의 값마다 $y$의 값으로 $x$와 $x+1$이 모두 짝 지어지면, 규칙이 있으므로 함수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M3",
           "no": 3,
           "text": "표와 같이 $x$와 $y$의 값이 짝 지어지면, 식이 주어지지 않았으므로 함수가 아니다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$y=x+4$이면, $x$의 값 하나마다 $y$의 값이 하나씩 정해지므로 함수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -323,6 +346,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "④에서는 $x$의 값 하나마다 $y$의 값이 하나씩 정해지므로 함수이다.\n\n①에서는 서로 다른 $x$의 값에 같은 $y$의 값이 짝 지어져도 함수가 될 수 있다. ②에서는 규칙이 있어도 $x$의 값 하나에 $y$의 값이 두 개씩 짝 지어지므로 함수가 아니다. ③에서는 식이 없어도 표에서 $x$의 값 하나마다 $y$의 값이 하나씩 정해지므로 함수이다. ⑤에서는 $x$와 $y$의 값이 달라도 함수가 될 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:45:17.894668+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -361,6 +385,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "(가)에서는 각 $x$의 값에 $y$의 값이 하나씩만 있으므로 함수이다. 서로 다른 $x$의 값 $1$, $2$에 같은 $y$의 값 $2$가 있어도 함수가 될 수 있다. 따라서 민수의 말은 옳지 않다.\n\n(나)에서는 $x$의 값이 $2$일 때 $y$의 값이 $1$, $3$으로 두 개이므로 함수가 아니다. 하나의 $x$에 여러 $y$의 값이 있으면 표로 나타낼 수 있어도 함수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:47:09.282543+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민수의 말이 옳지 않다면 표를 예로 들어 설명하도록 하였다. (가)에서 서로 다른 두 $x$에 같은 $y$가 있지만 함수임을 보여 주어야 한다.",
@@ -419,6 +444,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x$가 $2$일 때 가능한 $y$의 값은 $2$ 하나이다. 하지만 $x$가 $6$일 때 가능한 $y$의 값은 $2$, $3$, $6$이다. 한 $x$의 값에 가능한 $y$의 값이 여러 개이므로 $y$는 $x$의 함수가 아니다. $y$를 구하는 규칙이 있더라도 한 $x$의 값에 가능한 $y$의 값이 여러 개이면 함수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:47:30.632569+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "지우의 말이 옳지 않음을 보이기 위해 한 $x$의 값에 가능한 $y$의 값이 여러 개인 예를 직접 골라 설명해야 한다.",
@@ -475,6 +501,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x=6$이면 $y$는 $1$, $2$, $3$, $6$이 될 수 있다. 이처럼 하나의 $x$의 값에 대해 $y$의 값이 여러 개일 수 있으므로 $y$는 $x$의 함수가 아니다. 약수를 구하는 규칙이 있다는 것만으로 함수가 되는 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:46:25.65687+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -524,6 +551,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$가 $10$, $20$, $30$일 때 $y$는 각각 $2$, $2$, $3$으로 하나씩 정해지므로 $y$는 $x$의 함수이다. 서로 다른 $x$의 값에 같은 $y$의 값이 정해져도 함수일 수 있다. 식이 아닌 표로 나타내어도 함수인지 판단할 수 있다. 반대로 $x$의 값 하나에 $y$의 값이 여러 개 정해진다면 규칙이 있어도 함수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:46:43.012161+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -572,30 +600,35 @@
       "body": "$x$와 $y$는 각각 $1$, $2$, $3$ 중의 수이다. 각 보기에서 설명한 수끼리만 짝을 짓는다. $y$가 $x$의 함수인 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$y$는 $x$보다 큰 수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 2,
           "text": "$y$는 $x$의 약수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x$와 $y$의 합은 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$x$가 $1$, $2$, $3$일 때 $y$는 차례로 $2$, $2$, $1$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 5,
@@ -606,6 +639,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "정답은 ④이다. $x$의 값이 $1$, $2$, $3$일 때마다 $y$의 값이 하나씩 정해진다. 서로 다른 $x$의 값에 같은 $y$의 값이 짝지어져도 함수이다.\n①은 $x=1$일 때 $y$가 $2$, $3$으로 두 개이고, $x=3$일 때는 짝지을 $y$가 없다.\n②는 $x=2$일 때 $y$가 $1$, $2$로 두 개이다. 약수를 찾는 규칙이 있어도 한 $x$에 여러 $y$가 짝지어지면 함수가 아니다.\n③은 $x=2$일 때 짝지을 $y$가 없다.\n⑤는 $x=2$일 때 $y$가 $1$, $2$로 두 개이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:08.880914+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "한 x에 짝지어지는 y가 없는 경우와 여러 개인 경우를 함께 넣었다. 서로 다른 x에 같은 y가 짝지어지는 경우도 함수인지 판단해야 한다.",
@@ -633,30 +667,35 @@
       "body": "$x$는 $0$, $2$, $4$, $6$ 중 하나이다. 각 보기에서 짝을 지은 수만 생각한다. $(x, y)$는 $x$와 $y$를 순서대로 짝 지어 나타낸 것이다. $y$가 $x$의 함수인 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$(0, 10)$, $(2, 20)$, $(2, 30)$, $(4, 40)$, $(6, 50)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 2,
           "text": "$y=x$ 또는 $y=x+10$을 만족하는 모든 $x$와 $y$를 짝 짓는다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$(0, 10)$, $(2, 20)$, $(4, 20)$, $(6, 30)$, $(6, 30)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$(0, 10)$, $(2, 20)$, $(4, 30)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -667,6 +706,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "③에서는 같은 짝이 두 번 적혀 있어도 각 $x$의 값에 짝 지은 $y$의 값은 하나뿐이다. 서로 다른 $x$의 값에 같은 $y$의 값이 짝 지어져도 함수이다. ①에서는 $x=2$에 짝 지은 $y$가 두 개이다. ②에서는 일정한 규칙이 있지만 각 $x$의 값에 짝 지은 $y$가 두 개이다. 규칙이 있다고 해서 모두 함수인 것은 아니다. ④에서는 $x=6$에 짝 지은 $y$가 없다. ⑤에서는 $x=0$에 짝 지은 $y$가 두 개이고 $x=6$에 짝 지은 $y$가 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:35.586023+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "③에는 같은 짝이 두 번 적혀 있고, ④에는 짝 지은 $y$가 없는 $x$가 있다. 각 $x$의 값에 짝 지은 $y$가 오직 하나인지 살펴야 한다.",
@@ -694,30 +734,35 @@
       "body": "다음 중 $y$가 $x$의 함수인 것은? 각 보기에서 $x$의 값은 $1$, $2$, $3$ 중 하나이다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 1,
           "text": "$y$는 $x$의 약수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$y$는 $x-1$ 또는 $x+1$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "| $x$ | $1$ | $2$ | $3$ |\n|---|---|---|---|\n| $y$ | $4$ | $4$ | $5$ |"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "| $x$ | $1$ | $2$ | $2$ | $3$ |\n|---|---|---|---|---|\n| $y$ | $2$ | $3$ | $4$ | $5$ |"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -728,6 +773,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$y$가 $x$의 함수이려면 $x$의 값 하나마다 $y$의 값이 오직 하나씩 정해져야 한다.\n③은 각 $x$의 값마다 $y$의 값이 하나씩 정해지므로 함수이다. 서로 다른 $x$의 값에서 $y$의 값이 같아도 함수일 수 있다. 또 식이 없어도 표에서 함수인지 알 수 있다.\n①은 규칙이 있지만 $x=2$일 때 $y$가 $1$ 또는 $2$이므로 함수가 아니다. ②와 ⑤도 하나의 $x$의 값에 $y$의 값이 두 개씩 정해진다. ④는 $x=2$일 때 $y$가 $3$ 또는 $4$이므로 함수가 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:20.042077+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -755,30 +801,35 @@
       "body": "다음 중 $y$가 $x$의 함수인 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 1,
           "text": "자연수 $x$의 약수를 $y$로 한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M2",
           "no": 2,
           "text": "자연수 $x$보다 작은 자연수를 $y$로 한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x$와 $y$의 값을 다음 표와 같이 정한다.\n\n| $x$ | $7$ | $7$ | $8$ |\n|---|---|---|---|\n| $y$ | $2$ | $3$ | $4$ |"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "매일 가게에 온 손님의 수를 $x$, 그날 가게가 문을 닫은 시각을 오후 $y$시라 하자. 이 가게는 손님의 수와 관계없이 매일 오후 $6$시에 문을 닫는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -789,6 +840,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "정답은 ④이다. 손님의 수 $x$가 얼마이든 $y$는 $6$으로 하나만 정해진다. 서로 다른 $x$의 값에 같은 $y$의 값이 정해져도 함수이다.\n①에서는 $x=6$일 때 $y$가 $1$, $2$, $3$, $6$이 될 수 있다. 규칙이 있더라도 하나의 $x$에 여러 $y$가 정해지면 함수가 아니다. ②에서도 $x=3$일 때 $y$가 $1$ 또는 $2$가 될 수 있다. ③에서는 $x=7$일 때, ⑤에서는 $x=14$일 때 $y$가 두 개이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:46.832963+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -816,30 +868,35 @@
       "body": "함수 $f(x)=ax+2$에 대하여 $f(3)=8$일 때, $f(a)$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M4",
           "no": 1,
           "text": "$0$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -850,6 +907,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$f(3)=8$이므로 $3a+2=8$이다. 따라서 $a=2$이고, $f(a)=f(2)=2\\times 2+2=6$이다.\n①은 $f(a)$를 구할 때 $x$에 $a$를 넣지 않고, $f(x)=a$가 되는 $x$의 값을 구한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:02.545189+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "함숫값 $f(3)=8$을 이용해 거꾸로 $a$의 값을 구한 뒤, 그 값을 다시 $f(a)$에 넣어야 한다.",
@@ -877,30 +935,35 @@
       "body": "한 사람이 일정한 빠르기로 곧은 길을 걷고 있다. 정오를 기준으로 $x$분 뒤의 위치를 $f(x)$라 하자. $x$가 음수이면 정오보다 그만큼 이른 때를 뜻한다. 위치는 $1$분마다 $3$씩 커진다. 정오 $2$분 뒤의 위치가 $4$일 때, $f(-1)$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$-5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$-1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M4",
           "no": 3,
           "text": "$\\frac{1}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -911,6 +974,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "위치가 $1$분마다 $3$씩 커지므로 $f(x)=3x+b$로 나타낼 수 있다. $f(2)=4$이므로 $6+b=4$에서 $b=-2$이다. 따라서 $f(-1)=3\\times(-1)-2=-5$이다.\n③은 $f(x)=-1$이 되는 $x$의 값을 구한 것이다. $f(-1)$은 $x$가 $-1$일 때의 함숫값이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:31.685143+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "위치가 변하는 상황을 $f(x)=3x+b$로 나타낸 뒤, 주어진 함숫값으로 $b$를 구하고 $f(-1)$을 구한다.",
@@ -938,30 +1002,35 @@
       "body": "함수 $f(x)=3x+2$에서 $f(5)$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M4",
           "no": 1,
           "text": "$1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$15$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$17$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -972,6 +1041,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$에 $5$를 넣으면 $f(5)=3\\times 5+2=17$이다. ①을 골랐다면 $f(5)$를 구하는 대신, 함숫값이 $5$가 되는 $x$의 값을 구한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:47:39.744184+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -999,30 +1069,35 @@
       "body": "함수 $f(x)=2x-4$에서 $f(-2)$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$-8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$-4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$0$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M4",
           "no": 4,
           "text": "$1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1033,6 +1108,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$f(-2)$는 식의 $x$ 자리에 $-2$를 넣어 구하므로 $f(-2)=2\\times(-2)-4=-8$이다. ④는 $f(-2)$를 구하는 대신 식의 값이 $-2$가 되는 $x$의 값을 구한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:47:49.245538+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1060,30 +1136,35 @@
       "body": "함수 $f(x)=2x+3$에 대하여 민수는 다음과 같이 말했습니다.\n\n“$2\\times 2+3=7$이므로 $f(7)=2$야.”\n\n민수의 말을 보고 판단한 내용으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M4",
           "no": 1,
           "text": "민수가 구한 2는 $f(7)$의 값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "민수가 구한 2는 $f(2)$의 값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$f(7)$은 $7+3$의 값이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "민수가 구한 2는 함숫값이 7일 때의 $x$의 값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1094,6 +1175,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$f(7)$은 $x$에 7을 넣은 값이므로 $f(7)=2\\times 7+3=17$입니다. 민수가 구한 2는 함숫값이 7이 되게 하는 $x$의 값입니다. ①은 $f(7)$을 구할 때 7을 $x$에 넣는 대신, 함숫값이 7이 되는 $x$를 구한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:58.499625+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수가 $f(7)$을 구한 말을 제시하고, 그에 대한 판단 중 옳은 것을 고르게 했다.",
@@ -1131,30 +1213,35 @@
       "body": "함수 $y=f(x)$에 대하여 $x$의 값과 $y$의 값을 표로 나타냈습니다.\n\n| $x$ | $1$ | $2$ | $3$ | $4$ | $5$ |\n|---|---|---|---|---|---|\n| $y$ | $4$ | $1$ | $5$ | $3$ | $2$ |\n\n지우는 “$f(4)$를 구하려면 아랫줄에서 $4$를 먼저 찾아야 해.”라고 말했습니다. 지우의 말을 들은 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M4",
           "no": 1,
           "text": "지우의 말이 맞아. $y$가 $4$일 때의 $x$의 값을 읽으면 되므로 $f(4)=1$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "지우의 말이 틀려. $x$가 $4$일 때의 $y$의 값을 읽으면 되므로 $f(4)=3$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "지우의 말이 틀려. 괄호 안의 수가 함숫값이므로 $f(4)=4$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "지우의 말이 틀려. 아랫줄에서 가장 큰 수가 함숫값이므로 $f(4)=5$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1165,6 +1252,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$f(4)$는 $x$가 $4$일 때의 $y$의 값입니다. 윗줄의 $4$에 놓인 아랫줄의 수는 $3$이므로 $f(4)=3$입니다. ①처럼 아랫줄에서 $4$를 먼저 찾으면 $y$가 $4$일 때의 $x$의 값을 구하게 됩니다. 이것은 $f(4)$가 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:42:22.279912+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "표를 보고 $f(4)$를 구하는 지우의 방법을 제시하고, 그 방법에 대한 학생들의 말이 옳은지 판단하게 합니다.",
@@ -1200,30 +1288,35 @@
       "body": "함수 $y=f(x)=2x+1$에 대하여 $f(5)$를 바르게 설명한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$x$가 $5$일 때의 $y$의 값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M4",
           "no": 2,
           "text": "$y$가 $5$일 때의 $x$의 값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x$가 $5$일 때의 $y$의 값에 $1$을 더한 값이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x$가 $5$일 때의 $y$의 값의 $2$배이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1234,6 +1327,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$f(5)$는 $x$가 $5$일 때의 함숫값이므로 $2\\times 5+1=11$이다. ②는 함숫값이 $5$일 때의 $x$의 값을 구한 것으로, $f(5)$의 뜻을 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:44.974402+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1261,30 +1355,35 @@
       "body": "함수 $y=f(x)=4x-3$에 대하여 지우가 다음과 같이 말했습니다.\n\n“$f(3)=9$이므로 $f(9)=3$이야.”\n\n지우의 말을 듣고 옳게 말한 학생은 누구인가요?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-14-M4",
           "no": 1,
           "text": "민서: $f(3)=9$이므로 지우의 말이 맞아."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "서준: $x$ 자리에 $9$를 넣어야 하므로 $f(9)=33$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "하린: $9$에 $4$만 곱하면 되므로 $f(9)=36$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "도윤: $9$에 $4$를 곱하고 $3$을 더하므로 $f(9)=39$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1295,6 +1394,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$f(9)$는 $x$ 자리에 $9$를 넣어 구하므로 $f(9)=4\\times9-3=33$입니다. 지우처럼 $f(3)=9$를 보고 $f(9)=3$이라고 하면, $x$ 자리에 넣는 수와 그때의 함숫값을 거꾸로 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:05.03094+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

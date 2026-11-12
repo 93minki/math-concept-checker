@@ -2,36 +2,209 @@
   "backlog": [],
   "questions": [
     {
+      "approved_at": "2026-11-12T03:00:16.161476+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C1-성질적용",
+      "body": "그림에서 두 직선 $AB$와 $CD$는 평행합니다. 세 점 $P$, $Q$, $F$는 한 직선 위에 있고, $Q$는 $P$와 $F$ 사이에 있습니다.\n\n$\\angle APQ$의 크기는 $\\angle CQF$의 크기의 2배보다 $50^\\circ$ 작습니다. $\\angle CQF$의 크기는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$25^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$50^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$60^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M2",
+          "no": 4,
+          "text": "$\\frac{230}{3}^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$100^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-12T02:58:50.05394+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle APQ$와 $\\angle CQF$는 평행선에서 생기는 동위각이므로 크기가 같습니다. $\\angle CQF=x^\\circ$라 하면 $\\angle APQ=(2x-50)^\\circ$입니다. 따라서 $2x-50=x$이므로 $x=50$입니다.\n\n동위각의 크기의 합이 $180^\\circ$라고 잘못 생각하면 $(2x-50)+x=180$으로 계산하여 $\\frac{230}{3}^\\circ$를 고를 수 있습니다. 평행선에서 동위각의 크기는 서로 같습니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "Q",
+            "vertex": "P"
+          },
+          {
+            "from": "C",
+            "label": "x",
+            "marks": 0,
+            "right": false,
+            "to": "F",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "Q",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -2.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 1.678199,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -2.5,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 2.5,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "F",
+            "show_name": true,
+            "x": -1.678199,
+            "y": -2.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T02:58:49.525228+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 각의 크기에 관한 문장을 식으로 나타내고, 동위각의 크기가 같다는 성질을 적용하여 각의 크기를 구해야 한다.",
+      "id": "28364982-b86a-4743-8b8c-1df238e27573",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T02:58:49.525080+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:15.311119+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-02-C1-성질적용",
       "body": "서로 평행한 세 직선 $l$, $m$, $k$가 직선 $n$과 각각 점 $P$, $Q$, $R$에서 만난다. 직선 $n$을 세로로 놓으면 세 점은 위에서부터 $P$, $Q$, $R$의 순서이다.\n\n점 $P$에서 직선 $n$의 오른쪽 아래에 있는 각을 $a$, 점 $Q$에서 직선 $n$의 오른쪽 아래에 있는 각을 $b$, 점 $R$에서 직선 $n$의 왼쪽 위에 있는 각을 $c$라고 하자.\n\n각 $a$의 크기는 각 $b$의 크기에서 $30^\\circ$를 뺀 값의 두 배이다. 각 $b$와 각 $c$의 크기의 합은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$60^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$90^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$120^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$150^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M2",
           "no": 5,
@@ -40,8 +213,9 @@
       ],
       "created_at": "2026-11-11T08:56:52.880852+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T02:57:23.174676+00:00",
       "explanation": "각 $a$와 각 $b$는 동위각이고, 각 $a$와 각 $c$는 엇각이다. 따라서 세 각의 크기는 모두 같다.\n\n각 $b$의 크기를 $x^\\circ$라고 하면 $x=2(x-30)$이므로 $x=60$이다. 따라서 각 $b$와 각 $c$의 크기의 합은 $120^\\circ$이다.\n\n$180^\\circ$를 골랐다면 동위각인 각 $a$와 각 $b$의 크기의 합이 $180^\\circ$라고 잘못 생각했을 수 있다. 평행선에서 동위각의 크기는 서로 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:56:52.769023+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "각 $a$와 각 $b$의 크기 사이의 관계를 문장에서 식으로 나타내야 한다. 동위각과 엇각의 성질을 함께 이용해 두 각의 크기의 합을 구한다.",
@@ -52,7 +226,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:56:11.645247+00:00",
@@ -80,30 +254,35 @@
       "body": "서로 평행한 두 직선 $l$, $m$이 직선 $n$과 각각 점 $P$, $Q$에서 만난다. 직선 $n$을 세로로 놓으면 $P$는 $Q$보다 위에 있다.\n\n점 $P$에서 직선 $n$의 오른쪽이면서 직선 $l$의 위쪽에 있는 각을 $a$라고 하자. 점 $Q$에서 직선 $n$의 오른쪽이면서 직선 $m$의 위쪽에 있는 각을 $b$라고 하자.\n\n크기가 $100^\\circ$인 각 $c$가 있다. 각 $b$의 크기의 두 배는 각 $c$의 크기보다 $40^\\circ$ 크다. 각 $a$의 크기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$50^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$60^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$70^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$100^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M2",
           "no": 5,
@@ -112,8 +291,9 @@
       ],
       "created_at": "2026-11-11T08:57:55.320756+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T02:57:23.266349+00:00",
       "explanation": "각 $b$의 크기의 두 배는 $100^\\circ+40^\\circ=140^\\circ$이므로 각 $b$의 크기는 $70^\\circ$이다. 각 $a$와 각 $b$는 평행선에서 생기는 동위각이므로 크기가 같다. 따라서 각 $a$의 크기는 $70^\\circ$이다.\n\n$110^\\circ$를 골랐다면 동위각의 크기의 합이 $180^\\circ$라고 잘못 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:57:55.225439+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "각 $b$의 크기의 두 배와 각 $c$의 크기 사이의 관계를 문장으로 제시했다. 이를 수의 관계로 바꾸어 각 $b$의 크기를 구한 뒤 동위각의 성질을 적용해야 한다.",
@@ -124,7 +304,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:57:21.780447+00:00",
@@ -142,36 +322,224 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:00:16.219483+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C1-성질적용",
+      "body": "그림에서 두 직선 $AB$와 $CD$는 평행하고, 세 점 $P$, $Q$, $S$는 한 직선 위에 있습니다. $Q$는 $P$와 $S$ 사이에 있습니다.\n\n$\\angle RPQ=63^\\circ$이고, $\\angle CQS$의 크기는 $\\angle APR$의 크기의 4배입니다. $\\angle CQS$의 크기를 구하세요.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$21^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$63^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$84^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M2",
+          "no": 4,
+          "text": "$93.6^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$105^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-12T02:59:21.42234+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle APR$의 크기를 $a^\\circ$라고 하면 $\\angle APQ=(a+63)^\\circ$입니다. 두 직선이 평행하므로 동위각인 $\\angle APQ$와 $\\angle CQS$의 크기는 같습니다. 따라서 $a+63=4a$이므로 $a=21$입니다. 구하는 각의 크기는 $4\\times21^\\circ=84^\\circ$입니다.\n\n동위각인 두 각의 크기의 합을 $180^\\circ$로 잘못 생각하면 $a+63+4a=180$에서 $\\angle CQS=93.6^\\circ$를 고를 수 있습니다. 평행선에서 동위각의 크기는 같습니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "R",
+            "label": "63°",
+            "marks": 0,
+            "right": false,
+            "to": "Q",
+            "vertex": "P"
+          },
+          {
+            "from": "C",
+            "label": "x",
+            "marks": 0,
+            "right": false,
+            "to": "S",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "Q",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "R",
+            "type": "ray"
+          }
+        ],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": -3.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": -3.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": -0.210208,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "R",
+            "show_name": true,
+            "x": -1.867161,
+            "y": 1.283264
+          },
+          {
+            "dot": false,
+            "id": "S",
+            "show_name": true,
+            "x": -0.420417,
+            "y": -2.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T02:59:21.19642+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 각의 크기에 대한 문장을 식으로 나타내고, 동위각의 성질을 이용하여 미지의 각을 구한다.",
+      "id": "cb6dafc3-6fd0-4c56-ab3d-8bd1875a27cf",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T02:59:21.196039+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:15.358585+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-02-C1-성질적용",
       "body": "두 직선 $l$, $m$은 평행하고, 오른쪽으로 갈수록 위로 기울어져 있다. 세로로 놓인 직선 $n$은 $l$, $m$과 각각 점 $P$, $Q$에서 만난다. 점 $P$는 점 $Q$보다 위에 있다.\n\n각 $a$는 점 $P$에서 직선 $n$의 오른쪽이면서 직선 $l$의 위쪽에 있는 각이다. 각 $b$는 점 $Q$에서 직선 $n$의 오른쪽이면서 직선 $m$의 위쪽에 있는 각이다.\n\n각 $a$의 크기가 $68^\\circ$, 각 $b$의 크기가 $(2x+18)^\\circ$일 때, $x$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$15$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$25$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$35$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M2",
           "no": 4,
           "text": "$47$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -180,8 +548,9 @@
       ],
       "created_at": "2026-11-11T08:54:52.408248+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T02:57:23.316472+00:00",
       "explanation": "각 $a$와 각 $b$는 동위각이다. 두 직선 $l$, $m$이 평행하므로 두 각의 크기는 같다. 따라서 $2x+18=68$이므로 $x=25$이다.\n\n$x=47$을 골랐다면 동위각의 크기의 합이 $180^\\circ$라고 잘못 생각한 것이다. 평행선에서 동위각의 크기는 서로 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:54:52.334551+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -192,10 +561,178 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:54:52.334334+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:00:16.26733+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C1-성질적용",
+      "body": "그림에서 두 직선 $AB$, $CD$는 평행하고, 직선 $QR$은 두 직선과 각각 점 $P$, $Q$에서 만난다. $\\angle BPR=60°$일 때, $x$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$45$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$60$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$90$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M2",
+          "no": 4,
+          "text": "$120$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$150$"
+        }
+      ],
+      "created_at": "2026-11-12T02:57:50.113959+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle BPR$과 $\\angle DQP$는 동위각이다. 두 직선 $AB$, $CD$가 평행하므로 동위각의 크기는 같다. 따라서 $x=60$이다. $120$을 골랐다면 동위각의 크기가 같다는 것을 잊고 두 각의 크기의 합이 $180°$라고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "R",
+            "vertex": "P"
+          },
+          {
+            "from": "D",
+            "label": "x",
+            "marks": 0,
+            "right": false,
+            "to": "P",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "Q",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "R",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -3.0,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 1.732050808,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "R",
+            "show_name": true,
+            "x": 2.886751346,
+            "y": 5.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T02:57:49.956721+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "82c02b66-2c2b-4289-8d48-0501182c5425",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T02:57:49.956522+00:00",
           "issues": [],
           "number": 1
         }
@@ -209,30 +746,35 @@
       "body": "두 직선 $l$, $m$은 가로로 놓여 있고 서로 평행하다. 직선 $l$은 직선 $m$보다 위에 있다. 오른쪽으로 갈수록 위로 올라가는 직선 $n$이 $l$, $m$과 각각 점 $P$, $Q$에서 만난다.\n\n각 $a$는 점 $P$에서 직선 $l$의 위쪽이면서 직선 $n$의 위쪽에 있는 각이다. 각 $b$는 점 $Q$에서 직선 $m$의 위쪽이면서 직선 $n$의 위쪽에 있는 각이다.\n\n각 $a$의 크기가 $124^\\circ$일 때, 각 $b$의 크기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$46^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M2",
           "no": 2,
           "text": "$56^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$114^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$124^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -241,8 +783,9 @@
       ],
       "created_at": "2026-11-11T08:55:15.033216+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T02:57:23.371894+00:00",
       "explanation": "각 $a$와 각 $b$는 동위각이다. 두 직선 $l$, $m$이 평행하므로 동위각의 크기는 같다. 따라서 각 $b$의 크기는 $124^\\circ$이다.\n\n$56^\\circ$를 골랐다면 동위각의 크기의 합이 $180^\\circ$라고 잘못 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:55:14.9524+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -253,10 +796,178 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:55:14.951926+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:00:16.316627+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C1-성질적용",
+      "body": "그림에서 두 직선 $AB$와 $CD$는 평행하고, 세 점 $R$, $P$, $Q$는 한 직선 위에 있습니다. $\\angle APR=130°$일 때, $x$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$40°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M2",
+          "no": 2,
+          "text": "$50°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$110°$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$130°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$140°$"
+        }
+      ],
+      "created_at": "2026-11-12T02:58:13.447334+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle APR$와 $\\angle CQP$는 평행선에서 생기는 동위각이므로 크기가 같습니다. 따라서 $x=130°$입니다. 동위각의 크기의 합이 $180°$라고 잘못 생각하면 $50°$를 고를 수 있습니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "130°",
+            "marks": 0,
+            "right": false,
+            "to": "R",
+            "vertex": "P"
+          },
+          {
+            "from": "C",
+            "label": "x",
+            "marks": 0,
+            "right": false,
+            "to": "P",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "Q",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": -4.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": -5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": -1.678199,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "R",
+            "show_name": true,
+            "x": 1.678199,
+            "y": 4.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T02:58:13.286969+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b994593a-53ee-45da-91e8-68fca3ff36b2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T02:58:13.286416+00:00",
           "issues": [],
           "number": 1
         }
@@ -270,30 +981,35 @@
       "body": "직선 $n$이 서로 평행하지 않은 두 직선 $l$, $m$과 각각 점 $P$, $Q$에서 만난다. 직선 $n$을 세로로 놓았을 때 $P$는 $Q$보다 위에 있다.\n\n$\\angle a$는 점 $P$에서 직선 $n$의 오른쪽이면서 직선 $l$의 위쪽에 있는 각이다. $\\angle b$는 점 $Q$에서 직선 $n$의 오른쪽이면서 직선 $m$의 위쪽에 있는 각이다.\n\n민수는 다음과 같이 말했다.\n\n“$\\angle a$와 $\\angle b$는 동위각이므로 크기가 같아. 따라서 두 직선이 평행하지 않아도 크기가 같은 동위각이 생겨.”\n\n민수의 말에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M1",
           "no": 1,
           "text": "민수의 말은 옳다. 동위각의 크기는 두 직선이 평행하지 않아도 항상 같다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "민수의 말은 틀리다. 두 직선이 평행하지 않으므로 이 동위각의 크기는 다르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M1",
           "no": 3,
           "text": "민수의 말은 틀리다. 두 직선이 평행하지 않을 때 동위각의 크기는 같을 수도 있고 다를 수도 있다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "민수의 말은 틀리다. 두 직선이 평행하지 않으면 동위각의 크기의 합은 항상 $180^\\circ$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -302,8 +1018,9 @@
       ],
       "created_at": "2026-11-11T08:59:31.204706+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:20:16.38545+00:00",
       "explanation": "$\\angle a$와 $\\angle b$는 동위각이다. 동위각의 크기가 같으면 두 직선은 평행하다. 그런데 $l$과 $m$은 평행하지 않으므로 두 각의 크기는 다르다. 따라서 ②가 옳다.\n\n①처럼 동위각의 크기가 항상 같다고 생각하거나, ③처럼 평행하지 않아도 동위각의 크기가 같을 수 있다고 생각하면 안 된다. ④처럼 두 각의 크기의 합이 항상 $180^\\circ$인 것도 아니다. 또 두 직선이 평행하지 않아도 동위각은 생기므로 ⑤도 옳지 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:59:31.150977+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "평행하지 않은 두 직선에서도 동위각의 크기가 같다는 민수의 말을 보고 판단하게 했다.",
@@ -314,10 +1031,193 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:59:31.150595+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:31:10.719532+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C1-오개념판별",
+      "body": "그림에서 직선 $AB$와 직선 $CD$는 평행하지 않다. 두 직선은 직선 $RS$와 각각 점 $P$, $Q$에서 만난다.\n\n두 학생이 다음과 같이 말했다.\n- 지우: $\\angle BPR$와 $\\angle DQP$는 동위각이므로 크기가 같아.\n- 민서: $\\angle APQ$와 $\\angle DQP$는 엇각이므로 크기가 같아.\n\n두 학생의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M1",
+          "no": 1,
+          "text": "두 학생 모두 옳다. 동위각과 엇각은 두 직선이 평행하지 않아도 각각 크기가 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M1",
+          "no": 2,
+          "text": "지우만 옳다. 동위각은 두 직선이 평행하지 않아도 크기가 같지만, 엇각은 그렇지 않다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M1",
+          "no": 3,
+          "text": "민서만 옳다. 엇각은 두 직선이 평행하지 않아도 크기가 같지만, 동위각은 그렇지 않다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 학생 모두 틀리다. 두 직선이 평행하지 않으므로 각 쌍은 각각 크기가 다르다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 학생 모두 틀리다. 두 각의 쌍은 모두 동위각도 엇각도 아니기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T03:21:53.874773+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle BPR$와 $\\angle DQP$는 동위각이고, $\\angle APQ$와 $\\angle DQP$는 엇각이다. 어느 한 쌍이라도 크기가 같으면 직선 $AB$와 직선 $CD$는 평행해야 한다. 그런데 두 직선은 평행하지 않으므로 두 학생의 말은 모두 틀리다. 동위각이나 엇각은 두 직선이 평행하지 않을 때에도 항상 크기가 같은 것은 아니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "R",
+            "vertex": "P"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "Q",
+            "vertex": "P"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "P",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "R",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "S",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -3.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -3.0,
+            "y": -2.9
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": -1.1
+          },
+          {
+            "dot": true,
+            "id": "R",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "S",
+            "show_name": true,
+            "x": 0.0,
+            "y": -4.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 0.0,
+            "y": -2.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T03:21:53.591133+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "동위각과 엇각에 관한 두 학생의 말을 각각 판단하고, 그 이유까지 살펴보게 했다.",
+      "id": "6a278c99-3b73-4cb7-9b86-d9e2aace68c7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:21:53.590719+00:00",
           "issues": [],
           "number": 1
         }
@@ -331,30 +1231,35 @@
       "body": "직선 $n$을 세로로 놓았을 때, 두 직선 $l$, $m$은 $n$과 각각 점 $P$, $Q$에서 만난다. $P$는 $Q$보다 위에 있고, $l$과 $m$은 세로가 아니다.\n\n$\\angle a$는 $P$에서 $n$의 오른쪽이면서 $l$의 아래쪽에 있는 각이다. $\\angle b$는 $Q$에서 $n$의 왼쪽이면서 $m$의 위쪽에 있는 각이다.\n\n지우는 다음 세 가지를 모두 만들 수 있다고 생각한다.\n\nㄱ. $l$과 $m$이 평행하지 않고, $\\angle a$와 $\\angle b$의 크기가 같다.\nㄴ. $l$과 $m$이 평행하고, $\\angle a$와 $\\angle b$의 크기가 같다.\nㄷ. $l$과 $m$이 평행하지 않고, $\\angle a$와 $\\angle b$의 크기가 다르다.\n\n실제로 만들 수 있는 것만을 모두 고른 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "ㄴ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "ㄱ, ㄴ"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "ㄴ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "ㄱ, ㄷ"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M1",
           "no": 5,
@@ -363,8 +1268,9 @@
       ],
       "created_at": "2026-11-11T09:00:50.985289+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:20:16.426316+00:00",
       "explanation": "$\\angle a$와 $\\angle b$는 엇각이다. 엇각의 크기가 같으면 두 직선은 평행하므로 ㄱ은 만들 수 없다. ㄴ은 두 직선이 평행하면 엇각의 크기가 같으므로 만들 수 있다. ㄷ도 만들 수 있다. 예를 들어 두 엇각의 크기가 각각 $60^\\circ$, $70^\\circ$이면 두 직선은 평행하지 않다.\n\nㄱ을 고른 학생은 평행하지 않은 두 직선에서도 엇각의 크기가 같을 수 있다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:00:50.907252+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "지우가 세 가지를 모두 만들 수 있다고 한 생각을 보고, 실제로 만들 수 있는 것을 판단하게 한다.",
@@ -375,7 +1281,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:00:01.757459+00:00",
@@ -393,36 +1299,382 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:31:10.74677+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C1-오개념판별",
+      "body": "그림에서 직선 $AB$와 직선 $CD$는 평행하고, 직선 $CD$와 직선 $EF$는 평행하지 않다. 직선 $PR$는 세 직선과 각각 점 $P$, $Q$, $R$에서 만난다.\n\n한 학생이 다음과 같이 말했다.\n\n“$\\angle APQ$와 $\\angle DQP$는 엇각이고, $\\angle CQR$와 $\\angle FRQ$도 엇각이야. 따라서 두 쌍 모두 각의 크기가 같아.”\n\n이 학생의 말에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M1",
+          "no": 1,
+          "text": "두 쌍 모두 엇각이므로 두 쌍 모두 각의 크기가 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 쌍 모두 엇각이지만, 첫 번째 쌍만 각의 크기가 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫 번째 쌍만 엇각이므로 첫 번째 쌍만 각의 크기가 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 쌍 모두 엇각이므로 두 쌍 모두 각의 크기가 다르다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 쌍 모두 엇각이지만, 직선의 평행 여부로는 각의 크기가 같은지 알 수 없다."
+        }
+      ],
+      "created_at": "2026-11-12T03:22:28.379849+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 쌍 모두 엇각이다. 직선 $AB$와 직선 $CD$는 평행하므로 $\\angle APQ$와 $\\angle DQP$의 크기는 같다. 하지만 직선 $CD$와 직선 $EF$는 평행하지 않으므로 $\\angle CQR$와 $\\angle FRQ$의 크기는 같지 않다. ①처럼 엇각이라는 위치만으로 각의 크기가 같다고 생각하면 안 된다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "F",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "R",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -3.0,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -3.0,
+            "y": 1.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 4.0,
+            "y": 1.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": -3.0,
+            "y": -3.68
+          },
+          {
+            "dot": true,
+            "id": "F",
+            "show_name": true,
+            "x": 4.0,
+            "y": -0.88
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 0.6,
+            "y": 1.0
+          },
+          {
+            "dot": true,
+            "id": "R",
+            "show_name": true,
+            "x": 1.2,
+            "y": -2.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T03:22:28.150192+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "학생이 두 쌍의 엇각에 대해 한 말을 보고, 각 쌍을 이루는 직선의 평행 여부에 따라 판단하게 했다.",
+      "id": "93590e25-5f97-4faf-958d-e2cd1164fe90",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:22:28.149797+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:31:10.779927+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C1-오개념판별",
+      "body": "그림과 같이 직선 $AB$와 $CD$는 평행하지 않습니다. 직선 $RQ$는 두 직선과 각각 $P$, $Q$에서 만납니다. $\\angle APR$와 $\\angle CQP$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M1",
+          "no": 1,
+          "text": "두 각은 동위각이므로 크기가 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 각은 동위각이고 크기가 다르다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 각은 엇각이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 각의 크기의 합은 언제나 $180^\\circ$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 각이 동위각인지 알려면 두 직선이 평행해야 한다."
+        }
+      ],
+      "created_at": "2026-11-12T03:20:43.902349+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 각은 동위각입니다. 두 각의 크기가 같다면 직선 $AB$와 $CD$는 평행해야 합니다. 그런데 두 직선은 평행하지 않으므로 두 각의 크기는 다릅니다. ①은 평행하지 않은 두 직선에서도 동위각의 크기가 항상 같다고 잘못 생각한 것입니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "R",
+            "vertex": "P"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "P",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "R",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "Q",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 3.0,
+            "y": 2.5
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": -3.0,
+            "y": 1.5
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 3.0,
+            "y": -1.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": -3.0,
+            "y": -3.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 0.0,
+            "y": -2.0
+          },
+          {
+            "dot": true,
+            "id": "R",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T03:20:43.714356+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "207949d3-d160-4e64-94d1-c3b3cd6ef4fe",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:20:43.714123+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:15.458074+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-02-C1-오개념판별",
       "body": "세로로 놓인 직선 $n$이 평행하지 않은 두 직선 $l$, $m$과 각각 점 $P$, $Q$에서 만난다. 점 $P$는 점 $Q$보다 위에 있다.\n점 $P$에서 직선 $n$의 오른쪽이고 직선 $l$의 위쪽에 있는 각을 $\\angle a$라 하자. 점 $Q$에서 직선 $n$의 오른쪽이고 직선 $m$의 위쪽에 있는 각을 $\\angle b$라 하자.\n항상 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M1",
           "no": 1,
           "text": "$\\angle a=\\angle b$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\angle a>\\angle b$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\angle a<\\angle b$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\angle a+\\angle b=180^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -431,8 +1683,9 @@
       ],
       "created_at": "2026-11-11T08:58:17.308938+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:20:16.461086+00:00",
       "explanation": "$\\angle a$와 $\\angle b$는 동위각이다. 동위각의 크기가 같으면 두 직선 $l$, $m$은 평행하다. 그런데 두 직선은 평행하지 않으므로 두 각의 크기는 다르다. ①은 두 직선이 평행하지 않아도 동위각의 크기가 같다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:58:17.249392+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -443,7 +1696,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:58:17.249190+00:00",
@@ -454,36 +1707,216 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:31:10.829792+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C1-오개념판별",
+      "body": "그림에서 직선 $EF$는 두 직선 $AB$, $CD$와 각각 점 $P$, $Q$에서 만납니다. $\\angle BPQ=60°$, $\\angle CQP=75°$입니다.\n\n한 학생이 “두 각은 엇각이므로 직선 $AB$와 직선 $CD$는 평행하다.”라고 말했습니다. 이 학생의 생각에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-02-M1",
+          "no": 1,
+          "text": "옳다. 두 각이 엇각이면 두 각의 크기는 항상 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. 두 각의 크기가 다르면 두 직선은 평행하다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳지 않다. 두 각은 엇각이 아니라 동위각이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳지 않다. 두 각은 엇각이지만 크기가 다르므로 두 직선은 평행하지 않다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. 두 직선이 평행하면 엇각의 크기는 반드시 다르다."
+        }
+      ],
+      "created_at": "2026-11-12T03:21:14.054265+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle BPQ$와 $\\angle CQP$는 엇각이지만 크기가 다릅니다. 두 직선이 평행하면 엇각의 크기가 같으므로, 직선 $AB$와 직선 $CD$는 평행하지 않습니다. 엇각이라는 이유만으로 두 각의 크기가 항상 같다고 생각하면 안 됩니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "Q",
+            "vertex": "P"
+          },
+          {
+            "from": "C",
+            "label": "75°",
+            "marks": 0,
+            "right": false,
+            "to": "P",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "F",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": -3.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": -1.743077,
+            "y": -0.776457
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 4.052478,
+            "y": 0.776457
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": -1.154701,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 2.309401,
+            "y": -2.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 1.154701,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T03:21:13.68971+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1b0e476c-d162-4b40-a4ae-c3a5fed131f3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:21:13.689350+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:15.484247+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-02-C1-오개념판별",
       "body": "가로로 놓인 직선 $n$이 두 직선 $l$, $m$과 각각 점 $P$, $Q$에서 만난다. 점 $P$는 점 $Q$의 왼쪽에 있다. 직선 $l$ 위의 점 $A$는 직선 $n$의 위쪽에 있고, 직선 $m$ 위의 점 $B$는 직선 $n$의 아래쪽에 있다. $\\angle APQ=55^\\circ$, $\\angle BQP=70^\\circ$일 때, 옳게 말한 학생은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-02-M1",
           "no": 1,
           "text": "지우: 두 직선이 평행하지 않아도 엇각의 크기는 항상 같아."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "민서: 두 각은 동위각이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "서준: 두 직선은 평행해."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "하린: 두 직선은 평행하지 않아. 평행하면 엇각의 크기가 같아야 해."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -492,8 +1925,9 @@
       ],
       "created_at": "2026-11-11T08:58:42.173023+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:20:16.501091+00:00",
       "explanation": "$\\angle APQ$와 $\\angle BQP$는 엇각이다. 두 직선이 평행하면 엇각의 크기가 같아야 한다. 두 각의 크기가 다르므로 두 직선은 평행하지 않다. 1번은 두 직선이 평행하지 않아도 엇각의 크기가 항상 같다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:58:42.119823+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -504,7 +1938,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:58:42.119659+00:00",
@@ -522,8 +1956,9 @@
       "choices": [],
       "created_at": "2026-11-11T09:02:00.555523+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:20:16.364646+00:00",
       "explanation": "$\\angle a$와 $\\angle b$는 동위각이다. 두 직선이 평행하면 동위각의 크기가 같아야 한다. 그런데 두 각의 크기가 각각 $60^\\circ$, $120^\\circ$이면 합은 $180^\\circ$이지만 크기가 다르므로 두 직선은 평행하지 않다. 반대로 두 직선이 평행하지 않은데 동위각의 크기가 같을 수 있다고 생각하면 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:02:00.455142+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민수의 말이 옳지 않을 때 두 각의 크기를 직접 정한 예를 들어 이유를 설명하도록 했다.",
@@ -558,7 +1993,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:02:00.454990+00:00",
@@ -569,6 +2004,327 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:31:10.858186+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C2-이유설명",
+      "body": "그림에서 직선 $AB$와 $CD$는 직선 $PQ$와 각각 점 $P$, $Q$에서 만난다. $\\angle APQ=70°$, $\\angle PQD=110°$이다.\n\n민수는 다음과 같이 말했다.\n\n“두 직선을 한 직선이 만날 때, 한 교점의 한 각과 다른 교점의 한 각의 크기의 합이 $180°$이면 두 직선은 평행해.”\n\n민수의 말이 항상 옳은지 판단하시오. 옳지 않다면 그림을 반례로 이용하여, 구체적인 각의 크기를 들어 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:22:08.371084+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle APQ+\\angle PQD=70°+110°=180°$이다. 하지만 이 두 각은 엇각이고 크기가 다르다. 두 직선이 평행하면 엇각의 크기가 같아야 하므로 직선 $AB$와 $CD$는 평행하지 않다. 따라서 이 그림은 민수의 말이 틀렸음을 보여 주는 반례이다.\n\n평행하지 않은 두 직선에서도 엇각의 크기가 같을 수 있다고 생각하면, 두 엇각의 크기가 다른 것이 왜 평행하지 않다는 근거가 되는지 놓칠 수 있다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "70°",
+            "marks": 0,
+            "right": false,
+            "to": "Q",
+            "vertex": "P"
+          },
+          {
+            "from": "P",
+            "label": "110°",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "Q",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -1.879385,
+            "y": 1.31596
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 1.879385,
+            "y": 2.68404
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -1.879385,
+            "y": 0.68404
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 1.879385,
+            "y": -0.68404
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T03:22:08.130612+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민수의 말이 항상 옳은지 판단하고, 옳지 않다면 주어진 그림을 반례로 이용해 설명하도록 했다.",
+      "id": "c006dbf2-b2bf-463c-8262-7a37c6481ab7",
+      "model": "gpt-6.1-terra",
+      "model_answer": "민수의 말은 항상 옳지 않다. 그림에서 $70°+110°=180°$이지만, 엇각인 $\\angle APQ$와 $\\angle PQD$의 크기가 다르다. 두 직선이 평행하면 엇각의 크기가 같아야 하므로 직선 $AB$와 $CD$는 평행하지 않다. 따라서 그림은 민수의 말에 대한 반례이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "민수의 말이 항상 옳지는 않다고 판단한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "그림에서 두 각의 크기의 합이 $70°+110°=180°$임을 밝힌다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 각이 엇각이고 크기가 다르다는 사실과 평행선에서 엇각의 크기가 같다는 성질을 이용하여 직선 $AB$와 $CD$가 평행하지 않다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-02-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:21:42.357317+00:00",
+          "issues": [
+            "채점 기준이 특정 각만 요구하여 다른 올바른 답을 인정하지 않는다. 예를 들어 같은 두 각으로 ∠BPQ와 ∠CQP를, 크기가 다른 동위각으로 ∠BPT와 ∠CQP를 찾을 수 있다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:22:08.130313+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:31:10.896874+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C2-이유설명",
+      "body": "그림에서 두 직선 $AB$, $CD$는 직선 $QS$와 각각 점 $P$, $Q$에서 만난다. $\\angle APQ=65^\\circ$, $\\angle PQD=65^\\circ$이다.\n\n지수는 $\\angle APQ$와 $\\angle PQD$를 비교하고, 민재는 $\\angle BPS$와 $\\angle PQD$를 비교하려고 한다.\n\n두 사람의 방법을 각각 이용하여 두 직선 $AB$, $CD$가 평행한지 판단하고, 그 이유를 각의 크기를 들어 설명하시오. 또 두 방법이 같은 판단에 이르는 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:22:40.374216+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle APQ$와 $\\angle PQD$는 엇각이고, 둘 다 $65^\\circ$이므로 두 직선은 평행하다.\n\n$\\angle BPS$는 $\\angle APQ$와 맞꼭지각이므로 $65^\\circ$이다. $\\angle BPS$와 $\\angle PQD$는 동위각이고 크기가 같으므로 두 직선은 평행하다. 두 방법에서 비교한 $\\angle APQ$와 $\\angle BPS$는 맞꼭지각이라 크기가 같으므로 같은 판단에 이른다.\n\n두 직선이 평행하지 않은데도 동위각이나 엇각의 크기가 같을 수 있다고 생각하면 안 된다. 동위각이나 엇각의 크기가 같으면 두 직선은 평행하다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "65°",
+            "marks": 0,
+            "right": false,
+            "to": "Q",
+            "vertex": "P"
+          },
+          {
+            "from": "P",
+            "label": "65°",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "Q",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "S",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -2.0,
+            "y": 2.067385
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 2.0,
+            "y": 3.932615
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -2.0,
+            "y": -0.932615
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 2.0,
+            "y": 0.932615
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "S",
+            "show_name": true,
+            "x": 0.0,
+            "y": 5.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T03:22:40.160366+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "엇각을 이용하는 방법과 동위각을 이용하는 방법을 각각 설명하고, 두 방법이 같은 판단에 이르는 이유를 비교하도록 했다.",
+      "id": "9d0883ca-ebbf-48be-af78-a10d945adafc",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 직선 $AB$, $CD$는 평행하다.\n\n지수의 방법: $\\angle APQ$와 $\\angle PQD$는 엇각이고 둘 다 $65^\\circ$이므로 두 직선은 평행하다.\n\n민재의 방법: $\\angle BPS$는 $\\angle APQ$와 맞꼭지각이므로 $65^\\circ$이다. $\\angle BPS$와 $\\angle PQD$는 동위각이고 둘 다 $65^\\circ$이므로 두 직선은 평행하다.\n\n두 방법에서 비교한 $\\angle APQ$와 $\\angle BPS$는 맞꼭지각이어서 크기가 같으므로 두 방법은 같은 판단에 이른다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 직선 $AB$, $CD$가 평행하다고 판단한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$\\angle APQ$와 $\\angle PQD$가 각각 $65^\\circ$인 엇각이므로 두 직선이 평행하다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "$\\angle BPS$가 맞꼭지각을 이용하면 $65^\\circ$이고, $\\angle PQD$와 동위각이므로 두 직선이 평행하다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-02-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 방법에서 비교한 $\\angle APQ$와 $\\angle BPS$가 맞꼭지각이어서 크기가 같으므로 같은 판단에 이른다고 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:22:40.160262+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:15.532721+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-02-C2-이유설명",
@@ -576,8 +2332,9 @@
       "choices": [],
       "created_at": "2026-11-11T09:02:26.662827+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:20:16.397277+00:00",
       "explanation": "$\\angle a$와 $\\angle b$는 동위각이고 둘 다 $115^\\circ$이다. 따라서 $l$과 $m$은 평행하다. $\\angle c$와 $\\angle d$는 엇각이고 둘 다 $65^\\circ$이므로 이 쌍만으로도 $l$과 $m$이 평행하다고 판단할 수 있다.\n\n두 방법은 비교하는 각의 위치와 크기는 다르지만, 각각 두 직선이 평행한지 판단할 수 있는 방법이다. 동위각이나 엇각의 크기가 같아도 두 직선이 평행하지 않을 수 있다고 생각하면 두 방법의 이유를 놓치게 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:02:26.570832+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "동위각을 비교하는 방법과 엇각을 비교하는 방법이 같은 판단을 내리는 이유를 설명하게 한다. 두 쌍을 모두 확인해야 하는지도 묻는다.",
@@ -616,7 +2373,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:02:26.570505+00:00",
@@ -634,8 +2391,9 @@
       "choices": [],
       "created_at": "2026-11-11T09:01:12.242974+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:20:16.424864+00:00",
       "explanation": "$\\angle a$와 $\\angle b$는 동위각이고, 크기가 각각 $68^\\circ$로 같다. 동위각의 크기가 같으므로 두 직선 $l$, $m$은 평행하다. 두 직선이 평행하지 않아도 동위각의 크기가 같을 수 있다고 생각하면 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:01:12.19635+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -672,10 +2430,159 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:01:12.196143+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:31:10.931434+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C2-이유설명",
+      "body": "그림에서 직선 $AB$와 직선 $CD$는 직선 $EP$와 각각 점 $P$, $Q$에서 만난다. $\\angle BPE=60^\\circ$, $\\angle DQP=60^\\circ$이다. 두 직선 $AB$와 $CD$가 평행한지 판단하고, 두 각의 위치와 크기를 이용하여 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:20:41.233775+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle BPE$와 $\\angle DQP$는 동위각이고, 두 각의 크기는 모두 $60^\\circ$이다. 동위각의 크기가 같으므로 두 직선 $AB$와 $CD$는 평행하다. 두 직선이 평행하지 않아도 동위각의 크기가 같을 수 있다고 생각하면 잘못이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "E",
+            "vertex": "P"
+          },
+          {
+            "from": "D",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "P",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "P",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -3.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": -4.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 2.5,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 1.154700538,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": -1.154700538,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T03:20:41.038518+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "65f841c5-3d25-40aa-b442-5f5eb1550ba5",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$\\angle BPE$와 $\\angle DQP$는 동위각이고, 두 각의 크기가 모두 $60^\\circ$로 같다. 동위각의 크기가 같으므로 두 직선 $AB$와 $CD$는 평행하다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\angle BPE$와 $\\angle DQP$가 동위각이고, 두 각의 크기가 모두 $60^\\circ$라고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "동위각의 크기가 같으므로 두 직선 $AB$와 $CD$가 평행하다고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-02-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:20:41.038294+00:00",
           "issues": [],
           "number": 1
         }
@@ -690,8 +2597,9 @@
       "choices": [],
       "created_at": "2026-11-11T09:01:28.857857+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:20:16.460061+00:00",
       "explanation": "$\\angle a$와 $\\angle b$는 엇각이고, 크기가 모두 $112^\\circ$이다. 엇각의 크기가 같으므로 두 직선 $l$, $m$은 평행하다. 평행하지 않은 두 직선에서도 엇각의 크기가 같을 수 있다고 생각하면 잘못이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:01:28.53116+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -719,10 +2627,145 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:01:28.530764+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:31:10.971677+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-02-C2-이유설명",
+      "body": "그림과 같이 직선 $AP$와 직선 $BQ$는 직선 $PQ$와 각각 점 $P$, $Q$에서 만난다. $\\angle APQ=70^\\circ$, $\\angle BQP=75^\\circ$이다. 두 직선 $AP$와 $BQ$가 평행한지 판단하고, 두 각의 위치와 크기를 이용하여 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:21:03.686319+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\angle APQ$와 $\\angle BQP$는 엇각이다. 두 직선이 평행하면 엇각의 크기가 같아야 하는데, $70^\\circ$와 $75^\\circ$는 다르다. 따라서 두 직선은 평행하지 않다. 두 직선이 평행하지 않아도 엇각의 크기가 같을 수 있다고 생각하면 잘못이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "70°",
+            "marks": 0,
+            "right": false,
+            "to": "Q",
+            "vertex": "P"
+          },
+          {
+            "from": "B",
+            "label": "75°",
+            "marks": 0,
+            "right": false,
+            "to": "P",
+            "vertex": "Q"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "P",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "Q",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "B",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "through": "Q",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "Q",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -3.75877,
+            "y": 1.63192
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 3.8637,
+            "y": 1.03528
+          }
+        ],
+        "polygons": [],
+        "segments": []
+      },
+      "generated_at": "2026-11-12T03:21:03.4888+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "19bb844e-5e5f-4ec4-a6a6-754283fe092e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 직선 $AP$와 $BQ$는 평행하지 않다. $\\angle APQ$와 $\\angle BQP$는 엇각인데, 각각 $70^\\circ$와 $75^\\circ$로 크기가 다르기 때문이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$\\angle APQ$와 $\\angle BQP$가 엇각이라고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 각이 각각 $70^\\circ$와 $75^\\circ$로 크기가 다르다고 썼다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "엇각의 크기가 다르므로 두 직선이 평행하지 않다고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-02-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:21:03.488343+00:00",
           "issues": [],
           "number": 1
         }

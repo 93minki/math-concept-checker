@@ -68,6 +68,40 @@
       "variant": 1
     },
     {
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T04:12:18.964123+00:00",
+          "issues": [
+            "figure_geometry_lengths: Invalid figure: geometry_lengths"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:12:45.322540+00:00",
+          "issues": [
+            "DE의 길이를 목표로 표현했을 뿐, 주어진 길이로 DB를 구하는 일반적인 선분 길이 문제이다. 결과로부터 조건을 찾는 역방향 적용과 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:13:15.018201+00:00",
+          "issues": [
+            "주어진 DE, BC, DB의 길이로 AD를 구하는 일반적인 평행선의 비례 문제이다. ‘되려면’이라는 표현 외에 결과에서 조건을 거꾸로 찾는 별도의 사고가 필요하지 않아 application-a를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:13:15.122674+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T04:43:27.596677+00:00",
+      "variant": 1
+    },
+    {
       "assessment_item_id": "9수03-14-C1-오개념판별",
       "attempts": [
         {
@@ -938,6 +972,41 @@
       "assessment_item_id": "9수03-14-C3-성질적용",
       "attempts": [
         {
+          "at": "2026-11-12T04:17:22.703999+00:00",
+          "issues": [
+            "application-a 미충족: 합에서 한 선분의 길이를 빼는 계산을 추가했을 뿐, 평행선 사이의 선분의 길이의 비를 거꾸로 적용해 조건을 찾는 문제는 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:17:51.211184+00:00",
+          "issues": [
+            "application-a에 해당하지 않는다. 전체 길이에서 부분 길이를 구한 뒤 평행선 사이의 선분의 길이의 비를 적용하는 일반적인 순방향 문제이다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:18:17.049421+00:00",
+          "issues": [
+            "application-a에 해당하지 않는다. 평행선 사이의 선분의 비와 전체 길이로 부분의 길이를 구하는 직접 적용 문제이며, 결과를 주고 조건을 찾는 역적용이 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:18:17.126797+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T04:43:07.132446+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
           "at": "2026-11-11T11:53:50.008219+00:00",
           "issues": [
             "generate: RateLimitError"
@@ -996,6 +1065,77 @@
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
       "resolved_at": "2026-11-11T13:15:46.420494+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T04:18:47.682844+00:00",
+          "issues": [
+            "application-a 미충족: 주어진 세 선분의 길이로 나머지 선분의 길이를 구하는 일반적인 비례식 문제이며, 결과에서 조건을 거꾸로 찾는 문제가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:19:27.418289+00:00",
+          "issues": [
+            "DE의 길이를 만족하도록 B의 위치를 정하는 형식이지만, 실제로는 주어진 DE와 두 선분의 전체 길이로 AB를 바로 구하는 일반적인 비례 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:20:08.405262+00:00",
+          "issues": [
+            "그림에서 A, B, C가 한 직선 위에 있지 않아 본문의 두 직선 조건 및 B가 선분 AC 위에 있다는 조건과 맞지 않는다.",
+            "평행선의 성질로 비를 구한 뒤 주어진 길이의 차를 이용하는 일반적인 길이 구하기 문제이다. 결과로부터 조건을 찾는 application-a가 실제로 적용되지 않았다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:20:08.697936+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T04:43:41.966498+00:00",
+          "issues": [
+            "application-a: AB의 길이가 주어졌을 때 대응하는 DE의 길이를 비례식으로 바로 구하는 일반적인 문제이다. 점 E의 위치를 찾는 표현만으로는 성질을 거꾸로 적용하는 문제가 되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:44:11.536372+00:00",
+          "issues": [
+            "전체 길이와 선분의 비를 이용해 부분의 길이를 구하는 일반적인 문제로, 결과를 주고 그 결과가 되기 위한 조건을 거꾸로 찾는 application-a에 해당하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:44:40.533645+00:00",
+          "issues": [
+            "평행 조건에서 AB:BC=DE:EF를 바로 적용하는 일반적인 문제로, 결과가 주어지고 조건을 거꾸로 찾는 application-a에 해당하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T04:44:41.030057+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
       "variant": 2
     },
     {
@@ -1391,30 +1531,35 @@
       "body": "삼각형 $ABC$에서 $\\overline{BC}=10$ cm이다. 점 $D$는 선분 $AB$ 위의 점이고, 점 $E$는 선분 $AC$ 위의 점이다. $\\overline{DE} \\parallel \\overline{BC}$이고 $\\overline{DB}=8$ cm이다.\n\n$\\overline{DE}=6$ cm가 되려면 $\\overline{AD}$의 길이는 몇 cm이어야 하는가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M1",
           "no": 1,
           "text": "$4.8$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$8$ cm"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$12$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$20$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1423,8 +1568,9 @@
       ],
       "created_at": "2026-11-11T13:06:06.71946+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.633029+00:00",
       "explanation": "$\\overline{DE} : \\overline{BC}=6:10=3:5$이므로 $\\overline{AD} : \\overline{AB}=3:5$이다. 따라서 $\\overline{AD} : \\overline{DB}=3:2$이다. $\\overline{DB}=8$ cm이므로 $\\overline{AD}=12$ cm이다.\n\n①은 $\\overline{AD} : \\overline{DB}$를 $\\overline{DE} : \\overline{BC}$와 같다고 잘못 생각한 경우이다. $\\overline{DE} : \\overline{BC}$와 같은 비는 $\\overline{AD} : \\overline{AB}$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:06:06.67946+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "$\\overline{DE}$의 길이를 주고, 그 길이가 되기 위한 $\\overline{AD}$의 길이를 거꾸로 구하게 했다. $\\overline{AB}$가 아닌 $\\overline{DB}$의 길이를 이용해야 한다.",
@@ -1435,7 +1581,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:04:55.039137+00:00",
@@ -1462,36 +1608,379 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:45:40.249463+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "body": "그림과 같이 점 $D$는 $\\overline{AB}$ 위에, 점 $E$는 $\\overline{AC}$ 위에 있고, $\\overline{DE} \\parallel \\overline{BC}$이다. $AD=6\\,\\mathrm{cm}$, $DB=3\\,\\mathrm{cm}$, $EC=4\\,\\mathrm{cm}$이다.\n\n$\\triangle ADE$의 세 변의 길이의 합이 $20\\,\\mathrm{cm}$일 때, $BC$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "$3\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$6\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$9\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$12\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$15\\,\\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:43:27.603915+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$AD:DB=6:3=2:1$이므로 $AE:EC=2:1$이다. 따라서 $AE=8\\,\\mathrm{cm}$이고, $DE=20-6-8=6\\,\\mathrm{cm}$이다.\n\n$AD:AB=6:9=2:3$이므로 $DE:BC=2:3$이다. 따라서 $BC=9\\,\\mathrm{cm}$이다.\n\n$AD:DB$를 $DE:BC$와 같다고 생각하면 $BC=3\\,\\mathrm{cm}$를 고를 수 있다. $DE$와 $BC$의 길이의 비는 $AD$와 $AB$의 길이의 비와 같다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 8.0,
+            "y": 8.94427191
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 5.33333333,
+            "y": 5.96284794
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "3 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "?",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:43:27.4883+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "삼각형의 세 변의 길이의 합을 이용하여 $DE$의 길이를 구한 뒤 평행선의 성질을 적용해야 한다.",
+      "id": "a439673e-f532-4a69-a0da-90964bee20c7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:42:36.447755+00:00",
+          "issues": [
+            "application-a가 실제로 적용되지 않았다. 주어진 선분의 길이로 비례 관계를 바로 이용하여 DF를 구하는 일반적인 길이 계산 문제이며, 결과로부터 조건을 찾는 역방향 문제가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:43:02.500876+00:00",
+          "issues": [
+            "application-a 불충족: EC와 AE의 관계를 조건으로 주고 DE의 길이를 구하는 일반적인 성질 적용 문제이며, 주어진 결과로부터 조건을 거꾸로 찾는 문제가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T04:43:27.487948+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:55.972446+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "body": "그림과 같이 점 $D$는 $\\overline{AB}$ 위에, 점 $E$는 $\\overline{AC}$ 위에 있고, $\\overline{DE} \\parallel \\overline{BC}$이다. $AD=9\\,\\mathrm{cm}$, $BC=10\\,\\mathrm{cm}$이다.\n\n$DE$의 길이가 $BC$의 길이보다 $4\\,\\mathrm{cm}$ 짧을 때, $DB$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$5\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 5,
+          "text": "$15\\,\\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:13:43.102654+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$DE=10-4=6\\,\\mathrm{cm}$이다. $\\overline{DE} \\parallel \\overline{BC}$이므로 $AD:AB=DE:BC=6:10=3:5$이다. 따라서 $AB=15\\,\\mathrm{cm}$이고, $DB=15-9=6\\,\\mathrm{cm}$이다.\n\n⑤는 $AD:DB$를 $DE:BC$와 같다고 생각한 경우이다. $DE:BC$와 같은 비는 $AD:DB$가 아니라 $AD:AB$이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 12.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -9.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": -5.4,
+            "y": 4.8
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 0.6,
+            "y": 4.8
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "9 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "10 cm",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:13:42.999733+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "$DE$가 $BC$보다 $4\\,\\mathrm{cm}$ 짧다는 문장을 길이의 관계로 바꾼 뒤, 평행선 사이의 선분의 길이의 비를 적용해야 한다.",
+      "id": "1d447826-acfb-4ccb-bb88-e7bc28bfaf39",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:13:42.999506+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T12:07:07.94951+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C1-성질적용",
       "body": "삼각형 $ABC$에서 점 $D$는 선분 $AB$ 위에, 점 $E$는 선분 $AC$ 위에 있다. $\\overline{DE} \\parallel \\overline{BC}$이고 $\\overline{AB}=15$ cm이다.\n\n두 선분 $DE$, $BC$의 길이의 합은 $20$ cm이다. 선분 $BC$는 선분 $DE$보다 $4$ cm 더 길다. 선분 $DB$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4$ cm"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$5$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$6$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M1",
           "no": 5,
@@ -1500,8 +1989,9 @@
       ],
       "created_at": "2026-11-11T11:50:41.766059+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.678666+00:00",
       "explanation": "선분 $DE$의 길이를 $x$ cm라 하면 선분 $BC$의 길이는 $(x+4)$ cm이다. 따라서 $x+(x+4)=20$에서 $x=8$이다. 즉, $\\overline{DE}=8$ cm, $\\overline{BC}=12$ cm이다.\n\n$\\overline{DE} \\parallel \\overline{BC}$이므로 $\\overline{AD}:\\overline{AB}=8:12=2:3$이다. 따라서 $\\overline{AD}=10$ cm이고, $\\overline{DB}=15-10=5$ cm이다.\n\n⑤는 $\\overline{DE}:\\overline{BC}$를 $\\overline{AD}:\\overline{DB}$와 같다고 잘못 생각한 답이다. $\\overline{DE}:\\overline{BC}$는 $\\overline{AD}:\\overline{AB}$와 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:50:41.62314+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "두 선분의 길이의 합과 차를 나타낸 문장을 식으로 바꾸어 각 길이를 구한 뒤, 평행선에서 생기는 선분의 길이의 비를 적용한다.",
@@ -1512,7 +2002,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:50:41.623058+00:00",
@@ -1523,36 +2013,202 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:14:55.997853+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "body": "다음 그림의 삼각형 $ABC$에서 점 $D$는 변 $AB$ 위에, 점 $E$는 변 $AC$ 위에 있다. $\\overline{DE}\\parallel\\overline{BC}$이고, $AD=4\\text{ cm}$, $DB=6\\text{ cm}$, $DE=6\\text{ cm}$이다. $BC$의 길이를 구하시오.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$15\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$18\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:11:33.971987+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB=4+6=10\\text{ cm}$이다. $\\overline{DE}\\parallel\\overline{BC}$이므로 $AD:AB=DE:BC$이다. 따라서 $4:10=6:BC$이므로 $BC=15\\text{ cm}$이다. $AD:DB=DE:BC$로 잘못 세우면 $BC=9\\text{ cm}$가 나온다. $DE$와 $BC$의 길이의 비는 $AD$와 $DB$가 아니라 $AD$와 $AB$의 길이의 비와 같다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 8.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": -2.4,
+            "y": 4.8
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 3.6,
+            "y": 4.8
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6 cm",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "?",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:11:33.922214+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "50abe5eb-0890-4207-9e7d-fc14f01026d9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:11:33.921906+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T12:07:07.986594+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C1-성질적용",
       "body": "삼각형 $ABC$의 변 $AB$ 위에 두 끝점이 아닌 점 $D$가 있고, 변 $AC$ 위에 두 끝점이 아닌 점 $E$가 있다. $DE \\parallel BC$이고, $AD=4$, $DB=6$, $BC=15$일 때, $DE$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M1",
           "no": 4,
           "text": "$10$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1561,8 +2217,9 @@
       ],
       "created_at": "2026-11-11T11:48:56.203729+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.706829+00:00",
       "explanation": "$AB=4+6=10$이다. $DE \\parallel BC$이므로 $AD:AB=DE:BC$이다. 따라서 $4:10=DE:15$에서 $DE=6$이다.\n$10$을 골랐다면 $AD:DB$를 $DE:BC$와 같다고 잘못 생각했을 수 있다. $DE:BC$와 같은 비는 $AD:DB$가 아니라 $AD:AB$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:56.057339+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1573,7 +2230,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:48:56.057217+00:00",
@@ -1590,30 +2247,35 @@
       "body": "삼각형 $ABC$의 변 $AB$ 위에 두 끝점이 아닌 점 $D$가 있고, 변 $AC$ 위에 두 끝점이 아닌 점 $E$가 있다. $DE \\parallel BC$이고 $AD=3$, $DB=9$, $DE=4$일 때, $BC$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$10$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M1",
           "no": 3,
           "text": "$12$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$16$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1622,8 +2284,9 @@
       ],
       "created_at": "2026-11-11T11:49:08.411597+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.752308+00:00",
       "explanation": "$AB=3+9=12$이다. $DE \\parallel BC$이므로 $AD:AB=DE:BC$이다. 따라서 $3:12=4:BC$에서 $BC=16$이다. $12$를 고른 경우에는 $AD:DB$를 $DE:BC$와 같다고 잘못 생각했을 수 있다. $DE:BC$와 같은 비는 $AD:AB$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:08.263249+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1634,10 +2297,171 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:49:08.263092+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:14:56.021296+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-성질적용",
+      "body": "다음 그림의 삼각형 $ABC$에서 점 $D$는 변 $AB$ 위에, 점 $E$는 변 $AC$ 위에 있다. $\\overline{DE}\\parallel\\overline{BC}$이고, $AD=2\\text{ cm}$, $DB=4\\text{ cm}$, $BC=18\\text{ cm}$이다. 평행선 사이의 선분의 길이의 비를 이용하여 $DE$의 길이를 구하시오.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 4,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:11:58.300094+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$AB=2+4=6\\text{ cm}$이다. $\\overline{DE}\\parallel\\overline{BC}$이므로 $AD:AB=DE:BC$이다. 따라서 $2:6=DE:18$이므로 $DE=6\\text{ cm}$이다. ④를 골랐다면 $AD:DB=DE:BC$로 잘못 생각한 것이다. $DE$와 $BC$의 비는 $AD$와 $DB$의 비가 아니라 $AD$와 $AB$의 비와 같다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -3.6,
+            "y": 1.2
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 14.4,
+            "y": 1.2
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": -1.2,
+            "y": 4.4
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 4.8,
+            "y": 4.4
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "x",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "18",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:11:58.250742+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4b75bf82-052a-440c-9bf1-3facd39cac6d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:11:58.250293+00:00",
           "issues": [],
           "number": 1
         }
@@ -1651,30 +2475,35 @@
       "body": "삼각형 $ABC$에서 점 $D$는 선분 $AB$ 위의 점이고 $A$, $B$와 다르다. 점 $E$는 선분 $AC$ 위의 점이고 $A$, $C$와 다르다. $DE \\parallel BC$이다.\n\n민지는 ‘$DE \\parallel BC$이므로 $AD : DB = DE : BC$이다.’라고 말했다. 민지의 말에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M1",
           "no": 1,
           "text": "평행하므로 민지의 식은 언제나 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$AD = DB$인 경우에만 민지의 식은 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$DE$ 대신 $AE$를 써야 하므로 민지의 식은 틀리다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$DB$ 대신 $AB$를 써야 하므로 민지의 식은 틀리다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1683,8 +2512,9 @@
       ],
       "created_at": "2026-11-11T13:07:46.460806+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.609461+00:00",
       "explanation": "$DE \\parallel BC$이므로 $AD : AB = DE : BC$이다. $DB$는 $AB$보다 짧으므로 $AD : DB$는 $AD : AB$와 다르다. 따라서 민지의 말은 틀리다.\n\n①을 골랐다면 작은 삼각형과 큰 삼각형의 변의 비를 나타낼 때 $AB$ 대신 $DB$를 쓸 수 있다고 잘못 생각한 것이다. 두 변에서 평행선으로 나누어진 선분의 비를 나타내는 식은 $AD : DB = AE : EC$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:07:46.419564+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민지가 평행선으로 생긴 선분의 비를 잘못 세운 식을 제시하고, 그 식이 옳은지 판단하게 했다.",
@@ -1695,7 +2525,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:07:46.419392+00:00",
@@ -1706,36 +2536,347 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:14:56.047442+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "body": "다음 그림에서 점 $D$는 $\\overline{AB}$ 위에, 점 $E$는 $\\overline{AC}$ 위에 있고, 두 점은 각 변의 양 끝점이 아니다. $\\overline{DE}\\parallel\\overline{BC}$이다.\n\n다음은 다섯 학생이 선분의 길이의 비에 대해 한 주장이다. 점 $D$의 위치에 관계없이 항상 옳은 주장을 한 학생은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "민수: $\\overline{AD}:\\overline{DB}=\\overline{DE}:\\overline{BC}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "지우: $\\overline{AD}:\\overline{AB}=\\overline{BC}:\\overline{DE}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "서준: $\\overline{AD}:\\overline{DB}=(\\overline{BC}-\\overline{DE}):\\overline{DE}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "하은: $\\overline{AD}:\\overline{DB}=\\overline{DE}:(\\overline{BC}-\\overline{DE})$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "도윤: $\\overline{DB}:\\overline{AB}=\\overline{DE}:\\overline{BC}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:12:29.800119+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\overline{DE}\\parallel\\overline{BC}$이므로 $\\overline{AD}:\\overline{AB}=\\overline{DE}:\\overline{BC}$이다. 따라서 남은 부분끼리의 비도 같아서 $\\overline{AD}:\\overline{DB}=\\overline{DE}:(\\overline{BC}-\\overline{DE})$이다. 정답은 ④이다.\n\n①은 $\\overline{AD}$와 $\\overline{DB}$의 비를 $\\overline{DE}$와 전체인 $\\overline{BC}$의 비와 같다고 생각한 것이다. $\\overline{DB}$에 비교할 길이는 전체 $\\overline{BC}$가 아니라 남은 길이인 $\\overline{BC}-\\overline{DE}$이다. ②는 한쪽 비의 순서를 거꾸로 썼다. ③과 ⑤는 일부 위치에서는 성립하지만 항상 성립하지는 않는다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": -1.6,
+            "y": 3.6
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 2.4,
+            "y": 3.6
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:12:29.652392+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 주장을 비교하여 항상 옳은 주장을 고르게 했다. 특히 전체와 남은 부분을 구별해야 민수의 주장을 판단할 수 있다.",
+      "id": "7ef3afc0-99e3-4c24-9896-565aad371ba6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:12:29.651846+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:56.072708+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "body": "그림과 같이 삼각형 $ABC$의 변 $AB$ 위에 점 $D$가, 변 $AC$ 위에 점 $E$가 있다. 두 점은 각 변의 양 끝점이 아니다. $\\overline{DE}\\parallel\\overline{BC}$이고 $\\overline{AD}:\\overline{DB}=2:3$이다.\n\n민지는 “$\\overline{AD}:\\overline{DB}=\\overline{DE}:\\overline{BC}$이므로 $\\overline{DE}:\\overline{BC}=2:3$이다.”라고 말했다. 민지의 말을 바르게 판단한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "옳다. $\\overline{AD}:\\overline{DB}=2:3$이므로 $\\overline{DE}:\\overline{BC}=2:3$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "틀리다. $\\overline{AD}:\\overline{AB}=2:5$이므로 $\\overline{DE}:\\overline{BC}=2:5$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "틀리다. $\\overline{DB}:\\overline{AB}=3:5$이므로 $\\overline{DE}:\\overline{BC}=3:5$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. $\\overline{AB}:\\overline{AD}=5:2$이므로 $\\overline{DE}:\\overline{BC}=5:2$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. $\\overline{DE}$의 길이는 $\\overline{BC}$의 절반이므로 $\\overline{DE}:\\overline{BC}=1:2$이다."
+        }
+      ],
+      "created_at": "2026-11-12T04:12:56.260113+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\overline{AD}:\\overline{DB}=2:3$이므로 $\\overline{AD}:\\overline{AB}=2:5$이다. $\\overline{DE}\\parallel\\overline{BC}$이므로 $\\overline{AD}:\\overline{AB}=\\overline{DE}:\\overline{BC}$이다. 따라서 $\\overline{DE}:\\overline{BC}=2:5$이고 정답은 ②이다.\n\n①은 $\\overline{AD}:\\overline{AB}$ 대신 $\\overline{AD}:\\overline{DB}$를 사용한 것이다. ③은 $\\overline{AD}$ 대신 $\\overline{DB}$를 사용했고, ④는 비의 순서를 거꾸로 썼다. ⑤는 $D$가 중점이 아닌데도 $\\overline{DE}$의 길이를 $\\overline{BC}$의 절반으로 생각한 것이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 5.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": -1.6,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 2.4,
+            "y": 3.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:12:56.152396+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지가 두 선분의 비를 잘못 세운 말을 보고 그 옳고 그름을 판단하게 했다. 보기마다 판단과 그 이유를 함께 제시했다.",
+      "id": "0d2d93b6-3445-43a6-a310-cebdba09c191",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:12:56.151860+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.141673+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C1-오개념판별",
       "body": "삼각형 $PQR$에서 점 $S$는 선분 $PQ$ 위에 있고, 점 $U$는 선분 $SQ$ 위에 있다. 네 점 $P$, $S$, $U$, $Q$는 서로 다르다. 점 $T$는 선분 $PR$ 위에 있고, 점 $V$는 선분 $TR$ 위에 있다. 네 점 $P$, $T$, $V$, $R$는 서로 다르다.\n\n$ST \\parallel QR$, $UV \\parallel QR$이고, $PS=2$, $SU=1$, $UQ=3$이다.\n\n다섯 학생이 $ST : UV$에 대해 한 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M1",
           "no": 1,
           "text": "$ST : UV = PS : SU$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$ST : UV = PS : PQ$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$ST : UV = SU : PU$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$ST : UV = PU : PS$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1744,8 +2885,9 @@
       ],
       "created_at": "2026-11-11T13:08:11.96902+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.645687+00:00",
       "explanation": "$ST \\parallel UV$이므로 삼각형 $PST$와 삼각형 $PUV$에서 $ST : UV = PS : PU$이다. $PU=PS+SU=3$이므로 그 비는 $2 : 3$이다.\n\n①은 작은 삼각형의 변 $ST$와 큰 삼각형의 변 $UV$의 비를 작은 삼각형의 변 $PS$와 나머지 부분 $SU$의 비로 잘못 생각한 것이다. $SU$가 아니라 큰 삼각형의 변 $PU$와 비교해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:08:11.94152+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 평행한 선분이 있는 상황에서 다섯 학생의 말을 판단하게 했다. 어느 두 삼각형을 살펴보아야 하는지 생각해야 한다.",
@@ -1756,7 +2898,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:08:11.941440+00:00",
@@ -1773,30 +2915,35 @@
       "body": "삼각형 $ABC$에서 점 $D$는 선분 $AB$의 양 끝점이 아닌 점이고, 점 $E$는 선분 $AC$의 양 끝점이 아닌 점이다. $DE \\parallel BC$, $AD=2$, $DB=3$이다.\n\n한 학생이 $AD:DB=DE:BC$라고 식을 세웠다. 이 학생의 식에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$AD:DB=BC:DE$이므로 학생의 식에서 $DE$와 $BC$의 순서를 바꾸어야 한다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$DE:BC$는 작은 삼각형의 변과 큰 삼각형의 변의 길이의 비이므로, $AD:DB$가 아니라 $AD:AB$와 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M1",
           "no": 3,
           "text": "$AD:DB$와 $DE:BC$는 모두 작은 삼각형의 변과 큰 삼각형의 변의 길이의 비이므로 학생의 식은 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$DE:BC$는 큰 삼각형의 변과 작은 삼각형의 변의 길이의 비이므로 학생의 식은 옳지 않다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1805,8 +2952,9 @@
       ],
       "created_at": "2026-11-11T13:06:55.925073+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.680164+00:00",
       "explanation": "$DE \\parallel BC$이므로 $AD:AB=DE:BC$이다. $AB=5$이므로 $DE:BC=2:5$이다. 하지만 $AD:DB=2:3$이므로 학생의 식은 옳지 않다.\n\n③은 $AD:DB$를 작은 삼각형의 변과 큰 삼각형의 변의 길이의 비로 잘못 생각한 것이다. $DB$가 아니라 $AB$를 써야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:06:55.897383+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1817,7 +2965,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:06:26.182128+00:00",
@@ -1836,36 +2984,363 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:14:56.099243+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "body": "다음 그림에서 점 $D$는 $\\overline{AB}$ 위에, 점 $E$는 $\\overline{AC}$ 위에 있고, $\\overline{DE} \\parallel \\overline{BC}$이다. 항상 옳은 식은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$AD:AB=BC:DE$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 2,
+          "text": "$AD:DB=DE:BC$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$AD:AB=DE:BC$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$AD:AB=EC:AC$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$AD:DB=AC:EC$"
+        }
+      ],
+      "created_at": "2026-11-12T04:11:36.38755+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\triangle ADE$와 $\\triangle ABC$는 닮음이다. 따라서 $AD:AB=DE:BC$이므로 정답은 ③이다. ②는 작은 삼각형과 큰 삼각형의 변의 길이를 비교할 때 $AB$ 대신 $DB$를 사용한 식이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 3.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 10.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 1.8,
+            "y": 3.6
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 5.8,
+            "y": 3.6
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:11:36.305529+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "49a23a88-4ddf-49f2-9425-aa584b6e9c78",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:11:36.305436+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:56.119938+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C1-오개념판별",
+      "body": "다음 그림에서 점 $D$는 $\\overline{AB}$ 위에, 점 $E$는 $\\overline{AC}$ 위에 있고, $\\overline{DE} \\parallel \\overline{BC}$이다. $\\overline{DE}=4$, $\\overline{BC}=10$이다.\n\n지우는 “$\\overline{DE}:\\overline{BC}=2:5$이므로 $\\overline{AD}:\\overline{DB}=2:5$이다.”라고 말했다. 지우의 말에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M1",
+          "no": 1,
+          "text": "$2:5$는 $\\overline{AD}$와 $\\overline{DB}$의 길이의 비이므로 지우의 말은 옳다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2:5$는 $\\overline{DB}$와 $\\overline{AB}$의 길이의 비이므로 지우의 말은 옳지 않다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2:5$는 $\\overline{AD}$와 $\\overline{AB}$의 길이의 비이므로 지우의 말은 옳지 않다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2:5$는 $\\overline{AB}$와 $\\overline{AD}$의 길이의 비이므로 지우의 말은 옳지 않다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2:5$는 $\\overline{DB}$와 $\\overline{AD}$의 길이의 비이므로 지우의 말은 옳지 않다."
+        }
+      ],
+      "created_at": "2026-11-12T04:12:01.690446+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$\\overline{DE} \\parallel \\overline{BC}$이므로 $\\overline{AD}:\\overline{AB}=\\overline{DE}:\\overline{BC}=2:5$이다. 따라서 $\\overline{AD}:\\overline{DB}=2:3$이다. ①은 $\\overline{DE}:\\overline{BC}$를 $\\overline{AD}:\\overline{DB}$와 같다고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": -2.0,
+            "y": 3.6
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 2.0,
+            "y": 3.6
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "4",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "10",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:12:01.616455+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7d41de48-6ebb-47a0-89f1-c1581d1e2114",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:12:01.615965+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.211073+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C1-오개념판별",
       "body": "삼각형 $PQR$에서 점 $S$는 선분 $QR$의 양 끝점이 아닌 점이고, 점 $T$는 선분 $PR$의 양 끝점이 아닌 점이다. $ST \\parallel PQ$이다. 여기서 $RS$와 같은 기호는 선분의 길이를 나타낸다.\n\n항상 옳은 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M1",
           "no": 1,
           "text": "$RS:SQ=ST:PQ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$RS:RQ=ST:PQ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$RS:SQ=RT:RP$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$RS:RQ=PQ:ST$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1874,8 +3349,9 @@
       ],
       "created_at": "2026-11-11T13:07:19.322239+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.723291+00:00",
       "explanation": "$ST \\parallel PQ$이므로 작은 삼각형 $RST$와 큰 삼각형 $RQP$에서 $RS:RQ=ST:PQ$이다. 따라서 정답은 ②이다.\n\n①은 선분 $RQ$의 두 부분인 $RS$와 $SQ$의 비를 $ST$와 $PQ$의 비와 같다고 잘못 생각한 식이다. $ST:PQ$와 비교해야 하는 비는 $RS:RQ$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:07:19.287596+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1886,7 +3362,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:07:19.287491+00:00",
@@ -1897,36 +3373,240 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:14:56.144591+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "body": "다음 그림에서 $D$, $E$는 각각 $\\overline{AB}$, $\\overline{AC}$의 중점이고, $F$, $G$는 각각 $\\overline{AD}$, $\\overline{AE}$의 중점이다. $\\overline{DE}$와 $\\overline{FG}$의 길이의 합이 $9\\text{ cm}$일 때, $\\overline{BC}$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 1,
+          "text": "$1.5\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 2,
+          "text": "$4.5\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:12:16.01035+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$D$, $E$가 두 변의 중점이므로 $\\overline{DE}$의 길이는 $\\overline{BC}$의 길이의 절반이다. 또 $F$, $G$가 두 변의 중점이므로 $\\overline{FG}$의 길이는 $\\overline{DE}$의 길이의 절반이다. 따라서 세 선분의 길이의 비는 $\\overline{FG}:\\overline{DE}:\\overline{BC}=1:2:4$이다. 앞의 두 길이의 합이 $9\\text{ cm}$이므로 $\\overline{BC}$의 길이는 $9\\times\\frac{4}{3}=12\\text{ cm}$이다.\n중점을 연결한 선분의 길이가 나머지 변의 길이와 같다고 잘못 생각하면 ②를, 나머지 변의 길이의 $2$배라고 잘못 생각하면 ①을 고를 수 있다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": -2.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": -1.0,
+            "y": 4.5
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": true,
+            "x": 2.0,
+            "y": 4.5
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:12:15.955122+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 선분의 길이의 합을 먼저 주고, 중점을 연결한 선분의 성질을 거꾸로 써서 나머지 변의 길이를 구하게 한다.",
+      "id": "575c7472-2308-4cc1-b682-dce1b7a864e3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:12:15.954588+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.239902+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C2-성질적용",
       "body": "삼각형 $ABC$에서 점 $D$, $E$는 각각 선분 $AB$, $AC$의 중점이다. 점 $F$, $G$는 각각 선분 $AD$, $AE$의 중점이다. 두 선분 $DE$와 $FG$의 길이의 합이 $18$일 때, 선분 $BC$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M4",
           "no": 1,
           "text": "$3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M4",
           "no": 2,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$12$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$18$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1935,8 +3615,9 @@
       ],
       "created_at": "2026-11-11T13:08:48.736065+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.529303+00:00",
       "explanation": "삼각형 $ABC$에서 $DE$는 $BC$와 평행하고 길이는 $BC$의 절반이다. 삼각형 $ADE$에서 $FG$는 $DE$와 평행하고 길이는 $DE$의 절반이다. 따라서 $DE+FG=\\frac{1}{2}BC+\\frac{1}{4}BC=\\frac{3}{4}BC=18$이므로 $BC=24$이다.\n두 중점을 연결한 선분의 길이가 나머지 변의 길이와 같다고 생각하면 $9$를, 나머지 변의 길이의 $2$배라고 생각하면 $3$을 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:08:48.692011+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 중점을 연결한 선분들의 길이의 합을 주고, 이를 거꾸로 이용하여 처음 삼각형의 변의 길이를 구하게 했다.",
@@ -1947,7 +3628,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:08:48.691872+00:00",
@@ -1958,36 +3639,202 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:14:56.174921+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "body": "다음 그림에서 $D$, $E$는 각각 $\\overline{AB}$, $\\overline{AC}$의 중점이다. $\\overline{AB}=\\overline{AC}=10\\text{ cm}$이고, 사각형 $BDEC$의 둘레는 $28\\text{ cm}$이다. $\\overline{BC}$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 1,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 2,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$14\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$18\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:12:42.023886+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$D$, $E$는 두 변의 중점이므로 $\\overline{BD}=\\overline{EC}=5\\text{ cm}$이고, $\\overline{DE}\\parallel\\overline{BC}$, $\\overline{DE}=\\frac{1}{2}\\overline{BC}$이다. 사각형 $BDEC$의 둘레에서 $\\overline{BD}$와 $\\overline{EC}$의 길이를 빼면 $\\overline{DE}+\\overline{BC}=18\\text{ cm}$이다. 따라서 $\\overline{BC}=12\\text{ cm}$이다. $\\overline{DE}$의 길이가 $\\overline{BC}$의 길이와 같다고 생각하면 $9\\text{ cm}$, 두 배라고 생각하면 $6\\text{ cm}$를 고를 수 있다. 실제로는 그 절반이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 8.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 9.0,
+            "y": 4.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "?",
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:12:41.955331+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "사각형의 둘레를 네 선분의 길이의 합으로 나타내고, 두 중점을 연결한 선분의 길이가 나머지 변의 절반임을 적용해야 한다.",
+      "id": "d607a26e-812e-4473-a975-3ebc9f1c0b5e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:12:41.955236+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.267513+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C2-성질적용",
       "body": "삼각형 $ABC$에서 점 $D$, $E$, $F$는 각각 선분 $AB$, $BC$, $CA$의 중점이다. 선분 $DE$의 길이는 $4\\text{ cm}$, 선분 $EF$의 길이는 $3\\text{ cm}$이다. 삼각형 $ABC$의 둘레가 $24\\text{ cm}$일 때, 선분 $DF$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$5\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$10\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M4",
           "no": 5,
@@ -1996,8 +3843,9 @@
       ],
       "created_at": "2026-11-11T13:09:15.497793+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.567174+00:00",
       "explanation": "두 변의 중점을 연결한 선분의 길이는 나머지 변의 길이의 절반이다. 따라서 $AC=2DE=8\\text{ cm}$, $AB=2EF=6\\text{ cm}$이다. 삼각형 $ABC$의 둘레가 $24\\text{ cm}$이므로 $BC=24-8-6=10\\text{ cm}$이다. 따라서 $DF=\\dfrac{1}{2}BC=5\\text{ cm}$이다.\n\n$17\\text{ cm}$를 골랐다면 두 변의 중점을 연결한 선분의 길이가 나머지 변의 길이와 같다고 잘못 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:09:15.468958+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "삼각형의 둘레가 주어졌을 때 두 변의 중점을 연결한 선분의 길이를 거꾸로 구한다.",
@@ -2008,7 +3856,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:09:15.468753+00:00",
@@ -2019,36 +3867,202 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:14:56.199508+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "body": "다음 그림에서 점 $D$, $E$는 각각 삼각형 $ABC$의 변 $AB$, $AC$의 중점이다. $BC=12\\,\\mathrm{cm}$일 때, 선분 $DE$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$3\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$4\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$6\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 4,
+          "text": "$12\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 5,
+          "text": "$24\\,\\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:11:31.634121+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "삼각형의 두 변의 중점을 연결한 선분 $DE$는 나머지 변 $BC$와 평행하고, 그 길이는 $BC$의 절반이다. 따라서 $DE=12\\div 2=6\\,\\mathrm{cm}$이다. $12\\,\\mathrm{cm}$를 골랐다면 $DE$의 길이가 $BC$의 길이와 같다고 잘못 생각한 것이다. $24\\,\\mathrm{cm}$를 골랐다면 $DE$의 길이가 $BC$의 길이의 2배라고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 4.0,
+            "y": 8.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 2.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 8.0,
+            "y": 4.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "12 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:11:31.571613+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8ab77874-e4db-4c59-9599-8c3b680f3b41",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:11:31.571482+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.294632+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C2-성질적용",
       "body": "삼각형 $ABC$에서 점 $D$는 변 $AB$의 중점이고, 점 $E$는 변 $AC$의 중점이다. $BC=12\\ \\mathrm{cm}$일 때, 선분 $DE$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$6\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$8\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M4",
           "no": 4,
           "text": "$12\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M4",
           "no": 5,
@@ -2057,8 +4071,9 @@
       ],
       "created_at": "2026-11-11T13:08:23.048416+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.604143+00:00",
       "explanation": "두 변의 중점을 연결한 선분 $DE$는 나머지 변 $BC$와 평행하고, 그 길이는 $BC$의 절반이다. 따라서 $DE=6\\ \\mathrm{cm}$이다. $12\\ \\mathrm{cm}$나 $24\\ \\mathrm{cm}$를 골랐다면 $DE$의 길이가 $BC$의 길이와 같거나 그 $2$배라고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:08:23.025228+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2069,7 +4084,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:08:23.025075+00:00",
@@ -2086,30 +4101,35 @@
       "body": "삼각형 $PQR$에서 점 $M$은 변 $PQ$의 중점이고, 점 $N$은 변 $QR$의 중점이다. $MN=7\\ \\mathrm{cm}$일 때, 선분 $PR$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M4",
           "no": 1,
           "text": "$3.5\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M4",
           "no": 2,
           "text": "$7\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$10\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$14\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2118,8 +4138,9 @@
       ],
       "created_at": "2026-11-11T13:08:33.135637+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.63126+00:00",
       "explanation": "두 변의 중점을 연결한 선분 $MN$은 나머지 변 $PR$과 평행하고, 그 길이는 $PR$의 절반이다. 따라서 $PR=7\\times 2=14\\ \\mathrm{cm}$이다. ①은 $MN$의 길이가 $PR$의 2배라고 잘못 생각한 경우이고, ②는 두 선분의 길이가 같다고 잘못 생각한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:08:33.114673+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2130,10 +4151,171 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:08:33.114605+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:14:56.227487+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-성질적용",
+      "body": "다음 그림과 같이 삼각형 $ABC$에서 점 $P$, $Q$는 각각 변 $AB$, $BC$의 중점이다. $PQ=7\\,\\mathrm{cm}$일 때, 선분 $AC$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 1,
+          "text": "$3.5\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M4",
+          "no": 2,
+          "text": "$7\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10.5\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$14\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$28\\,\\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:11:49.116508+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 변의 중점을 연결한 선분 $PQ$는 나머지 변 $AC$와 평행하고, 그 길이는 $AC$의 절반이다. 따라서 $AC=7\\times 2=14\\,\\mathrm{cm}$이다. $7\\,\\mathrm{cm}$를 골랐다면 두 선분의 길이가 같다고 생각한 것이다. $3.5\\,\\mathrm{cm}$를 골랐다면 중점을 연결한 선분의 길이가 나머지 변의 길이의 2배라고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 14.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "P",
+            "show_name": true,
+            "x": 2.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "Q",
+            "show_name": true,
+            "x": 9.0,
+            "y": 3.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "P"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "Q"
+          },
+          {
+            "dashed": false,
+            "from": "Q",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": "7 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "Q"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:11:49.05071+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "e3ce34ad-e5ac-4edb-b80d-0510e1074ba3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:11:49.050154+00:00",
           "issues": [],
           "number": 1
         }
@@ -2148,8 +4330,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:10:36.305263+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.597935+00:00",
       "explanation": "두 점이 중점이므로 두 변의 길이와 각의 크기가 달라져도 $AD:AB=AE:AC=1:2$이다. 두 삼각형의 그 사이의 각은 $\\angle BAC$로 같으므로 $\\triangle ADE$와 $\\triangle ABC$는 닮음이다. 닮음비가 $1:2$이므로 $DE:BC=1:2$이다. $DE$가 $BC$와 같거나 $BC$의 두 배라고 생각하면 두 삼각형의 닮음비를 잘못 적용한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:10:36.2753+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "문제에서 주어진 두 변의 길이와 각의 크기가 달라져도 관계가 성립하는 이유를 설명하도록 했다.",
@@ -2184,7 +4367,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:10:36.275193+00:00",
@@ -2195,6 +4378,338 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:14:56.261091+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "body": "다음 그림에서 점 $D$, $E$는 각각 $\\overline{AB}$, $\\overline{AC}$의 중점이다. $\\overline{AB}=4$, $\\overline{BC}=6$이고, $\\angle ABC=90°$이다.\n\n그림에서 $\\overline{DE}$의 길이를 구하시오. 또 삼각형의 모양과 크기가 그림과 달라져도 $D$, $E$가 각각 두 변의 중점일 때, $\\overline{DE}$와 $\\overline{BC}$의 길이의 비가 일정한 이유를 두 삼각형의 닮음을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:12:33.065953+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$D$, $E$가 중점이므로 $\\overline{AD}:\\overline{AB}=\\overline{AE}:\\overline{AC}=1:2$이다. 두 삼각형 $ADE$와 $ABC$는 $\\angle A$를 공유하므로, 두 변의 길이의 비와 그 끼인각이 각각 같아 닮음이다. 따라서 $\\overline{DE}:\\overline{BC}=1:2$이고, 그림에서 $\\overline{DE}=3$이다.\n\n이 까닭은 중점이라는 사실만 이용하므로 삼각형의 모양과 크기가 달라도 성립한다. $\\overline{DE}$가 $\\overline{BC}$와 같거나 그 두 배라고 생각하면 두 삼각형의 닮음비를 거꾸로 보거나 잘못 적용한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "90°",
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "B"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 3.0,
+            "y": 2.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "2",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "2",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:12:32.8077+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "그림의 삼각형뿐 아니라 모양과 크기가 다른 삼각형에서도 두 중점을 연결한 선분과 나머지 변의 길이의 비가 일정한 이유를 설명하게 한다.",
+      "id": "f50009ca-8322-4f29-8aa8-41f3693ad713",
+      "model": "gpt-6.1-terra",
+      "model_answer": "그림에서 $\\overline{DE}=3$이다. 삼각형의 모양과 크기가 달라도 $D$, $E$가 중점이므로 $\\overline{AD}:\\overline{AB}=\\overline{AE}:\\overline{AC}=1:2$이고, 두 삼각형은 $\\angle A$를 공유한다. 따라서 두 변의 길이의 비와 그 끼인각이 각각 같으므로 $\\triangle ADE\\sim\\triangle ABC$이다. 닮음비가 $1:2$이므로 $\\overline{DE}:\\overline{BC}=1:2$로 일정하다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "그림에서 $\\overline{DE}$의 길이를 $3$으로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": false
+        },
+        {
+          "description": "두 점이 중점이므로 $\\overline{AD}:\\overline{AB}=\\overline{AE}:\\overline{AC}=1:2$임을 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 삼각형이 $\\angle A$를 공유함을 밝히고, 두 변의 길이의 비와 그 끼인각을 이용하여 두 삼각형이 닮음임을 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "닮음비를 이용하여 삼각형의 모양과 크기에 관계없이 $\\overline{DE}:\\overline{BC}=1:2$임을 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:12:32.807314+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:56.286587+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "body": "다음 그림에서 점 $D$, $E$는 각각 $\\overline{AB}$, $\\overline{AC}$의 중점이다. $\\overline{AB}=8$, $\\overline{AC}=6$이고, $\\angle BAC=60°$이다.\n\n지우는 “$\\angle DAE=\\angle BAC$이므로 $\\triangle ADE$와 $\\triangle ABC$는 닮음이다. 따라서 $\\overline{DE}$는 $\\overline{BC}$의 절반이다.”라고 설명했다.\n\n지우의 설명에서 부족한 점을 쓰고, 중점이라는 사실을 이용하여 설명을 완성하시오. 단, 주어진 길이와 각의 크기가 달라져도 성립하는 이유를 두 삼각형의 닮음을 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:13:05.207572+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "한 쌍의 각의 크기가 같다는 사실만으로는 두 삼각형이 닮음이라고 할 수 없다. $D$, $E$가 중점이므로 $\\overline{AD}:\\overline{AB}=\\overline{AE}:\\overline{AC}=1:2$이고, 그 끼인각은 같다. 따라서 $\\triangle ADE$와 $\\triangle ABC$의 닮음비는 $1:2$이다. 이 이유는 주어진 길이와 각의 크기가 달라져도 성립한다. $\\overline{DE}$의 길이가 $\\overline{BC}$와 같거나 그 두 배라고 생각하면 닮음비의 순서를 잘못 적용한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.196152423
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 1.5,
+            "y": 2.5980762115
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:13:05.134626+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "주어진 길이와 각의 크기가 달라져도 성립하는 이유를 설명하게 했다. 특정 수의 계산이 아니라 중점과 닮음을 근거로 사용해야 한다.",
+      "id": "2632bba7-fcda-47c9-95be-da70fc334090",
+      "model": "gpt-6.1-terra",
+      "model_answer": "한 쌍의 각이 같다는 사실만으로는 닮음이라고 할 수 없다. $D$, $E$가 중점이므로 $\\overline{AD}:\\overline{AB}=\\overline{AE}:\\overline{AC}=1:2$이다. 또 그 끼인각은 같으므로 $\\triangle ADE$와 $\\triangle ABC$는 닮음이고 닮음비는 $1:2$이다. 따라서 $\\overline{DE}:\\overline{BC}=1:2$이다. 이 설명은 주어진 길이와 각의 크기에 관계없이 성립한다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "한 쌍의 각이 같다는 사실만으로는 닮음이라고 할 수 없다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 점이 중점이므로 $\\overline{AD}:\\overline{AB}=\\overline{AE}:\\overline{AC}=1:2$임을 밝혔다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 쌍의 변의 길이의 비와 그 끼인각을 근거로 두 삼각형이 닮음이고 닮음비가 $1:2$임을 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "닮음비를 이용하여 $\\overline{DE}:\\overline{BC}=1:2$라고 썼다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:13:05.134380+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.382426+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C2-이유설명",
@@ -2202,8 +4717,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:11:51.618339+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.633854+00:00",
       "explanation": "$M$과 $N$은 각각 중점이므로 $CM:CB=CN:CA=1:2$이다. 또 $\\angle MCN$과 $\\angle BCA$는 같은 각이다. 따라서 두 변의 길이의 비와 그 끼인각으로부터 $\\triangle CMN$과 $\\triangle CBA$는 닮고, 닮음비는 $1:2$이다. 그러므로 $MN:BA=1:2$이고 $MN=4\\text{ cm}$이다. $AB$의 길이는 $8\\text{ cm}$이므로 민수의 말은 틀렸다. 두 중점을 이은 선분의 길이는 이 삼각형에서 나머지 변의 길이와 같지 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:11:51.599864+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민수의 주장이 틀렸음을 주어진 삼각형을 반례로 이용하여 보이게 한다. 선분의 길이를 닮음을 근거로 구한 뒤 나머지 변의 길이와 비교해야 한다.",
@@ -2240,7 +4756,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:11:13.368651+00:00",
@@ -2266,8 +4782,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:09:48.871309+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.666732+00:00",
       "explanation": "$D$, $E$가 중점이므로 $AD:AB=AE:AC=1:2$이다. 또 두 삼각형의 끼인각 $\\angle DAE$와 $\\angle BAC$는 같다. 따라서 두 삼각형은 닮았고, $DE:BC=1:2$이므로 $DE=5\\,\\mathrm{cm}$이다. $DE$가 $BC$와 같거나 $BC$의 2배라고 생각했다면 닮음비를 잘못 적용한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:09:48.853928+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2302,10 +4819,168 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:09:48.853809+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:14:56.313599+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "body": "그림에서 점 $D$, $E$는 각각 $\\overline{AB}$, $\\overline{AC}$의 중점이다. $\\angle BAC=90^\\circ$이고 $\\overline{BC}=10\\text{ cm}$이다. $\\overline{DE}$의 길이를 구하고, 두 삼각형의 닮음을 이용하여 그 이유를 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:11:38.255691+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 점 $D$, $E$가 중점이므로 $AD:AB=AE:AC=1:2$이다. 두 쌍의 변의 길이의 비가 같고 그 사이의 각이 같으므로 $\\triangle ADE$와 $\\triangle ABC$는 닮음이다. 따라서 $DE:BC=1:2$이므로 $DE=5\\text{ cm}$이다. $DE$가 $BC$와 같거나 $BC$의 $2$배라고 생각하면 두 삼각형의 닮음비를 잘못 적용한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "D",
+            "label": "90°",
+            "marks": 0,
+            "right": true,
+            "to": "E",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "10 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:11:38.199552+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c18d47c3-a062-4a02-8783-f3835cbb1460",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$D$, $E$가 중점이므로 $AD:AB=AE:AC=1:2$이다. 두 쌍의 변의 길이의 비가 같고 그 사이의 각 $A$가 같으므로 $\\triangle ADE$와 $\\triangle ABC$는 닮음이다. 따라서 $DE:BC=1:2$이므로 $DE=5\\text{ cm}$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 점이 중점임을 이용하여 $AD:AB=AE:AC=1:2$임을 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 쌍의 변의 길이의 비가 같고 그 사이의 각이 같다는 근거로 두 삼각형이 닮음임을 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 삼각형의 닮음비를 이용하여 $DE=5\\text{ cm}$를 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:11:38.199354+00:00",
           "issues": [],
           "number": 1
         }
@@ -2320,8 +4995,9 @@
       "choices": [],
       "created_at": "2026-11-11T13:10:10.511338+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:11:14.703867+00:00",
       "explanation": "$M$, $N$은 각각 선분 $PQ$, $PR$의 중점이므로 $PM:PQ=PN:PR=1:2$입니다. 두 삼각형은 그 사이의 각도 같으므로 $\\triangle PMN$과 $\\triangle PQR$은 닮음비가 $1:2$인 닮은 삼각형입니다. 따라서 $MN:QR=1:2$이므로 $QR=14\\,\\mathrm{cm}$입니다. $MN$과 $QR$의 길이가 같거나 $MN$의 길이가 $QR$의 길이의 두 배라고 생각하면 두 선분의 길이의 비를 잘못 이해한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:10:10.481129+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2356,7 +5032,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:10:10.481007+00:00",
@@ -2367,36 +5043,385 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:14:56.34286+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C2-이유설명",
+      "body": "그림에서 점 $D$, $E$는 각각 $\\overline{AB}$, $\\overline{AC}$의 중점이다. $\\angle BAC=60^\\circ$이고 $\\overline{DE}=7\\text{ cm}$이다. $\\overline{BC}$의 길이를 구하고, 그 이유를 $\\triangle ADE$와 $\\triangle ABC$의 닮음을 이용하여 쓰시오. 두 삼각형이 닮은 이유와 닮음비를 포함하여 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T04:12:05.49278+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$D$, $E$가 중점이므로 $AD:AB=AE:AC=1:2$이다. 두 삼각형은 그 끼인각 $\\angle BAC$를 함께 쓰므로 닮음이다. 닮음비가 $1:2$이므로 $DE:BC=1:2$이다. 따라서 $BC=14\\text{ cm}$이다. $DE$와 $BC$의 길이가 같거나 $DE$가 $BC$의 2배라고 생각하면 닮음비를 잘못 적용한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "60°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 16.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.196152423
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 1.5,
+            "y": 2.5980762115
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "7 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:12:05.431803+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "60a3c437-bd30-490b-82fa-9612416ef6ee",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$D$, $E$가 중점이므로 $AD:AB=AE:AC=1:2$이다. 두 삼각형은 그 끼인각이 같으므로 $\\triangle ADE$와 $\\triangle ABC$는 닮음이고, 닮음비는 $1:2$이다. 따라서 $DE:BC=1:2$이므로 $BC=14\\text{ cm}$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$AD:AB=AE:AC=1:2$이고 그 끼인각이 같음을 들어 두 삼각형이 닮음인 이유를 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "닮음비가 $1:2$임을 이용하여 $DE:BC=1:2$라고 쓴다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "$BC=14\\text{ cm}$라고 쓴다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-14-M4"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:12:05.431121+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:45:40.286042+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "body": "그림과 같이 서로 다른 세 평행선이 두 직선과 만나는 점을 각각 $A$, $B$, $C$와 $D$, $E$, $F$라 하자. 점 $B$는 선분 $AC$ 위에, 점 $E$는 선분 $DF$ 위에 있다. $\\overline{AD}\\parallel\\overline{BE}\\parallel\\overline{CF}$이고, $AB=4\\text{ cm}$, $BC=8\\text{ cm}$이다. 선분 $EF$는 선분 $DE$보다 $5\\text{ cm}$ 더 길다. 평행선 사이의 선분의 길이의 비를 이용하여 $EF$의 길이를 구하면?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M3",
+          "no": 2,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$10\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$12\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$13\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:43:07.068416+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "세 평행선 사이의 선분의 길이의 비에서 $DE:EF=AB:BC=4:8=1:2$이다. 따라서 $EF$는 $DE$의 2배이다. 두 선분의 길이의 차가 $5\\text{ cm}$이므로 $DE=5\\text{ cm}$, $EF=10\\text{ cm}$이다. ②는 $EF$의 길이가 $BC$의 길이와 같다고 생각한 답이다. 세 평행선 사이에서는 선분의 길이가 아니라 길이의 비가 같다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": -8.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 5.0,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "F",
+            "show_name": true,
+            "x": 14.0,
+            "y": -8.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 1,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "8 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:43:06.721584+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 선분의 길이의 차를 문장으로 제시했다. 이를 길이의 비와 함께 이용하여 구하는 길이를 찾아야 한다.",
+      "id": "3d11d101-782d-44fc-8d17-d0de8841c320",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:42:34.770998+00:00",
+          "issues": [
+            "주어진 길이의 비를 바로 적용하여 DE를 구하는 일반적인 문제로, 결과를 주고 그 조건을 거꾸로 찾는 application-a에 해당하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:43:06.721091+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:39:32.239752+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C3-성질적용",
       "body": "서로 평행한 세 철길을 두 직선 도로가 가로지른다. 첫째 도로가 세 철길과 만나는 점을 차례로 $A$, $B$, $C$라 하고, 둘째 도로가 같은 철길과 만나는 점을 차례로 $D$, $E$, $F$라 하자. 두 도로에서 점의 순서는 각각 $A$, $B$, $C$와 $D$, $E$, $F$이다.\n\n$AB=4\\text{ km}$, $BC=6\\text{ km}$이다. $AB$와 $EF$의 길이의 합은 $BC$와 $DE$의 길이의 합보다 $1\\text{ km}$ 길다. 이때 $DF$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$5\\text{ km}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M3",
           "no": 2,
           "text": "$10\\text{ km}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$12\\text{ km}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$15\\text{ km}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2405,8 +5430,9 @@
       ],
       "created_at": "2026-11-11T13:30:13.444887+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.374672+00:00",
       "explanation": "세 평행선 사이의 선분의 길이의 비를 이용하면 $DE:EF=AB:BC=2:3$이다.\n\n길이의 합을 비교하면 $4+EF=6+DE+1$이므로 $EF-DE=3\\text{ km}$이다. 따라서 $DE=6\\text{ km}$, $EF=9\\text{ km}$이고, $DF=15\\text{ km}$이다.\n\n②는 $DE=AB$, $EF=BC$라고 생각하여 고를 수 있다. 하지만 두 도로 위의 선분은 길이가 같은 것이 아니라 길이의 비가 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:30:13.372556+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "두 도로에 걸친 길이의 합을 비교한 문장을 식으로 바꾸어 $EF$와 $DE$의 길이의 차를 구해야 한다. 그다음 세 평행선 사이의 선분의 길이의 비를 이용한다.",
@@ -2417,7 +5443,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:28:58.541243+00:00",
@@ -2450,30 +5476,35 @@
       "body": "한 직선 위에 있지 않은 두 반직선 $OX$, $OY$가 있다. 점 $A$, $C$는 반직선 $OX$ 위에 있고 $O$에서 가까운 순서대로 $A$, $C$이다. 점 $D$, $F$는 반직선 $OY$ 위에 있고 $O$에서 가까운 순서대로 $D$, $F$이다.\n\n$\\overline{AD} \\parallel \\overline{CF}$이고, $AC=15\\text{ cm}$, $DF=10\\text{ cm}$이다. 선분 $AC$ 위에 점 $B$를 잡고, $B$를 지나 $\\overline{AD}$에 평행한 직선이 선분 $DF$와 만나는 점을 $E$라 하자.\n\n$EF$가 $DE$보다 $2\\text{ cm}$ 길어지도록 $B$의 위치를 정하려고 한다. 이때 $AB$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M3",
           "no": 1,
           "text": "$4\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$5\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$6\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$9\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2482,8 +5513,9 @@
       ],
       "created_at": "2026-11-11T13:15:46.315521+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.409695+00:00",
       "explanation": "$DF=10\\text{ cm}$이고 $EF$가 $DE$보다 $2\\text{ cm}$ 길다. 따라서 $DE=4\\text{ cm}$, $EF=6\\text{ cm}$이다.\n\n세 평행선 사이의 선분의 길이의 비를 이용하면 $AB:BC=DE:EF=4:6$이다. $AC=15\\text{ cm}$이므로 $AB=15\\times\\frac{4}{10}=6\\text{ cm}$이다.\n\n①을 골랐다면 $AB$와 $DE$의 길이가 같다고 생각했을 수 있다. 두 선분의 길이는 같지 않지만, 각각의 직선에서 생기는 선분의 길이의 비는 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:15:46.280806+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "$EF$가 $DE$보다 $2\\text{ cm}$ 길다는 결과가 주어졌을 때, 이를 만족하도록 잡은 점 $B$의 위치를 $AB$의 길이로 구한다.",
@@ -2494,7 +5526,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:14:42.331540+00:00",
@@ -2521,36 +5553,218 @@
       "variant": 2
     },
     {
-      "approved_at": "2026-11-11T13:24:48.507957+00:00",
+      "approved_at": "2026-11-12T04:31:22.251716+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C3-성질적용",
-      "body": "서로 평행한 세 직선 $l$, $m$, $n$이 있다. 한 직선이 $l$, $m$, $n$과 만나는 점을 차례로 $A$, $B$, $C$라 하고, 다른 직선이 $l$, $m$, $n$과 만나는 점을 차례로 $D$, $E$, $F$라 하자. $B$는 $\\overline{AC}$ 위에 있고, $E$는 $\\overline{DF}$ 위에 있다.\n\n$AB=4\\,\\text{cm}$, $BC=6\\,\\text{cm}$, $DE=8\\,\\text{cm}$일 때, $EF$의 길이는?",
+      "body": "다음 그림과 같이 세 평행한 직선이 한 직선과 만나는 점을 차례로 $A$, $B$, $C$라 하고, 다른 직선과 만나는 점을 차례로 $D$, $E$, $F$라 하자. $\\overline{AB}=4\\,\\text{cm}$, $\\overline{BC}=8\\,\\text{cm}$, $\\overline{DE}=5\\,\\text{cm}$일 때, $\\overline{EF}$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$4\\,\\text{cm}$"
         },
         {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$5\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M3",
+          "no": 3,
+          "text": "$8\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$10\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$12\\,\\text{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:16:20.564238+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "세 평행선 사이의 선분의 길이의 비는 같으므로 $4:8=5:\\overline{EF}$입니다. 따라서 $\\overline{EF}=10\\,\\text{cm}$입니다. ③은 $\\overline{BC}$와 $\\overline{EF}$의 길이가 같다고 잘못 생각한 경우입니다. 두 선분의 길이가 같은 것이 아니라 길이의 비가 같습니다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "E",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "F",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 2.0,
+            "y": 6.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 3.5,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "F",
+            "show_name": true,
+            "x": 6.5,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "8 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "5 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:16:20.510337+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "42f82a32-3ef6-415f-9bc4-fbad26a5261a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:16:20.510143+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-11T13:24:48.507957+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "body": "서로 평행한 세 직선 $l$, $m$, $n$이 있다. 한 직선이 $l$, $m$, $n$과 만나는 점을 차례로 $A$, $B$, $C$라 하고, 다른 직선이 $l$, $m$, $n$과 만나는 점을 차례로 $D$, $E$, $F$라 하자. $B$는 $\\overline{AC}$ 위에 있고, $E$는 $\\overline{DF}$ 위에 있다.\n\n$AB=4\\,\\text{cm}$, $BC=6\\,\\text{cm}$, $DE=8\\,\\text{cm}$일 때, $EF$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$4\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M3",
           "no": 2,
           "text": "$6\\,\\text{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$8\\,\\text{cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$12\\,\\text{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2559,8 +5773,9 @@
       ],
       "created_at": "2026-11-11T13:12:07.840968+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.442409+00:00",
       "explanation": "세 평행선 사이의 선분의 길이의 비는 같으므로 $AB:BC=DE:EF$입니다. 따라서 $4:6=8:EF$이므로 $EF=12\\,\\text{cm}$입니다.\n\n$6\\,\\text{cm}$를 골랐다면 두 직선에서 같은 평행선 사이에 있는 선분의 길이가 항상 같다고 생각했을 수 있습니다. 항상 같은 것은 길이가 아니라 길이의 비입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:12:07.824963+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2571,7 +5786,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:12:07.824843+00:00",
@@ -2588,30 +5803,35 @@
       "body": "사다리꼴 $ABCD$에서 $\\overline{AB}\\parallel\\overline{DC}$이다. 점 $E$는 $\\overline{AD}$ 위에 있고, 점 $F$는 $\\overline{BC}$ 위에 있다. $\\overline{EF}$는 $\\overline{AB}$와 평행하다.\n\n$AE=3\\,\\text{cm}$, $ED=5\\,\\text{cm}$, $BF=6\\,\\text{cm}$일 때, $FC$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3\\,\\text{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M3",
           "no": 2,
           "text": "$5\\,\\text{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$8\\,\\text{cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$10\\,\\text{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2620,8 +5840,9 @@
       ],
       "created_at": "2026-11-11T13:12:33.88497+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.471202+00:00",
       "explanation": "$\\overline{AB}$, $\\overline{EF}$, $\\overline{DC}$가 서로 평행하므로 $AE:ED=BF:FC$이다. 따라서 $3:5=6:FC$이므로 $FC=10\\,\\text{cm}$이다.\n\n$5\\,\\text{cm}$를 골랐다면 $ED$와 $FC$의 길이가 같다고 생각했을 수 있다. 두 선분의 길이가 아니라 두 직선에서 생기는 선분의 길이의 비가 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:12:33.86684+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2632,7 +5853,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:12:33.866716+00:00",
@@ -2643,36 +5864,402 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:31:22.339848+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C3-성질적용",
+      "body": "다음 그림은 지도에서 서로 평행한 세 철길과 각각 곧은 두 길을 나타낸 것이다. 한 길이 세 철길과 만나는 점을 차례로 $A$, $B$, $C$라 하고, 다른 길이 세 철길과 만나는 점을 차례로 $D$, $E$, $F$라 하자. $\\overline{AB}=6\\,\\text{cm}$, $\\overline{BC}=9\\,\\text{cm}$, $\\overline{EF}=12\\,\\text{cm}$일 때, 지도에서 $\\overline{DE}$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M3",
+          "no": 1,
+          "text": "$6\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$7\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$18\\,\\text{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:16:50.984606+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "세 철길이 서로 평행하므로 $\\overline{AB}:\\overline{BC}=\\overline{DE}:\\overline{EF}$이다. 따라서 $6:9=\\overline{DE}:12$이므로 $\\overline{DE}=8\\,\\text{cm}$이다. ①을 골랐다면 $\\overline{DE}$의 길이가 $\\overline{AB}$의 길이와 같다고 잘못 생각했을 수 있다. 두 선분의 길이는 같지 않아도 된다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "D",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "E",
+            "type": "line"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 1,
+            "through": "F",
+            "type": "line"
+          }
+        ],
+        "points": [
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": -4.5
+          },
+          {
+            "dot": true,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 5.64575131,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "F",
+            "show_name": true,
+            "x": 9.61437828,
+            "y": -4.5
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "6 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "9 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "12 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:16:50.775759+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "42ff34d4-451f-4d55-8ff4-bad588233ddc",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:16:50.775404+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:31:22.40924+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "body": "다음 그림에서 $\\triangle ABC$의 변 $BC$의 중점을 $D$, 무게중심을 $G$라 하자. 점 $P$는 선분 $AG$의 중점이고, $AP=4\\,\\mathrm{cm}$이다. 중선 $AD$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$8\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$12\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 3,
+          "text": "$16\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$20\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 5,
+          "text": "$24\\,\\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:17:29.758311+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$P$는 선분 $AG$의 중점이므로 $AG=2\\times 4=8\\,\\mathrm{cm}$이다. 무게중심 $G$는 중선 $AD$를 꼭짓점 $A$에서부터 $2:1$로 나누므로 $AG:GD=2:1$이다. 따라서 $GD=4\\,\\mathrm{cm}$이고 $AD=12\\,\\mathrm{cm}$이다.\n무게중심이 중선을 똑같이 둘로 나눈다고 생각하면 $AD=16\\,\\mathrm{cm}$로 잘못 구할 수 있다. 꼭짓점 쪽이 짧게 $AG:GD=1:2$라고 생각하면 $AD=24\\,\\mathrm{cm}$로 잘못 구할 수 있다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 12.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "G",
+            "show_name": true,
+            "x": 6.0,
+            "y": 4.0
+          },
+          {
+            "dot": true,
+            "id": "P",
+            "show_name": true,
+            "x": 6.0,
+            "y": 8.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "P"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:17:29.50542+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "무게중심에서 꼭짓점까지의 중선 일부를 나타내는 길이를 주고, 무게중심의 성질을 거꾸로 이용하여 중선 전체의 길이를 구한다.",
+      "id": "a4ff8181-df7f-4eef-8b27-589028341c4e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:17:01.778981+00:00",
+          "issues": [
+            "고난이도 조건 application-a가 충족되지 않는다. 주어진 길이 관계로 AG를 구한 뒤 무게중심의 2:1 성질을 바로 적용하는 일반적인 길이 계산 문제이다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:17:29.505130+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.565699+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C4-성질적용",
       "body": "△$ABC$에서 점 $D$는 $\\overline{BC}$의 중점이고, 점 $G$는 무게중심이다. 점 $P$는 $\\overline{AG}$의 중점이다. $PG=3$일 때, 중선 $\\overline{AD}$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M2",
           "no": 3,
           "text": "$12$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$15$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M2",
           "no": 5,
@@ -2681,8 +6268,9 @@
       ],
       "created_at": "2026-11-11T13:16:32.824066+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.345682+00:00",
       "explanation": "$P$는 $\\overline{AG}$의 중점이므로 $AG=2PG=6$이다. 무게중심 $G$는 중선 $\\overline{AD}$를 꼭짓점 $A$에서부터 $2:1$로 나누므로 $GD=3$이다. 따라서 $AD=6+3=9$이다.\n무게중심이 중선을 $1:1$로 나눈다고 생각하면 $AD=12$를 고를 수 있다. 꼭짓점 쪽이 짧게 $1:2$로 나눈다고 생각하면 $AD=18$을 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:16:32.734899+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "중선 전체의 길이가 아니라 무게중심까지의 선분을 반으로 나눈 길이를 주고, 중선의 길이를 거꾸로 찾게 한다.",
@@ -2693,7 +6281,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:16:32.734783+00:00",
@@ -2704,36 +6292,226 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T04:31:22.457336+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "body": "다음 그림에서 $D$는 $\\overline{BC}$의 중점이고, $E$는 $\\overline{CA}$의 중점이다. 두 중선 $AD$, $BE$가 만나는 점을 $G$라 하자. $AD+BE=21\\,\\mathrm{cm}$이고 $AG-BG=2\\,\\mathrm{cm}$일 때, $AD$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$9\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$10.5\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$12\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 4,
+          "text": "$12.5\\,\\mathrm{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 5,
+          "text": "$13.5\\,\\mathrm{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:18:31.133993+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$G$는 무게중심이므로 $AG=\\dfrac{2}{3}AD$, $BG=\\dfrac{2}{3}BE$이다. 따라서 $AG+BG=\\dfrac{2}{3}\\times21=14\\,\\mathrm{cm}$이다. $AG-BG=2\\,\\mathrm{cm}$이므로 $AG=8\\,\\mathrm{cm}$이고, $AD=\\dfrac{3}{2}\\times8=12\\,\\mathrm{cm}$이다.\n무게중심이 중선을 똑같이 나눈다고 생각하면 $AD-BE=4\\,\\mathrm{cm}$로 잘못 구해 ④를 고를 수 있다. 꼭짓점 쪽이 짧아서 중선을 $1:2$로 나눈다고 생각하면 $AD-BE=6\\,\\mathrm{cm}$로 잘못 구해 ⑤를 고를 수 있다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 8.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": -8.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": -4.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "G",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:18:31.089789+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 중선의 길이의 합과 꼭짓점에서 무게중심까지의 길이의 차가 주어졌을 때, 무게중심의 성질을 이용하여 한 중선의 길이를 거꾸로 구한다.",
+      "id": "32b622dd-511e-4a1d-ad0c-71b1018946a7",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:18:06.176288+00:00",
+          "issues": [
+            "고난도 조건 application-a에 해당하지 않는다. 무게중심의 성질을 적용하고 주어진 합에서 빼는 일반적인 길이 계산으로, 결과에서 조건을 찾는 역문제와 구별되지 않는다.",
+            "보기 4: M2의 1:2 관계를 두 중선에 일관되게 적용하면 AG=1, BG=9, BE=27이므로 13.5가 나오지 않는다. 13.5는 첫 중선에만 1:2를 적용하고 둘째 중선에는 올바른 2:1을 적용해야 나온다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T04:18:31.089665+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:24:48.595436+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-14-C4-성질적용",
       "body": "삼각형 $ABC$에서 점 $D$는 $\\overline{BC}$의 중점이고, 점 $G$는 무게중심이다. 점 $P$는 $\\overline{AD}$ 위의 점이다. $AP=8$, $PG=2$일 때, 가능한 $AD$의 길이를 모두 더한 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$12$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$18$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$24$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M2",
           "no": 4,
           "text": "$32$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M2",
           "no": 5,
@@ -2742,8 +6520,9 @@
       ],
       "created_at": "2026-11-11T13:16:58.395721+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.375028+00:00",
       "explanation": "점 $G$가 점 $P$보다 점 $A$에 가까우면 $AG=8-2=6$이다. 점 $G$가 점 $P$보다 점 $D$에 가까우면 $AG=8+2=10$이다. 무게중심은 중선을 꼭짓점에서부터 $2:1$로 나누므로 $AD$는 각각 $9$, $15$이다. 따라서 구하는 합은 $9+15=24$이다.\n④는 무게중심이 중선을 $1:1$로 나눈다고 생각한 답이다. ⑤는 꼭짓점 쪽을 짧게 $1:2$로 나눈다고 생각한 답이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:16:58.375552+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "$AP$와 $PG$의 길이로부터 $G$의 두 위치를 찾아 각각 가능한 중선의 길이를 거꾸로 구한다.",
@@ -2754,7 +6533,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:16:58.375413+00:00",
@@ -2771,30 +6550,35 @@
       "body": "$\\triangle ABC$에서 점 $D$는 $\\overline{BC}$의 중점이고, 점 $G$는 무게중심이다. $\\overline{AD}=12\\text{ cm}$일 때, $\\overline{AG}$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M2",
           "no": 1,
           "text": "$4\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M2",
           "no": 2,
           "text": "$6\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$8\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$9\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2803,8 +6587,9 @@
       ],
       "created_at": "2026-11-11T13:15:57.230862+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.407515+00:00",
       "explanation": "무게중심 $G$는 중선 $AD$를 꼭짓점 $A$에서부터 $2:1$로 나눈다. 따라서 $\\overline{AG}=12\\times\\frac{2}{3}=8\\text{ cm}$이다. $4\\text{ cm}$는 꼭짓점 쪽을 짧게 $1:2$로 나눈 경우이고, $6\\text{ cm}$는 중선을 $1:1$로 나눈 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:15:57.204075+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2815,10 +6600,171 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:15:57.203978+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T04:31:22.484469+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "body": "다음 그림에서 점 $D$는 삼각형 $ABC$의 변 $BC$의 중점이고, 점 $G$는 삼각형 $ABC$의 무게중심이다. $\\overline{AD}=12\\text{ cm}$일 때, $\\overline{AG}$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 1,
+          "text": "$4\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 2,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$9\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$10\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:16:14.016209+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "무게중심은 중선을 꼭짓점에서부터 $2:1$로 나눈다. 따라서 $\\overline{AG}=12\\times\\frac{2}{3}=8\\text{ cm}$이다. ①은 꼭짓점 쪽이 더 짧다고 생각한 경우이고, ②는 무게중심이 중선을 똑같이 둘로 나눈다고 생각한 경우이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 12.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "G",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:16:13.972724+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "abc0281a-aa15-4c97-9fdf-38cb6d714126",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:16:13.972484+00:00",
           "issues": [],
           "number": 1
         }
@@ -2832,30 +6778,35 @@
       "body": "$\\triangle PQR$에서 점 $M$은 $\\overline{PQ}$의 중점이고, 점 $G$는 무게중심이다. $\\overline{GM}=4\\text{ cm}$일 때, $\\overline{RG}$의 길이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M2",
           "no": 1,
           "text": "$2\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-14-M2",
           "no": 2,
           "text": "$4\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$6\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$8\\text{ cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2864,8 +6815,9 @@
       ],
       "created_at": "2026-11-11T13:16:11.237567+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T04:15:55.441758+00:00",
       "explanation": "무게중심 $G$는 중선 $\\overline{RM}$을 꼭짓점 $R$에서부터 $2:1$로 나눈다. 따라서 $\\overline{RG}=4\\times 2=8\\text{ cm}$이다. $2\\text{ cm}$를 골랐다면 꼭짓점 쪽이 더 짧다고 생각한 것이다. $4\\text{ cm}$를 골랐다면 무게중심이 중선을 반으로 나눈다고 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:16:11.227311+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2876,10 +6828,171 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T13:16:11.227170+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T04:31:22.532884+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-14-C4-성질적용",
+      "body": "다음 그림에서 점 $E$는 변 $AC$의 중점이고, 점 $G$는 삼각형 $ABC$의 무게중심이다. $\\overline{BG}=10\\text{ cm}$일 때, $\\overline{GE}$의 길이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$5\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 2,
+          "text": "$10\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$15\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-14-M2",
+          "no": 4,
+          "text": "$20\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$30\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T04:16:31.536755+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "무게중심은 중선을 꼭짓점에서부터 $2:1$로 나누므로 $\\overline{BG}:\\overline{GE}=2:1$이다. 따라서 $\\overline{GE}=5\\text{ cm}$이다. ②는 무게중심이 중선을 $1:1$로 나눈다고 생각한 경우이고, ④는 꼭짓점 쪽이 짧게 $1:2$로 나눈다고 생각한 경우이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": -9.0,
+            "y": 15.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 9.0,
+            "y": 15.0
+          },
+          {
+            "dot": true,
+            "id": "E",
+            "show_name": true,
+            "x": 0.0,
+            "y": 15.0
+          },
+          {
+            "dot": true,
+            "id": "G",
+            "show_name": true,
+            "x": 0.0,
+            "y": 10.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "10 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": "?",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T04:16:31.487704+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a9e708e6-0af6-483b-8c09-6e26e7c90192",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:16:31.487560+00:00",
           "issues": [],
           "number": 1
         }

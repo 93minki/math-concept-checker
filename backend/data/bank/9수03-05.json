@@ -2,36 +2,196 @@
   "backlog": [],
   "questions": [
     {
+      "approved_at": "2026-11-12T03:53:41.595317+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C1-성질적용",
+      "body": "그림과 같이 점 $D$는 변 $BC$를 $C$ 쪽으로 늘인 선 위에 있다. 외각 $\\angle ACD$의 크기는 $120^\\circ$이고, $\\angle BAC$의 크기는 $\\angle ABC$의 크기보다 $20^\\circ$ 크다. $\\angle ABC$의 크기는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-05-M4",
+          "no": 1,
+          "text": "$20^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$40^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$50^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$60^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$70^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-12T03:36:47.309018+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle ABC$의 크기를 $x^\\circ$라고 하면 $\\angle BAC$의 크기는 $(x+20)^\\circ$이다. 외각 $\\angle ACD$의 크기는 이웃하지 않는 두 내각의 크기의 합이므로 $x+(x+20)=120$이다. 따라서 $x=50$이다.\n①은 외각 $\\angle ACD$와 이웃한 내각 $\\angle ACB$의 크기를 같다고 생각한 경우이다. 두 각의 크기의 합은 $180^\\circ$이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "C"
+          },
+          {
+            "from": "C",
+            "label": "?",
+            "marks": 0,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 2.0,
+            "y": 2.383507
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 3.376148,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:36:47.249472+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 내각의 크기 차이를 나타낸 문장을 식으로 바꾸고, 외각과 이웃하지 않는 두 내각의 관계를 적용해야 한다.",
+      "id": "890cf0ca-3058-4da1-bedc-c2d6cb36dde2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:36:47.249343+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:57.481706+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-05-C1-성질적용",
       "body": "삼각형 $ABC$에서 변 $BC$를 점 $C$ 쪽으로 늘인 선 위에 점 $D$가 있다. $\\angle ABC=30^\\circ$이고, 외각 $\\angle ACD$의 크기는 내각 $\\angle BAC$의 크기의 $2$배이다. $\\angle ACB$의 크기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$60^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$90^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M4",
           "no": 3,
           "text": "$100^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$120^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -40,8 +200,9 @@
       ],
       "created_at": "2026-11-11T08:23:47.038023+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.881577+00:00",
       "explanation": "$\\angle BAC$의 크기를 $x$라 하면 외각 $\\angle ACD$의 크기는 $2x$이다. 삼각형의 한 외각의 크기는 그 외각과 이웃하지 않는 두 내각의 크기의 합과 같으므로 $2x=x+30^\\circ$이다. 따라서 $x=30^\\circ$이고, 외각 $\\angle ACD$는 $60^\\circ$이다. 이 외각과 내각 $\\angle ACB$의 크기의 합은 $180^\\circ$이므로 $\\angle ACB=120^\\circ$이다.\n③을 골랐다면 외각 $\\angle ACD$와 이웃한 내각 $\\angle ACB$의 크기가 같다고 생각했을 수 있다. 두 각의 크기는 같은 것이 아니라 그 합이 $180^\\circ$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:23:44.93861+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "외각의 크기가 내각의 크기의 $2$배라는 문장을 식으로 나타내야 한다. 외각과 이웃하지 않는 두 내각의 관계를 적용한 뒤, 구하려는 내각의 크기를 찾아야 한다.",
@@ -52,7 +213,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:23:44.938315+00:00",
@@ -63,36 +224,227 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:41.777353+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C1-성질적용",
+      "body": "그림과 같이 삼각형 $ABC$의 변 $BC$를 양쪽으로 늘인 선 위에 점 $E$, $D$가 있다. $\\angle BAC=70^\\circ$이고, 외각 $\\angle EBA$는 외각 $\\angle ACD$보다 $20^\\circ$ 크다.\n두 외각 $\\angle EBA$, $\\angle ACD$의 크기를 이 차례로 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-05-M4",
+          "no": 1,
+          "text": "$65^\\circ,\\ 45^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$105^\\circ,\\ 85^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$115^\\circ,\\ 95^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$125^\\circ,\\ 105^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$135^\\circ,\\ 115^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-12T03:37:45.34856+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "삼각형의 내각의 합은 $180^\\circ$이므로 $\\angle ABC+\\angle ACB=110^\\circ$이다. 각 외각과 이웃한 내각의 크기의 합은 $180^\\circ$이므로 두 외각의 크기의 합은 $360^\\circ-110^\\circ=250^\\circ$이다. 또 $\\angle EBA$가 $20^\\circ$ 더 크므로 두 외각은 각각 $135^\\circ$, $115^\\circ$이다.\n①은 외각의 크기를 그 외각과 이웃한 내각의 크기와 같다고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "70°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": "?",
+            "marks": 0,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          },
+          {
+            "from": "A",
+            "label": "?",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 4.09191,
+            "y": 4.09191
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": -2.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:37:45.216296+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 외각의 크기 차이를 나타낸 문장을 식으로 바꾸고, 삼각형의 내각과 외각의 성질을 함께 적용하여 두 각을 구한다.",
+      "id": "46b16a1e-6303-4d10-b6eb-d7a85f455fb9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:37:13.760620+00:00",
+          "issues": [
+            "외각과 한 내각에서 나머지 내각을 구하는 성질의 직접 적용 문제로, 주어진 결과를 이용해 조건을 거꾸로 찾는 고난도 조건 application-a에 해당하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:37:45.216052+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:57.524437+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-05-C1-성질적용",
       "body": "삼각형 $PQR$에서 $\\angle QPR=40^\\circ$이다. 점 $S$는 변 $PQ$를 점 $Q$ 쪽으로 늘인 선 위에 있고, 점 $T$는 변 $PR$을 점 $R$ 쪽으로 늘인 선 위에 있다. 외각 $\\angle RQS$는 외각 $\\angle QRT$보다 $20^\\circ$ 크다. $\\angle PRQ$의 크기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$50^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M4",
           "no": 2,
           "text": "$60^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$70^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$80^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -101,8 +453,9 @@
       ],
       "created_at": "2026-11-11T08:24:10.133309+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.936655+00:00",
       "explanation": "$\\angle PQR=x^\\circ$, $\\angle PRQ=y^\\circ$라 하자. 삼각형의 한 외각은 그 외각과 이웃하지 않는 두 내각의 크기의 합과 같다. 따라서 $\\angle RQS=(40+y)^\\circ$, $\\angle QRT=(40+x)^\\circ$이다. 두 외각의 크기 차가 $20^\\circ$이므로 $y-x=20$이다. 또 삼각형의 내각의 크기의 합은 $180^\\circ$이므로 $x+y=140$이다. 따라서 $y=80$이고, 정답은 ④이다.\n\n두 외각의 크기를 각각 이웃한 내각의 크기와 같다고 잘못 생각하면 $x-y=20$이 되어 ②를 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:24:08.04729+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "두 외각의 크기 차를 나타낸 문장을 내각 사이의 식으로 바꾼 뒤, 삼각형의 내각의 크기의 합을 이용해야 한다.",
@@ -113,7 +466,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:24:08.047136+00:00",
@@ -130,30 +483,35 @@
       "body": "삼각형 $ABC$에서 $\\angle ABC=73^\\circ$이다. 변 $AB$를 점 $B$ 쪽으로 늘인 선 위에 점 $D$를 잡았다. 외각 $\\angle DBC$의 크기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$63^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M4",
           "no": 2,
           "text": "$73^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$97^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$107^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -162,8 +520,9 @@
       ],
       "created_at": "2026-11-11T08:23:13.376704+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.971166+00:00",
       "explanation": "이웃한 내각과 외각의 크기의 합은 $180^\\circ$이다. 따라서 $\\angle DBC=180^\\circ-73^\\circ=107^\\circ$이다. ②를 골랐다면 외각의 크기가 이웃한 내각의 크기와 같다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:23:11.178659+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -174,10 +533,173 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:23:11.178397+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:53:41.891145+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C1-성질적용",
+      "body": "다음 그림에서 세 점 $B$, $C$, $D$는 이 순서로 한 직선 위에 있다. $\\angle BAC=45°$, $\\angle ACD=120°$일 때, $\\angle ABC$의 크기를 구하시오.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-05-M4",
+          "no": 1,
+          "text": "$15°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$45°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$60°$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$75°$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$105°$"
+        }
+      ],
+      "created_at": "2026-11-12T03:35:43.223085+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "삼각형의 한 외각의 크기는 그 외각과 이웃하지 않는 두 내각의 크기의 합과 같다. 따라서 $\\angle ABC+45°=120°$이므로 $\\angle ABC=75°$이다.\n$15°$를 골랐다면 외각 $\\angle ACD$의 크기가 이웃한 내각 $\\angle ACB$의 크기와 같다고 잘못 생각했을 수 있다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "45°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "A",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "C"
+          },
+          {
+            "from": "C",
+            "label": "x",
+            "marks": 0,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 1.267949,
+            "y": 4.732051
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:35:42.943244+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "31770d84-4460-44e4-aa72-bfe0b26bca3d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:35:42.918687+00:00",
           "issues": [],
           "number": 1
         }
@@ -191,30 +713,35 @@
       "body": "삼각형 $DEF$에서 $\\angle EDF=40^\\circ$, $\\angle DEF=65^\\circ$이다. 변 $EF$를 점 $F$ 쪽으로 늘인 선 위에 점 $G$를 잡았다. 외각 $\\angle DFG$의 크기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$65^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M4",
           "no": 2,
           "text": "$75^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$85^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$105^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -223,8 +750,9 @@
       ],
       "created_at": "2026-11-11T08:23:24.560751+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:15.002474+00:00",
       "explanation": "삼각형의 한 외각의 크기는 그 외각과 이웃하지 않는 두 내각의 크기의 합과 같다. 따라서 $\\angle DFG=40^\\circ+65^\\circ=105^\\circ$이다. $75^\\circ$는 외각과 이웃한 내각 $\\angle DFE$의 크기이다. 이 내각의 크기가 외각의 크기와 같다고 생각하면 ②를 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:23:22.486792+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -235,7 +763,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:23:22.486593+00:00",
@@ -246,36 +774,359 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:41.996651+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C1-성질적용",
+      "body": "다음 그림에서 세 점 $A$, $B$, $D$는 이 순서로 한 직선 위에 있습니다. $\\angle BAC=30^\\circ$, $\\angle ACB=75^\\circ$일 때, 삼각형 $ABC$의 외각 $\\angle CBD$의 크기를 구하시오.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$65^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-05-M4",
+          "no": 2,
+          "text": "$75^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$95^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$105^\\circ$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$115^\\circ$"
+        }
+      ],
+      "created_at": "2026-11-12T03:36:23.132219+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "삼각형의 한 외각의 크기는 그 외각과 이웃하지 않는 두 내각의 크기의 합과 같습니다. 따라서 $\\angle CBD=30^\\circ+75^\\circ=105^\\circ$입니다. ②의 $75^\\circ$는 외각과 이웃한 내각의 크기입니다. 이 내각과 외각의 크기는 같지 않습니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "30°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "A",
+            "label": "75°",
+            "marks": 0,
+            "right": false,
+            "to": "B",
+            "vertex": "C"
+          },
+          {
+            "from": "C",
+            "label": "?",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "B"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 5.196152423,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:36:23.04016+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ca2aac60-4385-4183-8fdb-7a9d56611d7d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:36:23.039658+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.049599+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C1-오개념판별",
+      "body": "그림에서 점 $D$는 변 $BC$를 점 $C$ 쪽으로 늘인 선 위에 있고, $\\angle ACB=90°$이다. 민지는 다음과 같이 말했다.\n\n“$\\angle ACD$와 $\\angle ACB$의 크기가 같아. 그러므로 모든 삼각형에서 외각과 그 외각에 이웃한 내각의 크기는 같아.”\n\n민지의 말을 판단한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-05-M4",
+          "no": 1,
+          "text": "옳다. 모든 삼각형에서 외각의 크기는 이웃한 내각의 크기와 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. 그림에서 두 각의 크기가 같으므로 다른 삼각형에서도 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳지 않다. 두 각의 크기의 합은 항상 $180°$이지만, 두 각의 크기가 항상 같지는 않다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳지 않다. 두 각의 크기의 합이 항상 $180°$이므로 두 각의 크기는 같을 수 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. 외각의 크기는 이웃하지 않는 두 내각 각각의 크기와 항상 같다."
+        }
+      ],
+      "created_at": "2026-11-12T03:36:31.372138+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle ACD$와 $\\angle ACB$의 크기의 합은 $180°$이다. 그림에서는 $\\angle ACB=90°$이므로 $\\angle ACD$도 $90°$이다. 하지만 이웃한 내각이 $90°$가 아닌 삼각형에서는 두 각의 크기가 다르다.\n\n①처럼 외각이 이웃한 내각과 항상 같다고 생각하면 안 된다. ②는 한 그림에서 성립하는 관계가 모든 삼각형에서도 성립한다고 잘못 생각한 것이다. ④와 달리 두 각은 모두 $90°$일 때 크기가 같다. ⑤에서 외각의 크기는 이웃하지 않는 두 내각 각각의 크기가 아니라 그 합과 같다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "90°",
+            "marks": 0,
+            "right": true,
+            "to": "A",
+            "vertex": "C"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:36:31.112194+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지가 한 그림에서 두 각이 같다는 사실을 모든 삼각형으로 넓혀 말한 주장을 판단하게 한다. 그림에서는 두 각이 실제로 같으므로, 그 사실과 항상 성립하는 관계를 구별해야 한다.",
+      "id": "9b11c4a4-57e5-4a13-8a3d-149b68281368",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:36:31.109935+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:57.665308+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-05-C1-오개념판별",
       "body": "삼각형 $ABC$에서 $\\angle BAC=90^\\circ$이다. 변 $BA$를 점 $A$ 쪽으로 늘인 선 위에 점 $D$를 잡는다. 이때 점 $B$, $A$, $D$는 이 순서로 놓여 있다.\n\n민지는 “$\\angle CAD$와 그 외각에 이웃한 내각 $\\angle BAC$의 크기가 모두 $90^\\circ$야. 따라서 어느 삼각형에서나 외각과 그 외각에 이웃한 내각의 크기는 같아.”라고 말했다.\n\n민지의 말에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "옳지 않아. 외각과 이웃한 내각의 크기가 같은 것은 그 내각이 $90^\\circ$일 때뿐이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M4",
           "no": 2,
           "text": "옳아. 어느 삼각형에서나 외각과 이웃한 내각의 크기는 같아."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "옳지 않아. 외각은 이웃하지 않는 두 내각의 크기의 합과 같으므로 이웃한 내각과는 크기가 절대로 같을 수 없어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "옳지 않아. 외각과 이웃하지 않는 두 내각의 크기가 같으면 외각과 이웃한 내각의 크기는 반드시 같아."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -284,8 +1135,9 @@
       ],
       "created_at": "2026-11-11T08:25:15.198+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.959607+00:00",
       "explanation": "외각과 그 외각에 이웃한 내각의 크기의 합은 항상 $180^\\circ$이다. 따라서 두 각의 크기가 같으려면 각각 $90^\\circ$여야 한다. 정답은 ①이다.\n\n②는 한 삼각형에서 두 각의 크기가 같다는 사실을 모든 삼각형에 적용한 것이다. 외각과 이웃한 내각의 크기가 항상 같은 것은 아니다.\n\n③은 외각과 이웃한 내각의 크기가 같을 수 없다고 생각한 것이다. 주어진 삼각형에서는 두 각이 모두 $90^\\circ$이다.\n\n④에서 말한 두 내각의 크기가 같아도 외각과 이웃한 내각의 크기가 같지는 않을 수 있다. 예를 들어 세 내각이 모두 $60^\\circ$인 삼각형에서는 외각이 $120^\\circ$이다.\n\n⑤에서 외각과 이웃한 내각의 크기의 합은 $180^\\circ$이다. 이것은 이웃하지 않는 두 내각의 크기의 합과는 다르다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:25:13.112537+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "한 삼각형에서 두 각의 크기가 같다는 사실을 모든 삼각형에 적용한 민지의 말을 판단하게 한다. 두 각이 같아지는 때를 살펴보아야 옳게 판단할 수 있다.",
@@ -296,7 +1148,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:25:13.112334+00:00",
@@ -313,30 +1165,35 @@
       "body": "지우는 다음과 같이 말했습니다.\n\n“삼각형의 한 외각의 크기는 그 외각과 이웃하지 않는 두 내각의 크기의 합이야. 따라서 그 외각의 크기는 이웃한 내각의 크기보다 언제나 커.”\n\n지우의 말에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "옳다. 외각의 크기는 두 내각의 크기의 합이므로 다른 한 내각보다 언제나 크다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "옳다. 외각과 이웃한 내각의 크기의 합이 $180^\\circ$이므로 외각이 언제나 더 크다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M4",
           "no": 3,
           "text": "옳지 않다. 외각과 이웃한 내각의 크기는 언제나 같다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "옳지 않다. 이웃한 내각이 $100^\\circ$이고 이웃하지 않는 두 내각이 각각 $30^\\circ$, $50^\\circ$이면 외각은 $80^\\circ$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -345,8 +1202,9 @@
       ],
       "created_at": "2026-11-11T08:25:37.542068+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:15.003196+00:00",
       "explanation": "외각에 이웃한 내각이 $100^\\circ$이고 이웃하지 않는 두 내각이 각각 $30^\\circ$, $50^\\circ$인 삼각형을 생각해 봅시다. 이때 외각의 크기는 $30^\\circ+50^\\circ=80^\\circ$이므로 이웃한 내각보다 작습니다. 따라서 지우의 말은 옳지 않습니다.\n\n외각의 크기가 이웃하지 않는 두 내각의 크기의 합과 같다는 것만으로 이웃한 내각보다 크다고 할 수는 없습니다. 또 외각과 이웃한 내각의 크기의 합은 $180^\\circ$이지만 두 크기가 언제나 같은 것은 아닙니다. ⑤의 삼각형에서는 외각이 이웃한 내각보다 크므로 지우의 말이 옳지 않다는 것을 보일 수 없습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:25:35.474403+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "지우가 외각의 성질을 이용해 내린 주장과 그 이유가 옳은지 판단하게 했다. 한 삼각형에서의 크기 비교만으로 언제나 성립하는지 판단할 수 있는지도 살펴야 한다.",
@@ -357,7 +1215,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:25:35.474227+00:00",
@@ -368,36 +1226,335 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:42.122044+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C1-오개념판별",
+      "body": "그림에서 점 $D$는 변 $BC$를 점 $C$ 쪽으로 늘인 선 위에 있고, $\\angle ACB=120°$이다.\n\n한 학생이 “외각 $\\angle ACD$의 크기는 이웃한 내각 $\\angle ACB$의 크기와 같아.”라고 말했다. 학생의 말을 판단한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-05-M4",
+          "no": 1,
+          "text": "옳다. 외각은 언제나 이웃한 내각과 크기가 같기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. 외각의 크기는 이웃하지 않는 두 내각의 크기의 합과 같기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "틀리다. 외각은 이웃하지 않는 두 내각 각각보다 크지만, 그 크기의 합과는 다르기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. 외각은 언제나 이웃한 내각보다 작기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. $\\angle ACD=60°$이고, 이 외각의 크기는 이웃하지 않는 두 내각의 크기의 합과 같기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T03:37:03.642571+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$\\angle ACD$와 이웃한 내각 $\\angle ACB$의 크기의 합은 $180°$이므로 $\\angle ACD=60°$이다. 따라서 학생의 말은 틀리다. 외각의 크기는 이웃한 내각의 크기가 아니라, 이웃하지 않는 두 내각의 크기의 합과 같다. ①은 외각이 이웃한 내각과 항상 크기가 같다고 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "120°",
+            "marks": 0,
+            "right": false,
+            "to": "A",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 1.0,
+            "y": 1.732050808
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": -4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 2.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:37:03.492745+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "외각과 이웃한 내각의 크기가 같다는 학생의 말을 보고 옳고 그름과 그 이유를 판단하게 한다.",
+      "id": "7f5e57b0-cd0a-4e37-8e81-2f643eaf92ac",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:37:03.492505+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.164069+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C1-오개념판별",
+      "body": "다음 그림에서 점 $D$는 변 $BC$를 점 $C$ 쪽으로 늘인 선 위에 있다. 외각 $\\angle ACD$의 크기를 $x$라고 할 때, 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-05-M4",
+          "no": 1,
+          "text": "$x=\\angle ACB$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$x=\\angle BAC$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$x=\\angle BAC+\\angle ACB$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$x=\\angle ABC+\\angle ACB$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$x=\\angle BAC+\\angle ABC$"
+        }
+      ],
+      "created_at": "2026-11-12T03:35:43.556974+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "외각 $\\angle ACD$와 이웃한 내각은 $\\angle ACB$이다. 외각의 크기는 이웃하지 않는 두 내각의 크기의 합과 같으므로 $x=\\angle BAC+\\angle ABC$이다. ①은 외각의 크기를 이웃한 내각의 크기와 같다고 잘못 생각한 것이다. 두 각의 크기의 합은 $180°$이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "x",
+            "marks": 0,
+            "right": false,
+            "to": "D",
+            "vertex": "C"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 1.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:35:43.483874+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3c52954e-38d2-42fa-9149-f08730dcdfd6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:35:43.482907+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:57.735591+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-05-C1-오개념판별",
       "body": "삼각형 $ABC$에서 변 $BC$를 점 $C$ 쪽으로 늘인 선 위에 점 $D$가 있다. 점 $D$는 점 $C$보다 바깥쪽에 있다.\n\n한 학생이 “외각 $\\angle ACD$의 크기는 이웃한 내각 $\\angle ACB$의 크기와 항상 같다.”라고 말했다. 이 학생의 생각을 바르게 고친 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M4",
           "no": 1,
           "text": "$\\angle ACD=\\angle ACB$가 항상 성립한다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\angle ACD=\\angle BAC+\\angle ABC$가 항상 성립한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\angle ACD=\\angle ACB+\\angle BAC$가 항상 성립한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\angle ACD=\\angle ABC-\\angle BAC$가 항상 성립한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -406,8 +1563,9 @@
       ],
       "created_at": "2026-11-11T08:24:30.546186+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:15.047997+00:00",
       "explanation": "외각 $\\angle ACD$의 크기는 이웃하지 않는 두 내각 $\\angle BAC$, $\\angle ABC$의 크기의 합과 같다. 따라서 정답은 ②이다.\n\n①은 외각의 크기가 이웃한 내각의 크기와 항상 같다고 잘못 생각한 것이다. 이웃한 외각과 내각의 크기의 합은 $180^\\circ$이다.\n\n예를 들어 세 내각의 크기가 차례로 $40^\\circ$, $60^\\circ$, $80^\\circ$이면 외각 $\\angle ACD$의 크기는 $100^\\circ$이다. 이때 ③, ④, ⑤의 식도 맞지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:24:28.471811+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -418,7 +1576,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:24:28.471660+00:00",
@@ -429,36 +1587,196 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:42.216714+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C1-오개념판별",
+      "body": "다음 그림에서 점 $S$는 변 $QP$를 점 $P$ 쪽으로 늘인 선 위에 있다. 한 학생이 다음과 같이 말했다.\n\n“외각 $\\angle SPR$의 크기는 이웃한 내각 $\\angle QPR$의 크기와 항상 같아.”\n\n이 학생의 말을 바르게 판단한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-05-M4",
+          "no": 1,
+          "text": "옳다. 외각의 크기는 이웃한 내각의 크기와 항상 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "틀리다. 외각과 이웃한 내각의 크기의 합은 항상 $90°$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "틀리다. 외각의 크기는 이웃하지 않은 한 내각의 크기와 항상 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. 외각의 크기는 삼각형의 세 내각의 크기의 합과 항상 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. 외각의 크기는 이웃하지 않은 두 내각의 크기의 합과 같다."
+        }
+      ],
+      "created_at": "2026-11-12T03:36:04.517391+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "외각 $\\angle SPR$의 크기는 이웃하지 않은 두 내각 $\\angle PQR$, $\\angle PRQ$의 크기의 합과 같다. 따라서 ⑤가 옳다.\n\n①처럼 외각의 크기가 이웃한 내각의 크기와 항상 같다고 생각하면 안 된다. 두 각의 크기의 합은 $180°$이므로, 두 각의 크기는 각각 $90°$일 때에만 같다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "S",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "R",
+            "vertex": "P"
+          },
+          {
+            "from": "R",
+            "label": null,
+            "marks": 0,
+            "right": false,
+            "to": "Q",
+            "vertex": "P"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "P",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "Q",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "R",
+            "show_name": true,
+            "x": 1.5,
+            "y": 2.5
+          },
+          {
+            "dot": false,
+            "id": "S",
+            "show_name": true,
+            "x": -2.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "S",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "P"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "Q"
+          },
+          {
+            "dashed": false,
+            "from": "Q",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "R"
+          },
+          {
+            "dashed": false,
+            "from": "R",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "P"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:36:04.343725+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3f4fe14f-1c2c-404f-91cb-ab6286c2dd9f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:36:04.343455+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:57.768427+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-05-C1-오개념판별",
       "body": "삼각형 $PQR$의 세 내각의 크기를 각각 $\\angle P=x$, $\\angle Q=y$, $\\angle R=z$라 하자. 꼭짓점 $P$에서의 한 외각의 크기를 $t$라 할 때, 항상 옳은 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M4",
           "no": 1,
           "text": "$t=x$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$t=y+z$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$t=x+y$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$t=x+y+z$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -467,8 +1785,9 @@
       ],
       "created_at": "2026-11-11T08:24:45.726871+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:15.080804+00:00",
       "explanation": "$t$는 내각 $x$와 이웃하므로 $t+x=180^\\circ$이다. 또 삼각형의 세 내각의 합은 $180^\\circ$이므로 $y+z=180^\\circ-x$이다. 따라서 $t=y+z$이다.\n①은 외각의 크기가 이웃한 내각의 크기와 항상 같다고 잘못 생각한 것이다. 두 크기는 합이 $180^\\circ$이며, 항상 같지는 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:24:43.621897+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -479,7 +1798,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:24:43.621386+00:00",
@@ -496,30 +1815,35 @@
       "body": "어떤 볼록다각형의 내각의 크기의 합은 이 다각형의 각 꼭짓점에서 한 개씩 잡은 외각의 크기의 합의 $2$배보다 $180^\\circ$ 더 크다. 이 다각형의 변의 수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M2",
           "no": 1,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -530,6 +1854,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "외각의 크기의 합은 $360^\\circ$이다. 따라서 내각의 크기의 합은 $360^\\circ\\times2+180^\\circ=900^\\circ$이다. 변의 수를 $n$이라 하면 $180^\\circ\\times(n-2)=900^\\circ$이므로 $n=7$이다.\n\n내각의 크기의 합을 $180^\\circ\\times n$으로 잘못 생각하면 $n=5$가 되어 ①을 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:26:12.834825+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "내각의 크기의 합과 외각의 크기의 합 사이의 관계를 주고, 변의 수를 거꾸로 찾게 한다.",
@@ -557,30 +1882,35 @@
       "body": "볼록팔각형의 각 꼭짓점에서 외각을 한 개씩 잡았다. 이 중 서로 다른 세 꼭짓점의 외각의 크기의 합은 $150^\\circ$이다. 나머지 다섯 꼭짓점의 내각의 크기의 합은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$510^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$570^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$630^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$690^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M2",
           "no": 5,
@@ -591,6 +1921,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "팔각형의 외각의 크기의 합은 $360^\\circ$이다. 따라서 나머지 다섯 꼭짓점의 외각의 크기의 합은 $360^\\circ-150^\\circ=210^\\circ$이다. 한 꼭짓점의 내각과 외각의 크기의 합은 $180^\\circ$이므로, 구하는 내각의 크기의 합은 $180^\\circ\\times5-210^\\circ=690^\\circ$이다.\n⑤는 팔각형의 내각의 크기의 합을 $180^\\circ\\times8=1440^\\circ$로 잘못 구하면 나올 수 있다. 팔각형의 내각의 크기의 합은 $180^\\circ\\times(8-2)=1080^\\circ$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:26:29.828732+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "세 꼭짓점의 외각의 크기의 합을 이용해 나머지 다섯 꼭짓점의 외각의 크기의 합을 구해야 한다. 이를 내각과 외각의 관계에 적용하여 답을 구한다.",
@@ -618,30 +1949,35 @@
       "body": "볼록 육각형의 각 꼭짓점에서 외각을 하나씩 택한다. 이 육각형의 내각의 크기의 합은 택한 외각의 크기의 합보다 몇 도 더 큰가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$180^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$360^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$540^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M2",
           "no": 4,
           "text": "$720^\\circ$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -652,6 +1988,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "육각형의 내각의 크기의 합은 $180^\\circ\\times(6-2)=720^\\circ$이다. 외각의 크기의 합은 $360^\\circ$이므로, 구하는 차는 $720^\\circ-360^\\circ=360^\\circ$이다.\n④는 내각의 크기의 합을 $180^\\circ\\times6$으로 잘못 계산한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:25:48.089216+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -679,30 +2016,35 @@
       "body": "볼록 칠각형의 내각의 크기의 합은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$540°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$720°$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$900°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$1080°$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M2",
           "no": 5,
@@ -713,6 +2055,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "칠각형의 내각의 크기의 합은 $180°\\times(7-2)=900°$이다. $180°\\times7=1260°$로 계산하면 내각의 크기의 합을 구할 때 변의 수에서 $2$를 빼야 한다는 것을 놓친 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:25:57.062028+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -734,6 +2077,205 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:42.252371+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C2-이유설명",
+      "body": "그림은 볼록오각형 $ABCDE$의 내부의 점 $O$와 각 꼭짓점을 선분으로 이은 것이다.\n\n그림과 같은 방법으로 볼록 $n$각형($n\\ge 3$)의 내부의 한 점과 모든 꼭짓점을 선분으로 잇는다. 이때 생기는 삼각형들의 내각의 크기의 합은 볼록 $n$각형의 내각의 크기의 합보다 얼마나 큰지 이유를 설명하시오. 또 이를 이용하여 볼록 $n$각형의 내각의 크기의 합을 구하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:36:36.13186+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "볼록 $n$각형의 각 변을 한 변으로 하는 삼각형이 하나씩 생기므로 삼각형은 $n$개이다. 이 삼각형들의 내각을 모두 더하면 다각형의 각 꼭짓점에 있는 내각과 내부의 한 점 주위의 각이 모두 더해진다. 내부의 한 점 주위의 각의 크기의 합은 $360^\\circ$이다. 따라서 구하는 내각의 크기의 합은 $180^\\circ\\times n-360^\\circ=180^\\circ\\times(n-2)$이다.\n\n삼각형이 $n$개라는 이유만으로 다각형의 내각의 크기의 합을 $180^\\circ\\times n$이라고 하면, 내부의 한 점 주위의 각까지 함께 센 것이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 3.0,
+            "y": 5.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": -1.0,
+            "y": 3.0
+          },
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 2.0,
+            "y": 2.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:36:36.061841+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "그림의 오각형을 넘어 모든 볼록 $n$각형에서 삼각형들의 내각의 크기의 합과 다각형의 내각의 크기의 합의 차이를 설명하게 한다.",
+      "id": "b725dabf-e96e-4a5b-8d26-8e753734e43e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "볼록 $n$각형의 각 변을 한 변으로 하는 삼각형이 하나씩 생기므로 삼각형은 $n$개이다. 각 꼭짓점에 모인 삼각형의 각을 더하면 그 꼭짓점의 내각이 된다. 따라서 삼각형들의 내각의 크기의 합에는 다각형의 내각뿐 아니라 내부의 한 점 주위의 각도 포함된다. 그 각의 크기의 합은 $360^\\circ$이므로 삼각형들의 내각의 크기의 합이 $360^\\circ$만큼 크다.\n\n따라서 볼록 $n$각형의 내각의 크기의 합은 $180^\\circ\\times n-360^\\circ=180^\\circ\\times(n-2)$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "각 변을 한 변으로 하는 삼각형이 하나씩 생겨 삼각형이 $n$개임을 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "각 꼭짓점에 모인 삼각형의 각을 더하면 다각형의 해당 내각이 됨을 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "삼각형들의 내각의 크기의 합에 내부의 한 점 주위의 각 $360^\\circ$가 더 포함됨을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "볼록 $n$각형의 내각의 크기의 합을 $180^\\circ\\times(n-2)$ 또는 그와 같은 식으로 나타낸다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-05-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:36:36.061452+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:57.983992+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-05-C2-이유설명",
@@ -741,8 +2283,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:27:40.19657+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.934602+00:00",
       "explanation": "대각선을 그은 꼭짓점에 닿지 않는 변은 $n-2$개이다. 이 변마다 삼각형이 하나씩 생기므로 삼각형은 $n-2$개이다. 삼각형들의 내각을 모두 더하면 $n$각형의 내각을 빠짐없이 한 번씩 더한 것과 같다. 따라서 내각의 크기의 합은 $180°\\times(n-2)$이다.\n\n$n$각형의 내각의 크기의 합을 $180°\\times n$으로 구했다면, 생기는 삼각형의 수를 변의 수와 같다고 잘못 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:27:38.088645+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "특정 다각형이 아니라 모든 볼록 $n$각형에 대하여 삼각형의 수와 내각의 크기의 합을 구하는 이유를 설명하게 한다.",
@@ -779,7 +2322,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:27:38.088381+00:00",
@@ -797,8 +2340,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:28:02.404391+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:14.995802+00:00",
       "explanation": "볼록 오각형의 안쪽에 잡은 점과 모든 꼭짓점을 이으면 삼각형 $5$개로 나누어진다. 이 삼각형의 내각의 크기를 모두 더하면 $180°\\times 5=900°$이다. 하지만 여기에는 오각형의 내각뿐 아니라 안쪽에 잡은 점 둘레의 각도 들어 있다. 이 각의 크기의 합은 $360°$이므로 오각형의 내각의 크기의 합은 $900°-360°=540°$이다. 따라서 민지의 말은 틀리다.\n\n볼록 $n$각형에서도 마찬가지이다. 각 변을 한 변으로 하는 삼각형이 하나씩 생기므로 삼각형은 $n$개이다. 삼각형의 내각의 크기를 모두 더하면 $180°n$이다. 여기에서 안쪽에 잡은 점 둘레의 각의 크기의 합 $360°$를 빼야 한다. 따라서 $n$각형의 내각의 크기의 합은 $180°n-360°=180°(n-2)$이다.\n\n$180°n$을 그대로 답하면 안쪽에 잡은 점 둘레의 각까지 다각형의 내각에 포함한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:28:00.330541+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "볼록 오각형으로 먼저 살펴본 뒤, 볼록 $n$각형에서도 민지의 말이 틀린 이유를 설명하게 한다.",
@@ -844,7 +2388,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:28:00.330396+00:00",
@@ -855,6 +2399,334 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:42.277245+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C2-이유설명",
+      "body": "그림은 볼록육각형 $ABCDEF$의 꼭짓점 $A$에서 이웃하지 않는 모든 꼭짓점에 대각선을 그은 것이다.\n\n그림과 같은 방법을 볼록 $n$각형($n\\geq 3$)에 적용한다. 이때 생기는 삼각형의 개수와 $n$각형의 내각의 크기의 합을 각각 구하고, 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:37:09.216529+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "고른 꼭짓점에 붙어 있지 않은 변은 $n-2$개이고, 이 변마다 삼각형이 하나씩 생긴다. 따라서 삼각형은 $n-2$개이다. 이 삼각형들의 내각을 모두 모으면 다각형의 내각과 빈틈이나 겹침 없이 같으므로 내각의 크기의 합은 $180°\\times(n-2)$이다. 삼각형이 $n$개라고 생각하여 $180°\\times n$으로 구하면 삼각형의 개수를 잘못 센 것이다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 1.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 5.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 4.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 1.0,
+            "y": 4.0
+          }
+        ],
+        "polygons": [
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:37:09.14856+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "그림의 육각형에서 사용한 방법을 볼록 $n$각형에 적용하여 삼각형의 개수와 내각의 크기의 합이 성립하는 이유를 설명하게 한다.",
+      "id": "24d56d29-f8dd-4c83-a8d9-30506267de00",
+      "model": "gpt-6.1-terra",
+      "model_answer": "삼각형은 $n-2$개이다. 고른 꼭짓점에 붙어 있지 않은 변은 $n-2$개이고, 그 변마다 삼각형이 하나씩 생기기 때문이다. 삼각형들의 내각을 모두 모으면 $n$각형의 내각과 빈틈이나 겹침 없이 같으므로, 내각의 크기의 합은 $180°\\times(n-2)$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "삼각형이 $n-2$개인 이유를 고른 꼭짓점에 붙어 있지 않은 변과 관련지어 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "삼각형들의 내각을 모두 모으면 다각형의 내각과 빈틈이나 겹침 없이 같음을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$n$각형의 내각의 크기의 합을 $180°\\times(n-2)$로 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-05-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:37:09.148313+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:53:42.309142+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C2-이유설명",
+      "body": "다음 그림은 육각형 $ABCDEF$에 세 대각선을 그은 것이다. 이 육각형의 내각의 크기의 합을 구하고, 그림의 삼각형을 이용하여 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:35:43.83993+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "육각형 $ABCDEF$는 삼각형 $ABC$, $ACD$, $ADE$, $AEF$의 네 삼각형으로 나뉜다. 이 삼각형들의 모든 내각을 합하면 육각형의 내각의 크기의 합과 같다. 따라서 $180^\\circ\\times4=720^\\circ$이다. 육각형의 꼭짓점이 $6$개라고 해서 삼각형이 $6$개로 나뉜다고 생각하지 않도록 주의한다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 2.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 4.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 4.0,
+            "y": 1.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 2.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 0.0,
+            "y": 1.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:35:43.769484+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4d993da6-db82-4ccf-b094-f864fbc6f9c0",
+      "model": "gpt-6.1-terra",
+      "model_answer": "그림에서 육각형은 네 삼각형으로 나뉜다. 네 삼각형의 내각을 모두 합하면 육각형의 내각의 크기의 합과 같다. 따라서 구하는 합은 $180^\\circ\\times4=720^\\circ$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "육각형이 네 삼각형으로 나뉜다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "네 삼각형의 내각의 크기의 합이 육각형의 내각의 크기의 합과 같다고 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "삼각형의 내각의 크기의 합을 이용하여 답을 $720^\\circ$로 구했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-05-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:35:43.769166+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.073606+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-05-C2-이유설명",
@@ -862,8 +2734,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:26:51.282544+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:15.049396+00:00",
       "explanation": "육각형의 한 꼭짓점에서 대각선 $3$개를 그으면 삼각형 $4$개로 나뉜다. 이 삼각형들의 내각을 모두 합하면 육각형의 내각의 크기의 합과 같다. 따라서 육각형의 내각의 크기의 합은 $180^\\circ\\times 4=720^\\circ$이다.\n\n$n$각형에서는 한 꼭짓점에서 자기 자신과 이웃한 두 꼭짓점을 뺀 $n-3$개의 꼭짓점에 대각선을 그을 수 있다. 대각선을 하나 그을 때마다 삼각형이 하나씩 더 생기므로 모두 $n-2$개의 삼각형으로 나뉜다. 이 삼각형들의 내각을 모두 합하면 $n$각형의 내각의 크기의 합과 같으므로 그 합은 $180^\\circ\\times(n-2)$이다.\n\n내각의 크기의 합을 $180^\\circ\\times n$으로 구했다면, 삼각형의 개수를 $n$개로 잘못 생각한 것은 아닌지 살펴본다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:26:49.183765+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -909,7 +2782,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:26:49.182554+00:00",
@@ -920,6 +2793,165 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:42.346989+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-05-C2-이유설명",
+      "body": "다음 그림은 오각형 $ABCDE$ 안의 점 $O$와 각 꼭짓점을 이은 것이다. 그림의 삼각형을 이용하여 오각형의 내각의 크기의 합을 구하고, 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:36:06.744603+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점 $O$를 중심으로 삼각형이 $5$개 생긴다. 이 삼각형들의 내각의 크기의 합은 $5\\times180°=900°$이다. 여기에는 오각형의 내각의 크기의 합과 점 $O$ 주위의 각의 크기의 합 $360°$가 함께 들어 있다. 따라서 오각형의 내각의 크기의 합은 $900°-360°=540°$이다. $5\\times180°$를 바로 오각형의 내각의 크기의 합이라고 하면 점 $O$ 주위의 각까지 포함하는 잘못을 하게 된다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 2.0,
+            "y": -2.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": -2.0,
+            "y": -2.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": -3.0,
+            "y": 2.0
+          },
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ],
+        "polygons": [
+          {
+            "shaded": false,
+            "vertices": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T03:36:06.664345+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "15881427-5c99-4a5b-8f5c-dcca965059ef",
+      "model": "gpt-6.1-terra",
+      "model_answer": "삼각형이 $5$개이므로 삼각형의 내각의 크기의 합은 $5\\times180°=900°$이다. 여기에는 오각형의 내각 외에 점 $O$ 주위의 각도 들어 있다. 점 $O$ 주위의 각의 크기의 합은 $360°$이므로 오각형의 내각의 크기의 합은 $900°-360°=540°$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "삼각형이 $5$개이고 그 내각의 크기의 합이 $900°$임을 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "삼각형의 내각의 크기의 합에서 점 $O$ 주위의 각의 크기의 합 $360°$를 빼는 이유를 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-05-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "오각형의 내각의 크기의 합을 $540°$로 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:36:06.663784+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:08:58.100062+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-05-C2-이유설명",
@@ -927,8 +2959,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:27:15.583349+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:35:15.095203+00:00",
       "explanation": "오각형은 $5$개의 삼각형으로 나누어진다. 이 삼각형의 모든 내각의 크기의 합은 오각형의 내각의 크기의 합과 점 $P$ 둘레의 각의 크기의 합을 더한 것이다. 따라서 오각형의 내각의 크기의 합은 $180°\\times5-360°=540°$이다.\n\n같은 방법으로 볼록 $n$각형은 $n$개의 삼각형으로 나누어진다. 따라서 내각의 크기의 합은 $180°\\times n-360°=180°\\times(n-2)$이다. $180°\\times n$을 답으로 하면 점 $P$ 둘레의 각의 크기의 합 $360°$가 함께 더해진다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:27:13.505557+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -965,7 +2998,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:27:13.505294+00:00",
@@ -982,30 +3015,35 @@
       "body": "두 볼록다각형 $A$, $B$가 있다. $B$의 변의 개수는 $A$보다 $1$개 많고, 대각선의 개수는 $A$보다 $12$개 많다. $A$의 변의 개수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M3",
           "no": 1,
           "text": "$7$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$10$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$12$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$13$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1016,6 +3054,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$A$의 변의 개수를 $n$이라 하면 $B$의 변의 개수는 $n+1$이다. 두 다각형의 대각선의 개수의 차는 $\\frac{(n+1)(n-2)}{2}-\\frac{n(n-3)}{2}=n-1$이다. 따라서 $n-1=12$이므로 $n=13$이다.\n\n①을 골랐다면 대각선의 개수를 $n(n-3)$으로 구했을 수 있다. 이때는 각 대각선을 양 끝 꼭짓점에서 한 번씩, 모두 두 번 센다. 따라서 $2$로 나누어야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:29:26.532264+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 다각형의 대각선 개수의 차가 주어졌을 때 변의 개수를 거꾸로 찾는다.",
@@ -1050,30 +3089,35 @@
       "body": "대각선이 있는 볼록다각형에서 한 꼭짓점 $A$를 잡았다. $A$를 끝점으로 갖지 않는 대각선의 개수는 $A$를 끝점으로 갖는 대각선의 개수의 $3$배이다. 이 다각형의 변의 개수는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M3",
           "no": 1,
           "text": "$4$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$6$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$8$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$10$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1084,6 +3128,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "변의 개수를 $n$이라 하면 $A$를 끝점으로 갖는 대각선은 $n-3$개이다. 전체 대각선의 개수는 그 $4$배이므로 $4(n-3)$개이다. 한편 전체 대각선의 개수는 $\\dfrac{n(n-3)}{2}$개이다. $n-3$은 $0$이 아니므로 $\\dfrac{n}{2}=4$이다. 따라서 $n=8$이다.\n\n①은 전체 대각선을 셀 때 같은 대각선을 두 번 센 경우이다. 각 대각선은 양쪽 끝의 두 꼭짓점에서 한 번씩 세어지므로 $n(n-3)$을 $2$로 나누어야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:30:25.385968+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "한 꼭짓점을 끝점으로 갖는 대각선과 갖지 않는 대각선의 개수 사이의 관계를 주고, 이를 거꾸로 이용하여 변의 개수를 구하게 한다.",
@@ -1118,30 +3163,35 @@
       "body": "볼록팔각형의 대각선은 모두 몇 개인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$16$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$18$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$20$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$28$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M3",
           "no": 5,
@@ -1152,6 +3202,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "한 꼭짓점에서 자기 자신과 양옆의 두 꼭짓점을 빼면 대각선을 그을 수 있는 꼭짓점은 $5$개이다. 이를 $8$개의 꼭짓점에서 세면 같은 대각선을 두 번씩 세므로, 대각선은 $8\\times 5\\div 2=20$개이다. $40$개를 고른 경우에는 같은 대각선을 양쪽 끝에서 두 번 센 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:28:10.430568+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1179,30 +3230,35 @@
       "body": "서로 떨어져 있는 볼록오각형 두 개에 각각 대각선을 모두 그었다. 그린 대각선은 모두 몇 개인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$5$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$8$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$10$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$15$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-05-M3",
           "no": 5,
@@ -1213,6 +3269,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "볼록오각형의 한 꼭짓점에서 그을 수 있는 대각선은 $2$개이다. 다섯 꼭짓점에서 그은 대각선을 모두 세면 $5\\times2=10$이지만, 각 대각선을 양 끝 꼭짓점에서 한 번씩 두 번 세었다. 따라서 볼록오각형 한 개의 대각선은 $10\\div2=5$개이고, 두 개의 대각선은 $5\\times2=10$개이다. $20$개를 골랐다면 각 대각선을 두 번 센 뒤 $2$로 나누지 않았는지 살펴본다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:28:25.878301+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

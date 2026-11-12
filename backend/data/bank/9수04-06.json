@@ -969,30 +969,35 @@
       "body": "상자에 빨간 공 $2$개와 파란 공 $1$개가 있다. 빨간 공에는 각각 $가$, $나$가, 파란 공에는 $다$가 적혀 있다. 공을 한 개 꺼내 적힌 글자를 확인하고 다시 넣는다. 매번 세 공은 각각 같은 가능성으로 뽑힌다.\n\n이미 세 번 연속으로 파란 공이 나왔다. 앞으로 공을 두 번 더 꺼내려고 한다. 다음 학생들의 주장 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 1,
           "text": "앞으로 두 번에서 파란 공이 한 번 나올 확률은 $\\frac{1}{3}$이다. 파란 공이 나오는 횟수는 $0$번, $1$번, $2$번의 세 종류이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M3",
           "no": 2,
           "text": "바로 다음에 빨간 공이 나올 확률은 $\\frac{2}{3}$보다 크다. 앞에서 파란 공이 세 번 연속 나왔으므로 이제 빨간 공이 더 잘 나올 것이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M3",
           "no": 3,
           "text": "바로 다음에 파란 공이 나올 확률은 $\\frac{1}{3}$보다 크다. 앞에서 파란 공이 세 번 연속 나왔으므로 다음에도 파란 공이 더 잘 나올 것이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "앞으로 두 번에서 파란 공이 한 번 나올 확률은 $\\frac{4}{9}$이다. 가능성이 같은 $9$가지 중 파란 공이 한 번 나오는 경우가 $4$가지이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1003,6 +1008,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "앞으로 꺼낼 두 공을 순서대로 나타내면 $(가,가)$, $(가,나)$, $(가,다)$, $(나,가)$, $(나,나)$, $(나,다)$, $(다,가)$, $(다,나)$, $(다,다)$의 $9$가지가 있다. 각각 일어날 가능성은 같다. 이 중 파란 공이 한 번 나오는 경우는 $(가,다)$, $(나,다)$, $(다,가)$, $(다,나)$의 $4$가지이므로 정답은 ④이다.\n\n①은 파란 공이 나오는 횟수의 종류가 $3$가지라는 이유만으로 확률을 정했다. 세 종류가 나올 가능성은 같지 않다. ②와 ③은 앞에서 나온 공이 다음에 나올 공의 확률을 바꾼다고 잘못 생각했다. 공을 매번 다시 넣으므로 다음 한 번에서 빨간 공이 나올 확률은 $\\frac{2}{3}$, 파란 공이 나올 확률은 $\\frac{1}{3}$이다. ⑤의 $\\frac{2}{3}$은 한 번 꺼낼 때 빨간 공이 나올 확률이다. 앞으로 두 번 모두 빨간 공이 나올 확률은 $\\frac{4}{9}$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:14:43.27803+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "앞의 결과가 다음 결과에 영향을 주는지, 파란 공이 나오는 횟수의 종류가 각각 같은 가능성으로 나오는지에 관한 학생들의 주장을 판단하게 했다.",
@@ -1030,30 +1036,35 @@
       "body": "색이 다른 두 주사위를 함께 던진다. 매번 두 주사위의 눈을 순서대로 나타낸 $36$가지 경우는 모두 같은 가능성으로 나온다. 한 번 던진 결과는 다른 번에 던진 결과에 영향을 주지 않는다.\n\n지금까지 두 주사위를 $6$번 던졌더니, 나온 눈의 합이 차례로 $7, 7, 7, 7, 11, 12$였다. 두 주사위를 한 번 더 던질 때, 다음 학생들의 주장 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 1,
           "text": "합이 $11$일 확률과 $12$일 확률은 같다. $11$과 $12$는 각각 한 가지 수이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 2,
           "text": "합이 $7$일 확률은 $\\frac{1}{11}$이다. 나올 수 있는 합은 $2$부터 $12$까지 $11$가지이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M3",
           "no": 3,
           "text": "합이 $7$일 확률은 $\\frac{1}{6}$보다 크다. 앞의 $6$번 중 $4$번에서 합이 $7$이었기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M3",
           "no": 4,
           "text": "합이 $12$일 확률은 $\\frac{1}{36}$보다 작다. 바로 앞에서 합이 $12$였기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1064,6 +1075,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "눈의 합이 $11$인 경우는 $(5, 6), (6, 5)$의 $2$가지이고, $12$인 경우는 $(6, 6)$의 $1$가지이다. 따라서 두 확률은 각각 $\\frac{2}{36}$, $\\frac{1}{36}$이므로 정답은 ⑤이다.\n\n①과 ②는 눈의 합이 될 수 있는 수들이 모두 같은 가능성으로 나온다고 잘못 생각한 것이다. 합마다 그 합이 나오는 경우의 수가 다를 수 있다.\n\n③과 ④는 앞에서 나온 결과가 다음 결과의 확률을 바꾼다고 잘못 생각한 것이다. 눈의 합이 $7$인 경우는 $6$가지이므로 그 확률은 $\\frac{6}{36}=\\frac{1}{6}$이고, 합이 $12$일 확률은 $\\frac{1}{36}$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:15:13.174565+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 주사위를 던진 기록을 바탕으로 다음에 나올 눈의 합에 관한 학생들의 주장 중 옳은 것을 판단하게 했다.",
@@ -1091,30 +1103,35 @@
       "body": "서로 구별할 수 있는 두 동전을 함께 던진다. 매번 네 가지 결과 $(앞, 앞)$, $(앞, 뒤)$, $(뒤, 앞)$, $(뒤, 뒤)$가 나올 가능성은 모두 같다. 앞에서 나온 결과와 관계없이 다음에도 네 가지 결과가 나올 가능성은 모두 같다.\n\n두 동전을 함께 던질 때의 확률에 대한 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 1,
           "text": "앞면의 개수는 $0$, $1$, $2$의 세 가지이므로 앞면이 $0$개 나올 확률은 $\\frac{1}{3}$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M3",
           "no": 2,
           "text": "둘 다 앞면이 세 번 연속 나왔다면 다음에 둘 다 앞면이 나올 확률은 $\\frac{1}{4}$보다 작아."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "앞면이 $1$개 나올 확률은 $\\frac{1}{2}$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "둘 다 앞면이 나올 확률은 $\\frac{3}{4}$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1125,6 +1142,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "네 가지 결과가 나올 가능성은 모두 같다. 앞면이 1개 나오는 결과는 $(앞, 뒤)$, $(뒤, 앞)$의 두 가지이므로 그 확률은 $\\frac{2}{4}=\\frac{1}{2}$이다.\n\n1번은 앞면의 개수가 세 가지라는 것만 보고 확률을 구한 것이다. 앞면의 개수가 각각 나올 가능성은 같지 않다.\n\n2번은 앞에서 나온 결과가 다음 결과의 확률을 바꾼다고 생각한 것이다. 앞에서 어떤 결과가 나왔든 다음에 둘 다 앞면이 나올 확률은 $\\frac{1}{4}$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:50:46.863268+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1152,30 +1170,35 @@
       "body": "주머니에 빨간 공 $3$개와 파란 공 $1$개가 들어 있다. 공은 색만 다르고 크기와 무게는 같다. 공 $1$개를 꺼낼 때 각 공이 나올 가능성은 같다. 꺼낸 공의 색을 확인한 뒤에는 그 공을 주머니에 다시 넣고 잘 섞는다.\n\n공을 꺼낼 때의 확률에 대한 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 1,
           "text": "색이 빨간색과 파란색 두 가지이므로 빨간 공이 나올 확률은 $\\frac{1}{2}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M3",
           "no": 2,
           "text": "빨간 공이 세 번 연속 나왔다면 다음에 파란 공이 나올 확률은 $\\frac{1}{4}$보다 크다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "빨간 공이 나올 확률은 $\\frac{3}{4}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "파란 공이 나올 확률은 $\\frac{1}{3}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1186,6 +1209,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "공 $4$개 중 빨간 공은 $3$개이므로 빨간 공이 나올 확률은 $\\frac{3}{4}$이다. 따라서 정답은 ③이다.\n\n①은 색이 두 가지라는 것만으로 두 색이 나올 가능성이 같다고 생각한 것이다. 빨간 공과 파란 공의 개수가 다르므로 두 색이 나올 가능성도 다르다.\n\n②는 앞에서 나온 색이 다음에 나올 색의 확률을 바꾼다고 생각한 것이다. 공을 다시 넣고 잘 섞으므로 다음에 파란 공이 나올 확률은 그대로 $\\frac{1}{4}$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:14:16.0487+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1216,6 +1240,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "일어날 가능성이 같은 순서쌍은 모두 $9$가지이다. 이 중 합이 $4$인 순서쌍은 $3$가지이므로 구하는 확률은 $\\frac{3}{9}=\\frac{1}{3}$이다.\n\n합이 $2$인 순서쌍은 $1$가지이고, 합이 $4$인 순서쌍은 $3$가지이다. 민지는 각 합이 나오는 경우의 수가 같은지 살피지 않고, 합의 종류가 $5$가지라는 것만으로 각 합의 확률을 정했다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:16:17.250488+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "서로 다른 두 합이 나오는 경우의 수를 비교하여 민지의 말이 틀렸음을 구체적인 수로 보이게 했다.",
@@ -1274,6 +1299,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "가능성이 같은 네 칸은 ㄱ, ㄴ, ㄷ, ㄹ이다. 이 중 빨간색은 두 칸이므로 빨간색이 나올 확률은 $\\frac{2}{4}=\\frac{1}{2}$이다. 파란색은 한 칸이므로 파란색이 나올 확률은 $\\frac{1}{4}$이다. 두 확률이 서로 다르므로 지우의 말은 틀렸다.\n\n색이 세 가지라고 해서 각 색이 나올 가능성이 같은 것은 아니다. 지우는 각 색에 해당하는 칸의 수를 살피지 않고 색의 종류 수로만 확률을 정했다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:16:38.67935+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "문제에서 주어진 돌림판을 반례로 들어 지우의 말이 틀렸음을 설명하게 한다.",
@@ -1332,6 +1358,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "합의 종류가 다섯 가지이지만, 각 합이 나올 가능성은 같지 않다. 예를 들어 합이 $2$인 수의 쌍은 $1$가지이고, 합이 $4$인 수의 쌍은 $3$가지이다. 민수는 합의 종류만 세고 각 합이 나올 가능성이 같은지 살피지 않았다. 같은 가능성으로 나오는 수의 쌍은 모두 $9$가지이고, 그중 합이 $4$인 쌍은 $3$가지이므로 구하는 확률은 $\\frac{3}{9}=\\frac{1}{3}$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:15:34.94462+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1390,6 +1417,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "앞면을 앞, 뒷면을 뒤라고 하면 같은 가능성으로 나오는 면의 쌍은 $(\\text{앞},\\text{앞})$, $(\\text{앞},\\text{뒤})$, $(\\text{뒤},\\text{앞})$, $(\\text{뒤},\\text{뒤})$의 $4$가지이다. 이 중 앞면이 $1$번 나오는 경우는 $2$가지이므로 확률은 $\\frac{2}{4}=\\frac{1}{2}$이다.\n\n앞면이 나오는 횟수의 종류는 세 가지이지만, 각 횟수가 나올 가능성은 같지 않다. 지수는 이 점을 살피지 않고 횟수의 종류가 세 가지라는 것만으로 확률을 구했다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:15:52.497222+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1445,30 +1473,35 @@
       "body": "주머니에 크기와 모양이 같은 쪽지 $3$장이 들어 있다. 각 쪽지에는 A, B, C 중 하나가 적혀 있고, 각각 $1$장씩 있다.\n\n쪽지 $1$장을 뽑은 뒤, 그 글자가 적힌 상자에서 카드 $1$장을 뽑는다. 각 쪽지가 뽑힐 가능성은 같다. 한 상자에 카드가 여러 장 있으면 각 카드가 뽑힐 가능성도 같다.\n\n- A 상자: 숫자 $1$이 적힌 카드와 숫자 $2$가 적힌 카드\n- B 상자: 숫자 $3$이 적힌 카드\n- C 상자: 숫자 $4$가 적힌 카드\n\n뽑은 카드에 적힌 숫자가 $3$ 또는 $4$일 확률을 구하는 방법으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 1,
           "text": "카드 $4$장 중 $2$장에 $3$ 또는 $4$가 적혀 있으므로 $\\frac{2}{4}$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "뽑힐 가능성이 같은 쪽지 $3$장 중 B 또는 C가 적힌 쪽지는 $2$장이므로 $\\frac{2}{3}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 3,
           "text": "나오는 숫자를 ‘$1$’, ‘$2$’, ‘$3$ 또는 $4$’의 세 종류로 나누면 그중 한 종류이므로 $\\frac{1}{3}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "카드 $4$장 중 $1$장만 뽑으므로 $\\frac{1}{4}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1479,6 +1512,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "숫자 $3$ 또는 $4$가 나오려면 B 또는 C가 적힌 쪽지를 뽑아야 한다. 세 쪽지가 뽑힐 가능성은 같고, 그중 $2$장이 B 또는 C이므로 확률은 $\\frac{2}{3}$이다.\n\n①은 카드 $4$장이 뽑힐 가능성이 모두 같다고 생각한 것이다. 하지만 A 상자의 각 카드가 뽑힐 가능성은 B나 C 상자의 카드보다 작다. ③은 ‘$3$ 또는 $4$’를 한 종류로 묶은 뒤, 그 종류가 다른 종류와 나올 가능성이 같은지 따지지 않은 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:53.195431+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "카드에 적힌 네 숫자가 나올 가능성이 같은지 따져야 한다. 가능성이 같은 쪽지 세 장을 기준으로 확률을 구하는 방법을 고르게 한다.",
@@ -1506,30 +1540,35 @@
       "body": "회전판이 크기가 같은 $8$개의 칸으로 나뉘어 있다. 각 칸에 멈출 가능성은 같다.\n\n| 칸에 적힌 그림 | 해 | 달 | 별 |\n|---|---:|---:|---:|\n| 칸의 수 | $4$ | $3$ | $1$ |\n\n이 회전판을 같은 방법으로 $100$번 돌렸더니 다음과 같았다.\n\n| 멈춘 칸의 그림 | 해 | 달 | 별 |\n|---|---:|---:|---:|\n| 멈춘 횟수 | $43$ | $39$ | $18$ |\n\n이 회전판을 한 번 돌릴 때, 달 또는 별이 적힌 칸에 멈출 확률과 그 이유로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{4}{8}$이다. 가능성이 같은 $8$개 칸 중 달 또는 별이 적힌 칸이 $4$개이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 2,
           "text": "$\\frac{2}{3}$이다. 그림 $3$종류 중 달과 별의 $2$종류를 센다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{57}{100}$이다. 실험에서 얻은 상대도수는 반드시 확률과 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{3}{8}$이다. 전체 칸 중 달이 적힌 칸만 센다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1540,6 +1579,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "각 칸에 멈출 가능성이 같으므로 전체 $8$개 칸을 살펴본다. 달 또는 별이 적힌 칸은 $3+1=4$개이므로 확률은 $\\frac{4}{8}$이다.\n\n②는 그림의 종류마다 나올 가능성이 같다고 잘못 생각한 것이다. 각 그림이 적힌 칸의 수가 다르므로 그림의 종류만 세어서는 안 된다.\n\n③의 $\\frac{57}{100}$은 이번 실험에서 달 또는 별에 멈춘 상대도수이다. 상대도수는 확률에 가까워질 수 있지만 항상 확률과 같지는 않다. ④는 별이 적힌 칸을 빠뜨렸고, ⑤는 칸의 수와 실험에서 멈춘 횟수를 잘못 섞어 사용했다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:50:23.58756+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "그림의 종류는 세 가지이지만 각 그림이 적힌 칸의 수는 다르다. 가능성이 같은 칸을 기준으로 삼아야 하는지와 실험에서 얻은 상대도수가 확률과 반드시 같은지를 함께 따져야 한다.",
@@ -1567,30 +1607,35 @@
       "body": "주머니에 크기와 모양이 같은 빨간 공 $3$개와 파란 공 $1$개가 들어 있다. 공을 하나 꺼낼 때, 어느 공이든 뽑힐 가능성은 같다. 빨간 공이 나올 확률과 그 이유로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 1,
           "text": "$\\frac{1}{2}$이다. 공의 색이 두 종류이므로 각 색이 나올 가능성이 같기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{3}{4}$이다. 공 $4$개가 뽑힐 가능성이 같고, 그중 빨간 공이 $3$개이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{1}{4}$이다. 공 $4$개 중 파란 공이 $1$개이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$1$이다. 주머니에 빨간 공이 들어 있기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1601,6 +1646,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "공은 모두 $4$개이고, 어느 공이든 뽑힐 가능성은 같다. 그중 빨간 공은 $3$개이므로 빨간 공이 나올 확률은 $\\frac{3}{4}$이다. ①은 공의 색이 두 종류라는 것만 보고 두 색이 나올 가능성이 같다고 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:59.823678+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1628,30 +1674,35 @@
       "body": "동전 $A$와 동전 $B$를 동시에 던진다. 각 동전의 앞면을 앞, 뒷면을 뒤라고 하자. 두 동전에서 나올 수 있는 $(앞, 앞)$, $(앞, 뒤)$, $(뒤, 앞)$, $(뒤, 뒤)$의 가능성은 모두 같다. 두 동전이 모두 앞면으로 나올 확률과 그 이유로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{1}{4}$이다. 가능성이 같은 네 경우 중 둘 다 앞면인 경우는 한 가지이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 2,
           "text": "$\\frac{1}{3}$이다. 앞면이 나온 동전의 수는 $0, 1, 2$ 중 하나이고, 이 중 $2$인 경우는 한 가지이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{1}{2}$이다. 동전 $A$에서 앞면이 나오는 경우와 뒷면이 나오는 경우 중 앞면인 경우는 한 가지이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{1}{4}$이다. 두 동전이 같은 면으로 나오는 경우는 네 가지이고, 그중 둘 다 앞면인 경우는 한 가지이기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1662,6 +1713,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "가능성이 같은 네 경우 중 두 동전이 모두 앞면으로 나오는 경우는 $(앞, 앞)$ 한 가지이다. 따라서 확률은 $\\frac{1}{4}$이다. 앞면이 나온 동전의 수가 $0, 1, 2$인 경우는 가능성이 모두 같지 않다. 앞면이 나온 동전의 수가 $1$인 경우에는 $(앞, 뒤)$와 $(뒤, 앞)$이 있기 때문이다. 또 두 동전이 같은 면으로 나오는 경우는 $(앞, 앞)$과 $(뒤, 뒤)$의 두 가지이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:26.312143+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1689,30 +1741,35 @@
       "body": "어떤 놀이에서 이길 확률은 $\\frac{2}{5}$이다.\n다른 주머니에는 $1$부터 $10$까지의 수가 하나씩 적힌 카드 $10$장이 있다. 이 주머니에서 카드 한 장을 꺼낼 때, 각 카드가 나올 가능성은 같다.\n다음 중 카드에 적힌 수가 나올 확률이 이 놀이에서 이기지 않을 확률과 같은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$1$부터 $2$까지의 수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$1$부터 $4$까지의 수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M2",
           "no": 3,
           "text": "$1$부터 $5$까지의 수"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$1$부터 $6$까지의 수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1723,6 +1780,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "놀이에서 이기지 않을 확률은 $1-\\frac{2}{5}=\\frac{3}{5}$이다. 카드 $10$장 중 $1$부터 $6$까지의 수가 적힌 카드는 $6$장이므로, ④의 확률은 $\\frac{6}{10}=\\frac{3}{5}$이다.\n③을 골랐다면 이기거나 이기지 않거나 둘 중 하나이므로 각각의 확률이 항상 $\\frac{1}{2}$이라고 잘못 생각했을 수 있다. 두 확률의 합은 $1$이지만, 두 확률이 항상 같은 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:17:52.187609+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "이기지 않을 확률과 같은 확률을 가진 카드의 수 범위를 거꾸로 찾게 한다.",
@@ -1758,30 +1816,35 @@
       "body": "돌림판이 크기가 같은 $8$개의 칸으로 나뉘어 있다. 각 칸은 빨간색 또는 파란색이다. 돌림판을 돌려 멈추었을 때, 각 칸을 가리킬 가능성은 같다.\n\n가리키는 칸이 빨간색이 아닐 확률은 빨간색일 확률의 $3$배이다. 빨간색 칸은 몇 개인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$1$개"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$3$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M2",
           "no": 4,
           "text": "$4$개"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1792,6 +1855,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "빨간색 칸을 가리킬 확률을 $x$라 하면, 빨간색이 아닐 확률은 $1-x$이다. 따라서 $1-x=3x$이므로 $x=\\frac{1}{4}$이다. 빨간색 칸은 $8$개의 $\\frac{1}{4}$인 $2$개이다.\n\n빨간색이거나 빨간색이 아닌 두 가지 중 하나이므로 확률이 각각 $\\frac{1}{2}$이라고 생각하면 ④를 고를 수 있다. 하지만 두 확률은 반드시 같지는 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:19:13.670847+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "빨간색이 아닐 확률과 빨간색일 확률의 관계를 주고, 이를 거꾸로 이용해 빨간색 칸의 수를 구하게 했다.",
@@ -1836,30 +1900,35 @@
       "body": "내일 비가 올 확률이 $\\frac{3}{10}$이다. 내일 비가 오지 않을 확률은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{1}{10}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{3}{10}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M2",
           "no": 3,
           "text": "$\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{7}{10}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1870,6 +1939,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "비가 오지 않을 확률은 $1-\\frac{3}{10}=\\frac{7}{10}$이다. 비가 오거나 오지 않거나 둘 중 하나라고 해서 두 확률이 항상 각각 $\\frac{1}{2}$인 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:16:48.451849+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1897,30 +1967,35 @@
       "body": "어떤 열쇠로 문을 한 번 열려고 할 때, 문이 열리지 않을 확률은 $\\frac{2}{7}$이다. 문이 열릴 확률은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$0$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{2}{7}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M2",
           "no": 3,
           "text": "$\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{5}{7}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1931,6 +2006,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "문이 열리거나 열리지 않거나 둘 중 하나이므로, 문이 열릴 확률은 $1-\\frac{2}{7}=\\frac{5}{7}$이다. 두 가지 결과가 있다고 해서 각각의 확률이 항상 $\\frac{1}{2}$인 것은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:17:02.238765+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1958,30 +2034,35 @@
       "body": "상자 A에는 $1$, $2$, $3$, $4$가 하나씩 적힌 카드가 있고, 상자 B에는 $1$, $2$, $3$이 하나씩 적힌 카드가 있다. 각 상자에서 카드를 한 장씩 뽑는다. 뽑은 두 카드에 적힌 수를 차례로 순서쌍으로 나타낼 때, 각 순서쌍이 나올 가능성은 같다.\n\n두 카드에 적힌 수의 합이 다음 보기의 수 중 하나일 확률이 $\\frac{1}{3}$인 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2$ 또는 $3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2$ 또는 $4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 3,
           "text": "$2$ 또는 $7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$3$ 또는 $4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1992,6 +2073,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "나올 수 있는 순서쌍은 모두 $4\\times3=12$가지이다. 합이 $2$인 순서쌍은 $(1,1)$의 $1$가지이고, 합이 $4$인 순서쌍은 $(1,3)$, $(2,2)$, $(3,1)$의 $3$가지이다. 따라서 합이 $2$ 또는 $4$일 확률은 $\\frac{4}{12}=\\frac{1}{3}$이다.\n\n합이 $2$ 또는 $7$인 ③을 고른 학생은 나올 수 있는 합이 $2$부터 $7$까지의 여섯 가지이므로 확률이 $\\frac{2}{6}$이라고 생각했을 수 있다. 하지만 각 합이 나올 가능성은 같지 않다. 합이 $2$ 또는 $7$인 순서쌍은 $(1,1)$과 $(4,3)$뿐이므로 그 확률은 $\\frac{2}{12}$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:20:25.718496+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "확률이 $\\frac{1}{3}$이라는 결과를 주고, 그 확률에 맞는 두 수의 합을 찾게 한다.",
@@ -2019,30 +2101,35 @@
       "body": "동전 한 개를 세 번 던진다. 매번 앞면 또는 뒷면이 나온다. 세 번의 결과를 나온 차례대로 나타낼 때, 각 결과가 나올 가능성은 같다.\n\n다음 중 적힌 일이 일어날 확률이 $\\frac{1}{4}$인 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "앞면이 한 번도 나오지 않는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 2,
           "text": "앞면이 한 번 나온다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "앞면이 두 번 이상 나온다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "세 번 모두 같은 면이 나온다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2053,6 +2140,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "세 번의 결과는 앞앞앞, 앞앞뒤, 앞뒤앞, 앞뒤뒤, 뒤앞앞, 뒤앞뒤, 뒤뒤앞, 뒤뒤뒤의 $8$가지이다.\n\n세 번 모두 같은 면이 나오는 경우는 앞앞앞, 뒤뒤뒤의 $2$가지이다. 따라서 확률은 $\\frac{2}{8}=\\frac{1}{4}$이다.\n\n②에서 앞면이 한 번 나오는 경우는 앞뒤뒤, 뒤앞뒤, 뒤뒤앞의 $3$가지이므로 확률은 $\\frac{3}{8}$이다. 앞면이 나온 횟수 $0$, $1$, $2$, $3$이 나올 가능성이 모두 같다고 생각하면 ②를 고를 수 있다. 하지만 각 횟수가 나오는 경우의 수는 서로 다르다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:20:49.325211+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "확률 $\\frac{1}{4}$이 주어져 있고, 각 보기의 경우의 수를 세어 그 확률에 맞는 일을 찾는다.",
@@ -2080,30 +2168,35 @@
       "body": "서로 다른 두 동전을 동시에 던진다. 각 동전에서 앞면과 뒷면이 나올 가능성은 같고, 두 동전에서 나오는 면은 서로 영향을 주지 않는다. 두 동전 모두 앞면이 나올 확률은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{1}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 2,
           "text": "$\\frac{1}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{2}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2114,6 +2207,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "첫째 동전과 둘째 동전에서 나오는 면을 차례로 쓰면 $(앞, 앞)$, $(앞, 뒤)$, $(뒤, 앞)$, $(뒤, 뒤)$의 네 가지이다. 이 네 가지가 나올 가능성은 같다. 이 중 두 동전 모두 앞면이 나오는 경우는 한 가지이므로 확률은 $\\frac{1}{4}$이다.\n$\\frac{1}{3}$을 골랐다면 앞면이 나오는 동전의 개수가 $0$개, $1$개, $2$개인 세 가지가 일어날 가능성이 같다고 생각했을 수 있다. 하지만 앞면이 나오는 동전이 $1$개인 경우는 두 가지이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:19:31.135841+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2141,30 +2235,35 @@
       "body": "상자에 빨간 카드 $3$장과 파란 카드 $2$장이 들어 있다. 카드 한 장을 뽑을 때, 각 카드가 뽑힐 가능성은 같다. 빨간 카드를 뽑을 확률은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{1}{5}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{2}{5}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-06-M1",
           "no": 3,
           "text": "$\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{3}{5}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2175,6 +2274,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "모든 카드는 $5$장이고, 그중 빨간 카드는 $3$장이다. 따라서 구하는 확률은 $\\frac{3}{5}$이다. 색의 종류가 두 가지라고 해서 각 색의 카드가 뽑힐 가능성이 같은 것은 아니다. 빨간 카드와 파란 카드의 수가 다르므로 $\\frac{1}{2}$이 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:19:42.737733+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

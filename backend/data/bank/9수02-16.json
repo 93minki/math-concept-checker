@@ -585,30 +585,35 @@
       "body": "일차함수의 그래프가 두 점 $(2, 7)$, $(k, 1)$을 지납니다. 이 그래프의 기울기가 $-\\frac{3}{2}$일 때, $k$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 1,
           "text": "$-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$8$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 5,
@@ -619,6 +624,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x$의 값의 차를 $k-2$로 잡으면, 같은 순서로 구한 $y$의 값의 차는 $1-7=-6$입니다. 따라서 $\\frac{-6}{k-2}=-\\frac{3}{2}$이므로 $k=6$입니다.\n\n$11$을 골랐다면 $x$의 값의 차를 $y$의 값의 차로 나누었는지 확인해 보세요. $-2$를 골랐다면 $x$와 $y$의 값의 차를 구할 때 뺀 순서가 서로 다르지 않은지 확인해 보세요.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:23.847315+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 점의 좌표에서 기울기를 구하는 대신, 기울기를 주고 한 점의 좌표에 있는 미지수의 값을 찾게 한다.",
@@ -646,30 +652,35 @@
       "body": "물통에 처음에 물이 $18$L 들어 있습니다. 물통에서 물을 빼기 시작한 지 $4$분 후에는 물이 $12$L 남았습니다. 물을 빼기 시작한 때부터 물의 양이 $3$L가 될 때까지, 물의 양은 시간에 대한 일차함수입니다.\n\n물을 빼기 시작한 지 몇 분 후에 물의 양이 $3$L가 됩니까?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$6$분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$8$분"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$10$분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$12$분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 5,
@@ -680,6 +691,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "시간을 $x$분, 물의 양을 $y$L라고 하면 기울기는 $\\frac{12-18}{4-0}=-\\frac{3}{2}$입니다. 물의 양이 처음보다 $15$L 적어져야 하므로 걸리는 시간은 $15\\div\\frac{3}{2}=10$분입니다. 따라서 정답은 ③입니다.\n\n⑤를 골랐다면 기울기를 구할 때 물의 양의 차이를 시간의 차이로 나누지 않고, 거꾸로 나누었는지 확인해 보세요.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:49.199206+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "나중의 물의 양을 주고, 기울기를 이용하여 그때까지 걸린 시간을 거꾸로 구하게 했다.",
@@ -707,30 +719,35 @@
       "body": "일차함수의 그래프가 두 점 $(1, 5)$, $(3, -1)$을 지난다. 이 그래프의 기울기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 3,
           "text": "$-\\dfrac{1}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 5,
@@ -741,6 +758,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$의 값이 $1$에서 $3$으로 바뀔 때, $y$의 값은 $5$에서 $-1$로 바뀐다. 따라서 기울기는 $\\dfrac{-1-5}{3-1}=-3$이다. $-\\dfrac{1}{3}$을 골랐다면 나누는 순서를 거꾸로 생각했을 수 있다. $3$을 골랐다면 $x$와 $y$에서 빼는 순서를 다르게 했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:42:22.710856+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -768,30 +786,35 @@
       "body": "시간에 따라 온도가 일정하게 변한다. 처음부터 $x$분이 지났을 때의 온도를 $y\\,^{\\circ}\\mathrm{C}$라 하자.\n\n| $x$ | $0$ | $2$ |\n|---|---:|---:|\n| $y$ | $6$ | $10$ |\n\n이 일차함수의 그래프의 기울기는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 1,
           "text": "$-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 2,
           "text": "$\\frac{1}{2}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -802,6 +825,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$의 값이 $0$에서 $2$로 바뀔 때, $y$의 값은 $6$에서 $10$으로 바뀝니다. 따라서 기울기는 $(10-6)\\div(2-0)=2$입니다.\n\n①은 두 값에서 빼는 순서를 다르게 하여 부호를 잘못 구한 것입니다. ②는 나누는 순서를 바꾸어 $x$의 값이 바뀐 양을 $y$의 값이 바뀐 양으로 나눈 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:43:08.491297+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -836,30 +860,35 @@
       "body": "일차함수의 그래프는 두 점 $(1, 7)$, $(5, 5)$를 지난다. 다음은 이 그래프의 기울기에 대한 다섯 학생의 주장이다. 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 1,
           "text": "민수: 기울기는 $\\dfrac{5-1}{5-7}=-2$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 2,
           "text": "지은: 기울기는 $\\dfrac{5-7}{1-5}=\\dfrac{1}{2}$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "서준: 기울기는 $\\dfrac{7-5}{1-5}=-\\dfrac{1}{2}$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "하은: $x$가 $1$에서 $5$로 변할 때 $y$가 $-2$만큼 변하므로 기울기는 $-2$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -870,6 +899,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "두 점을 $(1, 7)$에서 $(5, 5)$의 순서로 보면, $x$의 값은 $4$만큼, $y$의 값은 $-2$만큼 변한다. 따라서 기울기는 $\\dfrac{-2}{4}=-\\dfrac{1}{2}$이다. ③은 두 값의 빼는 순서를 모두 바꾸었으므로 옳다. ①은 나누는 순서를 거꾸로 하였다. ②는 $x$와 $y$에서 빼는 순서를 다르게 하였다. ④와 ⑤는 한 값이 변한 양만으로 기울기를 구하였다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:45:12.495961+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 기울기에 대한 주장 중 옳은 것을 판단하게 하였다. 나누는 순서와 빼는 순서를 살펴보아야 한다.",
@@ -897,30 +927,35 @@
       "body": "어떤 일차함수에서 $x$의 값이 $0$에서 $4$로 변할 때, $y$의 값은 $1$에서 $3$으로 변한다. 민수는 기울기를 $\\frac{3-1}{0-4}=-\\frac{1}{2}$로 구했다. 민수의 풀이에 대한 판단으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 1,
           "text": "옳다. $x$와 $y$에서 빼는 순서를 다르게 해도 기울기는 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 2,
           "text": "잘못이다. $x$의 값의 증가량을 $y$의 값의 증가량으로 나누어야 하므로 기울기는 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "잘못이다. $x$와 $y$에서 빼는 순서를 같게 해야 하므로 기울기는 $\\frac{1}{2}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "잘못이다. $y$의 값이 $2$만큼 커졌으므로 기울기는 $2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -931,6 +966,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x$와 $y$에서 빼는 순서를 같게 하면 기울기는 $\\frac{3-1}{4-0}=\\frac{1}{2}$이다. ①은 $x$와 $y$에서 빼는 순서를 다르게 해도 된다고 생각한 것이다. ②는 $x$의 값의 증가량을 $y$의 값의 증가량으로 나누었다. ④와 ⑤는 각각 한쪽 값이 변한 양만을 기울기로 생각했다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:45:36.011418+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "민수가 두 값에서 빼는 순서를 다르게 한 풀이를 제시하고, 그 풀이가 옳은지 판단하게 했다.",
@@ -958,30 +994,35 @@
       "body": "일차함수의 그래프가 두 점 $(2, 1)$, $(5, 7)$을 지난다. 이 그래프의 기울기를 구하는 방법으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 1,
           "text": "$x$의 값이 변한 양을 $y$의 값이 변한 양으로 나눈다: $\\dfrac{5-2}{7-1}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 2,
           "text": "$x$와 $y$에서 빼는 순서를 다르게 하여 나눈다: $\\dfrac{7-1}{2-5}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$x$와 $y$에서 같은 순서로 빼고, $y$의 값이 변한 양을 $x$의 값이 변한 양으로 나눈다: $\\dfrac{7-1}{5-2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y$의 두 값을 더한 것을 $x$의 두 값을 더한 것으로 나눈다: $\\dfrac{7+1}{5+2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -992,6 +1033,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "기울기는 $y$의 값이 변한 양을 $x$의 값이 변한 양으로 나눈 것이다. 두 점에서 같은 순서로 빼면 기울기는 $\\dfrac{7-1}{5-2}=2$이다.\n①은 나누는 순서를 거꾸로 생각했다. ②는 $x$와 $y$에서 빼는 순서를 다르게 하여 부호가 바뀌었다. ④는 변한 양 대신 두 값을 더했다. ⑤는 $y$의 값이 변한 양을 잘못 구했다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:44:08.515369+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1019,30 +1061,35 @@
       "body": "어떤 일차함수에서 $x$의 값이 $4$에서 $10$으로 바뀔 때, $y$의 값은 $8$에서 $6$으로 바뀐다. 기울기에 대한 다음 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 1,
           "text": "$x$의 값이 변한 양을 $y$의 값이 변한 양으로 나누면 기울기는 $-3$이야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$y$의 값이 변한 양을 $x$의 값이 변한 양으로 나누면 기울기는 $-\\frac{1}{3}$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 3,
           "text": "$y$에서는 나중 값에서 처음 값을 빼고, $x$에서는 처음 값에서 나중 값을 빼면 기울기는 $\\frac{1}{3}$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y$의 값이 변한 양이 기울기이므로 기울기는 $-2$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1053,6 +1100,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$의 값이 변한 양은 $10-4=6$이고, $y$의 값이 변한 양은 $6-8=-2$이다. 따라서 기울기는 $\\frac{-2}{6}=-\\frac{1}{3}$이다. ①은 나누는 순서를 거꾸로 생각했다. ③은 $x$와 $y$에서 빼는 순서를 다르게 하여 기울기의 부호를 잘못 구했다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:44:54.699228+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1090,30 +1138,35 @@
       "body": "두 일차함수 $y=2x$와 $y=-2x+4$의 그래프가 있다. 각 그래프의 $x$절편과 $y$절편을 바르게 짝 지은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M3",
           "no": 1,
           "text": "$y=2x$: $x$절편 $0$, $y$절편 $0$; $y=-2x+4$: $x$절편 $4$, $y$절편 $2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$y=2x$: $x$절편 $0$, $y$절편 $0$; $y=-2x+4$: $x$절편 $2$, $y$절편 $4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$y=2x$: 두 절편이 모두 없다; $y=-2x+4$: $x$절편 $2$, $y$절편 $4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=2x$: $x$절편 $0$, $y$절편 $2$; $y=-2x+4$: $x$절편 $2$, $y$절편 $4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1124,6 +1177,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "그래프가 지나는 점 중 $y=0$인 점의 $x$좌표가 $x$절편이고, $x=0$인 점의 $y$좌표가 $y$절편이다. $y=2x$의 그래프는 $(0,0)$을 지나므로 두 절편이 모두 $0$이다. $y=-2x+4$에서 $y=0$이면 $x=2$이고, $x=0$이면 $y=4$이다. 따라서 정답은 ②이다. ①은 $x$절편을 구할 때 $x=0$을, $y$절편을 구할 때 $y=0$을 대입하여 두 절편을 바꾸어 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:46:26.564331+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "$y=2x$의 그래프가 $(0,0)$을 지나는 사례를 넣었다. 두 절편이 모두 $0$인 것과 절편이 없는 것을 구별해야 한다.",
@@ -1151,30 +1205,35 @@
       "body": "일차함수 $y=-x+3$의 그래프에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$x$절편과 $y$절편은 모두 $3$이고, 그래프에서 $y=0$인 점과 $x=0$인 점은 같은 점이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M3",
           "no": 2,
           "text": "$x$절편과 $y$절편은 모두 $3$이고, $x$절편은 $x=0$을, $y$절편은 $y=0$을 대입하여 구한다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$x$절편과 $y$절편은 모두 $3$이고, 그래프에서 $y=0$인 점은 $(3,0)$, $x=0$인 점은 $(0,3)$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x$절편은 $(3,0)$이고, $y$절편은 $(0,3)$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1185,6 +1244,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$y=0$을 대입하면 $x=3$이므로 $x$절편은 $3$이다. $x=0$을 대입하면 $y=3$이므로 $y$절편도 $3$이다. 두 절편의 값은 같지만, 그래프에서 $y=0$인 점은 $(3,0)$이고 $x=0$인 점은 $(0,3)$이다. ②처럼 $x$절편을 구할 때 $x=0$을 대입하면 $y$절편을 구하게 된다. 이 문제에서는 두 절편의 값이 우연히 같아도 구하는 방법은 다르다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:47:31.291832+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "두 절편의 값은 같지만 각각에 해당하는 점은 다른 사례를 제시했다. 각 절편을 구할 때 어느 값을 $0$으로 놓는지와 절편이 점의 좌표 중 어느 값인지 따져야 한다.",
@@ -1221,30 +1281,35 @@
       "body": "일차함수 $y=2x-6$의 그래프에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M3",
           "no": 1,
           "text": "$x$절편은 $-6$이고, $y$절편은 $3$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$x$절편은 $3$이고, $y$절편은 $-6$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x$절편은 $(3, 0)$이고, $y$절편은 $(0, -6)$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x$절편은 $-3$이고, $y$절편은 $6$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1255,6 +1320,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$y=0$을 대입하면 $x=3$이므로 그래프는 $x$축과 $(3, 0)$에서 만난다. 따라서 $x$절편은 $3$이다. $x=0$을 대입하면 $y=-6$이므로 $y$절편은 $-6$이다. ①은 $x$절편과 $y$절편을 바꾸어 생각한 것이다. 절편은 점의 좌표 전체가 아니라 각 점의 $x$좌표 또는 $y$좌표이므로 ③도 옳지 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:45:50.428142+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1282,30 +1348,35 @@
       "body": "일차함수 $y=-2x-6$의 그래프에서 $x$절편과 $y$절편을 구하는 방법과 그 값이 모두 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M3",
           "no": 1,
           "text": "$x$절편: $x=0$을 대입하여 $-6$, $y$절편: $y=0$을 대입하여 $-3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$x$절편: $y=0$을 대입하여 $-3$, $y$절편: $x=0$을 대입하여 $-6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x$절편: $y=0$을 대입하여 $3$, $y$절편: $x=0$을 대입하여 $-6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$x$절편: $y=0$을 대입하여 $-3$, $y$절편: $x=0$을 대입하여 $6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1316,6 +1387,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$절편은 그래프가 $x$축과 만나는 점의 $x$좌표이다. 따라서 $y=0$을 대입하면 $x=-3$이다. $y$절편은 그래프가 $y$축과 만나는 점의 $y$좌표이다. 따라서 $x=0$을 대입하면 $y=-6$이다. ①은 $x$절편과 $y$절편을 바꾸어 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:46:06.58987+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1343,30 +1415,35 @@
       "body": "그래프가 제1사분면, 제2사분면, 제4사분면을 지나고, $y=-2x$의 그래프보다 더 가파른 일차함수의 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 1,
           "text": "$y=-x+1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$y=-3x-1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$y=3x+1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=-2x+1$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1377,6 +1454,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "그래프가 제1사분면, 제2사분면, 제4사분면을 지나려면 기울기는 음수이고 $y$절편은 양수여야 한다. 또 $y=-2x$의 그래프보다 더 가파르려면 기울기의 절댓값이 $2$보다 커야 한다. 이를 모두 만족하는 식은 ⑤이다.\n①의 기울기 $-1$은 $-2$보다 크지만, 절댓값이 $1$이므로 그래프는 $y=-2x$의 그래프보다 덜 가파르다. 가파른 정도는 기울기의 값이 아니라 기울기의 절댓값으로 비교해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:32.583514+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "그래프가 지나는 사분면과 가파른 정도를 먼저 주고, 이에 맞는 일차함수의 식을 찾게 한다.",
@@ -1404,30 +1482,35 @@
       "body": "두 일차함수 $y=-4x+1$의 그래프를 $A$, $y=2x-3$의 그래프를 $B$라고 하자. 다음은 두 그래프의 성질을 알아본 풀이이다.\n\n1단계: $A$의 기울기는 $-4$, $B$의 기울기는 $2$이다.\n2단계: $A$는 오른쪽 아래로, $B$는 오른쪽 위로 향한다.\n3단계: $-4<2$이므로 $B$가 $A$보다 더 가파르다.\n4단계: 두 그래프의 기울기가 다르므로 두 그래프는 평행하다.\n\n처음으로 잘못된 단계와 그 까닭을 바르게 말한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "1단계: $A$의 기울기는 $1$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "2단계: $A$는 오른쪽 위로 향한다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "3단계: 기울기의 절댓값을 비교하면 $A$가 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 4,
           "text": "4단계: $-4<2$이므로 $B$가 더 가파르다는 판단은 옳지만, 두 그래프는 평행하지 않다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1438,6 +1521,7 @@
       "difficulty": "hard",
       "disabled_at": "2026-11-11T11:54:59.50012+00:00",
       "explanation": "1단계와 2단계는 옳다. 3단계에서는 기울기의 절댓값을 비교해야 한다. $|-4|>|2|$이므로 $A$가 $B$보다 더 가파르다. 기울기의 값만 비교하여 $B$가 더 가파르다고 생각하지 않도록 주의한다. 4단계도 잘못되었지만, 처음 잘못된 단계는 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:49:05.439156+00:00",
       "hard_condition": "application-c",
       "hard_condition_reason": "풀이의 여러 단계 중 처음으로 잘못된 단계를 찾고 그 까닭을 판단하게 한다.",
@@ -1465,30 +1549,35 @@
       "body": "일차함수의 그래프 $l$은 두 점 $(-1, 3)$, $(1, -5)$를 지난다. 일차함수 $y=2x-1$의 그래프를 $m$이라 할 때, 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 1,
           "text": "$m$은 $l$보다 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$l$과 $m$은 서로 평행하다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$l$과 $m$은 일치한다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$l$은 제2사분면, 제3사분면, 제4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1499,6 +1588,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$l$의 기울기는 $-4$이고, 식은 $y=-4x-1$이다. 따라서 $l$은 제2사분면, 제3사분면, 제4사분면을 지난다. 정답은 ④이다.\n①은 $2$가 $-4$보다 크므로 $m$이 더 가파르다고 잘못 생각한 것이다. 가파른 정도는 기울기의 절댓값으로 비교한다. $|-4|=4$이고 $|2|=2$이므로 $l$이 더 가파르다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:42:16.087335+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "두 점을 지나는 그래프를 식으로 나타내고, 그 식에서 기울기와 절편을 살펴 그래프의 모양과 위치를 판단한다.",
@@ -1533,30 +1623,35 @@
       "body": "일차함수 $y=-2x$의 그래프에 대한 설명으로 옳은 것은? 가파른 정도는 기울기가 $1$인 그래프와 비교한다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "오른쪽 아래로 향하고, 비교하는 그래프보다 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 2,
           "text": "오른쪽 아래로 향하고, 비교하는 그래프보다 덜 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "오른쪽 위로 향하고, 비교하는 그래프보다 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "오른쪽 위로 향하고, 비교하는 그래프보다 덜 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1567,6 +1662,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$y=-2x$의 기울기는 음수이므로 그래프는 오른쪽 아래로 향한다. 기울기의 절댓값은 $2$이고, 비교하는 그래프의 기울기의 절댓값은 $1$이다. 따라서 $y=-2x$의 그래프가 더 가파르다. ②를 골랐다면 기울기의 절댓값이 아니라 기울기의 값만 비교했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:47:45.392027+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1594,30 +1690,35 @@
       "body": "일차함수 $y=2x-3$의 그래프에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "오른쪽 위로 향하고, 제1, 2, 4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "오른쪽 아래로 향하고, 제2, 3, 4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "오른쪽 위로 향하고, 제1, 3, 4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "오른쪽 위로 향하고, 제1, 2, 3사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 5,
@@ -1628,6 +1729,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "기울기가 $2$이므로 그래프는 오른쪽 위로 향합니다. $x$가 음수이면 $y$는 음수이고, $x$가 양수이면 $y$는 음수일 수도 양수일 수도 있습니다. 따라서 그래프는 제1, 3, 4사분면을 지납니다.\n⑤에서 두 기울기는 $2$와 $-3$입니다. $2$가 $-3$보다 크지만, 가파른 정도는 기울기의 절댓값으로 비교해야 합니다. $|-3|$이 $|2|$보다 크므로 $y=-3x-3$의 그래프가 더 가파릅니다.",
+      "figure": null,
       "generated_at": "2026-11-11T11:48:05.466467+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1655,30 +1757,35 @@
       "body": "세 일차함수 $y=-3x+1$, $y=2x+4$, $y=-2x-1$의 그래프를 차례로 A, B, C라고 하자. 세 그래프의 가파른 정도에 대한 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 1,
           "text": "기울기의 값은 B가 A보다 크므로 B가 A보다 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 2,
           "text": "기울기의 값은 C가 A보다 크므로 C가 A보다 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "기울기의 절댓값은 B와 C가 같으므로 B와 C의 가파른 정도가 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "A와 C는 모두 오른쪽 아래로 향하므로 가파른 정도가 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1689,6 +1796,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "A, B, C의 기울기의 절댓값은 차례로 $3$, $2$, $2$이다. 따라서 B와 C의 가파른 정도가 같다. 기울기의 값은 $2$가 $-3$보다 크지만, 가파른 정도는 기울기의 절댓값으로 비교해야 한다. 또 기울기의 부호가 같거나 $y$절편이 크다는 것만으로 가파른 정도를 비교할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:43:19.232509+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "세 그래프에 대한 학생들의 말을 비교하여 옳은 주장 하나를 고르게 했다.",
@@ -1716,30 +1824,35 @@
       "body": "일차함수의 그래프 $P$는 두 점 $(0, 0)$, $(1, -4)$를 지난다. 일차함수의 그래프 $Q$는 두 점 $(0, 2)$, $(2, 3)$을 지난다. 두 그래프에 대한 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 1,
           "text": "$\\frac{1}{2}>-4$이므로 $Q$가 $P$보다 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "두 그래프는 모두 일차함수의 그래프이므로 가파른 정도가 같다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$|-4|>\\left|\\frac{1}{2}\\right|$이므로 $P$가 $Q$보다 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$P$는 오른쪽 위로 향한다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1750,6 +1863,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$P$의 기울기는 $-4$이고, $Q$의 기울기는 $\\frac{1}{2}$이다. 기울기의 절댓값은 $P$가 $4$, $Q$가 $\\frac{1}{2}$이므로 $P$가 더 가파르다. ①은 기울기의 값이 클수록 그래프가 더 가파르다고 잘못 생각한 말이다. 가파른 정도는 기울기의 절댓값으로 비교해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:43:43.295091+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 그래프가 지나는 점을 보고 학생들의 말이 옳은지 판단하게 했다. 특히 ①과 ③에서 기울기의 값과 절댓값 중 무엇으로 가파른 정도를 비교해야 하는지 판단해야 한다.",
@@ -1777,30 +1891,35 @@
       "body": "두 일차함수 $y=2x+1$, $y=-4x+1$의 그래프에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 1,
           "text": "$y=2x+1$의 그래프가 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$y=-4x+1$의 그래프가 더 가파르다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "두 그래프의 가파른 정도는 같다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "두 그래프는 오른쪽으로 향하는 방향이 달라서 가파른 정도를 비교할 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1811,6 +1930,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "기울기의 절댓값은 각각 $2$, $4$이다. 따라서 $y=-4x+1$의 그래프가 더 가파르다. ①은 기울기의 절댓값이 아니라 기울기의 값을 비교하여 잘못 판단한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:42:29.709044+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1838,30 +1958,35 @@
       "body": "일차함수 $y=-3x+4$의 그래프보다 더 가파른 그래프를 나타내는 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M4",
           "no": 1,
           "text": "$y=2x-1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$y=-x+2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$y=-5x-1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=-2x+3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1872,6 +1997,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "그래프의 가파른 정도는 기울기의 절댓값으로 비교한다. $y=-3x+4$의 기울기의 절댓값은 $3$이고, $y=-5x-1$의 기울기의 절댓값은 $5$이다. 따라서 정답은 ③이다. ①을 골랐다면 기울기의 절댓값이 아니라 기울기의 값이 클수록 그래프가 더 가파르다고 잘못 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:42:57.52314+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1902,6 +2028,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "같은 $x$의 값에 대한 두 $y$의 값의 차는 $(-2x+4)-(-2x-1)=5$이다. 따라서 모든 $x$의 값에서 첫 번째 그래프의 $y$의 값이 두 번째보다 $5$만큼 크다. 두 그래프의 기울기는 모두 $-2$이고, 서로 일치하지 않으므로 평행하다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:44:32.756032+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "같은 $x$의 값에 대한 두 $y$의 값의 차가 모든 $x$의 값에서 어떠한지 그 까닭을 설명하게 했다.",
@@ -1954,6 +2081,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "그래프 A의 기울기는 $\\frac{3-2}{2-0}=\\frac{1}{2}$이고, 그래프 A의 식은 $y=\\frac{1}{2}x+2$이다. 같은 $x$의 값에서 A의 $y$의 값은 B의 $y$의 값보다 항상 $3$만큼 크다. 두 식에서 $\\frac{1}{2}x$ 부분이 같기 때문이다. 두 그래프의 기울기가 같아서 $x$가 같은 만큼 변할 때 두 $y$의 값도 같은 만큼 변한다. 따라서 처음의 차이 $3$이 그대로 유지된다. 두 그래프는 일치하지 않고 평행하다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:45:33.704222+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "같은 $x$에서의 $y$의 값의 차이를 살펴보는 방법과 기울기를 살펴보는 방법이 같은 판단으로 이어지는 이유를 비교하여 설명하게 한다.",
@@ -2020,6 +2148,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "두 그래프의 기울기는 모두 $-2$이다. 같은 $x$에서 두 $y$의 값의 차는 $(-2x+1)-(-2x-3)=4$로 늘 같다. 따라서 두 그래프는 서로 만나지 않고 평행하다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:43:56.99208+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2072,6 +2201,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "두 함수에서 $x$가 $1$만큼 커질 때 $y$는 각각 $3$만큼 커진다. 따라서 두 그래프의 기울기는 모두 $3$이다. 같은 $x$에서 첫째 함수의 $y$는 둘째 함수의 $y$보다 항상 $5$만큼 크다. 두 그래프는 기울기가 같고 서로 다른 직선이므로 평행하다.",
+      "figure": null,
       "generated_at": "2026-11-11T12:44:14.425785+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2121,30 +2251,35 @@
       "body": "어느 물통의 물의 양을 살펴보았다. 살펴보기 시작한 지 $x$분 후의 물의 양을 $y$ L라고 할 때, $y$는 $x$에 대한 일차함수이다. $x=2$일 때 물의 양은 $17$ L이고, $x=6$일 때 물의 양은 $11$ L이다. $0\\le x\\le 7$일 때, 물의 양이 $14$ L인 것은 살펴보기 시작한 지 몇 분 후인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 1,
           "text": "$0$분 후"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$3$분 후"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$4$분 후"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$5$분 후"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 5,
@@ -2155,6 +2290,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "기울기는 $\\frac{11-17}{6-2}=-\\frac32$이다. 점 $(2,17)$을 지나므로 $y=-\\frac32(x-2)+17$이다. 여기에 $y=14$를 대입하면 $x=4$이다.\n①은 두 값의 차를 구할 때 $x$와 $y$에서 빼는 순서를 다르게 하여 기울기를 $\\frac32$로 생각한 답이다. ⑤는 기울기를 $y$의 값의 차로 $x$의 값의 차를 나누어 $-\\frac23$으로 생각한 답이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:26:23.812486+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 시각의 물의 양으로 일차함수의 식을 세운 뒤, 물의 양이 $14$ L라는 결과에서 시각을 거꾸로 구하게 한다.",
@@ -2182,30 +2318,35 @@
       "body": "일차함수의 그래프가 두 점 $(1, 4)$, $(5, 10)$을 지난다. 이 그래프와 평행하고 $x$절편이 $-2$인 일차함수의 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 1,
           "text": "$y=-\\frac{3}{2}x-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 2,
           "text": "$y=\\frac{2}{3}x+\\frac{4}{3}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$y=\\frac{3}{2}x+3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=\\frac{3}{2}x-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2216,6 +2357,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "두 점을 지나는 그래프의 기울기는 $\\frac{10-4}{5-1}=\\frac{3}{2}$이다. 평행한 두 그래프의 기울기는 같으므로 구하는 식을 $y=\\frac{3}{2}x+b$로 놓는다. $x$절편이 $-2$이므로 $x=-2$, $y=0$을 대입하면 $b=3$이다. 따라서 정답은 ③이다.\n①은 두 점의 $x$와 $y$에서 빼는 순서를 다르게 하여 기울기를 $-\\frac{3}{2}$로 구한 경우이다. ②는 기울기를 구할 때 나누는 순서를 거꾸로 하여 $\\frac{2}{3}$으로 구한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:39:55.174861+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "$x$절편을 주고 이를 이용하여 거꾸로 일차함수의 식을 구하게 했다. 먼저 평행한 그래프의 기울기를 구한 뒤 $x$절편을 이용해야 한다.",
@@ -2243,30 +2385,35 @@
       "body": "일차함수의 그래프가 두 점 $(2, 5)$, $(t, -1)$을 지나고, $y$절편이 $8$이다. $t$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 1,
           "text": "$-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$6$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 5,
@@ -2277,6 +2424,7 @@
       "difficulty": "hard",
       "disabled_at": "2026-11-11T13:39:30.898985+00:00",
       "explanation": "$y$절편이 $8$이므로 그래프는 $(0, 8)$을 지난다. $(0, 8)$과 $(2, 5)$를 이용하면 기울기는 $(5-8)\\div(2-0)=-\\frac{3}{2}$이다. 따라서 일차함수의 식은 $y=-\\frac{3}{2}x+8$이다. 여기에 $(t, -1)$을 대입하면 $-1=-\\frac{3}{2}t+8$이므로 $t=6$이다.\n\n①은 기울기를 구할 때 $x$와 $y$의 값에서 빼는 순서를 다르게 하여 기울기를 $\\frac{3}{2}$로 구한 경우이다. ⑤는 기울기를 구할 때 나누는 순서를 거꾸로 하여 $-\\frac{2}{3}$으로 구한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:26:56.334082+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "$y$절편과 그래프 위의 한 점을 이용해 식을 세운 뒤, 다른 점의 $y$좌표가 주어졌을 때 그 점의 $x$좌표를 거꾸로 구한다.",
@@ -2304,30 +2452,35 @@
       "body": "그래프가 두 점 $(2, 3)$, $(6, 11)$을 지나는 일차함수의 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 1,
           "text": "$y=-2x+7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 2,
           "text": "$y=\\frac{1}{2}x+2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$y=2x-3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$y=2x-1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2338,6 +2491,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "기울기는 $(11-3)\\div(6-2)=2$이다. 식을 $y=2x+b$로 놓고 점 $(2, 3)$을 대입하면 $b=-1$이다. 따라서 식은 $y=2x-1$이다.\n①은 두 점의 $x$좌표와 $y$좌표를 서로 다른 순서로 빼서 기울기를 $-2$로 구한 경우이다. ②는 $x$좌표의 차를 $y$좌표의 차로 나누어 기울기를 $\\frac{1}{2}$로 구한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:25:13.336914+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -2365,30 +2519,35 @@
       "body": "물통에서 물이 일정한 빠르기로 빠져나간다. 물이 빠져나가기 시작한 지 $x$분 후 물의 양을 $y$L라고 하자. $2$분 후에는 물이 $14$L, $5$분 후에는 물이 $8$L 남아 있었다. $y$를 $x$의 식으로 나타내고, $7$분 후 남은 물의 양을 구한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M1",
           "no": 1,
           "text": "$y=-\\frac{1}{2}x+15$, $\\frac{23}{2}$L"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$y=-2x+18$, $4$L"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-16-M2",
           "no": 3,
           "text": "$y=2x+10$, $24$L"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$y=-2x+14$, $0$L"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -2399,6 +2558,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$의 값이 $3$만큼 커질 때 $y$의 값은 $6$만큼 작아진다. 따라서 기울기는 $-6\\div 3=-2$이다. $y=-2x+b$에 $x=2$, $y=14$를 대입하면 $b=18$이다. 따라서 $y=-2x+18$이고, $7$분 후 남은 물의 양은 $4$L이다.\n①은 기울기를 구할 때 나누는 순서를 거꾸로 한 것이다. ③은 두 값의 차를 구할 때 빼는 순서를 다르게 하여 기울기의 부호를 잘못 구한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T13:25:59.515303+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

@@ -45,30 +45,35 @@
       "body": "빨간 상자가 $a$개 있다. 파란 상자의 수는 빨간 상자의 수의 $3$배이다. 처음에 파란 상자마다 구슬이 $b$개씩 들어 있었다. 각 파란 상자에서 구슬을 $2$개씩 꺼냈다. 단, $a$는 자연수이고 $b$는 $2$ 이상의 자연수이다.\n\n파란 상자에 남은 구슬의 전체 개수를 항상 바르게 나타낸 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "$\\dfrac{a}{3}(b-2)$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$3a(b-2)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$3ab-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$3(a-2)b$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -79,6 +84,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "파란 상자의 수는 $3a$개이다. 각 파란 상자에 남은 구슬은 $(b-2)$개이므로 전체 개수는 $3a(b-2)$이다.\n\n①은 파란 상자의 수를 빨간 상자의 수의 $3$배가 아니라 $3$분의 $1$로 잘못 나타낸 식이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:28:11.634384+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "파란 상자의 수와 각 상자에 남은 구슬의 수를 각각 식으로 나타낸 뒤, 이를 이용해 전체 구슬의 수를 구해야 한다.",
@@ -106,30 +112,35 @@
       "body": "지수가 걸은 거리는 민지가 걸은 거리의 $2$배보다 $3$km 짧다. 지수가 걸은 거리는 $a$km이고, $a$는 양수이다.\n\n민지가 걸은 거리를 km 단위로 나타낸 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "$2a-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$2(a+3)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\frac{a-3}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{a}{2}+3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -140,6 +151,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "지수가 걸은 거리에 $3$km를 더하면 민지가 걸은 거리의 $2$배가 된다. 따라서 민지가 걸은 거리는 $\\frac{a+3}{2}$km이다.\n\n①은 민지가 걸은 거리가 지수가 걸은 거리의 $2$배보다 $3$km 짧다고 거꾸로 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:28:32.441518+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "민지가 걸은 거리로 지수가 걸은 거리를 설명했지만, 지수가 걸은 거리 $a$를 이용하여 민지가 걸은 거리를 구하게 했다.",
@@ -167,30 +179,35 @@
       "body": "어른 입장권 한 장의 가격은 어린이 입장권 한 장의 가격의 $4$배이다. 어린이 입장권 한 장의 가격은 $a$원이다.\n\n어른 입장권 $2$장과 어린이 입장권 $3$장을 사고, 전체 금액에서 $1000$원을 한 번 할인받는다. 할인받은 뒤 낼 금액을 $a$를 사용한 식으로 나타내고, $a$가 $2000$일 때 낼 금액도 구하려고 한다.\n\n식과 금액을 모두 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "$2\\left(\\dfrac{a}{4}\\right)+3a-1000$, $6000$원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4a+3a-1000$, $13000$원"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$2(4a)+3a-1000$, $21000$원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$2(4a)+3a$, $22000$원"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -201,6 +218,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "어른 입장권 한 장의 가격은 $4a$원이다. 따라서 할인받은 뒤 낼 금액은 $2(4a)+3a-1000$원이다. 여기에 $a=2000$을 대입하면 $21000$원이다.\n\n①은 어른 입장권의 가격을 어린이 입장권 가격의 $4$배가 아니라 $4$로 나눈 값으로 잘못 나타낸 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:29:30.305015+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "입장권 가격의 관계와 할인 상황을 식으로 나타낸 뒤, 주어진 수를 대입하여 낼 금액을 구하게 한다.",
@@ -237,30 +255,35 @@
       "body": "빨간 리본의 길이는 파란 리본의 길이의 4배이다. 빨간 리본의 길이가 $x$ cm일 때, 파란 리본의 길이를 cm를 단위로 하여 나타낸 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$x-4$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{x}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$x+4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 4,
           "text": "$4x$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -271,6 +294,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "빨간 리본은 파란 리본의 4배이므로, 파란 리본의 길이는 빨간 리본의 길이를 4로 나눈 $\\frac{x}{4}$ cm이다. $4x$는 빨간 리본의 길이를 다시 4배 한 것이므로 알맞지 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:27:26.543278+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -298,30 +322,35 @@
       "body": "공책 한 권의 가격은 $a$원입니다. 같은 공책 3권의 가격은 모두 몇 원인지 식으로 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$a+3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$3a$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\dfrac{a}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\dfrac{3}{a}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 5,
@@ -332,6 +361,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "공책 한 권의 가격이 $a$원이므로 3권의 가격은 $3a$원입니다. $3$은 공책의 권수만 나타내며, $a$가 공책 한 권의 가격이라는 점을 놓친 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:27:40.766652+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -359,30 +389,35 @@
       "body": "수조에 물이 $x$ L 들어 있습니다. 물 $5$ L를 더 넣은 뒤, 수조의 물을 모두 두 통에 똑같이 나누어 담았습니다. 한 통에 담긴 물의 양을 L를 단위로 하여 나타낸 식은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "$\\dfrac{x}{2}+5$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\dfrac{x+5}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$2(x+5)$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\dfrac{x-5}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -393,6 +428,7 @@
       "difficulty": "normal",
       "disabled_at": "2026-11-11T04:51:25.447706+00:00",
       "explanation": "물을 더 넣은 뒤의 양은 $(x+5)$ L입니다. 이것을 두 통에 똑같이 나누므로 한 통에 담긴 물의 양은 $\\dfrac{x+5}{2}$ L입니다. ①은 물을 먼저 나누고 나서 $5$ L를 더한 것으로, 물을 더 넣고 나누는 순서를 잘못 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:27:54.674411+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -420,30 +456,35 @@
       "body": "첫째 날 박물관에 온 사람은 $a$명입니다. 둘째 날에는 첫째 날보다 7명 더 많은 사람이 왔습니다. 둘째 날 박물관에 온 사람의 수를 식으로 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$7-a$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$a+7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$7a$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 4,
           "text": "$a-7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -454,6 +495,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "둘째 날에는 첫째 날보다 7명 더 많은 사람이 왔으므로 $a$에 7을 더한 $a+7$입니다. 4번은 더 많은 것을 더 적은 것으로 잘못 생각하여 7을 뺀 식입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T04:51:58.326733+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -481,30 +523,35 @@
       "body": "색연필을 한 상자에 $4$자루씩 빠짐없이 담았다. 상자의 수를 $x$라고 할 때, 한 학생이 다음과 같이 말했다.\n\nㄱ. 색연필의 수는 $\\frac{x}{4}$이다.\nㄴ. $x$는 수가 아니라 상자라는 물건을 나타낸다.\n\n이 학생의 말을 바르게 판단한 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "ㄱ과 ㄴ은 모두 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 2,
           "text": "ㄱ은 옳고 ㄴ은 옳지 않다. $x$는 상자의 수를 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 3,
           "text": "ㄱ은 옳지 않고 ㄴ은 옳다. $x$는 상자라는 물건을 나타낸다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "ㄱ과 ㄴ은 모두 옳지 않다. $x$는 상자의 수이고 $4x$는 색연필의 수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 5,
@@ -515,6 +562,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$x$는 상자의 수를 나타낸다. 상자마다 색연필이 $4$자루씩 있으므로 색연필의 수는 $4x$이다. 따라서 ㄱ과 ㄴ은 모두 옳지 않다.\n\nㄱ을 옳다고 생각했다면 상자의 수와 색연필의 수 사이의 관계를 거꾸로 생각한 것이다. ㄴ을 옳다고 생각했다면 $x$가 상자의 수를 나타낸다는 것을 놓치고 상자라는 물건을 나타낸다고 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T04:06:20.47552+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "한 학생의 두 가지 말을 보고 각각 옳은지 판단하게 했다. 두 말은 관계를 거꾸로 나타내는 생각과 문자를 물건 이름으로 보는 생각을 담고 있다.",
@@ -542,30 +590,35 @@
       "body": "긴 끈의 길이는 짧은 끈의 길이의 $3$배이다. 긴 끈의 길이를 $a$ cm라고 할 때, 세 학생의 말 중 옳은 것만 고른 것은?\n\nㄱ. 민수: 짧은 끈의 길이는 $3a$ cm야.\nㄴ. 지수: $a$는 끈이라는 물건을 나타내니까, $3a$는 끈 $3$개의 개수를 나타내.\nㄷ. 수아: 짧은 끈의 길이는 $\\frac{a}{3}$ cm야. 따라서 $a$가 $12$이면 짧은 끈의 길이는 $4$ cm야.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "ㄱ만 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 2,
           "text": "ㄴ만 옳다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "ㄷ만 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 4,
           "text": "ㄱ, ㄷ만 옳다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 5,
@@ -576,6 +629,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "긴 끈이 짧은 끈보다 $3$배 길므로, 짧은 끈의 길이는 긴 끈의 길이를 $3$으로 나눈 $\\frac{a}{3}$ cm이다. $a$가 $12$이면 짧은 끈의 길이는 $4$ cm이므로 ㄷ은 옳다.\nㄱ은 긴 끈과 짧은 끈의 길이 관계를 거꾸로 생각했다. ㄴ은 $a$를 길이를 나타내는 수가 아니라 물건의 이름으로 생각했다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:34:50.599576+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "세 학생의 말을 보고 길이 관계와 문자가 나타내는 것을 바르게 이해했는지 판단하게 한다.",
@@ -611,30 +665,35 @@
       "body": "어느 전시관의 어른 입장권은 어린이 입장권보다 $2000$원 더 비싸다. 어른 입장권 한 장의 가격을 $a$원이라고 하자. 어른 입장권은 $2000$원보다 비싸다.\n\n다섯 학생의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "민호: 어린이 입장권 한 장의 가격은 $(a+2000)$원이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 2,
           "text": "서연: $a$는 어른 입장권이라는 물건의 이름이므로 $5000$을 대입할 수 없어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 3,
           "text": "도윤: $a$가 $5000$이면 어린이 입장권은 어른 입장권보다 $2000$원 더 비싸므로 $7000$원이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 4,
           "text": "하린: 어린이 입장권의 가격은 $(a-2000)$원이야. 여기서 $a$는 가격이 아니라 어른 입장권이라는 물건을 나타내."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -645,6 +704,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "어른 입장권이 어린이 입장권보다 $2000$원 더 비싸므로, 어린이 입장권 한 장의 가격은 $(a-2000)$원이다. $a$는 어른 입장권의 가격을 나타내는 수이므로 $5000$을 대입할 수 있다. 이때 어린이 입장권의 가격은 $3000$원이다.\n\n1번과 3번은 더 비싼 쪽을 반대로 생각했다. 2번과 4번은 $a$를 가격을 나타내는 수가 아니라 입장권의 이름으로 생각했다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:35:11.42064+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 말을 보고 가격의 관계와 문자가 나타내는 것을 모두 바르게 이해한 학생을 고르게 했다.",
@@ -672,30 +732,35 @@
       "body": "필통에 든 연필 수는 상자에 든 연필 수의 $4$배입니다. 필통에 든 연필 수를 $a$개라고 할 때, 상자에 든 연필 수를 나타낸 식과 $a$가 나타내는 것을 바르게 짝 지은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "$4a$, 필통에 든 연필의 수"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$\\frac{a}{4}$, 필통에 든 연필의 수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 3,
           "text": "$\\frac{a}{4}$, 연필이라는 물건"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$a+4$, 필통에 든 연필의 수"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -706,6 +771,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "필통에 든 연필 수가 상자에 든 연필 수의 $4$배이므로, 상자에 든 연필 수는 $a$를 $4$로 나눈 $\\frac{a}{4}$입니다. $a$는 연필이라는 물건이 아니라 필통에 든 연필의 수를 나타냅니다. $4a$는 필통에 든 연필 수를 다시 $4$배 한 것이므로 상자에 든 연필 수가 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:30:03.856141+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -741,30 +807,35 @@
       "body": "오후 기온은 아침 기온보다 $3$도 낮습니다. 아침 기온을 $t$도라고 할 때, 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 1,
           "text": "오후 기온은 $(3-t)$도이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 2,
           "text": "$t$는 기온이라는 말의 이름일 뿐, 수를 나타내지 않는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "오후 기온은 $(t+3)$도이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "오후 기온은 $(t-3)$도이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -775,6 +846,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$t$는 아침 기온을 나타내는 수입니다. 오후 기온은 이보다 $3$도 낮으므로 $(t-3)$도입니다. ①처럼 말에 나온 순서대로 $3$에서 $t$를 빼면 두 기온의 관계가 거꾸로 됩니다. ②처럼 $t$를 기온이라는 말의 이름으로만 보면 $t$가 나타내는 수를 놓치게 됩니다. ③은 아침 기온보다 $3$도 높은 기온이고, ⑤는 아침 기온의 $3$배입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:30:33.996943+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -802,30 +874,35 @@
       "body": "파란 리본은 노란 리본보다 $2$cm 더 깁니다. 파란 리본의 길이를 $x$cm라고 할 때, 잘못 말한 학생만을 모두 고른 것은?\n\n가: 노란 리본의 길이는 $(x+2)$cm야.\n나: $x$는 수가 아니라 파란 리본이라는 물건을 나타내.\n다: 노란 리본의 길이는 $(x-2)$cm야.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M2",
           "no": 1,
           "text": "가"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M1",
           "no": 2,
           "text": "나"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "다"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "가, 나"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -836,6 +913,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "노란 리본은 파란 리본보다 $2$cm 더 짧으므로 길이는 $(x-2)$cm입니다. 가는 더 긴 리본을 잘못 생각하여 $2$를 더했습니다. 나는 $x$가 파란 리본이라는 물건이 아니라 파란 리본의 길이를 나타내는 수임을 놓쳤습니다. 따라서 잘못 말한 학생은 가와 나입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:31:54.873535+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -879,30 +957,35 @@
       "body": "$a$는 자연수이다. 다음 두 상황을 각각 식으로 나타내려고 한다.\n\n- ㉠ 한 변의 길이가 $a$cm인 정사각형의 넓이는 몇 $\\mathrm{cm}^2$인가?\n- ㉡ 길이가 $3$cm인 끈을 $a$등분할 때, 한 조각의 길이는 몇 $\\mathrm{cm}$인가?\n\n㉠, ㉡을 차례로 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$a^2$, $\\dfrac{3}{a}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M5",
           "no": 2,
           "text": "$2a$, $\\dfrac{3}{a}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$a^2$, $\\dfrac{a}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M5",
           "no": 4,
           "text": "$2a$, $\\dfrac{a}{3}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -913,6 +996,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "㉠은 $a\\times a$이므로 $a^2$이다. ㉡은 $3\\div a$이므로 $\\dfrac{3}{a}$이다. 따라서 정답은 ①이다.\n\n②와 ④처럼 $a\\times a$를 $2a$로 나타내면 안 된다. $2a$는 $2\\times a$를 뜻한다. ③과 ④의 $\\dfrac{a}{3}$은 $a\\div 3$을 뜻하므로 나누는 순서가 바뀌었다. ⑤의 $3a$는 $3\\times a$를 뜻한다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:36:15.049078+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "정사각형의 넓이와 끈을 똑같이 나누는 상황을 각각 식으로 바꾸어 판단해야 한다.",
@@ -940,30 +1024,35 @@
       "body": "$a$는 $1$부터 $9$까지의 자연수이다. 다음을 차례로 식으로 나타내려고 한다.\n\n㉠ 십의 자리의 숫자가 $4$이고 일의 자리의 숫자가 $a$인 두 자리 수\n㉡ 한 봉지에 $a\\,\\mathrm{kg}$씩 담긴 쌀 $4$봉지의 무게의 합\n㉢ $a\\,\\mathrm{kg}$의 쌀을 $4$명에게 똑같이 나누어 줄 때 한 사람이 받는 쌀의 무게\n\n㉠, ㉡, ㉢을 차례로 바르게 나타낸 것은? 무게의 단위는 쓰지 않는다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$40+a$, $4a$, $\\dfrac{a}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M3",
           "no": 2,
           "text": "$4a$, $4a$, $\\dfrac{a}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M3",
           "no": 3,
           "text": "$40+a$, $40+a$, $\\dfrac{a}{4}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$40+a$, $4a$, $\\dfrac{4}{a}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -974,6 +1063,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "㉠에서 십의 자리의 $4$는 $40$을 뜻하므로 두 자리 수는 $40+a$이다. ㉡은 $4\\times a$이므로 $4a$이다. ㉢은 $a\\div4$이므로 $\\frac{a}{4}$이다.\n\n$4a$는 두 자리 수가 아니라 $4$와 $a$를 곱한다는 뜻이다. 따라서 ㉠을 $4a$로 쓰거나 ㉡을 $40+a$로 쓰면 안 된다. 정답은 ①이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:36:35.835431+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "두 자리 수와 쌀의 무게를 말로 나타낸 세 상황을 각각 식으로 바꾸어 판단해야 한다. 특히 ㉠과 ㉡을 비교하며 $4a$가 곱을 나타낸다는 약속을 확인한다.",
@@ -1001,30 +1091,35 @@
       "body": "계산 기계에 $0$이 아닌 두 수 $a$와 $b$를 넣는다. 이 기계는 먼저 $a$에 $a$를 곱한다. 그런 다음 그 결과를 $b$로 나눈다.\n\n기계가 내놓는 수를 곱셈 기호와 나눗셈 기호를 쓰지 않고 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\frac{a^2}{b}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M5",
           "no": 2,
           "text": "$\\frac{2a}{b}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\left(\\frac{a}{b}\\right)^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\frac{b}{a^2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1035,6 +1130,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$a$에 $a$를 곱하면 $a^2$이다. 이 결과를 $b$로 나누므로 $\\frac{a^2}{b}$이다.\n\n②의 $2a$는 $a$를 두 번 더한 수이다. $a$에 $a$를 곱한 수와 혼동하지 않도록 한다. ③은 $a$를 $b$로 나눈 수를 두 번 곱한 것이다. ④는 나누는 순서가 바뀌었고, ⑤는 $b$로 나누는 대신 $b$를 곱했다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:37:07.364622+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "기계가 수를 처리하는 방법을 말로 제시하고 이를 식으로 바꾸어 판단하게 했다. 같은 문자의 곱과 나눗셈을 나타내는 방법을 함께 따져야 한다.",
@@ -1062,30 +1158,35 @@
       "body": "문자를 사용한 식 $3a$에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$3$과 $a$를 더한 것이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$3$과 $a$를 곱한 것이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$3$을 $a$로 나눈 것이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$a$를 $3$으로 나눈 것이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M3",
           "no": 5,
@@ -1096,6 +1197,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$3a$는 $3$과 $a$를 곱한 식에서 곱셈 기호를 생략한 것이다. $a$에 한 자리 수를 대입할 때 그 수를 $3$ 뒤에 붙여 읽는 것이 아니다. 예를 들어 $a$에 $2$를 대입하면 $3a$의 값은 $32$가 아니라 $6$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:35:22.569724+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1123,30 +1225,35 @@
       "body": "$a\\times a$에서 곱셈 기호를 생략하여 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$a+2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M5",
           "no": 2,
           "text": "$2a$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$a^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$\\dfrac{a}{2}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1157,6 +1264,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$a$를 두 번 곱한 식은 $a^2$으로 나타냅니다. $2a$는 $2$와 $a$를 곱한 식이므로 $a\\times a$를 나타낸 것이 아닙니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:35:33.734588+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1184,30 +1292,35 @@
       "body": "한 개에 $b$원인 지우개 $1$개의 가격을 문자를 사용한 식을 쓰는 약속에 맞게 나타낸 것은? 단, 단위인 원은 쓰지 않는다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$b+1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M5",
           "no": 2,
           "text": "$1b$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$b$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$b^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1218,6 +1331,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "지우개 $1$개의 가격은 $1\\times b$원이다. 문자를 사용한 식에서는 $1$과 문자의 곱을 나타낼 때 $1$을 쓰지 않으므로 $b$로 나타낸다. $1b$는 $1\\times b$를 뜻하지만, 식을 쓰는 약속에 맞게 나타내려면 $1$을 생략해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:35:56.255536+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1245,30 +1359,35 @@
       "body": "$a=-2$일 때, 한 학생이 식의 값을 다음과 같이 구했습니다.\n\n(가) $3a+a^2=3\\times(-2)+(-2)^2$\n\n(나) $3\\times(-2)+(-2)^2=-6+(-4)$\n\n(다) $-6+(-4)=-10$\n\n각 줄에서 바로 앞에 쓴 식을 사용했을 때, 처음으로 잘못된 부분은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "(가)에서 $3a$를 $3\\times(-2)$로 나타낸 부분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M4",
           "no": 2,
           "text": "(가)에서 $a^2$을 $(-2)^2$으로 나타낸 부분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "(나)에서 $3\\times(-2)$를 $-6$으로 계산한 부분"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "(나)에서 $(-2)^2$을 $-4$로 계산한 부분"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1279,6 +1398,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "(가)의 대입은 모두 바릅니다. 음수 전체를 두 번 곱해야 하므로 $(-2)^2=4$입니다. 따라서 (나)에서 $(-2)^2$을 $-4$로 계산한 부분이 처음 잘못된 부분입니다.\n\n②처럼 괄호 없이 $-2^2$로 써야 한다고 생각할 수 있습니다. 하지만 이때는 $2$만 두 번 곱한 뒤 마이너스를 붙이므로, $(-2)^2$과 다릅니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:38:02.561898+00:00",
       "hard_condition": "application-c",
       "hard_condition_reason": "여러 줄로 제시된 풀이에서 대입과 계산을 살펴 처음으로 잘못된 부분을 찾게 했습니다.",
@@ -1306,30 +1426,35 @@
       "body": "어떤 기계에 두 수 $a$, $b$를 넣으면 $a$에 $a$를 곱한 값에 $b$의 $3$배를 더한 수가 화면에 나온다.\n\n화면에 $3$이 나왔다. 넣은 두 수로 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M4",
           "no": 1,
           "text": "$a=-3$, $b=4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$a=2$, $b=-1$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$a=-3$, $b=-2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$a=1$, $b=1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1340,6 +1465,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "화면에 나오는 수는 $a^2+3b$이다. ③을 대입하면 $(-3)^2+3\\times(-2)=9-6=3$이다. ①, ②, ④, ⑤를 대입하면 각각 $21$, $1$, $4$, $-2$가 나온다.\n\n①을 골랐다면 $(-3)^2$을 $-9$로 잘못 계산했을 수 있다. $(-3)^2$은 $(-3)\\times(-3)$이므로 $9$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:38:18.792617+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "화면에 나온 수를 먼저 주고, 그 수가 나오도록 넣은 두 수를 찾게 했다. 기계가 하는 일을 식으로 나타낸 뒤 보기에 있는 수를 대입해야 한다.",
@@ -1367,30 +1493,35 @@
       "body": "한 게임의 처음 점수는 $20$점이다. 카드에 적힌 수를 $a$라 할 때, 점수에 $a$의 $2$배를 더한다. 그다음 $a$에 $a$를 곱한 값을 뺀다.\n\n$a=-3$일 때, 이 과정을 나타낸 식과 마지막 점수가 모두 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "식: $20+2a-a^2$, 마지막 점수: $5$점"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M4",
           "no": 2,
           "text": "식: $20+2a-a^2$, 마지막 점수: $23$점"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "식: $20+2a+a^2$, 마지막 점수: $23$점"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "식: $20+2a-a^2$, 마지막 점수: $17$점"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1401,6 +1532,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "점수에 $a$의 $2$배를 더하고 $a$에 $a$를 곱한 값을 빼므로 식은 $20+2a-a^2$이다. $a=-3$을 대입하면 $20+2\\times(-3)-(-3)^2=20-6-9=5$이다.\n\n②는 $(-3)^2$을 $-9$로 잘못 계산한 것이다. 음수끼리 곱하면 양수가 되므로 $(-3)^2=9$이다. ③은 $a$에 $a$를 곱한 값을 빼지 않고 더했다. ④는 $2\\times(-3)$을 $6$으로 잘못 계산했다. ⑤는 $a$에 $a$를 곱하지 않고 $2a$에 $2a$를 곱해 뺐다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:39:35.208242+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "점수를 구하는 방법을 식으로 나타낸 뒤 음수를 대입해야 한다.",
@@ -1448,30 +1580,35 @@
       "body": "$a=-2$일 때, 식 $a^2+3$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$-7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M4",
           "no": 2,
           "text": "$-1$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$1$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$7$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1482,6 +1619,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$-2$를 대입할 때 괄호를 쓰면 $(-2)^2+3=4+3=7$이다. ②는 $(-2)^2$을 $-4$로 잘못 계산한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:37:17.871116+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1509,30 +1647,35 @@
       "body": "길이가 각각 $b$ cm인 끈 $3$개와 길이가 $2$ cm인 끈 $1$개가 있다. 이 끈들의 길이의 합은 $3b+2$ cm이다. $b=4$일 때, 끈들의 길이의 합은 몇 cm인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$9$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$12$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$14$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$18$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M3",
           "no": 5,
@@ -1543,6 +1686,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$b$에 $4$를 대입하면 $3\\times4+2=14$이다. $3b$는 $3$과 $b$를 곱한다는 뜻이므로, $b=4$일 때 $34$가 아니라 $12$이다. $36$을 골랐다면 $3b$를 $34$로 잘못 읽었을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:37:29.188511+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1570,30 +1714,35 @@
       "body": "$x=-3$일 때, 식 $5x^2$의 값은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-01-M4",
           "no": 1,
           "text": "$-45$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$-15$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$15$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$30$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1604,6 +1753,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x$에 $-3$을 대입하면 $5\\times(-3)^2=5\\times9=45$이다. $-45$를 골랐다면 $(-3)^2$을 $-9$로 잘못 계산한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:37:43.642236+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1634,6 +1784,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$4a$는 한 묶음에 $4$자루씩 든 연필을 $a$묶음 샀을 때의 자루 수이고, $3$은 더 받은 연필의 자루 수이다. 따라서 묶음 수가 달라져도 그 수를 $a$에 대입하면 연필의 전체 자루 수를 구할 수 있다. $a$에 $5$를 대입하면 $4\\times5+3=23$이므로 $23$자루이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:40:47.351872+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "묶음 수가 어떠하든 지우의 말이 옳은 이유를 식의 각 부분과 연결하여 설명하게 했다.",
@@ -1693,6 +1844,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$a$는 처음 온도이고, $2b$는 두 시간 동안 올라간 온도이다. 따라서 $a+2b$는 처음 온도에 올라간 온도를 더한 것이다. 처음 온도와 한 시간에 올라가는 온도가 달라져도 각각 $a$와 $b$에 넣으면 되므로 식을 새로 만들 필요가 없다. $a=-3$, $b=4$를 대입하면 $-3+2\\times4=5$이므로 두 시간 뒤의 온도는 $5$℃이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:41:06.473496+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "처음 온도와 한 시간에 올라가는 온도가 달라져도 식 하나를 쓸 수 있는 이유를 설명하게 했다. 특정한 수를 넣어 확인하는 데 그치지 않도록 요구했다.",
@@ -1745,6 +1897,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "첫째 식은 모든 사람이 돈을 낸다고 생각한 금액 $ab$에서 무료인 한 사람의 입장료 $b$를 뺀 것이다. 둘째 식은 돈을 내는 사람 $a-1$명의 입장료를 구한 것이다. 어느 쪽이든 무료인 한 사람을 뺀 나머지 사람의 입장료이므로 같은 금액을 나타낸다. 사람 수와 입장료가 달라져도 각 식에 그 수를 대입하면 되므로 식을 새로 만들 필요가 없다. $a=6$, $b=700$을 대입하면 전체 입장료는 $3500$원이다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:41:29.805917+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "두 식이 입장료를 각각 어떻게 구한 것인지 비교하고, 사람 수와 입장료가 달라져도 같은 금액을 나타내는 이유를 설명하게 했다.",
@@ -1811,6 +1964,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "봉지 수가 달라져도 한 봉지에 든 사탕 수와 봉지 밖의 사탕 수는 그대로입니다. 따라서 봉지 수를 $a$에 대입하면 같은 식으로 전체 사탕 수를 구할 수 있습니다. $a$에 $2$를 대입하면 $8$개, $4$를 대입하면 $14$개입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:39:47.474354+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1856,6 +2010,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$t$에 걸은 시간을 대입하면 그 시간 동안 걸은 거리를 구할 수 있습니다. 따라서 걸은 시간마다 새로운 식을 만들지 않아도 됩니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:40:14.608555+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1901,6 +2056,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "한 변의 길이가 달라지면 $a$에 대입하는 수도 달라집니다. 어느 길이를 대입해도 그 수를 두 번 곱하므로 정사각형의 넓이를 구할 수 있습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T03:40:30.151046+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

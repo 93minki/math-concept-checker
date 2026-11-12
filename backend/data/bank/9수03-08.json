@@ -1,6 +1,73 @@
 {
   "backlog": [
     {
+      "assessment_item_id": "9수03-08-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-12T03:01:06.073740+00:00",
+          "issues": [
+            "평가 근거 끝에 [그림: …] 표시가 없는데 그림을 사용했으며, 풀이에 필요한 치수도 그림에만 제시했다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:01:23.716125+00:00",
+          "issues": [
+            "figure_body: Expected an allowed body figure only"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T03:01:52.204471+00:00",
+          "issues": [
+            "근거 끝에 그림 지정이 없는데 전개도를 사용하고 치수를 그림에만 제시하여, 그림 없이 글과 기호로 조건을 주어야 한다는 범위 조건에 어긋난다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T03:01:52.374094+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T03:09:25.634218+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-08-C1-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-12T03:02:22.301462+00:00",
+          "issues": [
+            "평가 근거 끝에 [그림: …] 표시가 없는데 그림에만 필요한 치수를 제시하여, 그림 없이 글과 기호로 조건을 주어야 한다는 범위 조건을 위반했다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:02:47.446676+00:00",
+          "issues": [
+            "근거 끝에 그림 지정이 없으므로 그림 없이 조건이 모두 주어져야 하지만, 반지름과 높이가 그림에만 제시되어 있다.",
+            "옆넓이만 묻고 있어 두 밑면을 포함한 겉넓이를 구하는 방법을 설명할 수 있는지 측정하지 못한다.",
+            "conditions_sufficient: false",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T03:03:14.623253+00:00",
+          "issues": [
+            "근거 끝에 [그림: …]이 없으므로 그림 없이 글과 기호로 조건을 주어야 하나, 전개도 그림을 사용했다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T03:03:15.073742+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T03:09:47.564219+00:00",
+      "variant": 2
+    },
+    {
       "assessment_item_id": "9수03-08-C2-오개념판별",
       "attempts": [
         {
@@ -149,6 +216,43 @@
       "assessment_item_id": "9수03-08-C2-오개념판별",
       "attempts": [
         {
+          "at": "2026-11-12T03:42:32.753829+00:00",
+          "issues": [
+            "보기 ①: M1만 적용하면 ㄴ, ㄹ인 ④를 고르게 된다. ㄱ과 ㄴ을 함께 옳다고 판단하려면 다른 오류가 추가로 필요하다.",
+            "보기 ⑤: M2만 적용하면 ㄱ, ㄷ인 ②를 고르게 된다. ㄷ과 ㄹ을 함께 옳다고 판단하려면 다른 오류가 추가로 필요하다.",
+            "보기 ①과 ⑤가 각각 표시된 오개념 하나만으로 나오지 않아, 오답 보기마다 오개념 하나만 드러내려는 측정 의도를 충족하지 못한다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:43:06.441727+00:00",
+          "issues": [
+            "학생들의 주장에 이름을 붙였지만 두 공식을 바로 확인하여 정답을 고르는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T03:43:41.205821+00:00",
+          "issues": [
+            "가람의 두 주장을 판단하지 않고 부피와 겉넓이를 바로 계산해 정답을 고를 수 있어, 밝힌 고난이도 조건 misconception-b를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T03:43:41.328367+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T04:35:59.773223+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-08-C2-오개념판별",
+      "attempts": [
+        {
           "at": "2026-11-11T08:53:32.079032+00:00",
           "issues": [
             "보기 ④: 승인된 오개념 M2대로 뿔의 밑면을 두 번 더하면 겉넓이는 60+36+36이다. 보기의 60은 밑면을 빠뜨린 결과이다."
@@ -276,36 +380,129 @@
   ],
   "questions": [
     {
+      "approved_at": "2026-11-12T03:13:01.441124+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C1-성질적용",
+      "body": "다음 그림의 원기둥의 부피는 $72\\pi\\,\\text{cm}^3$이다. 이 원기둥의 겉넓이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$48\\pi\\,\\text{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M3",
+          "no": 2,
+          "text": "$(48+18\\pi)\\,\\text{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 3,
+          "text": "$57\\pi\\,\\text{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$66\\pi\\,\\text{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$72\\pi\\,\\text{cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-12T03:01:25.047783+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "밑면의 반지름을 $r\\,\\text{cm}$라 하면 부피는 $\\pi r^2\\times 8=72\\pi$이다. 따라서 $r^2=9$이므로 반지름은 $3\\,\\text{cm}$이다. 옆넓이는 $2\\pi\\times 3\\times 8=48\\pi\\,\\text{cm}^2$이고, 두 밑면의 넓이는 $9\\pi\\times 2=18\\pi\\,\\text{cm}^2$이다. 따라서 겉넓이는 $66\\pi\\,\\text{cm}^2$이다.\n③은 밑면의 넓이를 한 번만 더한 것이다. ②는 옆면을 펼친 직사각형의 가로를 밑면의 둘레가 아닌 지름으로 생각한 것이다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": 8.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "height",
+            "text": "8 cm"
+          },
+          {
+            "part": "radius",
+            "text": "?"
+          }
+        ],
+        "radius": 3.0,
+        "shape": "cylinder",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:01:24.863859+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "주어진 부피와 높이로 밑면의 반지름을 거꾸로 구한 뒤 겉넓이에 적용해야 한다.",
+      "id": "180621b8-7dcb-47f6-a0a7-b376293cb8f5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:01:24.863420+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.31323+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C1-성질적용",
       "body": "두 원기둥 $A$와 $B$의 부피는 각각 $36\\pi\\ \\mathrm{cm}^3$이다. 밑면의 반지름은 $A$가 $2\\ \\mathrm{cm}$, $B$가 $3\\ \\mathrm{cm}$이다.\n\n겉넓이가 더 큰 원기둥과 두 원기둥의 겉넓이의 차를 바르게 짝 지은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$A$, $2\\pi\\ \\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 2,
           "text": "$A$, $7\\pi\\ \\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$B$, $2\\pi\\ \\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M3",
           "no": 4,
           "text": "$B$, $(10\\pi-12)\\ \\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -314,8 +511,9 @@
       ],
       "created_at": "2026-11-11T08:49:47.668862+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.034427+00:00",
       "explanation": "$A$와 $B$의 밑면의 넓이는 각각 $4\\pi\\ \\mathrm{cm}^2$, $9\\pi\\ \\mathrm{cm}^2$이다. 부피를 밑면의 넓이로 나누면 높이는 각각 $9\\ \\mathrm{cm}$, $4\\ \\mathrm{cm}$이다.\n\n두 밑면의 넓이와 옆면의 넓이를 더하면 겉넓이는 $A$가 $44\\pi\\ \\mathrm{cm}^2$, $B$가 $42\\pi\\ \\mathrm{cm}^2$이다. 따라서 정답은 ①이다.\n\n②는 밑면의 넓이를 한 번씩만 더한 답이다. ④는 옆면을 펼친 직사각형의 가로를 밑면의 둘레가 아닌 지름으로 생각한 답이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:49:47.528981+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "두 원기둥의 부피가 주어졌을 때 각각의 높이를 거꾸로 구해야 한다. 구한 높이를 이용하여 겉넓이를 비교한다.",
@@ -326,7 +524,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:49:47.528860+00:00",
@@ -343,30 +541,35 @@
       "body": "밑면이 한 변의 길이가 $4\\ \\mathrm{cm}$인 정사각형인 사각기둥이 있다. 이 사각기둥을 밑면에 평행한 평면으로 잘라 두 사각기둥으로 나누었다.\n\n잘린 두 사각기둥의 겉넓이의 합은 $112\\ \\mathrm{cm}^2$이다. 처음 사각기둥의 부피는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$24\\ \\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$32\\ \\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$48\\ \\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$64\\ \\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 5,
@@ -375,8 +578,9 @@
       ],
       "created_at": "2026-11-11T08:50:08.112794+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.109118+00:00",
       "explanation": "잘린 두 사각기둥의 밑면은 모두 4개이다. 밑면 4개의 넓이의 합은 $4\\times4\\times4=64\\ \\mathrm{cm}^2$이다.\n\n따라서 옆넓이의 합은 $112-64=48\\ \\mathrm{cm}^2$이다. 이것은 처음 사각기둥의 옆넓이와 같다. 밑면의 둘레가 $16\\ \\mathrm{cm}$이므로 처음 사각기둥의 높이는 $48\\div16=3\\ \\mathrm{cm}$이다. 부피는 $4\\times4\\times3=48\\ \\mathrm{cm}^3$이므로 정답은 ③이다.\n\n⑤는 잘린 두 사각기둥의 밑면을 각각 한 개씩만 더하면 나올 수 있는 답이다. 사각기둥에는 밑면이 두 개씩 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:50:07.957365+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "잘린 두 사각기둥의 겉넓이의 합을 이용해 처음 사각기둥의 높이를 거꾸로 구한 뒤 부피를 구한다.",
@@ -387,7 +591,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:50:07.957096+00:00",
@@ -398,36 +602,221 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:13:01.499814+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C1-성질적용",
+      "body": "다음 그림은 뚜껑이 있는 직육면체 모양의 상자이다. 이 상자의 모든 면을 종이로 겹치는 부분 없이 빈틈없이 감싸는 데 $42\\,\\text{cm}^2$의 종이가 필요하다. 상자의 높이 $x$는 몇 $\\text{cm}$인가?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2.4\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2.8\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 4,
+          "text": "$3.6\\,\\text{cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$4.2\\,\\text{cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T03:01:45.742211+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "밑면의 넓이는 $2\\times3=6\\,\\text{cm}^2$이다. 밑면이 두 개이므로 옆면의 넓이는 $42-6\\times2=30\\,\\text{cm}^2$이다. 밑면의 둘레는 $2\\times(2+3)=10\\,\\text{cm}$이므로 높이는 $30\\div10=3\\,\\text{cm}$이다.\n④를 골랐다면 겉넓이에서 밑면 한 개의 넓이만 빼고 옆면의 넓이를 구했을 수 있다.",
+      "figure": {
+        "base_sides": null,
+        "depth": 3.0,
+        "height": 3.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "width",
+            "text": "2 cm"
+          },
+          {
+            "part": "depth",
+            "text": "3 cm"
+          },
+          {
+            "part": "height",
+            "text": "x"
+          }
+        ],
+        "radius": null,
+        "shape": "cuboid",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": 2.0
+      },
+      "generated_at": "2026-11-12T03:01:45.554631+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "상자를 감싸는 데 필요한 종이의 넓이를 주고, 이를 겉넓이로 이용하여 높이를 거꾸로 구하게 한다.",
+      "id": "f10c75d4-4c06-4423-a375-a3ae8e0323a4",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:01:45.554130+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:13:01.561109+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C1-성질적용",
+      "body": "다음 그림과 같은 원기둥의 겉넓이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$30\\pi\\,\\mathrm{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 2,
+          "text": "$39\\pi\\,\\mathrm{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$48\\pi\\,\\mathrm{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$60\\pi\\,\\mathrm{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M3",
+          "no": 5,
+          "text": "$(18\\pi+30)\\,\\mathrm{cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-12T03:00:52.541184+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "한 밑면의 넓이는 $3\\times3\\times\\pi=9\\pi\\,\\mathrm{cm}^2$이고, 옆넓이는 $2\\times3\\times\\pi\\times5=30\\pi\\,\\mathrm{cm}^2$입니다. 따라서 겉넓이는 $9\\pi\\times2+30\\pi=48\\pi\\,\\mathrm{cm}^2$입니다. ②는 밑면의 넓이를 한 번만 더한 것입니다. ⑤는 옆면을 펼친 직사각형의 가로를 밑면의 둘레가 아니라 지름으로 생각한 것입니다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": 5.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "3 cm"
+          },
+          {
+            "part": "height",
+            "text": "5 cm"
+          }
+        ],
+        "radius": 3.0,
+        "shape": "cylinder",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:00:52.392676+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "154e76fb-f7e1-46d1-8158-a6b10c514320",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:00:52.392520+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.395294+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C1-성질적용",
       "body": "밑면의 반지름이 $3\\,\\mathrm{cm}$이고 높이가 $4\\,\\mathrm{cm}$인 원기둥이 있다. 이 원기둥의 겉넓이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$24\\pi\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 2,
           "text": "$33\\pi\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$36\\pi\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$42\\pi\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M3",
           "no": 5,
@@ -436,8 +825,9 @@
       ],
       "created_at": "2026-11-11T08:49:06.726431+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.160245+00:00",
       "explanation": "밑면의 넓이는 $3\\times3\\times\\pi=9\\pi\\,\\mathrm{cm}^2$이고, 옆넓이는 $2\\times3\\times\\pi\\times4=24\\pi\\,\\mathrm{cm}^2$입니다. 따라서 겉넓이는 $9\\pi\\times2+24\\pi=42\\pi\\,\\mathrm{cm}^2$입니다.\n②는 밑면의 넓이를 한 번만 더한 것입니다. ⑤는 옆면을 펼친 직사각형의 가로를 밑면의 둘레가 아닌 지름으로 생각한 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:49:06.578176+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -448,7 +838,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:49:06.577505+00:00",
@@ -459,36 +849,142 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:13:01.602882+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C1-성질적용",
+      "body": "다음 그림의 직육면체 $ABCD-EFGH$의 겉넓이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$47\\;\\text{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$60\\;\\text{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 3,
+          "text": "$82\\;\\text{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$94\\;\\text{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$120\\;\\text{cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-12T03:01:06.510531+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "밑면 $ABCD$와 그 맞은편 면의 넓이는 각각 $3\\times4=12\\;\\text{cm}^2$입니다. 네 옆면의 넓이의 합은 $(3+4)\\times2\\times5=70\\;\\text{cm}^2$입니다. 따라서 겉넓이는 $12\\times2+70=94\\;\\text{cm}^2$입니다. ③은 밑면 두 개 중 하나만 더한 값입니다.",
+      "figure": {
+        "base_sides": null,
+        "depth": 4.0,
+        "height": 5.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "width",
+            "text": "3 cm"
+          },
+          {
+            "part": "depth",
+            "text": "4 cm"
+          },
+          {
+            "part": "height",
+            "text": "5 cm"
+          }
+        ],
+        "radius": null,
+        "shape": "cuboid",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "width": 3.0
+      },
+      "generated_at": "2026-11-12T03:01:06.366318+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "81024099-c665-4a9d-8e8c-3617110a44f0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:01:06.366165+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.436756+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C1-성질적용",
       "body": "밑면이 세 변의 길이가 각각 $3\\,\\mathrm{cm}$, $4\\,\\mathrm{cm}$, $5\\,\\mathrm{cm}$인 직각삼각형인 삼각기둥이 있다. 이 삼각기둥의 높이가 $6\\,\\mathrm{cm}$일 때, 겉넓이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$60\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$72\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 3,
           "text": "$78\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$84\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -497,8 +993,9 @@
       ],
       "created_at": "2026-11-11T08:49:22.117221+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.208645+00:00",
       "explanation": "밑면 한 개의 넓이는 $3\\times4\\div2=6\\,(\\mathrm{cm}^2)$이다. 옆면의 넓이는 $(3+4+5)\\times6=72\\,(\\mathrm{cm}^2)$이다. 따라서 겉넓이는 $6\\times2+72=84\\,(\\mathrm{cm}^2)$이다. ③은 밑면을 한 개만 더한 값이다. 삼각기둥에는 밑면이 두 개 있음을 살펴야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:49:21.970643+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -509,7 +1006,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:49:21.970392+00:00",
@@ -527,8 +1024,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:51:05.440974+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.254591+00:00",
       "explanation": "옆면을 펼친 직사각형을 다시 말면 한 변이 밑면의 둘레를 따라 빈틈없이 한 바퀴 이어진다. 따라서 그 변의 길이는 밑면의 지름이 아니라 둘레이므로 $2\\pi r$이다. 다른 변의 길이는 원기둥의 높이인 $2r$이다. 두 길이는 같지 않으므로 펼친 모양은 정사각형이 아니다.\n\n옆면의 넓이는 $2\\pi r\\times 2r=4\\pi r^2$이다. 원 모양인 두 밑면의 넓이는 각각 $\\pi r^2$이므로 겉넓이는 $6\\pi r^2$이다. 밑면을 한 번만 더하면 원기둥의 한쪽 밑면을 빠뜨린 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:51:05.280942+00:00",
       "hard_condition": "explanation-a",
       "hard_condition_reason": "반지름을 특정 수로 주지 않고, 반지름의 크기에 관계없이 민수의 말이 옳지 않은 이유를 설명하게 했다.",
@@ -576,10 +1074,85 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:51:05.280726+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:13:01.640842+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C1-이유설명",
+      "body": "다음 그림은 원기둥의 옆면과 두 밑면을 잘라 평평하게 펼친 모습이다. 한 학생은 옆면을 펼친 직사각형의 가로의 길이를 밑면의 지름으로 하여 겉넓이를 구하려고 한다.\n\n이 학생의 방법이 옳은지 판단하고, 원기둥을 다시 만드는 과정을 이용하여 그 까닭을 설명하시오. 이 까닭이 밑면의 반지름과 높이가 달라져도 성립하는지도 설명하시오. 또 그림의 원기둥의 겉넓이를 구하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:03:43.28505+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "직사각형을 말아 원기둥의 옆면을 만들면 직사각형의 가로가 원 모양인 밑면의 가장자리를 한 바퀴 둘러싼다. 따라서 가로의 길이는 밑면의 지름이 아니라 둘레이다. 밑면의 크기와 높이가 달라져도 같은 까닭이 성립한다.\n\n그림에서 밑면의 둘레는 $2\\pi\\times 2=4\\pi\\ \\mathrm{cm}$이다. 옆넓이는 $4\\pi\\times 5=20\\pi\\ \\mathrm{cm}^2$이고, 두 밑면의 넓이의 합은 $2\\times\\pi\\times 2^2=8\\pi\\ \\mathrm{cm}^2$이다. 따라서 겉넓이는 $28\\pi\\ \\mathrm{cm}^2$이다. 겉넓이를 구할 때는 밑면이 두 개이므로 한 개의 넓이만 더하지 않도록 주의한다.",
+      "figure": {
+        "height": 5.0,
+        "kind": "net",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "2 cm"
+          },
+          {
+            "part": "height",
+            "text": "5 cm"
+          }
+        ],
+        "radius": 2.0,
+        "shape": "cylinder",
+        "slant": null
+      },
+      "generated_at": "2026-11-12T03:03:43.09946+00:00",
+      "hard_condition": "explanation-a",
+      "hard_condition_reason": "밑면의 반지름과 높이가 달라져도 직사각형의 가로가 밑면의 둘레와 같아지는 까닭이 성립하는지 설명하게 한다.",
+      "id": "85d28229-7c0f-4711-84df-0e30b549210e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "옳지 않다. 직사각형을 말아 옆면을 만들면 가로가 밑면의 가장자리를 한 바퀴 둘러싸므로, 가로의 길이는 밑면의 둘레와 같다. 밑면의 반지름과 높이가 달라져도 이 까닭은 같다.\n\n그림의 밑면의 둘레는 $4\\pi\\ \\mathrm{cm}$이므로 옆넓이는 $20\\pi\\ \\mathrm{cm}^2$이다. 두 밑면의 넓이의 합은 $8\\pi\\ \\mathrm{cm}^2$이므로 겉넓이는 $28\\pi\\ \\mathrm{cm}^2$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "학생의 방법이 옳지 않다고 판단하고, 직사각형의 가로가 밑면의 가장자리를 한 바퀴 둘러싸므로 그 길이가 밑면의 둘레와 같다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "밑면의 반지름과 높이가 달라져도 같은 까닭이 성립한다고 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "옆넓이에 두 밑면의 넓이를 더하여 겉넓이를 $28\\pi\\ \\mathrm{cm}^2$로 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-08-M2"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:03:43.099050+00:00",
           "issues": [],
           "number": 1
         }
@@ -594,8 +1167,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:52:06.5344+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.292136+00:00",
       "explanation": "원기둥의 옆면을 펼친 직사각형의 한 변은 밑면의 둘레와 길이가 같다. 옆면의 아래쪽 가장자리가 밑면의 둘레를 한 바퀴 둘러싸고 있기 때문이다. 그 길이를 지름인 $4\\text{ cm}$로 생각하면 옆면의 넓이를 잘못 구한다.\n\n원래 원기둥에는 밑면이 두 개이므로 두 밑면의 넓이를 모두 더해야 한다. 밑면을 한 번만 더하면 겉넓이를 빠뜨리게 된다.\n\n두 조각의 겉넓이를 더하면 잘라서 새로 생긴 원 모양의 면 두 개도 포함된다. 이 두 면은 원래 원기둥의 겉면이 아니므로 넓이의 합인 $8\\pi\\text{ cm}^2$를 빼야 한다. 두 조각의 높이의 합은 자르는 위치에 관계없이 $6\\text{ cm}$이므로 두 방법의 결과가 같다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:52:06.383277+00:00",
       "hard_condition": "explanation-c",
       "hard_condition_reason": "원래 원기둥에서 바로 구하는 방법과 두 조각으로 나누어 구하는 방법을 비교하게 한다. 자르는 위치에 관계없이 두 결과가 같은 이유도 설명해야 한다.",
@@ -639,7 +1213,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:51:36.221262+00:00",
@@ -658,6 +1232,154 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:13:01.679158+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C1-이유설명",
+      "body": "다음 그림은 원기둥을 잘라 평평하게 펼친 모습이다. 두 학생은 이 원기둥의 겉넓이를 다음과 같이 구했다.\n\n가: $(2\\pi\\times2)\\times4+2\\times(\\pi\\times2\\times2)$\n나: $2\\pi\\times2\\times(4+2)$\n\n두 식이 각각 원기둥의 겉넓이를 나타내는 까닭을 그림과 관련지어 설명하시오. 또 밑면의 반지름과 높이가 달라져도 같은 방법으로 세운 두 식의 값이 같은 까닭을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T03:04:16.178694+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "옆면을 펼친 직사각형의 한 변은 원기둥의 높이와 같다. 다른 한 변은 원기둥을 만들 때 밑면의 원을 한 바퀴 둘러싸므로 그 길이가 밑면의 둘레와 같다. 밑면의 지름은 이 길이가 아니다.\n\n가의 식에서 첫째 항은 옆면의 넓이이고, 둘째 항은 두 밑면의 넓이이다. 밑면은 두 개이므로 한 번만 더하면 안 된다. 나의 식은 가의 식에서 두 항에 공통으로 곱해진 $2\\pi\\times2$를 묶어 나타낸 것이다. 밑면의 반지름을 $r$, 높이를 $h$로 바꾸어도 $2\\pi r h+2\\pi r^2=2\\pi r(h+r)$이므로 두 방법의 결과는 같다.",
+      "figure": {
+        "height": 4.0,
+        "kind": "net",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "2 cm"
+          },
+          {
+            "part": "height",
+            "text": "4 cm"
+          }
+        ],
+        "radius": 2.0,
+        "shape": "cylinder",
+        "slant": null
+      },
+      "generated_at": "2026-11-12T03:04:15.991064+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "두 학생의 겉넓이 계산 방법을 비교하고, 반지름과 높이가 달라져도 두 방법이 같은 결과를 내는 까닭을 설명하게 한다.",
+      "id": "5087bce2-7964-4786-9fc3-7bc54370a44a",
+      "model": "gpt-6.1-terra",
+      "model_answer": "옆면을 펼친 직사각형을 다시 말면 한 변이 밑면의 원을 한 바퀴 둘러싼다. 따라서 그 변의 길이는 밑면의 둘레인 $2\\pi\\times2$이고, 다른 변의 길이는 높이인 $4$이다. 가의 첫째 항은 옆면의 넓이이고 둘째 항은 두 밑면의 넓이이므로 가의 식은 겉넓이를 나타낸다.\n\n가의 식에서 두 항에 공통으로 곱해진 $2\\pi\\times2$를 묶으면 나의 식이 된다. 밑면의 반지름을 $r$, 높이를 $h$로 바꾸어도 가의 방법으로 세운 식은 $2\\pi r h+2\\pi r^2$이고, 나의 방법으로 세운 식은 $2\\pi r(h+r)$이다. 앞의 식에서 $2\\pi r$을 묶으면 뒤의 식이 되므로 언제나 두 식의 값이 같다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "옆면을 펼친 직사각형의 한 변이 밑면을 한 바퀴 둘러싸므로 그 길이가 밑면의 둘레와 같다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "가의 식에서 첫째 항은 옆면의 넓이, 둘째 항은 두 밑면의 넓이임을 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-08-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "반지름과 높이가 달라져도 두 방법으로 세운 식에서 공통으로 곱해진 수를 묶으면 같은 식이 됨을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:04:15.990622+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:13:01.721319+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C1-이유설명",
+      "body": "다음 그림은 원기둥의 겉면을 펼친 것입니다. 이 원기둥의 겉넓이를 구하고, 옆면인 직사각형의 가로의 길이를 어떻게 구했는지 이유를 설명하세요.",
+      "choices": [],
+      "created_at": "2026-11-12T03:09:25.714371+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "직사각형을 말아 원기둥의 옆면을 만들면 직사각형의 가로변은 밑면의 원 둘레와 맞닿습니다. 따라서 가로의 길이는 밑면의 지름이 아니라 원의 둘레인 $2\\pi\\times2=4\\pi\\ (\\mathrm{cm})$입니다. 옆면의 넓이는 $4\\pi\\times3=12\\pi\\ (\\mathrm{cm}^2)$이고, 두 밑면의 넓이는 $2\\times(\\pi\\times2^2)=8\\pi\\ (\\mathrm{cm}^2)$입니다. 따라서 겉넓이는 $20\\pi\\ (\\mathrm{cm}^2)$입니다. 밑면을 한 번만 더하면 다른 밑면이 빠집니다.",
+      "figure": {
+        "height": 3.0,
+        "kind": "net",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "2 cm"
+          },
+          {
+            "part": "height",
+            "text": "3 cm"
+          }
+        ],
+        "radius": 2.0,
+        "shape": "cylinder",
+        "slant": null
+      },
+      "generated_at": "2026-11-12T03:09:25.537266+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "740d82ca-e2d0-43e1-b4cd-d11bcea67e9d",
+      "model": "gpt-6.1-terra",
+      "model_answer": "직사각형을 말아 원기둥을 만들면 직사각형의 가로변이 밑면의 원 둘레와 맞닿으므로 가로의 길이는 $2\\pi\\times2=4\\pi\\ (\\mathrm{cm})$입니다. 따라서 겉넓이는 $4\\pi\\times3+2\\times(\\pi\\times2^2)=20\\pi\\ (\\mathrm{cm}^2)$입니다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "직사각형의 가로변이 밑면의 원 둘레와 맞닿으므로 두 길이가 같다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "직사각형의 가로의 길이를 $4\\pi\\ \\mathrm{cm}$로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "옆면과 두 밑면의 넓이를 더하여 겉넓이를 $20\\pi\\ \\mathrm{cm}^2$로 구한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-08-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:09:25.536986+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.547382+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C1-이유설명",
@@ -665,8 +1387,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:50:24.62949+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.348739+00:00",
       "explanation": "옆면을 펼친 직사각형의 가로는 밑면의 원을 한 바퀴 두른 길이와 같다. 따라서 가로는 $2\\pi\\times3=6\\pi\\,(\\mathrm{cm})$이다. 지름인 $6\\,\\mathrm{cm}$로 생각하지 않도록 주의한다. 원기둥에는 같은 크기의 밑면이 두 개 있으므로, 겉넓이는 $6\\pi\\times5+3\\times3\\times\\pi\\times2=48\\pi\\,(\\mathrm{cm}^2)$이다. 밑면의 넓이를 한 번만 더하면 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:50:24.477566+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -703,7 +1426,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:50:24.477388+00:00",
@@ -714,6 +1437,72 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:13:01.833154+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C1-이유설명",
+      "body": "다음 그림은 원기둥의 겉면을 펼친 것입니다. 민수는 옆면의 넓이와 밑면 하나의 넓이만 더하여 겉넓이를 $24\\pi\\text{ cm}^2$라고 했습니다. 민수의 방법이 잘못된 이유를 설명하고, 이 원기둥의 올바른 겉넓이를 구하세요.",
+      "choices": [],
+      "created_at": "2026-11-12T03:09:47.661931+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "원기둥의 겉면에는 옆면과 크기가 같은 두 밑면이 있습니다. 민수는 밑면을 하나만 더하여 나머지 밑면의 넓이 $4\\pi\\text{ cm}^2$를 빠뜨렸습니다. 따라서 겉넓이는 $24\\pi+4\\pi=28\\pi\\text{ cm}^2$입니다.",
+      "figure": {
+        "height": 5.0,
+        "kind": "net",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "2 cm"
+          },
+          {
+            "part": "height",
+            "text": "5 cm"
+          }
+        ],
+        "radius": 2.0,
+        "shape": "cylinder",
+        "slant": null
+      },
+      "generated_at": "2026-11-12T03:09:47.488401+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "16fe56f7-5efd-438b-b4dc-5d3fc84e4537",
+      "model": "gpt-6.1-terra",
+      "model_answer": "원기둥에는 크기가 같은 밑면이 두 개이므로 밑면 하나의 넓이를 더해야 합니다. 밑면 하나의 넓이는 $2\\times2\\times\\pi=4\\pi\\text{ cm}^2$입니다. 따라서 겉넓이는 $24\\pi+4\\pi=28\\pi\\text{ cm}^2$입니다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "원기둥의 밑면이 두 개인데 민수는 하나만 더했다는 이유를 설명한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-08-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "빠뜨린 밑면의 넓이를 더하여 겉넓이를 $28\\pi\\text{ cm}^2$로 구한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-08-M2"
+          ],
+          "required": false
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:09:47.488066+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.579712+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C1-이유설명",
@@ -721,8 +1510,9 @@
       "choices": [],
       "created_at": "2026-11-11T08:50:39.398547+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.386034+00:00",
       "explanation": "직육면체에는 넓이가 같은 면이 두 개씩 있다. 가로와 세로로 이루어진 면, 가로와 높이로 이루어진 면, 세로와 높이로 이루어진 면의 넓이를 각각 구해 두 번씩 더한다. 밑면을 한 번만 더하면 밑면이 두 개라는 것을 빠뜨린 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:50:39.220996+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -757,7 +1547,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:50:39.220567+00:00",
@@ -774,30 +1564,35 @@
       "body": "어느 원뿔의 밑면의 반지름은 $3\\text{ cm}$, 모선의 길이는 $5\\text{ cm}$이다. 이 원뿔의 부피가 $12\\pi\\text{ cm}^3$일 때, 높이와 겉넓이를 차례로 바르게 나타낸 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M1",
           "no": 1,
           "text": "$\\frac{4}{3}\\text{ cm}$, $24\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$4\\text{ cm}$, $15\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$4\\text{ cm}$, $24\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 4,
           "text": "$4\\text{ cm}$, $33\\pi\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -806,8 +1601,9 @@
       ],
       "created_at": "2026-11-11T08:52:50.433513+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.734256+00:00",
       "explanation": "높이를 $h\\text{ cm}$라고 하면 부피는 $\\frac{1}{3}\\times 9\\pi\\times h=12\\pi$이므로 $h=4$이다. 옆넓이는 $\\pi\\times 3\\times 5=15\\pi$이고, 밑넓이는 $9\\pi$이다. 따라서 겉넓이는 $24\\pi\\text{ cm}^2$이다. 정답은 ③이다.\n①은 부피를 구할 때 $\\frac{1}{3}$을 곱하지 않고 높이를 구한 경우이다. ④는 겉넓이를 구할 때 밑넓이를 두 번 더한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:52:50.374687+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "주어진 부피에서 원뿔의 높이를 거꾸로 구하고, 겉넓이도 구해야 한다.",
@@ -818,7 +1614,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:52:50.374565+00:00",
@@ -829,36 +1625,215 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:43.038903+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C2-성질적용",
+      "body": "그림과 같이 밑면의 반지름의 길이가 $3\\text{ cm}$인 원뿔이 있다. 이 원뿔의 겉넓이는 $24\\pi\\text{ cm}^2$이고 부피는 $12\\pi\\text{ cm}^3$이다. 높이와 모선의 길이의 합은? 그림에서 길이를 재지 않고 구하여라.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 1,
+          "text": "$6\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M1",
+          "no": 2,
+          "text": "$\\dfrac{19}{3}\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$7\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$8\\text{ cm}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$9\\text{ cm}$"
+        }
+      ],
+      "created_at": "2026-11-12T03:41:00.56278+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "밑넓이는 $9\\pi\\text{ cm}^2$이다. 높이를 $h\\text{ cm}$라 하면 부피는 $\\dfrac{1}{3}\\times 9\\pi\\times h=12\\pi$이므로 $h=4$이다. 옆넓이는 $24\\pi-9\\pi=15\\pi\\text{ cm}^2$이다. 모선의 길이를 $l\\text{ cm}$라 하면 $3\\pi l=15\\pi$이므로 $l=5$이다. 따라서 구하는 합은 $4+5=9\\text{ cm}$이다.\n①은 겉넓이에서 밑넓이를 두 번 빼어 모선의 길이를 $2\\text{ cm}$로 잘못 구한 경우이다. ②는 부피를 구할 때 $\\dfrac{1}{3}$을 곱하지 않아 높이를 $\\dfrac{4}{3}\\text{ cm}$로 잘못 구한 경우이다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": 4.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "3 cm"
+          }
+        ],
+        "radius": 3.0,
+        "shape": "cone",
+        "show_axis": true,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:41:00.485838+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "겉넓이와 부피를 주고, 이를 거꾸로 이용하여 모선의 길이와 높이를 각각 구하게 한다.",
+      "id": "f1e52dde-78d5-41a4-bacb-4461b2621c16",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:41:00.485642+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:53:43.063903+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C2-성질적용",
+      "body": "그림은 밑면이 정사각형 $ABCD$이고 꼭짓점이 $P$인 속이 빈 사각뿔 모양의 그릇이다. 밑면의 한 변의 길이는 $4\\text{ cm}$이다. 물이 $50\\text{ cm}^3$ 들어 있는 물통에서 이 그릇에 물을 가득 부었더니, 물통에 물이 $18\\text{ cm}^3$ 남았다. 이 그릇의 높이는 몇 $\\text{cm}$인가? 그림에서 길이를 재지 말고 구하여라.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M1",
+          "no": 1,
+          "text": "$2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$4$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$6$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$8$"
+        }
+      ],
+      "created_at": "2026-11-12T03:41:27.171106+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그릇에 부은 물의 부피는 $50-18=32(\\text{cm}^3)$이다. 밑넓이는 $4\\times4=16(\\text{cm}^2)$이다. 그릇의 높이를 $h\\text{ cm}$라 하면 사각뿔의 부피는 $\\frac13\\times16\\times h=32$이므로 $h=6$이다. 따라서 정답은 ④이다. ①은 사각뿔의 부피를 밑넓이와 높이의 곱으로만 계산하여 $\\frac13$을 빠뜨린 경우이다.",
+      "figure": {
+        "base_sides": 4,
+        "depth": null,
+        "height": 6.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "height",
+            "text": "?"
+          }
+        ],
+        "radius": 2.8284271247461903,
+        "shape": "pyramid",
+        "show_axis": true,
+        "top_radius": null,
+        "vertex_names": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "P"
+        ],
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:41:27.061033+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "처음과 나중에 물통에 들어 있는 물의 부피로 그릇의 부피를 구한 뒤, 사각뿔의 부피를 구하는 식을 거꾸로 사용하여 높이를 구한다.",
+      "id": "3d8ac709-96eb-469c-af36-6b998800a957",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:41:27.060798+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.646259+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C2-성질적용",
       "body": "밑면이 정사각형인 사각뿔이 있다. 이 사각뿔의 높이는 $4\\text{ cm}$이고, 부피는 $48\\text{ cm}^3$이다. 네 옆면은 각각 밑면의 한 변을 밑변으로 하는 삼각형이며, 이 삼각형의 높이는 모두 $5\\text{ cm}$이다. 이 사각뿔의 겉넓이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$60\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$72\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$96\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$120\\text{ cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 5,
@@ -867,8 +1842,9 @@
       ],
       "created_at": "2026-11-11T08:53:10.417877+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.848983+00:00",
       "explanation": "뿔의 부피는 밑넓이에 높이를 곱한 것의 $\\dfrac{1}{3}$이다. 따라서 밑넓이는 $48\\times 3\\div 4=36\\text{ cm}^2$이고, 밑면의 한 변의 길이는 $6\\text{ cm}$이다. 옆면 네 개의 넓이의 합은 $\\dfrac{1}{2}\\times 6\\times 5\\times 4=60\\text{ cm}^2$이다. 따라서 겉넓이는 $36+60=96\\text{ cm}^2$이다. ⑤는 밑면의 넓이를 두 번 더한 것이다. 사각뿔의 밑면은 한 개이므로 한 번만 더해야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:53:10.35178+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "주어진 부피와 높이로 밑넓이를 거꾸로 구한 뒤, 밑면의 한 변의 길이를 알아내어 겉넓이를 구해야 한다.",
@@ -879,7 +1855,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:53:10.351662+00:00",
@@ -896,30 +1872,35 @@
       "body": "밑면의 반지름이 $3\\,\\mathrm{cm}$이고 높이가 $6\\,\\mathrm{cm}$인 원뿔이 있다. 이 원뿔의 부피는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$6\\pi\\,\\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$9\\pi\\,\\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$18\\pi\\,\\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$27\\pi\\,\\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M1",
           "no": 5,
@@ -928,8 +1909,9 @@
       ],
       "created_at": "2026-11-11T08:52:17.767587+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.908843+00:00",
       "explanation": "밑넓이는 $\\pi\\times 3^2=9\\pi\\,\\mathrm{cm}^2$입니다. 따라서 부피는 $\\frac{1}{3}\\times 9\\pi\\times 6=18\\pi\\,\\mathrm{cm}^3$입니다. ⑤는 밑넓이에 높이만 곱하고 $\\frac{1}{3}$을 곱하지 않은 답입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:52:17.6175+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -940,10 +1922,98 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:52:17.617334+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:53:43.090955+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C2-성질적용",
+      "body": "다음 그림과 같은 원뿔의 부피는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$9\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$12\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$18\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$24\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M1",
+          "no": 5,
+          "text": "$36\\pi\\,\\mathrm{cm}^3$"
+        }
+      ],
+      "created_at": "2026-11-12T03:40:24.256579+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "원뿔의 부피는 밑넓이에 높이를 곱한 값의 $\\frac{1}{3}$이다. 따라서 $\\frac{1}{3}\\times\\pi\\times 3^2\\times 4=12\\pi\\,\\mathrm{cm}^3$이다. ⑤는 밑넓이에 높이만 곱하고 $\\frac{1}{3}$을 곱하지 않은 것이다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": 4.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "3 cm"
+          },
+          {
+            "part": "height",
+            "text": "4 cm"
+          }
+        ],
+        "radius": 3.0,
+        "shape": "cone",
+        "show_axis": true,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:40:24.17331+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "963eeee5-0a6e-4f66-8370-9c29f526d25c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:40:24.173019+00:00",
           "issues": [],
           "number": 1
         }
@@ -957,30 +2027,35 @@
       "body": "밑면이 한 변의 길이가 $4\\,\\mathrm{cm}$인 정사각형인 사각뿔이 있다. 네 옆면의 넓이는 각각 $6\\,\\mathrm{cm}^2$이다. 이 사각뿔의 겉넓이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$24\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$32\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$40\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$48\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 5,
@@ -989,8 +2064,9 @@
       ],
       "created_at": "2026-11-11T08:52:29.795182+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.983393+00:00",
       "explanation": "밑면의 넓이는 $4\\times4=16\\,\\mathrm{cm}^2$이고, 네 옆면의 넓이의 합은 $6\\times4=24\\,\\mathrm{cm}^2$이다. 따라서 겉넓이는 $16+24=40\\,\\mathrm{cm}^2$이다. ⑤는 밑면의 넓이를 두 번 더한 것으로, 뿔의 밑면이 하나라는 점을 놓친 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:52:29.713678+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1001,7 +2077,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:52:29.713397+00:00",
@@ -1012,36 +2088,229 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:43.117674+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C2-성질적용",
+      "body": "다음 그림과 같은 원뿔의 겉넓이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$9\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$15\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$24\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$30\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 5,
+          "text": "$33\\pi\\text{ cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-12T03:40:39.106854+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "밑면의 넓이는 $3\\times3\\times\\pi=9\\pi\\text{ cm}^2$이고, 옆넓이는 $3\\times5\\times\\pi=15\\pi\\text{ cm}^2$입니다. 따라서 겉넓이는 $9\\pi+15\\pi=24\\pi\\text{ cm}^2$입니다. ⑤는 밑면의 넓이를 두 번 더한 경우입니다. 원뿔의 밑면은 한 개이므로 한 번만 더해야 합니다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": 4.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "3 cm"
+          },
+          {
+            "part": "slant",
+            "text": "5 cm"
+          }
+        ],
+        "radius": 3.0,
+        "shape": "cone",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:40:39.031551+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d68cb3e9-de90-40dd-a6f2-4d9f96e31679",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:40:39.031166+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:53:43.141665+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C2-오개념판별",
+      "body": "다음 그림은 밑면의 반지름이 $3\\,\\mathrm{cm}$, 높이가 $4\\,\\mathrm{cm}$, 모선의 길이가 $5\\,\\mathrm{cm}$인 원뿔이다. 이 원뿔의 옆넓이는 $15\\pi\\,\\mathrm{cm}^2$이다.\n\n민지: 부피는 $9\\pi\\times4=36\\pi\\,\\mathrm{cm}^3$이야.\n준호: 겉넓이는 $15\\pi+9\\pi\\times2=33\\pi\\,\\mathrm{cm}^2$이야.\n\n두 학생의 풀이를 판단한 것으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M1",
+          "no": 1,
+          "text": "민지의 풀이는 옳고, 준호는 밑넓이를 한 번만 더해야 한다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 2,
+          "text": "민지는 구한 값에 $\\dfrac13$을 곱해야 하고, 준호의 풀이는 옳다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "민지는 구한 값에 $\\dfrac13$을 곱해야 하고, 준호는 밑넓이를 한 번만 더해야 한다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "민지는 구한 값에 $\\dfrac13$을 곱해야 하고, 준호는 밑넓이를 더하지 않아야 한다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "민지는 높이 대신 모선의 길이를 곱한 뒤 $\\dfrac13$을 곱해야 하고, 준호는 밑넓이를 한 번만 더해야 한다."
+        }
+      ],
+      "created_at": "2026-11-12T03:41:57.228212+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "원뿔의 부피는 밑넓이에 높이를 곱한 값의 $\\dfrac13$이므로 $9\\pi\\times4\\times\\dfrac13=12\\pi\\,\\mathrm{cm}^3$이다. 민지는 $\\dfrac13$을 곱하지 않았다.\n원뿔의 겉넓이는 옆넓이에 밑넓이를 한 번 더한 $15\\pi+9\\pi=24\\pi\\,\\mathrm{cm}^2$이다. 준호는 밑넓이를 두 번 더했다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": 4.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "3 cm"
+          },
+          {
+            "part": "height",
+            "text": "4 cm"
+          },
+          {
+            "part": "slant",
+            "text": "5 cm"
+          }
+        ],
+        "radius": 3.0,
+        "shape": "cone",
+        "show_axis": true,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:41:57.117072+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 학생의 서로 다른 풀이를 살펴보고 각각 잘못된 곳을 판단하게 했다.",
+      "id": "25b1c24d-418b-4d9c-be97-216d0fbd48f3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:41:30.656079+00:00",
+          "issues": [
+            "두 학생의 말을 판단하지 않고 겉넓이와 부피만 직접 구해도 정답을 고를 수 있어, 일반적인 계산 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:41:57.116870+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T10:42:57.133243+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C2-오개념판별",
       "body": "어느 원뿔의 밑넓이는 $9\\pi\\,\\mathrm{cm}^2$, 옆넓이는 $15\\pi\\,\\mathrm{cm}^2$, 높이는 $4\\,\\mathrm{cm}$이다. 두 학생이 이 원뿔에 대해 다음과 같이 말했다.\n\n민수: 부피는 $36\\pi\\,\\mathrm{cm}^3$이야.\n지수: 겉넓이는 $33\\pi\\,\\mathrm{cm}^2$야.\n\n두 학생의 말을 판단하고 틀린 값을 바르게 고친 것으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M1",
           "no": 1,
           "text": "민수만 옳다. 겉넓이는 $24\\pi\\,\\mathrm{cm}^2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 2,
           "text": "지수만 옳다. 부피는 $12\\pi\\,\\mathrm{cm}^3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "둘 다 틀렸다. 부피는 $12\\pi\\,\\mathrm{cm}^3$이고, 겉넓이는 $15\\pi\\,\\mathrm{cm}^2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "둘 다 틀렸다. 부피는 $4\\pi\\,\\mathrm{cm}^3$이고, 겉넓이는 $24\\pi\\,\\mathrm{cm}^2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -1050,8 +2319,9 @@
       ],
       "created_at": "2026-11-11T10:40:44.574505+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.919079+00:00",
       "explanation": "원뿔의 부피는 밑넓이와 높이의 곱의 $\\frac{1}{3}$이므로 $12\\pi\\,\\mathrm{cm}^3$이다. 겉넓이는 밑넓이와 옆넓이의 합이므로 $24\\pi\\,\\mathrm{cm}^2$이다.\n\n1번은 부피를 구할 때 $\\frac{1}{3}$을 곱하지 않은 민수의 말을 옳다고 보았다. 2번은 밑넓이를 두 번 더한 지수의 말을 옳다고 보았다. 3번은 겉넓이에서 밑넓이를 빠뜨렸고, 4번은 부피를 구할 때 $\\frac{1}{3}$을 두 번 곱했다.",
+      "figure": null,
       "generated_at": "2026-11-11T10:40:43.98299+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "두 학생이 각각 구한 부피와 겉넓이를 보고 옳고 그름을 판단한 뒤, 틀린 값을 고치게 했다.",
@@ -1062,7 +2332,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T10:40:19.663768+00:00",
@@ -1087,30 +2357,35 @@
       "body": "어느 각뿔의 밑넓이를 $B$, 옆넓이를 $L$, 높이를 $h$라고 하자. 한 학생이 이 각뿔의 부피와 겉넓이를 다음과 같이 구했다.\n\n부피: $Bh$\n겉넓이: $2B+L$\n\n학생이 쓴 두 식을 살펴보았다. 틀린 식은 바르게 고치고, 옳은 식은 그대로 둔 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M1",
           "no": 1,
           "text": "부피: $Bh$, 겉넓이: $B+L$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 2,
           "text": "부피: $\\dfrac{1}{3}Bh$, 겉넓이: $2B+L$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "부피: $\\dfrac{1}{3}Bh$, 겉넓이: $B+L$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "부피: $\\dfrac{1}{3}Lh$, 겉넓이: $B+L$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1119,8 +2394,9 @@
       ],
       "created_at": "2026-11-11T10:43:25.553728+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.956828+00:00",
       "explanation": "각뿔의 부피는 밑넓이와 높이를 곱한 값의 $\\dfrac{1}{3}$이므로 $\\dfrac{1}{3}Bh$이다. 겉넓이는 밑넓이와 옆넓이의 합인 $B+L$이다. 따라서 학생이 쓴 두 식을 모두 고쳐야 하므로 정답은 ③이다.\n\n①은 부피를 구할 때 $\\dfrac{1}{3}$을 곱하지 않았다. ②는 각뿔의 밑넓이를 두 번 더했다. ④는 부피를 구할 때 밑넓이 대신 옆넓이를 썼다. ⑤는 겉넓이에서 밑넓이를 빠뜨렸다.",
+      "figure": null,
       "generated_at": "2026-11-11T10:43:25.33306+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "학생이 쓴 부피와 겉넓이의 식을 각각 판단하고 고치게 했다. 두 식에 담긴 서로 다른 오류를 구별해야 한다.",
@@ -1131,7 +2407,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T10:43:25.332956+00:00",
@@ -1142,36 +2418,223 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T04:45:39.965633+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C2-오개념판별",
+      "body": "다음 그림은 사각뿔 $S$-$ABCD$이다. 밑면 $ABCD$의 넓이는 $64\\,\\mathrm{cm}^2$, 옆넓이는 $80\\,\\mathrm{cm}^2$, 높이는 $3\\,\\mathrm{cm}$이다.\n\n이 사각뿔의 부피와 겉넓이를 구하는 방법을 말한 학생은 다섯 명이다. 옳게 말한 학생은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M1",
+          "no": 1,
+          "text": "민서: 부피는 $64\\times3$, 겉넓이는 $80+64$로 구해."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 2,
+          "text": "도윤: 부피는 $64\\times3\\times\\frac13$, 겉넓이는 $80+64\\times2$로 구해."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "지우: 부피는 $64\\times3\\times\\frac13$, 겉넓이는 $80+64$로 구해."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "하린: 부피는 $64\\times3\\times\\frac13$, 겉넓이는 $80$으로 구해."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "서준: 부피는 $64\\times3\\times\\frac12$, 겉넓이는 $80+64$로 구해."
+        }
+      ],
+      "created_at": "2026-11-12T04:35:59.732593+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "사각뿔의 부피는 밑넓이와 높이를 곱한 값의 $\\frac13$이므로 $64\\times3\\times\\frac13=64\\,\\mathrm{cm}^3$이다. 겉넓이는 옆넓이에 밑면의 넓이를 한 번 더하여 $80+64=144\\,\\mathrm{cm}^2$이다. 따라서 지우의 말이 옳다.\n\n민서는 부피를 구할 때 $\\frac13$을 곱하지 않았다. 도윤은 겉넓이를 구할 때 하나뿐인 밑면의 넓이를 두 번 더했다. 하린은 밑면의 넓이를 더하지 않았고, 서준은 부피를 구할 때 $\\frac12$을 곱했다.",
+      "figure": {
+        "base_sides": 4,
+        "depth": null,
+        "height": 3.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "height",
+            "text": "3 cm"
+          }
+        ],
+        "radius": 5.656854249492381,
+        "shape": "pyramid",
+        "show_axis": true,
+        "top_radius": null,
+        "vertex_names": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "S"
+        ],
+        "width": null
+      },
+      "generated_at": "2026-11-12T04:35:59.637852+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생이 각각 제시한 부피와 겉넓이의 계산 방법을 함께 판단하게 했다.",
+      "id": "ff880cfa-155e-4a28-badd-b0a1ca857da0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T04:35:59.637678+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:53:43.165336+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C2-오개념판별",
+      "body": "다음 그림은 밑면의 반지름이 $3\\,\\mathrm{cm}$, 높이가 $4\\,\\mathrm{cm}$, 모선의 길이가 $5\\,\\mathrm{cm}$인 원뿔이다. 이 원뿔의 겉넓이와 부피를 바르게 구한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M1",
+          "no": 1,
+          "text": "겉넓이: $24\\pi\\,\\mathrm{cm}^2$, 부피: $36\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 2,
+          "text": "겉넓이: $33\\pi\\,\\mathrm{cm}^2$, 부피: $12\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "겉넓이: $24\\pi\\,\\mathrm{cm}^2$, 부피: $12\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "겉넓이: $15\\pi\\,\\mathrm{cm}^2$, 부피: $12\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "겉넓이: $21\\pi\\,\\mathrm{cm}^2$, 부피: $12\\pi\\,\\mathrm{cm}^3$"
+        }
+      ],
+      "created_at": "2026-11-12T03:40:33.225334+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "밑넓이는 $9\\pi\\,\\mathrm{cm}^2$, 옆넓이는 $15\\pi\\,\\mathrm{cm}^2$이다. 따라서 겉넓이는 $9\\pi+15\\pi=24\\pi\\,\\mathrm{cm}^2$이고, 부피는 $\\frac13\\times9\\pi\\times4=12\\pi\\,\\mathrm{cm}^3$이다. ①은 부피를 구할 때 $\\frac13$을 곱하지 않았다. ②는 겉넓이를 구할 때 밑넓이를 두 번 더했다. ④는 겉넓이에서 밑넓이를 빠뜨렸고, ⑤는 옆넓이를 구할 때 모선의 길이 대신 높이를 사용했다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": 4.0,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "3 cm"
+          },
+          {
+            "part": "height",
+            "text": "4 cm"
+          },
+          {
+            "part": "slant",
+            "text": "5 cm"
+          }
+        ],
+        "radius": 3.0,
+        "shape": "cone",
+        "show_axis": true,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:40:33.098191+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "970ad736-b303-4c0a-b4ef-a3eefe71bf97",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:40:33.097894+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T10:42:57.171132+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C2-오개념판별",
       "body": "어떤 사각뿔의 밑넓이는 $36\\,\\mathrm{cm}^2$, 옆넓이는 $60\\,\\mathrm{cm}^2$, 높이는 $4\\,\\mathrm{cm}$이다. 이 사각뿔의 겉넓이와 부피를 구한 방법으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "겉넓이는 $60+36=96\\,\\mathrm{cm}^2$이고, 부피는 $36\\times4\\times\\dfrac{1}{3}=48\\,\\mathrm{cm}^3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M1",
           "no": 2,
           "text": "겉넓이는 $60+36=96\\,\\mathrm{cm}^2$이고, 부피는 $36\\times4=144\\,\\mathrm{cm}^3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 3,
           "text": "겉넓이는 $60+36\\times2=132\\,\\mathrm{cm}^2$이고, 부피는 $36\\times4\\times\\dfrac{1}{3}=48\\,\\mathrm{cm}^3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "겉넓이는 $60\\,\\mathrm{cm}^2$이고, 부피는 $36\\times4\\times\\dfrac{1}{3}=48\\,\\mathrm{cm}^3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1180,8 +2643,9 @@
       ],
       "created_at": "2026-11-11T10:38:47.335154+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.986822+00:00",
       "explanation": "뿔의 겉넓이는 옆넓이에 밑넓이를 한 번 더한 $60+36=96\\,\\mathrm{cm}^2$이다. 부피는 밑넓이와 높이를 곱한 값의 $\\dfrac{1}{3}$이므로 $36\\times4\\times\\dfrac{1}{3}=48\\,\\mathrm{cm}^3$이다. 따라서 정답은 ①이다.\n②는 뿔의 부피를 구할 때 $\\dfrac{1}{3}$을 곱하지 않았다. ③은 뿔의 밑면이 하나인데 밑넓이를 두 번 더했다. ④는 밑넓이를 더하지 않았고, ⑤는 부피를 구할 때 잘못된 수를 곱했다.",
+      "figure": null,
       "generated_at": "2026-11-11T10:38:47.04598+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1192,7 +2656,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T10:38:47.045708+00:00",
@@ -1203,36 +2667,126 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:43.189319+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C2-오개념판별",
+      "body": "그림은 밑면이 정사각형인 사각뿔 $E-ABCD$이다. 이 사각뿔의 겉넓이와 부피에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M1",
+          "no": 1,
+          "text": "부피는 밑넓이와 높이의 곱이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M2",
+          "no": 2,
+          "text": "겉넓이는 옆넓이에 밑넓이를 두 번 더한 값이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "겉넓이는 밑넓이와 옆넓이의 합이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "겉넓이는 옆넓이와 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "부피는 밑넓이와 높이의 곱의 $\\frac{1}{2}$이다."
+        }
+      ],
+      "created_at": "2026-11-12T03:40:53.495408+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "사각뿔의 겉넓이는 밑넓이와 옆넓이의 합이다. 부피는 밑넓이와 높이의 곱의 $\\frac{1}{3}$이다. ①은 부피를 구할 때 $\\frac{1}{3}$을 곱하지 않았다. ②는 하나뿐인 밑면의 넓이를 두 번 더했다. ④는 겉넓이에서 밑면을 빠뜨렸다. ⑤는 부피를 구할 때 $\\frac{1}{3}$ 대신 $\\frac{1}{2}$을 곱했다.",
+      "figure": {
+        "base_sides": 4,
+        "depth": null,
+        "height": 3.0,
+        "kind": "solid",
+        "labels": [],
+        "radius": 2.0,
+        "shape": "pyramid",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:40:53.427689+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "326ddeac-2e09-48e4-a041-2f97d0ee8513",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:40:53.427516+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T10:42:57.21583+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C2-오개념판별",
       "body": "밑면의 반지름이 $3\\,\\mathrm{cm}$, 높이가 $4\\,\\mathrm{cm}$, 모선의 길이가 $5\\,\\mathrm{cm}$인 원뿔이 있다. 이 원뿔에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M1",
           "no": 1,
           "text": "밑넓이에 높이를 곱하면 부피는 $36\\pi\\,\\mathrm{cm}^3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M2",
           "no": 2,
           "text": "옆넓이에 밑넓이를 두 번 더하면 겉넓이는 $33\\pi\\,\\mathrm{cm}^2$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "밑넓이와 옆넓이를 더하면 겉넓이는 $24\\pi\\,\\mathrm{cm}^2$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "밑넓이에 높이를 곱하고 $3$으로 나누면 부피는 $9\\pi\\,\\mathrm{cm}^3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1241,8 +2795,9 @@
       ],
       "created_at": "2026-11-11T10:39:48.276267+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:09.02369+00:00",
       "explanation": "밑넓이는 $9\\pi\\,\\mathrm{cm}^2$, 옆넓이는 $15\\pi\\,\\mathrm{cm}^2$이다. 겉넓이는 밑넓이와 옆넓이의 합인 $24\\pi\\,\\mathrm{cm}^2$이므로 ③이 옳다.\n\n①은 부피를 구할 때 $3$으로 나누지 않았다. ②는 밑넓이를 두 번 더했다. ④는 부피를 구하는 식을 잘못 계산했다. ⑤는 높이 대신 모선의 길이를 사용했다.",
+      "figure": null,
       "generated_at": "2026-11-11T10:39:48.0457+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1253,7 +2808,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T10:39:22.108377+00:00",
@@ -1272,36 +2827,127 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:43.211932+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C3-성질적용",
+      "body": "다음 그림은 구 A를 나타낸 것이다. 구 A의 부피는 $36\\pi\\text{ cm}^3$이다. 구 B의 반지름은 구 A의 반지름의 $2$배이다. 구 B의 겉넓이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$36\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$72\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$144\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$216\\pi\\text{ cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M4",
+          "no": 5,
+          "text": "$288\\pi\\text{ cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-12T03:41:17.479318+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "구 A의 반지름을 $r\\text{ cm}$라 하면 $\\frac{4}{3}\\pi r^3=36\\pi$이므로 $r=3$이다. 따라서 구 B의 반지름은 $6\\text{ cm}$이고, 겉넓이는 $4\\pi\\times 6^2=144\\pi\\text{ cm}^2$이다. ⑤는 구의 겉넓이와 부피를 구하는 식을 서로 바꾸어 쓴 경우에 나올 수 있다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": null,
+        "kind": "solid",
+        "labels": [],
+        "radius": 3.0,
+        "shape": "sphere",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:41:17.279167+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "구 A의 부피로부터 반지름을 거꾸로 구한 뒤, 이를 이용해 구 B의 겉넓이를 구해야 한다.",
+      "id": "979a4d75-2099-46b9-9fb0-72decc27f8d4",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:40:57.643606+00:00",
+          "issues": [
+            "보기 ④: 구의 겉넓이와 부피 공식을 서로 바꾸어 쓰면 부피에서 반지름이 6√2 cm이고, 겉넓이는 576√2π cm²가 되어 ④가 나오지 않는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:41:17.278919+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.728679+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C3-성질적용",
       "body": "큰 구의 부피는 $36\\pi\\ \\mathrm{cm}^3$이다. 작은 구 두 개는 크기가 같고, 각각의 지름은 큰 구의 지름의 절반이다. 작은 구 두 개의 겉넓이의 합은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M4",
           "no": 1,
           "text": "$9\\pi\\ \\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$18\\pi\\ \\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$27\\pi\\ \\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$36\\pi\\ \\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1310,8 +2956,9 @@
       ],
       "created_at": "2026-11-11T08:58:57.707223+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.935489+00:00",
       "explanation": "큰 구의 반지름을 구하면 $\\frac{4}{3}\\pi\\times 3^3=36\\pi$이므로 $3\\ \\mathrm{cm}$이다. 작은 구의 반지름은 $\\frac{3}{2}\\ \\mathrm{cm}$이다. 따라서 작은 구 두 개의 겉넓이의 합은 $2\\times 4\\pi\\times\\left(\\frac{3}{2}\\right)^2=18\\pi\\ \\mathrm{cm}^2$이다. 구의 겉넓이와 부피 공식을 바꾸어 쓰면 ①을 고를 수 있다. 겉넓이에는 $4\\pi r^2$, 부피에는 $\\frac{4}{3}\\pi r^3$을 써야 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:58:57.640301+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "주어진 큰 구의 부피에서 반지름을 거꾸로 구한 뒤, 이를 이용하여 작은 구 두 개의 겉넓이의 합을 구한다.",
@@ -1322,7 +2969,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:58:57.639970+00:00",
@@ -1333,36 +2980,127 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:43.246013+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C3-성질적용",
+      "body": "다음 그림은 구를 나타낸 것이다. 이 구의 겉넓이는 $144\\pi\\text{ cm}^2$이다.\n\n빈 원기둥 모양의 통에 이 구를 넣었다. 통의 안쪽 밑면의 반지름은 구의 반지름과 같고, 통의 안쪽 높이는 구의 지름과 같다. 구가 차지하지 않는 통 안의 공간의 부피는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$72\\pi\\text{ cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$144\\pi\\text{ cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$216\\pi\\text{ cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M4",
+          "no": 4,
+          "text": "$288\\pi\\text{ cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$432\\pi\\text{ cm}^3$"
+        }
+      ],
+      "created_at": "2026-11-12T03:42:10.578748+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "구의 반지름을 $r\\text{ cm}$라 하면 $4\\pi r^2=144\\pi$이므로 $r=6$입니다. 따라서 통의 안쪽 밑면의 반지름은 $6\\text{ cm}$, 높이는 $12\\text{ cm}$입니다.\n\n통 안의 부피는 $\\pi\\times6^2\\times12=432\\pi\\text{ cm}^3$이고, 구의 부피는 $\\frac{4}{3}\\pi\\times6^3=288\\pi\\text{ cm}^3$입니다. 따라서 구가 차지하지 않는 공간의 부피는 $432\\pi-288\\pi=144\\pi\\text{ cm}^3$입니다.\n\n④는 구의 부피를 구할 때 겉넓이 공식인 $4\\pi r^2$을 잘못 사용하여 $432\\pi-144\\pi$로 계산한 답입니다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": null,
+        "kind": "solid",
+        "labels": [],
+        "radius": 6.0,
+        "shape": "sphere",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:42:10.475885+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "구의 겉넓이로부터 반지름을 거꾸로 구해야 한다. 이를 이용하여 통 안의 부피와 구의 부피를 비교한다.",
+      "id": "12c75d07-c36c-4f10-a933-56349893de00",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:41:51.286181+00:00",
+          "issues": [
+            "보기 ①: 두 공식을 서로 바꾸어 쓰면 겉넓이 식은 (4/3)πr³+2πr²=96π이고, 이를 만족하는 반지름으로 부피를 4πr²로 계산하면 약 55.22π이므로 64π가 아니다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:42:10.475663+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.755283+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C3-성질적용",
       "body": "한 구의 겉넓이는 $144\\pi\\ \\mathrm{cm}^2$이다. 이 구와 부피가 같은 원기둥의 밑면의 반지름은 구의 반지름과 같다. 원기둥의 높이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$2\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M4",
           "no": 2,
           "text": "$4\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$6\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$8\\ \\mathrm{cm}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1371,8 +3109,9 @@
       ],
       "created_at": "2026-11-11T08:59:10.965167+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:08.969578+00:00",
       "explanation": "구의 반지름을 $r\\ \\mathrm{cm}$라 하면 $4\\pi r^2=144\\pi$이므로 $r=6$이다. 구의 부피는 $\\dfrac{4}{3}\\pi\\times6^3=288\\pi\\ \\mathrm{cm}^3$이다. 원기둥의 밑면의 넓이는 $36\\pi\\ \\mathrm{cm}^2$이므로 높이는 $288\\pi\\div36\\pi=8\\ \\mathrm{cm}$이다. ②는 구의 부피를 구할 때 겉넓이 공식인 $4\\pi r^2$을 잘못 사용하면 나올 수 있는 답이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:59:10.916121+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "구와 원기둥의 부피가 같다는 사실을 이용하여 원기둥의 높이를 거꾸로 구한다.",
@@ -1383,7 +3122,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:59:10.916063+00:00",
@@ -1394,36 +3133,125 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T03:53:43.267261+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C3-성질적용",
+      "body": "다음 그림은 반지름의 길이가 $4\\,\\mathrm{cm}$인 구를 나타낸 것이다. 이 구의 겉넓이는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$16\\pi\\,\\mathrm{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$32\\pi\\,\\mathrm{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$64\\pi\\,\\mathrm{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$128\\pi\\,\\mathrm{cm}^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M4",
+          "no": 5,
+          "text": "$\\dfrac{256}{3}\\pi\\,\\mathrm{cm}^2$"
+        }
+      ],
+      "created_at": "2026-11-12T03:40:23.952482+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "구의 겉넓이는 $4\\pi r^2$이므로 $4\\pi\\times 4^2=64\\pi\\,(\\mathrm{cm}^2)$이다. ⑤는 구의 겉넓이 대신 부피를 구한 것이다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": null,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "4 cm"
+          }
+        ],
+        "radius": 4.0,
+        "shape": "sphere",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:40:23.884651+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "21a1641f-327f-4878-a88f-e9bcc1740564",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:40:23.884402+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.780881+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C3-성질적용",
       "body": "반지름의 길이가 $2\\,\\mathrm{cm}$인 구의 부피는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$8\\pi\\,\\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M4",
           "no": 2,
           "text": "$16\\pi\\,\\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$\\dfrac{32}{3}\\pi\\,\\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$32\\pi\\,\\mathrm{cm}^3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1432,8 +3260,9 @@
       ],
       "created_at": "2026-11-11T08:58:06.664882+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:09.00306+00:00",
       "explanation": "구의 부피는 $\\dfrac{4}{3}\\pi r^3$입니다. 따라서 부피는 $\\dfrac{4}{3}\\pi\\times 2^3=\\dfrac{32}{3}\\pi\\,\\mathrm{cm}^3$입니다. ②는 구의 부피를 구할 때 겉넓이를 구하는 식을 쓴 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:58:06.59492+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1444,7 +3273,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:58:06.594642+00:00",
@@ -1455,36 +3284,125 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:53:43.293754+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-08-C3-성질적용",
+      "body": "다음 그림은 반지름의 길이가 $6\\,\\mathrm{cm}$인 구를 나타낸 것이다. 이 구의 부피는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$72\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-08-M4",
+          "no": 2,
+          "text": "$144\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$216\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$288\\pi\\,\\mathrm{cm}^3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$864\\pi\\,\\mathrm{cm}^3$"
+        }
+      ],
+      "created_at": "2026-11-12T03:40:35.971995+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "반지름의 길이가 $r$인 구의 부피는 $\\dfrac{4}{3}\\pi r^3$이다. 따라서 구의 부피는 $\\dfrac{4}{3}\\pi\\times6^3=288\\pi\\,\\mathrm{cm}^3$이다. ②의 $144\\pi$는 구의 겉넓이를 구하는 식 $4\\pi r^2$을 잘못 사용한 값이다.",
+      "figure": {
+        "base_sides": null,
+        "depth": null,
+        "height": null,
+        "kind": "solid",
+        "labels": [
+          {
+            "part": "radius",
+            "text": "6 cm"
+          }
+        ],
+        "radius": 6.0,
+        "shape": "sphere",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": null,
+        "width": null
+      },
+      "generated_at": "2026-11-12T03:40:35.907685+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7d8b7b67-ffef-4c59-a177-7d6835a4b350",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:40:35.907578+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:40:09.812407+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-08-C3-성질적용",
       "body": "지름의 길이가 $8\\,\\mathrm{cm}$인 구가 있다. 이 구의 겉넓이는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$16\\pi\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$32\\pi\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "$64\\pi\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수03-08-M4",
           "no": 4,
           "text": "$\\dfrac{256}{3}\\pi\\,\\mathrm{cm}^2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1493,8 +3411,9 @@
       ],
       "created_at": "2026-11-11T08:58:29.566701+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:40:09.031773+00:00",
       "explanation": "구의 반지름의 길이는 $8\\div 2=4\\,\\mathrm{cm}$이다. 구의 겉넓이는 $4\\pi\\times 4^2=64\\pi\\,\\mathrm{cm}^2$이므로 정답은 ③이다. ④는 구의 겉넓이를 구할 때 부피를 구하는 식을 잘못 사용한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T08:58:29.445054+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1505,7 +3424,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:58:18.377940+00:00",

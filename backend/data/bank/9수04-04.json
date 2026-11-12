@@ -45,30 +45,35 @@
       "body": "어느 학교 도서관을 이용하는 학생은 30명이다. 한 학생은 하루에 책을 최대 2권까지 빌릴 수 있다.\n\n여러 학생의 답을 모아 비교하거나 종류별로 묶어 살펴보는 통계적 탐구 문제로 가장 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "학생 한 명은 오늘 책을 몇 권 빌렸는가?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "한 학생이 하루에 빌릴 수 있는 책은 최대 몇 권인가?"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "학생들이 가장 빌리고 싶은 책의 종류를 한 가지씩 고를 때, 종류별로 고른 학생은 몇 명인가?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 4,
           "text": "학생 30명에게 각각 책을 2권씩 빌려주면 모두 몇 권을 빌려주는가?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 5,
@@ -79,6 +84,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "3번은 여러 학생에게 묻고 답을 종류별로 묶어야 알 수 있다. 1번은 한 학생에게만 물으면 되고, 2번은 이미 주어진 내용에서 알 수 있다. 4번과 5번은 여러 학생이 나오지만, 주어진 수를 계산하면 답을 알 수 있다. 계산으로 답을 구하는 질문을 자료를 모아 살펴보아야 하는 질문으로 잘못 생각하지 않도록 한다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:27:04.046108+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "한 학생에게 묻는 질문과 여러 학생이 등장하지만 계산으로 답할 수 있는 질문을 함께 제시했다. 여러 학생의 답을 모아 살펴볼 필요가 있는지 각각 따져야 한다.",
@@ -106,30 +112,35 @@
       "body": "학교 화단 $4$개에 식물이 각각 $5$포기씩 심어져 있다. 각 화단의 식물은 한 줄로 나란히 심어져 있다.\n\n여러 화단에서 같은 방법으로 자료를 모아 화단별로 비교하는 통계적 탐구 문제로 가장 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 1,
           "text": "화단마다 식물은 몇 포기씩 심어져 있을까?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 2,
           "text": "화단 $4$개에 심어진 식물은 모두 몇 포기일까?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 3,
           "text": "첫째 화단과 둘째 화단에 심어진 식물 수의 차이는 몇 포기일까?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "첫째 화단의 맨 왼쪽에 있는 식물은 지금 꽃이 피어 있을까?"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -140,6 +151,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "⑤는 화단마다 꽃이 핀 식물의 수를 조사하여 비교할 수 있다. 화단별 수가 같을 수도 있고 다를 수도 있다.\n①, ②, ③은 이미 주어진 화단 수와 식물의 수로 답을 알 수 있다. 새로 자료를 모아 비교할 필요가 없다. 이를 고르면 답을 알기 위해 여러 자료를 모아야 하는 질문과 이미 답을 알 수 있는 질문을 혼동한 것이다.\n④는 식물 한 포기를 살펴보면 답을 알 수 있지만, 여러 화단의 자료를 비교하는 질문은 아니다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:27:30.300243+00:00",
       "hard_condition": "definition-a",
       "hard_condition_reason": "이미 답을 알 수 있는 질문, 한 포기만 살펴보는 질문, 화단별 자료를 모아 비교하는 질문을 구별해야 한다.",
@@ -167,30 +179,35 @@
       "body": "다음 중 자료를 모아 분석하여 답하기에 가장 알맞은 질문은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 1,
           "text": "$30$권의 책을 $5$명에게 똑같이 나누어 주면 한 사람에게 몇 권씩 줄 수 있는가?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 2,
           "text": "$2$시간은 몇 분인가?"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "우리 반 학생들이 어제 하루 동안 책을 읽은 시간은 어느 정도인가?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 4,
           "text": "한 변의 길이가 $4\\,\\text{cm}$인 정사각형의 넓이는 얼마인가?"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 5,
@@ -201,6 +218,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "③은 우리 반 학생마다 하루 동안 책을 읽은 시간이 다를 수 있으므로, 자료를 모아 살펴볼 수 있다. ①, ②, ④, ⑤는 이미 정해진 사실을 알거나 계산하면 답할 수 있다. 이런 질문을 고르면 자료를 모아 살펴보아야 하는 질문과 그렇지 않은 질문을 구별하지 못한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:26:12.447211+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -228,30 +246,35 @@
       "body": "도서관에서 읽기에 관한 질문을 만들었다. 다음 학생들의 말 중 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 1,
           "text": "‘책 3권과 2권을 합하면 몇 권인가?’는 계산할 수 있으므로 통계적 탐구 문제야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "‘1학년 학생들이 지난 한 달 동안 빌린 책 수는 사람마다 어떻게 다를까?’는 모든 학생이 같은 수의 책을 빌렸어야 답할 수 있어."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "‘1학년 학생들이 지난 한 달 동안 빌린 책 수는 사람마다 어떻게 다를까?’는 학생들의 책 수를 조사하여 답할 수 있어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "‘1학년 학생들이 지난 한 달 동안 빌린 책 수는 사람마다 어떻게 다를까?’는 책 수를 마음대로 정하면 되므로 조사할 필요가 없어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M3",
           "no": 5,
@@ -262,6 +285,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "3번은 학생마다 지난 한 달 동안 빌린 책 수를 조사하여 답할 수 있는 질문이다. 1번과 5번은 자료를 모으지 않고 계산만으로 답할 수 있다. 이런 계산 질문을 통계적 탐구 문제로 생각하면 안 된다. 2번과 4번에서 말한 질문은 학생들의 책 수가 서로 달라도 자료를 모아 답할 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:26:33.408557+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -289,30 +313,35 @@
       "body": "어느 학교의 학생은 $1$학년 $120$명, $2$학년 $180$명, $3$학년 $300$명이다.\n\n지난주에 학교 도서관을 이용한 학생이 전체 학생 중 어느 정도인지 알아보려고 한다. 학생 $60$명을 뽑아 이용 여부를 묻고, 뽑힌 학생은 모두 대답하기로 했다. 모든 학생이 뽑힐 기회는 같아야 한다.\n\n$1$학년에서는 학생 $12$명을 뽑기로 했다. 이때 알맞은 조사 계획은? 단, 각 학년에서 학생을 뽑을 때는 정해진 대상 중에서 제비뽑기를 한다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "각 학년의 모든 학생 중에서 $1$학년 $12$명, $2$학년 $24$명, $3$학년 $24$명을 뽑는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "각 학년의 모든 학생 중에서 $1$학년 $12$명, $2$학년 $30$명, $3$학년 $18$명을 뽑는다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "각 학년의 모든 학생 중에서 $1$학년 $12$명, $2$학년 $18$명, $3$학년 $30$명을 뽑는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 4,
           "text": "지난주에 도서관을 이용한 학생 중에서 $1$학년 $12$명, $2$학년 $18$명, $3$학년 $30$명을 뽑는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 5,
@@ -323,6 +352,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$1$학년에서 뽑힐 기회는 $\\frac{12}{120}=\\frac{1}{10}$이다. 다른 학년의 학생도 뽑힐 기회가 같아야 하므로 $2$학년에서 $18$명, $3$학년에서 $30$명을 뽑아야 한다. 또 도서관을 이용하지 않은 학생에게도 물을 수 있어야 하므로 정답은 $3$번이다.\n\n$4$번처럼 도서관을 이용한 학생만 조사하면 이용하지 않은 학생의 대답을 들을 수 없다. $5$번처럼 조사에 참여하고 싶은 학생만 뽑아도 참여하고 싶지 않은 학생은 뽑힐 수 없다. 이렇게 일부 학생만 조사한 결과로 전체 학생의 이용 여부를 알아보는 것은 알맞지 않다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:29:15.381547+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "전체 조사 인원과 $1$학년에서 뽑을 인원이 주어졌을 때, 모든 학생이 뽑힐 기회가 같도록 나머지 학년의 인원과 조사 대상을 거꾸로 찾게 한다.",
@@ -358,30 +388,35 @@
       "body": "어느 행사에서 $3$일 동안 식사를 나누어 준다. 나누어 준 식사 전체 중 음식이 남은 식사의 비율을 알아보려고 한다.\n\n조사 계획을 살펴보기 위해 다음과 같은 기록을 예로 들었다.\n- 첫째 날: 나누어 준 식사 $30$개, 음식이 남은 식사 $15$개\n- 둘째 날: 나누어 준 식사 $60$개, 음식이 남은 식사 $15$개\n- 셋째 날: 나누어 준 식사 $60$개, 음식이 남은 식사 $30$개\n\n목적에 맞는 조사 계획과 그 계획으로 구한 위 기록의 결과를 바르게 짝 지은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 1,
           "text": "첫째 날만 조사한다. 결과는 $50$%이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 2,
           "text": "셋째 날만 조사한다. 결과는 $50$%이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$3$일을 모두 조사한다. 각 날의 비율을 구해 그 평균을 결과로 정하면 $41\\frac{2}{3}$%이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$3$일을 모두 조사한다. 음식이 남은 식사의 총수를 나누어 준 식사의 총수와 비교하면 $40$%이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -392,6 +427,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "나누어 준 식사 전체를 살펴보아야 한다. $3$일 동안 음식이 남은 식사는 모두 $60$개이고, 나누어 준 식사는 모두 $150$개이다. 따라서 구하는 비율은 $60\\div150\\times100=40$%이다.\n\n①, ②처럼 하루만 조사하면 다른 날의 식사를 빠뜨리므로 전체에 대한 결과로 보기 어렵다. ③은 날마다 나누어 준 식사의 수가 다른데도 각 날의 비율을 똑같이 취급했다. ⑤는 나누어 준 식사 전체가 아니라 음식이 남지 않은 식사의 수와 비교했다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:31:14.76471+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "나누어 준 식사 전체 중 음식이 남은 식사의 비율이라는 조사 목적을 총수의 비로 나타내어 적용해야 한다. 날마다 나누어 준 식사의 수가 다를 때 각 날의 비율을 단순히 평균하는 계획과도 비교해야 한다.",
@@ -438,30 +474,35 @@
       "body": "한 중학교에서 어제 학교에 온 학생 전체의 등교 시간을 알아보려고 한다. 등교 시간은 집에서 출발하여 학교에 도착할 때까지 걸린 시간이다.\n자료를 모으는 계획으로 가장 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 1,
           "text": "어제 학교에 온 학생 중 운동부 학생에게만 등교 시간을 묻는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "어제 학교에 온 학생 모두에게 등교할 때 이용한 교통수단을 한 번씩 묻는다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "어제 학교에 온 학생 모두에게 어제의 등교 시간을 한 번씩 묻는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 4,
           "text": "어제 학교에 온 학생 중 학교에 가장 일찍 도착한 반 학생에게만 등교 시간을 묻는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -472,6 +513,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "③은 알아보려는 학생 모두에게 등교 시간을 한 번씩 묻는 계획이다. ①이나 ④처럼 일부 학생만 조사하면 그 결과가 학생 전체의 모습을 잘 나타내지 못할 수 있다. ②와 ⑤는 알아보려는 등교 시간을 묻지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:27:48.508876+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -499,30 +541,35 @@
       "body": "한 중학교에서 다음 달 급식에 나올 음식 세 가지 중 학생들이 가장 좋아하는 음식이 무엇인지 알아보려고 한다. 자료를 모으는 계획으로 가장 알맞은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 1,
           "text": "급식 동아리 학생들에게 세 음식 중 가장 좋아하는 것을 하나씩 묻는다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "학교의 모든 학생에게 세 음식 중 가장 좋아하는 것을 하나씩 묻는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "학교의 선생님들에게 세 음식 중 가장 좋아하는 것을 하나씩 묻는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "학교의 모든 학생에게 어제 급식으로 먹은 음식이 무엇인지 묻는다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 5,
@@ -533,6 +580,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "학교의 모든 학생에게 세 음식 중 가장 좋아하는 것을 하나씩 물으면 알아보려는 자료를 모을 수 있다. 급식 동아리 학생이나 한 학급 학생의 답만으로는 학교의 모든 학생이 좋아하는 음식을 알기 어렵다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:28:01.229808+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -560,30 +608,35 @@
       "body": "어느 학교의 1반과 2반에는 각각 학생이 $30$명 있다. 두 반에서 독서 동아리 학생 $10$명씩에게만 점심시간 도서관 개방에 찬성하는지 물었다.\n\n조사한 학생 중 찬성하는 학생의 비율은 1반이 $60\\%$, 2반이 $80\\%$였다. 이 결과를 막대그래프로 나타냈더니, 세로 눈금이 $0\\%$가 아닌 $40\\%$에서 시작했다. 눈금은 일정한 간격이고, 두 막대는 모두 $40\\%$를 나타내는 선에서 시작한다. 2반의 막대 길이는 1반의 막대 길이의 두 배이다.\n\n다음은 이 결과를 본 학생들의 말이다. 옳은 말을 한 학생은 누구인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 1,
           "text": "가영: 조사한 학생의 찬성 비율이 1반은 $60\\%$, 2반은 $80\\%$이므로 각 반 전체의 찬성 비율도 각각 $60\\%$, $80\\%$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M1",
           "no": 2,
           "text": "나래: 2반의 막대 길이가 1반의 두 배이므로 조사한 학생의 찬성 비율도 2반이 1반의 두 배야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "다온: 세로 눈금이 $40\\%$에서 시작하므로 조사한 학생의 찬성 비율이 어느 반에서 더 높은지 알 수 없어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "라희: 두 반에서 조사한 학생 수가 같으므로 조사한 학생 중 찬성한 학생 수도 같아."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -592,8 +645,9 @@
       ],
       "created_at": "2026-11-11T09:33:34.037446+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.781945+00:00",
       "explanation": "조사한 학생의 찬성 비율은 1반이 $60\\%$, 2반이 $80\\%$이다. 하지만 나머지 학생들의 의견을 모르므로 각 반 전체의 찬성 비율은 알 수 없다. 따라서 정답은 ⑤이다.\n\n①은 일부 학생의 조사 결과를 각 반 전체의 결과로 넓혀 생각했다. ②는 눈금이 $40\\%$에서 시작한다는 점을 무시하고 막대 길이의 비율을 찬성 비율의 비율로 잘못 읽었다.\n\n③은 눈금이 $40\\%$에서 시작해도 $60\\%$와 $80\\%$를 비교할 수 있다는 점을 놓쳤다. ④는 조사한 학생 수가 같아도 찬성한 학생 수는 다를 수 있다는 점을 놓쳤다. 실제로 찬성한 학생은 1반이 $6$명, 2반이 $8$명이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:33:33.905708+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 말을 비교하여 옳은 말을 고르게 했다. 일부 학생의 결과를 반 전체로 넓혀 읽는 주장과 막대 길이로 비율을 잘못 읽는 주장을 함께 판단해야 한다.",
@@ -604,12 +658,101 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:33:33.905547+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:13:02.187686+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-04-C3-오개념판별",
+      "body": "한 학교에서 방과 후 도서관에 온 학생들에게 가장 선호하는 독서 장소를 교실과 도서관 중에서 하나만 고르게 했다. 다음 그림은 그 결과를 나타낸 것이다. 그림을 보고 한 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M1",
+          "no": 1,
+          "text": "조사한 학생 중 도서관을 고른 학생 수는 교실을 고른 학생 수의 $2$배야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M2",
+          "no": 2,
+          "text": "학교 전체 학생 중에서도 도서관을 고를 학생이 교실을 고를 학생보다 많아."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "조사한 학생 중 도서관을 고른 학생이 교실을 고른 학생보다 $10$명 많지만, 이 결과만으로 학교 전체 학생의 선호를 알 수는 없어."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "세로 눈금이 $0$부터 시작하지 않으므로 조사한 학생들이 고른 두 장소의 학생 수 차이는 알 수 없어."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M2",
+          "no": 5,
+          "text": "학교 전체 학생에게 물어보아도 교실을 고를 학생은 정확히 $80$명이야."
+        }
+      ],
+      "created_at": "2026-11-12T03:05:56.298046+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 교실을 고른 학생은 $80$명, 도서관을 고른 학생은 $90$명이다. 따라서 조사한 학생 중에서는 도서관을 고른 학생이 $10$명 더 많다. 세로 눈금이 $70$부터 시작하므로 보이는 막대 길이만 비교하여 학생 수가 $2$배라고 읽으면 안 된다. 또 도서관에 온 학생들만 조사했으므로, 조사하지 않은 학생들이 어떻게 고를지는 알 수 없다. 따라서 이 결과만으로 학교 전체 학생의 선호를 판단할 수 없다.",
+      "figure": {
+        "categories": [
+          "교실",
+          "도서관"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          80.0,
+          90.0
+        ],
+        "x_label": "독서 장소",
+        "y_label": "학생 수(명)",
+        "y_max": 100.0,
+        "y_min": 70.0,
+        "y_step": 10.0
+      },
+      "generated_at": "2026-11-12T03:05:55.978546+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다른 학생들의 말을 비교하여 옳은 말을 고르게 했다. 눈금이 시작하는 수와 조사한 대상의 범위를 함께 살펴야 한다.",
+      "id": "fd2f2c23-d9e8-479e-b624-7577415279c1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:05:33.888586+00:00",
+          "issues": [
+            "평가 항목의 근거 끝에 [그림: …] 표시가 없는데 막대그래프를 제시하여 그림 사용 범위를 벗어났다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:05:55.978412+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 1
@@ -621,30 +764,35 @@
       "body": "어느 학교의 급식실을 이용한 학생 수는 월요일에 $100$명, 화요일에 $110$명, 수요일에 $120$명이었다.\n\n이를 막대그래프로 나타냈다. 세로 눈금은 $90$명부터 일정한 간격으로 시작하고, 세 막대는 모두 $90$명을 나타내는 선에서 시작한다.\n\n월요일에 급식실을 이용한 학생 중 일찍 온 $20$명에게 새 메뉴가 필요한지 물었다. 그중 $15$명이 필요하다고 답했다.\n\n다음은 이 자료를 본 학생들의 말이다. 옳은 말을 한 학생은 누구인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M1",
           "no": 1,
           "text": "가: 수요일 막대의 길이가 월요일 막대의 $3$배이므로, 수요일 이용 학생 수도 월요일의 $3$배야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 2,
           "text": "나: 조사한 학생의 $75\\%$가 새 메뉴가 필요하다고 답했으므로, 학교 전체 학생의 $75\\%$도 새 메뉴가 필요하다고 생각해."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "다: 세로 눈금이 $90$명부터 시작하므로, 그래프에서 각 요일의 실제 이용 학생 수는 알 수 없어."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "라: 조사하지 않은 학생들의 생각을 모르므로, 조사한 학생 중 새 메뉴가 필요하다고 답한 학생의 비율도 알 수 없어."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -653,8 +801,9 @@
       ],
       "created_at": "2026-11-11T09:34:04.358553+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.826883+00:00",
       "explanation": "월요일과 화요일의 이용 학생 수는 $10$명 차이이고, 화요일과 수요일도 $10$명 차이이다. 조사한 $20$명 중 $15$명이 새 메뉴가 필요하다고 답했으므로 그 비율은 $75\\%$이다. 따라서 옳은 말을 한 학생은 마이다.\n가의 말처럼 막대 길이의 비를 이용 학생 수의 비로 읽으면 안 된다. 막대가 $0$명이 아닌 $90$명부터 시작하기 때문이다. 나의 말처럼 일찍 온 학생들만 조사한 결과를 학교 전체 학생의 생각으로 볼 수도 없다.\n다의 말과 달리 그래프의 눈금을 읽으면 이용 학생 수를 알 수 있다. 라의 말과 달리 조사하지 않은 학생의 생각을 몰라도 조사한 학생들의 답은 알 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:34:04.248233+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "그래프의 눈금과 일부 학생을 조사한 결과에 관한 다른 학생들의 말을 보고 옳고 그름을 판단하게 했다.",
@@ -665,12 +814,101 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:34:04.248061+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T03:13:02.229864+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-04-C3-오개념판별",
+      "body": "한 마을에서 공원에 자주 오는 주민 $100$명에게 새로 설치할 시설로 운동 기구와 쉼터 중 하나를 고르게 했다. 다음 그림은 그 결과를 나타낸 것이다. 그림을 보고 한 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M1",
+          "no": 1,
+          "text": "조사한 주민 중 운동 기구를 고른 사람 수는 쉼터를 고른 사람 수의 두 배야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M2",
+          "no": 2,
+          "text": "이 결과를 보면 마을 주민 전체에서도 절반이 넘는 사람이 운동 기구를 더 좋아해."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "이 결과를 보면 공원에 자주 오지 않는 주민들은 쉼터를 더 좋아한다는 것을 알 수 있어."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "조사한 주민 중 운동 기구를 고른 사람은 쉼터를 고른 사람보다 $20$명 많지만, 마을 주민 전체의 선호는 알 수 없어."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "세로 눈금이 $0$부터 시작하지 않으므로 각 시설을 고른 사람 수는 알 수 없어."
+        }
+      ],
+      "created_at": "2026-11-12T03:06:52.167054+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림의 세로 눈금을 읽으면 운동 기구를 고른 사람은 $60$명, 쉼터를 고른 사람은 $40$명이다. 따라서 조사한 주민 중 운동 기구를 고른 사람이 $20$명 더 많다. 눈금이 $20$부터 시작하므로 보이는 막대 길이가 두 배라고 해서 사람 수도 두 배인 것은 아니다. 또 공원에 자주 오는 주민만 조사했으므로 이 결과를 마을 주민 전체나 조사하지 않은 주민의 선호로 넓혀 말할 수 없다. 눈금이 $0$부터 시작하지 않더라도 각 막대의 끝이 가리키는 눈금으로 사람 수를 알 수 있다.",
+      "figure": {
+        "categories": [
+          "운동 기구",
+          "쉼터"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          60.0,
+          40.0
+        ],
+        "x_label": "시설",
+        "y_label": "사람 수",
+        "y_max": 70.0,
+        "y_min": 20.0,
+        "y_step": 10.0
+      },
+      "generated_at": "2026-11-12T03:06:51.965045+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 비교하여 옳은 것을 고르게 했다. 그림의 눈금과 조사한 주민의 범위를 함께 살펴야 한다.",
+      "id": "2ff2a553-c03a-4084-889d-427d693f1583",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:06:25.793507+00:00",
+          "issues": [
+            "근거 끝에 [그림: …] 지정이 없는데 막대그래프를 제시하여 그림 사용 범위를 벗어났다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T03:06:51.964601+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 2
@@ -682,30 +920,35 @@
       "body": "어느 학교에서 도서관에 온 학생 55명에게 좋아하는 책의 종류를 한 가지만 물었다. 조사 결과는 다음과 같다.\n\n소설: 30명\n만화: 25명\n\n이 결과를 막대그래프로 나타냈다. 세로 눈금은 0이 아닌 20부터 시작하고, 두 막대는 모두 20인 곳에서부터 그렸다. 그래서 소설을 나타낸 막대가 만화를 나타낸 막대보다 두 배 길게 보인다.\n\n이 결과를 해석한 것으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M1",
           "no": 1,
           "text": "조사한 학생 중 소설을 고른 학생 수는 만화를 고른 학생 수의 두 배이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 2,
           "text": "학교 전체 학생 중 절반이 넘는 학생이 소설을 고른다고 할 수 있다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "조사한 학생 중 소설을 고른 학생은 만화를 고른 학생보다 5명 많지만, 학교 전체에 대해서는 이 결과만으로 알 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "조사한 학생 중 만화를 고른 학생은 소설을 고른 학생보다 5명 많다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -714,8 +957,9 @@
       ],
       "created_at": "2026-11-11T09:31:39.507283+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.871187+00:00",
       "explanation": "조사한 학생 중 소설을 고른 학생은 만화를 고른 학생보다 $30-25=5$명 많다. 도서관에 온 학생만 조사했으므로 이 결과만으로 학교 전체 학생에 대해서는 알 수 없다. ①은 막대가 두 배 길게 보인다는 이유로 학생 수도 두 배라고 잘못 생각한 것이다. ②는 일부 학생을 조사한 결과를 학교 전체로 넓혀 해석한 것이다. 조사한 학생 수는 $30+25=55$명이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:31:39.305655+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -726,7 +970,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:31:39.305275+00:00",
@@ -737,36 +981,207 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T03:13:02.25538+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-04-C3-오개념판별",
+      "body": "어느 학교의 독서 동아리 학생들에게 책을 읽고 싶은 장소를 도서관과 교실 중에서 한 곳씩 고르게 했다. 동아리 학생 모두가 답했으며, 이 학교에는 동아리에 속하지 않은 학생도 있다. 다음 그림은 조사 결과를 나타낸 것이다. 그림을 보고 해석한 내용으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "조사한 학생 중 도서관을 고른 학생은 교실을 고른 학생보다 $2$명 더 많다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M1",
+          "no": 2,
+          "text": "조사한 학생 중 도서관을 고른 학생 수는 교실을 고른 학생 수의 $2$배이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M2",
+          "no": 3,
+          "text": "이 학교 전체 학생 중 도서관을 고를 학생은 $20$명이라고 알 수 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "조사한 학생 중 도서관을 고른 학생은 교실을 고른 학생보다 적다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "조사한 학생은 모두 $40$명이다."
+        }
+      ],
+      "created_at": "2026-11-12T03:04:35.962273+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그림의 세로 눈금을 읽으면 도서관을 고른 학생은 $20$명, 교실을 고른 학생은 $18$명이다. 따라서 도서관을 고른 학생이 $2$명 더 많다. ②는 세로 눈금이 $16$부터 시작한다는 것을 살피지 않고 막대의 길이만 비교한 것이다. ③은 독서 동아리 학생만 조사한 결과를 학교 전체로 넓혀 해석한 것이다. ④는 두 장소의 학생 수를 잘못 비교했고, ⑤에서 두 학생 수의 합은 $38$명이다.",
+      "figure": {
+        "categories": [
+          "교실",
+          "도서관"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          18.0,
+          20.0
+        ],
+        "x_label": null,
+        "y_label": "학생 수(명)",
+        "y_max": 22.0,
+        "y_min": 16.0,
+        "y_step": 2.0
+      },
+      "generated_at": "2026-11-12T03:04:35.684558+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "983e622e-9d26-43a0-b4fa-75a8f88f80f9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:04:35.684458+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T03:13:02.280024+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-04-C3-오개념판별",
+      "body": "어느 학교의 1학년 1반 학생 모두에게 월요일부터 수요일까지 하루에 책을 읽은 시간을 조사했다. 이 학교에는 1학년 1반에 속하지 않는 학생도 있다. 다음 그림은 1학년 1반 학생들의 하루 평균 독서 시간을 나타낸 것이다. 그림을 보고 해석한 내용으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M1",
+          "no": 1,
+          "text": "수요일 막대의 보이는 길이가 월요일의 $3$배이므로, 수요일 평균 시간도 월요일의 $3$배이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-04-M2",
+          "no": 2,
+          "text": "이 학교 전체 학생의 수요일 평균 독서 시간은 $50$분이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "1학년 1반의 수요일 평균 독서 시간은 월요일보다 $10$분 길다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "1학년 1반의 화요일 평균 독서 시간은 월요일보다 $10$분 길다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "1학년 1반의 수요일 평균 독서 시간은 화요일보다 짧다."
+        }
+      ],
+      "created_at": "2026-11-12T03:05:01.120823+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "수요일 평균은 $50$분, 월요일 평균은 $40$분이므로 그 차이는 $10$분이다. ①은 세로 눈금이 $0$이 아닌 $35$부터 시작하는데도 보이는 막대 길이의 비로 평균 시간을 비교한 잘못이다. ②는 1학년 1반의 결과를 학교 전체의 결과로 넓혀 해석한 잘못이다. 화요일 평균은 $45$분이므로 ④와 ⑤도 옳지 않다.",
+      "figure": {
+        "categories": [
+          "월요일",
+          "화요일",
+          "수요일"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          40.0,
+          45.0,
+          50.0
+        ],
+        "x_label": "요일",
+        "y_label": "평균 시간(분)",
+        "y_max": 55.0,
+        "y_min": 35.0,
+        "y_step": 5.0
+      },
+      "generated_at": "2026-11-12T03:05:00.396899+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2aa9bb5d-9f90-488d-bc33-85302dc3d2f4",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T03:05:00.396671+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:46:02.993696+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수04-04-C3-오개념판별",
       "body": "어느 학교의 농구부 학생 18명을 조사했다. 이 학생들의 하루 평균 운동 시간은 화요일에 30분, 목요일에 40분이었다.\n\n이 결과를 막대그래프로 나타냈다. 세로 눈금은 20분부터 같은 간격으로 표시했고, 두 막대는 모두 20분인 곳에서부터 그렸다. 목요일 막대는 화요일 막대의 두 배 길이로 보인다.\n\n이 결과를 해석한 것으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M1",
           "no": 1,
           "text": "농구부 학생의 목요일 평균 운동 시간은 화요일의 두 배이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-04-M2",
           "no": 2,
           "text": "학교 학생 전체의 화요일 평균 운동 시간은 $30$분이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "농구부 학생의 목요일 평균 운동 시간은 화요일보다 $10$분 길지만, 이 조사만으로 학교 학생 전체의 평균 운동 시간은 알 수 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "농구부 학생의 목요일 평균 운동 시간은 화요일보다 $20$분 길다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -775,8 +1190,9 @@
       ],
       "created_at": "2026-11-11T09:38:18.788122+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T03:00:30.895834+00:00",
       "explanation": "농구부 학생의 목요일 평균 운동 시간은 화요일보다 $40-30=10$분 길다. 농구부 학생만 조사했으므로 학교 학생 전체의 평균 운동 시간은 알 수 없다.\n\n①은 막대의 길이가 두 배로 보이는 것을 평균 운동 시간도 두 배인 것으로 잘못 생각했다. 막대는 $0$분이 아닌 $20$분인 곳에서부터 그렸다. ②는 농구부 학생의 조사 결과를 학교 학생 전체의 결과로 넓혀 생각했다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:38:18.71483+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -787,7 +1203,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:38:18.714552+00:00",
@@ -807,6 +1223,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "주어진 도수에 맞는 조사 결과라도 평균은 달라질 수 있다. 예를 들어 $4$명이 각각 $0$분, $6$명이 각각 $30$분을 읽었다면 평균은 $18$분이다. 반면 $4$명이 각각 $20$분, $6$명이 각각 $40$분을 읽었다면 평균은 $32$분이다. 두 결과 모두 주어진 도수에 맞지만, 평균은 하나는 $30$분 미만이고 다른 하나는 $30$분 이상이다. 따라서 주어진 자료만으로는 탐구 문제에 답할 수 없다. $30$분 이상 읽은 학생이 더 많다는 사실만으로 평균도 $30$분 이상이라고 생각한 것이 민지의 잘못이다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:36:15.224759+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "민지의 말이 옳다고 할 수 없는 이유를 주어진 도수에 맞는 실제 조사 결과로 설명하게 했다. 평균이 $30$분 미만인 결과는 민지의 말에 대한 반례이다.",
@@ -874,6 +1291,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "처음 신청한 학생의 참여 비율은 A학교가 $80\\%$, B학교가 $70\\%$이다. 신청한 적이 있는 학생의 참여 비율은 A학교가 $60\\%$, B학교가 $50\\%$이다. 따라서 두 무리를 각각 비교하면 A학교의 참여 비율이 더 높다.\n\n하지만 전체로 보면 A학교와 B학교 모두 $40$명 중 $26$명이 참여했으므로 참여 비율이 $65\\%$로 같다. A학교는 참여 비율이 더 낮은 ‘신청한 적이 있음’ 무리의 인원이 더 많고, B학교는 참여 비율이 더 높은 ‘처음 신청’ 무리의 인원이 더 많기 때문이다. 두 무리에서 각각 A학교의 비율이 높다는 사실만으로 전체에서도 A학교의 비율이 높다고 판단할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:37:31.078331+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "주어진 조사 결과를 이용하여 두 무리에서 각각 참여 비율이 높은 학교가 전체에서도 반드시 높다는 민지의 말을 반박하게 한다.",
@@ -940,6 +1358,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$1$반에서 $30$분 이상 읽은 학생의 비율은 $10/20=0.5$이고, $2$반에서는 $12/30=0.4$이다. 따라서 $1$반의 비율이 더 높다. $30$분 이상 읽은 학생 수만 비교하면 $2$반이 더 많지만, 두 반의 학생 수가 다르므로 비율을 비교해야 한다. 이 결과만으로 학교의 모든 반에 대해서도 같은 답을 할 수는 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:34:19.521618+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -985,6 +1404,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$6$분 이상 $12$분 미만인 학생은 $7$명이다. 다른 시간대의 학생 수인 $4$명, $2$명보다 많으므로 이 시간대에 학생들이 가장 많이 모여 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T09:35:11.634787+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,

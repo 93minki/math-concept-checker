@@ -44,30 +44,35 @@
       "body": "네 학생이 책을 읽은 시간의 평균은 $10$분이다. 학생별 기록을 평균과 비교한 내용은 다음과 같다.\n\n| 학생 | 기록과 평균의 비교 |\n|---|---|\n| $A$ | 평균보다 $3$분 짧다. |\n| $B$ | 평균보다 $1$분 짧다. |\n| $C$ | 평균보다 $1$분 길다. |\n| $D$ | 나타내지 않음 |\n\n옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "학생 $D$의 편차는 $-3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "학생 $D$의 기록은 $7$분이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "학생 $D$의 기록은 $13$분이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M1",
           "no": 4,
           "text": "네 학생의 기록이 서로 다르므로 네 편차의 합은 $0$보다 크다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -78,6 +83,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$A$, $B$, $C$의 편차는 각각 $-3$, $-1$, $1$이고, 그 합은 $-3$이다. 네 편차의 합은 $0$이므로 $D$의 편차는 $3$이다. 따라서 $D$의 기록은 평균인 $10$분보다 $3$분 긴 $13$분이다. 정답은 ③이다.\n\n④처럼 기록이 서로 다르면 편차의 합이 $0$이 아니라고 생각할 수 있다. 하지만 편차의 합은 기록이 흩어진 정도와 관계없이 항상 $0$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:26:00.793843+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "표에서 기록을 평균과 비교한 말을 편차로 바꾸어야 한다. 편차의 합을 이용해 $D$의 편차를 구한 뒤, 편차와 기록을 구별하여 판단해야 한다.",
@@ -105,30 +111,35 @@
       "body": "다섯 화분에 심은 식물의 키를 재었다. 세 식물의 키는 각각 $8$ cm, $12$ cm, $16$ cm이다. 나머지 두 식물 중 하나의 키는 다섯 식물의 키의 평균보다 $2$ cm 작고, 다른 하나의 키는 평균보다 $2$ cm 크다.\n\n옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M1",
           "no": 1,
           "text": "식물의 키가 서로 다르므로 편차의 합은 양수이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "키가 $8$ cm인 식물의 편차는 $-2$ cm이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "평균보다 $2$ cm 작은 식물과 $2$ cm 큰 식물의 편차는 서로 같다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "키가 $12$ cm인 식물의 편차는 $0$ cm이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -139,6 +150,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "평균보다 $2$ cm 작은 식물과 $2$ cm 큰 식물의 편차의 합은 $0$이다. 전체 편차의 합도 $0$이므로, 키가 $8$ cm, $12$ cm, $16$ cm인 세 식물의 편차의 합도 $0$이다. 따라서 다섯 식물의 키의 평균은 $(8+12+16)\\div 3=12$ cm이다.\n\n키가 $12$ cm인 식물의 편차는 $0$ cm이므로 정답은 ④이다. ①처럼 키가 서로 다르면 편차의 합이 양수라고 생각하기 쉽지만, 편차의 합은 항상 $0$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T15:01:28.053547+00:00",
       "hard_condition": "definition-b",
       "hard_condition_reason": "평균보다 $2$ cm 작거나 크다는 말을 편차로 바꾸어 두 편차의 합이 $0$임을 알아야 한다. 이를 이용해 다섯 식물의 키의 평균을 찾아 판단한다.",
@@ -166,30 +178,35 @@
       "body": "어떤 자료의 네 변량은 $2$, $4$, $6$, $8$이다. 이 자료의 편차에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "변량 $8$의 편차는 $-3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "편차의 합이 $0$이므로 모든 변량은 평균과 같다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "편차의 합은 $0$이고, 변량 $2$의 편차는 $-3$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M1",
           "no": 4,
           "text": "자료가 흩어져 있으므로 편차의 합은 $0$보다 크다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -200,6 +217,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "네 변량의 평균은 $5$이다. 각 변량에서 평균을 빼면 편차는 차례로 $-3$, $-1$, $1$, $3$이고, 그 합은 $0$이다. 따라서 정답은 ③이다. ④처럼 자료가 흩어져 있으므로 편차의 합이 $0$보다 크다고 생각할 수 있지만, 편차의 합은 항상 $0$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:24:44.605671+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -227,30 +245,35 @@
       "body": "두 자료 A, B의 변량은 각각 다음과 같다.\n\nA: $6$, $8$, $10$, $12$, $14$\nB: $8$, $9$, $10$, $11$, $12$\n\n두 자료의 평균은 모두 $10$이다. A에서 변량 $6$의 편차와 두 자료의 편차의 합에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "편차는 $-4$이고, 두 자료의 편차의 합은 모두 $0$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M1",
           "no": 2,
           "text": "편차는 $-4$이고, A의 변량이 더 흩어져 있으므로 A의 편차의 합이 더 크다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "편차는 $4$이고, 두 자료의 편차의 합은 모두 $0$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "편차는 $-4$이고, A의 편차의 합은 B의 편차의 합보다 작다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -261,6 +284,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "A에서 변량 $6$의 편차는 $6-10=-4$이다. 각 자료에서 양의 편차와 음의 편차를 모두 더하면 편차의 합은 $0$이다. ②처럼 변량이 더 흩어져 있다고 해서 편차의 합이 더 크다고 생각하면 안 된다. 편차의 합은 흩어진 정도와 관계없이 항상 $0$이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:25:39.954141+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -295,30 +319,35 @@
       "body": "다섯 명의 점수는 모두 정수이다. 가장 낮은 점수는 $7$점이고 가장 높은 점수는 $13$점이다. 나머지 세 점수는 작은 것부터 $1$점씩 차이가 난다. 다섯 명의 평균이 $10$점일 때, 이 점수의 표준편차는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "$\\sqrt{2}$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\sqrt{5}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 4,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M3",
           "no": 5,
@@ -329,6 +358,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "다섯 점수의 합은 $10\\times5=50$이다. 가장 낮은 점수와 가장 높은 점수의 합은 $7+13=20$이므로, 나머지 세 점수의 합은 $30$이다. 이 세 점수는 작은 것부터 $1$점씩 차이가 나므로 $9$점, $10$점, $11$점이다.\n따라서 다섯 점수의 편차는 각각 $-3$, $-1$, $0$, $1$, $3$이다. 분산은 $(9+1+0+1+9)\\div5=4$이고, 표준편차는 $\\sqrt{4}=2$이다.\n$4$를 골랐다면 분산을 표준편차로 잘못 생각한 것이다. $\\sqrt{20}$을 골랐다면 편차의 제곱의 합을 변량의 개수로 나누지 않은 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:28:37.46716+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "점수 사이의 관계와 평균을 이용해 세 점수를 찾은 뒤 표준편차를 계산해야 한다.",
@@ -356,30 +386,35 @@
       "body": "네 막대의 길이는 모두 자연수이고, 그중 두 막대의 길이는 각각 $4$ cm, $6$ cm이다. 네 막대의 길이의 평균은 $5$ cm이고 분산은 $5$이다. 가장 긴 막대에서 $4$ cm를 잘라 낸다. 자르고 남은 막대와 나머지 세 막대의 길이의 표준편차는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\sqrt{2}$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 2,
           "text": "$2$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$\\sqrt{5}$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M3",
           "no": 4,
           "text": "$2\\sqrt{2}$ cm"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -390,6 +425,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "처음 네 막대의 편차의 제곱의 합은 $5\\times 4=20$이다. 길이가 $4$ cm, $6$ cm인 막대의 편차는 각각 $-1$, $1$이다. 따라서 나머지 두 편차의 합은 $0$이고, 두 편차의 제곱의 합은 $18$이다. 두 편차는 $-3$, $3$이므로 나머지 두 막대의 길이는 $2$ cm, $8$ cm이다.\n가장 긴 막대에서 $4$ cm를 잘라 내면 네 막대의 길이는 $2$ cm, $4$ cm, $4$ cm, $6$ cm이다. 평균은 $4$ cm이고 분산은 $(4+0+0+4)\\div 4=2$이다. 따라서 표준편차는 $\\sqrt{2}$ cm이다.\n$2$ cm를 고른 경우 분산을 표준편차로 잘못 생각했을 수 있다. $2\\sqrt{2}$ cm를 고른 경우 편차의 제곱의 합을 막대의 수로 나누지 않고 분산으로 잘못 생각했을 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:30:17.481534+00:00",
       "hard_condition": "application-a",
       "hard_condition_reason": "처음 막대의 길이의 평균과 분산으로 알려지지 않은 두 길이를 찾아야 한다. 그 후 가장 긴 막대를 자르고 남은 네 막대의 표준편차를 직접 구한다.",
@@ -432,30 +468,35 @@
       "body": "네 변량이 $2, 4, 6, 8$이다. 이 자료의 표준편차는?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "$\\sqrt{5}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "$\\sqrt{10}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M3",
           "no": 3,
           "text": "$\\sqrt{20}$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 4,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -466,6 +507,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "평균은 $5$이므로 편차는 각각 $-3, -1, 1, 3$이다. 편차의 제곱의 합은 $20$이고, 분산은 $20\\div4=5$이다. 따라서 표준편차는 $\\sqrt{5}$이다.\n$5$를 골랐다면 분산을 표준편차로 잘못 생각한 것이다. $\\sqrt{20}$을 골랐다면 편차의 제곱의 합을 변량의 개수로 나누지 않고 분산으로 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:27:59.57856+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -493,30 +535,35 @@
       "body": "다섯 학생이 지난달에 읽은 책의 수는 각각 $1$권, $3$권, $4$권, $5$권, $7$권이다. 이 자료의 분산은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 1,
           "text": "$2$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "$4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "$5$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "$16$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M3",
           "no": 5,
@@ -527,6 +574,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "평균은 $4$권이다. 편차는 차례로 $-3$, $-1$, $0$, $1$, $3$이다. 따라서 분산은 $(9+1+0+1+9)\\div 5=4$이다.\n$2$는 표준편차이므로 분산과 혼동한 것이다. $20$은 편차의 제곱의 합을 변량의 개수인 $5$로 나누지 않은 값이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:28:14.63153+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -554,30 +602,35 @@
       "body": "네 변량 $1, 3, 5, 7$에 대하여 다섯 학생이 말하였다. 옳게 말한 학생은 누구인가?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M3",
           "no": 1,
           "text": "민수: 편차의 제곱의 합이 $20$이므로 분산은 $20$이야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 2,
           "text": "지수: 분산이 $5$이므로 표준편차는 $5$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 3,
           "text": "서준: 분산이 $5$이므로 표준편차는 $25$야."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 4,
           "text": "하은: 표준편차가 $\\sqrt{5}$이므로 분산은 $\\sqrt{5}$야."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -588,6 +641,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "평균은 $4$이고, 편차는 각각 $-3, -1, 1, 3$이다. 편차의 제곱의 합은 $20$이므로 분산은 $20\\div 4=5$이다. 표준편차는 $\\sqrt{5}$이다. 따라서 옳게 말한 학생은 ⑤이다.\n①은 편차의 제곱의 합을 변량의 개수로 나누지 않고 분산이라고 생각했다. ②와 ④는 분산과 표준편차를 혼동했다. ③은 분산을 제곱하여 표준편차를 구했다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:31:16.769502+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "다섯 학생의 말을 보고 옳은 말을 판단하게 했다. 특히 표준편차에서 편차의 제곱의 합을 생각하는 말을 포함했다.",
@@ -615,30 +669,35 @@
       "body": "네 변량 $2, 2, 4, 8$의 표준편차를 구하려고 한다. 지우의 풀이를 보고, 지우가 잘못한 까닭을 바르게 말한 것을 고르시오.\n\n지우: 평균은 $4$이고, 편차의 제곱의 합은 $24$야. 따라서 표준편차는 $24\\div 4=6$이야.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 1,
           "text": "$6$은 표준편차이고, 분산은 $\\sqrt{6}$이어야 해."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M3",
           "no": 2,
           "text": "$6$이 아니라 $24$가 분산이므로, 표준편차는 $\\sqrt{24}$이어야 해."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 3,
           "text": "$6$은 분산이므로, 표준편차는 $6$의 제곱이어야 해."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "$6$은 분산이므로, 표준편차는 $6$의 양의 제곱근이어야 해."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -649,6 +708,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "편차의 제곱의 합을 변량의 개수로 나눈 $6$은 분산이다. 표준편차는 분산의 양의 제곱근이므로 $\\sqrt{6}$이다.\n\n①은 분산의 양의 제곱근이 표준편차라는 관계를 거꾸로 생각한 것이다. ②는 편차의 제곱의 합을 변량의 개수로 나누지 않은 것이다. ③은 표준편차를 구할 때 분산을 제곱한 것이다. ⑤처럼 분산을 변량의 개수로 한 번 더 나누지 않는다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:32:24.98667+00:00",
       "hard_condition": "misconception-b",
       "hard_condition_reason": "지우가 분산을 표준편차로 잘못 구한 풀이를 보고, 잘못한 까닭을 판단하게 했다.",
@@ -684,30 +744,35 @@
       "body": "네 변량 $2, 4, 6, 8$의 평균은 $5$이고, 편차의 제곱의 합은 $20$이다. 이 자료의 표준편차를 구하는 방법으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 1,
           "text": "편차의 제곱의 합을 변량의 개수로 나눈 $5$가 표준편차이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M3",
           "no": 2,
           "text": "편차의 제곱의 합 $20$이 분산이므로 표준편차는 $\\sqrt{20}$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "분산이 $5$이므로 표준편차는 $\\sqrt{5}$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "편차의 합이 $0$이므로 표준편차는 $0$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 5,
@@ -718,6 +783,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "분산은 편차의 제곱의 합을 변량의 개수로 나눈 $20\\div 4=5$이다. 표준편차는 분산의 양의 제곱근이므로 $\\sqrt{5}$이다. ①은 분산을 표준편차로 잘못 생각했다. ②는 편차의 제곱의 합을 변량의 개수로 나누지 않았다. ⑤는 분산을 제곱하여 표준편차를 구할 수 있다고 잘못 생각했다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:30:36.424452+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -745,30 +811,35 @@
       "body": "다섯 변량 $1, 2, 3, 4, 5$의 평균은 $3$이다. 민수는 편차의 제곱의 합이 $10$이므로 분산은 $2$이고 표준편차도 $2$라고 했다. 민수의 생각에서 잘못된 점은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "분산을 그대로 표준편차로 생각했다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M3",
           "no": 2,
           "text": "분산을 구할 때 편차의 제곱의 합을 변량의 개수로 나누었다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M2",
           "no": 3,
           "text": "표준편차를 구할 때 분산을 제곱하지 않았다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "편차를 구할 때 각 변량에서 평균을 뺐다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -779,6 +850,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "분산이 $2$이므로 표준편차는 $\\sqrt{2}$이다. 민수는 분산을 그대로 표준편차로 생각했다. ②처럼 생각하면 편차의 제곱의 합을 변량의 개수로 나누지 않고 분산을 구하게 된다. ③처럼 생각하면 표준편차를 구할 때 분산의 양의 제곱근이 아닌 분산의 제곱을 구하게 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:30:56.907912+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -806,30 +878,35 @@
       "body": "다섯 반에서 각각 학생 $30$명의 수학 점수를 조사했다. 각 반의 평균과 표준편차는 다음과 같다.\n\n| 반 | 평균 | 표준편차 |\n|---|---:|---:|\n| A반 | $80$점 | $3$점 |\n| B반 | $96$점 | $4$점 |\n| C반 | $84$점 | $2$점 |\n| D반 | $92$점 | $5$점 |\n| E반 | $88$점 | $3$점 |\n\n평균이 A반보다 높고, 점수가 B반보다 덜 흩어져 있는 반을 찾으려고 한다. 이 중에서 평균이 가장 높은 반은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "A반"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "B반"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "C반"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M4",
           "no": 4,
           "text": "D반"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -840,6 +917,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "B반보다 점수가 덜 흩어져 있으려면 표준편차가 $4$점보다 작아야 한다. A반보다 평균이 높은 반 중 이를 만족하는 반은 C반과 E반이다. 두 반 중 평균이 더 높은 반은 E반이다.\n\nD반을 골랐다면 평균이 B반보다 낮으므로 B반보다 덜 흩어져 있다고 생각했을 수 있다. 흩어진 정도는 평균이 아니라 표준편차로 비교해야 한다. D반의 표준편차 $5$점은 B반의 $4$점보다 크다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:34:15.460442+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "‘A반보다 평균이 높고 B반보다 덜 흩어져 있다’는 말을 각각 평균이 $80$점보다 크고 표준편차가 $4$점보다 작다는 뜻으로 바꾸어 적용한다. 이를 만족하는 반 중에서 평균이 가장 높은 반을 골라야 한다.",
@@ -875,30 +953,35 @@
       "body": "나흘 동안 하루에 $50$번씩 기온을 쟀다. 각 날의 기온의 평균과 표준편차는 다음과 같다.\n\n| 날 | 평균 | 표준편차 |\n|---|---:|---:|\n| 가 | $18℃$ | $3℃$ |\n| 나 | $25℃$ | $5℃$ |\n| 다 | $20℃$ | $2℃$ |\n| 라 | $28℃$ | $4℃$ |\n\n이 중 세 날을 다음과 같이 차례로 놓으려고 한다.\n\n- 평균 기온이 점점 $22℃$에 가까워진다.\n- 기온이 각 날의 평균을 중심으로 점점 더 고르게 모인다.\n\n알맞게 놓은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "라, 가, 다"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M4",
           "no": 2,
           "text": "라, 나, 다"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "가, 나, 다"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "라, 가, 나"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -909,6 +992,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "$22℃$와 평균 기온의 차이는 라, 가, 나, 다 순서로 각각 $6℃$, $4℃$, $3℃$, $2℃$이다. 이 순서에서 기온이 평균을 중심으로 점점 더 고르게 모이려면 표준편차도 점점 작아져야 한다. 라, 가, 다의 표준편차는 차례로 $4℃$, $3℃$, $2℃$이므로 알맞다.\n\n라, 나, 다를 고른 학생은 평균 기온이 높을수록 기온이 더 흩어져 있다고 생각했을 수 있다. 하지만 라의 평균은 나보다 높아도 표준편차는 나보다 작다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:35:24.12852+00:00",
       "hard_condition": "application-b",
       "hard_condition_reason": "평균이 기준 기온에 가까워지는 정도와 기온이 고르게 모이는 정도를 각각 수로 비교해 세 날의 순서를 찾아야 한다.",
@@ -944,30 +1028,35 @@
       "body": "다섯 모둠에서 각각 학생 $20$명의 하루 독서 시간을 조사하였다. 공학 도구로 구한 평균과 표준편차는 다음과 같다. 단위는 분이다.\n\n| 모둠 | 평균 | 표준편차 |\n|---|---:|---:|\n| A | $20$ | $2$ |\n| B | $25$ | $3$ |\n| C | $30$ | $6$ |\n| D | $35$ | $4$ |\n| E | $40$ | $5$ |\n\n독서 시간이 평균을 중심으로 가장 많이 흩어져 있는 모둠은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "A 모둠"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 2,
           "text": "B 모둠"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 3,
           "text": "C 모둠"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "D 모둠"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M4",
           "no": 5,
@@ -978,6 +1067,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "표준편차가 클수록 자료가 평균을 중심으로 더 많이 흩어져 있다. 표준편차가 $6$으로 가장 큰 C 모둠이 정답이다. E 모둠을 골랐다면 평균이 클수록 더 많이 흩어져 있다고 잘못 생각한 것일 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:32:43.082053+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1005,30 +1095,35 @@
       "body": "두 화단에서 각각 꽃 $24$송이의 키를 조사하였다. 공학 도구로 구한 평균과 표준편차는 다음과 같다. 단위는 $\\text{cm}$이다.\n\n| 화단 | 평균 | 표준편차 |\n|---|---:|---:|\n| 가 | $18$ | $4$ |\n| 나 | $24$ | $2$ |\n\n꽃의 키가 평균을 중심으로 흩어진 정도에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "가 화단이 더 많이 흩어져 있다. 표준편차가 더 크기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수04-07-M4",
           "no": 2,
           "text": "나 화단이 더 많이 흩어져 있다. 평균이 더 크기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "나 화단이 더 많이 흩어져 있다. 표준편차가 더 작기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "두 화단은 똑같이 흩어져 있다. 조사한 꽃의 수가 같기 때문이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -1039,6 +1134,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "표준편차가 클수록 평균을 중심으로 더 많이 흩어져 있다. 가 화단의 표준편차가 더 크므로 정답은 ①이다. ②와 같이 평균이 더 크다는 이유로 더 많이 흩어져 있다고 생각하면 안 된다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:33:02.857671+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1069,6 +1165,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "두 모둠의 평균은 모두 $10$쪽이다. $A$ 모둠의 편차는 $-2, 0, 0, 2$이므로 분산은 $2$이다. $B$ 모둠의 편차는 $-4, 0, 0, 4$이므로 분산은 $8$이다. 따라서 분산이 더 작은 $A$ 모둠의 쪽수가 평균에 더 고르게 모여 있다.\n\n두 모둠의 편차의 평균은 모두 $0$이지만, 분산은 다르다. 따라서 두 자료는 민지의 말이 옳지 않음을 보여 준다. 민지는 편차의 평균이 같으면 흩어진 정도도 같다고 생각했다. 하지만 어느 자료에서나 편차의 합은 $0$이므로 편차의 평균도 $0$이다. 그래서 편차의 평균으로는 흩어진 정도를 구별할 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:37:09.84765+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "두 모둠의 자료를 반례로 이용하여 편차의 평균이 같으면 흩어진 정도도 같다는 말이 옳지 않음을 보이게 한다.",
@@ -1140,6 +1237,7 @@
       "difficulty": "hard",
       "disabled_at": null,
       "explanation": "두 자료의 평균은 모두 $6$이다. $A$의 편차는 $-4, -1, 0, 2, 3$이므로 분산은 $6$이다. $B$의 편차는 $-4, -3, 0, 3, 4$이므로 분산은 $10$이다. 따라서 $A$의 거리가 평균에 더 고르게 모여 있다.\n\n예를 들어 $A$의 편차의 평균은 $0$이지만, 모든 변량이 평균인 $6$과 같지는 않다. 편차의 평균이 $0$이라고 해서 각 편차가 모두 $0$인 것은 아니다. 어느 자료에서나 편차의 합은 $0$이므로 편차의 평균도 $0$이다. 따라서 편차의 평균으로는 자료의 흩어진 정도를 나타낼 수 없다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:37:42.618032+00:00",
       "hard_condition": "explanation-b",
       "hard_condition_reason": "2번에서 주어진 자료를 이용하여 지우의 말이 옳지 않음을 보이게 한다. 편차의 평균이 $0$이어도 평균과 다른 변량이 있는 자료를 찾아 설명해야 한다.",
@@ -1203,6 +1301,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "두 모둠의 평균은 모두 $10$쪽입니다. 가 모둠의 분산은 $4$, 나 모둠의 분산은 $8$입니다. 분산이 더 작은 가 모둠의 쪽수가 평균 가까이에 더 고르게 모여 있습니다.\n\n각 모둠에서 편차의 합은 $0$이므로 편차의 평균도 $0$입니다. 두 자료의 흩어진 정도는 다른데 편차의 평균은 같으므로, 편차의 평균으로는 흩어진 정도를 비교할 수 없습니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:35:46.290039+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -1257,6 +1356,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "두 자료의 평균은 모두 $20$입니다. 가의 분산은 $2$, 나의 분산은 $8$이므로 가의 식물 키가 평균 가까이에 더 고르게 모여 있습니다. 두 자료의 편차의 평균은 모두 $0$입니다. 양의 편차와 음의 편차가 서로 합쳐져 편차의 합이 $0$이 되기 때문입니다. 편차의 평균으로 흩어진 정도를 비교할 수 있다고 생각하면, 흩어진 정도가 다른 두 자료의 편차의 평균이 같다는 점을 놓친 것입니다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:36:09.846499+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
