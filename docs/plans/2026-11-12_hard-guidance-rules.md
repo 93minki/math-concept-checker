@@ -5,7 +5,7 @@
 - 상태: 완료
 - 이슈: #34 (https://github.com/93minki/math-concept-checker/issues/34)
 - 브랜치: plan/2026-11-12_hard-guidance-rules
-- PR: (계획을 끝낼 때 링크)
+- PR: #35 (https://github.com/93minki/math-concept-checker/pull/35)
 - 마일스톤: M2 문제 은행·진단
 
 ## 목표
