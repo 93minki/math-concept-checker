@@ -5,7 +5,7 @@
 - 상태: 완료
 - 이슈: #32 (https://github.com/93minki/math-concept-checker/issues/32)
 - 브랜치: plan/2026-11-12_figures-rest-grade3
-- PR: (아래 PR 생성 후 링크)
+- PR: #33 (https://github.com/93minki/math-concept-checker/pull/33)
 - 마일스톤: M2 문제 은행·진단
 
 ## 목표
