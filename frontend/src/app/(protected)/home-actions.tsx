@@ -22,14 +22,17 @@ export default function HomeActions() {
   }
 
   return (
-    <>
-      <div className="button-row">
-        <button onClick={signOut}>로그아웃</button>
-        <Link className="study-link" href="/history">
-          지난 기록
+    <header className="home-header">
+      <div className="home-header-inner">
+        <Link className="home-brand" href="/">
+          수학 개념 체커
         </Link>
+        <nav className="home-nav" aria-label="주 메뉴">
+          <Link href="/history">지난 기록</Link>
+          <button onClick={signOut}>로그아웃</button>
+        </nav>
       </div>
       {error && <p role="alert">{error}</p>}
-    </>
+    </header>
   );
 }

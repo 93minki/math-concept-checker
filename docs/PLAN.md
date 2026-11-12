@@ -84,6 +84,14 @@
 - 2026-11-12: 초안 작성. 사용자 결정: 범위 C.
 - 2026-11-12: 사용자 결정 반영: 캡처 허락, Pretendard 저장소 포함, 구현 허락과 화면마다 A/B 시안 방식.
 - 2026-11-12: 사용자 승인 ("오케이 승인한다").
+- 2026-11-12: 단계 1 완료. 개발 프로젝트 시험 계정 A로 9개 화면 × (1280·360 × 라이트·다크) 캡처, 고칠 곳 19개 목록 사용자 확인 ("좋아 A,B 만들어봐"). 캡처는 `experiments/scratch/capture/`(git 제외, 회사 PC에만 있음).
+- 2026-11-12: 단계 2 구현 완료, **사용자 A/B 선택 대기** (사용자 "A/B 결과는 집에서 결정할게").
+  - Pretendard 1.3.9 동적 서브셋을 `frontend/public/fonts/pretendard/`에 넣고 루트 레이아웃에서 CSS를 불러옴. 실제 적용 확인(`document.fonts.check` true).
+  - 시안 바꾸기(임시): `frontend/src/app/variant.tsx`. 주소 `?variant=a|b` → `<html data-variant>`, sessionStorage 유지, 기본 A. 단계 4가 끝나면 지운다.
+  - 디자인 기준: `frontend/src/app/globals.css`의 `:root[data-variant="a|b"]` 변수(라이트·다크). 첫 화면(`unit-selection.tsx`)과 공통 머리말(`home-actions.tsx`)에 적용. A: 흰 바탕·얇은 테두리·3열 격자. B: 연한 파랑 바탕·둥근 그림자 카드·학년 탭·진행 중 카드 강조.
+  - 검사: 백엔드 179, 프론트엔드 format·lint·typecheck·단위 102·build·E2E 24 통과. A/B 모두 360px 가로 넘침 없음(개발 서버 캡처로 확인).
+  - 에이전트가 본 아쉬운 점: A는 진행 중 단원에서 "진단 시작하기"가 "이어서 풀기"보다 눈에 띔. B는 학년 칩과 "중1 · 동아출판 기준"이 겹침.
+  - A/B 다시 보는 법 (다른 PC): `frontend`에서 개발 서버를 띄워 로그인 뒤 `/?variant=a`, `/?variant=b`. 캡처가 필요하면 `e2e-dev/`에 이름이 `…flow.spec.ts`로 끝나는 임시 파일을 만들어 `pnpm exec playwright test -c playwright.dev.config.ts <파일> --project desktop`로 찍고 지운다(dev 설정이 `flow.spec.ts`만 받고, `test-results/`는 실행 때 지워지므로 다른 폴더에 저장).
 
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:

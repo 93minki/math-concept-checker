@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import { VariantProvider } from "./variant";
 import "katex/dist/katex.min.css";
+import "../../public/fonts/pretendard/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,8 +12,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
+    <html lang="ko" data-variant="a" suppressHydrationWarning>
+      <body>
+        <Suspense fallback={children}>
+          <VariantProvider>{children}</VariantProvider>
+        </Suspense>
+      </body>
     </html>
   );
 }

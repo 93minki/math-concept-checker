@@ -8,6 +8,7 @@ import {
 } from "@testing-library/react";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
 import UnitSelection from "./unit-selection";
+import { VariantContext } from "../variant";
 import DiagnosisView from "./diagnoses/[id]/diagnosis-view";
 import { ApiError, type Diagnosis, type Unit } from "@/lib/diagnosis-api";
 
@@ -64,6 +65,35 @@ const units: Unit[] = [
     in_progress_diagnosis_id: null,
   },
 ];
+const threeGrades: Unit[] = [
+  ...units,
+  { ...units[1], id: 3, grade: "중3", name: "도형과 식", status: "full" },
+];
+test("A 학년 제목과 B 탭, 검색 및 진행 상태", async () => {
+  mocks.getUnits.mockResolvedValue(threeGrades);
+  const first = render(<UnitSelection />);
+  expect(await screen.findByRole("heading", { name: "중1" })).toBeTruthy();
+  expect(screen.getByRole("heading", { name: "중2" })).toBeTruthy();
+  expect(screen.getByRole("heading", { name: "중3" })).toBeTruthy();
+  first.unmount();
+  render(
+    <VariantContext.Provider value="b">
+      <UnitSelection />
+    </VariantContext.Provider>,
+  );
+  expect(await screen.findByText("진행 중")).toBeTruthy();
+  expect(screen.getByRole("link", { name: "이어서 풀기" })).toBeTruthy();
+  expect(screen.getAllByRole("tab")).toHaveLength(3);
+  expect(screen.queryByRole("heading", { name: "2. 도형" })).toBeNull();
+  fireEvent.click(screen.getByRole("tab", { name: "중2" }));
+  expect(screen.getByRole("heading", { name: "2. 도형" })).toBeTruthy();
+  expect(screen.queryByRole("heading", { name: "1. 문자와 식" })).toBeNull();
+  fireEvent.change(screen.getByLabelText("단원 검색"), {
+    target: { value: "식" },
+  });
+  expect(screen.getByRole("heading", { name: "1. 문자와 식" })).toBeTruthy();
+  expect(screen.getByRole("heading", { name: "2. 도형과 식" })).toBeTruthy();
+});
 const diagnosis: Diagnosis = {
   id: "d",
   status: "stage1",
@@ -139,7 +169,7 @@ test("학년과 상태를 표시하고 별칭으로 검색한다", async () => {
   fireEvent.change(screen.getByLabelText("단원 검색"), {
     target: { value: "문자식" },
   });
-  expect(screen.queryByText("도형")).toBeNull();
+  expect(screen.queryByRole("heading", { name: "2. 도형" })).toBeNull();
 });
 test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async () => {
   mocks.startDiagnosis
