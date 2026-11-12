@@ -6,7 +6,7 @@ import {
   waitFor,
 } from "@testing-library/react";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
-import LoginPage from "./login/page";
+import LoginForm from "./login/login-form";
 import LoginLayout from "./login/layout";
 import SignupLayout from "./signup/layout";
 import SignupPage from "./signup/page";
@@ -19,13 +19,20 @@ const mocks = vi.hoisted(() => ({
   signOut: vi.fn(),
   push: vi.fn(),
   refresh: vi.fn(),
+  pathname: "/login",
 }));
 
 vi.mock("@/lib/supabase/client", () => ({
   createClient: () => ({ auth: mocks }),
 }));
 vi.mock("next/navigation", () => ({
-  useRouter: () => ({ push: mocks.push, refresh: mocks.refresh }),
+  useRouter: () => ({
+    push: mocks.push,
+    refresh: mocks.refresh,
+    replace: vi.fn(),
+  }),
+  useSearchParams: () => new URLSearchParams(),
+  usePathname: () => mocks.pathname,
 }));
 
 beforeEach(() => {
@@ -35,7 +42,7 @@ afterEach(cleanup);
 
 test("로그인 제출과 실패 안내", async () => {
   mocks.signInWithPassword.mockResolvedValue({ error: new Error("internal") });
-  render(<LoginPage />);
+  render(<LoginForm />);
   fireEvent.change(screen.getByLabelText("이메일"), {
     target: { value: "test@example.com" },
   });
@@ -57,7 +64,7 @@ test("로그인 제출과 실패 안내", async () => {
 
 test("로그인에 성공하면 보호된 첫 화면으로 간다", async () => {
   mocks.signInWithPassword.mockResolvedValue({ error: null });
-  render(<LoginPage />);
+  render(<LoginForm />);
   fireEvent.change(screen.getByLabelText("이메일"), {
     target: { value: "test@example.com" },
   });
@@ -71,7 +78,7 @@ test("로그인에 성공하면 보호된 첫 화면으로 간다", async () => 
 
 test("카카오 로그인은 콜백 주소를 전달한다", async () => {
   mocks.signInWithOAuth.mockResolvedValue({ error: null });
-  render(<LoginPage />);
+  render(<LoginForm />);
   fireEvent.click(screen.getByRole("button", { name: "카카오로 시작하기" }));
   await waitFor(() =>
     expect(mocks.signInWithOAuth).toHaveBeenCalledWith({
@@ -122,7 +129,7 @@ test("로그아웃 실패 시 쉬운 안내를 보여 준다", async () => {
 });
 
 test.each([
-  ["로그인", () => <LoginPage />],
+  ["로그인", () => <LoginForm />],
   ["회원가입", () => <SignupPage />],
 ])(
   "%s 폼은 POST라서 기본 전송이 일어나도 비밀번호가 주소에 붙지 않는다",
@@ -134,9 +141,14 @@ test.each([
   },
 );
 
-test.each([LoginLayout, SignupLayout])(
-  "인증 화면 머리말은 서비스 이름만 표시한다",
-  (Layout) => {
+test.each([
+  ["/login", LoginLayout, "로그인"],
+  ["/signup", SignupLayout, "회원가입"],
+  ["/signup/complete", SignupLayout, null],
+] as const)(
+  "%s 인증 머리말의 계정 링크와 현재 페이지 표시",
+  (path, Layout, current) => {
+    mocks.pathname = path;
     render(
       <Layout>
         <div>화면</div>
@@ -145,6 +157,16 @@ test.each([LoginLayout, SignupLayout])(
     expect(
       screen.getByRole("link", { name: "수학 개념 체커" }).getAttribute("href"),
     ).toBe("/");
+    const login = screen.getByRole("link", { name: "로그인" });
+    const signup = screen.getByRole("link", { name: "회원가입" });
+    expect(login.getAttribute("href")).toBe("/login?login=1");
+    expect(signup.getAttribute("href")).toBe("/signup");
+    expect(login.getAttribute("aria-current")).toBe(
+      current === "로그인" ? "page" : null,
+    );
+    expect(signup.getAttribute("aria-current")).toBe(
+      current === "회원가입" ? "page" : null,
+    );
     expect(screen.queryByRole("navigation")).toBeNull();
   },
 );

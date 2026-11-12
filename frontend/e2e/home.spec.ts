@@ -3,10 +3,19 @@ import { expect, test } from "@playwright/test";
 test("로그아웃 사용자는 로그인 화면으로 이동한다", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveURL(/\/login$/);
-  await expect(page.getByRole("heading", { name: "로그인" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "점수 말고, 개념을 확인해요" }),
+  ).toBeVisible();
+  await page.locator("header").getByRole("link", { name: "로그인" }).click();
+  const dialog = page.getByRole("dialog", { name: "로그인" });
+  await expect(dialog.getByRole("heading", { name: "로그인" })).toBeVisible();
+  await expect(dialog.getByLabel("이메일")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(dialog).not.toBeVisible();
+  await expect(page).toHaveURL(/\/login$/);
 });
 
-for (const route of ["/login", "/signup"]) {
+for (const route of ["/login", "/login?login=1", "/signup"]) {
   test(`${route} 화면은 가로로 넘치지 않는다`, async ({ page }) => {
     await page.goto(route);
     await expect(page.locator("main")).toBeVisible();
@@ -16,7 +25,9 @@ for (const route of ["/login", "/signup"]) {
         document.documentElement.clientWidth,
     );
     expect(overflow).toBeLessThanOrEqual(0);
-    const controls = page.locator("input, button");
+    const controls = page.locator(
+      "input:visible, button:visible, header .btn:visible",
+    );
     for (let i = 0; i < (await controls.count()); i++) {
       const box = await controls.nth(i).boundingBox();
       expect(box?.height).toBeGreaterThanOrEqual(44);
@@ -50,7 +61,7 @@ test("로그아웃 사용자는 지난 기록에서 로그인으로 이동한다
 // Before React runs, a native form submit would send the fields as a GET
 // query (?email=…&password=…). With JavaScript off, the page must not let
 // that happen: the submit button stays disabled and the form is POST.
-for (const route of ["/login", "/signup"]) {
+for (const route of ["/login?login=1", "/signup"]) {
   test(`${route} 화면은 스크립트 실행 전에도 비밀번호를 주소로 보내지 않는다`, async ({
     browser,
   }) => {
