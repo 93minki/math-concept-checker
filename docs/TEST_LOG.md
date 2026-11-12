@@ -316,3 +316,10 @@
 - 원인 분류: 테스트 오류
 - 원인: 새 그림 예시 목록만 검사했고 기존 종류 예시 배열을 포함하지 않았다.
 - 해결: 기존 그림 예시와 새 그림 예시를 함께 검사한다.
+
+### 2026-11-12 — backend/tests/test_concept_converter.py::test_figure_references_and_variants
+- 작업: 남은 그림 항목·중3 마무리 계획 검수 (F-03)
+- 증상: `assert result["variants"] == 1` 실패 (`2 == 1`)
+- 원인 분류: 테스트 오류
+- 원인: 테스트가 실제 `backend/data/concepts/9수03-19.json`을 복사해 쓰면서 그 `variants`가 1이라고 가정했다. 이번 계획에서 실제 데이터를 2로 올리자 깨졌다. 변환기는 기존 JSON의 `variants`를 유지한다(`converter.py:172`).
+- 해결: 테스트가 복사한 고정 데이터의 `variants`를 1로 직접 정한 뒤 유지되는지 검사한다. 실제 데이터 값에 기대지 않는다.

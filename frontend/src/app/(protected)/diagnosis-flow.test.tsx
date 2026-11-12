@@ -416,6 +416,52 @@ const completed: Diagnosis = {
   ],
 };
 
+test("보기와 선택한 답의 표를 번호와 함께 표시한다", async () => {
+  const table = "| $x$ | $7$ |\n|---|---|\n| $y$ | $2$ |";
+  const item = {
+    ...diagnosis.items[0],
+    choices: [{ no: 1, text: table, figure: null }],
+  };
+  mocks.getDiagnosis.mockResolvedValue({ ...diagnosis, items: [item] });
+  const { container, unmount } = render(<DiagnosisView id="d" />);
+  await screen.findByRole("radio");
+  expect(container.querySelector(".choice .problem-table")).toBeTruthy();
+  expect(
+    container.querySelector(".choice .problem-text")?.textContent,
+  ).toContain("1.");
+  unmount();
+
+  const figure = {
+    kind: "number_line" as const,
+    min: 0,
+    max: 2,
+    tick_step: 1,
+    label_step: 1,
+    points: [],
+    rays: [],
+    segments: [],
+  };
+  mocks.getDiagnosis.mockResolvedValue({
+    ...completed,
+    items: [
+      {
+        ...item,
+        choices: [{ ...item.choices[0], figure }],
+        answer: { selected_choice: 1, written_text: null, updated_at: "now" },
+        result: { passed: true, explanation: "풀이", correct_choice: 1 },
+      },
+    ],
+  });
+  mocks.getReport.mockResolvedValue(report);
+  const result = render(<DiagnosisView id="d" />);
+  await screen.findByText("맞았어요");
+  expect(result.container.querySelector(".choice .problem-table")).toBeTruthy();
+  expect(
+    result.container.querySelector(".choice .problem-text")?.textContent,
+  ).toContain("1.");
+  expect(result.container.querySelectorAll(".problem-table")).toHaveLength(2);
+});
+
 test("완료된 진단은 리포트와 문제별 결과를 표시한다", async () => {
   mocks.getDiagnosis.mockResolvedValue(completed);
   mocks.getReport.mockResolvedValue(report);

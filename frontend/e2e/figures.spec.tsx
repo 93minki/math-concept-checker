@@ -114,7 +114,15 @@ for (const theme of ["light", "dark"] as const) {
               <label className="choice" key={i}>
                 <input type="radio" name="answer" />
                 <div className="choice-content">
-                  {i}. <Figure figure={i === 1 ? denseChoice : choice} />
+                  <ProblemText
+                    prefix={`${i}. `}
+                    text={
+                      i === 1
+                        ? "| 긴 제목 하나 | 긴 제목 둘 | 긴 제목 셋 | 긴 제목 넷 |\n|---|---|---|---|\n| $1$ | $2$ | $3$ | $4$ |"
+                        : "보기"
+                    }
+                  />
+                  <Figure figure={i === 1 ? denseChoice : choice} />
                 </div>
               </label>
             ))}
@@ -149,6 +157,15 @@ for (const theme of ["light", "dark"] as const) {
       ),
     ).toBeLessThanOrEqual(0);
     const choices = page.locator(".choice");
+    const choiceTable = choices.first().locator(".table-scroll");
+    await expect(choiceTable.locator("table.problem-table")).toBeVisible();
+    if (info.project.name === "mobile") {
+      expect(
+        await choiceTable.evaluate(
+          (node) => node.scrollWidth > node.clientWidth,
+        ),
+      ).toBe(true);
+    }
     const first = await choices.nth(0).boundingBox();
     const second = await choices.nth(1).boundingBox();
     expect(first).not.toBeNull();
