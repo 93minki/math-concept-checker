@@ -11,9 +11,9 @@ export default function BrandMark() {
       aria-hidden="true"
       focusable="false"
     >
-      <rect width="32" height="32" rx="8" fill="#485be0" />
+      <rect width="32" height="32" rx="8" fill="#3d7757" />
       <rect x="4" y="9" width="24" height="14" rx="7" fill="#fff" />
-      <circle cx="21" cy="16" r="5.5" fill="#485be0" />
+      <circle cx="21" cy="16" r="5.5" fill="#3d7757" />
       <path
         d="M18.6 16.2l1.8 2 3.1-4"
         fill="none"

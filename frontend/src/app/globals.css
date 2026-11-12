@@ -1,19 +1,20 @@
 :root {
-  --bg: #f3f6ff;
-  --surface: #fff;
-  --border: transparent;
-  --shadow: 0 2px 10px rgba(30, 40, 90, 0.08);
-  --text: #1f2335;
-  --muted: #5d6585;
-  --primary: #485be0;
-  --primary-text: #fff;
-  --primary-soft: #e8ebff;
-  --warn-soft: #fff1d6;
-  --danger: #a42135;
-  --danger-soft: #fff0f2;
-  --level-deep: #17694e;
-  --level-basic: #3159a7;
-  --level-not-yet: #a03836;
+  --control-border: #848688;
+  --bg: #f5f7f9;
+  --surface: #ffffff;
+  --border: #dfe1e4;
+  --shadow: 0 1px 3px rgba(20, 24, 28, 0.06);
+  --text: #191b1d;
+  --muted: #606468;
+  --primary: #3d7757;
+  --primary-text: #ffffff;
+  --primary-soft: #e5f5eb;
+  --warn-soft: #fbefd6;
+  --danger: #b02b27;
+  --danger-soft: #fdebe9;
+  --level-deep: #2769b7;
+  --level-basic: #b77610;
+  --level-not-yet: #c53732;
   --radius: 16px;
   --control-h: 48px;
   --gap: 16px;
@@ -22,20 +23,22 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121521;
-    --surface: #1c2133;
+    --bg: #0e1011;
+    --surface: #181a1c;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-    --text: #eceffa;
-    --muted: #a3abc8;
-    --primary: #8c9bff;
-    --primary-text: #121521;
-    --primary-soft: #262c52;
-    --warn-soft: #3d3118;
-    --danger: #ffb3bf;
-    --danger-soft: #4b2330;
-    --level-deep: #75d7ad;
-    --level-basic: #a8bdff;
-    --level-not-yet: #ffa7a3;
+    --text: #e9ebee;
+    --muted: #a1a5a9;
+    --primary: #77c599;
+    --primary-text: #0a110d;
+    --primary-soft: #182e22;
+    --warn-soft: #3b2b0d;
+    --danger: #fb988d;
+    --danger-soft: #3e1f1b;
+    --level-deep: #7cb4fc;
+    --level-basic: #eeb154;
+    --level-not-yet: #f47c70;
+    --border: #2e3133;
+    --control-border: #66696c;
   }
 }
 html {
@@ -373,7 +376,7 @@ a {
   min-height: max(44px, var(--control-h));
   background: var(--surface);
   color: var(--text);
-  border: 1px solid var(--border);
+  border: 1px solid var(--control-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -483,7 +486,7 @@ a {
   font: inherit;
   color: var(--text);
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--control-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
