@@ -416,7 +416,7 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
         line(c, { x: c.x + r, y: c.y });
       positions.radius = { x: c.x + r / 2, y: c.y - 25 };
     } else if (["cylinder", "cone", "cone_frustum"].includes(f.shape)) {
-      const scale = Math.min(85 / (f.radius ?? 1), 160 / (f.height ?? 1));
+      const scale = Math.min(120 / (f.radius ?? 1), 185 / (f.height ?? 1));
       const r = (f.radius ?? 1) * scale;
       const h = (f.height ?? 1) * scale;
       const bottom = { x: 200, y: 240 },
@@ -443,8 +443,14 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
         line(bottom, { x: bottom.x + r, y: bottom.y });
       if (f.labels.some((label) => label.part === "top_radius") && tr)
         line(top, { x: top.x + tr, y: top.y });
-      positions.height = { x: top.x + 10, y: (top.y + bottom.y) / 2 };
-      positions.radius = { x: bottom.x + r / 2, y: bottom.y - 9 };
+      // Cones narrow toward the apex, so keep the height label low on the
+      // axis where it cannot be read as the slant edge.
+      positions.height = {
+        x: top.x + 8,
+        y: tr ? (top.y + bottom.y) / 2 : top.y + (bottom.y - top.y) * 0.72,
+      };
+      // Below the radius line, inside the front half of the base ellipse.
+      positions.radius = { x: bottom.x + r / 2, y: bottom.y + 20 };
       positions.top_radius = { x: top.x + tr / 2, y: top.y - 9 };
       positions.slant = {
         x: (bottom.x + r + top.x + tr) / 2 + 30,
