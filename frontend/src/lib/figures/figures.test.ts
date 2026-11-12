@@ -205,13 +205,27 @@ describe("그림 요소", () => {
       (e) => e.tag === "polyline",
     );
     expect(curves.length).toBeGreaterThan(1);
+    const axes = drawFigure(figures[1]).elements.filter(
+      (e) => e.attrs["data-axis"] === "true",
+    );
+    const horizontal = axes.find(
+      (e) =>
+        e.attrs.y1 === e.attrs.y2 &&
+        Math.abs(Number(e.attrs.x2) - Number(e.attrs.x1)) > 10,
+    );
+    const vertical = axes.find(
+      (e) =>
+        e.attrs.x1 === e.attrs.x2 &&
+        Math.abs(Number(e.attrs.y2) - Number(e.attrs.y1)) > 10,
+    );
+    if (!horizontal || !vertical) throw new Error("coordinate axes required");
     for (const curve of curves)
       for (const point of String(curve.attrs.points).split(" ")) {
         const [x, y] = point.split(",").map(Number);
-        expect(x).toBeGreaterThanOrEqual(49.999);
-        expect(x).toBeLessThanOrEqual(370.001);
-        expect(y).toBeGreaterThanOrEqual(64.999);
-        expect(y).toBeLessThanOrEqual(235.001);
+        expect(x).toBeGreaterThanOrEqual(Number(horizontal.attrs.x1) - 0.001);
+        expect(x).toBeLessThanOrEqual(Number(horizontal.attrs.x2) + 0.001);
+        expect(y).toBeGreaterThanOrEqual(Number(vertical.attrs.y1) - 0.001);
+        expect(y).toBeLessThanOrEqual(Number(vertical.attrs.y2) + 0.001);
       }
   });
   test("범위 밖 점은 그리지 않는다", () => {
@@ -242,6 +256,17 @@ test("여섯 그림 견본에서 글자와 축·눈금이 겹치지 않는다", 
       tick_step: 1,
       show_tick_labels: true,
       points: [{ x: 1, y: 1, label: "점 A" }],
+      graphs: [{ type: "quadratic", a: 1, p: 0, q: 0, label: null }],
+    },
+    {
+      kind: "coordinate_plane",
+      x_min: -6,
+      x_max: 6,
+      y_min: -8,
+      y_max: 10,
+      tick_step: 1,
+      show_tick_labels: true,
+      points: [],
       graphs: [{ type: "quadratic", a: 1, p: 0, q: 0, label: null }],
     },
     {
@@ -365,6 +390,117 @@ test("여섯 그림 견본에서 글자와 축·눈금이 겹치지 않는다", 
           false,
         );
       }
+    }
+  }
+});
+
+test("촘촘한 좌표평면의 x와 y는 같은 단위 길이를 쓰고 눈금선은 유지한다", () => {
+  const figure: Figure = {
+    kind: "coordinate_plane",
+    x_min: -6,
+    x_max: 6,
+    y_min: -8,
+    y_max: 10,
+    tick_step: 1,
+    show_tick_labels: true,
+    points: [],
+    graphs: [],
+  };
+  const elements = drawFigure(figure).elements;
+  const axes = elements.filter((e) => e.attrs["data-axis"] === "true");
+  const horizontal = axes.find(
+    (e) =>
+      e.attrs.y1 === e.attrs.y2 &&
+      Math.abs(Number(e.attrs.x2) - Number(e.attrs.x1)) > 10,
+  );
+  const vertical = axes.find(
+    (e) =>
+      e.attrs.x1 === e.attrs.x2 &&
+      Math.abs(Number(e.attrs.y2) - Number(e.attrs.y1)) > 10,
+  );
+  if (!horizontal || !vertical) throw new Error("coordinate axes required");
+  expect(
+    (Number(horizontal.attrs.x2) - Number(horizontal.attrs.x1)) / 12,
+  ).toBeCloseTo((Number(vertical.attrs.y2) - Number(vertical.attrs.y1)) / 18);
+  expect(axes).toHaveLength(2 + 13 + 19);
+  const origin = elements.find((e) => e.tag === "text" && e.text === "O");
+  expect(origin).toBeDefined();
+  expect(Number(origin?.attrs.x)).toBeLessThan(Number(vertical.attrs.x1));
+  expect(Number(origin?.attrs.y)).toBeGreaterThan(Number(horizontal.attrs.y1));
+  expect(elements.filter((e) => e.tag === "text").length).toBeLessThan(13 + 19);
+});
+
+test("각 그림의 촘촘한 축은 눈금선을 유지하고 숫자만 솎는다", () => {
+  const examples: Figure[] = [
+    {
+      kind: "number_line",
+      min: 0,
+      max: 20,
+      tick_step: 1,
+      label_step: 2,
+      points: [],
+      rays: [],
+      segments: [],
+    },
+    {
+      kind: "bar_chart",
+      categories: ["A"],
+      values: [5],
+      y_max: 20,
+      y_step: 1,
+      x_label: null,
+      y_label: null,
+    },
+    {
+      kind: "frequency",
+      class_start: 2,
+      class_width: 10,
+      frequencies: Array(12).fill(20),
+      show_bars: true,
+      show_polygon: true,
+      y_step: 1,
+      x_label: null,
+      y_label: null,
+    },
+    {
+      kind: "boxplot",
+      axis_min: 0,
+      axis_max: 20,
+      axis_step: 1,
+      series: [{ label: "A", min: 1, q1: 2, median: 4, q3: 7, max: 9 }],
+    },
+    {
+      kind: "scatter",
+      x_min: 0,
+      x_max: 20,
+      x_step: 1,
+      y_min: 0,
+      y_max: 20,
+      y_step: 1,
+      x_label: null,
+      y_label: null,
+      points: [],
+    },
+  ];
+  for (const figure of examples) {
+    const elements = drawFigure(figure).elements;
+    const axis = elements.filter((e) => e.attrs["data-axis"] === "true");
+    const labels = elements.filter((e) => e.tag === "text" && e.text !== "A");
+    expect(axis.length, figure.kind).toBeGreaterThanOrEqual(22);
+    expect(labels.length, figure.kind).toBeLessThan(axis.length - 2);
+    expect(
+      labels.some((e) => e.text === "0"),
+      figure.kind,
+    ).toBe(true);
+    if (figure.kind === "number_line") {
+      expect(labels.every((e) => Number(e.text) % 2 === 0)).toBe(true);
+    }
+    if (figure.kind === "frequency") {
+      const classLabels = labels.filter((e) => e.attrs.y === 265);
+      expect(classLabels.length).toBeGreaterThanOrEqual(3);
+      expect(classLabels.every((e) => (Number(e.text) - 2) % 10 === 0)).toBe(
+        true,
+      );
     }
   }
 });

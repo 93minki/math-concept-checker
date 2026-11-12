@@ -130,6 +130,39 @@ export function drawFigure(figure: Figure): Drawing {
       Number(((start + i) * step).toPrecision(12)),
     );
   };
+  // Choose a 1/2/5 × 10ⁿ multiple of the original label interval.
+  // Keep zero and endpoints when they fit beside the regular labels.
+  const numericLabels = (
+    values: number[],
+    position: (value: number) => number,
+    horizontal: boolean,
+  ): number[] => {
+    if (values.length < 2) return values;
+    const pixelStep = Math.abs(position(values[1]) - position(values[0]));
+    if (!(pixelStep > 0)) return values.slice(0, 1);
+    const widest = Math.max(...values.map((v) => String(v).length)) * 12;
+    const spacing = horizontal ? widest + 6 : 24;
+    const needed = Math.max(1, Math.ceil(spacing / pixelStep));
+    const magnitude = 10 ** Math.floor(Math.log10(needed));
+    const multiple =
+      [1, 2, 5, 10].map((v) => v * magnitude).find((v) => v >= needed) ??
+      needed;
+    const zeroIndex = Math.max(
+      0,
+      values.findIndex((v) => Math.abs(v) < 1e-10),
+    );
+    const selected = values.filter(
+      (_, index) => (index - zeroIndex) % multiple === 0,
+    );
+    const fits = (v: number) =>
+      selected.every(
+        (other) => Math.abs(position(v) - position(other)) >= spacing - 1e-7,
+      );
+    for (const v of [values[0], values[values.length - 1]]) {
+      if (!selected.includes(v) && fits(v)) selected.push(v);
+    }
+    return selected;
+  };
   const xmap = (v: number, min: number, max: number) =>
     50 + ((v - min) / (max - min)) * 320;
   const ymap = (v: number, min: number, max: number) =>
@@ -165,15 +198,19 @@ export function drawFigure(figure: Figure): Drawing {
   ) => {
     axis(50, 235, 370, 235);
     axis(50, 235, 50, 65);
-    ticks(xmin, xmax, xstep).forEach((v) => {
+    const xticks = ticks(xmin, xmax, xstep);
+    const yticks = ticks(ymin, ymax, ystep);
+    const xlabels = numericLabels(xticks, (v) => xmap(v, xmin, xmax), true);
+    const ylabels = numericLabels(yticks, (v) => ymap(v, ymin, ymax), false);
+    xticks.forEach((v) => {
       const x = xmap(v, xmin, xmax);
       axis(x, 235, x, 240);
-      text(x, 265, v);
+      if (xlabels.includes(v)) text(x, 265, v);
     });
-    ticks(ymin, ymax, ystep).forEach((v) => {
+    yticks.forEach((v) => {
       const y = ymap(v, ymin, ymax);
       axis(45, y, 50, y);
-      text(40, y + 4, v, "end");
+      if (ylabels.includes(v)) text(40, y + 4, v, "end");
     });
     if (xl) text(210, 295, xl);
     if (yl) text(10, 28, yl, "start");
@@ -188,7 +225,9 @@ export function drawFigure(figure: Figure): Drawing {
     ticks(min, max, figure.tick_step).forEach((v) => {
       axis(x(v), y - 6, x(v), y + 6);
     });
-    ticks(min, max, figure.label_step).forEach((v) => text(x(v), y + 30, v));
+    numericLabels(ticks(min, max, figure.label_step), x, true).forEach((v) =>
+      text(x(v), y + 30, v),
+    );
     figure.rays.forEach((r) => {
       if (!inside(r.from, min, max)) return;
       const end = r.direction === "left" ? 50 : 370;
@@ -213,29 +252,55 @@ export function drawFigure(figure: Figure): Drawing {
     const f = figure;
     if (!(f.x_max > f.x_min && f.y_max > f.y_min))
       return { viewBox: "0 0 400 260", elements };
-    const x = (v: number) => xmap(v, f.x_min, f.x_max);
-    const y = (v: number) => ymap(v, f.y_min, f.y_max);
+    const xspan = f.x_max - f.x_min;
+    const yspan = f.y_max - f.y_min;
+    const scale = Math.min(320 / xspan, 270 / yspan);
+    const plotWidth = xspan * scale;
+    const plotHeight = yspan * scale;
+    const left = 210 - plotWidth / 2;
+    const right = left + plotWidth;
+    const top = 45;
+    const bottom = top + plotHeight;
+    height = bottom + 40;
+    const x = (v: number) => left + (v - f.x_min) * scale;
+    const y = (v: number) => bottom - (v - f.y_min) * scale;
+    const xticks = ticks(f.x_min, f.x_max, f.tick_step);
+    const yticks = ticks(f.y_min, f.y_max, f.tick_step);
+    const xlabels = numericLabels(xticks, x, true);
+    const ylabels = numericLabels(yticks, y, false);
     if (inside(0, f.y_min, f.y_max)) {
-      axis(50, y(0), 370, y(0));
-      ticks(f.x_min, f.x_max, f.tick_step).forEach((v) => {
+      axis(left, y(0), right, y(0));
+      xticks.forEach((v) => {
         axis(x(v), y(0) - 4, x(v), y(0) + 4);
-        if (f.show_tick_labels && v !== 0) text(x(v), y(0) + 30, v);
+        if (
+          f.show_tick_labels &&
+          v !== 0 &&
+          xlabels.includes(v) &&
+          (v > 0 || x(0) - x(v) >= 27 + String(v).length * 6)
+        )
+          text(x(v), y(0) + 30, v);
       });
     }
     if (inside(0, f.x_min, f.x_max)) {
-      axis(x(0), 65, x(0), 235);
-      ticks(f.y_min, f.y_max, f.tick_step).forEach((v) => {
+      axis(x(0), top, x(0), bottom);
+      yticks.forEach((v) => {
         axis(x(0) - 4, y(v), x(0) + 4, y(v));
-        if (f.show_tick_labels && v !== 0) text(x(0) - 12, y(v) + 5, v, "end");
+        if (
+          f.show_tick_labels &&
+          v !== 0 &&
+          ylabels.includes(v) &&
+          !(y(v) > y(0) && y(v) - y(0) < 45)
+        )
+          text(x(0) - 12, y(v) + 5, v, "end");
       });
     }
     if (inside(0, f.x_min, f.x_max) && inside(0, f.y_min, f.y_max))
-      text(x(0) + 10, y(0) - 10, "O", "start");
+      text(x(0) - 12, y(0) + 30, "O", "end");
     f.graphs.forEach((g) => {
       if (g.type === "vertical") {
         if (inside(g.c, f.x_min, f.x_max)) {
-          line(x(g.c), 65, x(g.c), 235, 2.5);
-          dotLabel(x(g.c), 75, g.label);
+          line(x(g.c), top, x(g.c), bottom, 2.5);
+          dotLabel(x(g.c), top + 20, g.label);
         }
         return;
       }
@@ -273,7 +338,7 @@ export function drawFigure(figure: Figure): Drawing {
               strokeWidth: 2,
             });
             if (!labelPlaced && g.label) {
-              dotLabel(x(ax), Math.max(85, y(ay)), g.label);
+              dotLabel(x(ax), Math.max(top + 20, y(ay)), g.label);
               labelPlaced = true;
             }
           }
@@ -294,9 +359,11 @@ export function drawFigure(figure: Figure): Drawing {
     const axisY = 67 + Math.max(0, f.series.length - 1) * 48;
     height = axisY + 38;
     axis(50, axisY, 370, axisY);
-    ticks(f.axis_min, f.axis_max, f.axis_step).forEach((v) => {
+    const boxTicks = ticks(f.axis_min, f.axis_max, f.axis_step);
+    const boxLabels = numericLabels(boxTicks, x, true);
+    boxTicks.forEach((v) => {
       axis(x(v), axisY, x(v), axisY + 5);
-      text(x(v), axisY + 30, v);
+      if (boxLabels.includes(v)) text(x(v), axisY + 30, v);
     });
     f.series.forEach((s, i) => {
       if (
@@ -354,9 +421,11 @@ export function drawFigure(figure: Figure): Drawing {
     const y = (v: number) => ymap(v, 0, ymax);
     axis(50, 235, 370, 235);
     axis(50, 235, 50, 65);
-    ticks(0, ymax, f.y_step).forEach((v) => {
+    const yTicks = ticks(0, ymax, f.y_step);
+    const yLabels = numericLabels(yTicks, y, false);
+    yTicks.forEach((v) => {
       axis(45, y(v), 50, y(v));
-      text(40, y(v) + 4, v, "end");
+      if (yLabels.includes(v)) text(40, y(v) + 4, v, "end");
     });
     if (f.x_label) text(210, 295, f.x_label);
     if (f.y_label) text(10, 28, f.y_label, "start");
@@ -373,12 +442,17 @@ export function drawFigure(figure: Figure): Drawing {
       if (!frequency) text(cx, 265, f.categories[i] ?? "");
     });
     if (frequency) {
-      for (let i = 0; i <= count; i++)
-        text(
-          left + band * i,
-          265,
-          Number((f.class_start + f.class_width * i).toPrecision(12)),
-        );
+      const boundaries = Array.from({ length: count + 1 }, (_, i) =>
+        Number((f.class_start + f.class_width * i).toPrecision(12)),
+      );
+      const boundaryX = (value: number) =>
+        left + ((value - f.class_start) / f.class_width) * band;
+      const boundaryLabels = numericLabels(boundaries, boundaryX, true);
+      boundaries.forEach((value) => {
+        const x = boundaryX(value);
+        axis(x, 235, x, 240);
+        if (boundaryLabels.includes(value)) text(x, 265, value);
+      });
       if (f.show_polygon) {
         const pts = [
           [left - band / 2, 235],

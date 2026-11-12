@@ -26,6 +26,18 @@ const choice: FigureData = {
   segments: [],
 };
 
+const denseChoice: FigureData = {
+  kind: "coordinate_plane",
+  x_min: -6,
+  x_max: 6,
+  y_min: -8,
+  y_max: 10,
+  tick_step: 1,
+  show_tick_labels: true,
+  points: [],
+  graphs: [{ type: "quadratic", a: 1, p: 0, q: 0, label: null }],
+};
+
 const examples: FigureData[] = [
   choice,
   {
@@ -96,7 +108,7 @@ test("본문 표와 그림 보기의 화면 너비", async ({ page }, info) => {
           <label className="choice" key={i}>
             <input type="radio" name="answer" />
             <div className="choice-content">
-              {i}. <Figure figure={choice} />
+              {i}. <Figure figure={i === 1 ? denseChoice : choice} />
             </div>
           </label>
         ))}
