@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import BrandMark from "@/components/brand-mark";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
@@ -25,6 +26,7 @@ export default function HomeActions() {
     <header className="home-header">
       <div className="home-header-inner">
         <Link className="home-brand" href="/">
+          <BrandMark />
           수학 개념 체커
         </Link>
         <nav className="home-nav" aria-label="주 메뉴">

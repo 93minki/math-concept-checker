@@ -351,3 +351,10 @@
 - 원인 분류: 기타 (글꼴 교체로 인한 줄 높이 변화)
 - 원인: Pretendard 동적 서브셋은 화면에 처음 나온 글자의 조각을 그때 받고(`font-display: swap`), `body`에 `line-height`가 없어 "normal"(글꼴 지표에 따라 달라짐)이었다. 답을 고르는 사이에 조각이 도착하면 대체 글꼴 → Pretendard로 바뀌며 위쪽 줄 높이가 조금 달라져 이동 버튼이 1px 움직였다. 같은 화면에서 문제 12개를 재었을 때는 차이가 없어(조각이 이미 받아진 상태) 간헐적으로만 드러났다. 이 원인은 줄 높이를 고정하자 사라진 것으로 확인했고, 글꼴 도착 시점을 직접 재지는 않았다.
 - 해결: `globals.css`에 `body { line-height: 1.5 }`, 제목 `h1~h4 { line-height: 1.3 }`를 지정(Opus). 이어서 서술형 답 칸 높이(140px)가 공통 입력창 규칙(48px)에 덮인 결함도 함께 고침. 재실행: `pnpm test:e2e:dev`(임시 설정으로 3100·8100 포트) 두 번 연속 3개 모두 통과.
+
+### 2026-11-12 — frontend/e2e/home.spec.ts:/login?login=1 화면은 가로로 넘치지 않는다, /login?login=1 화면은 스크립트 실행 전에도 비밀번호를 주소로 보내지 않는다
+- 작업: UI 고도화 단계 4, 머리말 아이콘·파비콘 추가 (F-01)
+- 증상: 데스크톱·모바일 4건 실패. `locator('main')`, `locator('form')`가 strict mode에서 2개로 잡힘. 직전 실행(아이콘 추가 전)에서는 같은 테스트가 통과했다.
+- 원인 분류: 기타 (임시 시안 장치의 Suspense 대체본)
+- 원인: 단계 2에서 넣은 임시 시안 장치가 루트 레이아웃에서 `<Suspense fallback={children}><VariantProvider>{children}</VariantProvider></Suspense>`로 화면 전체를 감쌌다. `/login?login=1`은 `searchParams`를 기다리는 동적 화면이라 이 경계가 대체본(같은 `children`)을 먼저 보내고 진짜 화면을 숨긴 `<div hidden id="S:0">`로 이어 보냈다(응답 HTML에서 `<main>`·`<dialog>`가 두 벌인 것을 `curl`로 확인). 스크립트가 바꿔 끼우기 전에는 폼과 `id="email"`이 두 벌이다. 이전 실행의 통과·실패는 응답 타이밍에 따라 갈린 것으로 본다.
+- 해결: 쓰는 곳이 없어진 임시 시안 장치(`src/app/variant.tsx`, `variant.test.ts`, `data-variant`, 루트 Suspense)를 지움(Opus). 재실행: 프론트엔드 검사 전부, `pnpm test:e2e` 두 번 연속 26개 통과, `pnpm test:e2e:dev` 3개 통과.

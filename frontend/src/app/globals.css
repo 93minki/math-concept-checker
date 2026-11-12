@@ -324,18 +324,12 @@ a {
   gap: 12px;
 }
 .home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.15rem;
   font-weight: 750;
   white-space: nowrap;
-}
-.home-brand::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--primary);
-  margin-right: 8px;
 }
 .home-nav {
   display: flex;

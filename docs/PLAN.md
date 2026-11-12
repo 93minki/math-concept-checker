@@ -110,6 +110,10 @@
   - 시안 장치(`login/variants/`, `?__variant=`)와 고르지 않은 시안은 지움. `e2e/home.spec.ts` 터치 크기 검사는 `:visible`만 본다(닫힌 dialog 안 요소는 상자가 없음).
   - 검사: 프론트엔드 format·lint·typecheck·단위 110·build·E2E 26 통과, 백엔드 179(Codex). 랜딩·모달 1280·360 × 라이트·다크 캡처, 가로 넘침·콘솔 오류 없음.
 
+- 2026-11-12: 머리말 아이콘·파비콘. Cursor 아이콘 시안 3회(루트 체크·개념 막대 → 가로·세로 막대 → 도장·노트·미지수·토글), **사용자가 "H 켜진 토글"을 고름**("개념 이해도가 켜졌다"). Opus가 16px용으로 다듬어 `src/app/icon.svg`(파비콘, Next `app-icons.md`)와 `src/components/brand-mark.tsx`(로그인 전·후 머리말)에 넣고 Next 기본 `favicon.ico`를 지움.
+  - 임시 시안 장치(`variant.tsx`, `?variant=`)를 예정보다 일찍 지움: 루트 Suspense가 동적 화면을 두 벌 그리는 문제(`TEST_LOG.md`). 단계 4의 화면별 시안은 `/variant` 스킬의 `?__variant=` 장치로 만든다.
+  - 사용자 지시(2026-11-12, 다음 작업): 주소는 로그아웃 `/` = 랜딩, `/login` = 로그인 전용 페이지(모달 없음, `?login=1` 없앰), 로그인 `/` = 단원 선택. 색 조합이 마음에 안 듦 → 색 A/B 다시. 약관 동의·탈퇴는 다음 계획(`PROGRESS.md`).
+
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
 - 끝내지 못한 일:

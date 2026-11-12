@@ -157,6 +157,12 @@ test.each([
     expect(
       screen.getByRole("link", { name: "수학 개념 체커" }).getAttribute("href"),
     ).toBe("/");
+    // The icon is decorative: the link is still named by its text.
+    expect(
+      screen
+        .getByRole("link", { name: "수학 개념 체커" })
+        .querySelector('svg.brand-mark[aria-hidden="true"]'),
+    ).not.toBeNull();
     const login = screen.getByRole("link", { name: "로그인" });
     const signup = screen.getByRole("link", { name: "회원가입" });
     expect(login.getAttribute("href")).toBe("/login?login=1");

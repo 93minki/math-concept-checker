@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import BrandMark from "@/components/brand-mark";
 import { usePathname } from "next/navigation";
 
 export default function AuthHeader() {
@@ -9,6 +10,7 @@ export default function AuthHeader() {
     <header className="home-header auth-header">
       <div className="home-header-inner">
         <Link className="home-brand" href="/">
+          <BrandMark />
           수학 개념 체커
         </Link>
         <div className="auth-header-actions">

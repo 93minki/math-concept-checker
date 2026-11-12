@@ -30,6 +30,12 @@ test.each(["지난 기록 화면", "진단 화면"])(
     expect(
       screen.getByRole("link", { name: "수학 개념 체커" }).getAttribute("href"),
     ).toBe("/");
+    // The icon is decorative: the link is still named by its text.
+    expect(
+      screen
+        .getByRole("link", { name: "수학 개념 체커" })
+        .querySelector('svg.brand-mark[aria-hidden="true"]'),
+    ).not.toBeNull();
     expect(
       screen.getByRole("link", { name: "지난 기록" }).getAttribute("href"),
     ).toBe("/history");
