@@ -985,3 +985,84 @@ test("반비례 SVG는 곡선 뒤에 눈금 글자와 흰 테두리를 출력한
     }
   }
 });
+
+test("작은 도형의 글자는 서로 겹치거나 다른 선분을 가리지 않는다", async () => {
+  const { default: examples } = await import("./crowded-examples.json");
+  for (const [index, input] of examples.entries()) {
+    const figure = input as Figure;
+    if (figure.kind !== "geometry") throw new Error("geometry 필요");
+    const elements = drawFigure(figure).elements;
+    const texts = elements.filter((element) => element.tag === "text");
+    const boxes = texts.map((element) => {
+      const x = Number(element.attrs.x),
+        y = Number(element.attrs.y);
+      const half = Array.from(element.text!).length * 6;
+      return { left: x - half, right: x + half, top: y - 16, bottom: y + 4 };
+    });
+    for (let i = 0; i < boxes.length; i++) {
+      for (let j = 0; j < i; j++) {
+        const a = boxes[i],
+          b = boxes[j];
+        expect(
+          a.left < b.right &&
+            a.right > b.left &&
+            a.top < b.bottom &&
+            a.bottom > b.top,
+          `그림 ${index}: ${texts[i].text}, ${texts[j].text}`,
+        ).toBe(false);
+      }
+    }
+    const points = new Map(
+      figure.points.map((point) => {
+        const label = texts.find(
+          (element) =>
+            element.text === point.id &&
+            element.attrs["data-point-x"] !== undefined,
+        )!;
+        return [
+          point.id,
+          [
+            Number(label.attrs["data-point-x"]),
+            Number(label.attrs["data-point-y"]),
+          ],
+        ];
+      }),
+    );
+    for (const segment of figure.segments) {
+      const a = points.get(segment.from)!,
+        b = points.get(segment.to)!;
+      expect(Math.hypot(a[0] - b[0], a[1] - b[1])).toBeGreaterThanOrEqual(
+        29.999,
+      );
+    }
+    let labelIndex = 0;
+    for (const segment of figure.segments) {
+      if (!segment.label) continue;
+      const rect = boxes[labelIndex++];
+      for (const other of figure.segments) {
+        if (other === segment) continue;
+        const a = points.get(other.from)!,
+          b = points.get(other.to)!;
+        let low = 0,
+          high = 1;
+        for (const [origin, delta, min, max] of [
+          [a[0], b[0] - a[0], rect.left, rect.right],
+          [a[1], b[1] - a[1], rect.top, rect.bottom],
+        ]) {
+          if (Math.abs(delta) < 1e-9) {
+            if (origin < min || origin > max) low = 2;
+          } else {
+            const first = (min - origin) / delta,
+              last = (max - origin) / delta;
+            low = Math.max(low, Math.min(first, last));
+            high = Math.min(high, Math.max(first, last));
+          }
+        }
+        expect(
+          low <= high,
+          `그림 ${index}: ${segment.label} / ${other.from}${other.to}`,
+        ).toBe(false);
+      }
+    }
+  }
+});

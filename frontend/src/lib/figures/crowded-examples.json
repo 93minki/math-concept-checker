@@ -1,0 +1,630 @@
+[
+  {
+    "angles": [
+      {
+        "from": "A",
+        "label": null,
+        "marks": 1,
+        "right": false,
+        "to": "C",
+        "vertex": "B"
+      },
+      {
+        "from": "D",
+        "label": null,
+        "marks": 1,
+        "right": false,
+        "to": "F",
+        "vertex": "E"
+      }
+    ],
+    "arcs": [],
+    "circles": [],
+    "kind": "geometry",
+    "lines": [],
+    "points": [
+      { "dot": false, "id": "A", "show_name": true, "x": 0.0, "y": 0.0 },
+      { "dot": false, "id": "B", "show_name": true, "x": 7.0, "y": 0.0 },
+      {
+        "dot": false,
+        "id": "C",
+        "show_name": true,
+        "x": 4.642857,
+        "y": 1.855769
+      },
+      { "dot": false, "id": "D", "show_name": true, "x": 10.0, "y": 0.0 },
+      { "dot": false, "id": "E", "show_name": true, "x": 24.0, "y": 0.0 },
+      {
+        "dot": false,
+        "id": "F",
+        "show_name": true,
+        "x": 11.428571,
+        "y": 9.897433
+      }
+    ],
+    "polygons": [],
+    "segments": [
+      {
+        "dashed": false,
+        "from": "A",
+        "label": "7",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "B"
+      },
+      {
+        "dashed": false,
+        "from": "B",
+        "label": "3",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "C"
+      },
+      {
+        "dashed": false,
+        "from": "C",
+        "label": "5",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "A"
+      },
+      {
+        "dashed": false,
+        "from": "D",
+        "label": "14",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "E"
+      },
+      {
+        "dashed": false,
+        "from": "E",
+        "label": "16",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "F"
+      },
+      {
+        "dashed": false,
+        "from": "F",
+        "label": "10",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "D"
+      }
+    ]
+  },
+  {
+    "angles": [
+      {
+        "from": "B",
+        "label": "60°",
+        "marks": 0,
+        "right": false,
+        "to": "C",
+        "vertex": "A"
+      },
+      {
+        "from": "E",
+        "label": "60°",
+        "marks": 0,
+        "right": false,
+        "to": "F",
+        "vertex": "D"
+      }
+    ],
+    "arcs": [],
+    "circles": [],
+    "kind": "geometry",
+    "lines": [],
+    "points": [
+      { "dot": false, "id": "A", "show_name": true, "x": 0.0, "y": 0.0 },
+      { "dot": false, "id": "B", "show_name": true, "x": 4.0, "y": 0.0 },
+      {
+        "dot": false,
+        "id": "C",
+        "show_name": true,
+        "x": 1.5,
+        "y": 2.598076211
+      },
+      { "dot": false, "id": "D", "show_name": true, "x": 7.0, "y": 0.0 },
+      { "dot": false, "id": "E", "show_name": true, "x": 15.0, "y": 0.0 },
+      {
+        "dot": false,
+        "id": "F",
+        "show_name": true,
+        "x": 10.0,
+        "y": 5.196152423
+      }
+    ],
+    "polygons": [],
+    "segments": [
+      {
+        "dashed": false,
+        "from": "A",
+        "label": "4",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "B"
+      },
+      {
+        "dashed": false,
+        "from": "A",
+        "label": "3",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "C"
+      },
+      {
+        "dashed": false,
+        "from": "B",
+        "label": null,
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "C"
+      },
+      {
+        "dashed": false,
+        "from": "D",
+        "label": "8",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "E"
+      },
+      {
+        "dashed": false,
+        "from": "D",
+        "label": "6",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "F"
+      },
+      {
+        "dashed": false,
+        "from": "E",
+        "label": null,
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "F"
+      }
+    ]
+  },
+  {
+    "angles": [
+      {
+        "from": "A",
+        "label": null,
+        "marks": 1,
+        "right": false,
+        "to": "C",
+        "vertex": "B"
+      },
+      {
+        "from": "D",
+        "label": null,
+        "marks": 1,
+        "right": false,
+        "to": "F",
+        "vertex": "E"
+      }
+    ],
+    "arcs": [],
+    "circles": [],
+    "kind": "geometry",
+    "lines": [],
+    "points": [
+      { "dot": false, "id": "A", "show_name": true, "x": 0.0, "y": 0.0 },
+      { "dot": false, "id": "B", "show_name": true, "x": 4.0, "y": 0.0 },
+      { "dot": false, "id": "C", "show_name": true, "x": 0.0, "y": 3.0 },
+      { "dot": false, "id": "D", "show_name": true, "x": 7.0, "y": 0.0 },
+      { "dot": false, "id": "E", "show_name": true, "x": 15.0, "y": 0.0 },
+      { "dot": false, "id": "F", "show_name": true, "x": 12.76, "y": 1.68 }
+    ],
+    "polygons": [],
+    "segments": [
+      {
+        "dashed": false,
+        "from": "A",
+        "label": "4",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "B"
+      },
+      {
+        "dashed": false,
+        "from": "B",
+        "label": "5",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "C"
+      },
+      {
+        "dashed": false,
+        "from": "C",
+        "label": "3",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "A"
+      },
+      {
+        "dashed": false,
+        "from": "D",
+        "label": "8",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "E"
+      },
+      {
+        "dashed": false,
+        "from": "E",
+        "label": "2.8",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "F"
+      },
+      {
+        "dashed": false,
+        "from": "F",
+        "label": "6",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "D"
+      }
+    ]
+  },
+  {
+    "angles": [
+      {
+        "from": "D",
+        "label": null,
+        "marks": 0,
+        "right": true,
+        "to": "B",
+        "vertex": "A"
+      },
+      {
+        "from": "A",
+        "label": null,
+        "marks": 0,
+        "right": true,
+        "to": "C",
+        "vertex": "B"
+      },
+      {
+        "from": "B",
+        "label": null,
+        "marks": 0,
+        "right": true,
+        "to": "D",
+        "vertex": "C"
+      },
+      {
+        "from": "C",
+        "label": null,
+        "marks": 0,
+        "right": true,
+        "to": "A",
+        "vertex": "D"
+      },
+      {
+        "from": "H",
+        "label": null,
+        "marks": 0,
+        "right": true,
+        "to": "F",
+        "vertex": "E"
+      },
+      {
+        "from": "E",
+        "label": null,
+        "marks": 0,
+        "right": true,
+        "to": "G",
+        "vertex": "F"
+      },
+      {
+        "from": "F",
+        "label": null,
+        "marks": 0,
+        "right": true,
+        "to": "H",
+        "vertex": "G"
+      },
+      {
+        "from": "G",
+        "label": null,
+        "marks": 0,
+        "right": true,
+        "to": "E",
+        "vertex": "H"
+      }
+    ],
+    "arcs": [],
+    "circles": [],
+    "kind": "geometry",
+    "lines": [],
+    "points": [
+      { "dot": false, "id": "A", "show_name": true, "x": 0.0, "y": 0.0 },
+      { "dot": false, "id": "B", "show_name": true, "x": 4.0, "y": 0.0 },
+      { "dot": false, "id": "C", "show_name": true, "x": 4.0, "y": 2.0 },
+      { "dot": false, "id": "D", "show_name": true, "x": 0.0, "y": 2.0 },
+      { "dot": false, "id": "E", "show_name": true, "x": 6.0, "y": 0.0 },
+      { "dot": false, "id": "F", "show_name": true, "x": 12.0, "y": 0.0 },
+      { "dot": false, "id": "G", "show_name": true, "x": 12.0, "y": 2.0 },
+      { "dot": false, "id": "H", "show_name": true, "x": 6.0, "y": 2.0 }
+    ],
+    "polygons": [],
+    "segments": [
+      {
+        "dashed": false,
+        "from": "A",
+        "label": "4",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "B"
+      },
+      {
+        "dashed": false,
+        "from": "B",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "C"
+      },
+      {
+        "dashed": false,
+        "from": "C",
+        "label": "4",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "D"
+      },
+      {
+        "dashed": false,
+        "from": "D",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "A"
+      },
+      {
+        "dashed": false,
+        "from": "E",
+        "label": "6",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "F"
+      },
+      {
+        "dashed": false,
+        "from": "F",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "G"
+      },
+      {
+        "dashed": false,
+        "from": "G",
+        "label": "6",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "H"
+      },
+      {
+        "dashed": false,
+        "from": "H",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "E"
+      }
+    ]
+  },
+  {
+    "angles": [
+      {
+        "from": "B",
+        "label": "60°",
+        "marks": 0,
+        "right": false,
+        "to": "D",
+        "vertex": "A"
+      },
+      {
+        "from": "C",
+        "label": "120°",
+        "marks": 0,
+        "right": false,
+        "to": "A",
+        "vertex": "B"
+      },
+      {
+        "from": "F",
+        "label": "45°",
+        "marks": 0,
+        "right": false,
+        "to": "H",
+        "vertex": "E"
+      },
+      {
+        "from": "G",
+        "label": "135°",
+        "marks": 0,
+        "right": false,
+        "to": "E",
+        "vertex": "F"
+      }
+    ],
+    "arcs": [],
+    "circles": [],
+    "kind": "geometry",
+    "lines": [],
+    "points": [
+      { "dot": false, "id": "A", "show_name": true, "x": 0.0, "y": 0.0 },
+      { "dot": false, "id": "B", "show_name": true, "x": 2.0, "y": 0.0 },
+      {
+        "dot": false,
+        "id": "C",
+        "show_name": true,
+        "x": 3.0,
+        "y": 1.732050808
+      },
+      {
+        "dot": false,
+        "id": "D",
+        "show_name": true,
+        "x": 1.0,
+        "y": 1.732050808
+      },
+      { "dot": false, "id": "E", "show_name": true, "x": 6.0, "y": 0.0 },
+      { "dot": false, "id": "F", "show_name": true, "x": 9.0, "y": 0.0 },
+      {
+        "dot": false,
+        "id": "G",
+        "show_name": true,
+        "x": 11.121320344,
+        "y": 2.121320344
+      },
+      {
+        "dot": false,
+        "id": "H",
+        "show_name": true,
+        "x": 8.121320344,
+        "y": 2.121320344
+      }
+    ],
+    "polygons": [],
+    "segments": [
+      {
+        "dashed": false,
+        "from": "A",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "B"
+      },
+      {
+        "dashed": false,
+        "from": "B",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "C"
+      },
+      {
+        "dashed": false,
+        "from": "C",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "D"
+      },
+      {
+        "dashed": false,
+        "from": "D",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "A"
+      },
+      {
+        "dashed": false,
+        "from": "E",
+        "label": "3",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "F"
+      },
+      {
+        "dashed": false,
+        "from": "F",
+        "label": "3",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "G"
+      },
+      {
+        "dashed": false,
+        "from": "G",
+        "label": "3",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "H"
+      },
+      {
+        "dashed": false,
+        "from": "H",
+        "label": "3",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "E"
+      }
+    ]
+  },
+  {
+    "angles": [],
+    "arcs": [],
+    "circles": [],
+    "kind": "geometry",
+    "lines": [],
+    "points": [
+      { "dot": false, "id": "A", "show_name": true, "x": 0.0, "y": 6.0 },
+      { "dot": false, "id": "B", "show_name": true, "x": -3.6, "y": 1.2 },
+      { "dot": false, "id": "C", "show_name": true, "x": 14.4, "y": 1.2 },
+      { "dot": false, "id": "D", "show_name": true, "x": -1.2, "y": 4.4 },
+      { "dot": false, "id": "E", "show_name": true, "x": 4.8, "y": 4.4 }
+    ],
+    "polygons": [],
+    "segments": [
+      {
+        "dashed": false,
+        "from": "A",
+        "label": "2",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "D"
+      },
+      {
+        "dashed": false,
+        "from": "D",
+        "label": "4",
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "B"
+      },
+      {
+        "dashed": false,
+        "from": "A",
+        "label": null,
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "E"
+      },
+      {
+        "dashed": false,
+        "from": "E",
+        "label": null,
+        "parallel_marks": 0,
+        "ticks": 0,
+        "to": "C"
+      },
+      {
+        "dashed": false,
+        "from": "D",
+        "label": "x",
+        "parallel_marks": 1,
+        "ticks": 0,
+        "to": "E"
+      },
+      {
+        "dashed": false,
+        "from": "B",
+        "label": "18",
+        "parallel_marks": 1,
+        "ticks": 0,
+        "to": "C"
+      }
+    ]
+  }
+]

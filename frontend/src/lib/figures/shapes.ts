@@ -82,6 +82,7 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
   const pointAnchors = new Map<Element, Point>();
   const vertexCenters = new Map<Element, Point>();
   const angleLimits = new Map<Element, { center: Point; radius: number }>();
+  const segmentLabels = new Map<Element, [Point, Point]>();
   const add = (tag: Element["tag"], attrs: Element["attrs"], text?: string) =>
     elements.push({ tag, attrs, ...(text === undefined ? {} : { text }) });
   const path = (points: Point[], dashed = false, fill = "none", width = 1.5) =>
@@ -162,9 +163,18 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
       xmax = Math.max(...xs),
       ymin = Math.min(...ys),
       ymax = Math.max(...ys);
-    const scale = Math.min(
-      290 / Math.max(xmax - xmin, 1),
-      230 / Math.max(ymax - ymin, 1),
+    const shortest = Math.min(
+      ...f.segments
+        .map((segment) => {
+          const a = original.get(segment.from)!,
+            b = original.get(segment.to)!;
+          return Math.hypot(a.x - b.x, a.y - b.y);
+        })
+        .filter((length) => length > 0),
+    );
+    const scale = Math.max(
+      Math.min(290 / Math.max(xmax - xmin, 1), 230 / Math.max(ymax - ymin, 1)),
+      30 / shortest,
     );
     const convert = (p: Point) => ({
       x: 200 + (p.x - (xmin + xmax) / 2) * scale,
@@ -253,8 +263,10 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
       line(a, b, s.dashed);
       marks(a, b, s.ticks, false);
       marks(a, b, s.parallel_marks, true);
-      if (s.label)
+      if (s.label) {
         text({ x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 - 10 }, s.label);
+        segmentLabels.set(elements[elements.length - 1], [a, b]);
+      }
     }
     for (const l of f.lines) {
       const a = get(l.from),
@@ -662,6 +674,27 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
         );
         if (outward.length) candidates = outward;
       }
+    } else if (segmentLabels.has(element)) {
+      const [a, b] = segmentLabels.get(element)!;
+      const length = Math.hypot(b.x - a.x, b.y - a.y) || 1;
+      const normal = { x: -(b.y - a.y) / length, y: (b.x - a.x) / length };
+      candidates = [15, 25, 35, 50, 70, 90].flatMap((distance) =>
+        [1, -1].map((sign) => ({
+          x: (a.x + b.x) / 2 + sign * normal.x * distance,
+          y: (a.y + b.y) / 2 + sign * normal.y * distance + 6,
+        })),
+      );
+    } else if (angleLimits.has(element)) {
+      const limit = angleLimits.get(element)!;
+      const dx = original.x - limit.center.x,
+        dy = original.y - limit.center.y;
+      const length = Math.hypot(dx, dy);
+      candidates = [0, -5, 5, -10, 10, 20, 30, 40, 55, 70, 90].map(
+        (offset) => ({
+          x: original.x + (dx / length) * offset,
+          y: original.y + (dy / length) * offset,
+        }),
+      );
     } else {
       candidates = [{ x: original.x, y: original.y }];
       for (const distance of [12, 24, 36, 52, 70, 90])
@@ -721,6 +754,7 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
       w = Array.from(e.text!).length * 20;
     left = Math.min(left, Math.floor(x - w / 2 - 4));
     right = Math.max(right, Math.ceil(x + w / 2 + 4));
+    top = Math.min(top, Math.floor(Number(e.attrs.y) - 20));
     height = Math.max(height, Number(e.attrs.y) + 8);
   }
   for (const element of elements) {
