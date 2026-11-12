@@ -1,21 +1,4 @@
-:root[data-variant="a"] {
-  --bg: #fff;
-  --surface: #fff;
-  --border: #e2e5ea;
-  --shadow: none;
-  --text: #1a1d23;
-  --muted: #5b6270;
-  --primary: #2457d6;
-  --primary-text: #fff;
-  --primary-soft: #eaf0fd;
-  --warn-soft: #fff4e0;
-  --radius: 8px;
-  --control-h: 40px;
-  --gap: 12px;
-  --base-size: 15px;
-  --content-width: 960px;
-}
-:root[data-variant="b"] {
+:root {
   --bg: #f3f6ff;
   --surface: #fff;
   --border: transparent;
@@ -26,6 +9,8 @@
   --primary-text: #fff;
   --primary-soft: #e8ebff;
   --warn-soft: #fff1d6;
+  --danger: #a42135;
+  --danger-soft: #fff0f2;
   --radius: 16px;
   --control-h: 48px;
   --gap: 16px;
@@ -33,18 +18,7 @@
   --content-width: 720px;
 }
 @media (prefers-color-scheme: dark) {
-  :root[data-variant="a"] {
-    --bg: #0f1115;
-    --surface: #171a21;
-    --border: #2b303b;
-    --text: #e8eaee;
-    --muted: #9aa3b2;
-    --primary: #6f9bff;
-    --primary-text: #0f1115;
-    --primary-soft: #1b2742;
-    --warn-soft: #3a2f17;
-  }
-  :root[data-variant="b"] {
+  :root {
     --bg: #121521;
     --surface: #1c2133;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -54,6 +28,8 @@
     --primary-text: #121521;
     --primary-soft: #262c52;
     --warn-soft: #3d3118;
+    --danger: #ffb3bf;
+    --danger-soft: #4b2330;
   }
 }
 html {
@@ -80,10 +56,20 @@ body {
     "Malgun Gothic",
     sans-serif;
   font-size: var(--base-size);
+  /* A fixed number keeps line boxes the same height when a Pretendard subset
+     arrives after the fallback font (font-display: swap). */
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   align-items: center;
   padding: 0 16px 24px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
 }
 
 * {
@@ -115,15 +101,8 @@ a {
 }
 
 .auth-card input,
-.auth-card button {
+.auth-card .btn {
   width: 100%;
-  min-height: 44px;
-  padding: 10px 12px;
-  font: inherit;
-}
-
-.auth-card button {
-  cursor: pointer;
 }
 
 .auth-card p {
@@ -142,8 +121,6 @@ a {
   min-width: 0;
 }
 .unit-card {
-  border: 1px solid #888;
-  border-radius: 12px;
   padding: 16px;
 }
 .study-page button,
@@ -213,8 +190,11 @@ a {
 .submit-dialog {
   width: min(100vw - 32px, 360px);
   max-width: 100%;
-  border: 1px solid #888;
-  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
   padding: 16px;
   margin: auto;
 }
@@ -242,8 +222,9 @@ a {
   background: #fff;
   color: #111;
   color-scheme: light;
-  border: 1px solid #888;
-  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 16px;
 }
 .problem-sheet .choice:has(input:checked) {
@@ -329,22 +310,19 @@ a {
 }
 .home-header-inner {
   width: min(100% - 32px, var(--content-width));
-  height: 56px;
+  height: 64px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
 }
-:root[data-variant="b"] .home-header-inner {
-  height: 64px;
-}
 .home-brand {
   font-size: 1.15rem;
   font-weight: 750;
   white-space: nowrap;
 }
-:root[data-variant="b"] .home-brand::before {
+.home-brand::before {
   content: "";
   display: inline-block;
   width: 10px;
@@ -405,11 +383,8 @@ a {
 }
 .unit-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--gap);
-}
-:root[data-variant="b"] .unit-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
 }
 .unit-card {
   gap: 8px;
@@ -447,7 +422,7 @@ a {
   background: var(--border);
   box-shadow: inset 0 0 0 1px var(--muted);
 }
-:root[data-variant="b"] .unit-card.in-progress {
+.unit-card.in-progress {
   border-left: 4px solid var(--primary);
 }
 .unit-actions {
@@ -457,41 +432,7 @@ a {
   gap: 8px;
   margin-top: 8px;
 }
-.unit-actions button,
-.unit-resume,
-.unit-conflict button,
-.unit-conflict .study-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: max(44px, var(--control-h));
-  padding: 8px 12px;
-  border: 1px solid var(--primary);
-  border-radius: var(--radius);
-  background: var(--primary);
-  color: var(--primary-text);
-  text-decoration: none;
-  font: inherit;
-  cursor: pointer;
-}
-.unit-resume,
-:root[data-variant="b"] .start-existing,
-:root[data-variant="b"] .unit-actions button:not(.start-existing) {
-  background: var(--surface);
-  color: var(--primary);
-}
-:root[data-variant="b"] .unit-resume {
-  background: var(--primary);
-  color: var(--primary-text);
-}
-.unit-actions button:disabled,
-.unit-conflict button:disabled {
-  background: #767676;
-  color: #fff;
-  border-color: #767676;
-  cursor: not-allowed;
-}
-:root[data-variant="b"] .unit-actions > * {
+.unit-actions > * {
   width: 100%;
 }
 .unit-conflict {
@@ -515,8 +456,7 @@ a {
   color: var(--primary-text);
 }
 @media (max-width: 599px) {
-  .unit-grid,
-  :root[data-variant="b"] .unit-grid {
+  .unit-grid {
     grid-template-columns: minmax(0, 1fr);
   }
   .unit-actions > * {
@@ -525,4 +465,63 @@ a {
   .home-page {
     margin-top: 28px;
   }
+}
+
+/* Shared controls and feedback outside the problem sheet. */
+.auth-card {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.auth-card input,
+.study-page input:not([type="radio"]),
+.study-page textarea {
+  min-height: var(--control-h);
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.study-page textarea {
+  min-height: 140px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-h);
+  padding: 8px 12px;
+  font: inherit;
+  text-decoration: none;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: var(--primary-text);
+  cursor: pointer;
+}
+.btn-secondary {
+  background: var(--surface);
+  color: var(--primary);
+}
+.btn:disabled {
+  background: #767676;
+  border-color: #767676;
+  color: #fff;
+  cursor: not-allowed;
+}
+[role="alert"] {
+  color: var(--danger);
+  background: var(--danger-soft);
+  border-radius: var(--radius);
+  padding: 12px;
+}
+.study-link {
+  min-height: 44px;
+  padding-inline: 0;
+  color: var(--primary);
 }

@@ -50,7 +50,9 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
       {error && (
         <Notice role="alert">
           <p>{error}</p>
-          <button onClick={() => void load()}>다시 시도</button>
+          <button className="btn" onClick={() => void load()}>
+            다시 시도
+          </button>
         </Notice>
       )}
       {report && (

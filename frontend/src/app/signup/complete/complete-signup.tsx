@@ -46,6 +46,7 @@ export default function CompleteSignup() {
         <>
           <p role="alert">가입을 마무리하지 못했어요. 다시 시도해 주세요.</p>
           <button
+            className="btn"
             type="button"
             onClick={() => {
               setBusy(true);

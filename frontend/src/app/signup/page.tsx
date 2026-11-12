@@ -59,7 +59,7 @@ export default function SignupPage() {
           required
           minLength={6}
         />
-        <button disabled={busy || !hydrated} type="submit">
+        <button className="btn" disabled={busy || !hydrated} type="submit">
           가입하기
         </button>
       </form>

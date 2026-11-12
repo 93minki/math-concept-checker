@@ -101,6 +101,7 @@ export default function History() {
         <div role="alert">
           <p>지난 기록을 불러오지 못했어요.</p>
           <button
+            className="btn"
             disabled={loading}
             onClick={() =>
               void loadMore(items === null ? undefined : (next ?? undefined))
@@ -111,7 +112,11 @@ export default function History() {
         </div>
       )}
       {next && !error && (
-        <button disabled={loading} onClick={() => void loadMore(next)}>
+        <button
+          className="btn btn-secondary"
+          disabled={loading}
+          onClick={() => void loadMore(next)}
+        >
           더 보기
         </button>
       )}

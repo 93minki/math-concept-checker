@@ -1,3 +1,4 @@
+import HomeActions from "./home-actions";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
@@ -18,5 +19,10 @@ export default async function ProtectedLayout({
     .maybeSingle();
   if (error) throw new Error("가입 상태를 확인하지 못했어요.");
   if (profile?.signup_status !== "completed") redirect("/signup/complete");
-  return children;
+  return (
+    <>
+      <HomeActions />
+      {children}
+    </>
+  );
 }

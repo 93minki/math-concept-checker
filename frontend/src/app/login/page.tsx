@@ -69,11 +69,16 @@ export default function LoginPage() {
           autoComplete="current-password"
           required
         />
-        <button disabled={busy || !hydrated} type="submit">
+        <button className="btn" disabled={busy || !hydrated} type="submit">
           로그인
         </button>
       </form>
-      <button disabled={busy || !hydrated} onClick={kakao} type="button">
+      <button
+        className="btn btn-secondary"
+        disabled={busy || !hydrated}
+        onClick={kakao}
+        type="button"
+      >
         카카오로 시작하기
       </button>
       <p>

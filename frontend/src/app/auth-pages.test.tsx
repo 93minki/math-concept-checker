@@ -7,6 +7,8 @@ import {
 } from "@testing-library/react";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
 import LoginPage from "./login/page";
+import LoginLayout from "./login/layout";
+import SignupLayout from "./signup/layout";
 import SignupPage from "./signup/page";
 import HomeActions from "./(protected)/home-actions";
 
@@ -129,5 +131,20 @@ test.each([
     expect(container.querySelector("form")?.getAttribute("method")).toBe(
       "post",
     );
+  },
+);
+
+test.each([LoginLayout, SignupLayout])(
+  "인증 화면 머리말은 서비스 이름만 표시한다",
+  (Layout) => {
+    render(
+      <Layout>
+        <div>화면</div>
+      </Layout>,
+    );
+    expect(
+      screen.getByRole("link", { name: "수학 개념 체커" }).getAttribute("href"),
+    ).toBe("/");
+    expect(screen.queryByRole("navigation")).toBeNull();
   },
 );

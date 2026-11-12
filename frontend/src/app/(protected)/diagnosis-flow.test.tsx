@@ -8,7 +8,6 @@ import {
 } from "@testing-library/react";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
 import UnitSelection from "./unit-selection";
-import { VariantContext } from "../variant";
 import DiagnosisView from "./diagnoses/[id]/diagnosis-view";
 import { ApiError, type Diagnosis, type Unit } from "@/lib/diagnosis-api";
 
@@ -69,21 +68,14 @@ const threeGrades: Unit[] = [
   ...units,
   { ...units[1], id: 3, grade: "중3", name: "도형과 식", status: "full" },
 ];
-test("A 학년 제목과 B 탭, 검색 및 진행 상태", async () => {
+test("학년 탭과 검색 및 진행 상태", async () => {
   mocks.getUnits.mockResolvedValue(threeGrades);
-  const first = render(<UnitSelection />);
-  expect(await screen.findByRole("heading", { name: "중1" })).toBeTruthy();
-  expect(screen.getByRole("heading", { name: "중2" })).toBeTruthy();
-  expect(screen.getByRole("heading", { name: "중3" })).toBeTruthy();
-  first.unmount();
-  render(
-    <VariantContext.Provider value="b">
-      <UnitSelection />
-    </VariantContext.Provider>,
-  );
+  render(<UnitSelection />);
   expect(await screen.findByText("진행 중")).toBeTruthy();
   expect(screen.getByRole("link", { name: "이어서 풀기" })).toBeTruthy();
   expect(screen.getAllByRole("tab")).toHaveLength(3);
+  expect(document.querySelector(".grade-chip")).toBeNull();
+  expect(screen.getByText("동아출판 기준")).toBeTruthy();
   expect(screen.queryByRole("heading", { name: "2. 도형" })).toBeNull();
   fireEvent.click(screen.getByRole("tab", { name: "중2" }));
   expect(screen.getByRole("heading", { name: "2. 도형" })).toBeTruthy();
@@ -93,6 +85,7 @@ test("A 학년 제목과 B 탭, 검색 및 진행 상태", async () => {
   });
   expect(screen.getByRole("heading", { name: "1. 문자와 식" })).toBeTruthy();
   expect(screen.getByRole("heading", { name: "2. 도형과 식" })).toBeTruthy();
+  expect(document.querySelectorAll(".grade-chip")).toHaveLength(2);
 });
 const diagnosis: Diagnosis = {
   id: "d",
@@ -157,12 +150,14 @@ afterEach(() => {
 });
 test("학년과 상태를 표시하고 별칭으로 검색한다", async () => {
   render(<UnitSelection />);
-  expect(await screen.findByText("중1 · 동아출판 기준")).toBeTruthy();
+  expect(await screen.findByText("동아출판 기준")).toBeTruthy();
   expect(screen.getByText("이 단원은 일부 내용만 진단해요")).toBeTruthy();
+  fireEvent.click(screen.getByRole("tab", { name: "중2" }));
   expect(
     (screen.getByRole("button", { name: "준비 중" }) as HTMLButtonElement)
       .disabled,
   ).toBe(true);
+  fireEvent.click(screen.getByRole("tab", { name: "중1" }));
   expect(
     screen.getByRole("link", { name: "이어서 풀기" }).getAttribute("href"),
   ).toBe("/diagnoses/old");

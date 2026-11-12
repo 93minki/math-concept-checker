@@ -412,13 +412,18 @@ export default function DiagnosisView({ id }: { id: string }) {
               {!readonly && states[item.id] === "error" && (
                 <div role="alert">
                   저장하지 못했어요{" "}
-                  <button disabled={busy} onClick={() => void save(item.id)}>
+                  <button
+                    className="btn btn-secondary"
+                    disabled={busy}
+                    onClick={() => void save(item.id)}
+                  >
                     다시 시도
                   </button>
                 </div>
               )}
               <div className="button-row">
                 <button
+                  className="btn btn-secondary"
                   disabled={index === 0 || busy}
                   onClick={() => void move(index - 1)}
                 >
@@ -426,6 +431,7 @@ export default function DiagnosisView({ id }: { id: string }) {
                 </button>
                 {isLast ? (
                   <button
+                    className="btn"
                     ref={submitButtonRef}
                     disabled={!canSubmit || busy}
                     onClick={() => setConfirm(true)}
@@ -434,6 +440,7 @@ export default function DiagnosisView({ id }: { id: string }) {
                   </button>
                 ) : (
                   <button
+                    className="btn"
                     disabled={!currentAnswered || busy}
                     onClick={() => void move(index + 1)}
                   >
@@ -457,6 +464,7 @@ export default function DiagnosisView({ id }: { id: string }) {
               <p>답안을 제출할까요? 제출하면 답을 고칠 수 없어요.</p>
               <div className="button-row">
                 <button
+                  className="btn"
                   type="button"
                   data-submit-confirm
                   disabled={busy}
@@ -464,7 +472,12 @@ export default function DiagnosisView({ id }: { id: string }) {
                 >
                   제출할게요
                 </button>
-                <button type="button" disabled={busy} onClick={closeConfirm}>
+                <button
+                  className="btn btn-secondary"
+                  type="button"
+                  disabled={busy}
+                  onClick={closeConfirm}
+                >
                   계속 풀기
                 </button>
               </div>
