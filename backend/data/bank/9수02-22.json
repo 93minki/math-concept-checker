@@ -8,30 +8,35 @@
       "body": "이차함수 $y=-2(x+3)^2+4$의 그래프의 꼭짓점과 축을 바르게 짝 지은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M1",
           "no": 1,
           "text": "꼭짓점 $(3, 4)$, 축 $x=3$"
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 2,
           "text": "꼭짓점 $(-3, 4)$, 축 $x=-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M2",
           "no": 3,
           "text": "꼭짓점 $(-3, 4)$, 축 $x=4$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M2",
           "no": 4,
           "text": "꼭짓점 $(-3, 4)$, 축 $y=-3$"
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -42,6 +47,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x+3=0$일 때 꼭짓점의 $x$좌표는 $-3$이고, $y$좌표는 $4$이다. 따라서 꼭짓점은 $(-3, 4)$이고 축은 $x=-3$이다. ①은 꼭짓점의 $x$좌표의 부호를 잘못 쓴 것이다. ③은 꼭짓점의 $y$좌표를 축의 방정식에 쓴 것이고, ④는 축의 방정식에서 $x$를 $y$로 잘못 쓴 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:48:54.311826+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -69,30 +75,35 @@
       "body": "이차함수 $y=2(x+3)^2-1$의 그래프에 대한 설명으로 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M1",
           "no": 1,
           "text": "꼭짓점은 $(3,-1)$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M2",
           "no": 2,
           "text": "축의 방정식은 $x=-1$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M2",
           "no": 3,
           "text": "축의 방정식은 $y=-3$이다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 4,
           "text": "꼭짓점은 $(-3,-1)$이다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -103,6 +114,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(x+3)^2=0$이 되는 $x$의 값은 $-3$이다. 따라서 꼭짓점은 $(-3,-1)$이고, 축의 방정식은 $x=-3$이다. ①은 꼭짓점의 $x$좌표의 부호를 반대로 생각한 것이다. ②는 꼭짓점의 $y$좌표를 이용해 축을 나타낸 것이다. ③은 축을 나타낼 때 $x$ 대신 $y$를 쓴 것이다. ⑤는 꼭짓점의 $y$좌표의 부호를 잘못 생각한 것이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:49:26.434119+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -138,30 +150,35 @@
       "body": "이차함수 $y=-\\frac{1}{2}x^2$의 그래프에 대한 설명으로 옳은 것은? 폭은 $y=x^2$의 그래프와 비교한다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "위로 볼록하고, 폭이 넓으며, 제3사분면과 제4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 2,
           "text": "아래로 볼록하고, 폭이 좁으며, 제1사분면과 제2사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 3,
           "text": "위로 볼록하고, 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 4,
           "text": "아래로 볼록하고, 폭이 넓으며, 제1사분면과 제2사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 5,
@@ -172,6 +189,7 @@
       "difficulty": "normal",
       "disabled_at": "2026-11-11T15:37:00.588085+00:00",
       "explanation": "$x^2$의 계수가 음수이므로 그래프는 위로 볼록하다. 또 계수의 절댓값 $\\frac{1}{2}$이 $1$보다 작으므로 $y=x^2$의 그래프보다 폭이 넓다. $x$가 $0$이 아닐 때 $y$는 음수이므로 그래프는 제3사분면과 제4사분면을 지난다. 계수의 부호를 잘못 판단하면 ②나 ④를, 절댓값이 작을수록 폭이 좁아진다고 생각하면 ②나 ③을 고를 수 있다. $y$가 양수라고 잘못 생각하면 ⑤를 고를 수 있다.",
+      "figure": null,
       "generated_at": "2026-11-11T15:34:04.092761+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -207,30 +225,35 @@
       "body": "이차함수 $y=-2x^2$의 그래프에 대한 설명으로 옳은 것은? 폭은 $y=x^2$의 그래프와 비교한다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 1,
           "text": "아래로 볼록하고 폭이 좁으며, 제1사분면과 제2사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 2,
           "text": "위로 볼록하고 폭이 넓으며, 제3사분면과 제4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 3,
           "text": "위로 볼록하고 폭이 좁으며, 제1사분면과 제2사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 4,
           "text": "아래로 볼록하고 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 5,
@@ -241,6 +264,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$-2$는 음수이므로 그래프는 위로 볼록하다. 또 $|-2|=2$는 $1$보다 크므로 $y=x^2$의 그래프보다 폭이 좁다. $x$가 $0$이 아닐 때 $y$는 항상 음수이므로 그래프는 제3사분면과 제4사분면을 지난다. ②는 $x^2$의 계수의 절댓값이 클수록 폭이 넓어진다고 잘못 생각한 경우이다.",
+      "figure": null,
       "generated_at": "2026-11-11T15:38:02.407001+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -284,30 +308,35 @@
       "body": "이차함수 $y=-2x^2$의 그래프에 대한 설명으로 옳은 것은? 폭은 $y=x^2$의 그래프와 비교한다.",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "위로 볼록하고, 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 2,
           "text": "아래로 볼록하고, 폭이 좁으며, 제3사분면과 제4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 3,
           "text": "위로 볼록하고, 폭이 넓으며, 제3사분면과 제4사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 4,
           "text": "위로 볼록하고, 폭이 좁으며, 제1사분면과 제2사분면을 지난다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M3",
           "no": 5,
@@ -318,6 +347,7 @@
       "difficulty": "normal",
       "disabled_at": "2026-11-11T15:32:57.557326+00:00",
       "explanation": "$x^2$의 계수가 음수이므로 위로 볼록하다. 계수의 절댓값 $2$가 $1$보다 크므로 $y=x^2$의 그래프보다 폭이 좁다. 또 $x$가 $0$이 아닐 때 $y$는 음수이므로 그래프는 제3사분면과 제4사분면을 지난다. 계수의 부호로 폭을 판단하거나, 계수의 절댓값이 클수록 폭이 넓어진다고 생각하지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:49:51.865621+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -345,30 +375,35 @@
       "body": "이차함수 $y=2(x-3)^2-4$에서 $x$의 범위가 실수 전체일 때, 옳은 것은?",
       "choices": [
         {
+          "figure": null,
           "is_correct": true,
           "misconception_id": null,
           "no": 1,
           "text": "최솟값은 $-4$이고, 최댓값은 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M4",
           "no": 2,
           "text": "최솟값은 $3$이고, 최댓값은 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M4",
           "no": 3,
           "text": "최댓값은 $-4$이고, 최솟값은 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": "9수02-22-M4",
           "no": 4,
           "text": "최댓값은 $3$이고, 최솟값은 없다."
         },
         {
+          "figure": null,
           "is_correct": false,
           "misconception_id": null,
           "no": 5,
@@ -379,6 +414,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$(x-3)^2$은 $0$ 이상이므로 $y$는 $-4$ 이상이다. $x=3$일 때 $y=-4$이므로 최솟값은 $-4$이다. $x$가 커짐에 따라 $y$도 한없이 커지므로 최댓값은 없다. 꼭짓점의 $x$좌표인 $3$은 최솟값이 아니다. 최솟값은 꼭짓점의 $y$좌표이다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:50:03.605469+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -409,6 +445,7 @@
       "difficulty": "normal",
       "disabled_at": null,
       "explanation": "$x^2$의 계수 $2$는 양수이므로 그래프는 아래로 볼록하다. 꼭짓점이 $(3,-1)$이므로 $x=3$일 때 $y$는 가장 작은 값 $-1$을 가진다. $x$가 $3$에서 멀어질수록 $y$는 한없이 커지므로 최댓값은 없다. 꼭짓점의 $x$좌표인 $3$을 최솟값으로 답하거나, 아래로 볼록한 그래프가 최댓값을 가진다고 생각하지 않도록 주의한다.",
+      "figure": null,
       "generated_at": "2026-11-11T14:50:18.473535+00:00",
       "hard_condition": null,
       "hard_condition_reason": null,
@@ -449,6 +486,438 @@
       "validation": [
         {
           "at": "2026-11-11T14:50:18.473418+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T00:54:09.273968+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-22-C4-성질적용",
+      "body": "이차함수 $y=2x^2-8x+7$의 그래프를 $y$축의 방향으로 $2$만큼 평행이동하였다. 옮긴 그래프를 고르시오. 각 그림의 두 점은 그래프 위의 점이다.",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": 2.0,
+                "label": null,
+                "p": -2.0,
+                "q": 1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": -2.0,
+                "y": 1.0
+              },
+              {
+                "label": null,
+                "x": -1.0,
+                "y": 3.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_max": 10.0,
+            "y_min": -8.0
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-22-M1",
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": -2.0,
+                "label": null,
+                "p": 2.0,
+                "q": 1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": 2.0,
+                "y": 1.0
+              },
+              {
+                "label": null,
+                "x": 3.0,
+                "y": -1.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_max": 10.0,
+            "y_min": -8.0
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": 2.0,
+                "label": null,
+                "p": 2.0,
+                "q": 1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": 2.0,
+                "y": 1.0
+              },
+              {
+                "label": null,
+                "x": 3.0,
+                "y": 3.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_max": 10.0,
+            "y_min": -8.0
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": 0.5,
+                "label": null,
+                "p": 2.0,
+                "q": 1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": 2.0,
+                "y": 1.0
+              },
+              {
+                "label": null,
+                "x": 4.0,
+                "y": 3.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_max": 10.0,
+            "y_min": -8.0
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": 1.0,
+                "label": null,
+                "p": 2.0,
+                "q": 1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": 2.0,
+                "y": 1.0
+              },
+              {
+                "label": null,
+                "x": 3.0,
+                "y": 2.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_max": 10.0,
+            "y_min": -8.0
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T00:39:45.708003+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$y=2x^2-8x+7=2(x-2)^2-1$이다. 이를 $y$축의 방향으로 $2$만큼 옮기면 $y=2(x-2)^2+1$이다. 꼭짓점은 $(2, 1)$이고, 그래프는 $(3, 3)$을 지나므로 정답은 ③이다.\n①은 꼭짓점이 $(-2, 1)$이다. $(x-2)^2$에서 꼭짓점의 $x$좌표를 $-2$로 잘못 생각한 경우이다.\n②는 꼭짓점은 같지만 아래로 향한다.\n④는 꼭짓점은 같지만 ③보다 폭이 넓다. $|a|$가 클수록 폭이 넓어진다고 잘못 생각한 경우이다.\n⑤도 꼭짓점은 같지만 ③보다 폭이 넓다.",
+      "figure": null,
+      "generated_at": "2026-11-12T00:39:45.207959+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "문장으로 주어진 평행이동을 식에 적용한 뒤, 완전제곱식으로 고쳐 옮긴 그래프를 찾아야 한다.",
+      "id": "2bd866ea-b049-4a2c-a4fa-7b113a5ead51",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v8",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T00:39:14.079259+00:00",
+          "issues": [
+            "목표 그래프의 식이 구체적으로 주어지지 않아, 주어진 이차함수의 식에 알맞은 그래프를 고르는 평가 의도와 다르다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T00:39:45.207614+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T00:54:09.328128+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-22-C4-성질적용",
+      "body": "이차함수 $y=2(x-2)^2-1$의 그래프로 알맞은 것은?",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": 2.0,
+                "label": null,
+                "p": -2.0,
+                "q": -1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": -2.0,
+                "y": -1.0
+              },
+              {
+                "label": null,
+                "x": -1.0,
+                "y": 1.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_max": 5.0,
+            "y_min": -4.0
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-22-M1",
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": 0.5,
+                "label": null,
+                "p": 2.0,
+                "q": -1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": 2.0,
+                "y": -1.0
+              },
+              {
+                "label": null,
+                "x": 4.0,
+                "y": 1.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_max": 5.0,
+            "y_min": -4.0
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-22-M3",
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": 2.0,
+                "label": null,
+                "p": 2.0,
+                "q": -1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": 2.0,
+                "y": -1.0
+              },
+              {
+                "label": null,
+                "x": 3.0,
+                "y": 1.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_max": 5.0,
+            "y_min": -4.0
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": -2.0,
+                "label": null,
+                "p": 2.0,
+                "q": -1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": 2.0,
+                "y": -1.0
+              },
+              {
+                "label": null,
+                "x": 3.0,
+                "y": -3.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_max": 5.0,
+            "y_min": -4.0
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "a": 3.0,
+                "label": null,
+                "p": 2.0,
+                "q": -1.0,
+                "type": "quadratic"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [
+              {
+                "label": null,
+                "x": 2.0,
+                "y": -1.0
+              },
+              {
+                "label": null,
+                "x": 3.0,
+                "y": 2.0
+              }
+            ],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_max": 5.0,
+            "y_min": -4.0
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T00:38:38.564116+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "정답은 ③이다. 꼭짓점은 $(2,-1)$이고, 아래로 볼록하다. 또 $x=3$일 때 $y=1$이다.\n①은 꼭짓점의 $x$좌표의 부호를 잘못 생각한 그래프이다. ②는 $y=(x-2)^2-1$의 그래프보다 폭이 넓다. 계수의 크기가 클수록 폭이 넓어진다고 잘못 생각할 수 있다. ④는 볼록한 방향이 다르고, ⑤는 폭이 더 좁다.",
+      "figure": null,
+      "generated_at": "2026-11-12T00:38:38.082662+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0bd94d96-95c8-4ea9-b22d-a92b71c7ad49",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v8",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T00:38:38.082333+00:00",
           "issues": [],
           "number": 1
         }
