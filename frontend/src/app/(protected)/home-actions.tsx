@@ -15,7 +15,7 @@ export default function HomeActions() {
     try {
       const { error } = await createClient().auth.signOut();
       if (error) throw error;
-      router.push("/login");
+      router.push("/");
       router.refresh();
     } catch {
       setError("로그아웃하지 못했어요. 다시 시도해 주세요.");

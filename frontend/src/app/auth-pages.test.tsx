@@ -111,11 +111,11 @@ test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async 
   );
 });
 
-test("로그아웃 성공 시 로그인으로 이동한다", async () => {
+test("로그아웃 성공 시 랜딩으로 이동한다", async () => {
   mocks.signOut.mockResolvedValue({ error: null });
   render(<HomeActions />);
   fireEvent.click(screen.getByRole("button", { name: "로그아웃" }));
-  await waitFor(() => expect(mocks.push).toHaveBeenCalledWith("/login"));
+  await waitFor(() => expect(mocks.push).toHaveBeenCalledWith("/"));
 });
 
 test("로그아웃 실패 시 쉬운 안내를 보여 준다", async () => {
@@ -165,7 +165,7 @@ test.each([
     ).not.toBeNull();
     const login = screen.getByRole("link", { name: "로그인" });
     const signup = screen.getByRole("link", { name: "회원가입" });
-    expect(login.getAttribute("href")).toBe("/login?login=1");
+    expect(login.getAttribute("href")).toBe("/login");
     expect(signup.getAttribute("href")).toBe("/signup");
     expect(login.getAttribute("aria-current")).toBe(
       current === "로그인" ? "page" : null,

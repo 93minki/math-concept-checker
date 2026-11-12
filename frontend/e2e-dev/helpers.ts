@@ -10,7 +10,7 @@ export function requiredEnv(name: string): string {
 }
 
 export async function login(page: Page, email: string, password: string) {
-  await page.goto("/login?login=1");
+  await page.goto("/login");
   await page.getByLabel("이메일").fill(email);
   await page.getByLabel("비밀번호").fill(password);
   await page.getByRole("button", { name: "로그인", exact: true }).click();

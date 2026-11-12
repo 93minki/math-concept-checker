@@ -1,11 +1,13 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { updateSession } from "@/lib/supabase/proxy";
 
-export function decideRedirect(pathname: string, isLoggedIn: boolean) {
+export function decideRoute(pathname: string, isLoggedIn: boolean) {
+  if (pathname === "/landing") return { redirect: "/" };
+  if (!isLoggedIn && pathname === "/") return { rewrite: "/landing" };
   const isPublic = ["/login", "/signup", "/auth/callback"].includes(pathname);
-  if (!isLoggedIn && !isPublic) return "/login";
+  if (!isLoggedIn && !isPublic) return { redirect: "/login" };
   if (isLoggedIn && (pathname === "/login" || pathname === "/signup"))
-    return "/";
+    return { redirect: "/" };
   return null;
 }
 
@@ -15,15 +17,21 @@ const NO_STORE = "private, no-store";
 
 export async function proxy(request: NextRequest) {
   const { response, isLoggedIn } = await updateSession(request);
-  const destination = decideRedirect(request.nextUrl.pathname, isLoggedIn);
+  const destination = decideRoute(request.nextUrl.pathname, isLoggedIn);
   if (!destination) {
     response.headers.set("Cache-Control", NO_STORE);
     return response;
   }
-  const redirect = NextResponse.redirect(new URL(destination, request.url));
-  response.cookies.getAll().forEach((cookie) => redirect.cookies.set(cookie));
-  redirect.headers.set("Cache-Control", NO_STORE);
-  return redirect;
+  const rewrittenUrl = request.nextUrl.clone();
+  if (destination.rewrite) rewrittenUrl.pathname = destination.rewrite;
+  const result = destination.redirect
+    ? NextResponse.redirect(new URL(destination.redirect, request.url))
+    : NextResponse.rewrite(rewrittenUrl, {
+        request: { headers: request.headers },
+      });
+  response.cookies.getAll().forEach((cookie) => result.cookies.set(cookie));
+  result.headers.set("Cache-Control", NO_STORE);
+  return result;
 }
 
 export const config = {

@@ -15,11 +15,9 @@ export default function AuthHeader() {
         </Link>
         <div className="auth-header-actions">
           <Link
-            href="/login?login=1"
-            scroll={false}
+            href="/login"
             className="btn btn-secondary"
             aria-current={pathname === "/login" ? "page" : undefined}
-            data-login-trigger
           >
             로그인
           </Link>

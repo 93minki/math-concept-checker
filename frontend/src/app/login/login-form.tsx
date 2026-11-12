@@ -50,7 +50,7 @@ export default function LoginForm() {
 
   return (
     <section className="auth-card" aria-labelledby="login-title">
-      <h2 id="login-title">로그인</h2>
+      <h1 id="login-title">로그인</h1>
       {/* method="post": a native submit must never put the password in the URL. */}
       <form method="post" onSubmit={submit}>
         <label htmlFor="email">이메일</label>

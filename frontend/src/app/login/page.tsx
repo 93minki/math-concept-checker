@@ -1,16 +1,9 @@
-import Landing from "./landing";
-import LoginDialog from "./login-dialog";
+import LoginForm from "./login-form";
 
-export default async function LoginPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ login?: string | string[] }>;
-}) {
-  const { login } = await searchParams;
+export default function LoginPage() {
   return (
-    <>
-      <Landing />
-      {login === "1" && <LoginDialog />}
-    </>
+    <main className="auth-page">
+      <LoginForm />
+    </main>
   );
 }

@@ -358,3 +358,10 @@
 - 원인 분류: 기타 (임시 시안 장치의 Suspense 대체본)
 - 원인: 단계 2에서 넣은 임시 시안 장치가 루트 레이아웃에서 `<Suspense fallback={children}><VariantProvider>{children}</VariantProvider></Suspense>`로 화면 전체를 감쌌다. `/login?login=1`은 `searchParams`를 기다리는 동적 화면이라 이 경계가 대체본(같은 `children`)을 먼저 보내고 진짜 화면을 숨긴 `<div hidden id="S:0">`로 이어 보냈다(응답 HTML에서 `<main>`·`<dialog>`가 두 벌인 것을 `curl`로 확인). 스크립트가 바꿔 끼우기 전에는 폼과 `id="email"`이 두 벌이다. 이전 실행의 통과·실패는 응답 타이밍에 따라 갈린 것으로 본다.
 - 해결: 쓰는 곳이 없어진 임시 시안 장치(`src/app/variant.tsx`, `variant.test.ts`, `data-variant`, 루트 Suspense)를 지움(Opus). 재실행: 프론트엔드 검사 전부, `pnpm test:e2e` 두 번 연속 26개 통과, `pnpm test:e2e:dev` 3개 통과.
+
+### 2026-11-12 — frontend/e2e-dev/flow.spec.ts:진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는다 (mobile)
+- 작업: UI 고도화, 로그인 전 주소 구조 변경(`/` 랜딩, `/login` 페이지) (F-01)
+- 증상: 모바일 1회 실패(22.2초). 진행 표시 `locator('section p').filter({ hasText: /^\d+\s*\/\s*\d+$/ })`를 5초 안에 찾지 못함 (`toHaveText(/^1\s*\/\s*\d+$/)`). 실패 화면 기록(page snapshot)은 남지 않았다. 데스크톱·접근 권한 테스트는 같은 실행에서 통과.
+- 원인 분류: 기타 (원인 미확인)
+- 원인: 확인하지 못함. 같은 코드로 모바일만 다시 실행해 통과, 전체를 다시 실행해 3개 모두 통과했다. 그 실행 사이에 바꾼 것은 `e2e-dev/helpers.ts`의 `login()`이 여는 주소(`/login?login=1` → `/login`)뿐이며, 새 `/login`은 쿼리를 무시하므로 실패 원인으로 보기 어렵다. 같은 증상이 다시 나면 진행 표시를 기다리는 시점(진단 시작 응답 직후)을 먼저 본다.
+- 해결: 없음 (재실행 통과). 반복되면 원인 조사.
