@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "katex/dist/katex.min.css";
 import "../../public/fonts/pretendard/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
@@ -10,8 +11,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
+    <html lang="ko" suppressHydrationWarning>
+      <body>
+        <Script
+          id="initial-theme"
+          strategy="beforeInteractive"
+        >{`try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`}</Script>
+        {children}
+      </body>
     </html>
   );
 }

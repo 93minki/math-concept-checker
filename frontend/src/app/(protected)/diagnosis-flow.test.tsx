@@ -5,6 +5,7 @@ import {
   render,
   screen,
   waitFor,
+  within,
 } from "@testing-library/react";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
 import UnitSelection from "./unit-selection";
@@ -21,8 +22,11 @@ const mocks = vi.hoisted(() => ({
   push: vi.fn(),
 }));
 vi.mock("next/navigation", () => {
-  const router = { push: mocks.push };
-  return { useRouter: () => router };
+  const router = { push: mocks.push, replace: vi.fn() };
+  return {
+    useRouter: () => router,
+    useSearchParams: () => new URLSearchParams(),
+  };
 });
 vi.mock("@/lib/supabase/client", () => ({
   createClient: () => ({
@@ -52,6 +56,7 @@ const units: Unit[] = [
     aliases: ["문자식"],
     status: "partial",
     in_progress_diagnosis_id: "old",
+    latest_result: null,
   },
   {
     id: 2,
@@ -62,6 +67,7 @@ const units: Unit[] = [
     aliases: [],
     status: "unavailable",
     in_progress_diagnosis_id: null,
+    latest_result: null,
   },
 ];
 const threeGrades: Unit[] = [
@@ -173,7 +179,8 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
     )
     .mockResolvedValueOnce({ diagnosis_id: "new" });
   render(<UnitSelection />);
-  fireEvent.click(await screen.findByRole("button", { name: "진단 시작하기" }));
+  fireEvent.click(await screen.findByLabelText("문자와 식 더보기"));
+  fireEvent.click(screen.getByRole("button", { name: "새로 시작하기" }));
   const dialog = await screen.findByRole("dialog");
   expect(
     screen
@@ -181,7 +188,9 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
       .closest("article")
       ?.contains(dialog),
   ).toBe(true);
-  fireEvent.click(screen.getByRole("button", { name: "새로 시작하기" }));
+  fireEvent.click(
+    within(dialog).getByRole("button", { name: "새로 시작하기" }),
+  );
   await waitFor(() =>
     expect(mocks.startDiagnosis).toHaveBeenCalledWith(1, true),
   );

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import BrandMark from "@/components/brand-mark";
+import ThemeButton from "@/components/theme-button";
 import { usePathname } from "next/navigation";
 
 export default function AuthHeader() {
@@ -28,6 +29,7 @@ export default function AuthHeader() {
           >
             회원가입
           </Link>
+          <ThemeButton />
         </div>
       </div>
     </header>

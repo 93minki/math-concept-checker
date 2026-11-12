@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import BrandMark from "@/components/brand-mark";
+import ThemeButton from "@/components/theme-button";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
@@ -32,6 +33,7 @@ export default function HomeActions() {
         <nav className="home-nav" aria-label="주 메뉴">
           <Link href="/history">지난 기록</Link>
           <button onClick={signOut}>로그아웃</button>
+          <ThemeButton />
         </nav>
       </div>
       {error && <p role="alert">{error}</p>}

@@ -19,6 +19,23 @@ class Unit(BaseModel):
     aliases: list[str]
 
 
+class LatestResult(BaseModel):
+    diagnosis_id: UUID
+    unit_stage: str | None
+    completed_at: datetime
+
+
+class CompletedReport(BaseModel):
+    unit_stage: str | None
+
+
+class CompletedDiagnosis(BaseModel):
+    id: UUID
+    display_unit_id: int
+    completed_at: datetime
+    reports: list[CompletedReport]
+
+
 class StandardLink(BaseModel):
     display_unit_id: int
     standard_code: str

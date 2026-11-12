@@ -1,5 +1,5 @@
 from datetime import UTC, datetime, timedelta
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, call
 from uuid import UUID, uuid4
 
 from cryptography.hazmat.primitives.asymmetric import ec
@@ -130,3 +130,50 @@ def test_history_query_filters_user_and_cursor() -> None:
     )
     assert query.order.call_count == 2
     query.limit.assert_called_once_with(3)
+
+
+def test_latest_results_query_limits_to_user_completed_and_embeds_report() -> None:
+    client = MagicMock()
+    selected = client.table.return_value.select.return_value
+    selected.eq.return_value = selected
+    selected.order.return_value = selected
+    selected.range.return_value = selected
+    selected.execute.return_value.data = []
+    user = uuid4()
+    assert SupabaseDiagnoses(client).latest_results(user) == {}
+    client.table.assert_called_once_with("diagnoses")
+    client.table.return_value.select.assert_called_once_with(
+        "id,display_unit_id,completed_at,reports(unit_stage)"
+    )
+    assert selected.eq.call_args_list == [
+        call("user_id", str(user)),
+        call("status", "completed"),
+    ]
+
+
+def test_latest_results_handles_embedded_report_lists() -> None:
+    client = MagicMock()
+    query = client.table.return_value.select.return_value
+    query.eq.return_value = query
+    query.order.return_value = query
+    query.range.return_value = query
+    first, second = uuid4(), uuid4()
+    query.execute.return_value.data = [
+        {
+            "id": str(first),
+            "display_unit_id": 3,
+            "completed_at": "2026-11-10T14:12:29.556171+00:00",
+            "reports": [{"unit_stage": "아직 이해 못 함"}, {"unit_stage": "깊이 이해"}],
+        },
+        {
+            "id": str(second),
+            "display_unit_id": 4,
+            "completed_at": "2026-11-10T14:12:29.556171+00:00",
+            "reports": [],
+        },
+    ]
+    result = SupabaseDiagnoses(client).latest_results(uuid4())
+    assert result[3].diagnosis_id == first
+    assert result[3].unit_stage == "아직 이해 못 함"
+    assert result[4].diagnosis_id == second
+    assert result[4].unit_stage is None

@@ -12,7 +12,15 @@ async function start(page: Page) {
       response.url().endsWith("/diagnoses") &&
       response.request().method() === "POST",
   );
-  await unitCard(page).getByRole("button", { name: "진단 시작하기" }).click();
+  const card = unitCard(page);
+  if (await card.getByRole("link", { name: "이어서 풀기" }).isVisible()) {
+    await card.getByLabel(`${unitName} 더보기`).click();
+    await card.getByRole("button", { name: "새로 시작하기" }).click();
+  } else {
+    await card
+      .getByRole("button", { name: /^(진단 시작하기|다시 진단하기)$/ })
+      .click();
+  }
   const response = await waiting;
   if (response.status() === 409) {
     const dialog = page.getByRole("dialog", { name: "진행 중인 진단" });

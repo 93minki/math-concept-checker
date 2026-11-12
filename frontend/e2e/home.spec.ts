@@ -102,3 +102,16 @@ for (const route of ["/login", "/signup"]) {
     await context.close();
   });
 }
+
+test("테마 선택은 새로고침 뒤에도 유지된다", async ({ page }) => {
+  await page.goto("/");
+  const button = page.getByRole("button", {
+    name: /(?:다크|라이트) 모드로 바꾸기/,
+  });
+  await expect(button).toBeVisible();
+  await button.click();
+  const selected = await page.locator("html").getAttribute("data-theme");
+  expect(["light", "dark"]).toContain(selected);
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", selected!);
+});

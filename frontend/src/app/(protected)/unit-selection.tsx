@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import LearningMap from "./learning-map";
+import { unitProgress } from "@/lib/unit-progress";
 import { useEffect, useRef, useState } from "react";
 import {
   ApiError,
@@ -71,6 +73,17 @@ export default function UnitSelection() {
       name.toLowerCase().includes(query.trim().toLowerCase()),
     ),
   );
+  const displayed =
+    filtered?.filter((unit) => query.trim() || unit.grade === grade) ?? [];
+  const nextUnit =
+    displayed.find((unit) => unitProgress(unit) === "in_progress") ??
+    displayed
+      .filter(
+        (unit) =>
+          ["not_started", "retry"].includes(unitProgress(unit)) &&
+          unit.status !== "unavailable",
+      )
+      .sort((a, b) => a.number - b.number)[0];
   return (
     <section className="stack unit-selection">
       <h2>진단할 단원을 골라요</h2>
@@ -96,97 +109,62 @@ export default function UnitSelection() {
           </button>
         ))}
       </div>
-      {(["중1", "중2", "중3"] as const).map((item) => {
-        if (!query.trim() && item !== grade) return null;
-        const group = filtered?.filter((unit) => unit.grade === item) ?? [];
-        return (
-          group.length > 0 && (
-            <section key={item} className="stack">
+      <>
+        {(["중1", "중2", "중3"] as const).map((item) => {
+          if (!query.trim() && item !== grade) return null;
+          const group = displayed.filter((unit) => unit.grade === item);
+          if (!group.length) return null;
+          return (
+            <div key={item}>
               {query.trim() && <h3>{item}</h3>}
-              <div className="unit-grid">
-                {group.map((unit) => (
-                  <article
-                    className={`unit-card stack${unit.in_progress_diagnosis_id ? " in-progress" : ""}`}
-                    key={unit.id}
-                  >
-                    {query.trim() && (
-                      <span className={`grade-chip grade-${item.slice(-1)}`}>
-                        {item}
-                      </span>
-                    )}
-                    <h4>
-                      {unit.number}. {unit.name}
-                    </h4>
-                    <p className="unit-meta">{unit.publisher} 기준</p>
-                    {unit.status === "partial" && (
-                      <p className="badge">이 단원은 일부 내용만 진단해요</p>
-                    )}
-                    {unit.in_progress_diagnosis_id && (
-                      <p className="badge badge-warn">진행 중</p>
-                    )}
-                    <div className="unit-actions">
-                      {unit.status === "unavailable" ? (
-                        <button className="btn" disabled>
-                          준비 중
-                        </button>
-                      ) : (
-                        <button
-                          className="btn btn-secondary"
-                          disabled={busy}
-                          onClick={() => void start(unit)}
-                        >
-                          진단 시작하기
-                        </button>
-                      )}
-                      {unit.in_progress_diagnosis_id && (
-                        <Link
-                          className="btn unit-resume"
-                          href={`/diagnoses/${unit.in_progress_diagnosis_id}`}
-                        >
-                          이어서 풀기
-                        </Link>
-                      )}
-                    </div>
-                    {conflict && conflict.unit.id === unit.id && (
-                      <div
-                        ref={conflictRef}
-                        tabIndex={-1}
-                        className="unit-conflict stack"
-                        role="dialog"
-                        aria-label="진행 중인 진단"
+              <LearningMap
+                units={group}
+                allUnits={units ?? []}
+                grade={item}
+                search={!!query.trim()}
+                busy={busy}
+                nextId={nextUnit?.id ?? null}
+                start={(unit) => void start(unit)}
+                conflictNode={(unit) =>
+                  conflict?.unit.id === unit.id && (
+                    <div
+                      ref={conflictRef}
+                      tabIndex={-1}
+                      className="unit-conflict stack"
+                      role="dialog"
+                      aria-label="진행 중인 진단"
+                    >
+                      <p>
+                        진행 중인 진단이 있어요. 이어서 풀거나 새로 시작할 수
+                        있어요.
+                      </p>
+                      <Link
+                        className="btn btn-secondary"
+                        href={`/diagnoses/${conflict.id}`}
                       >
-                        <p>
-                          진행 중인 진단이 있어요. 이어서 풀거나 새로 시작할 수
-                          있어요.
-                        </p>
-                        <Link
-                          className="btn"
-                          href={`/diagnoses/${conflict.id}`}
-                        >
-                          이어서 풀기
-                        </Link>
-                        <button
-                          className="btn btn-secondary"
-                          disabled={busy}
-                          onClick={() => void start(conflict.unit, true)}
-                        >
-                          새로 시작하기
-                        </button>
-                        <button
-                          className="btn btn-secondary"
-                          onClick={() => setConflict(null)}
-                        >
-                          취소
-                        </button>
-                      </div>
-                    )}
-                  </article>
-                ))}
-              </div>
-            </section>
-          )
-        );
-      })}
+                        이어서 풀기
+                      </Link>
+                      <button
+                        className="btn btn-secondary"
+                        disabled={busy}
+                        onClick={() => void start(conflict.unit, true)}
+                      >
+                        새로 시작하기
+                      </button>
+                      <button
+                        className="btn btn-secondary"
+                        onClick={() => setConflict(null)}
+                      >
+                        취소
+                      </button>
+                    </div>
+                  )
+                }
+              />
+            </div>
+          );
+        })}
+      </>
     </section>
   );
 }

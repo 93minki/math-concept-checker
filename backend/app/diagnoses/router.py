@@ -95,6 +95,7 @@ def find_unit(repo: DiagnosesRepository, unit_id: int) -> Unit:
 @router.get("/units")
 def list_units(user: User, repo: Repo) -> list[dict[str, object]]:
     progress = {d.display_unit_id: d.id for d in repo.in_progress(user.id)}
+    results = repo.latest_results(user.id)
     links = repo.standards()
     concepts = repo.concepts()
     assessments = repo.assessments()
@@ -115,6 +116,7 @@ def list_units(user: User, repo: Repo) -> list[dict[str, object]]:
                 random.Random(),
             )[0],
             "in_progress_diagnosis_id": progress.get(unit.id),
+            "latest_result": results.get(unit.id),
         }
         for unit in sorted(repo.units(), key=lambda u: (u.grade, u.number))
     ]
