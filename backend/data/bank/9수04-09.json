@@ -73,7 +73,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T08:08:52.226782+00:00",
       "variant": 2
     },
     {
@@ -111,7 +111,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T08:08:52.309955+00:00",
       "variant": 2
     },
     {
@@ -151,7 +151,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T08:08:52.010921+00:00",
       "variant": 2
     },
     {
@@ -189,7 +189,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T08:08:52.072769+00:00",
       "variant": 2
     },
     {
@@ -231,7 +231,45 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T08:08:52.168456+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T08:06:16.872839+00:00",
+          "issues": [
+            "상관관계의 전체 경향이나 두 점만으로 판단한 오류를 이해하지 않아도, 지우의 별도 주장에 대한 반례만 찾아 답할 수 있어 M3를 판별하지 못한다.",
+            "보기 ①: M3를 가진 학생도 (2, 7)이 지우가 지목한 맨 왼쪽 점보다 오른쪽 위에 있음을 알 수 있다. M3만으로 ①을 반례로 고르게 되지는 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T08:06:59.745933+00:00",
+          "issues": [
+            "본문이 찾아야 할 점의 조건을 직접 제시하므로 지우의 주장이나 전체 경향을 판단하지 않고도 두 점과 보기의 좌표만 비교하여 풀 수 있다. 따라서 의도한 오개념 판별과 misconception-b 조건을 충족하지 못한다.",
+            "보기 ①: M3대로라면 지우가 본 두 점만으로 양의 상관관계라고 판단할 뿐, (1, 70)을 반박점으로 고르지는 않는다.",
+            "보기 ④: M3대로라면 지우가 본 두 점만으로 양의 상관관계라고 판단할 뿐, (2, 80)을 반박점으로 고르지는 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T08:07:44.393624+00:00",
+          "issues": [
+            "보기 ⑤: (8, 3)은 지우가 살펴본 점으로 주장을 뒷받침한다. 몇 개의 점만 보고 전체 상관관계를 판단하는 M3만으로는 반대되는 모습을 묻는 질문에 이 점을 고르게 되지 않는다."
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T08:07:45.156251+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T08:08:52.26899+00:00",
       "variant": 2
     },
     {
@@ -1367,6 +1405,129 @@
       "validation": [
         {
           "at": "2026-11-11T14:54:04.860452+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T08:09:26.473001+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "body": "다음 산점도는 화분에 물을 준 횟수와 잎의 수를 나타낸 것이다. 각 점은 화분 하나의 자료를 나타낸다.\n\n지우: “잎의 수가 가장 적은 두 화분만 보면, 물을 준 횟수가 많을수록 잎의 수가 적어. 따라서 전체 자료에는 음의 상관관계가 있어.”\n\n지우가 두 점만으로 전체 자료를 판단하기 어렵다는 것을 보여 주려고 한다. 근거로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$(9, 9)$인 점이 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$(6, 8)$인 점이 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(9, 10)$인 점이 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(5, 7)$인 점이 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M3",
+          "no": 5,
+          "text": "두 점만으로 충분하므로 지우의 주장은 옳다."
+        }
+      ],
+      "created_at": "2026-11-12T08:08:51.890168+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "잎의 수가 가장 적은 두 화분은 $(7, 2)$와 $(8, 1)$이다. 산점도에 있는 $(9, 10)$은 이 두 점보다 물을 준 횟수와 잎의 수가 모두 크다. 따라서 두 점에서 본 모습과 다른 모습도 있음을 알 수 있다. 전체 점을 살펴보면 양의 상관관계가 있다.\n\n$(9, 9)$는 산점도에 없는 점이다. $(6, 8)$과 $(5, 7)$은 두 점보다 왼쪽에 있고 위쪽에 있어, 두 점에서 본 모습과 다르다고 말하기 어렵다. ⑤처럼 몇 개의 점만으로 전체 자료의 상관관계를 판단해서는 안 된다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 3.0
+          },
+          {
+            "x": 2.0,
+            "y": 4.0
+          },
+          {
+            "x": 3.0,
+            "y": 5.0
+          },
+          {
+            "x": 4.0,
+            "y": 6.0
+          },
+          {
+            "x": 5.0,
+            "y": 7.0
+          },
+          {
+            "x": 6.0,
+            "y": 8.0
+          },
+          {
+            "x": 7.0,
+            "y": 9.0
+          },
+          {
+            "x": 8.0,
+            "y": 10.0
+          },
+          {
+            "x": 9.0,
+            "y": 10.0
+          },
+          {
+            "x": 7.0,
+            "y": 2.0
+          },
+          {
+            "x": 8.0,
+            "y": 1.0
+          }
+        ],
+        "x_label": "물 준 횟수(회)",
+        "x_max": 10.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "잎의 수(장)",
+        "y_max": 10.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T08:08:51.458839+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 점만 보고 전체 자료의 상관관계를 판단한 지우의 주장을 살펴보게 한다. 산점도에서 지우가 본 모습과 다른 모습을 보여 주는 점을 찾아야 한다.",
+      "id": "e4bc7c71-a631-4cca-b8ed-a279b2d653c6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T08:08:51.457193+00:00",
           "issues": [],
           "number": 1
         }
