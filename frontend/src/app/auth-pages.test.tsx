@@ -36,6 +36,7 @@ vi.mock("next/navigation", () => ({
 }));
 
 beforeEach(() => {
+  sessionStorage.clear();
   vi.clearAllMocks();
 });
 afterEach(cleanup);
@@ -90,7 +91,30 @@ test("카카오 로그인은 콜백 주소를 전달한다", async () => {
 
 test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async () => {
   mocks.signUp.mockResolvedValue({ data: { session: null }, error: null });
-  render(<SignupPage />);
+  const { container } = render(<SignupPage />);
+  const consent = screen.getByRole("checkbox", {
+    name: "개인정보 수집·이용에 동의합니다 (필수)",
+  });
+  const submit = screen.getByRole("button", {
+    name: "가입하기",
+  }) as HTMLButtonElement;
+  expect(submit.disabled).toBe(true);
+  expect(consent.closest("form")).toBe(container.querySelector("form"));
+  expect((consent as HTMLInputElement).required).toBe(true);
+  for (const heading of [
+    "받는 정보",
+    "쓰는 목적",
+    "맡기는 곳",
+    "보관과 삭제",
+    "동의를 거부할 수 있어요",
+  ])
+    expect(screen.getByText(heading)).toBeTruthy();
+  expect(
+    screen.getByRole("region", { name: "개인정보 수집·이용 동의 내용" })
+      .textContent,
+  ).toContain("연락처는 서비스 공개 전에 안내할 예정이에요.");
+  fireEvent.click(consent);
+  expect(submit.disabled).toBe(false);
   fireEvent.change(screen.getByLabelText("이메일"), {
     target: { value: "test@example.com" },
   });
@@ -98,6 +122,7 @@ test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async 
     target: { value: "password123" },
   });
   fireEvent.click(screen.getByRole("button", { name: "가입하기" }));
+  expect(sessionStorage.getItem("privacy-consent")).toBe("agreed");
   await waitFor(() =>
     expect(mocks.signUp).toHaveBeenCalledWith({
       email: "test@example.com",

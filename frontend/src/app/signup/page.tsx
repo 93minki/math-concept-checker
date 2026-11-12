@@ -5,15 +5,19 @@ import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useHydrated } from "@/lib/use-hydrated";
+import PrivacyConsent, { rememberPrivacyConsent } from "../privacy-consent";
 
 export default function SignupPage() {
   const router = useRouter();
   const hydrated = useHydrated();
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
+  const [consent, setConsent] = useState(false);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (!consent) return;
+    rememberPrivacyConsent();
     setBusy(true);
     setMessage("");
     const form = new FormData(event.currentTarget);
@@ -60,7 +64,12 @@ export default function SignupPage() {
             required
             minLength={6}
           />
-          <button className="btn" disabled={busy || !hydrated} type="submit">
+          <PrivacyConsent checked={consent} onChange={setConsent} />
+          <button
+            className="btn"
+            disabled={busy || !hydrated || !consent}
+            type="submit"
+          >
             가입하기
           </button>
         </form>

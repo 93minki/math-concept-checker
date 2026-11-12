@@ -27,11 +27,33 @@ for (const route of ["/", "/login", "/signup"]) {
       "input:visible, button:visible, header .btn:visible",
     );
     for (let i = 0; i < (await controls.count()); i++) {
-      const box = await controls.nth(i).boundingBox();
+      const control = controls.nth(i);
+      // A checkbox or radio is pressed through the label that wraps it, so
+      // the touch target is that label row (user decision 2026-11-12).
+      const toggle = await control.evaluate(
+        (node) =>
+          node instanceof HTMLInputElement &&
+          (node.type === "checkbox" || node.type === "radio"),
+      );
+      const target = toggle
+        ? control.locator("xpath=ancestor::label[1]")
+        : control;
+      const box = await target.boundingBox();
       expect(box?.height).toBeGreaterThanOrEqual(44);
     }
   });
 }
+
+test("/signup 동의 체크는 문구를 눌러도 켜진다", async ({ page }) => {
+  await page.goto("/signup");
+  const consent = page.getByRole("checkbox", {
+    name: "개인정보 수집·이용에 동의합니다 (필수)",
+  });
+  await expect(consent).not.toBeChecked();
+  await page.getByText("개인정보 수집·이용에 동의합니다 (필수)").click();
+  await expect(consent).toBeChecked();
+  await expect(page.getByRole("button", { name: "가입하기" })).toBeEnabled();
+});
 
 test("proxy 응답은 공유 캐시에 저장되지 않는다", async ({ request }) => {
   const page = await request.get("/login");

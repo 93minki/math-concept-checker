@@ -4,11 +4,17 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { publicEnv } from "@/lib/env";
 import { createClient } from "@/lib/supabase/client";
+import PrivacyConsent, {
+  hasPrivacyConsent,
+  rememberPrivacyConsent,
+} from "../../privacy-consent";
 
 export default function CompleteSignup() {
   const { push, refresh } = useRouter();
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(true);
+  const [needsConsent, setNeedsConsent] = useState(false);
+  const [consent, setConsent] = useState(false);
 
   const complete = useCallback(async () => {
     try {
@@ -34,7 +40,13 @@ export default function CompleteSignup() {
   }, [push, refresh]);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => void complete(), 0);
+    const timer = window.setTimeout(() => {
+      if (hasPrivacyConsent()) void complete();
+      else {
+        setBusy(false);
+        setNeedsConsent(true);
+      }
+    }, 0);
     return () => window.clearTimeout(timer);
   }, [complete]);
 
@@ -42,6 +54,26 @@ export default function CompleteSignup() {
     <main className="auth-card">
       <h1>가입 마무리</h1>
       {busy && <p>가입을 마무리하고 있어요.</p>}
+      {needsConsent && (
+        <>
+          <p>가입을 마치려면 개인정보 수집·이용에 동의해 주세요.</p>
+          <PrivacyConsent checked={consent} onChange={setConsent} />
+          <button
+            className="btn"
+            type="button"
+            disabled={!consent}
+            onClick={() => {
+              if (!consent) return;
+              rememberPrivacyConsent();
+              setNeedsConsent(false);
+              setBusy(true);
+              void complete();
+            }}
+          >
+            동의하고 가입 마치기
+          </button>
+        </>
+      )}
       {error && (
         <>
           <p role="alert">가입을 마무리하지 못했어요. 다시 시도해 주세요.</p>
