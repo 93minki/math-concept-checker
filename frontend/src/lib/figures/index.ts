@@ -208,12 +208,39 @@ export function drawFigure(figure: Figure): Drawing {
       stroke: "#222",
       strokeWidth: 1.5,
     });
+  // Point labels try four corners and skip ones that hit an earlier label.
+  const placedLabels: { x1: number; y1: number; x2: number; y2: number }[] = [];
   const dotLabel = (x: number, y: number, label: Label) => {
-    if (label) {
-      const labelWidth = Array.from(label).length * 20;
-      if (x + 7 + labelWidth > 396) text(x - 7, y - 15, label, "end");
-      else text(x + 7, y - 15, label, "start");
-    }
+    if (!label) return;
+    const labelWidth = Array.from(label).length * 20;
+    const candidates = [
+      { tx: x + 7, ty: y - 15, anchor: "start" },
+      { tx: x + 7, ty: y + 25, anchor: "start" },
+      { tx: x - 7, ty: y - 15, anchor: "end" },
+      { tx: x - 7, ty: y + 25, anchor: "end" },
+    ].map((c) => {
+      const x1 = c.anchor === "start" ? c.tx : c.tx - labelWidth;
+      return {
+        ...c,
+        box: { x1, y1: c.ty - 18, x2: x1 + labelWidth, y2: c.ty + 2 },
+      };
+    });
+    const free = candidates.filter(
+      (c) =>
+        c.box.x2 <= 396 &&
+        c.box.x1 >= 4 &&
+        placedLabels.every(
+          (b) =>
+            c.box.x2 <= b.x1 ||
+            c.box.x1 >= b.x2 ||
+            c.box.y2 <= b.y1 ||
+            c.box.y1 >= b.y2,
+        ),
+    );
+    const chosen =
+      free[0] ?? (x + 7 + labelWidth > 396 ? candidates[2] : candidates[0]);
+    placedLabels.push(chosen.box);
+    text(chosen.tx, chosen.ty, label, chosen.anchor);
   };
   const axes = (
     xmin: number,
@@ -284,13 +311,16 @@ export function drawFigure(figure: Figure): Drawing {
     const xspan = f.x_max - f.x_min;
     const yspan = f.y_max - f.y_min;
     const scale = Math.min(320 / xspan, 270 / yspan);
-    const plotWidth = f.y_tick_step != null ? 320 : xspan * scale;
-    const plotHeight = f.y_tick_step != null ? 270 : yspan * scale;
+    // Separate x/y scales only for situation graphs whose y step differs.
+    const separate = f.y_tick_step != null && f.y_tick_step !== f.tick_step;
+    const plotWidth = separate ? 320 : xspan * scale;
+    const plotHeight = separate ? 270 : yspan * scale;
     const left = 210 - plotWidth / 2;
     const right = left + plotWidth;
     const top = 45;
     const bottom = top + plotHeight;
-    height = bottom + (f.x_label ? 74 : 40);
+    const xAxisAtBottom = !inside(0, f.y_min, f.y_max) || f.y_min === 0;
+    height = bottom + (f.x_label && xAxisAtBottom ? 64 : 40);
     const x = (v: number) => left + ((v - f.x_min) / xspan) * plotWidth;
     const y = (v: number) => bottom - ((v - f.y_min) / yspan) * plotHeight;
     const xticks = ticks(f.x_min, f.x_max, f.tick_step);
@@ -325,7 +355,8 @@ export function drawFigure(figure: Figure): Drawing {
     }
     if (inside(0, f.x_min, f.x_max) && inside(0, f.y_min, f.y_max))
       text(x(0) - 12, y(0) + 30, "O", "end");
-    if (f.x_label) text(right, bottom + 65, f.x_label, "end");
+    if (f.x_label)
+      text(right, xAxisAtBottom ? bottom + 55 : y(0) - 10, f.x_label, "end");
     if (f.y_label) text(x(0) + 8, top - 10, f.y_label, "start");
     f.graphs.forEach((g) => {
       if (g.type === "vertical") {

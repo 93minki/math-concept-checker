@@ -571,6 +571,86 @@ test("확장 그래프 필드를 그린다", () => {
   ).toBe(true);
 });
 
+test("함수 그래프의 x축 이름은 x축 가까이에 있다", () => {
+  const figure: Figure = {
+    kind: "coordinate_plane",
+    x_min: -6,
+    x_max: 8,
+    y_min: -6,
+    y_max: 8,
+    tick_step: 1,
+    show_tick_labels: true,
+    x_label: "x",
+    y_label: "y",
+    y_tick_step: null,
+    points: [{ x: 2, y: 6, label: "A" }],
+    graphs: [{ type: "inverse", k: 12, label: null }],
+  };
+  const elements = drawFigure(figure).elements;
+  const axis = elements.find(
+    (e) =>
+      e.attrs["data-axis"] === "true" &&
+      e.attrs.x1 !== e.attrs.x2 &&
+      e.attrs.y1 === e.attrs.y2,
+  );
+  const label = elements.find((e) => e.text === "x");
+  expect(axis).toBeDefined();
+  expect(label).toBeDefined();
+  expect(
+    Math.abs(Number(label!.attrs.y) - Number(axis!.attrs.y1)),
+  ).toBeLessThanOrEqual(30);
+});
+
+test("원 안의 각 이름은 꼭짓점 가까이에 있다", () => {
+  const figure: Figure = {
+    kind: "geometry",
+    points: [
+      { id: "O", x: 0, y: 0, show_name: true, dot: true },
+      { id: "A", x: -4.330127, y: 2.5, show_name: true, dot: true },
+      { id: "C", x: 4.330127, y: 2.5, show_name: true, dot: true },
+      { id: "B", x: 0, y: 5, show_name: true, dot: true },
+    ],
+    segments: [
+      ["O", "A"],
+      ["O", "C"],
+      ["A", "B"],
+      ["B", "C"],
+    ].map(([from, to]) => ({
+      from,
+      to,
+      dashed: false,
+      ticks: 0,
+      parallel_marks: 0,
+      label: null,
+    })),
+    lines: [],
+    polygons: [],
+    circles: [
+      { center: "O", radius: 5, dashed: false, points_on: ["A", "B", "C"] },
+    ],
+    arcs: [],
+    angles: [
+      {
+        vertex: "O",
+        from: "A",
+        to: "C",
+        label: "120°",
+        right: false,
+        marks: 0,
+      },
+    ],
+  };
+  const elements = drawFigure(figure).elements;
+  const vertex = elements.find((e) => e.text === "O")!;
+  const label = elements.find((e) => e.text === "120°")!;
+  expect(
+    Math.hypot(
+      Number(label.attrs.x) - Number(vertex.attrs["data-point-x"]),
+      Number(label.attrs.y) - Number(vertex.attrs["data-point-y"]),
+    ),
+  ).toBeLessThanOrEqual(18 + 30);
+});
+
 test("새 그림과 전개도의 배경과 요소", async () => {
   const { shapeFixtures } = await import("../../../e2e/shape-fixtures");
   for (const f of shapeFixtures) {

@@ -81,6 +81,7 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
   const elements: Element[] = [];
   const pointAnchors = new Map<Element, Point>();
   const vertexCenters = new Map<Element, Point>();
+  const angleLimits = new Map<Element, { center: Point; radius: number }>();
   const add = (tag: Element["tag"], attrs: Element["attrs"], text?: string) =>
     elements.push({ tag, attrs, ...(text === undefined ? {} : { text }) });
   const path = (points: Point[], dashed = false, fill = "none", width = 1.5) =>
@@ -294,20 +295,23 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
       } else
         for (let i = 0; i < Math.max(1, a.marks); i++)
           arc(c, 18 + i * 5, 18 + i * 5, start, sweep);
-      if (a.label)
+      if (a.label) {
+        const radius = 18 + (Math.max(1, a.marks) - 1) * 5;
+        const narrow = Math.abs(sweep) < (50 * Math.PI) / 180;
         text(
           {
             x:
-              c.x +
-              (Math.abs(sweep) < (50 * Math.PI) / 180 ? 68 : 42) *
-                Math.cos(start + sweep / 2),
+              c.x + (radius + (narrow ? 30 : 20)) * Math.cos(start + sweep / 2),
             y:
-              c.y +
-              (Math.abs(sweep) < (50 * Math.PI) / 180 ? 68 : 42) *
-                Math.sin(start + sweep / 2),
+              c.y + (radius + (narrow ? 30 : 20)) * Math.sin(start + sweep / 2),
           },
           a.label,
         );
+        angleLimits.set(elements[elements.length - 1], {
+          center: c,
+          radius: radius + (narrow ? 40 : 30),
+        });
+      }
     }
     for (const p of f.points) {
       const at = get(p.id);
@@ -669,6 +673,15 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
             x: original.x + dx * distance,
             y: original.y + dy * distance,
           });
+      const limit = angleLimits.get(element);
+      if (limit)
+        candidates = candidates.filter(
+          (candidate) =>
+            Math.hypot(
+              candidate.x - limit.center.x,
+              candidate.y - limit.center.y,
+            ) <= limit.radius,
+        );
     }
     const score = (candidate: Point) => {
       const rect = box(candidate);
