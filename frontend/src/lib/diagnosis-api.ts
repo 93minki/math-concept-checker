@@ -1,3 +1,5 @@
+import type { Figure } from "@/lib/figures";
+
 import { publicEnv } from "@/lib/env";
 import { createClient } from "@/lib/supabase/client";
 
@@ -48,7 +50,12 @@ export type Item = {
   position: number;
   question_type: "multiple_choice" | "written";
   body: string;
-  choices: { no: number; text: string }[];
+  figure: Figure | null;
+  choices: {
+    no: number;
+    text: string;
+    figure: Figure | null;
+  }[];
   answer: Answer | null;
 };
 export type Diagnosis = {

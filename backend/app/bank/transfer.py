@@ -34,7 +34,10 @@ def snapshot(repo: BankRepository, standard: str | None = None) -> BankFile:
     exported = []
     for question in questions:
         question_choices = [
-            {k: v for k, v in choice.items() if k not in ("id", "question_id")}
+            {
+                "figure": None,
+                **{k: v for k, v in choice.items() if k not in ("id", "question_id")},
+            }
             for choice in choices
             if choice["question_id"] == question["id"]
         ]
@@ -59,6 +62,7 @@ def snapshot(repo: BankRepository, standard: str | None = None) -> BankFile:
             )
         exported.append(
             {
+                "figure": None,
                 **question,
                 "choices": sorted(
                     question_choices, key=lambda row: int(str(row["no"]))
@@ -106,6 +110,13 @@ def backlog_key(row: Row) -> tuple[object, ...]:
 
 def import_bank(repo: BankRepository, path: Path) -> tuple[int, int]:
     data = BankFile.model_validate_json(path.read_text(encoding="utf-8"))
+    for row in data.questions:
+        row.setdefault("figure", None)
+        choices = row.get("choices")
+        if isinstance(choices, list):
+            for choice in choices:
+                if isinstance(choice, dict):
+                    choice.setdefault("figure", None)
     current = snapshot(repo)
     existing = {str(row["id"]): row for row in current.questions}
     seen: dict[str, Row] = {}

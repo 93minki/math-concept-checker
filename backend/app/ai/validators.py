@@ -6,7 +6,18 @@ from pathlib import Path
 from typing import Protocol
 
 from app.ai.hard import HARD_CONDITIONS
-from app.ai.schemas import ConceptData, Question
+from app.ai.schemas import (
+    BarChart,
+    Boxplot,
+    ConceptData,
+    CoordinatePlane,
+    Figure,
+    Frequency,
+    NumberLine,
+    QuadraticGraph,
+    Question,
+    Scatter,
+)
 from app.ai.terms import find_banned_terms
 
 KATEX_SCRIPT = (
@@ -51,6 +62,139 @@ class KatexChecker:
         ]
 
 
+def validate_figure(figure: Figure, standard_code: str) -> list[ValidationIssue]:
+    issues: list[ValidationIssue] = []
+
+    def check(condition: bool, code: str) -> None:
+        if not condition:
+            issues.append(ValidationIssue("figure_" + code, "Invalid figure: " + code))
+
+    def axis(low: float, high: float, step: float, limit: int | None = None) -> bool:
+        return (
+            low < high
+            and step > 0
+            and (limit is None or (high - low) / step <= limit - 1)
+        )
+
+    labels: list[str | None] = []
+    if isinstance(figure, NumberLine):
+        check(
+            axis(figure.min, figure.max, figure.tick_step, 25)
+            and figure.label_step > 0,
+            "number_line_axis",
+        )
+        check(
+            len(figure.points) <= 8 and len(figure.rays) + len(figure.segments) <= 3,
+            "number_line_count",
+        )
+        check(
+            all(figure.min <= p.x <= figure.max for p in figure.points)
+            and all(figure.min <= r.from_ <= figure.max for r in figure.rays)
+            and all(
+                figure.min <= seg.from_ < seg.to <= figure.max
+                for seg in figure.segments
+            ),
+            "number_line_bounds",
+        )
+        labels.extend(p.label for p in figure.points)
+    elif isinstance(figure, CoordinatePlane):
+        check(
+            axis(figure.x_min, figure.x_max, figure.tick_step, 25)
+            and axis(figure.y_min, figure.y_max, figure.tick_step, 25)
+            and figure.x_min <= 0 <= figure.x_max
+            and figure.y_min <= 0 <= figure.y_max,
+            "coordinate_axis",
+        )
+        check(len(figure.points) <= 8 and len(figure.graphs) <= 3, "coordinate_count")
+        check(
+            all(
+                figure.x_min <= p.x <= figure.x_max
+                and figure.y_min <= p.y <= figure.y_max
+                for p in figure.points
+            ),
+            "coordinate_bounds",
+        )
+        check(
+            all(not isinstance(g, QuadraticGraph) or g.a != 0 for g in figure.graphs),
+            "quadratic_coefficient",
+        )
+        labels.extend(p.label for p in figure.points)
+        labels.extend(g.label for g in figure.graphs)
+    elif isinstance(figure, BarChart):
+        check(
+            1 <= len(figure.categories) <= 12
+            and len(figure.categories) == len(figure.values),
+            "bar_count",
+        )
+        check(
+            figure.y_max > 0
+            and figure.y_step > 0
+            and all(0 <= v <= figure.y_max for v in figure.values),
+            "bar_values",
+        )
+        labels.extend([*figure.categories, figure.x_label, figure.y_label])
+    elif isinstance(figure, Frequency):
+        check(
+            1 <= len(figure.frequencies) <= 12
+            and all(v >= 0 for v in figure.frequencies),
+            "frequency_values",
+        )
+        check(
+            figure.class_width > 0
+            and figure.y_step > 0
+            and (figure.show_bars or figure.show_polygon),
+            "frequency_axes",
+        )
+        labels.extend([figure.x_label, figure.y_label])
+    elif isinstance(figure, Boxplot):
+        check(axis(figure.axis_min, figure.axis_max, figure.axis_step), "boxplot_axis")
+        check(1 <= len(figure.series) <= 3, "boxplot_count")
+        check(
+            all(
+                figure.axis_min
+                <= s.min
+                <= s.q1
+                <= s.median
+                <= s.q3
+                <= s.max
+                <= figure.axis_max
+                for s in figure.series
+            ),
+            "boxplot_values",
+        )
+        labels.extend(s.label for s in figure.series)
+    elif isinstance(figure, Scatter):
+        check(
+            axis(figure.x_min, figure.x_max, figure.x_step)
+            and axis(figure.y_min, figure.y_max, figure.y_step),
+            "scatter_axis",
+        )
+        check(len(figure.points) <= 40, "scatter_count")
+        check(
+            all(
+                figure.x_min <= p.x <= figure.x_max
+                and figure.y_min <= p.y <= figure.y_max
+                for p in figure.points
+            ),
+            "scatter_bounds",
+        )
+        labels.extend([figure.x_label, figure.y_label])
+    for label in labels:
+        if label is None:
+            continue
+        check(
+            bool(label.strip())
+            and len(label) <= 10
+            and not any(c in label for c in "$<>"),
+            "label",
+        )
+        for term in find_banned_terms(label, standard_code):
+            issues.append(
+                ValidationIssue("figure_banned_term", f"Term not yet learned: {term}")
+            )
+    return issues
+
+
 def validate_question(
     question: Question, concepts: ConceptData, checker: FormulaChecker | None = None
 ) -> list[ValidationIssue]:
@@ -71,6 +215,38 @@ def validate_question(
         add("assessment_item", "Assessment item, concept, level, or type mismatch")
     if question.concept_id not in {concept.id for concept in concepts.concepts}:
         add("concept", "Unknown concept")
+
+    figures = [
+        f
+        for f in [question.figure, *(c.figure for c in question.choices)]
+        if f is not None
+    ]
+    for figure in figures:
+        issues.extend(validate_figure(figure, concepts.standard_code))
+    if item is not None:
+        choice_figures = [c.figure for c in question.choices]
+        if item.figure == "none" and figures:
+            add("figure_unexpected", "This assessment item does not allow figures")
+        elif item.figure == "body" and (
+            question.figure is None
+            or question.figure.kind not in item.figure_kinds
+            or any(choice_figures)
+        ):
+            add("figure_body", "Expected an allowed body figure only")
+        elif item.figure == "choices" and (
+            question.figure is not None
+            or len(choice_figures) != 5
+            or any(f is None for f in choice_figures)
+            or len({f.kind for f in choice_figures if f is not None}) != 1
+            or any(
+                f is not None and f.kind not in item.figure_kinds
+                for f in choice_figures
+            )
+        ):
+            add("figure_choices", "Expected five choice figures of one allowed kind")
+    for choice in question.choices:
+        if not choice.text.strip() and choice.figure is None:
+            add("figure_choice_text", "A choice needs text or a figure")
 
     misconceptions = {m.id: m for m in concepts.misconceptions}
 

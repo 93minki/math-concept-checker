@@ -197,3 +197,54 @@ a {
   overflow-y: hidden;
   padding-block: 0.4em;
 }
+.figure {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.choice-content {
+  min-width: 0;
+  width: 100%;
+}
+.choice-content .figure {
+  max-height: 220px;
+}
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.5em;
+}
+.problem-table {
+  border-collapse: collapse;
+  width: max-content;
+  max-width: none;
+}
+.problem-table th,
+.problem-table td {
+  border: 1px solid #888;
+  padding: 0.4em 0.6em;
+  text-align: left;
+}
+@media (max-width: 599px) {
+  .choice-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.choice-grid,
+.choice {
+  min-width: 0;
+}
+.choice-content > .math-text {
+  display: block;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.4em;
+}

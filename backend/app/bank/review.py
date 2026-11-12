@@ -1,5 +1,7 @@
 import json
+import subprocess
 from collections.abc import Sequence
+from pathlib import Path
 
 from app.ai.report_html import KATEX_CDN, esc
 from app.bank.repository import Row
@@ -24,6 +26,31 @@ def render_review(
     )
     choices = sorted(choices, key=lambda c: int(str(c["no"])))
     rubric = sorted(rubric, key=lambda r: int(str(r["no"])))
+    figure_rows = [
+        row for row in [*questions, *choices] if row.get("figure") is not None
+    ]
+    figures: dict[int, str] = {}
+    if figure_rows:
+        script = (
+            Path(__file__).resolve().parents[3]
+            / "frontend"
+            / "scripts"
+            / "render-figures.ts"
+        )
+        result = subprocess.run(
+            ["node", str(script)],
+            input=json.dumps(
+                [row["figure"] for row in figure_rows], ensure_ascii=False
+            ),
+            text=True,
+            capture_output=True,
+            check=True,
+        )
+        figures = dict(
+            zip(
+                (id(row) for row in figure_rows), json.loads(result.stdout), strict=True
+            )
+        )
     cards = []
     for q in questions:
         identifier = q["id"]
@@ -45,6 +72,7 @@ def render_review(
             f"{esc(v if v is not None else '없음')}</dd>"
             for k, v in details
         )
+        content += figures.get(id(q), "")
         choice_lines = []
         for c in choices:
             if c["question_id"] != identifier:
@@ -53,7 +81,7 @@ def render_review(
             choice_lines.append(
                 f"<li>{esc(c['no'])}. {esc(c['text'])} "
                 f"{'(정답)' if c['is_correct'] else ''} "
-                f"{esc(mid)} {esc(mis.get(mid, ''))}</li>"
+                f"{esc(mid)} {esc(mis.get(mid, ''))}{figures.get(id(c), '')}</li>"
             )
         rubric_lines = []
         for r in rubric:

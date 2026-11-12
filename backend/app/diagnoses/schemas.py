@@ -4,6 +4,8 @@ from uuid import UUID
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, model_validator
 
+from app.ai.schemas import Figure
+
 UnitStatus = Literal["full", "partial", "unavailable"]
 QuestionType = Literal["multiple_choice", "written"]
 
@@ -45,6 +47,7 @@ class QuestionSlot(BaseModel):
 
 
 class Question(QuestionSlot):
+    figure: Figure | None = None
     body: str
     explanation: str = ""
     model_answer: str | None = None
@@ -95,6 +98,7 @@ class Item(BaseModel):
 
 
 class Choice(BaseModel):
+    figure: Figure | None = None
     no: int
     text: str
 

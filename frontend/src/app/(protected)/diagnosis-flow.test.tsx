@@ -78,9 +78,10 @@ const diagnosis: Diagnosis = {
       position: 1,
       question_type: "multiple_choice",
       body: "$x$",
+      figure: null,
       choices: [
-        { no: 1, text: "하나" },
-        { no: 2, text: "둘" },
+        { no: 1, text: "하나", figure: null },
+        { no: 2, text: "둘", figure: null },
       ],
       answer: null,
     },
@@ -90,6 +91,7 @@ const diagnosis: Diagnosis = {
       position: 2,
       question_type: "written",
       body: "설명해요",
+      figure: null,
       choices: [],
       answer: null,
     },
@@ -551,4 +553,35 @@ test("2단계 중단 리포트 생성 뒤 갱신된 문제 결과를 보여 준�
   render(<DiagnosisView id="d" />);
   expect(await screen.findByText("맞았어요")).toBeTruthy();
   expect(screen.getByText("기간이 지나 중단된 진단이에요")).toBeTruthy();
+});
+
+test("그림 보기는 선택 가능한 2열 배치 영역에 표시한다", async () => {
+  const figure = {
+    kind: "number_line" as const,
+    min: 0,
+    max: 2,
+    tick_step: 1,
+    label_step: 1,
+    points: [],
+    rays: [],
+    segments: [],
+  };
+  mocks.getDiagnosis.mockResolvedValue({
+    ...diagnosis,
+    items: [
+      {
+        ...diagnosis.items[0],
+        figure,
+        choices: diagnosis.items[0].choices.map((c) => ({ ...c, figure })),
+      },
+    ],
+  });
+  const { container } = render(<DiagnosisView id="d" />);
+  await screen.findByText("기본 문제");
+  expect(container.querySelector("fieldset.choice-grid")).toBeTruthy();
+  expect(screen.getAllByRole("img", { name: "문제 그림" })).toHaveLength(3);
+  fireEvent.click(screen.getAllByRole("radio")[0]);
+  expect((screen.getAllByRole("radio")[0] as HTMLInputElement).checked).toBe(
+    true,
+  );
 });

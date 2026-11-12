@@ -1,3 +1,4 @@
+from collections.abc import Sequence
 from dataclasses import dataclass
 
 from app.ai.schemas import Choice, Grading, RubricElement
@@ -9,7 +10,7 @@ class Score:
     passed: bool
 
 
-def score_choice(choices: list[Choice], selected_no: int) -> Score:
+def score_choice(choices: Sequence[Choice], selected_no: int) -> Score:
     selected = next((choice for choice in choices if choice.no == selected_no), None)
     if selected is None:
         raise ValueError("Unknown choice number")

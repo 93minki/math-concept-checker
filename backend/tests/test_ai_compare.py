@@ -66,7 +66,7 @@ def test_prompt_loading(monkeypatch: pytest.MonkeyPatch) -> None:
         "student_answer": "student",
     }
     prompt = load_prompt("grade_written", values)
-    assert prompt.version == PROMPT_VERSION == "v7"
+    assert prompt.version == PROMPT_VERSION == "v8"
     assert "<!--" not in prompt.system + prompt.user
     assert "{{" not in prompt.system + prompt.user
     assert "student" in prompt.user
@@ -176,6 +176,7 @@ def test_question_draft_metadata_from_code(monkeypatch: pytest.MonkeyPatch) -> N
     assert set(QuestionDraft.model_fields) == {
         "body",
         "explanation",
+        "figure",
         "choices",
         "model_answer",
         "rubric",
