@@ -102,22 +102,22 @@ export default function UnitSelection() {
           <button
             key={item}
             role="tab"
-            aria-selected={grade === item}
+            aria-selected={!query.trim() && grade === item}
             onClick={() => setGrade(item)}
           >
             {item}
           </button>
         ))}
       </div>
-      <>
+      <SearchFrame searching={!!query.trim()} count={displayed.length}>
         {(["중1", "중2", "중3"] as const).map((item) => {
           if (!query.trim() && item !== grade) return null;
           const group = displayed.filter((unit) => unit.grade === item);
           if (!group.length) return null;
           return (
-            <div key={item}>
-              {query.trim() && <h3>{item}</h3>}
+            <div key={item} className="unit-map-grade">
               <LearningMap
+                embedded={!!query.trim()}
                 units={group}
                 allUnits={units ?? []}
                 grade={item}
@@ -164,7 +164,27 @@ export default function UnitSelection() {
             </div>
           );
         })}
-      </>
+      </SearchFrame>
+    </section>
+  );
+}
+
+// While searching, every grade's matches share one card with a count.
+function SearchFrame({
+  searching,
+  count,
+  children,
+}: {
+  searching: boolean;
+  count: number;
+  children: React.ReactNode;
+}) {
+  if (!searching) return <>{children}</>;
+  if (count === 0) return null;
+  return (
+    <section className="unit-map" aria-label="검색 결과">
+      <p className="unit-search-count">검색 결과 {count}개</p>
+      {children}
     </section>
   );
 }

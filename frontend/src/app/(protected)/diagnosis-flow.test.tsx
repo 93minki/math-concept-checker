@@ -91,7 +91,18 @@ test("학년 탭과 검색 및 진행 상태", async () => {
   });
   expect(screen.getByRole("heading", { name: "1. 문자와 식" })).toBeTruthy();
   expect(screen.getByRole("heading", { name: "2. 도형과 식" })).toBeTruthy();
-  expect(document.querySelectorAll(".grade-chip")).toHaveLength(2);
+  // One results card: count, grade subheadings, no chips, no tab selected.
+  const results = screen.getByRole("region", { name: "검색 결과" });
+  expect(results.textContent).toContain("검색 결과 2개");
+  expect(
+    [...results.querySelectorAll("h3")].map((node) => node.textContent),
+  ).toEqual(["중1", "중3"]);
+  expect(document.querySelector(".grade-chip")).toBeNull();
+  expect(
+    screen
+      .getAllByRole("tab")
+      .every((tab) => tab.getAttribute("aria-selected") === "false"),
+  ).toBe(true);
 });
 const diagnosis: Diagnosis = {
   id: "d",

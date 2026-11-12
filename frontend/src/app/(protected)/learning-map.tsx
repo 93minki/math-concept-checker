@@ -16,6 +16,9 @@ export type ViewProps = {
   nextId: number | null;
   start: (unit: Unit) => void;
   conflictNode: (unit: Unit) => ReactNode;
+  // Search results: rows only under a grade subheading, inside the
+  // caller's single results card (no per-grade summary).
+  embedded?: boolean;
 };
 export function Summary({ units, grade }: { units: Unit[]; grade: string }) {
   const { total, conquered } = gradeProgress(units, grade);
@@ -82,14 +85,9 @@ export function StatusIcon({ state }: { state: Progress }) {
     </svg>
   );
 }
-export function Details({ unit, search }: { unit: Unit; search: boolean }) {
+export function Details({ unit }: { unit: Unit }) {
   return (
     <div className="unit-row-info">
-      {search && (
-        <span className={`grade-chip grade-${unit.grade.slice(-1)}`}>
-          {unit.grade}
-        </span>
-      )}
       <h4>
         {unit.number}. {unit.name}
       </h4>
@@ -213,42 +211,50 @@ export function Actions({
 }
 
 export default function LearningMap(props: ViewProps) {
+  const rows = props.units.map((unit) => {
+    const state = unitProgress(unit);
+    const filled =
+      state === "conquered"
+        ? 3
+        : state === "half"
+          ? 2
+          : state === "retry"
+            ? 1
+            : 0;
+    return (
+      <article key={unit.id} className={`unit-path-row ${state}`}>
+        <div className="unit-path-marker">
+          <StatusIcon state={state} />
+        </div>
+        <div className="unit-row-body">
+          <Details unit={unit} />
+          <div className="unit-gauge">
+            <div aria-hidden="true" className="unit-gauge-bars">
+              {[1, 2, 3].map((n) => (
+                <span key={n} className={n <= filled ? state : ""} />
+              ))}
+            </div>
+            <span className={`unit-state ${state}`}>
+              {progressLabels[state]}
+            </span>
+          </div>
+          <Actions {...props} unit={unit} />
+          {props.conflictNode(unit)}
+        </div>
+      </article>
+    );
+  });
+  if (props.embedded)
+    return (
+      <>
+        <h3 className="unit-map-group">{props.grade}</h3>
+        {rows}
+      </>
+    );
   return (
     <section className="unit-map">
       <Summary units={props.allUnits} grade={props.grade} />
-      {props.units.map((unit) => {
-        const state = unitProgress(unit);
-        const filled =
-          state === "conquered"
-            ? 3
-            : state === "half"
-              ? 2
-              : state === "retry"
-                ? 1
-                : 0;
-        return (
-          <article key={unit.id} className={`unit-path-row ${state}`}>
-            <div className="unit-path-marker">
-              <StatusIcon state={state} />
-            </div>
-            <div className="unit-row-body">
-              <Details unit={unit} search={props.search} />
-              <div className="unit-gauge">
-                <div aria-hidden="true" className="unit-gauge-bars">
-                  {[1, 2, 3].map((n) => (
-                    <span key={n} className={n <= filled ? state : ""} />
-                  ))}
-                </div>
-                <span className={`unit-state ${state}`}>
-                  {progressLabels[state]}
-                </span>
-              </div>
-              <Actions {...props} unit={unit} />
-              {props.conflictNode(unit)}
-            </div>
-          </article>
-        );
-      })}
+      {rows}
     </section>
   );
 }

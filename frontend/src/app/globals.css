@@ -1050,3 +1050,13 @@ a {
     gap: 4px;
   }
 }
+
+/* Search results: one card, grade subheadings instead of chips. */
+.unit-search-count {
+  font-weight: 700;
+}
+.unit-map-group {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
