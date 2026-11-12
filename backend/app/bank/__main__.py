@@ -4,6 +4,7 @@ from decimal import Decimal
 from pathlib import Path
 
 from app.ai.schemas import load_concept
+from app.bank.converter import convert_concepts
 from app.bank.curriculum import load_curriculum
 from app.bank.operations import change_status, generate
 from app.bank.repository import get_repository
@@ -14,6 +15,9 @@ from app.bank.transfer import export_bank, import_bank
 def main() -> None:
     parser = argparse.ArgumentParser(description="문제 은행 개발자 명령")
     commands = parser.add_subparsers(dest="command", required=True)
+    convert = commands.add_parser("convert-concepts")
+    convert.add_argument("codes", nargs="+")
+    convert.add_argument("--check", action="store_true")
     load = commands.add_parser("load-curriculum")
     load.add_argument("--dry-run", action="store_true")
     gen = commands.add_parser("generate")
@@ -49,6 +53,10 @@ def main() -> None:
     importing.add_argument("file", type=Path)
     args = parser.parse_args()
     try:
+        if args.command == "convert-concepts":
+            if not convert_concepts(args.codes, args.check):
+                raise SystemExit(1)
+            return
         if args.command == "load-curriculum":
             counts = load_curriculum(
                 None if args.dry_run else get_repository(), args.dry_run
