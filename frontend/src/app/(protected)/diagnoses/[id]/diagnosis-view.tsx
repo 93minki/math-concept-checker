@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { MathText } from "@/components/math-text";
 import { ProblemText } from "@/components/problem-text";
 import { Figure } from "@/components/figure";
 import {
@@ -359,7 +358,10 @@ export default function DiagnosisView({ id }: { id: string }) {
                           }
                         />
                         <div className="choice-content">
-                          <MathText text={`${choice.no}. ${choice.text}`} />
+                          <ProblemText
+                            prefix={`${choice.no}. `}
+                            text={choice.text}
+                          />
                           {choice.figure && <Figure figure={choice.figure} />}
                         </div>
                       </label>

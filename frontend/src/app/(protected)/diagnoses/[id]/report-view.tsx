@@ -108,7 +108,10 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
                 {item.choices.map((choice) => (
                   <div className="choice" key={choice.no}>
                     <div className="choice-content">
-                      <MathText text={`${choice.no}. ${choice.text}`} />
+                      <ProblemText
+                        prefix={`${choice.no}. `}
+                        text={choice.text}
+                      />
                       {choice.figure && <Figure figure={choice.figure} />}
                     </div>
                   </div>
@@ -117,16 +120,13 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
             )}
           </div>
           {item.answer?.selected_choice != null ? (
-            <p>
-              내 답:{" "}
-              <MathText
-                text={
-                  item.choices.find(
-                    (c) => c.no === item.answer?.selected_choice,
-                  )?.text ?? String(item.answer.selected_choice)
-                }
-              />
-            </p>
+            <ProblemText
+              prefix="내 답: "
+              text={
+                item.choices.find((c) => c.no === item.answer?.selected_choice)
+                  ?.text ?? String(item.answer.selected_choice)
+              }
+            />
           ) : (
             <p>
               내 답:{" "}

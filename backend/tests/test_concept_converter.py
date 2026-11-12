@@ -50,6 +50,10 @@ def test_figure_references_and_variants(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     root = fixture_root(tmp_path)
+    data_path = root / "backend" / "data" / "concepts" / "9수03-19.json"
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+    data["variants"] = 1
+    data_path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     path = root / "docs" / "concepts" / "9수03-19.md"
     text = path.read_text(encoding="utf-8")
     first_line = next(

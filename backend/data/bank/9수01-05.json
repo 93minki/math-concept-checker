@@ -68,7 +68,7 @@
       "difficulty": "normal",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T06:55:33.625792+00:00",
       "variant": 1
     },
     {
@@ -603,6 +603,73 @@
       "validation": [
         {
           "at": "2026-11-11T06:50:24.948724+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T07:03:56.979661+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-05-C1-오개념판별",
+      "body": "두 계산 $(-4)-(-3)$과 $(-4)+(-3)$에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-05-M2",
+          "no": 1,
+          "text": "첫째는 $-3$을 빼므로 $3$을 더해 $-1$이다. 둘째는 두 음수의 부호를 곱해 양수로 정하므로 $7$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 2,
+          "text": "첫째는 $-3$을 빼므로 $3$을 빼서 $-7$이다. 둘째는 두 음수를 더하므로 $-7$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "첫째는 $-3$을 빼므로 $3$을 더해 $-1$이다. 둘째는 두 음수를 더하므로 $-7$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-05-M1",
+          "no": 4,
+          "text": "첫째는 $-3$을 빼므로 $3$을 빼서 $-7$이다. 둘째는 두 음수의 부호를 곱해 양수로 정하므로 $7$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "첫째는 $-3$을 빼므로 $3$을 더해 $-1$이다. 둘째는 $4$와 $3$의 차를 구하고 음수로 나타내므로 $-1$이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:55:33.578783+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$(-4)-(-3)$은 $(-4)+(+3)$과 같으므로 $-1$이다. 또 $(-4)+(-3)$은 음수 두 개를 더하므로 $-7$이다.\n①은 음수 두 개를 더할 때 곱셈의 부호 규칙을 잘못 사용했다. ②는 $-3$을 빼는 것을 $+3$을 빼는 것으로 잘못 생각했다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:55:33.133833+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "d0578d4c-2748-4df2-8af5-e389433b0bec",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:55:33.133560+00:00",
           "issues": [],
           "number": 1
         }

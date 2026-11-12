@@ -253,8 +253,7 @@ a {
 .choice {
   min-width: 0;
 }
-.choice-content > .math-text {
-  display: block;
+.choice-content > .problem-text {
   min-width: 0;
   overflow-x: auto;
   overflow-y: hidden;

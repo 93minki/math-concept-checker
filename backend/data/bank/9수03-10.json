@@ -737,7 +737,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:00:01.086082+00:00",
       "variant": 1
     },
     {
@@ -769,7 +769,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:00:01.126252+00:00",
       "variant": 1
     },
     {
@@ -811,7 +811,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:00:01.047673+00:00",
       "variant": 1
     },
     {
@@ -843,7 +843,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:01:52.216374+00:00",
       "variant": 2
     },
     {
@@ -875,7 +875,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:01:52.292159+00:00",
       "variant": 2
     },
     {
@@ -913,7 +913,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:01:52.137731+00:00",
       "variant": 2
     },
     {
@@ -4360,6 +4360,166 @@
           "at": "2026-11-12T04:36:17.115461+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T07:03:57.116343+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-10-C3-오개념판별",
+      "body": "세 변의 길이가 모두 다른 예각삼각형 $ABC$가 있다. $\\angle A$와 $\\angle B$의 이등분선의 교점을 $P$, $\\overline{AB}$와 $\\overline{BC}$의 수직이등분선의 교점을 $Q$라고 하자. 다섯 학생의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-10-M1",
+          "no": 1,
+          "text": "민수: $P$는 세 꼭짓점까지의 거리가 같아."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-10-M2",
+          "no": 2,
+          "text": "지우: $P$는 세 변의 수직이등분선의 교점이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-10-M1",
+          "no": 3,
+          "text": "서연: $Q$는 세 변까지의 거리가 같아."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-10-M2",
+          "no": 4,
+          "text": "준호: $Q$는 세 내각의 이등분선의 교점이야."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "하린: $Q$는 세 꼭짓점까지의 거리가 같아."
+        }
+      ],
+      "created_at": "2026-11-12T07:00:01.155647+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$P$는 내심이고, $Q$는 외심이다. 따라서 $Q$는 세 꼭짓점까지의 거리가 같으므로 ⑤가 옳다.\n$P$와 $Q$가 같은 점이라면 $PA=PB$이다. 이때 $\\angle PAB=\\angle PBA$이고, $AP$와 $BP$는 각각 $\\angle A$와 $\\angle B$의 이등분선이므로 $\\angle A=\\angle B$이다. 그러면 $AC=BC$가 되어 세 변의 길이가 모두 다르다는 것에 어긋난다. 따라서 $P$와 $Q$는 서로 다르다.\n①과 ③은 내심과 외심의 거리 성질을 바꾸어 생각한 것이다. ②와 ④는 내심과 외심을 만드는 선을 바꾸어 생각한 것이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T07:00:00.980961+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 점을 만드는 선을 보고 각 점을 알아낸 후, 다섯 학생의 말이 옳은지 판단해야 한다.",
+      "id": "26eed4fd-f317-48cc-b348-c7be72201f52",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:59:31.613374+00:00",
+          "issues": [
+            "⑤는 P가 내심임을 알면 거리 성질을 판단하지 않고도 고를 수 있다. M1을 가진 학생도 ⑤를 옳다고 판단하므로 거리 성질을 바꾸어 아는 오개념을 판별하기 어렵다.",
+            "학생의 말 형식만 제외하면 P의 정의와 내접원의 중심 성질을 바로 확인하는 일반 문제와 구별되지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:00:00.980645+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T07:03:57.153919+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-10-C3-오개념판별",
+      "body": "세 변의 길이가 모두 다른 둔각삼각형 $ABC$가 있다. 두 점 $P$, $Q$는 이 삼각형의 외심과 내심을 순서 없이 나타낸 것이다. 점 $P$는 삼각형의 외부에 있고, 점 $Q$는 삼각형의 내부에 있다.\n\n다섯 학생의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-10-M1",
+          "no": 1,
+          "text": "$P$는 세 꼭짓점까지의 거리가 같지 않아."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-10-M1",
+          "no": 2,
+          "text": "$Q$는 세 꼭짓점까지의 거리가 같아."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-10-M2",
+          "no": 3,
+          "text": "$P$는 세 내각의 이등분선의 교점이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-10-M2",
+          "no": 4,
+          "text": "$Q$는 세 변의 수직이등분선의 교점이야."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$Q$는 세 내각의 이등분선의 교점이야."
+        }
+      ],
+      "created_at": "2026-11-12T07:01:52.224168+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "둔각삼각형의 외심은 삼각형의 외부에 있고, 내심은 내부에 있다. 따라서 $P$는 외심이고 $Q$는 내심이다. 내심은 세 내각의 이등분선의 교점이므로 ⑤가 옳다.\n\n①은 외심이 세 꼭짓점까지의 거리가 같다는 것을 놓친 말이다. ②는 내심의 거리 성질을 외심의 거리 성질과 바꾸어 생각한 말이다. ③과 ④는 외심과 내심을 만드는 선을 서로 바꾸어 생각한 말이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T07:01:51.610003+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다섯 학생의 말을 보고 옳은 말을 고르게 했다. 둔각삼각형에서 두 점의 위치로 외심과 내심을 먼저 구별한 뒤 각 말을 판단해야 한다.",
+      "id": "077448bc-c444-47ea-899e-4594a099f437",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T07:00:46.735593+00:00",
+          "issues": [
+            "현우의 주장을 검토하지 않아도 직각삼각형의 외심과 거리 성질을 바로 확인하여 ③을 고를 수 있다. 다른 학생의 주장을 판단하는 고난도 문제로 일반적인 성질 확인 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:01:09.806750+00:00",
+          "issues": [
+            "다섯 학생의 말이라는 형식만 취했을 뿐, 각 보기가 정의나 성질을 바로 확인하면 풀리는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T07:01:51.609752+00:00",
+          "issues": [],
+          "number": 3
         }
       ],
       "variant": 2

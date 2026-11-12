@@ -1,0 +1,2111 @@
+{
+  "backlog": [
+    {
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T05:32:33.332452+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:33:04.052686+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T05:33:33.000264+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T05:33:33.106801+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T06:58:40.926094+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T05:33:59.212680+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:34:23.734735+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T05:34:49.312918+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T05:34:49.72998+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T06:59:06.769755+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T05:30:57.085800+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:31:10.266632+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T05:31:24.668927+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T05:31:24.773187+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T06:57:52.066085+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T05:31:37.693917+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:31:51.790142+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T05:32:06.488026+00:00",
+          "issues": [
+            "linked_distractor: At least one wrong choice needs an approved misconception"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T05:32:06.567658+00:00",
+      "difficulty": "normal",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T06:58:09.423808+00:00",
+      "variant": 2
+    }
+  ],
+  "questions": [
+    {
+      "approved_at": "2026-11-12T05:52:13.302839+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C1-오개념판별",
+      "body": "다음은 함수 $y=2x^2-(x^2+3x)+3x$에 대한 민지의 주장이다.\n\n“이 식에는 일차항이 있으므로 이 함수는 이차함수가 아니야.”\n\n민지의 주장이 옳은지 판단하고, 그 까닭을 바르게 설명한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "옳다. 주어진 식에 일차항 $3x$가 있으므로 이차함수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M2",
+          "no": 2,
+          "text": "옳다. 식을 간단히 하면 $y=x^2$이고 상수항이 없으므로 이차함수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M1",
+          "no": 3,
+          "text": "틀리다. 주어진 식에 $x^2$이 보이면 간단히 한 결과와 관계없이 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. 식을 간단히 하면 $y=x^2$이고 $x^2$의 계수가 $0$이 아니므로 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳다. 식을 간단히 하면 $x^2$이 들어 있는 항이 없어져 $y=3x$가 되므로 이차함수가 아니다."
+        }
+      ],
+      "created_at": "2026-11-12T05:30:12.233512+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "주어진 식을 간단히 하면 $y=2x^2-x^2-3x+3x=x^2$이다. 이 식은 $x^2$의 계수가 $1$인 이차함수이므로 민지의 주장은 틀리다. 일차항이나 상수항이 없어도 $x^2$의 계수가 $0$이 아니면 이차함수이다. 또 주어진 식에 $x^2$이 보여도 간단히 했을 때 $x^2$이 없어질 수 있으므로, 이를 확인해야 한다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:30:12.079504+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지의 주장이 옳은지 판단하고 그 까닭을 고르게 했다. 식을 간단히 한 뒤 일차항과 상수항이 없는 식도 이차함수인지 생각해야 한다.",
+      "id": "dda12bc1-b688-4766-929f-f800c39601c2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:29:46.038299+00:00",
+          "issues": [
+            "보기 ②: 계산하기 전의 식에는 x²이 직접 보이지 않으므로, 제시된 까닭이 사실과 다르고 M1을 정확히 나타내지 못한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:30:12.079284+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.358351+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C1-오개념판별",
+      "body": "다음 식에 대한 수빈이의 주장이다.\n\n$y=x^2-x(x+1)$\n\n“식에 $x^2$이 있으므로 이 함수는 이차함수야.”\n\n수빈이의 주장이 옳은지 판단하고, 그 까닭을 바르게 설명한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M1",
+          "no": 1,
+          "text": "옳다. 식에 $x^2$이 보이면 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. $x$를 곱한 항이 있으므로 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M2",
+          "no": 3,
+          "text": "틀리다. 상수항이 없는 식은 이차함수가 될 수 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. $x$를 곱한 항이 있는 식은 이차함수가 될 수 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. 식을 간단히 하면 $y=-x$이므로 이차함수가 아니다."
+        }
+      ],
+      "created_at": "2026-11-12T05:30:42.600044+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "식을 간단히 하면 $y=x^2-x^2-x=-x$이다. $x^2$의 계수가 $0$이므로 이차함수가 아니다. ①처럼 식을 간단히 하기 전에 $x^2$이 보인다는 이유만으로 판단해서는 안 된다. ③처럼 상수항이 없어도 $y=3x^2$과 같은 이차함수가 있다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:30:42.368656+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "식에 $x^2$이 보이므로 이차함수라는 학생의 주장을 판단하게 한다. 보기마다 판단과 그 까닭을 함께 제시한다.",
+      "id": "f8a635f8-7597-4eef-89cb-44081de3d051",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:30:42.368299+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.390414+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C1-오개념판별",
+      "body": "다음 중 $y$가 $x$의 이차함수인 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M1",
+          "no": 1,
+          "text": "$y=x^2-(x^2+2x)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M3",
+          "no": 2,
+          "text": "$y=\\dfrac{1}{x^2}$ ($x\\ne 0$)"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=2x+1$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=3x^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=5-3x$"
+        }
+      ],
+      "created_at": "2026-11-12T05:29:01.693746+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "④는 $y=3x^2$이므로 이차함수이다. ①은 식을 간단히 하면 $y=-2x$이므로 이차함수가 아니다. $x^2$이 보인다는 것만으로 이차함수라고 판단해서는 안 된다. ②는 $x^2$이 분모에 있어 $y=ax^2+bx+c$의 꼴로 나타낼 수 없으므로 이차함수가 아니다. ③과 ⑤도 이차함수가 아니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:29:01.591168+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4165ada3-e7d0-43bd-b22b-fb956a918945",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:29:01.590942+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.436137+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C1-오개념판별",
+      "body": "민수는 $y=4x^2+1$에 대해 다음과 같이 말했습니다.\n\n“$x$의 항이 없으므로 $y$는 $x$의 이차함수가 아니야.”\n\n민수의 말에 대해 바르게 판단한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "이차함수이다. $x$의 항이 없어도 $x^2$의 계수가 $0$이 아니기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M2",
+          "no": 2,
+          "text": "이차함수가 아니다. $x$의 항이 없기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "이차함수가 아니다. 상수항이 $0$이 아니기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "이차함수가 아니다. $x^2$의 계수가 $1$이 아니기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "이차함수가 아니다. $x=0$일 때 $y$의 값이 $0$이 아니기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T05:29:18.006549+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$y=4x^2+1$은 $y=ax^2+bx+c$에서 $a=4$, $b=0$, $c=1$인 이차함수입니다. $x$의 항이 없어도 $x^2$의 계수가 $0$이 아니면 이차함수입니다. ②는 $x$의 항이 반드시 있어야 이차함수라고 잘못 생각한 것입니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:29:17.90975+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "875a1dfb-c28e-4798-b3fa-7948f0b87f9e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:29:17.909476+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.013278+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C1-정의이해",
+      "body": "다음 중 $y$가 $x$의 이차함수인 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M1",
+          "no": 1,
+          "text": "$y=x^2-(x^2+2x)$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y+x^2=2x^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M1",
+          "no": 3,
+          "text": "$y+x^2=x^2+1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y+x^2=y+x^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y+x^2=y+x^2+1$"
+        }
+      ],
+      "created_at": "2026-11-12T05:28:28.676382+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "각 식을 간단히 살펴보자.\n① $y=-2x$이므로 이차함수가 아니다. $x^2$이 보인다는 이유만으로 이차함수라고 판단해서는 안 된다.\n② $y=x^2$이므로 이차함수이다. $x$의 항과 상수항이 없어도 이차함수일 수 있다.\n③ $y=1$이므로 이차함수가 아니다.\n④는 모든 $x$와 $y$에 대하여 성립하므로, $x$의 값에 따라 $y$의 값이 하나로 정해지지 않는다.\n⑤는 어떤 $x$와 $y$에 대해서도 성립하지 않는다. 따라서 정답은 ②이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:28:28.556121+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "④는 양변이 같아 $y$의 값이 하나로 정해지지 않고, ⑤는 성립하지 않는 등식이다. 이를 다른 식과 함께 비교하여 판단하게 한다.",
+      "id": "de929b74-f9c7-43f1-906e-62979dbd1fbf",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:28:28.555889+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.11257+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C1-정의이해",
+      "body": "각 등식에서 $x$는 모든 실수의 값을 가질 수 있다. 등식으로 $y$가 $x$의 이차함수로 나타나는 경우를 고르시오.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M1",
+          "no": 1,
+          "text": "$y+x^2=x^2+2x$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y+x^2=y+x^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y+x^2=2x^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y+x^2=y+x^2+1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y+x^2=x^2+3$"
+        }
+      ],
+      "created_at": "2026-11-12T05:28:47.971873+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "①은 같은 항을 지우면 $y=2x$이다. $x^2$이 보이더라도 이를 지운 뒤 이차항이 남는지 살펴야 한다.\n②는 양변이 같으므로 $x$의 값 하나에 여러 $y$의 값이 가능하다.\n③은 $y=x^2$이다. 일차항과 상수항이 없어도 $x^2$의 계수가 $0$이 아니므로 이차함수이다.\n④는 양변에서 같은 항을 지우면 $0=1$이므로 등식을 만족하는 $x$, $y$가 없다.\n⑤는 $y=3$이므로 이차함수가 아니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:28:47.856683+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "②와 ④에서 양변의 $y$가 없어지는 경우를 살펴야 한다. ③에서는 일차항과 상수항이 없어도 이차함수인지 판단해야 한다.",
+      "id": "a670b6b9-bff4-44b9-933d-08e6737e2778",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:28:47.856415+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.201629+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C1-정의이해",
+      "body": "다음 중 $y$가 $x$의 이차함수인 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$y=2x+1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M1",
+          "no": 2,
+          "text": "$y=x^2-(x^2+2x)$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=3x^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M3",
+          "no": 4,
+          "text": "$y=\\dfrac{1}{x^2}$ $(x\\ne 0)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=x^3$"
+        }
+      ],
+      "created_at": "2026-11-12T05:27:30.323048+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "③은 $y=3x^2+0x+0$으로 나타낼 수 있으므로 이차함수이다. ②는 계산하면 $y=-2x$이므로, 처음 식에 $x^2$이 보인다고 해서 이차함수인 것은 아니다. ④는 $x^2$이 분모에 있으므로 $y=ax^2+bx+c$ 꼴로 나타낼 수 없다. ①과 ⑤도 이 꼴로 나타낼 수 없다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:27:30.113294+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1f7dc169-930f-4524-adbe-e96c5a93e35d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:27:30.113086+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.243213+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C1-정의이해",
+      "body": "다섯 학생이 수 $x$를 넣어 수 $y$를 구하는 식을 하나씩 썼다. $y$가 $x$의 이차함수가 되는 식을 쓴 학생은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "민준: $y=2x+3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M1",
+          "no": 2,
+          "text": "지민: $y=x^2-x^2+4$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "서윤: $y=-3x^2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "도현: $y=5-x$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "하은: $y=2(x+1)$"
+        }
+      ],
+      "created_at": "2026-11-12T05:28:11.562465+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "서윤의 식은 $y=ax^2+bx+c$에서 $a=-3$, $b=0$, $c=0$인 이차함수이다. 일차항과 상수항이 없어도 이차함수가 될 수 있다. 지민의 식은 $x^2$이 보이지만, 두 $x^2$이 없어져 $y=4$가 되므로 이차함수가 아니다. 나머지 식도 이차함수가 아니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:28:11.428304+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "f53821cd-d8cd-4e19-b3f2-9e89e699c2af",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:27:46.323202+00:00",
+          "issues": [
+            "여러 식을 정리하여 이차함수인 것을 고르는 측정 의도와 달리, 하나의 식에 대한 설명을 고르는 문제이다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:28:11.427849+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T07:00:44.245047+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "body": "그림에서 $ABCD$는 직사각형이고 $AEFG$는 정사각형이다. 점 $E$는 변 $AB$ 위에, 점 $G$는 변 $AD$ 위에 있다. 색칠한 부분의 넓이를 $y$라 하자. $x>1$일 때, $y$를 $x$의 식으로 나타내고 이차함수인지 바르게 판단한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M5",
+          "no": 1,
+          "text": "$y=5$이고, 이차함수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=3x+1$이고, 이차함수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=5x-1$이고, 이차함수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=x^2+2x+1$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=2x^2+x+1$이고, 이차함수이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:58:41.031567+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "직사각형 $ABCD$의 넓이는 $x(x+3)$이고, 정사각형 $AEFG$의 넓이는 $(x-1)^2$이다. 따라서 $y=x(x+3)-(x-1)^2=5x-1$이다. $x^2$의 항이 없어지므로 $y$는 $x$의 이차함수가 아니다. ①은 각 도형의 두 변의 길이를 더한 값을 넓이로 잘못 생각한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "G",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "D",
+            "vertex": "C"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "G",
+            "vertex": "D"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "G",
+            "vertex": "F"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 2.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 2.0,
+            "y": 2.0
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": true,
+            "x": 0.0,
+            "y": 2.0
+          }
+        ],
+        "polygons": [
+          {
+            "shaded": true,
+            "vertices": [
+              "E",
+              "B",
+              "C",
+              "D",
+              "G",
+              "F"
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "x + 3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "x - 1",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:58:40.872028+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "색칠한 부분의 넓이를 직사각형의 넓이에서 정사각형의 넓이를 빼는 식으로 나타내고, 이차함수인지 판단한다.",
+      "id": "5f401287-7e04-4da8-aec4-7998e5da0079",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:58:40.871931+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T07:27:28.693269+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "body": "그림에서 $ABCD$는 직사각형이고 $AEFD$, $EBCF$도 직사각형이다. $x>0$일 때, 직사각형 $AEFD$의 넓이에서 직사각형 $EBCF$의 넓이를 뺀 값을 $y$라 하자. $y$를 $x$의 식으로 나타내고 이차함수인지 바르게 판단한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$y=x^2-x-6$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=x^2+x-6$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=x^2-x+6$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=x^2+5x+6$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M5",
+          "no": 5,
+          "text": "$y=x-3$이고, 이차함수가 아니다."
+        }
+      ],
+      "created_at": "2026-11-12T07:20:57.740164+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "직사각형 $AEFD$의 넓이는 $x(x+2)$이고, 직사각형 $EBCF$의 넓이는 $3(x+2)$이다. 따라서 $y=x(x+2)-3(x+2)=x^2-x-6$이므로 $y$는 $x$의 이차함수이다. ⑤는 각 직사각형의 두 변의 길이를 곱하지 않고 더한 뒤 뺀 것이다. 직사각형의 넓이는 가로와 세로의 길이를 곱하여 구한다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "D",
+            "vertex": "A"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 2.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 5.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 2.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "x+2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T07:20:57.495816+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 직사각형의 넓이의 차를 각각의 변의 길이를 이용하여 식으로 나타낸 뒤 이차함수인지 판단한다.",
+      "id": "9ef4b3d1-d79f-4217-a02f-9382ba8bb344",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T07:20:57.495487+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "body": "그림에서 $ABCD$와 $EFGH$는 직사각형이다. $x>0$일 때, 직사각형 $EFGH$의 넓이에서 직사각형 $ABCD$의 넓이를 뺀 값을 $y$라 하자. $y$를 $x$의 식으로 나타내고 이차함수인지 바르게 판단한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$y=2x^2+6x+2$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=x^2+3x+2$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=2x+3$이고, 이차함수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M5",
+          "no": 4,
+          "text": "$y=0$이고, 이차함수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=2$이고, 이차함수가 아니다."
+        }
+      ],
+      "created_at": "2026-11-12T06:59:06.876098+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T07:00:50.31163+00:00",
+      "explanation": "직사각형 $ABCD$의 넓이는 $x(x+3)=x^2+3x$이고, 직사각형 $EFGH$의 넓이는 $(x+1)(x+2)=x^2+3x+2$이다. 따라서 $y=(x^2+3x+2)-(x^2+3x)=2$이므로 이차함수가 아니다. ④는 각 직사각형의 넓이를 구할 때 두 변의 길이를 곱하지 않고 더한 뒤 뺀 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "D",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "B",
+            "vertex": "A"
+          },
+          {
+            "from": "H",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 13.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": true,
+            "x": 13.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "H",
+            "show_name": true,
+            "x": 8.0,
+            "y": 4.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "x+3",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": "x+2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "H"
+          },
+          {
+            "dashed": false,
+            "from": "H",
+            "label": "x+1",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:59:06.701595+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "두 직사각형의 넓이의 차를 직접 식으로 나타내야 한다. 두 식에 각각 있는 $x^2$의 항이 없어짐을 살펴 이차함수인지 판단한다.",
+      "id": "e26008b3-14ab-451b-a1fd-ce02399ae514",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T06:59:06.701293+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T07:00:44.293039+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "body": "다음 그림의 직사각형 $ABCD$의 넓이를 $y$라 할 때, $y$를 $x$의 식으로 나타낸 것은? (단, $x>0$)",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M5",
+          "no": 1,
+          "text": "$y=2x+2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=x^2+2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=x^2+2x$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=2x^2+2x$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=2x^2+4x$"
+        }
+      ],
+      "created_at": "2026-11-12T06:57:52.165855+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "직사각형 $ABCD$의 넓이는 두 이웃한 변의 길이를 곱한 것이므로 $y=x(x+2)=x^2+2x$이다. 따라서 $y$는 $x$의 이차함수이다. ①은 두 변의 길이를 곱하지 않고 더한 것이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "D",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 6.0,
+            "y": 4.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 0.0,
+            "y": 4.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "x + 2",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:57:51.994543+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "663e0612-8079-402d-be34-0af357e5d44b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:57:51.994250+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T07:00:44.33173+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C2-성질적용",
+      "body": "다음 그림에서 $\\angle A$가 직각인 삼각형 $ABC$의 넓이를 $y$라 하자. $y$를 $x$의 식으로 나타내고, $y$가 $x$의 이차함수인지 바르게 판단한 것은? (단, $x>0$)",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M5",
+          "no": 1,
+          "text": "$y=2x+4$이고, 이차함수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=x^2+4x$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=\\dfrac{1}{2}x^2+2x$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=\\dfrac{1}{2}x^2+4x$이고, 이차함수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=\\dfrac{1}{2}x^2+2x$이고, 이차함수가 아니다."
+        }
+      ],
+      "created_at": "2026-11-12T06:58:09.523482+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "삼각형 $ABC$의 넓이는 $y=\\dfrac{1}{2}\\times x\\times(x+4)=\\dfrac{1}{2}x^2+2x$이다. $x^2$의 계수가 $0$이 아니므로 $y$는 $x$의 이차함수이다. ①은 서로 직각인 두 변의 길이를 더한 것으로, 삼각형의 넓이를 바르게 나타낸 식이 아니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "x + 4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "x",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:58:09.352736+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0c1d391b-4ded-43ac-b938-02a72f85b6b1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:58:09.352357+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.471299+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C2-이유설명",
+      "body": "한 변의 길이가 $x\\,\\mathrm{cm}$인 정사각형 모양의 종이 바깥쪽에 폭이 일정한 테두리를 붙였다. 테두리를 포함한 전체 모양도 정사각형이고, 테두리의 폭은 모두 $1\\,\\mathrm{cm}$이다. 테두리의 넓이를 $y\\,\\mathrm{cm}^2$라 하자. 단, $x>0$이다.\n\n다음 두 방법으로 각각 $y$를 $x$의 식으로 나타내고, 두 식이 모든 $x>0$에 대하여 같은 값을 나타내는 이유를 설명하시오. 또 $y$가 $x$의 이차함수인지 판단하고 그 이유를 설명하시오.\n\n- 방법 1: 전체 정사각형의 넓이에서 처음 종이의 넓이를 뺀다.\n- 방법 2: 테두리를 겹치지 않는 직사각형들로 나누어 넓이를 더한다.",
+      "choices": [],
+      "created_at": "2026-11-12T05:36:28.366265+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "방법 1에서는 전체 정사각형의 한 변의 길이가 $(x+2)\\,\\mathrm{cm}$이므로 $y=(x+2)^2-x^2$이다.\n\n방법 2에서는 테두리를 위아래 두 부분과 양옆 두 부분으로 나눌 수 있다. 위아래 두 부분은 각각 가로가 $(x+2)\\,\\mathrm{cm}$, 세로가 $1\\,\\mathrm{cm}$이다. 양옆 두 부분은 각각 가로가 $1\\,\\mathrm{cm}$, 세로가 $x\\,\\mathrm{cm}$이다. 따라서 $y=2(x+2)+2x$이다.\n\n두 방법은 모두 테두리의 넓이를 빠짐없이 한 번씩 구하므로 모든 $x>0$에 대하여 같은 값을 나타낸다. 실제로 두 식은 모두 $4x+4$가 된다. 첫 번째 식에 $x^2$이 보이지만 계산하면 없어지므로 $y$는 $x$의 이차함수가 아니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:36:27.660411+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "테두리의 넓이를 빼기로 구하는 방법과 나누어 더하는 방법을 비교하여, 두 식이 모든 $x>0$에서 같은 값을 나타내는 이유를 설명하게 한다.",
+      "id": "689bbb1e-4b00-4d61-8b06-86d3ada7aac8",
+      "model": "gpt-6.1-terra",
+      "model_answer": "방법 1에서는 $y=(x+2)^2-x^2$이다. 방법 2에서는 테두리를 위아래 두 직사각형과 양옆 두 직사각형으로 나누어 $y=2(x+2)+2x$이다. 두 식은 모두 테두리의 넓이를 빠짐없이 한 번씩 구한 것이므로 모든 $x>0$에 대하여 같은 값을 나타낸다.\n\n두 식은 모두 $y=4x+4$가 된다. $x^2$의 계수가 $0$이므로 $y$는 $x$의 이차함수가 아니다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "전체 정사각형의 넓이에서 처음 종이의 넓이를 빼어 $y=(x+2)^2-x^2$로 나타낸다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "테두리를 겹치지 않는 직사각형들로 나누고, 그 넓이의 합을 식으로 나타낸다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 방법이 모두 테두리의 넓이를 빠짐없이 한 번씩 구하므로 모든 $x>0$에서 같은 값을 나타낸다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$y=4x+4$에서 $x^2$의 계수가 $0$임을 근거로 이차함수가 아니라고 설명한다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:35:57.421520+00:00",
+          "issues": [
+            "‘종이의 가운데에서 종이의 각 변까지의 거리가 모두 1cm’로 읽으면 그 거리는 (x+2)/2cm이므로 x>0 조건과 모순된다. 잘라 낸 정사각형의 변과 바깥 종이의 대응하는 변 사이의 거리를 뜻한다는 점이 명확하지 않다.",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:36:27.660253+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.510546+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C2-이유설명",
+      "body": "처음에 비어 있는 두 물통에 물을 채운다. 단, $0<x<10$이다.\n\n- 첫째 물통에는 1분에 $x\\,\\mathrm{L}$씩 $(10-x)$분 동안 물을 채운다.\n- 둘째 물통에는 1분에 $x\\,\\mathrm{L}$씩 $x$분 동안 물을 채운다.\n\n두 물통에 채운 물의 양의 합을 $y\\,\\mathrm{L}$라 하자. 이를 보고 민수가 다음과 같이 말했다.\n\n“두 물통에 채운 물의 양이 각각 $x$의 이차함수이므로, 그 합인 $y$도 반드시 $x$의 이차함수야.”\n\n각 물통에 채운 물의 양과 $y$를 각각 $x$의 식으로 나타내시오. 또 이 상황을 이용하여 민수의 말이 맞는지 판단하고, 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T05:36:53.151773+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "첫째 물통에 채운 물의 양은 $x(10-x)=10x-x^2$, 둘째 물통에 채운 물의 양은 $x^2$이다. 두 식은 각각 이차함수의 식이다. 그러나 두 양을 더하면 $y=(10x-x^2)+x^2=10x$이다. $x^2$을 포함한 항이 없어지므로 $y$는 $x$의 이차함수가 아니다. 따라서 이 상황은 민수의 말이 틀렸음을 보여 주는 반례이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:36:52.817493+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "두 물통의 물의 양은 각각 이차함수이지만 그 합은 이차함수가 아니다. 이 상황을 반례로 이용하여 민수의 말이 틀린 이유를 설명하게 한다.",
+      "id": "01e749ff-e326-47dc-ab6f-ce6f96c1aa43",
+      "model": "gpt-6.1-terra",
+      "model_answer": "첫째 물통에 채운 물의 양은 $x(10-x)=10x-x^2\\,\\mathrm{L}$이고, 둘째 물통에 채운 물의 양은 $x^2\\,\\mathrm{L}$이다. 따라서 $y=(10x-x^2)+x^2=10x$이다. 각각의 물의 양은 $x$의 이차함수이지만, 합에서는 $x^2$을 포함한 항이 없어지므로 $y$는 $x$의 이차함수가 아니다. 따라서 민수의 말은 틀렸다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "각 물통에 채운 물의 양을 각각 $x(10-x)$와 $x^2$으로 나타낸다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 물의 양을 더하여 $y=10x$로 나타낸다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "민수의 말이 틀렸다고 판단하고, 두 물의 양은 각각 이차함수이지만 합에서는 $x^2$을 포함한 항이 없어져 이차함수가 아님을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:36:52.817261+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.565666+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C2-이유설명",
+      "body": "둘레의 길이가 $24\\,\\mathrm{cm}$인 직사각형이 있다. 이 직사각형의 가로의 길이를 $x\\,\\mathrm{cm}$, 넓이를 $y\\,\\mathrm{cm}^2$라 하자. 이때 $0<x<12$이다.\n$y$는 $x$의 이차함수인가? 식을 세우고 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T05:35:02.009257+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가로의 길이와 세로의 길이의 합은 $24\\div2=12$이므로 세로의 길이는 $12-x$이다. 따라서 $y=x(12-x)=-x^2+12x$이다. $x^2$의 계수가 $-1$로 $0$이 아니므로 $y$는 $x$의 이차함수이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:35:01.758683+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a77e0857-5767-4540-a6dc-9e16ff37267b",
+      "model": "gpt-6.1-terra",
+      "model_answer": "세로의 길이는 $(12-x)\\,\\mathrm{cm}$이므로 $y=x(12-x)=-x^2+12x$이다. $x^2$의 계수가 $-1$로 $0$이 아니므로 $y$는 $x$의 이차함수이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "세로의 길이를 $(12-x)\\,\\mathrm{cm}$로 나타낸다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "넓이를 $y=x(12-x)=-x^2+12x$로 나타낸다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$x^2$의 계수가 $0$이 아님을 근거로 이차함수라고 판단한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:35:01.758516+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.602905+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C2-이유설명",
+      "body": "한 변의 길이가 $x\\,\\mathrm{cm}$인 정사각형 모양의 종이에서 한 변의 길이가 $2\\,\\mathrm{cm}$인 정사각형 한 개를 오려 냈다. 남은 종이의 넓이를 $y\\,\\mathrm{cm}^2$라 하자. 이때 $x>2$이다.\n\n$y$는 $x$의 이차함수인가? $y$를 $x$의 식으로 나타내고, 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T05:35:16.611538+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "처음 종이의 넓이는 $x^2\\,\\mathrm{cm}^2$이고, 오려 낸 부분의 넓이는 $4\\,\\mathrm{cm}^2$이다. 따라서 $y=x^2-4$이다. 이 식은 $x^2$의 계수가 $1$인 이차함수의 식이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:35:16.502935+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "958c1d50-36ec-4c99-84ce-9fe90fca4c7f",
+      "model": "gpt-6.1-terra",
+      "model_answer": "처음 종이의 넓이에서 오려 낸 부분의 넓이를 빼면 $y=x^2-4$이다. 이 식에서 $x^2$의 계수가 $1$이므로 $y$는 $x$의 이차함수이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "남은 종이의 넓이를 $y=x^2-4$로 나타냈다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$y$가 $x$의 이차함수라고 판단했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$x^2$의 계수가 $0$이 아니므로 이차함수라고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:35:16.502518+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.634935+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C3-성질적용",
+      "body": "이차함수 $f(x)=ax^2+bx+1$에서 $a$, $b$는 상수이다. $f(1)=4$, $f(-2)=7$일 때, $a$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M4",
+          "no": 1,
+          "text": "$-6$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$1$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$3$"
+        }
+      ],
+      "created_at": "2026-11-12T05:37:28.722915+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$f(1)=4$이므로 $a+b=3$이다. 또 $(-2)^2=4$이므로 $f(-2)=7$에서 $4a-2b=6$이다. 두 식을 풀면 $a=2$이다.\n\n$(-2)^2$을 $-4$로 잘못 계산하면 $-4a-2b=6$이 되어 $a=-6$을 고를 수 있다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:37:28.549146+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 함숫값을 이용해 두 계수 사이의 식을 세우고, 이를 함께 풀어 계수 $a$를 구한다.",
+      "id": "2d3413d0-ec19-40ab-9e7c-5c3ad2807c2d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:37:28.548952+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.670718+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C3-성질적용",
+      "body": "이차함수 $f(x)=ax^2+bx$에서 $a$, $b$는 상수이다. $f(-3)=f(1)$이고 $f(-1)=3$일 때, $f(2)$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-24$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-12$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-6$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M4",
+          "no": 4,
+          "text": "$-2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6$"
+        }
+      ],
+      "created_at": "2026-11-12T05:37:58.872665+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$f(-3)=f(1)$이므로 $9a-3b=a+b$이다. 따라서 $b=2a$이다. 또 $f(-1)=3$이므로 $a-b=3$이다. 이를 풀면 $a=-3$, $b=-6$이다. 따라서 $f(2)=4a+2b=-24$이다.\n$-3$과 $-1$의 제곱을 각각 $-9$, $-1$로 잘못 계산하면 $a=2$, $b=-5$가 되어 $f(2)=-2$를 고를 수 있다. 음수의 제곱은 양수이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:37:58.761022+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 함숫값이 같다는 관계와 다른 함숫값을 이용해 계수를 찾은 뒤 $f(2)$를 구해야 한다.",
+      "id": "3502f235-cc84-4cb2-84f4-2807a79d1b21",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:37:58.760752+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.710039+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C3-성질적용",
+      "body": "이차함수 $f(x)=x^2+2x+1$에서 $f(-3)$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M4",
+          "no": 1,
+          "text": "$-14$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$4$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$10$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$16$"
+        }
+      ],
+      "created_at": "2026-11-12T05:37:03.626833+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$x$에 $-3$을 넣으면 $f(-3)=(-3)^2+2\\times(-3)+1=9-6+1=4$입니다. ①은 $(-3)^2$을 $-9$로 잘못 계산한 값입니다. 음수의 제곱은 양수이므로 $(-3)^2=9$입니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:37:03.508158+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c4059768-d658-45ed-9543-532ab99e5432",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:37:03.508045+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T05:52:13.744914+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-21-C3-성질적용",
+      "body": "이차함수 $f(x)=2x^2+ax-3$에서 $f(-2)=1$일 때, 상수 $a$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-21-M4",
+          "no": 1,
+          "text": "$-6$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$1$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6$"
+        }
+      ],
+      "created_at": "2026-11-12T05:37:15.283328+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$f(-2)=2\\times(-2)^2-2a-3=5-2a$이다. 따라서 $5-2a=1$이므로 $a=2$이다. $(-2)^2$을 $-4$로 잘못 계산하면 $a=-6$이 된다. 음수의 제곱은 양수이므로 $(-2)^2=4$이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T05:37:15.148174+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "db16552a-ae96-4dd4-8c6a-6b7fd9558ec6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:37:15.147932+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    }
+  ]
+}

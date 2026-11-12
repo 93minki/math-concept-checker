@@ -83,6 +83,7 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
   const vertexCenters = new Map<Element, Point>();
   const angleLimits = new Map<Element, { center: Point; radius: number }>();
   const segmentLabels = new Map<Element, [Point, Point]>();
+  const pyramidHeights = new Set<Element>();
   const add = (tag: Element["tag"], attrs: Element["attrs"], text?: string) =>
     elements.push({ tag, attrs, ...(text === undefined ? {} : { text }) });
   const path = (points: Point[], dashed = false, fill = "none", width = 1.5) =>
@@ -486,19 +487,38 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
           { x: 200 + w / 2 + d * 0.7, y: 245 - d * 0.7 },
           { x: 200 - w / 2 + d * 0.7, y: 245 - d * 0.7 },
         ];
+      } else if (f.shape === "pyramid" && n === 4) {
+        const w = radial * 2.1,
+          d = radial * 0.9;
+        base = [
+          { x: 200 - (w + d) / 2, y: 220 + d / 2 },
+          { x: 200 + (w - d) / 2, y: 220 + d / 2 },
+          { x: 200 + (w + d) / 2, y: 220 - d / 2 },
+          { x: 200 - (w - d) / 2, y: 220 - d / 2 },
+        ];
       } else
-        base = Array.from({ length: n }, (_, i) => ({
-          x: 200 + radial * Math.cos(Math.PI / 2 + (2 * Math.PI * i) / n),
-          y:
-            220 + radial * 0.35 * Math.sin(Math.PI / 2 + (2 * Math.PI * i) / n),
-        }));
+        base = Array.from({ length: n }, (_, i) => {
+          const angle = Math.PI / 2 + (2 * Math.PI * i) / n;
+          return {
+            x: 200 + radial * Math.cos(angle),
+            y: 220 + radial * 0.35 * Math.sin(angle),
+          };
+        });
       const vertical =
         f.shape === "cuboid"
           ? Math.min(
               180 / ((f.width ?? 1) + (f.depth ?? 1) * 0.35),
               155 / (f.height ?? 1),
             ) * (f.height ?? 1)
-          : radialUnit * (f.height ?? 1);
+          : f.shape === "pyramid" && n === 4
+            ? Math.min(
+                radial * 2.4,
+                Math.max(radialUnit * (f.height ?? 1), radial * 1.801),
+              )
+            : Math.max(
+                radialUnit * (f.height ?? 1),
+                f.shape === "pyramid" ? radial * 0.7 : 0,
+              );
       const top =
         f.shape === "pyramid"
           ? [{ x: 200, y: 220 - vertical }]
@@ -517,21 +537,48 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
                     ? (f.top_radius ?? 0) / (f.radius ?? 1) - 1
                     : 0),
             }));
+      const visibleFaces = base.map((p, i) => {
+        const next = base[(i + 1) % n],
+          upper = top[f.shape === "pyramid" ? 0 : i];
+        return (
+          (next.x - p.x) * (upper.y - p.y) - (next.y - p.y) * (upper.x - p.x) >
+          1e-8
+        );
+      });
       for (let i = 0; i < n; i++) {
-        line(base[i], base[(i + 1) % n], i >= Math.ceil(n / 2));
+        line(
+          base[i],
+          base[(i + 1) % n],
+          f.shape === "cuboid" || (f.shape === "pyramid" && n === 4)
+            ? i >= Math.ceil(n / 2)
+            : !visibleFaces[i],
+        );
         line(
           base[i],
           top[f.shape === "pyramid" ? 0 : i],
-          f.shape === "cuboid" ? i === 3 : base[i].y < 220,
+          f.shape === "cuboid" || (f.shape === "pyramid" && n === 4)
+            ? i === 3
+            : !visibleFaces[i] && !visibleFaces[(i + n - 1) % n],
         );
         if (f.shape !== "pyramid") line(top[i], top[(i + 1) % n]);
       }
+      if (
+        f.shape === "pyramid" &&
+        n === 4 &&
+        (f.show_axis || f.labels.some((label) => label.part === "height"))
+      )
+        line(top[0], { x: 200, y: 220 }, true);
       const vertices = [...base, ...top];
       const center = {
         x: vertices.reduce((sum, p) => sum + p.x, 0) / vertices.length,
         y: vertices.reduce((sum, p) => sum + p.y, 0) / vertices.length,
       };
-      vertices.forEach((p, i) => {
+      const vertexOrder =
+        f.shape === "pyramid" && n === 4
+          ? [n, ...Array.from({ length: n }, (_, i) => i)]
+          : vertices.map((_, i) => i);
+      vertexOrder.forEach((i) => {
+        const p = vertices[i];
         if (f.vertex_names?.[i]) {
           text(p, f.vertex_names[i]);
           pointAnchors.set(elements[elements.length - 1], p);
@@ -552,18 +599,31 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
         x: (base[1].x + top[Math.min(1, top.length - 1)].x) / 2 + 20,
         y: (base[1].y + top[Math.min(1, top.length - 1)].y) / 2,
       };
+      if (f.shape === "pyramid" && n === 4)
+        positions.height = { x: 208, y: (top[0].y + 220) / 2 };
       positions.slant = positions.height;
     }
     f.labels.forEach((label) => {
       const position = positions[label.part];
-      if (position)
+      if (position) {
         text(
           position,
           label.text,
-          label.part === "height" || label.part === "slant"
-            ? "start"
-            : "middle",
+          label.part === "height" && f.shape === "pyramid" && f.base_sides === 4
+            ? "middle"
+            : label.part === "height" || label.part === "slant"
+              ? "start"
+              : "middle",
         );
+        if (
+          label.part === "height" &&
+          f.shape === "pyramid" &&
+          f.base_sides === 4
+        ) {
+          const element = elements[elements.length - 1];
+          pyramidHeights.add(element);
+        }
+      }
     });
   }
   const strokes: [Point, Point][] = [];
@@ -674,6 +734,13 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
         );
         if (outward.length) candidates = outward;
       }
+    } else if (pyramidHeights.has(element)) {
+      candidates = [0, 10, -10, 20, -20, 30, 40, 50, 60, 70].flatMap((offset) =>
+        [-1, 1].map((sign) => ({
+          x: 200 + sign * (width / 2 + 2),
+          y: original.y + 6 + offset,
+        })),
+      );
     } else if (segmentLabels.has(element)) {
       const [a, b] = segmentLabels.get(element)!;
       const length = Math.hypot(b.x - a.x, b.y - a.y) || 1;
@@ -731,7 +798,64 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
           rect.top < other.bottom + 2 &&
           rect.bottom + 2 > other.top,
       ).length;
-      const crosses = strokes.filter(([a, b]) => intersects(a, b, rect)).length;
+      let crosses = strokes.filter(([a, b]) => intersects(a, b, rect)).length;
+      if (pyramidHeights.has(element)) {
+        const center = { x: candidate.x, y: candidate.y - 6 };
+        const axisDistance = Math.abs(center.x - 200);
+        crosses += strokes.filter(([a, b]) => {
+          if (a.x === 200 && b.x === 200) return false;
+          const dx = b.x - a.x,
+            dy = b.y - a.y,
+            length = dx * dx + dy * dy;
+          if (!length) return false;
+          const t = Math.max(
+            0,
+            Math.min(
+              1,
+              ((center.x - a.x) * dx + (center.y - a.y) * dy) / length,
+            ),
+          );
+          return (
+            Math.hypot(center.x - a.x - t * dx, center.y - a.y - t * dy) <=
+            axisDistance
+          );
+        }).length;
+      }
+      if (figure.kind === "geometry" && segmentLabels.has(element)) {
+        const [ownA, ownB] = segmentLabels.get(element)!;
+        const padded = {
+          left: rect.left - 10,
+          right: rect.right + 10,
+          top: rect.top - 10,
+          bottom: rect.bottom + 10,
+        };
+        crosses += strokes.filter(
+          ([a, b]) =>
+            !(
+              a.x === ownA.x &&
+              a.y === ownA.y &&
+              b.x === ownB.x &&
+              b.y === ownB.y
+            ) && intersects(a, b, padded),
+        ).length;
+        for (const circle of elements.filter(
+          (e) => e.tag === "circle" && e.attrs.fill === "none",
+        )) {
+          const x = Number(circle.attrs.cx),
+            y = Number(circle.attrs.cy),
+            r = Number(circle.attrs.r);
+          const nearest = Math.hypot(
+            Math.max(rect.left - x, 0, x - rect.right),
+            Math.max(rect.top - y, 0, y - rect.bottom),
+          );
+          const farthest = Math.max(
+            ...[rect.left, rect.right].flatMap((px) =>
+              [rect.top, rect.bottom].map((py) => Math.hypot(px - x, py - y)),
+            ),
+          );
+          if (nearest <= r && farthest >= r) crosses++;
+        }
+      }
       const distance = Math.hypot(
         candidate.x - original.x,
         candidate.y - original.y,

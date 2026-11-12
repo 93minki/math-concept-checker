@@ -1221,7 +1221,7 @@
       "choices": [],
       "created_at": "2026-11-11T09:36:15.321406+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.546182+00:00",
       "explanation": "주어진 도수에 맞는 조사 결과라도 평균은 달라질 수 있다. 예를 들어 $4$명이 각각 $0$분, $6$명이 각각 $30$분을 읽었다면 평균은 $18$분이다. 반면 $4$명이 각각 $20$분, $6$명이 각각 $40$분을 읽었다면 평균은 $32$분이다. 두 결과 모두 주어진 도수에 맞지만, 평균은 하나는 $30$분 미만이고 다른 하나는 $30$분 이상이다. 따라서 주어진 자료만으로는 탐구 문제에 답할 수 없다. $30$분 이상 읽은 학생이 더 많다는 사실만으로 평균도 $30$분 이상이라고 생각한 것이 민지의 잘못이다.",
       "figure": null,
       "generated_at": "2026-11-11T09:36:15.224759+00:00",
@@ -1263,7 +1263,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:35:42.757949+00:00",
@@ -1282,6 +1282,148 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T06:51:47.895308+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-04-C3-이유설명",
+      "body": "어느 학교 학생은 모두 $100$명이다. 이 학교의 탐구 문제는 ‘학교 전체에서 점심시간에 도서관을 이용하고 싶은 학생이 이용하고 싶지 않은 학생보다 많은가?’이다.\n\n이 학교의 독서 동아리 학생에게만 물었다. 각 학생은 ‘희망’ 또는 ‘희망 안 함’ 중 하나로 답했다. 다음 그림은 동아리 학생 모두의 답을 나타낸 것이다.\n\n민지는 “이 결과로 보아 학교 전체에서도 이용을 희망하는 학생이 반드시 더 많다.”라고 말했다. 민지의 말이 항상 맞는지 판단하고, 그림의 수를 이용한 구체적인 예를 들어 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:20:41.597901+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 독서 동아리 학생 중 희망하는 학생은 $12$명, 희망하지 않는 학생은 $8$명이다. 동아리가 아닌 학생 $80$명이 모두 희망하지 않는 경우도 가능하다. 이때 학교 전체에서는 희망하는 학생이 $12$명, 희망하지 않는 학생이 $88$명이다. 따라서 민지의 말이 항상 맞지는 않는다. 일부 학생의 답만으로 학교 전체의 결과를 반드시 알 수 있다고 생각하면 안 된다.",
+      "figure": {
+        "categories": [
+          "희망",
+          "희망 안 함"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          12.0,
+          8.0
+        ],
+        "x_label": "답",
+        "y_label": "학생 수(명)",
+        "y_max": 16.0,
+        "y_min": 0.0,
+        "y_step": 2.0
+      },
+      "generated_at": "2026-11-12T06:20:41.459343+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민지의 말이 항상 맞는지 판단할 때, 그림의 수를 이용한 구체적인 예로 이유를 설명하게 한다. 말이 항상 맞지 않음을 보이려면 학교 전체에서 희망하는 학생이 더 많지 않은 예를 들어야 한다.",
+      "id": "4edee1ec-baee-4450-995f-e040d10cd567",
+      "model": "gpt-6.1-terra",
+      "model_answer": "민지의 말이 항상 맞지는 않다. 그림에서 동아리 학생 중 희망하는 학생은 $12$명, 희망하지 않는 학생은 $8$명이다. 동아리가 아닌 학생 $80$명이 모두 희망하지 않을 수 있다. 이때 학교 전체에서는 희망하는 학생이 $12$명이고 희망하지 않는 학생이 $88$명이므로 민지의 말과 다르다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "민지의 말이 항상 맞지는 않다고 판단한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-04-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "그림에서 동아리 학생의 답을 희망 $12$명, 희망 안 함 $8$명으로 읽는다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "동아리가 아닌 학생 $80$명의 답을 정하여, 학교 전체에서는 희망하는 학생이 더 많지 않은 예를 든다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-04-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "자신이 든 예에서 학교 전체의 두 답의 인원을 비교하여 민지의 말이 맞지 않음을 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-04-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:20:41.459046+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:47.932552+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-04-C3-이유설명",
+      "body": "두 과수원에서 다음 탐구 문제를 알아보았다.\n\n‘수확한 사과 중 흠집이 없는 사과의 비율은 어느 과수원에서 더 높은가?’\n\nA 과수원에서 수확한 사과는 모두 $40$개이고, B 과수원에서 수확한 사과는 모두 $80$개이다. 다음 그림은 각 과수원에서 수확한 사과 중 흠집이 없는 사과 수를 나타낸 것이다.\n\n민수는 “흠집이 없는 사과 수가 더 많은 과수원은 흠집이 없는 사과의 비율도 반드시 더 높아.”라고 말했다.\n\n탐구 문제에 답하고, 그림의 수를 이용하여 민수의 말이 항상 맞는지 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:21:17.566085+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "A 과수원은 흠집이 없는 사과가 $30$개이므로 그 비율은 $30/40=75\\%$이다. B 과수원은 흠집이 없는 사과가 $40$개이므로 그 비율은 $40/80=50\\%$이다. 따라서 탐구 문제의 답은 A 과수원이다.\n\nB 과수원은 흠집이 없는 사과 수는 더 많지만, 그 비율은 더 낮다. 따라서 이 자료는 민수의 말이 항상 맞지 않음을 보여 주는 예이다. 수확한 사과의 전체 개수가 다르므로 흠집이 없는 사과 수만 비교해서는 비율을 알 수 없다.",
+      "figure": {
+        "categories": [
+          "A 과수원",
+          "B 과수원"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          30.0,
+          40.0
+        ],
+        "x_label": null,
+        "y_label": "사과 수(개)",
+        "y_max": 50.0,
+        "y_min": 0.0,
+        "y_step": 10.0
+      },
+      "generated_at": "2026-11-12T06:21:17.350381+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민수의 말이 항상 맞는지 판단하고, 그림의 수를 이용해 그 말이 틀린 예를 설명하게 한다.",
+      "id": "1ad26777-b426-4930-8d1e-bc7688ba652e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "A 과수원의 비율은 $30/40=75\\%$이고, B 과수원의 비율은 $40/80=50\\%$이므로 A 과수원의 비율이 더 높다. B 과수원은 흠집이 없는 사과가 $40$개로 A 과수원의 $30$개보다 많지만, 그 비율은 더 낮다. 따라서 민수의 말은 항상 맞지 않는다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "그림의 수와 전체 사과 수를 이용하여 A와 B 과수원의 흠집이 없는 사과의 비율을 각각 $75\\%$, $50\\%$로 구한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "A 과수원의 비율이 더 높다고 답하고, B 과수원은 흠집이 없는 사과 수가 더 많아도 비율은 더 낮으므로 민수의 말이 항상 맞지 않는다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:21:17.350003+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:40:11.178682+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수04-04-C3-이유설명",
@@ -1289,7 +1431,7 @@
       "choices": [],
       "created_at": "2026-11-11T09:37:31.488903+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.581032+00:00",
       "explanation": "처음 신청한 학생의 참여 비율은 A학교가 $80\\%$, B학교가 $70\\%$이다. 신청한 적이 있는 학생의 참여 비율은 A학교가 $60\\%$, B학교가 $50\\%$이다. 따라서 두 무리를 각각 비교하면 A학교의 참여 비율이 더 높다.\n\n하지만 전체로 보면 A학교와 B학교 모두 $40$명 중 $26$명이 참여했으므로 참여 비율이 $65\\%$로 같다. A학교는 참여 비율이 더 낮은 ‘신청한 적이 있음’ 무리의 인원이 더 많고, B학교는 참여 비율이 더 높은 ‘처음 신청’ 무리의 인원이 더 많기 때문이다. 두 무리에서 각각 A학교의 비율이 높다는 사실만으로 전체에서도 A학교의 비율이 높다고 판단할 수 없다.",
       "figure": null,
       "generated_at": "2026-11-11T09:37:31.078331+00:00",
@@ -1331,7 +1473,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:36:58.601097+00:00",
@@ -1356,7 +1498,7 @@
       "choices": [],
       "created_at": "2026-11-11T09:34:19.657616+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.61321+00:00",
       "explanation": "$1$반에서 $30$분 이상 읽은 학생의 비율은 $10/20=0.5$이고, $2$반에서는 $12/30=0.4$이다. 따라서 $1$반의 비율이 더 높다. $30$분 이상 읽은 학생 수만 비교하면 $2$반이 더 많지만, 두 반의 학생 수가 다르므로 비율을 비교해야 한다. 이 결과만으로 학교의 모든 반에 대해서도 같은 답을 할 수는 없다.",
       "figure": null,
       "generated_at": "2026-11-11T09:34:19.521618+00:00",
@@ -1384,7 +1526,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:34:19.521327+00:00",
@@ -1395,6 +1537,134 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T06:51:47.982554+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-04-C3-이유설명",
+      "body": "1학년 1반 학생 모두에게 오늘 학교에 올 때 이용한 방법을 한 가지만 물었다. 다음 그림은 걸어서 온 학생과 버스로 온 학생의 수를 나타낸 것이다.\n\n‘버스로 온 학생은 걸어서 온 학생의 두 배인가?’라는 물음에 답하고, 그림의 수를 이용하여 그 이유를 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:20:00.272424+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "걸어서 온 학생은 $8$명, 버스로 온 학생은 $12$명이다. $8$명의 두 배는 $16$명이므로 버스로 온 학생은 걸어서 온 학생의 두 배가 아니다. 막대의 높이만 대충 보고 두 배라고 생각하지 않도록 눈금의 수를 확인해야 한다.",
+      "figure": {
+        "categories": [
+          "걸어서",
+          "버스"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          8.0,
+          12.0
+        ],
+        "x_label": "이용한 방법",
+        "y_label": "학생 수(명)",
+        "y_max": 14.0,
+        "y_min": 0.0,
+        "y_step": 2.0
+      },
+      "generated_at": "2026-11-12T06:20:00.218621+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ae41d2b9-55bd-448b-bf6b-2c2544c64c02",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 배가 아니다. 걸어서 온 학생은 $8$명이고 버스로 온 학생은 $12$명이다. $8$명의 두 배는 $16$명이기 때문이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "버스로 온 학생이 걸어서 온 학생의 두 배가 아니라고 답한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "그림에서 두 학생 수를 각각 $8$명과 $12$명으로 읽고, 이 수를 비교하여 두 배가 아닌 이유를 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-04-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:20:00.218358+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.026888+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-04-C3-이유설명",
+      "body": "다음 그림은 어느 학급에서 네 주 동안 매주 빌려 간 책의 수를 나타낸 것이다.\n\n셋째 주에 빌려 간 책은 네 주 동안 빌려 간 책 전체의 절반보다 많은가? 그림의 수를 이용하여 이유를 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:20:16.549656+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "네 주 동안 빌려 간 책은 모두 $4+6+8+2=20$권이고, 그 절반은 $10$권이다. 셋째 주에 빌려 간 책은 $8$권이므로 전체의 절반보다 적다. 셋째 주의 막대만 보지 말고 네 주 동안 빌려 간 책의 수를 모두 더하여 비교해야 한다.",
+      "figure": {
+        "categories": [
+          "첫째 주",
+          "둘째 주",
+          "셋째 주",
+          "넷째 주"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          4.0,
+          6.0,
+          8.0,
+          2.0
+        ],
+        "x_label": null,
+        "y_label": "책의 수(권)",
+        "y_max": 10.0,
+        "y_min": 0.0,
+        "y_step": 2.0
+      },
+      "generated_at": "2026-11-12T06:20:16.495633+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "41be8688-631c-4b3c-8ee0-376f646b90f8",
+      "model": "gpt-6.1-terra",
+      "model_answer": "많지 않다. 네 주 동안 빌려 간 책은 모두 $20$권이고 그 절반은 $10$권이다. 셋째 주에 빌려 간 책은 $8$권으로 $10$권보다 적다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "네 주 동안 빌려 간 책이 모두 $20$권임을 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "셋째 주의 $8$권과 전체의 절반인 $10$권을 비교하여 절반보다 많지 않다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:20:16.495356+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:40:11.226956+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수04-04-C3-이유설명",
@@ -1402,7 +1672,7 @@
       "choices": [],
       "created_at": "2026-11-11T09:35:12.023063+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.646372+00:00",
       "explanation": "$6$분 이상 $12$분 미만인 학생은 $7$명이다. 다른 시간대의 학생 수인 $4$명, $2$명보다 많으므로 이 시간대에 학생들이 가장 많이 모여 있다.",
       "figure": null,
       "generated_at": "2026-11-11T09:35:11.634787+00:00",
@@ -1430,7 +1700,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:34:52.892678+00:00",

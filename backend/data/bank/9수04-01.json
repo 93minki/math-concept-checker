@@ -590,7 +590,7 @@
       ],
       "created_at": "2026-11-11T09:03:37.193989+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:44:13.19161+00:00",
       "explanation": "$2$와 $5$는 각각 $3$번씩 나와 가장 많이 나왔다. 따라서 최빈값은 $2$와 $5$이다. $3$은 가장 많이 나온 횟수이지, 최빈값이 아니다. $9$는 자료에서 가장 큰 값이지만 가장 많이 나온 값은 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T09:03:37.122172+00:00",
@@ -603,10 +603,98 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:03:37.121869+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:50.664184+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-01-C2-정의이해",
+      "body": "다음 그림은 학생 $10$명이 어제 읽은 책의 수와 그 학생 수를 나타낸 것이다. 읽은 책의 수의 최빈값을 모두 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2$권"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-01-M3",
+          "no": 2,
+          "text": "$3$권"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$5$권"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-01-M3",
+          "no": 4,
+          "text": "$7$권"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2$권, $5$권"
+        }
+      ],
+      "created_at": "2026-11-12T06:45:04.550431+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "읽은 책의 수가 $2$권인 학생과 $5$권인 학생이 각각 $3$명으로 가장 많습니다. 따라서 최빈값은 $2$권과 $5$권입니다. $3$은 학생 수이지 읽은 책의 수가 아닙니다. 또 $7$권은 읽은 책의 수 중 가장 크지만, 가장 많은 학생이 읽은 책의 수는 아닙니다.",
+      "figure": {
+        "categories": [
+          "1",
+          "2",
+          "4",
+          "5",
+          "7"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          1.0,
+          3.0,
+          1.0,
+          3.0,
+          2.0
+        ],
+        "x_label": "읽은 책의 수(권)",
+        "y_label": "학생 수(명)",
+        "y_max": 4.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:45:04.402261+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "가장 많이 나타난 책의 수가 둘인 자료를 제시했습니다. 가장 큰 책의 수나 학생 수가 아닌, 가장 많이 나타난 책의 수를 모두 찾아야 합니다.",
+      "id": "e4f48bd6-2315-4bc8-96ef-e764999577d1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:45:04.402069+00:00",
           "issues": [],
           "number": 1
         }
@@ -657,7 +745,7 @@
       ],
       "created_at": "2026-11-11T09:03:53.80653+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:44:13.252835+00:00",
       "explanation": "한 명의 답을 더하면 빨강, 파랑, 노랑을 답한 학생이 각각 $3$명이고, 초록을 답한 학생은 $2$명입니다. 가장 많이 나온 색은 빨강, 파랑, 노랑이므로 최빈값은 이 세 가지입니다. $3$명은 답한 학생의 수이지 최빈값인 색이 아닙니다.",
       "figure": null,
       "generated_at": "2026-11-11T09:03:53.749664+00:00",
@@ -670,10 +758,98 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:03:53.749567+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:50.688081+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-01-C2-정의이해",
+      "body": "다음 그림은 학생 $10$명이 좋아하는 과일을 한 가지씩 고른 결과를 나타낸 것이다. 학생 한 명이 추가로 참여하여 귤을 골랐다. 이제 이 $11$명이 고른 과일의 최빈값에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "최빈값은 사과와 배이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "최빈값은 사과, 배, 귤이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "최빈값은 귤 하나이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-01-M3",
+          "no": 4,
+          "text": "최빈값은 $3$명이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "최빈값은 포도와 복숭아이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:45:22.750929+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "추가로 참여한 학생이 귤을 골랐으므로 사과, 배, 귤을 고른 학생은 각각 $3$명이다. 이 세 과일이 모두 가장 많이 나왔으므로 최빈값은 사과, 배, 귤이다. $3$명은 가장 많이 나온 횟수이지 최빈값인 과일이 아니다.",
+      "figure": {
+        "categories": [
+          "사과",
+          "배",
+          "귤",
+          "포도",
+          "복숭아"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          3.0,
+          3.0,
+          2.0,
+          1.0,
+          1.0
+        ],
+        "x_label": "과일",
+        "y_label": "학생 수",
+        "y_max": 4.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:45:22.61282+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "학생 한 명이 추가된 뒤 세 과일을 고른 학생 수가 같아진다. 가장 많이 나온 과일이 여러 개일 때 각각이 모두 최빈값인지 따져야 한다.",
+      "id": "d928b9f2-022f-4565-8a74-7c5da972bebd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:45:22.612652+00:00",
           "issues": [],
           "number": 1
         }
@@ -724,7 +900,7 @@
       ],
       "created_at": "2026-11-11T09:03:09.803089+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:44:13.298163+00:00",
       "explanation": "$2$가 $4$번 나와 가장 많이 나왔으므로 최빈값은 $2$이다. $4$는 $2$가 나온 횟수이고, $8$은 자료에서 가장 큰 수이다. 최빈값은 가장 많이 나온 횟수나 가장 큰 수가 아니라, 가장 많이 나온 값이다.",
       "figure": null,
       "generated_at": "2026-11-11T09:03:09.700488+00:00",
@@ -737,10 +913,98 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:03:09.700348+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:50.715712+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-01-C2-정의이해",
+      "body": "다음 그림은 학생 $10$명이 지난주에 읽은 책의 수를 나타낸 것이다. 읽은 책 수의 최빈값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$1$권"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$권"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$3$권"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-01-M3",
+          "no": 4,
+          "text": "$4$권"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-01-M3",
+          "no": 5,
+          "text": "$5$권"
+        }
+      ],
+      "created_at": "2026-11-12T06:44:29.278216+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$3$권을 읽은 학생이 $4$명으로 가장 많으므로 최빈값은 $3$권이다. $4$는 가장 많은 학생 수이고, $5$는 읽은 책 수 중 가장 큰 값이다. 최빈값은 가장 많은 학생 수나 가장 큰 값이 아니라 가장 많이 나타난 값이다.",
+      "figure": {
+        "categories": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          1.0,
+          1.0,
+          4.0,
+          2.0,
+          2.0
+        ],
+        "x_label": "읽은 책 수(권)",
+        "y_label": "학생 수(명)",
+        "y_max": 5.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:44:29.004746+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9d963965-f266-449c-b88a-6894660cce50",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:44:29.004580+00:00",
           "issues": [],
           "number": 1
         }
@@ -791,7 +1055,7 @@
       ],
       "created_at": "2026-11-11T09:03:23.516275+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:44:13.331767+00:00",
       "explanation": "가장 많이 나온 눈의 수는 $4$이므로 최빈값은 $4$이다. $3$은 $4$가 나온 횟수이지 최빈값이 아니다. $6$은 나온 눈의 수 중 가장 크지만, 가장 많이 나오지는 않았다.",
       "figure": null,
       "generated_at": "2026-11-11T09:03:23.452378+00:00",
@@ -804,10 +1068,96 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T09:03:23.452289+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:50.747165+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-01-C2-정의이해",
+      "body": "다음 그림은 어느 동아리 학생 $11$명의 신발 크기를 나타낸 것이다. 신발 크기의 최빈값은? (단위: mm)",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-01-M3",
+          "no": 1,
+          "text": "$5$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$220$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$230$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$240$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-01-M3",
+          "no": 5,
+          "text": "$250$"
+        }
+      ],
+      "created_at": "2026-11-12T06:44:44.51544+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가장 많은 학생이 신는 신발의 크기는 $230$ mm이므로 최빈값은 $230$이다. $5$는 신발 크기가 $230$ mm인 학생 수이고, $250$은 신발 크기 중 가장 큰 값이다.",
+      "figure": {
+        "categories": [
+          "220",
+          "230",
+          "240",
+          "250"
+        ],
+        "kind": "bar_chart",
+        "values": [
+          2.0,
+          5.0,
+          3.0,
+          1.0
+        ],
+        "x_label": "신발 크기(mm)",
+        "y_label": "학생 수(명)",
+        "y_max": 6.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:44:44.3487+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "7ded7533-7824-497c-9489-8f7d236146fc",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:44:44.348352+00:00",
           "issues": [],
           "number": 1
         }

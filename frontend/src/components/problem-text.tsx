@@ -18,7 +18,13 @@ function cells(line: string): string[] | null {
   return result;
 }
 
-export function ProblemText({ text }: { text: string }) {
+export function ProblemText({
+  text,
+  prefix,
+}: {
+  text: string;
+  prefix?: string;
+}) {
   const lines = text.split("\n");
   const blocks: React.ReactNode[] = [];
   let plain: string[] = [];
@@ -85,5 +91,10 @@ export function ProblemText({ text }: { text: string }) {
     );
   }
   flush();
-  return <div className="problem-text">{blocks}</div>;
+  return (
+    <div className="problem-text">
+      {prefix}
+      {blocks}
+    </div>
+  );
 }

@@ -1066,3 +1066,296 @@ test("작은 도형의 글자는 서로 겹치거나 다른 선분을 가리지 
     }
   }
 });
+
+test("다각 입체의 가려진 모서리만 점선이다", () => {
+  for (const [shape, n, hiddenBase, visibleBase, hiddenSide, visibleSide] of [
+    ["prism", 3, [1, 2], [2, 0], null, 1],
+    ["pyramid", 4, [2, 3], [0, 1], 3, 0],
+    ["frustum", 5, [2, 3], [4, 0], null, 1],
+  ] as const) {
+    const names = Array.from({ length: n * 2 }, (_, i) =>
+      String.fromCharCode(65 + i),
+    );
+    const figure: Figure = {
+      kind: "solid",
+      shape,
+      base_sides: n,
+      width: null,
+      depth: null,
+      height: 3,
+      radius: 2,
+      top_radius: shape === "frustum" ? 1 : null,
+      vertex_names: names.slice(0, shape === "pyramid" ? n + 1 : n * 2),
+      labels: [],
+      show_axis: false,
+    };
+    const elements = drawFigure(figure).elements;
+    const point = (i: number) => {
+      const e = elements.find(
+        (item) => item.tag === "text" && item.text === names[i],
+      )!;
+      return `${e.attrs["data-point-x"]},${e.attrs["data-point-y"]}`;
+    };
+    const edge = (a: number, b: number) =>
+      elements.find(
+        (e) =>
+          e.tag === "polyline" &&
+          [`${point(a)} ${point(b)}`, `${point(b)} ${point(a)}`].includes(
+            String(e.attrs.points),
+          ),
+      )!;
+    expect(
+      edge(hiddenBase[0], hiddenBase[1]).attrs.strokeDasharray,
+      shape,
+    ).toBe("6 4");
+    expect(
+      edge(visibleBase[0], visibleBase[1]).attrs.strokeDasharray,
+      shape,
+    ).toBeUndefined();
+    if (hiddenSide !== null)
+      expect(edge(hiddenSide, n).attrs.strokeDasharray).toBe("6 4");
+    expect(
+      edge(visibleSide, shape === "pyramid" ? n : n + visibleSide).attrs
+        .strokeDasharray,
+      shape,
+    ).toBeUndefined();
+  }
+});
+
+test("낮은 각뿔의 꼭짓점과 이름이 읽을 수 있는 위치에 있다", () => {
+  const figure: Figure = {
+    kind: "solid",
+    shape: "pyramid",
+    base_sides: 4,
+    width: null,
+    depth: null,
+    height: 0.4,
+    radius: 2,
+    top_radius: null,
+    vertex_names: ["A", "B", "C", "D", "S"],
+    labels: [],
+    show_axis: false,
+  };
+  const apex = drawFigure(figure).elements.find((e) => e.text === "S")!;
+  expect(220 - Number(apex.attrs["data-point-y"])).toBeGreaterThanOrEqual(70);
+  expect(
+    Math.hypot(
+      Number(apex.attrs.x) - Number(apex.attrs["data-point-x"]),
+      Number(apex.attrs.y) - Number(apex.attrs["data-point-y"]),
+    ),
+  ).toBeLessThan(50);
+});
+
+test("선분 길이 표시가 다른 선분을 피한다", () => {
+  const figure: Figure = {
+    kind: "geometry",
+    points: [
+      ["O", 0, 0],
+      ["Q", 7.5, 0],
+      ["D", 4.5, 0],
+      ["E", -4.5, 0],
+      ["T", 2.7, 3.6],
+    ].map(([id, x, y]) => ({
+      id: String(id),
+      x: Number(x),
+      y: Number(y),
+      show_name: true,
+      dot: true,
+    })),
+    segments: [
+      ["E", "Q", "12"],
+      ["Q", "T", "6"],
+      ["O", "T", null],
+    ].map(([from, to, label]) => ({
+      from: from!,
+      to: to!,
+      label,
+      dashed: false,
+      ticks: 0,
+      parallel_marks: 0,
+    })),
+    circles: [
+      { center: "O", radius: 4.5, dashed: false, points_on: ["D", "E", "T"] },
+    ],
+    angles: [
+      { vertex: "T", from: "O", to: "Q", label: null, right: true, marks: 0 },
+    ],
+    lines: [],
+    polygons: [],
+    arcs: [],
+  };
+  const elements = drawFigure(figure).elements;
+  const label = elements.find((e) => e.text === "12")!;
+  const x = Number(label.attrs.x),
+    y = Number(label.attrs.y);
+  const o = elements.find((e) => e.text === "O")!,
+    t = elements.find((e) => e.text === "T")!;
+  const ax = Number(o.attrs["data-point-x"]),
+    ay = Number(o.attrs["data-point-y"]),
+    bx = Number(t.attrs["data-point-x"]),
+    by = Number(t.attrs["data-point-y"]);
+  let low = 0,
+    high = 1;
+  for (const [origin, delta, min, max] of [
+    [ax, bx - ax, x - 12, x + 12],
+    [ay, by - ay, y - 16, y + 4],
+  ]) {
+    const first = (min - origin) / delta,
+      last = (max - origin) / delta;
+    low = Math.max(low, Math.min(first, last));
+    high = Math.min(high, Math.max(first, last));
+  }
+  expect(low > high).toBe(true);
+  low = 0;
+  high = 1;
+  for (const [origin, delta, min, max] of [
+    [ax, bx - ax, x - 22, x + 22],
+    [ay, by - ay, y - 26, y + 14],
+  ]) {
+    const first = (min - origin) / delta,
+      last = (max - origin) / delta;
+    low = Math.max(low, Math.min(first, last));
+    high = Math.min(high, Math.max(first, last));
+  }
+  expect(low > high).toBe(true);
+});
+
+test("사각뿔의 높이선과 모서리가 분리되고 꼭짓점 이름이 가까이 있다", () => {
+  for (const [height, radius, name, label] of [
+    [6, 2.8284271247461903, "P", "?"],
+    [3, 5.656854249492381, "S", "3 cm"],
+    [3, 2, "S", "3 cm"],
+  ] as const) {
+    const figure: Figure = {
+      kind: "solid",
+      shape: "pyramid",
+      base_sides: 4,
+      width: null,
+      depth: null,
+      height,
+      radius,
+      top_radius: null,
+      vertex_names: ["A", "B", "C", "D", name],
+      labels: [{ part: "height", text: label }],
+      show_axis: true,
+    };
+    const drawing = drawFigure(figure);
+    const elements = drawing.elements;
+    const cuboid: Figure = {
+      kind: "solid",
+      shape: "cuboid",
+      base_sides: null,
+      width: 2,
+      depth: 2,
+      height: 3,
+      radius: null,
+      top_radius: null,
+      vertex_names: ["A", "B", "C", "D", "E", "F", "G", "H"],
+      labels: [],
+      show_axis: false,
+    };
+    const size = drawing.viewBox.split(" ").map(Number);
+    const reference = drawFigure(cuboid).viewBox.split(" ").map(Number);
+    expect(size[2]).toBeLessThanOrEqual(reference[2]);
+    expect(size[3]).toBeLessThanOrEqual(reference[3]);
+    const vertex = (id: string) => elements.find((e) => e.text === id)!;
+    const apex = vertex(name),
+      ax = Number(apex.attrs["data-point-x"]),
+      ay = Number(apex.attrs["data-point-y"]);
+    const xs = ["A", "B", "C", "D"].map((id) =>
+      Number(vertex(id).attrs["data-point-x"]),
+    );
+    expect(220 - ay).toBeGreaterThanOrEqual(
+      (Math.max(...xs) - Math.min(...xs)) * 0.6,
+    );
+    expect(xs.every((x) => Math.abs(x - ax) > 1)).toBe(true);
+    expect(new Set(xs.map((x) => x.toFixed(6))).size).toBe(4);
+    const vertices = ["A", "B", "C", "D", name].map((id) => {
+      const point = vertex(id);
+      return {
+        x: Number(point.attrs["data-point-x"]),
+        y: Number(point.attrs["data-point-y"]),
+      };
+    });
+    const edges = [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 0],
+      [0, 4],
+      [1, 4],
+      [2, 4],
+      [3, 4],
+    ];
+    for (const [a, b] of edges) {
+      const from = `${vertices[a].x},${vertices[a].y}`;
+      const to = `${vertices[b].x},${vertices[b].y}`;
+      const edge = elements.find(
+        (e) =>
+          e.tag === "polyline" &&
+          [`${from} ${to}`, `${to} ${from}`].includes(String(e.attrs.points)),
+      )!;
+      expect(Boolean(edge.attrs.strokeDasharray)).toBe(a === 3 || b === 3);
+    }
+    for (let i = 0; i < vertices.length; i++) {
+      const rays = edges
+        .filter((edge) => edge.includes(i))
+        .map((edge) => {
+          const other = vertices[edge[0] === i ? edge[1] : edge[0]];
+          return Math.atan2(other.y - vertices[i].y, other.x - vertices[i].x);
+        });
+      for (let j = 0; j < rays.length; j++)
+        for (let k = j + 1; k < rays.length; k++) {
+          const difference = Math.abs(rays[j] - rays[k]);
+          expect(
+            Math.min(difference, 2 * Math.PI - difference),
+          ).toBeGreaterThanOrEqual((8 * Math.PI) / 180);
+        }
+    }
+    expect(
+      Math.hypot(Number(apex.attrs.x) - ax, Number(apex.attrs.y) - ay),
+    ).toBeLessThan(40);
+    expect(
+      elements.some(
+        (e) =>
+          e.tag === "polyline" &&
+          e.attrs.points === `${ax},${ay} 200,220` &&
+          e.attrs.strokeDasharray === "6 4",
+      ),
+    ).toBe(true);
+    const heightLabel = vertex(label);
+    expect(heightLabel.attrs.fontSize).toBe(apex.attrs.fontSize);
+    const center = {
+      x: Number(heightLabel.attrs.x),
+      y: Number(heightLabel.attrs.y) - 6,
+    };
+    const lineDistance = (
+      a: { x: number; y: number },
+      b: { x: number; y: number },
+    ) => {
+      const dx = b.x - a.x,
+        dy = b.y - a.y;
+      const t = Math.max(
+        0,
+        Math.min(
+          1,
+          ((center.x - a.x) * dx + (center.y - a.y) * dy) / (dx * dx + dy * dy),
+        ),
+      );
+      return Math.hypot(center.x - a.x - t * dx, center.y - a.y - t * dy);
+    };
+    const apexPoint = { x: ax, y: ay };
+    const axisDistance = lineDistance(apexPoint, { x: 200, y: 220 });
+    for (const id of ["A", "B", "C", "D"]) {
+      const point = vertex(id);
+      expect(axisDistance).toBeLessThan(
+        lineDistance(apexPoint, {
+          x: Number(point.attrs["data-point-x"]),
+          y: Number(point.attrs["data-point-y"]),
+        }),
+      );
+    }
+    expect(center.y).toBeGreaterThanOrEqual((ay + 220) / 2 - 20);
+    expect(center.y).toBeLessThanOrEqual((ay + 220) / 2 + 70);
+  }
+});
