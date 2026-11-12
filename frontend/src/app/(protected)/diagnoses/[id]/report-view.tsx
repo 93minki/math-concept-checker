@@ -100,20 +100,22 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
       {items.map((item) => (
         <article className="unit-card stack" key={item.id}>
           <h3>{item.stage === 1 ? "기본 문제" : "심화 문제"}</h3>
-          <ProblemText text={item.body} />
-          {item.figure && <Figure figure={item.figure} />}
-          {item.choices.some((choice) => choice.figure) && (
-            <div className="choice-grid">
-              {item.choices.map((choice) => (
-                <div className="choice" key={choice.no}>
-                  <div className="choice-content">
-                    <MathText text={`${choice.no}. ${choice.text}`} />
-                    {choice.figure && <Figure figure={choice.figure} />}
+          <div className="problem-sheet stack">
+            <ProblemText text={item.body} />
+            {item.figure && <Figure figure={item.figure} />}
+            {item.choices.some((choice) => choice.figure) && (
+              <div className="choice-grid">
+                {item.choices.map((choice) => (
+                  <div className="choice" key={choice.no}>
+                    <div className="choice-content">
+                      <MathText text={`${choice.no}. ${choice.text}`} />
+                      {choice.figure && <Figure figure={choice.figure} />}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
+          </div>
           {item.answer?.selected_choice != null ? (
             <p>
               내 답:{" "}

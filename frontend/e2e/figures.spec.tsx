@@ -21,7 +21,10 @@ const choice: FigureData = {
   max: 2,
   tick_step: 1,
   label_step: 1,
-  points: [{ x: 1, label: "A", filled: false }],
+  points: [
+    { x: 1, label: "A", filled: false },
+    { x: -1, label: "B", filled: true },
+  ],
   rays: [],
   segments: [],
 };
@@ -89,75 +92,95 @@ const examples: FigureData[] = [
   },
 ];
 
-test("본문 표와 그림 보기의 화면 너비", async ({ page }, info) => {
-  const markup = renderToStaticMarkup(
-    <main className="study-page">
-      <div className="question">
-        <ProblemText
-          text={
-            "표를 보고 답하세요.\n| 값 | 설명 |\n|---|---|\n| $|x|$ | 아주 긴 값을 가진 표의 칸입니다 |"
-          }
-        />
-        {examples.map((example) => (
-          <Figure key={example.kind} figure={example} />
-        ))}
-      </div>
-      <fieldset className="choice-grid">
-        <legend>답을 골라요</legend>
-        {[1, 2, 3, 4, 5].map((i) => (
-          <label className="choice" key={i}>
-            <input type="radio" name="answer" />
-            <div className="choice-content">
-              {i}. <Figure figure={i === 1 ? denseChoice : choice} />
-            </div>
-          </label>
-        ))}
-      </fieldset>
-    </main>,
-  );
-  await page.setContent(
-    // Without a viewport meta tag, mobile emulation lays the page out at 980px
-    // and the 360px checks below would pass without testing anything.
-    `<meta name="viewport" content="width=device-width, initial-scale=1"><style>${readFileSync(resolve("node_modules/katex/dist/katex.min.css"), "utf8") + readFileSync(resolve("src/app/globals.css"), "utf8")}</style>${markup}`,
-  );
-  await expect(page.getByRole("img", { name: "문제 그림" })).toHaveCount(11);
-  expect(
-    await page.evaluate(
-      () =>
-        document.documentElement.scrollWidth -
-        document.documentElement.clientWidth,
-    ),
-  ).toBeLessThanOrEqual(0);
-  const choices = page.locator(".choice");
-  const first = await choices.nth(0).boundingBox();
-  const second = await choices.nth(1).boundingBox();
-  expect(first).not.toBeNull();
-  expect(second).not.toBeNull();
-  if (info.project.name === "mobile") {
-    expect(second!.y).toBeGreaterThan(first!.y);
-    const textSizes = await page
-      .locator("svg.figure text")
-      .evaluateAll((nodes) =>
-        nodes
-          .filter((node) => node.textContent?.trim())
-          .map((node) => ({
-            text: node.textContent,
-            height: node.getBoundingClientRect().height,
-          })),
-      );
-    expect(textSizes.length).toBeGreaterThan(0);
-    for (const item of textSizes) {
-      expect(item.height, `그림 글자 ${item.text}`).toBeGreaterThanOrEqual(11);
+for (const theme of ["light", "dark"] as const) {
+  test(`${theme} 본문 표와 그림 보기의 화면 너비`, async ({ page }, info) => {
+    await page.emulateMedia({ colorScheme: theme });
+    const markup = renderToStaticMarkup(
+      <main className="study-page">
+        <div className="problem-sheet stack">
+          <div className="question">
+            <ProblemText
+              text={
+                "표를 보고 답하세요.\n| 값 | 설명 |\n|---|---|\n| $|x|$ | 아주 긴 값을 가진 표의 칸입니다 |"
+              }
+            />
+            {examples.map((example) => (
+              <Figure key={example.kind} figure={example} />
+            ))}
+          </div>
+          <fieldset className="choice-grid">
+            <legend>답을 골라요</legend>
+            {[1, 2, 3, 4, 5].map((i) => (
+              <label className="choice" key={i}>
+                <input type="radio" name="answer" />
+                <div className="choice-content">
+                  {i}. <Figure figure={i === 1 ? denseChoice : choice} />
+                </div>
+              </label>
+            ))}
+          </fieldset>
+        </div>
+      </main>,
+    );
+    await page.setContent(
+      // Without a viewport meta tag, mobile emulation lays the page out at 980px
+      // and the 360px checks below would pass without testing anything.
+      `<meta name="viewport" content="width=device-width, initial-scale=1"><style>${readFileSync(resolve("node_modules/katex/dist/katex.min.css"), "utf8") + readFileSync(resolve("src/app/globals.css"), "utf8")}</style>${markup}`,
+    );
+    await expect(page.getByRole("img", { name: "문제 그림" })).toHaveCount(11);
+    await expect(page.locator(".problem-sheet")).toHaveCSS(
+      "background-color",
+      "rgb(255, 255, 255)",
+    );
+    await expect(page.locator(".problem-sheet")).toHaveCSS(
+      "color",
+      "rgb(17, 17, 17)",
+    );
+    await page.locator(".choice input").first().check();
+    await expect(page.locator(".choice").first()).toHaveCSS(
+      "background-color",
+      "rgb(232, 242, 255)",
+    );
+    expect(
+      await page.evaluate(
+        () =>
+          document.documentElement.scrollWidth -
+          document.documentElement.clientWidth,
+      ),
+    ).toBeLessThanOrEqual(0);
+    const choices = page.locator(".choice");
+    const first = await choices.nth(0).boundingBox();
+    const second = await choices.nth(1).boundingBox();
+    expect(first).not.toBeNull();
+    expect(second).not.toBeNull();
+    if (info.project.name === "mobile") {
+      expect(second!.y).toBeGreaterThan(first!.y);
+      const textSizes = await page
+        .locator("svg.figure text")
+        .evaluateAll((nodes) =>
+          nodes
+            .filter((node) => node.textContent?.trim())
+            .map((node) => ({
+              text: node.textContent,
+              height: node.getBoundingClientRect().height,
+            })),
+        );
+      expect(textSizes.length).toBeGreaterThan(0);
+      for (const item of textSizes) {
+        expect(item.height, `그림 글자 ${item.text}`).toBeGreaterThanOrEqual(
+          11,
+        );
+      }
+      await page.screenshot({
+        path: `test-results/step1/${theme}-360.png`,
+        fullPage: true,
+      });
+    } else {
+      expect(second!.x).toBeGreaterThan(first!.x);
+      await page.screenshot({
+        path: `test-results/step1/${theme}-1280.png`,
+        fullPage: true,
+      });
     }
-    await page.screenshot({
-      path: "test-results/figures-360.png",
-      fullPage: true,
-    });
-  } else {
-    expect(second!.x).toBeGreaterThan(first!.x);
-    await page.screenshot({
-      path: "test-results/figures-1280.png",
-      fullPage: true,
-    });
-  }
-});
+  });
+}

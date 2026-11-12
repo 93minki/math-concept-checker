@@ -480,5 +480,9 @@ export function drawFigure(figure: Figure): Drawing {
     left = Math.min(left, Math.floor(start - 4));
     right = Math.max(right, Math.ceil(end + 4));
   }
+  elements.unshift({
+    tag: "rect",
+    attrs: { x: left, y: 0, width: right - left, height, fill: "white" },
+  });
   return { viewBox: `${left} 0 ${right - left} ${height}`, elements };
 }

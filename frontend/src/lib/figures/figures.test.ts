@@ -71,7 +71,13 @@ const figures: Figure[] = [
 ];
 describe("그림 요소", () => {
   test.each(figures)("$kind 생성", (figure) => {
-    expect(drawFigure(figure).elements.length).toBeGreaterThan(3);
+    const { elements, viewBox } = drawFigure(figure);
+    expect(elements.length).toBeGreaterThan(3);
+    const [x, y, width, height] = viewBox.split(" ").map(Number);
+    expect(elements[0]).toEqual({
+      tag: "rect",
+      attrs: { x, y, width, height, fill: "white" },
+    });
   });
   test("수직선과 상자그림 높이는 내용에 맞는다", () => {
     const numberLine = drawFigure(figures[0]).viewBox.split(" ").map(Number);
@@ -191,7 +197,7 @@ describe("그림 요소", () => {
     );
     expect(horizontal?.attrs.x1).toBe(82);
     expect(horizontal?.attrs.x2).toBe(338);
-    const box = es.find((e) => e.tag === "rect");
+    const box = es.find((e) => e.tag === "rect" && e.attrs.stroke === "#222");
     expect(box?.attrs.x).toBe(114);
     expect(box?.attrs.width).toBe(160);
     expect(
