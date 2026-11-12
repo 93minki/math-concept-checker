@@ -291,10 +291,10 @@
 | `polygons` | [{`vertices`(점 id 목록), `shaded`}] ≤ 4. 연한 색 채움 |
 | `circles` | [{`center`, `radius`, `dashed`, `points_on`(원 위에 있어야 하는 점 id)}] ≤ 3 |
 | `arcs` | [{`center`, `from`, `to`, `trace`(작도 흔적이면 가는 선), `label`}] ≤ 6. from에서 to로 시계 반대 방향 |
-| `angles` | [{`vertex`, `from`, `to`, `label`, `right`(직각 표시), `marks`(같은 각 표시 1~3)}] ≤ 8. 180°보다 작은 쪽을 그린다 |
+| `angles` | [{`vertex`, `from`, `to`, `label`, `right`(직각 표시), `marks`(0이면 보통 각 표시 호 한 겹, 1~3이면 같은 각 표시로 같은 수끼리 크기가 같다)}] ≤ 8. 180°보다 작은 쪽을 그린다 |
 
 - 화면: 좌표에서 그림 범위를 계산하고 x·y 단위를 같게 그린다. 축·눈금은 없다.
-- 코드 검사 (허용 오차는 에이전트 추정, 근거 없음): 참조한 점이 있음, id 중복 없음, 좌표 −100~100, 상한. `right`이면 실제 90°±0.5°. 같은 `ticks` 선분은 길이 차 1% 이내, 같은 `marks` 각은 1° 이내, 같은 `parallel_marks`는 방향 차 0.5° 이내. 각의 `label`이 "숫자°"이면 실제 각과 ±3° 이내. 선분 `label`이 숫자(단위 허용)인 것끼리는 (글의 수 ÷ 그려진 길이)의 차이가 5% 이내. `points_on`과 호의 to는 반지름 차 1% 이내.
+- 코드 검사 (허용 오차는 에이전트 추정, 근거 없음): 참조한 점이 있음, id 중복 없음, 좌표 −100~100, 상한. `right`이면 실제 90°±0.5°. 같은 `ticks` 선분은 길이 차 1% 이내, 같은 `marks` 각은 1° 이내, 같은 `parallel_marks`는 방향 차 0.5° 이내. 각의 `label`이 "숫자°"이면 실제 각과 ±3° 이내. 선분 `label`이 숫자 하나이거나 숫자 + 길이 단위(`mm`, `cm`, `m`, `km`)인 것끼리는 (`2x`, `x+1` 같은 식은 제외) (글의 수 ÷ 그려진 길이)의 차이가 5% 이내. `points_on`과 호의 to는 반지름 차 1% 이내.
 
 ##### D. 새 종류 `solid` (입체도형)
 - 필드: `shape`(`cuboid`, `prism`, `pyramid`, `frustum`, `cylinder`, `cone`, `cone_frustum`, `sphere`, `hemisphere`), `base_sides`(각기둥·각뿔·각뿔대 3~8, 아니면 null), `width`, `depth`, `height`, `radius`, `top_radius`(그리기 비율용 수, 쓰지 않으면 null), `vertex_names`(꼭짓점 이름 목록. 밑면을 시계 반대 방향, 그다음 윗면 순서. 없으면 null), `labels`[{`part`(`width`/`depth`/`height`/`radius`/`top_radius`/`slant`), `text`}], `show_axis`(회전체 축 점선).

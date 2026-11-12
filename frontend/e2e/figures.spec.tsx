@@ -184,3 +184,51 @@ for (const theme of ["light", "dark"] as const) {
     }
   });
 }
+
+test("새 그림의 본문과 보기 크기", async ({ page }, info) => {
+  const { shapeFixtures } = await import("./shape-fixtures");
+  const markup = renderToStaticMarkup(
+    <main className="study-page">
+      {shapeFixtures.map((figure, i) => (
+        <div className="problem-sheet" key={i}>
+          <div style={{ width: "min(100%, 330px)" }} className="body-example">
+            <Figure figure={figure} />
+          </div>
+          <div style={{ width: "min(100%, 250px)" }} className="choice-example">
+            <Figure figure={figure} />
+          </div>
+        </div>
+      ))}
+    </main>,
+  );
+  await page.setContent(
+    `<meta name="viewport" content="width=device-width, initial-scale=1"><style>${readFileSync(resolve("src/app/globals.css"), "utf8")}</style>${markup}`,
+  );
+  expect(
+    await page.evaluate(
+      () =>
+        document.documentElement.scrollWidth -
+        document.documentElement.clientWidth,
+    ),
+  ).toBeLessThanOrEqual(0);
+  const heights = await page
+    .locator("svg.figure text")
+    .evaluateAll((nodes) =>
+      nodes
+        .filter((node) => node.textContent?.trim())
+        .map((node) => node.getBoundingClientRect().height),
+    );
+  expect(heights.length).toBeGreaterThan(0);
+  for (const height of heights) expect(height).toBeGreaterThanOrEqual(11);
+  const size = info.project.name === "mobile" ? "360" : "1280";
+  for (let i = 0; i < shapeFixtures.length; i++) {
+    await page
+      .locator(".body-example")
+      .nth(i)
+      .screenshot({ path: `test-results/step4/${size}-${i}-body.png` });
+    await page
+      .locator(".choice-example")
+      .nth(i)
+      .screenshot({ path: `test-results/step4/${size}-${i}-choice.png` });
+  }
+});

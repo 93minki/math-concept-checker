@@ -387,3 +387,27 @@ def test_review_html_renders_escaped_figures() -> None:
     assert html.count("<svg ") == 2
     assert "&lt;script&gt;" in html
     assert "<script>" not in html
+
+
+def test_review_html_renders_net() -> None:
+    figure = {
+        "kind": "net",
+        "shape": "cylinder",
+        "radius": 3,
+        "height": 5,
+        "slant": None,
+        "labels": [],
+    }
+    question: Row = {
+        "id": "q",
+        "assessment_item_id": "a",
+        "difficulty": "normal",
+        "variant": 1,
+        "status": "validated",
+        "body": "문제",
+        "explanation": "",
+        "figure": figure,
+    }
+    html = render_review([question], [], [], [], [], [])
+    assert "<svg " in html
+    assert html.count("<circle ") == 2

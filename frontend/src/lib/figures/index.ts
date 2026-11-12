@@ -1,10 +1,17 @@
+import { drawShape, type Geometry, type Solid, type Net } from "./shapes.ts";
+
 type Label = string | null;
 type Point = { x: number; y: number };
 type Graph =
   | { type: "linear"; m: number; b: number; label: Label }
   | { type: "vertical"; c: number; label: Label }
-  | { type: "quadratic"; a: number; p: number; q: number; label: Label };
+  | { type: "quadratic"; a: number; p: number; q: number; label: Label }
+  | { type: "polyline"; points: Point[]; label: Label }
+  | { type: "inverse"; k: number; label: Label };
 export type Figure =
+  | Geometry
+  | Solid
+  | Net
   | {
       kind: "number_line";
       min: number;
@@ -30,9 +37,13 @@ export type Figure =
       show_tick_labels: boolean;
       points: (Point & { label: Label })[];
       graphs: Graph[];
+      x_label?: Label;
+      y_label?: Label;
+      y_tick_step?: number | null;
     }
   | {
       kind: "bar_chart";
+      y_min?: number | null;
       categories: string[];
       values: number[];
       y_max: number;
@@ -45,6 +56,9 @@ export type Figure =
       class_start: number;
       class_width: number;
       frequencies: number[];
+      relative?: boolean | null;
+      compare_frequencies?: number[] | null;
+      series_labels?: string[] | null;
       show_bars: boolean;
       show_polygon: boolean;
       y_step: number;
@@ -85,6 +99,12 @@ export type Element = {
 export type Drawing = { viewBox: string; elements: Element[] };
 
 export function drawFigure(figure: Figure): Drawing {
+  if (
+    figure.kind === "geometry" ||
+    figure.kind === "solid" ||
+    figure.kind === "net"
+  )
+    return drawShape(figure);
   const elements: Element[] = [];
   let height = 303;
   const add = (tag: Element["tag"], attrs: Element["attrs"], text?: string) =>
@@ -109,7 +129,16 @@ export function drawFigure(figure: Figure): Drawing {
   ) =>
     add(
       "text",
-      { x, y, textAnchor: anchor, fontSize: 20, fill: "#111" },
+      {
+        x,
+        y,
+        textAnchor: anchor,
+        fontSize: 20,
+        fill: "#111",
+        stroke: "white",
+        strokeWidth: 4,
+        paintOrder: "stroke",
+      },
       String(value),
     );
   const circle = (x: number, y: number, filled: boolean, radius = 4) =>
@@ -255,17 +284,17 @@ export function drawFigure(figure: Figure): Drawing {
     const xspan = f.x_max - f.x_min;
     const yspan = f.y_max - f.y_min;
     const scale = Math.min(320 / xspan, 270 / yspan);
-    const plotWidth = xspan * scale;
-    const plotHeight = yspan * scale;
+    const plotWidth = f.y_tick_step != null ? 320 : xspan * scale;
+    const plotHeight = f.y_tick_step != null ? 270 : yspan * scale;
     const left = 210 - plotWidth / 2;
     const right = left + plotWidth;
     const top = 45;
     const bottom = top + plotHeight;
-    height = bottom + 40;
-    const x = (v: number) => left + (v - f.x_min) * scale;
-    const y = (v: number) => bottom - (v - f.y_min) * scale;
+    height = bottom + (f.x_label ? 74 : 40);
+    const x = (v: number) => left + ((v - f.x_min) / xspan) * plotWidth;
+    const y = (v: number) => bottom - ((v - f.y_min) / yspan) * plotHeight;
     const xticks = ticks(f.x_min, f.x_max, f.tick_step);
-    const yticks = ticks(f.y_min, f.y_max, f.tick_step);
+    const yticks = ticks(f.y_min, f.y_max, f.y_tick_step ?? f.tick_step);
     const xlabels = numericLabels(xticks, x, true);
     const ylabels = numericLabels(yticks, y, false);
     if (inside(0, f.y_min, f.y_max)) {
@@ -296,6 +325,8 @@ export function drawFigure(figure: Figure): Drawing {
     }
     if (inside(0, f.x_min, f.x_max) && inside(0, f.y_min, f.y_max))
       text(x(0) - 12, y(0) + 30, "O", "end");
+    if (f.x_label) text(right, bottom + 65, f.x_label, "end");
+    if (f.y_label) text(x(0) + 8, top - 10, f.y_label, "start");
     f.graphs.forEach((g) => {
       if (g.type === "vertical") {
         if (inside(g.c, f.x_min, f.x_max)) {
@@ -304,14 +335,33 @@ export function drawFigure(figure: Figure): Drawing {
         }
         return;
       }
+      if (g.type === "polyline") {
+        for (let i = 1; i < g.points.length; i++) {
+          const a = g.points[i - 1];
+          const b = g.points[i];
+          line(x(a.x), y(a.y), x(b.x), y(b.y), 2);
+        }
+        if (g.label && g.points[0])
+          dotLabel(x(g.points[0].x), y(g.points[0].y), g.label);
+        return;
+      }
       let previous: Point | null = null;
       let labelPlaced = false;
       for (let i = 0; i <= 400; i++) {
         const vx = f.x_min + ((f.x_max - f.x_min) * i) / 400;
         const vy =
-          g.type === "linear" ? g.m * vx + g.b : g.a * (vx - g.p) ** 2 + g.q;
+          g.type === "linear"
+            ? g.m * vx + g.b
+            : g.type === "inverse"
+              ? g.k / vx
+              : g.a * (vx - g.p) ** 2 + g.q;
         const current = { x: vx, y: vy };
-        if (previous && Number.isFinite(vy) && Number.isFinite(previous.y)) {
+        if (
+          previous &&
+          Number.isFinite(vy) &&
+          Number.isFinite(previous.y) &&
+          !(g.type === "inverse" && previous.x * vx <= 0)
+        ) {
           const dy = current.y - previous.y;
           let t0 = 0;
           let t1 = 1;
@@ -408,20 +458,23 @@ export function drawFigure(figure: Figure): Drawing {
     const frequency = f.kind === "frequency";
     const values = frequency ? f.frequencies : f.values;
     const count = values.length;
+    const ymin = frequency ? 0 : (f.y_min ?? 0);
     const ymax = frequency
       ? Math.max(
           f.y_step,
-          Math.ceil(Math.max(0, ...values) / f.y_step) * f.y_step,
+          Math.ceil(
+            Math.max(0, ...values, ...(f.compare_frequencies ?? [])) / f.y_step,
+          ) * f.y_step,
         )
       : f.y_max;
-    if (!count || !(ymax > 0)) return { viewBox: "0 0 400 260", elements };
+    if (!count || !(ymax > ymin)) return { viewBox: "0 0 400 260", elements };
     const left = frequency ? 50 + 160 / (count + 1) : 50;
     const width = frequency ? (320 * count) / (count + 1) : 320;
     const band = width / count;
-    const y = (v: number) => ymap(v, 0, ymax);
+    const y = (v: number) => ymap(v, ymin, ymax);
     axis(50, 235, 370, 235);
     axis(50, 235, 50, 65);
-    const yTicks = ticks(0, ymax, f.y_step);
+    const yTicks = ticks(ymin, ymax, f.y_step);
     const yLabels = numericLabels(yTicks, y, false);
     yTicks.forEach((v) => {
       axis(45, y(v), 50, y(v));
@@ -430,7 +483,7 @@ export function drawFigure(figure: Figure): Drawing {
     if (f.x_label) text(210, 295, f.x_label);
     if (f.y_label) text(10, 28, f.y_label, "start");
     values.forEach((v, i) => {
-      if (!inside(v, 0, ymax)) return;
+      if (!inside(v, ymin, ymax)) return;
       const cx = left + band * (i + 0.5);
       if (!frequency || f.show_bars)
         rect(
@@ -461,6 +514,37 @@ export function drawFigure(figure: Figure): Drawing {
         ];
         for (let i = 1; i < pts.length; i++)
           line(pts[i - 1][0], pts[i - 1][1], pts[i][0], pts[i][1], 2);
+        if (f.compare_frequencies) {
+          const second = [
+            [left - band / 2, 235],
+            ...f.compare_frequencies.map((v, i) => [
+              left + band * (i + 0.5),
+              y(v),
+            ]),
+            [left + width + band / 2, 235],
+          ];
+          add("polyline", {
+            points: second.map((p) => p.join(",")).join(" "),
+            fill: "none",
+            stroke: "#222",
+            strokeWidth: 2,
+            strokeDasharray: "6 4",
+          });
+          if (f.series_labels) {
+            line(235, 17, 265, 17, 2);
+            text(275, 23, f.series_labels[0], "start");
+            add("line", {
+              x1: 235,
+              y1: 43,
+              x2: 265,
+              y2: 43,
+              stroke: "#222",
+              strokeWidth: 2,
+              strokeDasharray: "6 4",
+            });
+            text(275, 49, f.series_labels[1], "start");
+          }
+        }
       }
     }
   }
@@ -480,6 +564,19 @@ export function drawFigure(figure: Figure): Drawing {
     left = Math.min(left, Math.floor(start - 4));
     right = Math.max(right, Math.ceil(end + 4));
   }
+  const fills = elements.filter(
+    (e) =>
+      e.tag === "rect" &&
+      e.attrs.fill &&
+      e.attrs.fill !== "none" &&
+      e.attrs.fill !== "white",
+  );
+  const dots = elements.filter((e) => e.tag === "circle");
+  const labels = elements.filter((e) => e.tag === "text");
+  const lines = elements.filter(
+    (e) => !fills.includes(e) && !dots.includes(e) && e.tag !== "text",
+  );
+  elements.splice(0, elements.length, ...fills, ...lines, ...dots, ...labels);
   elements.unshift({
     tag: "rect",
     attrs: { x: left, y: 0, width: right - left, height, fill: "white" },

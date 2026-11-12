@@ -475,3 +475,65 @@ def test_restart_written_and_expiry(
         ]["code"]
         == "not_in_progress"
     )
+
+
+def test_new_figure_response_hides_grading_fields() -> None:
+    from app.diagnoses.schemas import Choice
+
+    figure = {
+        "kind": "net",
+        "shape": "cylinder",
+        "radius": 3,
+        "height": 5,
+        "slant": None,
+        "labels": [],
+    }
+    choice = Choice.model_validate(
+        {
+            "no": 1,
+            "text": "보기",
+            "figure": figure,
+            "is_correct": True,
+            "misconception_id": "M1",
+        }
+    )
+    output = choice.model_dump()
+    assert output["figure"] == figure
+    assert "is_correct" not in output and "misconception_id" not in output
+
+
+def test_new_figure_api(
+    client: tuple[TestClient, ec.EllipticCurvePrivateKey], monkeypatch: object
+) -> None:
+    from pytest import MonkeyPatch
+
+    from app.ai.schemas import Net
+
+    assert isinstance(monkeypatch, MonkeyPatch)
+    figure = Net.model_validate(
+        {
+            "kind": "net",
+            "shape": "cylinder",
+            "radius": 3,
+            "height": 5,
+            "slant": None,
+            "labels": [],
+        }
+    )
+    monkeypatch.setitem(globals(), "FIGURE", figure)
+    tc, key = client
+    profiles = FakeProfiles()
+    profiles.complete_signup(USER_ID)
+    repo = FakeDiagnoses()
+    app.dependency_overrides[get_profiles] = lambda: profiles
+    app.dependency_overrides[get_diagnoses] = lambda: repo
+    headers = {"Authorization": f"Bearer {token(key)}"}
+    start = tc.post("/diagnoses", headers=headers, json={"display_unit_id": 1})
+    item = tc.get(f"/diagnoses/{start.json()['diagnosis_id']}", headers=headers).json()[
+        "items"
+    ][0]
+    assert item["figure"]["kind"] == "net"
+    assert item["choices"][0]["figure"]["kind"] == "net"
+    assert all(
+        "is_correct" not in c and "misconception_id" not in c for c in item["choices"]
+    )
