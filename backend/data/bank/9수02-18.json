@@ -1,6 +1,42 @@
 {
   "backlog": [
     {
+      "assessment_item_id": "9수02-18-C1-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T06:13:31.433163+00:00",
+          "issues": [
+            "그림의 직선 y=ax+1이 눈금의 교점 (0, 1), (2, 2)를 지나므로 두 그래프의 교점 조건을 쓰지 않고 기울기에서 바로 a=1/2을 구할 수 있다. 따라서 의도한 교점과 연립방정식의 관계를 재지 못하며, 역으로 계수를 구하는 고난이도 조건도 필수적이지 않다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:14:06.815885+00:00",
+          "issues": [
+            "application-a 미충족: $(a,2a+1)$은 교점의 $x$좌표를 미지수로 나타낸 것이지 주어진 결과가 아니다. 두 식을 연립하여 교점을 구하는 일반 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:14:32.839639+00:00",
+          "issues": [
+            "application-a: 교점이나 연립방정식의 해가 결과로 주어지지 않는다. 두 식에서 교점을 구한 뒤 그 좌표의 비를 계산하는 문제로, 주어진 결과에서 그래프의 조건을 거꾸로 찾지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:14:32.919739+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T06:58:44.460843+00:00",
+      "variant": 2
+    },
+    {
       "assessment_item_id": "9수02-18-C2-성질적용",
       "attempts": [
         {
@@ -200,6 +236,106 @@
   ],
   "questions": [
     {
+      "approved_at": "2026-11-12T06:19:29.314788+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C1-성질적용",
+      "body": "다음 그림은 두 일차함수의 그래프 ㄱ, ㄴ을 나타낸 것이다. ㄱ, ㄴ이 나타내는 식을 연립한 방정식의 해와 ㄱ이 나타내는 식과 $y=3x+a$를 연립한 방정식의 해가 같다. $a$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$-1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-\\frac{1}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\frac{1}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 4,
+          "text": "$1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 5,
+          "text": "$3$"
+        }
+      ],
+      "created_at": "2026-11-12T06:12:57.553443+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "ㄱ, ㄴ의 교점의 좌표는 두 식을 연립한 방정식의 해이다. $2x+1=-x+3$에서 $x=\\frac{2}{3}$이고, $y=\\frac{7}{3}$이다. 이 좌표를 $y=3x+a$에 대입하면 $\\frac{7}{3}=2+a$이므로 $a=\\frac{1}{3}$이다. ⑤는 ㄴ의 $y$절편인 $(0,3)$을 두 그래프의 교점으로 잘못 생각한 경우이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 1.0,
+            "label": "ㄱ: y=2x+1",
+            "m": 2.0,
+            "type": "linear"
+          },
+          {
+            "b": 3.0,
+            "label": "ㄴ: y=-x+3",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -3.0,
+        "y_label": "y",
+        "y_max": 6.0,
+        "y_min": -3.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:12:56.933821+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 연립방정식의 해가 같다는 사실을 거꾸로 이용하여 계수 $a$를 구한다.",
+      "id": "5fc1af84-e816-4779-b4a1-e47e094bff28",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:12:29.474144+00:00",
+          "issues": [
+            "보기 ①: 오개념 M1에 따라 x절편 (-1, 0)을 교점으로 보면 -a=7이므로 a=-7이다. 보기의 -6과 해설이 일치하지 않는다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:12:56.933254+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T11:55:02.450671+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-18-C1-성질적용",
@@ -243,7 +379,7 @@
       ],
       "created_at": "2026-11-11T11:42:51.52468+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.7877+00:00",
       "explanation": "만나는 점은 두 그래프 위에 있다. $y=2x+4$에 $x=1$을 대입하면 $y=6$이다. 따라서 만나는 점은 $(1, 6)$이다. 이를 $y=ax+2$에 대입하면 $6=a+2$이므로 $a=4$이다.\n첫 번째 그래프의 $x$절편 $(-2, 0)$을 두 그래프가 만나는 점으로 잘못 생각하면 $a=1$을 고를 수 있다. 하지만 문제에서 만나는 점의 $x$좌표는 $1$이다.",
       "figure": null,
       "generated_at": "2026-11-11T11:42:51.38541+00:00",
@@ -256,7 +392,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:42:51.385295+00:00",
@@ -265,6 +401,208 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수02-18-C1-성질적용",
+      "body": "다음 그림은 두 일차함수의 그래프와 그 식을 나타낸 것이다. 두 그래프의 교점의 $x$좌표가 $\\frac{4}{5}$일 때, $a$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 1,
+          "text": "$-\\frac{5}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$-2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$-\\frac{1}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\frac{1}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2$"
+        }
+      ],
+      "created_at": "2026-11-12T06:58:44.543472+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T07:03:58.294338+00:00",
+      "explanation": "교점은 두 그래프 위에 있으므로 그 좌표는 두 식을 모두 만족한다. 교점의 $x$좌표 $\\frac{4}{5}$를 $y=2x+1$에 대입하면 $y=\\frac{13}{5}$이다. 이를 다른 식에 대입하면 $\\frac{13}{5}=\\frac{4}{5}a+3$이므로 $a=-\\frac{1}{2}$이다.\n①은 교점의 $y$좌표 대신 첫 번째 그래프의 $y$절편인 $1$을 사용한 경우이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 1.0,
+            "label": "y=2x+1",
+            "m": 2.0,
+            "type": "linear"
+          },
+          {
+            "b": 3.0,
+            "label": "y=ax+3",
+            "m": -0.5,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 1.0,
+        "x_min": -1.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -1.0,
+        "y_tick_step": null
+      },
+      "generated_at": "2026-11-12T06:58:44.303895+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "교점의 $x$좌표를 주고, 두 그래프의 식을 함께 이용하여 미지의 계수 $a$를 구하게 한다.",
+      "id": "669c0806-b0db-405e-8b7f-a90c44db2f69",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T06:57:46.377339+00:00",
+          "issues": [
+            "고난도 조건 application-b 미충족: 교점을 구한 뒤 좌표에 지시된 산술 계산만 하면 되므로, 식을 세워 성질을 적용하는 별도의 생각이 요구되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:58:13.798208+00:00",
+          "issues": [
+            "교점의 좌표를 문자로 표현했을 뿐 실제 결과가 주어진 것은 아니다. 두 식으로 교점을 구한 뒤 좌표 표현에서 b를 계산하는 순방향 문제이므로 application-a에 해당하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:58:44.303483+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T07:27:28.659605+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C1-성질적용",
+      "body": "다음 그림은 두 일차함수의 그래프를 나타낸 것이다. 두 그래프의 교점의 $y$좌표가 연립방정식 $x+y=2$, $x-y=a$의 해의 $x$의 값과 같을 때, $a$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 1,
+          "text": "$0$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\frac{2}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\frac{4}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\frac{5}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 5,
+          "text": "$2$"
+        }
+      ],
+      "created_at": "2026-11-12T07:20:29.490786+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 그래프가 나타내는 식을 연립하면 $2x+1=-x+2$이므로 교점의 좌표는 $(\\frac{1}{3},\\frac{5}{3})$이다. 주어진 연립방정식의 해에서 $x=\\frac{5}{3}$이므로 $x+y=2$에 대입하면 $y=\\frac{1}{3}$이다. 따라서 $a=x-y=\\frac{4}{3}$이다.\n두 그래프의 $y$절편인 $1$ 또는 $2$를 교점의 $y$좌표로 잘못 생각하면 각각 ① 또는 ⑤를 고를 수 있다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 1.0,
+            "label": "y=2x+1",
+            "m": 2.0,
+            "type": "linear"
+          },
+          {
+            "b": 2.0,
+            "label": "y=-x+2",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -2.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -2.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T07:20:29.197341+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 그래프의 교점에서 구한 값을 다른 연립방정식의 해로 이용하여 거꾸로 $a$의 값을 찾게 한다.",
+      "id": "d8f6424b-f425-432d-be90-7c82b3354ea0",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T07:20:29.197154+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T11:55:02.491867+00:00",
@@ -310,7 +648,7 @@
       ],
       "created_at": "2026-11-11T11:43:15.980789+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.826771+00:00",
       "explanation": "세 그래프가 만나는 점은 앞의 두 그래프에도 있다. $-x+4=2x-2$를 풀면 $x=2$이고, 이때 $y=2$이다. 점 $(2, 2)$는 세 번째 그래프에도 있으므로 $2=3\\times 2+a$이다. 따라서 $a=-4$이다.\n$(4, 0)$과 $(0, 4)$는 첫 번째 그래프의 각각 $x$절편과 $y$절편이다. 이 점들은 두 번째 그래프 위에 있지 않으므로 세 그래프가 만나는 점이 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T11:43:15.822153+00:00",
@@ -323,7 +661,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:43:15.822074+00:00",
@@ -332,6 +670,99 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.34679+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C1-성질적용",
+      "body": "다음 그림은 두 일차함수의 그래프와 그 식을 나타낸 것이다. 두 그래프의 교점의 좌표는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 1,
+          "text": "$(0,1)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 2,
+          "text": "$(0,3)$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\left(\\dfrac{2}{3},\\dfrac{7}{3}\\right)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\left(\\dfrac{7}{3},\\dfrac{2}{3}\\right)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(1,3)$"
+        }
+      ],
+      "created_at": "2026-11-12T06:11:40.960794+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "교점의 좌표는 두 식을 함께 만족한다. 따라서 $2x+1=-x+3$을 풀면 $x=\\dfrac{2}{3}$이다. 이를 식에 대입하면 $y=\\dfrac{7}{3}$이므로 교점은 $\\left(\\dfrac{2}{3},\\dfrac{7}{3}\\right)$이다. ①과 ②는 각각 한 그래프의 $y$절편을 교점으로 잘못 생각한 것이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 1.0,
+            "label": "y=2x+1",
+            "m": 2.0,
+            "type": "linear"
+          },
+          {
+            "b": 3.0,
+            "label": "y=-x+3",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -2.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -3.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:11:40.804386+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "79a0755d-3606-4a18-a6c1-de27b4f7c0e4",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:11:40.804089+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T11:55:02.517253+00:00",
@@ -377,7 +808,7 @@
       ],
       "created_at": "2026-11-11T11:42:13.537683+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.861057+00:00",
       "explanation": "두 그래프의 교점의 좌표는 연립방정식 $y=2x+1$, $y=-x+7$의 해이다. $2x+1=-x+7$을 풀면 $x=2$이고, 이를 식에 넣으면 $y=5$이다. 따라서 두 그래프는 한 점 $(2,\\,5)$에서 만난다. $(0,\\,1)$, $(0,\\,7)$, $(7,\\,0)$은 각각 한 그래프의 절편이지만 두 그래프의 교점은 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T11:42:13.384168+00:00",
@@ -390,7 +821,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:42:13.384068+00:00",
@@ -444,7 +875,7 @@
       ],
       "created_at": "2026-11-11T11:42:30.381406+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.896932+00:00",
       "explanation": "두 그래프의 교점은 두 식을 모두 만족한다. $2x-4=-x+5$를 풀면 $x=3$이고, 이를 한 식에 넣으면 $y=2$이다. 따라서 교점의 좌표는 $(3,2)$이다. $(2,0)$, $(0,-4)$, $(0,5)$는 각각 한 그래프의 x절편 또는 y절편이다. 한 그래프의 절편을 두 그래프의 교점으로 생각하면 안 된다.",
       "figure": null,
       "generated_at": "2026-11-11T11:42:30.231711+00:00",
@@ -457,7 +888,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:42:30.231566+00:00",
@@ -466,6 +897,192 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.374831+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C1-성질적용",
+      "body": "다음 그림은 두 일차함수의 그래프와 그 식을 나타낸 것이다. 두 식을 연립방정식으로 놓을 때, 그 해를 $(a, b)$라 하자. $a+b$의 값은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 1,
+          "text": "$1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\frac{11}{4}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\frac{13}{4}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\frac{7}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 5,
+          "text": "$4$"
+        }
+      ],
+      "created_at": "2026-11-12T06:12:02.896987+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "연립방정식의 해는 두 그래프의 교점의 좌표이다. 따라서 $2a+1=-2a+4$이므로 $a=\\frac{3}{4}$이다. 이를 한 식에 넣으면 $b=\\frac{5}{2}$이다. 따라서 $a+b=\\frac{13}{4}$이다. $1$이나 $4$를 골랐다면 한 그래프의 $y$절편을 교점의 좌표로 잘못 생각한 것이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 1.0,
+            "label": "y=2x+1",
+            "m": 2.0,
+            "type": "linear"
+          },
+          {
+            "b": 4.0,
+            "label": "y=-2x+4",
+            "m": -2.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -2.0,
+        "y_label": "y",
+        "y_max": 6.0,
+        "y_min": -3.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:12:02.839053+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "fa8ce0b5-1c11-4ff9-89da-972f8675f869",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:12:02.838710+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.398607+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C1-오개념판별",
+      "body": "다음 그림은 두 일차함수의 그래프 ㉠, ㉡을 나타낸 것이다. 두 일차함수의 식을 함께 묶은 연립방정식에 대하여 민지가 다음과 같이 말했다.\n\n“㉠의 $x$절편을 나타내는 점의 좌표가 이 연립방정식의 해야.”\n\n민지의 말에 대한 판단으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 1,
+          "text": "맞다. 한 그래프의 $x$절편을 나타내는 점의 좌표는 연립방정식의 해이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "맞다. $(-2,0)$을 ㉠의 식에 대입하면 참이므로 연립방정식의 해이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 3,
+          "text": "틀리다. ㉠의 $y$절편을 나타내는 점의 좌표인 $(0,2)$가 연립방정식의 해이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. 두 그래프의 교점의 $x$좌표가 $1$이므로 연립방정식의 해는 $x=1$, $y=0$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. 두 그래프의 교점이 $(1,3)$이므로 연립방정식의 해는 $x=1$, $y=3$이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:12:35.819588+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "㉠의 $x$절편을 나타내는 점은 $(-2,0)$이다. 이 점은 ㉠ 위에 있지만 ㉡ 위에는 없으므로 연립방정식의 해가 아니다. 두 식을 모두 만족하는 해는 두 그래프의 교점인 $(1,3)$이다. 한 그래프의 $x$절편이나 $y$절편을 나타내는 점이라고 해서 언제나 연립방정식의 해가 되는 것은 아니다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 2.0,
+            "label": "㉠",
+            "m": 1.0,
+            "type": "linear"
+          },
+          {
+            "b": 4.0,
+            "label": "㉡",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 5.0,
+        "x_min": -3.0,
+        "y_label": "y",
+        "y_max": 7.0,
+        "y_min": -2.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:12:35.43392+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "한 그래프의 $x$절편을 연립방정식의 해로 본 민지의 말을 판단하게 한다. 그림에서 절편과 교점을 구별해야 옳은 판단을 고를 수 있다.",
+      "id": "13712a90-adaa-489b-834e-ddd5d1039b59",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:12:35.433686+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T11:55:02.573873+00:00",
@@ -511,7 +1128,7 @@
       ],
       "created_at": "2026-11-11T11:44:49.087479+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.714742+00:00",
       "explanation": "연립방정식의 해는 두 그래프의 교점의 좌표입니다. 두 식을 모두 만족하는 값은 $x=1$, $y=4$이므로 정답은 3번입니다.\n1번과 2번은 한 그래프의 절편을 연립방정식의 해로 잘못 생각했습니다. 한 그래프 위의 점이라고 해서 반드시 다른 그래프 위에도 있는 것은 아닙니다. 4번은 교점의 $x$좌표와 $y$좌표를 바꾸었습니다. 5번은 교점의 $x$좌표와 한 그래프의 $y$절편을 짝지었습니다.",
       "figure": null,
       "generated_at": "2026-11-11T11:44:48.61785+00:00",
@@ -524,7 +1141,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:44:24.450725+00:00",
@@ -585,7 +1202,7 @@
       ],
       "created_at": "2026-11-11T11:45:09.503878+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.763939+00:00",
       "explanation": "정답은 4번입니다. $(0,2)$는 첫째 그래프 위의 점이지만, 둘째 식에는 $2=-0+4$가 성립하지 않으므로 둘째 그래프 위의 점이 아닙니다. 두 식을 모두 만족하는 해는 $x=1$, $y=3$입니다.\n\n1번, 2번, 3번은 한 그래프의 절편을 연립방정식의 해로 잘못 생각한 것입니다. 연립방정식의 해는 한 그래프의 절편이 아니라 두 그래프의 교점의 좌표입니다.",
       "figure": null,
       "generated_at": "2026-11-11T11:45:09.124994+00:00",
@@ -598,7 +1215,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:45:09.124845+00:00",
@@ -607,6 +1224,192 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.426529+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C1-오개념판별",
+      "body": "다음 그림은 두 일차함수의 그래프 ㉠, ㉡을 나타낸 것이다. 두 일차함수의 식을 함께 묶어 연립방정식을 만들었다. 이 연립방정식에 대한 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 1,
+          "text": "지수: ㉠의 $x$절편을 나타내는 점의 좌표인 $(-2,0)$이 해이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 2,
+          "text": "서준: ㉡의 $x$절편을 나타내는 점의 좌표인 $(2,0)$이 해이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "하린: 두 그래프의 $y$절편이 같으므로 해가 무수히 많아."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "도윤: 두 그래프의 기울기의 부호가 다르므로 해가 없어."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "수아: 두 그래프의 $y$절편을 나타내는 점이 같으므로 그 점의 좌표 $(0,2)$가 해이야."
+        }
+      ],
+      "created_at": "2026-11-12T06:13:00.113819+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "두 그래프는 $(0,2)$에서 만난다. 따라서 이 점의 좌표가 연립방정식의 해이다. 두 그래프의 $y$절편이 같은 이 그림에서는 $y$절편을 나타내는 점이 두 그래프의 교점이기도 하다.\n①과 ②는 한 그래프의 $x$절편을 나타내는 점을 해로 잘못 생각한 것이다. 그 점들은 각각 다른 그래프 위에는 있지 않다. ③은 $y$절편이 같다는 것만으로 두 그래프가 일치한다고 잘못 생각한 것이다. ④는 기울기의 부호가 다르다는 것만으로 해가 없다고 잘못 생각한 것이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 2.0,
+            "label": "㉠",
+            "m": 1.0,
+            "type": "linear"
+          },
+          {
+            "b": 2.0,
+            "label": "㉡",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -3.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:12:59.841746+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 그래프의 절편과 기울기를 이용한 학생들의 주장을 비교하여 옳은 말을 고르게 한다. 공통인 y절편을 나타내는 점이 교점이 되는 상황도 판단해야 한다.",
+      "id": "5cab1b5e-867d-4f72-9f07-233dec389041",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:12:59.841608+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.479303+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C1-오개념판별",
+      "body": "다음 그림은 두 일차함수의 그래프를 나타낸 것이다. 두 그래프에 각각 알맞은 식을 연립하여 만든 연립방정식의 해를 순서쌍 $(x, y)$로 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 1,
+          "text": "$(-1, 0)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 2,
+          "text": "$(0, 1)$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(1, 2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 4,
+          "text": "$(3, 0)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(2, 1)$"
+        }
+      ],
+      "created_at": "2026-11-12T06:11:42.100583+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "연립방정식의 해는 두 그래프의 교점의 좌표이다. 그림에서 교점의 좌표는 $(1, 2)$이므로 정답은 ③이다. ①, ②, ④는 한 그래프의 $x$절편 또는 $y$절편을 두 그래프의 교점으로 잘못 생각한 것이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 1.0,
+            "label": "가",
+            "m": 1.0,
+            "type": "linear"
+          },
+          {
+            "b": 3.0,
+            "label": "나",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 5.0,
+        "x_min": -3.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -2.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:11:42.047119+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "0f9fcf4a-2ea4-4d67-8f28-03f6e5fbe5d2",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:11:42.046828+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T11:55:02.631476+00:00",
@@ -652,7 +1455,7 @@
       ],
       "created_at": "2026-11-11T11:43:33.369749+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.801658+00:00",
       "explanation": "두 그래프가 만나는 점은 두 식을 모두 만족하므로, 그 점의 좌표가 연립방정식의 해이다. 따라서 정답은 ②이다. 첫째 그래프의 $y$절편은 $2$이지만, 점 $(0, 2)$는 둘째 그래프 위에 있지 않다. ①은 한 그래프의 $y$절편을 두 그래프의 교점으로 잘못 생각한 것이다. 두 그래프는 한 점에서 만나므로 해는 하나이다.",
       "figure": null,
       "generated_at": "2026-11-11T11:43:33.207215+00:00",
@@ -665,7 +1468,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:43:33.207100+00:00",
@@ -719,7 +1522,7 @@
       ],
       "created_at": "2026-11-11T11:43:52.044301+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.835262+00:00",
       "explanation": "$x=1$, $y=0$은 첫 번째 식은 만족하지만, 두 번째 식은 만족하지 않는다. 연립방정식의 해는 두 식을 모두 만족해야 한다. ②처럼 한 그래프의 $x$절편을 나타내는 점을 두 그래프의 교점으로 잘못 생각하면 안 된다. 두 그래프의 교점은 $(2, 2)$이므로 해는 $x=2$, $y=2$이다.",
       "figure": null,
       "generated_at": "2026-11-11T11:43:51.894501+00:00",
@@ -732,10 +1535,103 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:43:51.894389+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.509889+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C1-오개념판별",
+      "body": "다음 그림은 두 일차함수의 그래프를 나타낸 것이다. 두 그래프에 각각 알맞은 식을 연립하여 연립방정식을 만들었다. 민수는 직선 ㄱ의 $x$절편에 해당하는 점의 좌표가 이 연립방정식의 해라고 하였다. 연립방정식의 해에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M1",
+          "no": 1,
+          "text": "$(3, 0)$은 직선 ㄱ 위의 점이므로 연립방정식의 해이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$(3, 0)$은 직선 ㄴ 위의 점이 아니므로 연립방정식의 해가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(0, 1)$은 두 그래프 위의 점이므로 연립방정식의 해이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(1, 2)$는 두 그래프의 교점의 좌표이지만 연립방정식의 해가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(2, 1)$은 두 그래프의 교점의 좌표이므로 연립방정식의 해이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:12:05.674172+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "직선 ㄱ의 $x$절편에 해당하는 점은 $(3, 0)$이다. 이 점은 직선 ㄴ 위에 없으므로 연립방정식의 해가 아니다. 연립방정식의 해는 두 그래프의 교점의 좌표인 $(1, 2)$이다. 1번은 한 그래프 위의 점이면 연립방정식의 해가 된다고 잘못 생각한 것이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 3.0,
+            "label": "ㄱ",
+            "m": -1.0,
+            "type": "linear"
+          },
+          {
+            "b": 1.0,
+            "label": "ㄴ",
+            "m": 1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 5.0,
+        "x_min": -3.0,
+        "y_label": "y",
+        "y_max": 6.0,
+        "y_min": -3.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:12:05.622824+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "e7650e99-4c81-4826-8772-eb466c76fcee",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:12:05.622455+00:00",
           "issues": [],
           "number": 1
         }
@@ -786,7 +1682,7 @@
       ],
       "created_at": "2026-11-11T12:44:24.16719+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:15:03.674533+00:00",
       "explanation": "두 그래프가 일치하므로 $a=2$, $b=1$이다. (가)의 두 그래프는 기울기가 같고 $y$절편이 달라 평행하므로 해가 없다. (나)의 두 그래프는 기울기가 다르므로 한 점에서 만나고, 해가 하나이다.\n\n기울기가 같다는 이유만으로 (가)의 해가 무수히 많다고 생각하면 안 된다. $y$절편도 같아야 두 그래프가 일치한다. 또 해가 없다는 것은 $x=0$, $y=0$이 해라는 뜻이 아니라, 두 식을 모두 만족하는 $x$, $y$가 없다는 뜻이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:44:24.113825+00:00",
@@ -799,12 +1695,118 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:44:24.113662+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.534431+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C2-성질적용",
+      "body": "다음 그림의 직선을 그래프로 하는 일차함수의 식을 $y=mx+n$이라 하자.\n\n첫 번째 연립방정식 $\\begin{cases}y=mx+n\\\\y=ax+1\\end{cases}$의 해가 무수히 많다. 이때 $a$의 값과 두 번째 연립방정식 $\\begin{cases}y=mx+n\\\\y=ax+3\\end{cases}$의 해의 개수를 차례로 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$1$, 없음"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$2$, 한 개"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$2$, 없음"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M2",
+          "no": 4,
+          "text": "$2$, 무수히 많음"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$3$, 없음"
+        }
+      ],
+      "created_at": "2026-11-12T06:16:39.98649+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 직선은 $(0, 1)$과 $(1, 3)$을 지나므로 $m=2$, $n=1$이다. 첫 번째 연립방정식의 해가 무수히 많으려면 두 그래프가 일치해야 하므로 $a=2$이다.\n\n두 번째 연립방정식의 두 그래프는 기울기가 $2$로 같고 $y$절편은 각각 $1$, $3$으로 다르다. 따라서 두 그래프는 평행하므로 해가 없다. 기울기만 같다고 해서 두 그래프가 일치하는 것은 아니다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 1.0,
+            "label": null,
+            "m": 2.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "A",
+            "x": 0.0,
+            "y": 1.0
+          },
+          {
+            "label": "B",
+            "x": 1.0,
+            "y": 3.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 3.0,
+        "x_min": -3.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -4.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:16:39.919603+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "첫 번째 연립방정식의 해가 무수히 많다는 결과에서 거꾸로 $a$의 값을 찾는다. 그 값을 두 번째 연립방정식에 적용해 해의 개수도 판단한다.",
+      "id": "d51a5072-7bff-42c2-b23c-e72559ed2b50",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:16:11.541009+00:00",
+          "issues": [
+            "각 보기에서 계숫값과 해의 개수를 모두 제시하므로 그 관계를 바로 확인하여 풀 수 있다. 결과로부터 계수를 거꾸로 찾는 application-a 조건이 실제로 요구되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:16:39.919279+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 1
@@ -877,6 +1879,122 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T06:19:29.557454+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C2-성질적용",
+      "body": "다음 그림의 두 직선 $l$, $m$은 각각 일차함수의 그래프이다. 보기의 식을 직선 $l$의 식과 묶으면 해가 무수히 많고, 직선 $m$의 식과 묶으면 해가 하나인 연립방정식이 된다. 이때 보기의 식으로 알맞은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M2",
+          "no": 1,
+          "text": "$y=2x+2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=-x+2$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=2x-1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=-2x-1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M2",
+          "no": 5,
+          "text": "$y=2x-2$"
+        }
+      ],
+      "created_at": "2026-11-12T06:17:43.428669+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 직선 $l$의 식은 $y=2x-1$, 직선 $m$의 식은 $y=-x+2$이다. 직선 $l$의 식과 묶었을 때 해가 무수히 많으려면 보기의 식은 $y=2x-1$이어야 한다. 이 식을 직선 $m$의 식과 묶으면 두 그래프의 기울기가 다르므로 해가 하나이다. 따라서 정답은 ③이다.\n①과 ⑤는 직선 $l$과 기울기는 같지만 $y$절편이 다르다. 기울기가 같다는 것만으로 두 그래프가 일치한다고 생각하지 않도록 주의한다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": -1.0,
+            "label": "l",
+            "m": 2.0,
+            "type": "linear"
+          },
+          {
+            "b": 2.0,
+            "label": "m",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": null,
+            "x": 0.0,
+            "y": -1.0
+          },
+          {
+            "label": null,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "label": null,
+            "x": 1.0,
+            "y": 1.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 3.0,
+        "x_min": -3.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -5.0,
+        "y_tick_step": null
+      },
+      "generated_at": "2026-11-12T06:17:43.257892+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "두 연립방정식의 해의 개수가 주어졌을 때, 그림에서 두 직선의 식을 읽고 알맞은 식을 거꾸로 찾게 한다.",
+      "id": "a4195430-9be6-46f2-8e8a-8c8527b7801c",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:17:06.238016+00:00",
+          "issues": [
+            "보기 ②: M2에서 나오는 보기가 아니다. M2대로라면 직선 ㄴ과 기울기가 같은 ①과 ② 모두 해가 무수히 많다고 판단하여 제외한다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:17:43.257823+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:22:02.609881+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-18-C2-성질적용",
@@ -920,7 +2038,7 @@
       ],
       "created_at": "2026-11-11T12:44:42.092965+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:15:03.739322+00:00",
       "explanation": "해가 없으려면 두 그래프가 평행해야 한다. 따라서 기울기가 같아야 하므로 $a=-2$이다. 이때 두 식은 $y=-2x+3$, $y=-2x-2$이다. 기울기는 같지만 $y$절편이 다르므로 두 그래프는 평행하고 해가 없다. $a\\ne-2$이면 기울기가 달라 두 그래프는 한 점에서 만난다.\n\n⑤를 고른 학생은 기울기가 같으면 $y$절편을 살피지 않고 두 그래프가 일치한다고 생각했을 수 있다. 기울기가 같더라도 $y$절편이 다르면 두 그래프는 평행하다.",
       "figure": null,
       "generated_at": "2026-11-11T12:44:41.880491+00:00",
@@ -933,7 +2051,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:44:41.880348+00:00",
@@ -942,6 +2060,99 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.584363+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C2-성질적용",
+      "body": "다음 그림은 두 일차함수의 그래프를 나타낸 것이다. 두 일차함수의 식을 한 쌍으로 하는 연립방정식에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M3",
+          "no": 1,
+          "text": "두 그래프는 원점에서 만나고, 해는 $x=0$, $y=0$이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 그래프는 원점이 아닌 한 점에서 만나고, 해는 하나이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 그래프는 평행하고, 해는 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M2",
+          "no": 4,
+          "text": "두 그래프는 일치하고, 해는 무수히 많다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 그래프는 평행하고, 해는 하나이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:15:25.240928+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그림에서 두 그래프의 기울기는 모두 $1$이고, $y$절편은 각각 $2$, $-1$이다. 따라서 두 그래프는 평행하고 만나지 않으므로 연립방정식의 해는 없다.\n① 해가 없다는 것은 해가 $x=0$, $y=0$이라는 뜻이 아니다. ④ 기울기가 같아도 $y$절편이 다르면 두 그래프는 일치하지 않는다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 2.0,
+            "label": "가",
+            "m": 1.0,
+            "type": "linear"
+          },
+          {
+            "b": -1.0,
+            "label": "나",
+            "m": 1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:15:25.197512+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "153fe607-8959-4312-89de-5e8aa80d3288",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:15:25.197238+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T11:55:02.689296+00:00",
@@ -987,7 +2198,7 @@
       ],
       "created_at": "2026-11-11T11:45:21.829488+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:15:03.801621+00:00",
       "explanation": "두 일차함수의 기울기는 모두 $2$이고, $y$절편은 각각 $1$, $-3$입니다. 따라서 두 그래프는 평행하고 연립방정식의 해는 없습니다. 기울기가 같더라도 $y$절편이 다르면 두 그래프는 일치하지 않습니다. 또 해가 없다는 것은 해가 $x=0$, $y=0$이라는 뜻이 아닙니다. $x=0$, $y=0$은 첫 번째 식도 만족하지 않습니다.",
       "figure": null,
       "generated_at": "2026-11-11T11:45:21.567467+00:00",
@@ -1000,7 +2211,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:45:21.567244+00:00",
@@ -1054,7 +2265,7 @@
       ],
       "created_at": "2026-11-11T11:45:38.947119+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:15:03.833246+00:00",
       "explanation": "해가 없으려면 두 그래프가 평행해야 한다. 두 그래프의 $y$절편은 각각 $-1$, $5$로 다르므로, 기울기가 같으면 평행하다. 따라서 $a=4$이다.\n\n⑤처럼 기울기가 같으면 두 그래프가 항상 일치한다고 생각해서는 안 된다. $y$절편도 같아야 두 그래프가 일치한다.",
       "figure": null,
       "generated_at": "2026-11-11T11:45:38.773721+00:00",
@@ -1067,10 +2278,97 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:45:38.773262+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.606873+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C2-성질적용",
+      "body": "다음 그림은 한 일차함수의 그래프를 나타낸 것이다. 이 일차함수의 식과 다음 보기의 식을 한 쌍으로 하는 연립방정식의 해가 무수히 많을 때, 보기의 식은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-18-M2",
+          "no": 1,
+          "text": "$y=-x-1$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$y=-x+2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$y=x+2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$y=2x-1$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$y=-2x+2$"
+        }
+      ],
+      "created_at": "2026-11-12T06:15:43.848319+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그림에서 그래프의 기울기는 $-1$, $y$절편은 $2$이다. 따라서 그래프를 나타내는 식은 $y=-x+2$이다. 해가 무수히 많으려면 두 그래프가 일치해야 하므로 정답은 ②이다. ①은 기울기는 같지만 $y$절편이 달라 두 그래프가 일치하지 않는다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 2.0,
+            "label": null,
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 5.0,
+        "x_min": -3.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -3.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:15:43.80769+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b869e60c-07a1-42bd-b87a-a4f01cab4431",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:15:43.807604+00:00",
           "issues": [],
           "number": 1
         }
@@ -1354,6 +2652,117 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T06:19:29.631343+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C2-이유설명",
+      "body": "다음 그림은 두 일차함수의 그래프 ㄱ, ㄴ을 나타낸 것이다.\n\n그림에서 각 그래프가 나타내는 식을 구하고, 두 식을 연립한 연립방정식의 해의 개수를 구하여라. 식을 이용하는 방법과 두 그래프의 위치 관계를 이용하는 방법이 같은 답을 주는 이유를 설명하여라.",
+      "choices": [],
+      "created_at": "2026-11-12T06:16:11.271351+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 ㄱ의 식은 $y=x+2$, ㄴ의 식은 $y=x-1$이다. 두 식을 동시에 만족하려면 $x+2=x-1$이어야 하는데, 이 식을 만족하는 $x$는 없다. 따라서 연립방정식의 해는 없다.\n\n두 그래프는 기울기가 같고 $y$절편이 다르므로 평행하여 만나지 않는다. 연립방정식의 해는 두 그래프가 만나는 점의 좌표이므로, 두 방법은 같은 답을 준다.\n\n기울기만 같다고 해서 두 그래프가 일치하는 것은 아니다. 또 해가 없다는 것은 해가 $(0, 0)$이라는 뜻이 아니다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 2.0,
+            "label": "ㄱ",
+            "m": 1.0,
+            "type": "linear"
+          },
+          {
+            "b": -1.0,
+            "label": "ㄴ",
+            "m": 1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": null,
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "label": null,
+            "x": 1.0,
+            "y": 3.0
+          },
+          {
+            "label": null,
+            "x": 0.0,
+            "y": -1.0
+          },
+          {
+            "label": null,
+            "x": 1.0,
+            "y": 0.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 6.0,
+        "y_min": -5.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:16:11.21961+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "식을 이용하는 방법과 두 그래프의 위치 관계를 이용하는 방법이 같은 답을 주는 이유를 비교하여 설명하게 한다.",
+      "id": "77c475d0-5d4a-40fa-8727-a5fb1215c163",
+      "model": "gpt-6.1-terra",
+      "model_answer": "ㄱ의 식은 $y=x+2$, ㄴ의 식은 $y=x-1$이다. 두 식을 동시에 만족하려면 $x+2=x-1$이어야 하지만, 이를 만족하는 $x$가 없으므로 해는 없다.\n\n두 그래프는 기울기가 같고 $y$절편이 다르므로 평행하여 만나지 않는다. 두 식을 동시에 만족하는 $(x, y)$는 두 그래프가 만나는 점의 좌표이므로, 두 방법 모두 해가 없다는 같은 답을 준다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "그림에서 ㄱ의 식을 $y=x+2$, ㄴ의 식을 $y=x-1$로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 식을 동시에 만족하는 $x$가 없음을 식으로 설명하고 해가 없다고 답한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-18-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "기울기는 같고 $y$절편은 다르므로 두 그래프가 평행하여 만나지 않는다고 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-18-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 식을 동시에 만족하는 $(x, y)$가 두 그래프가 만나는 점의 좌표임을 이용하여 두 방법의 답이 같은 이유를 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:16:11.219360+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:22:02.677219+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-18-C2-이유설명",
@@ -1361,7 +2770,7 @@
       "choices": [],
       "created_at": "2026-11-11T12:45:56.809286+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:15:03.809333+00:00",
       "explanation": "두 그래프는 기울기가 $-1$로 같지만 $y$절편이 각각 $2$, $-1$로 다릅니다. 따라서 두 그래프는 평행하고 만나지 않습니다. 두 식을 모두 만족하는 수의 쌍은 두 그래프의 만나는 점의 좌표이므로 연립방정식의 해는 없습니다.\n\n기울기가 같다는 것만으로 두 그래프가 일치한다고 생각하면 안 됩니다. $y$절편도 비교해야 합니다. 또 해가 없다는 것은 해가 $x=0$, $y=0$이라는 뜻이 아닙니다. 실제로 $x=0$, $y=0$은 첫째 식도 만족하지 않습니다.",
       "figure": null,
       "generated_at": "2026-11-11T12:45:56.745178+00:00",
@@ -1402,7 +2811,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:45:56.745100+00:00",
@@ -1413,6 +2822,89 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T06:19:29.656564+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C2-이유설명",
+      "body": "다음 그림은 일차함수 $y=-x+2$의 그래프 ㄱ과 일차함수의 그래프 ㄴ을 나타낸 것이다.\n\n민수는 “기울기가 같은 두 일차함수의 식을 연립하면 해가 무수히 많다.”라고 말한다. 그림의 두 그래프를 이용하여 민수의 말이 옳지 않음을 보여라.\n\n그래프 ㄴ을 나타내는 식을 쓰고, 이 식과 $y=-x+2$를 연립한 연립방정식의 해의 개수와 그 이유를 두 그래프의 위치 관계를 이용하여 설명하여라.",
+      "choices": [],
+      "created_at": "2026-11-12T06:16:36.079108+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 그래프 ㄴ은 두 점 $(-1, 0)$, $(0, -1)$을 지나므로 식은 $y=-x-1$이다. 두 일차함수의 기울기는 모두 $-1$이지만 $y$절편은 서로 다르다. 따라서 두 그래프는 평행하고 만나지 않으므로 연립방정식의 해는 없다. 기울기가 같다는 것만으로 두 그래프가 일치한다고 생각하면 안 된다. 또 해가 없다는 것은 해가 $x=0$, $y=0$이라는 뜻이 아니다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 2.0,
+            "label": "ㄱ",
+            "m": -1.0,
+            "type": "linear"
+          },
+          {
+            "b": -1.0,
+            "label": "ㄴ",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:16:35.999109+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "기울기가 같으면 해가 무수히 많다는 민수의 말이 옳지 않음을 그림의 두 일차함수를 예로 들어 설명하게 한다.",
+      "id": "018fcd7e-3f80-4796-8c03-611738eb64fe",
+      "model": "gpt-6.1-terra",
+      "model_answer": "그래프 ㄴ을 나타내는 식은 $y=-x-1$이다. 두 일차함수의 기울기는 모두 $-1$이지만 $y$절편은 각각 $2$, $-1$이므로 두 그래프는 평행하다. 따라서 두 그래프는 만나지 않고, 두 식을 연립한 연립방정식의 해는 없다. 이 예에서 기울기는 같지만 해가 무수히 많지 않으므로 민수의 말은 옳지 않다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "그래프 ㄴ을 나타내는 식을 $y=-x-1$이라고 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 그래프의 기울기는 같고 $y$절편은 다르므로 두 그래프가 평행하다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-18-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 그래프가 만나지 않으므로 연립방정식의 해가 없다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-18-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:16:35.998834+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:22:02.709415+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-18-C2-이유설명",
@@ -1420,7 +2912,7 @@
       "choices": [],
       "created_at": "2026-11-11T12:46:14.288184+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:15:03.84367+00:00",
       "explanation": "방법 1에서는 $2x+1=2x-2$를 만족하는 $x$가 없다. 어떤 $x$를 넣어도 두 식의 오른쪽 값은 $3$만큼 차이가 나기 때문이다. 방법 2에서는 두 그래프의 기울기는 같고 $y$절편은 다르므로 두 그래프가 평행하다. 따라서 두 그래프는 만나지 않는다. 연립방정식의 해는 두 식을 모두 만족하는 점의 좌표이므로 두 방법은 같은 결과를 낸다.\n\n기울기가 같다는 것만으로 두 그래프가 일치한다고 생각하면 안 된다. $y$절편도 비교해야 한다. 또 해가 없다는 것은 $x=0$, $y=0$이 해라는 뜻이 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T12:46:14.238587+00:00",
@@ -1460,7 +2952,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:46:14.238474+00:00",
@@ -1478,7 +2970,7 @@
       "choices": [],
       "created_at": "2026-11-11T12:45:19.787676+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:15:03.87858+00:00",
       "explanation": "두 그래프는 기울기가 같고 $y$절편이 다르므로 평행하여 만나지 않는다. 연립방정식의 해는 두 그래프의 교점의 좌표이므로 해가 없다. 기울기만 비교하여 두 그래프가 일치한다고 생각하면 안 된다. 또 해가 없다는 것은 $x=0$, $y=0$이 해라는 뜻이 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T12:45:19.656702+00:00",
@@ -1519,7 +3011,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:45:19.656584+00:00",
@@ -1530,6 +3022,165 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T06:19:29.683708+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C2-이유설명",
+      "body": "다음 그림은 두 일차함수의 그래프 $A$, $B$를 나타낸 것이다. 각 그래프의 식을 구하고, 두 식을 묶은 연립방정식의 해의 개수를 쓰시오. 그 이유를 두 그래프의 위치 관계를 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:15:29.154597+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그림에서 $A$의 식은 $y=x+2$, $B$의 식은 $y=x-2$이다. 두 그래프는 기울기가 같고 $y$절편이 다르므로 평행하다. 따라서 만나는 점이 없어 연립방정식의 해도 없다. 기울기가 같더라도 $y$절편이 다르면 두 그래프는 일치하지 않는다. 또 해가 없다는 것은 해가 $(0, 0)$이라는 뜻이 아니라 두 식을 동시에 만족하는 $(x, y)$가 없다는 뜻이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 2.0,
+            "label": "A",
+            "m": 1.0,
+            "type": "linear"
+          },
+          {
+            "b": -2.0,
+            "label": "B",
+            "m": 1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -5.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:15:29.009373+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a3825f7e-dddd-41e4-8792-f09245c66e3e",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$A$의 식은 $y=x+2$, $B$의 식은 $y=x-2$이다. 두 그래프는 기울기가 같고 $y$절편이 다르므로 평행하다. 만나는 점이 없으므로 연립방정식의 해는 없다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$A$와 $B$의 식을 각각 $y=x+2$, $y=x-2$로 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "두 그래프의 기울기가 같고 $y$절편이 달라 평행하다고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-18-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 그래프가 만나지 않으므로 연립방정식의 해가 없다고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-18-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:15:29.009058+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.711564+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-18-C2-이유설명",
+      "body": "그림의 두 직선에 적힌 식을 묶어 연립방정식을 만들었다. 이 연립방정식의 해의 개수를 쓰고, 두 그래프의 위치 관계를 이용하여 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:15:49.619618+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 그래프는 기울기가 모두 $-1$이고 $y$절편이 서로 다르므로 평행하다. 따라서 두 그래프는 만나지 않고, 연립방정식의 해도 없다. 기울기가 같더라도 $y$절편이 다르면 두 그래프는 일치하지 않는다. 또 해가 없다는 것은 $x=0$, $y=0$이 해라는 뜻이 아니다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 2.0,
+            "label": "y=-x+2",
+            "m": -1.0,
+            "type": "linear"
+          },
+          {
+            "b": -1.0,
+            "label": "y=-x-1",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": null
+      },
+      "generated_at": "2026-11-12T06:15:49.571808+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1dbbd260-934f-4e70-b61d-00221249ba6b",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 그래프는 평행하여 만나지 않는다. 연립방정식의 해는 두 그래프의 교점의 좌표이므로 해는 없다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 그래프가 평행하여 만나지 않는다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-18-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "연립방정식의 해가 두 그래프의 교점의 좌표임을 이용하여 해가 없다고 설명했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-18-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:15:49.571593+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T13:22:02.783067+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-18-C2-이유설명",
@@ -1537,7 +3188,7 @@
       "choices": [],
       "created_at": "2026-11-11T12:45:38.345015+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:15:03.910578+00:00",
       "explanation": "두 그래프의 기울기는 모두 $2$이지만 $y$절편은 각각 $1$, $4$이다. 따라서 두 그래프는 평행하여 만나지 않는다. 연립방정식의 해는 두 그래프의 교점의 좌표이므로 해가 없다.\n\n기울기가 같다는 이유만으로 두 그래프가 일치한다고 생각하면 $y$절편이 서로 다르다는 점을 놓친 것이다. 또 해가 없다는 것은 $x=0$, $y=0$이 해라는 뜻이 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T12:45:38.294543+00:00",
@@ -1578,7 +3229,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:45:38.294432+00:00",

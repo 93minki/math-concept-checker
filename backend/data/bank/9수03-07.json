@@ -32,7 +32,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:22:36.8902+00:00",
       "variant": 1
     },
     {
@@ -67,7 +67,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:22:36.956873+00:00",
       "variant": 1
     },
     {
@@ -104,7 +104,77 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:22:37.123313+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-12T05:52:39.543267+00:00",
+          "issues": [
+            "각뿔대임을 명시한 일반적인 오각뿔대에서 면의 수를 확인하는 문제로, 정의의 조건을 하나하나 따져 판단해야 하는 경계 사례가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:53:00.604897+00:00",
+          "issues": [
+            "일반적인 오각뿔대의 두 이름을 정의에 따라 바로 확인하는 문제로, 정의의 조건을 하나하나 따져야 하는 경계 사례가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T05:53:22.690074+00:00",
+          "issues": [
+            "잘라 내기 전의 면 수와 비교하거나 정의의 경계 사례를 따질 필요 없이, 각뿔대의 면을 세고 이름을 확인하면 바로 풀리는 일반 문제이다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T05:53:22.822716+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T07:22:37.034208+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "attempts": [
+        {
+          "at": "2026-11-12T06:58:52.235295+00:00",
+          "issues": [
+            "삼각뿔을 밑면에 평행하게 잘라 얻은 각뿔대는 정의의 전형적인 사례이다. 면을 세어 이름을 붙이는 것만으로 풀리므로 definition-a의 경계 사례에 해당하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:59:17.909144+00:00",
+          "issues": [
+            "제시된 도형은 삼각뿔대의 전형적인 사례이며, 면의 수와 이름을 바로 확인하면 답할 수 있다. 정의의 조건을 하나하나 따져 판단해야 하는 경계 사례가 아니므로 definition-a를 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:59:43.652889+00:00",
+          "issues": [
+            "사각뿔대와 다른 입체도형의 면의 수를 세는 일반적인 문제로, 정의의 조건을 하나하나 따져야 하는 경계 사례가 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:59:43.82825+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T07:22:37.086977+00:00",
       "variant": 1
     },
     {
@@ -174,7 +244,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T05:54:08.790853+00:00",
       "variant": 2
     },
     {
@@ -209,11 +279,213 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T05:54:08.870164+00:00",
       "variant": 2
     }
   ],
   "questions": [
+    {
+      "approved_at": "2026-11-12T07:42:20.459666+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "body": "그림의 입체도형에서 두 면 $ABC$, $DEF$는 서로 평행하고 크기와 모양이 같은 삼각형이다. 나머지 세 면은 직사각형이다.\n\n다음 중 두 입체도형의 면의 수가 같고, 그중 하나만 각뿔대인 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "그림의 입체도형과 삼각뿔"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "그림의 입체도형과 사각뿔"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "그림의 입체도형과 삼각뿔대"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "그림의 입체도형과 사각뿔대"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-07-M2",
+          "no": 5,
+          "text": "삼각뿔과 삼각뿔대"
+        }
+      ],
+      "created_at": "2026-11-12T07:22:37.038956+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림의 입체도형 $ABCDEF$는 삼각기둥으로, 면이 $5$개이고 각뿔대가 아니다. 사각뿔도 면이 $5$개이지만 각뿔대가 아니다. 삼각뿔대는 삼각뿔을 밑면에 평행한 평면으로 잘라 만든 것으로, 면이 $5$개이다. 따라서 정답은 ③이다.\n\n삼각뿔은 면이 $4$개이고 사각뿔대는 면이 $6$개이다. ⑤를 골랐다면 삼각뿔대의 면을 삼각뿔과 같이 $4$개로 세지 않았는지 살펴보자. 삼각뿔대에는 잘라서 생긴 면이 하나 더 있다.",
+      "figure": {
+        "base_sides": 3,
+        "depth": null,
+        "height": 3.0,
+        "kind": "solid",
+        "labels": [],
+        "radius": 2.0,
+        "shape": "prism",
+        "show_axis": false,
+        "top_radius": null,
+        "vertex_names": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "width": null
+      },
+      "generated_at": "2026-11-12T07:22:36.749833+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "면의 수가 같은 삼각기둥, 사각뿔, 삼각뿔대를 비교한다. 면의 수가 같은지와 각뿔대가 하나만 있는지를 각각 따져야 한다.",
+      "id": "7bcac5cc-b2c5-4849-bd82-c4f3ddac5bc1",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T07:21:43.447378+00:00",
+          "issues": [
+            "ㄷ이 각뿔대가 아니므로 ④, ⑤를 제외하고, ㄹ의 면이 6개임을 세면 ②, ③도 제외된다. ㄱ과 ㄴ을 확인하지 않고 전형적인 각뿔대 하나의 면만 세어 정답을 고를 수 있어, 보기마다 두 조건을 따지게 하려는 측정 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:22:11.250858+00:00",
+          "issues": [
+            "ㄱ이 두 조건을 만족함을 알면 답은 ① 또는 ⑤로 좁혀진다. 이어서 ㄹ의 면이 6개임만 확인하면 정답이 정해져 ㄴ과 ㄷ의 면 수와 각뿔대 여부를 따질 필요가 없다. 따라서 의도한 보기별 정의 조건 확인과 경계 사례 비교가 실제로 요구되지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T07:22:36.749206+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:27.451776+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-07-C1-정의이해",
+      "body": "그림의 입체도형은 두 밑면이 각각 $ABCDE$, $FGHIJ$인 각뿔대이다. 이 입체도형과 육각뿔에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-07-M2",
+          "no": 1,
+          "text": "그림의 입체도형은 육면체이므로 육각뿔과 면의 수가 다르다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "두 입체도형은 모양이 다르지만 모두 칠면체이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "그림의 입체도형은 칠각뿔대이고, 육각뿔은 칠면체이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 입체도형은 면의 수가 같으므로 모두 각뿔대이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "그림의 입체도형은 오각뿔대이므로 오면체이다."
+        }
+      ],
+      "created_at": "2026-11-12T05:54:08.6998+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림의 입체도형은 밑면이 오각형인 오각뿔대이다. 두 밑면과 다섯 옆면이 있으므로 면은 모두 $7$개이다. 육각뿔도 한 밑면과 여섯 옆면이 있어 면이 $7$개이다. 따라서 두 입체도형은 모양은 다르지만 모두 칠면체이다.\n①은 각뿔대의 밑면을 하나만 세어 면의 수를 같은 밑면을 가진 각뿔의 면의 수와 같게 생각한 것이다.",
+      "figure": {
+        "base_sides": 5,
+        "depth": null,
+        "height": 2.5,
+        "kind": "solid",
+        "labels": [],
+        "radius": 2.0,
+        "shape": "frustum",
+        "show_axis": false,
+        "top_radius": 1.0,
+        "vertex_names": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ],
+        "width": null
+      },
+      "generated_at": "2026-11-12T05:54:08.236148+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "밑면의 모양으로 붙이는 각뿔대의 이름과 전체 면의 수로 붙이는 이름을 구별해야 한다. 모양이 다른 두 입체도형도 같은 이름으로 부를 수 있음을 판단하는 경계 사례이다.",
+      "id": "bd7afb3c-dcca-453d-927d-8a06cd8f8a71",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:53:43.253807+00:00",
+          "issues": [
+            "오각뿔대의 이름과 면의 수를 바로 확인하는 일반적인 문제로, 정의의 조건을 하나하나 따져야 하는 경계 사례를 다루지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:54:08.235236+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
     {
       "approved_at": "2026-11-11T09:46:02.836549+00:00",
       "approved_by": "master",

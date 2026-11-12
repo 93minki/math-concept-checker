@@ -238,6 +238,112 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T06:51:49.184126+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-정의이해",
+      "body": "다음 그림은 좌표평면 위의 다섯 점을 나타낸 것이다. 원점에서 오른쪽이나 왼쪽으로 움직이지 않고 위쪽으로 가면 만나는 점을 $P$라고 하자. $P$의 좌표에서 두 수의 순서를 바꾸면 어느 점의 좌표가 되는가?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$B$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 3,
+          "text": "$C$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$D$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$E$"
+        }
+      ],
+      "created_at": "2026-11-12T06:35:21.074927+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$P$는 $C$이고, 그 좌표는 $(0,2)$이다. 두 수의 순서를 바꾸면 $(2,0)$이므로 $D$의 좌표가 된다. $(0,2)$와 $(2,0)$을 같은 점의 좌표라고 생각하면 $C$를 고를 수 있지만, 두 순서쌍은 서로 다른 점을 나타낸다.",
+      "figure": {
+        "graphs": [],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "A",
+            "x": -3.0,
+            "y": 2.0
+          },
+          {
+            "label": "B",
+            "x": 2.0,
+            "y": -3.0
+          },
+          {
+            "label": "C",
+            "x": 0.0,
+            "y": 2.0
+          },
+          {
+            "label": "D",
+            "x": 2.0,
+            "y": 0.0
+          },
+          {
+            "label": "E",
+            "x": 0.0,
+            "y": -2.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": null
+      },
+      "generated_at": "2026-11-12T06:35:20.902481+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "좌표축 위의 점을 다루므로 좌표의 어느 자리에 0이 오는지 따져야 한다. 두 수의 순서를 바꾸어 얻는 점이 처음 점과 다르다는 것도 판단해야 한다.",
+      "id": "5b97ddc1-82f0-479d-8cc1-d3296129f651",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:35:20.902150+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T08:44:23.853795+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-05-C1-정의이해",
@@ -281,7 +387,7 @@
       ],
       "created_at": "2026-11-11T08:21:08.029713+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.182132+00:00",
       "explanation": "점 $P$는 왼쪽으로 $2$, 위로 $\\frac{1}{2}$만큼 움직인 곳에 있다. 따라서 오른쪽으로 움직인 정도는 $-2$, 위쪽으로 움직인 정도는 $\\frac{1}{2}$이다. 가는 오른쪽을 먼저 적으므로 $\\left(-2,\\frac{1}{2}\\right)$이고, 나는 위쪽을 먼저 적으므로 $\\left(\\frac{1}{2},-2\\right)$이다. 따라서 정답은 3번이다.\n\n1번처럼 두 순서쌍을 같게 적으면 두 수를 적는 순서가 달라졌다는 점을 놓친 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T08:21:05.945761+00:00",
@@ -294,7 +400,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:21:05.945556+00:00",
@@ -303,6 +409,112 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.219192+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-정의이해",
+      "body": "다음 그림은 좌표평면 위의 다섯 점을 나타낸 것이다. 좌표의 첫 번째 수는 음수이고, 첫 번째 수가 두 번째 수보다 큰 점은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 2,
+          "text": "$B$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$C$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$D$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$E$"
+        }
+      ],
+      "created_at": "2026-11-12T06:35:47.203849+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$A$의 좌표는 $(-1,-3)$이다. 첫 번째 수 $-1$은 음수이고 $-3$보다 크다. $B$의 좌표는 $(-3,-1)$이므로 첫 번째 수가 두 번째 수보다 작다. 두 수의 순서를 바꾸어 읽으면 $B$를 고를 수 있다. $C$도 첫 번째 수가 두 번째 수보다 작다. $D$의 첫 번째 수는 양수이고, $E$의 첫 번째 수는 $0$이므로 음수가 아니다. 따라서 정답은 ①이다.",
+      "figure": {
+        "graphs": [],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "A",
+            "x": -1.0,
+            "y": -3.0
+          },
+          {
+            "label": "B",
+            "x": -3.0,
+            "y": -1.0
+          },
+          {
+            "label": "C",
+            "x": -1.0,
+            "y": 2.0
+          },
+          {
+            "label": "D",
+            "x": 2.0,
+            "y": -1.0
+          },
+          {
+            "label": "E",
+            "x": 0.0,
+            "y": -2.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": null
+      },
+      "generated_at": "2026-11-12T06:35:47.149963+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "두 수가 모두 음수인 점에서는 순서와 크기를 함께 따져야 한다. 또 좌표의 첫 번째 수가 $0$인 점을 넣어 $0$이 음수가 아님을 구별하게 했다.",
+      "id": "5d7a72c7-49e3-4c3d-9487-4174279762d3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:35:47.149554+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T08:44:23.89365+00:00",
@@ -348,7 +560,7 @@
       ],
       "created_at": "2026-11-11T08:21:30.456472+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.218357+00:00",
       "explanation": "좌표의 첫 번째 수는 가로 위치를, 두 번째 수는 세로 위치를 나타낸다. $T$의 좌표는 두 수가 같으므로 순서를 바꾸어도 $(-2,-2)$이다.\n\n$P$와 $Q$, $R$와 $S$는 각각 두 수의 순서를 바꾸어 적었지만 서로 다른 점이다. 순서쌍의 순서를 무시하면 같은 점이라고 잘못 생각할 수 있다. $R$은 원점이 아니고, $S$는 좌표축 위에 있으므로 제1사분면에 속하지 않는다.",
       "figure": null,
       "generated_at": "2026-11-11T08:21:28.363414+00:00",
@@ -361,7 +573,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:21:28.363259+00:00",
@@ -370,6 +582,92 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.255161+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-정의이해",
+      "body": "다음 좌표평면 위의 점 $P$의 좌표는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$(3, 2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$(-3, 2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 3,
+          "text": "$(2, -3)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(-3, -2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(3, -2)$"
+        }
+      ],
+      "created_at": "2026-11-12T06:34:43.446835+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점 $P$는 원점에서 왼쪽으로 $3$, 위로 $2$만큼 간 곳에 있습니다. 좌표는 가로 방향의 수를 먼저, 세로 방향의 수를 나중에 쓰므로 $(-3, 2)$입니다. $(2, -3)$은 두 수의 순서를 바꾸어 쓴 것입니다.",
+      "figure": {
+        "graphs": [],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "P",
+            "x": -3.0,
+            "y": 2.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:34:43.145359+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "41fd8773-f837-4732-b35f-8b76412fe907",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:34:43.145099+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T08:44:23.949961+00:00",
@@ -415,7 +713,7 @@
       ],
       "created_at": "2026-11-11T08:20:22.135479+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.256883+00:00",
       "explanation": "좌표의 첫 번째 수는 원점에서 왼쪽이나 오른쪽으로 얼마나 떨어져 있는지, 두 번째 수는 위나 아래로 얼마나 떨어져 있는지를 나타낸다. 따라서 점 $P$는 원점에서 왼쪽으로 $2$, 위로 $3$만큼 떨어져 있다. ②는 순서쌍의 순서를 바꾸어 $(-2, 3)$과 $(3, -2)$를 같은 점으로 잘못 생각한 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T08:20:20.027726+00:00",
@@ -428,7 +726,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:20:20.027513+00:00",
@@ -482,7 +780,7 @@
       ],
       "created_at": "2026-11-11T08:20:41.175919+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.295425+00:00",
       "explanation": "두 좌표에서 첫째 수도 다르고 둘째 수도 다르므로 $A$와 $B$는 서로 다른 점이다. ①처럼 같은 수가 쓰였다는 이유로 두 점이 같다고 생각하면, 순서쌍에서 수가 쓰인 순서를 놓친 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T08:20:39.044147+00:00",
@@ -495,10 +793,116 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:20:39.043933+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.280321+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C1-정의이해",
+      "body": "다음 좌표평면 위의 다섯 점 중 좌표를 나타내는 순서쌍의 첫째 수가 음수이고 둘째 수가 양수인 점은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 1,
+          "text": "$A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$B$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$C$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$D$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$E$"
+        }
+      ],
+      "created_at": "2026-11-12T06:35:03.046761+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "좌표는 가로 방향의 위치를 첫째 수로, 세로 방향의 위치를 둘째 수로 나타냅니다. 점 $D$의 좌표는 $(-2, 3)$이므로 첫째 수는 음수이고 둘째 수는 양수입니다. 점 $A$의 좌표는 $(3, -2)$입니다. 두 수의 순서를 바꾸면 다른 점의 좌표가 됩니다.",
+      "figure": {
+        "graphs": [],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "A",
+            "x": 3.0,
+            "y": -2.0
+          },
+          {
+            "label": "B",
+            "x": -3.0,
+            "y": -2.0
+          },
+          {
+            "label": "C",
+            "x": 2.0,
+            "y": 3.0
+          },
+          {
+            "label": "D",
+            "x": -2.0,
+            "y": 3.0
+          },
+          {
+            "label": "E",
+            "x": 1.0,
+            "y": 2.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": null
+      },
+      "generated_at": "2026-11-12T06:35:03.005293+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "be79e543-9ecc-4f21-88c5-6b36cedf8aef",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:35:03.005099+00:00",
           "issues": [],
           "number": 1
         }
@@ -549,7 +953,7 @@
       ],
       "created_at": "2026-11-11T08:24:17.824413+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.055312+00:00",
       "explanation": "점 $P$의 좌표는 $(-2,3)$이고, 점 $Q$의 좌표는 $(1,-1)$이다. 따라서 점 $P$에서 오른쪽으로 $3$, 아래로 $4$만큼 가야 한다.\n\n②를 고른 학생은 점 $Q$의 좌표 $(1,-1)$의 순서를 바꾸어 $(-1,1)$로 생각했을 수 있다. 순서쌍에서는 수의 순서가 중요하다.",
       "figure": null,
       "generated_at": "2026-11-11T08:24:15.678547+00:00",
@@ -562,10 +966,116 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:24:15.678287+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.30565+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C2-성질적용",
+      "body": "다음 그림은 좌표평면 위의 다섯 점을 나타낸 것이다. 이 중 한 점 $P$의 좌표에서 첫째 수와 둘째 수를 서로 바꾸었더니, 첫째 수는 점 $A$의 첫째 좌표와 같고 둘째 수는 점 $B$의 둘째 좌표와 같았다. 점 $P$는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$A$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$B$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$C$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$D$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 5,
+          "text": "$E$"
+        }
+      ],
+      "created_at": "2026-11-12T06:35:21.558762+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 점 $A$의 첫째 좌표는 $3$, 점 $B$의 둘째 좌표는 $2$이다. 따라서 순서를 바꾼 좌표는 $(3,\\,2)$이므로, 점 $P$의 좌표는 $(2,\\,3)$이다. 이 점은 $D$이다. 점 $E$를 골랐다면 $(3,\\,2)$와 $(2,\\,3)$을 같은 점의 좌표로 생각했을 수 있다. 순서쌍은 수의 순서가 바뀌면 나타내는 점이 달라질 수 있다.",
+      "figure": {
+        "graphs": [],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "A",
+            "x": 3.0,
+            "y": -2.0
+          },
+          {
+            "label": "B",
+            "x": -2.0,
+            "y": 2.0
+          },
+          {
+            "label": "C",
+            "x": -3.0,
+            "y": 3.0
+          },
+          {
+            "label": "D",
+            "x": 2.0,
+            "y": 3.0
+          },
+          {
+            "label": "E",
+            "x": 3.0,
+            "y": 2.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:35:21.520938+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "순서를 바꾼 뒤의 좌표에 관한 정보를 주고, 바꾸기 전의 점을 거꾸로 찾게 한다.",
+      "id": "ee55df61-0b31-4919-ac34-6553b725c202",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:35:21.520773+00:00",
           "issues": [],
           "number": 1
         }
@@ -616,7 +1126,7 @@
       ],
       "created_at": "2026-11-11T08:24:38.029677+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.112394+00:00",
       "explanation": "점 $Q$의 좌표는 $(3,-\\frac{1}{2})$이다. 점 $R$은 점 $Q$의 바로 위 또는 바로 아래에 있으므로 첫째 좌표가 $3$이다. 또 점 $P$와 높이가 같으므로 둘째 좌표가 $1$이다. 따라서 점 $R$의 좌표는 $(3,1)$이다.\n\n$(1,3)$을 골랐다면 첫째 좌표와 둘째 좌표의 순서를 바꾸어 생각한 것이다. 순서쌍에서 순서가 바뀌면 다른 점을 나타낸다.",
       "figure": null,
       "generated_at": "2026-11-11T08:24:35.948203+00:00",
@@ -629,7 +1139,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:24:35.947394+00:00",
@@ -638,6 +1148,199 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.332341+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C2-성질적용",
+      "body": "다음 그림은 좌표평면 위의 두 점 $A$, $B$를 나타낸 것이다. 점 $P$에서 오른쪽으로 $1$, 위로 $1$만큼 움직인 점을 $Q$라 하자.\n\n$A$와 $B$가 서로 마주 보는 꼭짓점이고 각 변이 좌표축에 나란한 직사각형을 그렸다. $Q$가 이 직사각형의 꼭짓점이면서 제1사분면에 있을 때, $P$의 좌표는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$(1, 2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 2,
+          "text": "$(2, 1)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(2, 3)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(3, 2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(-5, -2)$"
+        }
+      ],
+      "created_at": "2026-11-12T06:36:53.023966+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 $A$의 좌표는 $(-4, 3)$, $B$의 좌표는 $(2, -1)$이다. 나머지 두 꼭짓점의 좌표는 $(2, 3)$과 $(-4, -1)$이다. 이 중 제1사분면에 있는 점은 $(2, 3)$이므로 $Q$의 좌표는 $(2, 3)$이다.\n\n$P$에서 오른쪽으로 $1$, 위로 $1$만큼 움직이면 $Q$가 되므로 $P$의 좌표는 $(1, 2)$이다.\n\n②는 $Q$의 좌표 $(2, 3)$을 순서를 바꾸어 $(3, 2)$로 잘못 읽고 구한 답이다. 좌표는 두 수의 순서가 중요하다.",
+      "figure": {
+        "graphs": [],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "A",
+            "x": -4.0,
+            "y": 3.0
+          },
+          {
+            "label": "B",
+            "x": 2.0,
+            "y": -1.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -5.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -3.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:36:52.772792+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "직사각형의 꼭짓점이 되는 점 Q의 위치를 먼저 찾고, 움직이기 전 점 P의 좌표를 거꾸로 구한다.",
+      "id": "6ae4012b-8b2f-44d6-91c2-a0ff6bd6f24d",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:35:55.659950+00:00",
+          "issues": [
+            "application-a의 역방향 추론이 없다. 주어진 두 꼭짓점과 변의 방향에서 나머지 꼭짓점을 직접 구하는 문제이다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:36:24.026920+00:00",
+          "issues": [
+            "application-a: 두 꼭짓점과 직사각형의 조건으로 나머지 꼭짓점을 구하는 순방향 문제이며, 주어진 결과에서 조건을 거꾸로 찾는 문제가 아니다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:36:52.772121+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.358483+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C2-성질적용",
+      "body": "다음 그림은 좌표평면 위의 점 $A$를 나타낸 것이다. 점 $A$의 좌표는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 1,
+          "text": "$(-2,3)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$(-3,2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$(3,-2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$(3,2)$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$(-3,-2)$"
+        }
+      ],
+      "created_at": "2026-11-12T06:34:44.846946+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점 $A$는 원점에서 오른쪽으로 $3$, 아래로 $2$만큼 간 곳에 있으므로 좌표는 $(3,-2)$이다. $(-2,3)$은 두 수의 순서를 바꾸어 생각한 것이다. 순서쌍에서는 수의 순서가 중요하다.",
+      "figure": {
+        "graphs": [],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "A",
+            "x": 3.0,
+            "y": -2.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:34:44.801654+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ee6d997c-6100-4945-974a-934cd2aea6d8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:34:44.801452+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T08:44:24.12236+00:00",
@@ -683,7 +1386,7 @@
       ],
       "created_at": "2026-11-11T08:23:25.23448+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.170312+00:00",
       "explanation": "오른쪽으로 $3$만큼 간 위치를 먼저 쓰고, 아래로 $2$만큼 간 위치를 나중에 쓰므로 좌표는 $(3,-2)$이다. ②는 두 수의 순서를 바꾸어 쓴 것으로, $(3,-2)$와는 다른 점을 나타낸다.",
       "figure": null,
       "generated_at": "2026-11-11T08:23:23.130212+00:00",
@@ -696,7 +1399,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:23:23.129925+00:00",
@@ -705,6 +1408,112 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.385258+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-05-C2-성질적용",
+      "body": "다음 그림은 좌표평면 위의 다섯 점을 나타낸 것이다. 점 $A$의 좌표에서 첫째 수와 둘째 수를 서로 바꾸어 얻은 순서쌍을 좌표로 하는 점은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수02-05-M1",
+          "no": 1,
+          "text": "점 $A$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "점 $B$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "점 $C$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "점 $D$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "점 $E$"
+        }
+      ],
+      "created_at": "2026-11-12T06:35:00.914151+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점 $A$의 좌표는 $(3, -2)$이다. 두 수의 순서를 바꾸면 $(-2, 3)$이므로 점 $B$이다. 순서쌍에서 두 수의 순서를 바꾸어도 같은 점이라고 생각하면 점 $A$를 고를 수 있다.",
+      "figure": {
+        "graphs": [],
+        "kind": "coordinate_plane",
+        "points": [
+          {
+            "label": "A",
+            "x": 3.0,
+            "y": -2.0
+          },
+          {
+            "label": "B",
+            "x": -2.0,
+            "y": 3.0
+          },
+          {
+            "label": "C",
+            "x": 2.0,
+            "y": -3.0
+          },
+          {
+            "label": "D",
+            "x": -3.0,
+            "y": 2.0
+          },
+          {
+            "label": "E",
+            "x": 3.0,
+            "y": 2.0
+          }
+        ],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": null,
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": null,
+        "y_max": 4.0,
+        "y_min": -4.0,
+        "y_tick_step": null
+      },
+      "generated_at": "2026-11-12T06:35:00.87166+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "29903052-a11d-4ab0-b8ed-cf4e507a6f40",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:35:00.871307+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T08:44:24.151432+00:00",
@@ -750,7 +1559,7 @@
       ],
       "created_at": "2026-11-11T08:23:58.531756+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.209741+00:00",
       "explanation": "첫 번째 수 $-1$은 원점에서 왼쪽으로 $1$, 두 번째 수 $4$는 위로 $4$만큼 간다는 뜻이다. 따라서 정답은 ③이다. ④는 두 수의 순서를 바꾸어 $(4, -1)$로 생각한 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T08:23:56.320913+00:00",
@@ -763,7 +1572,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T08:23:34.944545+00:00",

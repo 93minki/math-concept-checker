@@ -87,6 +87,41 @@
       "prompt_version": "v7",
       "resolved_at": "2026-11-11T11:44:17.7466+00:00",
       "variant": 2
+    },
+    {
+      "assessment_item_id": "9수02-11-C3-이유설명",
+      "attempts": [
+        {
+          "at": "2026-11-12T06:36:41.382079+00:00",
+          "issues": [
+            "문제는 음수로 나누는 경우만 설명하게 하므로, 구체적인 수를 이용해 음수를 곱할 때 부등호의 방향이 바뀌는 이유를 설명하는 측정 의도와 다르다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:37:10.824998+00:00",
+          "issues": [
+            "문제는 두 방법의 결과가 같은 이유만 설명하게 할 뿐, 음수를 곱했을 때 크기 순서가 바뀌는 이유는 묻지 않는다. 그런데 채점 기준 4는 이를 필수로 요구하므로 측정 의도와 발문·채점 기준이 일치하지 않는다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:37:42.081125+00:00",
+          "issues": [
+            "두 방법이 같은 결과를 내는 이유만 설명하도록 요구하므로, 음수를 곱하거나 나눌 때 부등호의 방향이 바뀌는 이유를 설명하지 않고도 답할 수 있다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:37:42.171275+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T06:56:05.22454+00:00",
+      "variant": 2
     }
   ],
   "questions": [
@@ -1196,7 +1231,7 @@
       "choices": [],
       "created_at": "2026-11-11T11:30:50.398406+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.083747+00:00",
       "explanation": "$2$와 $5$에 각각 $-3$을 곱하면 $-6$과 $-15$입니다. $-6$은 $-15$보다 $9$만큼 크므로 $-6>-15$가 참입니다. 따라서 부등호를 그대로 둔 $-6<-15$는 거짓입니다. 음수를 곱할 때도 부등호를 그대로 둔다고 생각하면 두 수의 크기를 잘못 비교하게 됩니다.",
       "figure": null,
       "generated_at": "2026-11-11T11:30:50.22589+00:00",
@@ -1235,10 +1270,85 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:30:50.225850+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.409965+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-11-C3-이유설명",
+      "body": "다음 그림의 두 점 $A$, $B$가 나타내는 수를 차례로 왼쪽과 오른쪽에 놓아 참인 부등식을 만들었다.\n\n민수는 “참인 부등식의 양변에 같은 음수를 곱할 때 부등호를 그대로 써도 언제나 참이다.”라고 말하였다.\n\n만든 부등식의 양변에 $-3$을 곱하여 민수의 말이 틀림을 설명하시오. 곱한 두 수의 크기를 비교하는 까닭도 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:36:11.397964+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 $A$는 $2$, $B$는 $4$를 나타내므로 $2<4$이다. 각각에 $-3$을 곱하면 $-6$과 $-12$이다. 두 음수 중 $0$에 더 가까운 $-6$이 더 크므로 $-6>-12$이다. 따라서 부등호를 그대로 쓴 $-6<-12$는 참이 아니다. 음수를 곱한 뒤에도 부등호를 그대로 두면 두 수의 크기를 잘못 나타낼 수 있다.",
+      "figure": {
+        "kind": "number_line",
+        "label_step": 1.0,
+        "max": 5.0,
+        "min": 0.0,
+        "points": [
+          {
+            "filled": null,
+            "label": "A",
+            "x": 2.0
+          },
+          {
+            "filled": null,
+            "label": "B",
+            "x": 4.0
+          }
+        ],
+        "rays": [],
+        "segments": [],
+        "tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:36:11.238266+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "그림에서 읽은 수로 만든 부등식의 양변에 음수를 곱하여 민수의 말이 틀림을 보이고, 곱한 두 수의 크기를 비교하는 까닭을 설명하게 한다.",
+      "id": "cd6103da-ca36-4bcc-a5ed-75692e25af47",
+      "model": "gpt-6.1-terra",
+      "model_answer": "그림에서 만든 부등식은 $2<4$이다. 양변에 $-3$을 곱하면 각각 $-6$, $-12$가 된다. $-6$이 $-12$보다 $0$에 더 가까우므로 $-6>-12$이다. 따라서 부등호를 그대로 쓴 $-6<-12$는 참이 아니므로 민수의 말은 틀렸다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "그림을 읽어 $2<4$를 쓰고, 양변에 $-3$을 곱한 결과를 각각 $-6$, $-12$로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$-6$이 $-12$보다 큰 까닭을 $0$으로부터의 거리를 이용하여 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$-6<-12$가 참이 아님을 밝혀 민수의 말이 틀린 까닭을 설명한다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-11-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:36:11.237743+00:00",
           "issues": [],
           "number": 1
         }
@@ -1253,7 +1363,7 @@
       "choices": [],
       "created_at": "2026-11-11T11:31:16.365928+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.147953+00:00",
       "explanation": "방법 가에서는 $-2$에 $-2$를 곱하면 $4$, $1$에 $-2$를 곱하면 $-2$입니다. $4$가 $-2$보다 크므로 $4>-2$입니다. 부등호를 그대로 두어 $4<-2$라고 생각하면 두 수의 크기를 잘못 비교한 것입니다.\n\n방법 나에서는 먼저 $2$를 더해 $0<3$을 얻습니다. $-2$를 곱하면 $0$과 $-6$이 되고, $0$이 더 크므로 $0>-6$입니다. 처음에 더한 $2$가 $-2$를 곱하면서 $-4$가 되었으므로, 이를 없애려고 $4$를 더하면 방법 가와 같은 결과가 나옵니다. 같은 수를 더하거나 빼는 단계에서는 부등호의 방향이 바뀌지 않습니다.",
       "figure": null,
       "generated_at": "2026-11-11T11:31:16.182533+00:00",
@@ -1293,7 +1403,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:31:16.182421+00:00",
@@ -1304,6 +1414,177 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T07:03:57.012971+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-11-C3-이유설명",
+      "body": "다음 그림의 두 점 $P$, $Q$가 나타내는 수를 차례로 왼쪽과 오른쪽에 놓아 참인 부등식을 만들었다.\n\n지우는 이 부등식의 양변에 $-2$를 곱하고, 서연이는 양변을 $-\\frac{1}{2}$로 나누었다.\n\n두 사람이 각각 얻는 참인 부등식을 쓰고, 같은 부등식이 나오는 까닭을 설명하시오. 이때 계산한 두 수의 부호와 크기를 비교한 까닭도 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:56:05.239566+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 $P$는 $-3$, $Q$는 $1$을 나타내므로 처음 부등식은 $-3<1$이다. 양변에 $-2$를 곱하면 각각 $6$과 $-2$가 된다. $6$은 양수이고 $-2$는 음수이므로 $6>-2$이다. 음수를 곱했는데도 처음의 부등호를 그대로 쓰면 $6<-2$가 되어 참이 아니다.\n\n$-\\frac{1}{2}$로 나누는 것은 $-2$를 곱하는 것과 같으므로 서연이도 같은 두 수와 부등식을 얻는다.",
+      "figure": {
+        "kind": "number_line",
+        "label_step": 1.0,
+        "max": 3.0,
+        "min": -4.0,
+        "points": [
+          {
+            "filled": null,
+            "label": "P",
+            "x": -3.0
+          },
+          {
+            "filled": null,
+            "label": "Q",
+            "x": 1.0
+          }
+        ],
+        "rays": [],
+        "segments": [],
+        "tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:56:04.79621+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "양변에 음수를 곱하는 방법과 음수로 나누는 방법을 비교하여 같은 부등식이 나오는 까닭을 설명하게 한다.",
+      "id": "4d34e50f-5ea4-4278-a829-17fd27a72f35",
+      "model": "gpt-6.1-terra",
+      "model_answer": "처음 부등식은 $-3<1$이다. 지우는 $6>-2$를 얻고, 서연이도 $6>-2$를 얻는다. 음수인 $-3$에 $-2$를 곱하면 양수 $6$이고, 양수인 $1$에 $-2$를 곱하면 음수 $-2$이다. 양수는 음수보다 크므로 $6>-2$이다. $-\\frac{1}{2}$로 나누는 것은 $-2$를 곱하는 것과 같아서 두 사람의 결과가 같다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "그림을 읽어 처음 부등식을 $-3<1$로 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "두 사람이 각각 얻는 부등식을 모두 $6>-2$로 쓴다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-11-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "음수와 양수에 각각 $-2$를 곱한 결과의 부호를 밝히고, 양수가 음수보다 커서 $6>-2$임을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-11-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$-\\frac{1}{2}$로 나누는 것과 $-2$를 곱하는 것이 같아서 두 결과가 같다고 설명한다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:55:39.846679+00:00",
+          "issues": [
+            "처음 부등식을 ‘참인 부등식’으로만 요구하여 -6≤-2도 가능하다. 이에 두 방법 모두 3≥1을 얻는 답도 맞지만, 채점 기준은 3>1만 정답으로 요구한다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:56:04.796027+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:49.433609+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-11-C3-이유설명",
+      "body": "다음 그림에서 두 점 $A$, $B$가 나타내는 수를 각각 읽으시오. 두 수의 크기를 부등호로 나타내고, 그 부등식의 양변에 $-2$를 곱한 뒤에도 참이 되도록 부등호를 써서 나타내시오. 그림을 이용하여 그 부등호를 쓴 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:35:25.732537+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그림에서 $A$는 $1$, $B$는 $3$을 나타내므로 $1<3$이다. 각각에 $-2$를 곱하면 $-2$와 $-6$이 된다. 그림에서 $-2$는 $-6$보다 오른쪽에 있으므로 $-2>-6$이다. 부등호를 그대로 쓰면 $-2<-6$이 되어 참이 아니다.",
+      "figure": {
+        "kind": "number_line",
+        "label_step": 1.0,
+        "max": 4.0,
+        "min": -7.0,
+        "points": [
+          {
+            "filled": null,
+            "label": "A",
+            "x": 1.0
+          },
+          {
+            "filled": null,
+            "label": "B",
+            "x": 3.0
+          }
+        ],
+        "rays": [],
+        "segments": [],
+        "tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:35:25.682904+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2cda649c-7ebd-498d-a12c-685f19ebb1b9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$A$는 $1$, $B$는 $3$이므로 $1<3$이다. 각각에 $-2$를 곱하면 $-2$와 $-6$이고, 그림에서 $-2$가 $-6$보다 오른쪽에 있다. 따라서 $-2>-6$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "두 점이 나타내는 수의 크기를 $1<3$으로 나타내고, 각각에 $-2$를 곱한 후의 부등식을 $-2>-6$으로 나타낸다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-11-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "곱한 결과인 $-2$가 그림에서 $-6$보다 오른쪽에 있으므로 더 크다는 이유를 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-11-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:34:56.361960+00:00",
+          "issues": [
+            "참인 부등식으로 1≤3을 쓰고, 곱한 뒤 -2≥-6이라고 설명해도 맞지만 채점 기준은 1<3과 -2>-6만 요구한다.",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:35:25.682476+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T11:38:31.90274+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-11-C3-이유설명",
@@ -1311,7 +1592,7 @@
       "choices": [],
       "created_at": "2026-11-11T11:30:10.554652+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.182927+00:00",
       "explanation": "$3$과 $7$에 각각 $-2$를 곱하면 $-6$과 $-14$이다. $-6$은 $-14$보다 크므로 $-6>-14$이다. 따라서 부등호의 방향은 처음과 달라진다. 방향을 그대로 두면 $-6<-14$가 되는데, 이것은 참이 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T11:30:10.413019+00:00",
@@ -1341,7 +1622,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:30:10.412922+00:00",
@@ -1352,6 +1633,71 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T06:51:49.455176+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-11-C3-이유설명",
+      "body": "다음 그림의 점 P가 나타내는 수를 $\\square$에 넣어 $0<\\square$를 완성하였다. 이 부등식의 양변에 $-3$을 곱하여 참인 부등식을 쓰시오. 또 그림에서 읽은 수를 이용하여 그 부등식을 쓴 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:35:44.285918+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그림에서 점 P가 나타내는 수는 $4$이다. $0<4$의 양변에 $-3$을 곱하면 각각 $0$, $-12$가 된다. $-12$는 $0$보다 작으므로 $0>-12$이다. 곱한 뒤에도 부등호를 그대로 쓰면 $0<-12$가 되어 참이 아니다.",
+      "figure": {
+        "kind": "number_line",
+        "label_step": 1.0,
+        "max": 5.0,
+        "min": -5.0,
+        "points": [
+          {
+            "filled": null,
+            "label": "P",
+            "x": 4.0
+          }
+        ],
+        "rays": [],
+        "segments": [],
+        "tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:35:44.220463+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "21a207a6-1fc3-413f-a3f2-bb0dd1b86cd9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "점 P가 나타내는 수는 $4$이다. $0<4$의 양변에 $-3$을 곱하면 각각 $0$과 $-12$가 된다. $-12$는 $0$보다 작으므로 참인 부등식은 $0>-12$이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "양변에 $-3$을 곱한 결과를 참인 부등식 $0>-12$로 나타낸다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-11-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "$-12$가 $0$보다 작다는 것을 이용하여 부등호를 쓴 이유를 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-11-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:35:44.220395+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T11:38:31.933507+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-11-C3-이유설명",
@@ -1359,7 +1705,7 @@
       "choices": [],
       "created_at": "2026-11-11T11:30:28.702306+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:34:29.211463+00:00",
       "explanation": "$-4$에 $-3$을 곱하면 $12$이고, $-1$에 $-3$을 곱하면 $3$이다. $12$가 $3$보다 크므로 민지가 쓴 식은 참이 아니다. 처음에는 $-4<-1$이지만 곱한 후에는 $12>3$이므로 부등호의 방향이 바뀐다. 음수를 곱할 때도 부등호의 방향을 그대로 두면 두 수의 크기에 맞지 않는 식을 쓸 수 있다.",
       "figure": null,
       "generated_at": "2026-11-11T11:30:28.464884+00:00",
@@ -1391,7 +1737,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T11:30:28.464807+00:00",

@@ -370,6 +370,41 @@
       "assessment_item_id": "9수02-15-C2-오개념판별",
       "attempts": [
         {
+          "at": "2026-11-12T06:12:33.640495+00:00",
+          "issues": [
+            "민수의 말에 대한 판단을 묻지만 보기에는 그래프만 있어 그 판단을 답할 수 없다. 민수의 말을 판단하지 않고 평행이동한 그래프만 고르면 되므로 일반적인 성질 확인 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:13:01.531105+00:00",
+          "issues": [
+            "민수의 주장에 대한 판단을 답할 필요 없이 평행이동한 그래프만 직접 고르면 되므로, 일반적인 그래프 선택 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:13:27.425844+00:00",
+          "issues": [
+            "민수의 말에 대한 판단을 요구하지만 답으로는 그래프만 고르므로, 민수의 주장을 판단하지 않고도 풀 수 있다. 일반적인 그래프 선택 문제와 구별되지 않아 고난이도 조건을 충족하지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:13:27.524364+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T06:56:37.494196+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수02-15-C2-오개념판별",
+      "attempts": [
+        {
           "at": "2026-11-11T11:52:26.290242+00:00",
           "issues": [
             "generate: RateLimitError"
@@ -1242,7 +1277,7 @@
       ],
       "created_at": "2026-11-11T12:46:11.923557+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:06:27.601239+00:00",
       "explanation": "평행이동한 그래프의 식은 $y=ax-3$이다. 이 그래프가 점 $(2, 1)$을 지나므로 $1=2a-3$이다. 따라서 $a=2$이다.\n②를 골랐다면 $-3$만큼 이동할 때 $3$을 빼지 않고 더했는지 확인해 보자.",
       "figure": null,
       "generated_at": "2026-11-11T12:46:11.858735+00:00",
@@ -1255,7 +1290,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:46:11.858630+00:00",
@@ -1264,6 +1299,340 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:28.993025+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-성질적용",
+      "body": "$y=-2x$의 그래프를 $y$축의 방향으로 평행이동하여 점 $(1,-4)$를 지나는 그래프를 만들었다. 이 그래프를 고르시오.",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": -2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-15-M4",
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 0.0,
+                "label": null,
+                "m": -2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": -2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T06:07:32.196917+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$y=-2x$의 그래프에서 $x=1$일 때 $y=-2$이다. 점 $(1,-4)$를 지나려면 $y$축의 방향으로 $-2$만큼 평행이동해야 한다. 따라서 식은 $y=-2x-2$이고, 정답은 ④이다.\n①은 $y=-2x+2$의 그래프이다. 평행이동한 양의 부호를 반대로 생각하면 ①을 고를 수 있다. ②는 기울기가 $-1$이고, ③은 평행이동하기 전의 그래프이다. ⑤는 기울기가 $2$이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:07:32.065312+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "평행이동한 그래프가 지나는 점을 주고, 그 점을 지나기 위한 평행이동의 양과 그래프를 거꾸로 찾게 한다.",
+      "id": "1cdffbc8-e1d3-403e-b21f-4f74c227bdd8",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:07:32.065123+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.017671+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-성질적용",
+      "body": "일차함수 $y=ax$의 그래프가 점 $(2,2)$를 지난다. 이 그래프를 $y$축의 방향으로 $-2$만큼 평행이동한 그래프를 고르시오.",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": 1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-15-M4",
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": 1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 0.0,
+                "label": null,
+                "m": 1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T06:07:57.809605+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 $(2,2)$를 $y=ax$에 대입하면 $2=2a$이므로 $a=1$이다. 따라서 원래 그래프는 $y=x$의 그래프이다. 이를 $y$축의 방향으로 $-2$만큼 평행이동하면 $y=x-2$의 그래프가 되므로 정답은 ③이다.\n①은 $y=-x-2$의 그래프이고, ④는 $y=2x-2$의 그래프이므로 각각 기울기가 다르다. ⑤는 원래 그래프인 $y=x$의 그래프이다. ②는 $y=x+2$의 그래프이다. $-2$만큼 이동할 때 $2$를 빼야 하는데, ②는 부호를 반대로 생각하여 $2$를 더한 것이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:07:57.746661+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "원래 그래프가 지나는 점을 이용해 주어지지 않은 $a$의 값을 거꾸로 구한 뒤 평행이동을 적용한다.",
+      "id": "64f54b07-128f-45a7-9e22-931f62ab6817",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:07:57.746537+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T13:22:01.609855+00:00",
@@ -1309,7 +1678,7 @@
       ],
       "created_at": "2026-11-11T12:46:27.022023+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:06:27.652235+00:00",
       "explanation": "$y=-x+3$에 $x=-1$을 대입하면 $y=4$이다. 따라서 옮긴 그래프는 점 $(-1, 4)$를 지난다. $y=2x$에서 $x=-1$일 때 $y=-2$이므로, $y$축의 방향으로 $6$만큼 평행이동해야 한다. $-6$을 고른 것은 평행이동한 방향을 반대로 생각한 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:46:26.889502+00:00",
@@ -1322,7 +1691,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:46:26.889360+00:00",
@@ -1376,7 +1745,7 @@
       ],
       "created_at": "2026-11-11T12:45:43.474137+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:06:27.684423+00:00",
       "explanation": "아래쪽으로 $3$만큼 평행이동하면 각 점의 $y$좌표가 $3$만큼 작아진다. 따라서 식은 $y=2x-3$이다. $y=2x+3$은 이동 방향의 부호를 반대로 생각한 것으로, 위쪽으로 $3$만큼 평행이동한 식이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:45:43.426783+00:00",
@@ -1389,10 +1758,177 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:45:43.426682+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.052092+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-성질적용",
+      "body": "$y=-x$의 그래프를 $y$축의 방향으로 $+2$만큼 평행이동한 그래프는?",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": "y",
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": 1.0
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-15-M4",
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": -2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": "y",
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": 1.0
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": "y",
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": 1.0
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 0.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": "y",
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": 1.0
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": 1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": "y",
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": 1.0
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T06:06:49.318476+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$y$축의 방향으로 $+2$만큼 평행이동하면 그래프 위의 각 점의 $y$좌표가 2씩 커진다. 따라서 구하는 그래프의 식은 $y=-x+2$이고, 정답은 ③이다.\n①은 $(0,-2)$를 지난다. 이동하는 방향의 부호를 거꾸로 생각하면 이 그래프를 고를 수 있다.\n②는 $(0,2)$와 $(1,0)$을 지나므로 정답 그래프와 기울기가 다르다.\n③은 $(0,2)$와 $(1,1)$을 지난다.\n④는 원래 그래프인 $y=-x$의 그래프이다.\n⑤는 $(0,2)$와 $(1,3)$을 지나므로 정답 그래프와 기울기가 다르다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:06:49.217572+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c9f03a41-480d-4704-8800-8d7cfb7b2288",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:06:49.217119+00:00",
           "issues": [],
           "number": 1
         }
@@ -1443,7 +1979,7 @@
       ],
       "created_at": "2026-11-11T12:45:56.703408+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:06:27.716602+00:00",
       "explanation": "위쪽으로 $5$만큼 평행이동하면 $x$좌표는 그대로이고 $y$좌표는 $5$만큼 커진다. 따라서 구하는 점은 $(3, -3+5)$, 즉 $(3, 2)$이다. ①은 위쪽으로 옮겨야 하는데 아래쪽으로 옮긴 경우이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:45:56.642872+00:00",
@@ -1456,7 +1992,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:45:56.642755+00:00",
@@ -1465,6 +2001,350 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.084335+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-성질적용",
+      "body": "$y=3x$의 그래프를 $y$축의 방향으로 $-3$만큼 평행이동한 그래프는?",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 0.0,
+                "label": null,
+                "m": 3.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": "y",
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -3.0,
+                "label": null,
+                "m": 1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": "y",
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -3.0,
+                "label": null,
+                "m": 3.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": "y",
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 3.0,
+                "label": null,
+                "m": 3.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": "y",
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-15-M4",
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -3.0,
+                "label": null,
+                "m": -3.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": "x",
+            "x_max": 6.0,
+            "x_min": -6.0,
+            "y_label": "y",
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T06:07:10.772264+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$y$축의 방향으로 $-3$만큼 평행이동하면 각 점의 $y$좌표가 $3$만큼 작아진다. 따라서 구하는 그래프는 $y=3x-3$의 그래프인 ③이다.\n①은 원래 그래프이다. ②와 ⑤는 ③과 기울기가 다르다. ④는 $y=3x+3$의 그래프로, 이동하는 방향을 반대로 생각한 것이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:07:10.706822+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "795f1baf-b47a-429a-a537-279a258cff9e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:07:10.706182+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T07:03:57.05126+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-오개념판별",
+      "body": "유진은 $y=2x+1$의 그래프를 $y$축의 방향으로 $-3$만큼 평행이동하면 원점을 지난다고 말한다. 유진의 말이 옳은지 생각하고, 평행이동한 그래프를 고르시오.",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 1.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 4.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-15-M4",
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": -2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 0.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T06:56:37.585147+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그래프 위의 점 $(0, 1)$은 평행이동한 후 $(0, -2)$가 된다. 따라서 유진의 말은 옳지 않으며, 평행이동한 그래프의 식은 $y=2x-2$이다.\n①은 원래 그래프이다. ②는 $(0, 4)$를 지난다. 이는 $-3$만큼이 아니라 $3$만큼 옮긴 것이다. ③은 $(0, -2)$를 지나지만 그래프의 기울어진 방향이 원래 그래프와 다르다. ④는 $(0, -2)$를 지나고 원래 그래프와 기울어진 정도와 방향이 같으므로 정답이다. ⑤는 원점을 지난다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:56:37.388251+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "유진의 주장이 옳은지 판단하면서 평행이동한 그래프를 고르게 한다. 원점을 지난다는 유진의 주장을 그대로 따른 그림도 보기에 넣었다.",
+      "id": "14272b57-97c1-4e19-a56e-56cf1e414f96",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:56:09.680705+00:00",
+          "issues": [
+            "보기 ②는 M4대로 이동량의 부호를 바꾸면 얻는 그래프이지만, 정답 그래프의 y절편 5의 부호만 거꾸로 한 그래프가 아니므로 M4 보기의 지정 조건에 맞지 않는다.",
+            "지수의 말이 옳은지 답할 필요 없이 평행이동한 그래프만 고르면 되므로, 다른 학생의 주장에 대한 판단을 요구하는 고난도 조건을 충족하지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:56:37.387982+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T13:22:01.747633+00:00",
@@ -1510,7 +2390,7 @@
       ],
       "created_at": "2026-11-11T12:47:23.675634+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.712392+00:00",
       "explanation": "$y$축의 방향으로 $-3$만큼 평행이동하면 각 점의 $y$좌표에서 $3$을 빼야 합니다. 따라서 옮긴 그래프의 식은 $y=-2x-3$입니다. 예를 들어, 원래 그래프의 점 $(0,0)$은 $(0,-3)$으로 옮겨집니다.\n\n①을 골랐다면 아래로 $3$만큼 옮길 때 $3$을 빼지 않고 더한다고 잘못 생각한 것입니다.",
       "figure": null,
       "generated_at": "2026-11-11T12:47:23.622488+00:00",
@@ -1523,7 +2403,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:47:23.622348+00:00",
@@ -1577,7 +2457,7 @@
       ],
       "created_at": "2026-11-11T12:48:45.766397+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.787746+00:00",
       "explanation": "$y$축의 방향으로 $2$만큼 평행이동하면 각 점의 $y$좌표가 $2$만큼 커진다. 따라서 원래 그래프는 $y=3x$의 그래프이므로 정답은 ②이다.\n\n①은 위로 $2$만큼 옮길 때 식에서 $2$를 빼야 한다고 생각한 것이다. $y=3x+4$의 그래프를 위로 $2$만큼 옮기면 $y=3x+6$의 그래프가 된다.",
       "figure": null,
       "generated_at": "2026-11-11T12:48:45.690918+00:00",
@@ -1590,7 +2470,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:47:51.110083+00:00",
@@ -1612,6 +2492,189 @@
         },
         {
           "at": "2026-11-11T12:48:45.690809+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.106991+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-오개념판별",
+      "body": "민수는 $y=-x$의 그래프를 $y$축의 방향으로 $-2$만큼 평행이동한 그래프가 점 $(0, 2)$를 지난다고 말하였다. 민수의 생각이 옳은지 판단한 뒤, 실제로 평행이동한 그래프를 고르시오.",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-15-M4",
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 0.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": null
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -1.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": 1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 4.0,
+            "x_min": -4.0,
+            "y_label": null,
+            "y_max": 4.0,
+            "y_min": -4.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T06:14:58.512867+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$y=-x$의 그래프 위의 점 $(0, 0)$은 아래로 $2$만큼 옮겨져 $(0, -2)$가 된다. 따라서 민수의 말은 옳지 않고, 평행이동한 그래프는 $y=-x-2$이다.\n①은 $(0, 2)$를 지나는 그래프이다. 아래로 옮겨야 하는데 위로 옮겨 부호를 거꾸로 생각한 것이다.\n②는 옮기기 전의 그래프이다.\n③은 $(0, -2)$를 지나고 기울기가 바뀌지 않았으므로 정답이다.\n④는 아래로 $1$만큼 옮긴 그래프이다.\n⑤는 $(0, -2)$를 지나지만 기울기가 바뀐 그래프이다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:14:58.320926+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "평행이동한 그래프가 특정 점을 지난다는 민수의 주장이 옳은지 판단한 뒤 그래프를 고르게 한다.",
+      "id": "e7ee69e8-f30c-44f7-9a62-fff2c8cd9c3a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:13:56.572682+00:00",
+          "issues": [
+            "민지의 말에 대한 판단을 답에 표시하지 않아도 그래프만 고를 수 있으므로, 학생의 주장에 대한 판단을 평가하는 고난도 조건을 충족하지 못한다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:14:27.550823+00:00",
+          "issues": [
+            "보기 ③: M4대로 평행이동한 그래프를 y=-x-2로 생각하면 민지의 주장은 옳지 않다고 판단하므로, 문제의 지시에 따라 평행이동 전 그래프인 ①을 고른다. 따라서 ③에 M4를 연결한 것과 해설의 오개념 판별이 맞지 않아 의도한 오개념을 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:14:58.320428+00:00",
           "issues": [],
           "number": 3
         }
@@ -1662,7 +2725,7 @@
       ],
       "created_at": "2026-11-11T12:46:37.968106+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.845043+00:00",
       "explanation": "$y=3x$의 그래프 위의 점 $(0, 0)$은 평행이동하면 $(0, -2)$가 된다. 따라서 구하는 식은 $y=3x-2$이다. $y=3x+2$를 골랐다면 아래로 평행이동한 것을 위로 평행이동한 것으로 잘못 생각한 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:46:37.905949+00:00",
@@ -1675,7 +2738,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:46:37.905854+00:00",
@@ -1684,6 +2747,340 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.135084+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-오개념판별",
+      "body": "$y=-x$의 그래프를 $y$축의 방향으로 $2$만큼 평행이동한 그래프를 고르시오.",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 1.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 5.0,
+            "y_min": -5.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 5.0,
+            "y_min": -5.0,
+            "y_tick_step": null
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 5.0,
+            "y_min": -5.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-15-M4",
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": 1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 5.0,
+            "y_min": -5.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 2.0,
+                "label": null,
+                "m": -2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 5.0,
+            "y_min": -5.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T06:11:44.060967+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그래프를 $y$축의 방향으로 $2$만큼 평행이동하면 식은 $y=-x+2$가 됩니다. 따라서 $y$축과 $(0, 2)$에서 만나고 $(1, 1)$을 지나는 ②가 정답입니다.\n①은 $y$축과 $(0, 1)$에서 만납니다. ③은 $y$축과 $(0, -2)$에서 만나므로 이동하는 방향을 반대로 생각한 것입니다. ④는 $(0, 2)$와 $(1, 3)$을 지납니다. ⑤는 $(0, 2)$와 $(1, 0)$을 지납니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:11:44.001723+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "2409de27-7bb1-4bf9-b551-c48833a4a4bf",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:11:44.001544+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.178336+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-오개념판별",
+      "body": "$y=2x$의 그래프를 $y$축의 방향으로 $-3$만큼 평행이동한 그래프를 고르시오.",
+      "choices": [
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -2.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": 3.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": "9수02-15-M4",
+          "no": 2,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -3.0,
+                "label": null,
+                "m": 2.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -3.0,
+                "label": null,
+                "m": 1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": ""
+        },
+        {
+          "figure": {
+            "graphs": [
+              {
+                "b": -3.0,
+                "label": null,
+                "m": -1.0,
+                "type": "linear"
+              }
+            ],
+            "kind": "coordinate_plane",
+            "points": [],
+            "show_tick_labels": true,
+            "tick_step": 1.0,
+            "x_label": null,
+            "x_max": 5.0,
+            "x_min": -5.0,
+            "y_label": null,
+            "y_max": 6.0,
+            "y_min": -6.0,
+            "y_tick_step": null
+          },
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": ""
+        }
+      ],
+      "created_at": "2026-11-12T06:12:02.194318+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "$y=2x$의 그래프를 아래로 $3$만큼 옮기면 $y$축과 만나는 점이 $(0,-3)$이 되고, 그래프가 기울어진 정도는 그대로입니다. 따라서 정답은 ③입니다.\n①은 $y$축과 $(0,-2)$에서 만납니다. ②는 $y$축과 $(0,3)$에서 만납니다. ②를 고른 경우에는 아래로 옮겨야 하는데 위로 옮긴 것은 아닌지 확인해 보세요. ④와 ⑤는 $y$축과 $(0,-3)$에서 만나지만, 그래프가 기울어진 정도가 $y=2x$의 그래프와 다릅니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T06:12:02.074302+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "69432183-f74d-4ce6-a2cf-cd43023bc0cd",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:12:02.073963+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T13:22:01.87034+00:00",
@@ -1729,7 +3126,7 @@
       ],
       "created_at": "2026-11-11T12:46:50.215892+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.87693+00:00",
       "explanation": "같은 $x$의 값에 대하여 $y=-2x+4$의 $y$의 값은 $y=-2x$의 $y$의 값보다 $4$만큼 큽니다. 따라서 $y$축의 방향으로 $+4$만큼 평행이동한 것입니다. $-4$만큼 평행이동했다고 생각하면 이동하는 방향을 반대로 생각한 것입니다.",
       "figure": null,
       "generated_at": "2026-11-11T12:46:50.153362+00:00",
@@ -1742,7 +3139,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:46:50.153258+00:00",
@@ -1760,7 +3157,7 @@
       "choices": [],
       "created_at": "2026-11-11T12:50:16.467088+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.790065+00:00",
       "explanation": "같은 $x$의 값을 넣으면 두 식은 모두 그 값에 $-2$를 곱한다. 두 번째 식에서는 거기에 $3$을 더 빼므로, 두 번째 그래프의 점은 첫 번째 그래프의 점보다 항상 아래에 있다. 따라서 평행이동한 방향은 위가 아니라 아래이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:50:16.421458+00:00",
@@ -1806,7 +3203,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:49:48.393683+00:00",
@@ -1824,6 +3221,100 @@
       "variant": 1
     },
     {
+      "approved_at": "2026-11-12T06:19:29.202516+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-이유설명",
+      "body": "다음 그림은 세 일차함수의 그래프 $A$, $B$, $C$를 나타낸 것이다.\n\n(1) $B$, $C$ 중에서 $A$를 $y$축의 방향으로 평행이동한 그래프를 고르고, 이동한 방향과 거리를 쓰시오. 서로 다른 두 $x$의 값에서 $y$의 값을 비교하고, 두 그래프의 식을 이용하여 그 차이가 늘 같은 이유를 설명하시오.\n\n(2) 민수는 “두 그래프에서 같은 $x$에 대한 $y$의 값의 차이를 한 번만 구하면, 한 그래프를 $y$축의 방향으로 그 차이만큼 평행이동하여 다른 그래프와 겹치게 할 수 있다.”라고 말했다. $A$와 $C$를 이용하여 민수의 말이 틀린 이유를 구체적인 수로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:13:02.781911+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$A$와 $B$의 식은 각각 $y=-x$, $y=-x-2$이다. 같은 $x$에 대하여 $B$의 $y$의 값은 $A$의 $y$의 값보다 늘 $2$ 작다. 따라서 $A$를 아래로 $2$만큼 평행이동하면 $B$와 겹친다. 위로 $2$만큼 이동한다고 생각했다면, $B$의 $y$의 값이 더 작다는 점을 놓친 것이다.\n\n한 곳에서만 $y$의 값의 차이를 구해서는 두 그래프가 평행이동한 관계인지 알 수 없다. $A$와 $C$에서 $x=0$일 때 $C$의 $y$의 값은 $A$보다 $2$ 작지만, $x=1$일 때 두 $y$의 값은 같다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 0.0,
+            "label": "A",
+            "m": -1.0,
+            "type": "linear"
+          },
+          {
+            "b": -2.0,
+            "label": "B",
+            "m": -1.0,
+            "type": "linear"
+          },
+          {
+            "b": -2.0,
+            "label": "C",
+            "m": 1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -6.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:13:02.652626+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "(2)에서 $A$와 $C$의 $y$의 값의 차이가 달라지는 예를 들어 민수의 말이 틀렸음을 설명하게 한다.",
+      "id": "56353004-b164-4200-a340-9e00bccb75b4",
+      "model": "gpt-6.1-terra",
+      "model_answer": "(1) $B$이다. $A$를 $y$축의 방향으로 아래로 $2$만큼 평행이동하면 된다. $x=0$일 때 $A$의 $y$의 값은 $0$, $B$의 $y$의 값은 $-2$이다. $x=1$일 때는 각각 $-1$, $-3$이다. 두 그래프의 식은 각각 $y=-x$, $y=-x-2$이므로 같은 $x$에 대하여 $B$의 $y$의 값은 $A$보다 늘 $2$ 작다.\n\n(2) $x=0$일 때 $C$의 $y$의 값은 $A$보다 $2$ 작지만, $x=1$일 때는 두 $y$의 값이 모두 $-1$이다. 같은 $x$에 대한 $y$의 값의 차이가 달라지므로 $A$를 $y$축의 방향으로 평행이동하여 $C$와 겹치게 할 수 없다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "$B$를 고르고, $A$를 아래로 $2$만큼 평행이동한다고 썼다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-15-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "서로 다른 두 $x$의 값에서 $A$와 $B$의 $y$의 값을 각각 바르게 비교했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$A$와 $B$의 식을 이용하여 같은 $x$에 대한 $y$의 값의 차이가 늘 $2$인 이유를 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$A$와 $C$에서 같은 $x$에 대한 $y$의 값의 차이가 달라지는 두 예를 들고, 이를 이용하여 민수의 말이 틀린 이유를 설명했다.",
+          "no": 4,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:13:02.652378+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:22:01.935087+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-15-C2-이유설명",
@@ -1831,7 +3322,7 @@
       "choices": [],
       "created_at": "2026-11-11T12:51:16.885572+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.825662+00:00",
       "explanation": "표에서 같은 $x$에 대한 두 $y$의 값의 차는 모두 $2$이다. 다른 $x$의 값에 대해서도 $y=3x$의 값에 $2$를 더하면 $y=3x+2$의 값이 된다. 따라서 민지의 말은 옳지 않다. 그래프 위의 각 점에서 $x$좌표는 그대로이고 $y$좌표만 $2$ 커지므로, 그래프는 $y$축의 방향으로 위로 $2$만큼 평행이동한다. 아래로 이동한다고 생각하면 $y$좌표가 $2$ 작아진다고 잘못 생각한 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:51:16.837753+00:00",
@@ -1875,7 +3366,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:50:50.079471+00:00",
@@ -1894,6 +3385,182 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T06:19:29.228155+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-이유설명",
+      "body": "다음 그림은 두 일차함수의 그래프 $A$, $B$를 나타낸 것이다.\n\n$A$를 $y$축의 방향으로 평행이동하여 $B$와 겹치게 하려고 한다. 이동할 방향과 거리를 다음 두 방법으로 구하고, 두 방법이 같은 결과를 알려 주는 이유를 설명하시오.\n\n- 방법 1: 서로 다른 두 $x$의 값에서 $A$와 $B$의 $y$의 값을 각각 비교한다.\n- 방법 2: $A$와 $B$의 식을 각각 구하여 비교한다.\n\n이때 두 그래프에서 같은 $x$에 대한 $y$의 값의 차이가 $x$의 값에 관계없이 늘 같은 이유를 구체적인 수를 사용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:13:26.320115+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "그림에서 $A$와 $B$는 각각 $(0, 0)$과 $(0, -2)$를 지나고, $(2, -2)$와 $(2, -4)$를 지난다. 같은 $x$에서 $B$의 $y$의 값은 $A$의 $y$의 값보다 각각 $2$만큼 작다.\n\n두 그래프의 식은 각각 $y=-x$, $y=-x-2$이다. 어느 $x$의 값을 넣어도 $B$의 $y$의 값은 $A$의 $y$의 값에서 $2$를 뺀 값이다. 따라서 두 방법 모두 $A$를 아래쪽으로 $2$만큼 평행이동하면 $B$와 겹친다는 것을 알려 준다. 아래쪽이 아니라 위쪽으로 $2$만큼 이동하면 $y$의 값이 $2$만큼 커지므로 $B$와 겹치지 않는다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 0.0,
+            "label": "A",
+            "m": -1.0,
+            "type": "linear"
+          },
+          {
+            "b": -2.0,
+            "label": "B",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -6.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:13:26.13777+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "같은 $x$에서 두 그래프의 값을 비교하는 방법과 두 식을 비교하는 방법을 모두 사용하게 한다. 두 방법이 같은 이동 방향과 거리를 알려 주는 이유도 설명하게 한다.",
+      "id": "c9ad3281-789e-4114-b083-14068556c531",
+      "model": "gpt-6.1-terra",
+      "model_answer": "방법 1: $x=0$일 때 $A$의 $y$의 값은 $0$, $B$의 $y$의 값은 $-2$이다. $x=2$일 때는 각각 $-2$, $-4$이다. 두 값에서 모두 $B$의 $y$의 값이 $A$보다 $2$만큼 작다.\n\n방법 2: $A$의 식은 $y=-x$, $B$의 식은 $y=-x-2$이다. 어느 $x$의 값을 넣어도 두 식에서 $-x$의 값은 같고, $B$에서는 그 값에서 $2$를 뺀다. 따라서 같은 $x$에 대한 $y$의 값은 언제나 $B$가 $A$보다 $2$만큼 작다. 방법 1에서 살펴본 두 값도 이와 같으므로 두 방법의 결과가 같다.\n\n따라서 $A$를 $y$축의 방향으로 아래쪽으로 $2$만큼 평행이동하면 $B$와 겹친다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "서로 다른 두 $x$의 값에서 각 그래프의 $y$의 값을 읽고, 같은 $x$에서 $B$의 값이 $A$보다 각각 $2$만큼 작음을 나타냈다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$A$와 $B$의 식을 각각 $y=-x$, $y=-x-2$로 구했다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "어느 $x$의 값을 넣어도 두 식의 $-x$ 부분은 같고 $B$에서는 $2$를 더 빼므로, 방법 1의 비교와 방법 2의 식이 같은 차이를 알려 준다고 설명했다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "$A$를 아래쪽으로 $2$만큼 평행이동한다고 썼다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-15-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:13:26.137654+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.257875+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-이유설명",
+      "body": "다음 그림은 두 일차함수의 그래프 가, 나를 나타낸 것이다.\n\n같은 $x$의 값을 두 개 골라 두 그래프에서 각각의 $y$값을 비교하자. 이를 바탕으로 그래프 가를 $y$축의 방향으로 어떻게 평행이동하면 그래프 나와 겹치는지 이유를 설명하시오. 필요하면 두 그래프의 식을 이용해도 좋다.",
+      "choices": [],
+      "created_at": "2026-11-12T06:12:12.335682+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 그래프의 식은 각각 $y=-x$, $y=-x-2$이다. 같은 $x$에서 그래프 나의 $y$값은 그래프 가의 $y$값보다 항상 $2$ 작다. 따라서 그래프 가를 아래쪽으로 $2$만큼 평행이동하면 그래프 나와 겹친다. 위쪽으로 옮긴다고 생각했다면 $y$값이 작아지는 방향을 거꾸로 생각한 것이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 0.0,
+            "label": "가",
+            "m": -1.0,
+            "type": "linear"
+          },
+          {
+            "b": -2.0,
+            "label": "나",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -5.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:12:12.268143+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "1d88b9f5-f7b8-493b-b735-f5c3416f0423",
+      "model": "gpt-6.1-terra",
+      "model_answer": "$x=-1$일 때 가의 $y$값은 $1$, 나의 $y$값은 $-1$이다. $x=0$일 때 가의 $y$값은 $0$, 나의 $y$값은 $-2$이다. 두 경우 모두 나의 $y$값이 가의 $y$값보다 $2$ 작다. 두 그래프의 식은 각각 $y=-x$, $y=-x-2$이므로 같은 $x$에서 나의 $y$값은 항상 가의 $y$값보다 $2$ 작다. 따라서 가를 $y$축의 방향으로 아래쪽으로 $2$만큼 평행이동하면 나와 겹친다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "같은 $x$의 값 두 개에 대하여 두 그래프의 $y$값을 각각 바르게 비교한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "같은 $x$에서 나의 $y$값이 가의 $y$값보다 항상 $2$ 작음을 두 그래프의 식이나 모양을 이용하여 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "그래프 가를 $y$축의 방향으로 아래쪽으로 $2$만큼 평행이동한다고 쓴다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-15-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:11:53.019670+00:00",
+          "issues": [
+            "채점 기준 2는 문제에서 요구하지 않은 두 개의 x값 비교를 필수로 정했다. 한 x값에서의 차이와 두 그래프의 같은 기울기를 이용해 올바르게 설명한 답도 감점된다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:12:12.267986+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T13:22:01.976594+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수02-15-C2-이유설명",
@@ -1901,7 +3568,7 @@
       "choices": [],
       "created_at": "2026-11-11T12:49:02.677796+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.848236+00:00",
       "explanation": "같은 $x$의 값에서 $y=-2x-3$의 $y$의 값은 $y=-2x$의 $y$의 값보다 항상 $3$만큼 작다. 따라서 그래프를 $y$축의 방향으로 아래쪽으로 $3$만큼 평행이동한다. 위쪽으로 $3$만큼 이동한다고 생각했다면 $y$의 값이 작아지는 방향을 반대로 생각한 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:49:02.617833+00:00",
@@ -1940,7 +3607,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:49:02.617706+00:00",
@@ -1958,7 +3625,7 @@
       "choices": [],
       "created_at": "2026-11-11T12:49:18.713223+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:11:23.888421+00:00",
       "explanation": "표에서 같은 $x$에 대한 두 $y$의 값을 비교하면 각각 $4$만큼 차이가 난다. $y=x+4$에서는 $y=x$의 값에 늘 $4$를 더하므로 그래프를 위쪽으로 $4$만큼 평행이동한다. 아래쪽으로 이동한다고 생각했다면 $y$의 값이 커지는 방향을 잘못 생각한 것이다.",
       "figure": null,
       "generated_at": "2026-11-11T12:49:18.664839+00:00",
@@ -1997,10 +3664,100 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T12:49:18.664702+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:19:29.289215+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수02-15-C2-이유설명",
+      "body": "다음 그림은 두 일차함수의 그래프 가와 나를 나타낸 것이다.\n\n각 그래프의 식을 구하고, 아래 표의 빈칸을 채우시오.\n\n| $x$ | $-1$ | $0$ | $1$ |\n|---|---|---|---|\n| 그래프 가의 $y$ |  |  |  |\n| 그래프 나의 $y$ |  |  |  |\n\n표와 식을 이용하여 그래프 가를 $y$축의 방향으로 어떻게 평행이동하면 그래프 나와 겹치는지 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:12:32.31488+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "그림에서 그래프 가의 식은 $y=-x$, 그래프 나의 식은 $y=-x-2$이다. 같은 $x$의 값에서 그래프 나의 $y$값은 그래프 가의 $y$값보다 항상 $2$ 작다. 따라서 그래프 가를 $y$축의 방향으로 $-2$만큼 평행이동하면 그래프 나와 겹친다. $2$만큼 평행이동한다고 생각하면 이동 방향을 반대로 잡은 것이다.",
+      "figure": {
+        "graphs": [
+          {
+            "b": 0.0,
+            "label": "가",
+            "m": -1.0,
+            "type": "linear"
+          },
+          {
+            "b": -2.0,
+            "label": "나",
+            "m": -1.0,
+            "type": "linear"
+          }
+        ],
+        "kind": "coordinate_plane",
+        "points": [],
+        "show_tick_labels": true,
+        "tick_step": 1.0,
+        "x_label": "x",
+        "x_max": 4.0,
+        "x_min": -4.0,
+        "y_label": "y",
+        "y_max": 5.0,
+        "y_min": -5.0,
+        "y_tick_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:12:32.232547+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "9950a89a-ccdd-42af-8a5f-aa9d8e054042",
+      "model": "gpt-6.1-terra",
+      "model_answer": "그래프 가의 식은 $y=-x$, 그래프 나의 식은 $y=-x-2$이다.\n\n| $x$ | $-1$ | $0$ | $1$ |\n|---|---|---|---|\n| 그래프 가의 $y$ | $1$ | $0$ | $-1$ |\n| 그래프 나의 $y$ | $-1$ | $-2$ | $-3$ |\n\n표에서 같은 $x$의 값에 대한 $y$값을 비교하면 나의 값이 가의 값보다 $2$ 작다. 두 식을 보면 다른 $x$의 값에서도 나의 $y$값은 가의 $y$값보다 항상 $2$ 작다. 따라서 그래프 가를 $y$축의 방향으로 $-2$만큼 평행이동하면 그래프 나와 겹친다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 그래프의 식을 각각 $y=-x$, $y=-x-2$로 구한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "표의 여섯 빈칸을 모두 바르게 채운다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": false
+        },
+        {
+          "description": "두 식을 이용하여 같은 $x$의 값에서 나의 $y$값이 가의 $y$값보다 항상 $2$ 작다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수02-15-M4"
+          ],
+          "required": true
+        },
+        {
+          "description": "그래프 가를 $y$축의 방향으로 $-2$만큼 평행이동한다고 쓴다.",
+          "no": 4,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수02-15-M4"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:12:32.232212+00:00",
           "issues": [],
           "number": 1
         }

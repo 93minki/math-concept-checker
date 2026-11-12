@@ -4,6 +4,240 @@
       "assessment_item_id": "9수04-09-C2-오개념판별",
       "attempts": [
         {
+          "at": "2026-11-12T06:27:14.199905+00:00",
+          "issues": [
+            "민수의 판단 과정을 검토하지 않아도 산점도의 전체 경향과 보기의 참·거짓을 확인하면 ③을 고를 수 있다. 따라서 의도한 오개념 판별과 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:27:46.011357+00:00",
+          "issues": [
+            "다섯 학생의 주장이 곧 보기이므로, 별도의 학생 풀이를 판단하지 않고 산점도의 전체 경향과 보기의 참·거짓만 확인해 정답을 고를 수 있다. 따라서 측정 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:28:24.278161+00:00",
+          "issues": [
+            "민수의 주장을 판단하지 않고도 각 보기의 상관관계와 인과관계에 관한 진술만 확인하여 ②를 고를 수 있다. 따라서 의도한 오개념 판별 수준을 재기 어렵고, 일반적인 상관관계 확인 문제와 구별되지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:28:24.356982+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T07:00:48.238535+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T06:28:57.020274+00:00",
+          "issues": [
+            "지우의 말에 전체 점의 경향이 그대로 제시되어 있어 그림을 읽지 않고도 오른쪽 아래로 향하는 경향이 음의 상관관계라는 정의만 확인하면 ④를 고를 수 있다. 학생의 주장을 실질적으로 판단해야 하는 문제와 구별되지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:29:32.982598+00:00",
+          "issues": [
+            "민수의 추론을 판단하지 않고도 산점도의 음의 상관관계와 각 보기의 참·거짓만 확인하면 ⑤를 고를 수 있어, 의도한 오개념 판별과 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:30:11.001198+00:00",
+          "issues": [
+            "민지의 주장을 판단하지 않아도 산점도의 전체 경향을 보고 보기의 참·거짓을 확인하면 ⑤를 고를 수 있다. 따라서 학생의 주장을 판단해야 답이 나오는 오개념 판별 문제이자 misconception-b 고난도 문제라는 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:30:11.497857+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T07:01:17.598644+00:00",
+          "issues": [
+            "지연의 주장을 판단하지 않고 산점도의 상관관계와 보기의 참·거짓만 확인해 ④를 고를 수 있으므로, 의도한 주장 판단형 고난도 조건을 충족하지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:02:06.161816+00:00",
+          "issues": [
+            "수진의 발언에 이미 음의 상관관계에 해당하는 경향이 제시되어 있다. 음의 상관관계의 뜻과 각 보기의 이유만 확인하면 그림을 읽지 않고 ⑤를 고를 수 있어, 학생의 주장을 산점도와 대조하여 판단하게 하는 고난도 문제와 구별되지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T07:02:38.897994+00:00",
+          "issues": [
+            "본문에 산점도의 전체 경향이 직접 제시되어 있어 그림을 읽지 않고도 음의 상관관계를 바로 확인하여 정답을 고를 수 있다. 학생의 주장을 별도로 검토해야 하는 문제와 구별되지 않아 측정 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T07:02:39.097517+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T07:22:07.301794+00:00",
+          "issues": [
+            "보기 ①~④는 서연의 주장이나 산점도를 확인하지 않고도 각각의 잘못된 설명만으로 제거할 수 있다. 따라서 그림을 읽고 학생의 주장을 판단하지 않아도 정답을 고를 수 있어 측정 의도와 고난도 조건을 충족하지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:22:50.651263+00:00",
+          "issues": [
+            "보기 ④는 기온이 1℃와 2℃인 날의 점을 하나씩 보라고 하지만 각 기온에 여러 점이 있어 어느 두 점을 뜻하는지 불분명하다. 선택한 두 점에 따라 판매량이 증가할 수도, 감소할 수도 있다.",
+            "그림을 읽거나 지우의 주장을 검토하지 않아도 보기 ②~⑤의 이유에 있는 일반적인 오류를 제거하면 ①을 고를 수 있다. 따라서 산점도를 읽어 학생의 주장을 판단하게 한다는 측정 의도와 고난이도 조건을 충족하지 못한다.",
+            "conditions_sufficient: false",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T07:23:21.834622+00:00",
+          "issues": [
+            "지수의 이유와 ②~⑤의 오류를 상관관계의 정의·성질로 판단하면 산점도를 읽지 않고도 ①을 고를 수 있다. 따라서 학생의 주장을 산점도에 근거하여 판단하게 하는 측정 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T07:23:22.264535+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T07:35:35.317934+00:00",
+          "issues": [
+            "산점도를 읽지 않아도 ②, ③, ④, ⑤의 판단 근거가 부적절함을 확인해 ①을 고를 수 있다. 따라서 보기의 참·거짓만 확인해서 풀리지 않게 한다는 측정 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:36:05.646390+00:00",
+          "issues": [
+            "산점도를 읽지 않아도 ①~④의 일반적인 오류를 확인하여 ⑤를 고를 수 있다. 따라서 산점도를 직접 읽어 학생의 주장을 판단해야 한다는 측정 의도와 고난이도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T07:37:00.027524+00:00",
+          "issues": [
+            "지우의 주장을 판단하지 않고 보기의 이유만 참·거짓으로 판별해도 ①만 남는다. 따라서 학생의 주장을 판단해야 답을 구하도록 한 측정 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T07:37:01.173071+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T07:39:15.636590+00:00",
+          "issues": [
+            "지우의 주장을 따로 판단하지 않아도 보기의 산점도 해석이 참인지 확인하여 ②를 고를 수 있다. 일반적인 상관관계 판별 문제와 구별되지 않는다.",
+            "보기 ①: M2에서는 오른쪽 아래로 향하는 경향을 보고도 상관관계가 없다고 판단하지만, 보기는 점들이 일정한 방향 없이 흩어져 있다고 한다.",
+            "보기 ⑤: M3에서는 일부 점만으로 전체 상관관계를 판단하지만, 보기는 다른 점들을 포함한 전체 경향을 판단 근거로 든다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:40:01.071787+00:00",
+          "issues": [
+            "지은의 주장을 판단하지 않아도 각 보기의 산점도 해석을 확인하면 4번만 참이므로 정답을 고를 수 있다. 따라서 의도한 판단 과제와 고난도 조건이 충족되지 않는다.",
+            "보기 1: M2에서는 점들이 오른쪽 아래로 향함을 인정하면서도 상관관계가 없다고 판단한다. 점들이 뚜렷한 방향 없이 흩어져 있다는 보기는 이 오개념에서 나오지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T07:40:38.302954+00:00",
+          "issues": [
+            "지우의 주장을 별도로 분석할 필요 없이 산점도의 음의 상관관계를 확인하여 보기의 참·거짓을 판단하면 답을 고를 수 있다. 따라서 요구한 고난도 오개념 판별 문제 및 misconception-b 조건을 충족하지 못한다.",
+            "보기 ④: M2에서 나오는 주장이 아니다. M2대로라면 점들이 오른쪽 아래로 향하는 경향을 인정하면서도 상관관계가 없다고 판단하지만, ④는 뚜렷한 경향이 없다고 한다. 해설도 ④를 음의 상관관계를 상관관계가 없다고 보는 오류로 잘못 설명한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T07:40:38.64357+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": null,
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "attempts": [
+        {
           "at": "2026-11-11T14:51:34.541679+00:00",
           "issues": [
             "보기 ③: 전체 경향과 일부 예외 자료를 함께 제시하지 않아 M3처럼 몇 개의 점만 보고 판단하는 과정을 확인할 수 없다. M3 학생이 소수의 점으로 판단하더라도 그것이 ‘언제나’ 가능하다고 생각하는 것은 아니므로 ③을 고른다고 볼 수 없다.",
@@ -73,6 +307,129 @@
   ],
   "questions": [
     {
+      "approved_at": "2026-11-12T06:51:48.475059+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C1-성질적용",
+      "body": "다음 산점도는 학생 $11$명의 국어 점수와 수학 점수를 나타낸 것이다. 각 점은 학생 한 명을 나타낸다.\n\n다음 중 적힌 내용에 맞는 학생이 정확히 $3$명인 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "국어 점수가 $80$점 이상이고 수학 점수가 $80$점 이상이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M4",
+          "no": 2,
+          "text": "국어 점수가 $60$점 이상이고 수학 점수가 $80$점 이상이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "국어 점수가 $80$점 이상이고 수학 점수가 $60$점 이상이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "국어 점수가 $60$점 이상이고 수학 점수가 $60$점 이상이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "국어 점수가 $80$점 이상이고 수학 점수가 $40$점 이상이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:26:20.622422+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가로축은 국어 점수, 세로축은 수학 점수를 나타낸다. ③에 맞는 학생의 점은 $(80, 60)$, $(80, 100)$, $(100, 80)$이므로 $3$명이다. ①, ②, ④, ⑤에 맞는 학생은 차례로 $2$명, $4$명, $6$명, $4$명이다.\n\n②를 고른 경우에는 가로축과 세로축의 점수를 바꾸어 읽지 않았는지 확인한다. ②에서는 국어 점수가 $60$점 이상이고 수학 점수가 $80$점 이상인 학생을 찾아야 한다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 80.0,
+            "y": 60.0
+          },
+          {
+            "x": 100.0,
+            "y": 80.0
+          },
+          {
+            "x": 80.0,
+            "y": 100.0
+          },
+          {
+            "x": 60.0,
+            "y": 80.0
+          },
+          {
+            "x": 60.0,
+            "y": 100.0
+          },
+          {
+            "x": 40.0,
+            "y": 60.0
+          },
+          {
+            "x": 60.0,
+            "y": 40.0
+          },
+          {
+            "x": 40.0,
+            "y": 40.0
+          },
+          {
+            "x": 80.0,
+            "y": 40.0
+          },
+          {
+            "x": 40.0,
+            "y": 80.0
+          },
+          {
+            "x": 60.0,
+            "y": 60.0
+          }
+        ],
+        "x_label": "국어 점수(점)",
+        "x_max": 120.0,
+        "x_min": 0.0,
+        "x_step": 20.0,
+        "y_label": "수학 점수(점)",
+        "y_max": 120.0,
+        "y_min": 0.0,
+        "y_step": 20.0
+      },
+      "generated_at": "2026-11-12T06:26:20.54726+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "학생 수를 $3$명으로 주고, 산점도에서 각 보기에 맞는 학생을 직접 세어 그 수가 되는 보기를 찾게 한다. 단순한 곱셈이나 역산으로는 답을 구할 수 없다.",
+      "id": "0ad02ce6-2183-4168-93a8-488d410cf860",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:26:20.547076+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T15:40:41.54448+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수04-09-C1-성질적용",
@@ -116,7 +473,7 @@
       ],
       "created_at": "2026-11-11T14:46:26.294679+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.621223+00:00",
       "explanation": "국어 점수가 $70$점 이상인 순서쌍을 살펴보면, 수학 점수가 기준 이상인 점의 개수는 기준이 $60, 70, 80, 90, 100$점일 때 각각 $6, 5, 3, 1, 0$개이다. 따라서 기준은 $80$점이다.\n\n순서쌍의 앞을 수학 점수, 뒤를 국어 점수로 잘못 읽으면 기준을 $90$점으로 생각할 수 있다. 이때는 $(90,90)$, $(95,75)$, $(90,70)$을 세게 된다.",
       "figure": null,
       "generated_at": "2026-11-11T14:46:25.790606+00:00",
@@ -129,7 +486,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:46:25.790514+00:00",
@@ -183,7 +540,7 @@
       ],
       "created_at": "2026-11-11T14:46:47.332948+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.676181+00:00",
       "explanation": "표식을 붙인 화분은 키가 $12\\mathrm{cm}$ 이상이고 잎이 $9$장 이하인 화분이다. 이에 해당하는 순서쌍은 $(14,7)$, $(12,9)$, $(16,9)$로 $3$개이다. 따라서 구하는 값은 $\\frac{3}{9}=\\frac{1}{3}$이다.\n\n앞의 수를 잎의 수, 뒤의 수를 키로 바꾸어 읽으면 $(9,13)$, $(7,12)$를 세어 $\\frac{2}{9}$를 고를 수 있다. 순서쌍에서 앞의 수는 키, 뒤의 수는 잎의 수임에 주의한다.",
       "figure": null,
       "generated_at": "2026-11-11T14:46:46.8365+00:00",
@@ -196,12 +553,148 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:46:46.836367+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.500798+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C1-성질적용",
+      "body": "다음 산점도는 어느 학생이 $12$일 동안 아침에 집에서 학교까지 걸어간 시간과 저녁에 학교에서 집까지 걸어간 시간을 나타낸 것이다. 각 점은 하루를 나타낸다.\n\n아침에 $4$분 이상 걸린 날 중에서, 저녁에 걸린 시간이 아침에 걸린 시간보다 짧은 날의 비율은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\dfrac{1}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$\\dfrac{1}{2}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M4",
+          "no": 3,
+          "text": "$\\dfrac{4}{7}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\dfrac{2}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\dfrac{3}{4}$"
+        }
+      ],
+      "created_at": "2026-11-12T06:27:22.037089+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가로축에서 $4$분 이상인 점은 $8$개이다. 이 중 세로축의 값이 가로축의 값보다 작은 점은 $4$개이므로, 구하는 비율은 $\\dfrac{4}{8}=\\dfrac{1}{2}$이다.\n\n③은 두 축을 바꾸어 읽은 경우이다. 세로축에서 $4$분 이상인 점 $7$개 중 가로축의 값이 세로축의 값보다 작은 점 $4$개를 세면 $\\dfrac{4}{7}$이 된다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 4.0,
+            "y": 2.0
+          },
+          {
+            "x": 4.0,
+            "y": 4.0
+          },
+          {
+            "x": 4.0,
+            "y": 5.0
+          },
+          {
+            "x": 5.0,
+            "y": 3.0
+          },
+          {
+            "x": 5.0,
+            "y": 4.0
+          },
+          {
+            "x": 5.0,
+            "y": 6.0
+          },
+          {
+            "x": 6.0,
+            "y": 2.0
+          },
+          {
+            "x": 6.0,
+            "y": 6.0
+          },
+          {
+            "x": 1.0,
+            "y": 1.0
+          },
+          {
+            "x": 2.0,
+            "y": 5.0
+          },
+          {
+            "x": 3.0,
+            "y": 6.0
+          },
+          {
+            "x": 2.0,
+            "y": 3.0
+          }
+        ],
+        "x_label": "아침 시간(분)",
+        "x_max": 7.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "저녁 시간(분)",
+        "y_max": 7.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:27:21.677603+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "아침 시간이 $4$분 이상인 날을 먼저 찾고, 그중 저녁 시간이 더 짧은 날을 두 축의 값을 비교하여 찾아야 한다.",
+      "id": "dde75702-6c8e-45af-9a9f-6959ac7695e4",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:26:58.132852+00:00",
+          "issues": [
+            "고난이도 조건 application-b: 주어진 두 기준을 산점도에서 그대로 읽어 개수와 비율을 구하는 일반적인 문제로, 상황을 식으로 바꾸어 적용하는 별도의 생각거리가 없다.",
+            "보기 4: 오개념 M4대로 두 축을 바꿔 읽으면 물을 5회 이상 준 텃밭 4곳 중 햇빛을 4시간 이상 받은 곳이 3곳이므로 3/4이다. 해설에서도 1/2을 축 혼동의 결과로 잘못 연결했다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:27:21.677336+00:00",
+          "issues": [],
+          "number": 2
         }
       ],
       "variant": 2
@@ -250,7 +743,7 @@
       ],
       "created_at": "2026-11-11T14:45:35.038801+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.769288+00:00",
       "explanation": "순서쌍의 앞의 수가 수학 점수이고, 뒤의 수가 영어 점수이다. 두 점수를 모두 살펴보면 알맞은 점은 $(90, 70)$, $(85, 75)$, $(80, 75)$의 $3$개이다. $1$개를 골랐다면 순서쌍의 앞뒤를 바꾸어 읽었는지 확인해 보자.",
       "figure": null,
       "generated_at": "2026-11-11T14:45:34.55939+00:00",
@@ -263,10 +756,129 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:45:34.559238+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.526478+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C1-성질적용",
+      "body": "다음 산점도는 학생 $10$명의 국어와 수학 점수를 나타낸 것이다. 한 점은 한 학생을 나타낸다. 국어 점수가 $80$점 이상이고 수학 점수가 $70$점 이상인 학생은 몇 명인가?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$2$명"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M4",
+          "no": 2,
+          "text": "$3$명"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$4$명"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$5$명"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$6$명"
+        }
+      ],
+      "created_at": "2026-11-12T06:25:41.831438+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가로축에서 국어 점수가 $80$점 이상이고, 세로축에서 수학 점수가 $70$점 이상인 점을 찾는다. 해당하는 점은 $(80, 70)$, $(90, 80)$, $(100, 90)$, $(100, 70)$이므로 $4$명이다. 두 축을 바꾸어 읽으면 국어 점수가 $70$점 이상이고 수학 점수가 $80$점 이상인 학생을 세어 $3$명으로 잘못 구할 수 있다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 80.0,
+            "y": 70.0
+          },
+          {
+            "x": 90.0,
+            "y": 80.0
+          },
+          {
+            "x": 100.0,
+            "y": 90.0
+          },
+          {
+            "x": 80.0,
+            "y": 60.0
+          },
+          {
+            "x": 70.0,
+            "y": 80.0
+          },
+          {
+            "x": 60.0,
+            "y": 90.0
+          },
+          {
+            "x": 70.0,
+            "y": 70.0
+          },
+          {
+            "x": 90.0,
+            "y": 60.0
+          },
+          {
+            "x": 60.0,
+            "y": 60.0
+          },
+          {
+            "x": 100.0,
+            "y": 70.0
+          }
+        ],
+        "x_label": "국어 점수(점)",
+        "x_max": 110.0,
+        "x_min": 50.0,
+        "x_step": 10.0,
+        "y_label": "수학 점수(점)",
+        "y_max": 100.0,
+        "y_min": 50.0,
+        "y_step": 10.0
+      },
+      "generated_at": "2026-11-12T06:25:41.735272+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8a0cc8fc-574c-4c84-a2ba-c8def0600158",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:25:41.734863+00:00",
           "issues": [],
           "number": 1
         }
@@ -317,7 +929,7 @@
       ],
       "created_at": "2026-11-11T14:45:52.000881+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.800643+00:00",
       "explanation": "첫째 값이 $16$ 이상이고 둘째 값이 $16$ 미만인 순서쌍은 $(17, 14)$, $(19, 13)$, $(16, 15)$이다. 전체 점 $6$개 중 $3$개이므로 비율은 $\\frac{1}{2}$이다.\n\n순서쌍의 두 값을 바꾸어 읽으면 $(12, 18)$과 $(15, 20)$을 세어 $\\frac{1}{3}$을 고를 수 있다.",
       "figure": null,
       "generated_at": "2026-11-11T14:45:51.49415+00:00",
@@ -330,10 +942,137 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:45:51.493926+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.552038+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C1-성질적용",
+      "body": "다음 산점도는 상자 $12$개에 들어 있는 연필과 지우개의 수를 나타낸 것이다. 한 점은 상자 하나를 나타낸다. 연필이 $6$개 이상이고 지우개가 $3$개 이하인 상자는 전체의 얼마인가?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$\\dfrac{1}{6}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M4",
+          "no": 2,
+          "text": "$\\dfrac{1}{4}$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\dfrac{1}{3}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "$\\dfrac{5}{12}$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$\\dfrac{1}{2}$"
+        }
+      ],
+      "created_at": "2026-11-12T06:25:58.0155+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가로축에서 연필이 $6$개 이상이고 세로축에서 지우개가 $3$개 이하인 점은 $4$개이다. 따라서 구하는 비율은 $\\dfrac{4}{12}=\\dfrac{1}{3}$이다. 가로축과 세로축의 내용을 바꾸어 읽으면 점을 $3$개로 잘못 세어 $\\dfrac{1}{4}$을 고를 수 있다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 6.0,
+            "y": 3.0
+          },
+          {
+            "x": 7.0,
+            "y": 2.0
+          },
+          {
+            "x": 8.0,
+            "y": 3.0
+          },
+          {
+            "x": 6.0,
+            "y": 1.0
+          },
+          {
+            "x": 1.0,
+            "y": 6.0
+          },
+          {
+            "x": 2.0,
+            "y": 7.0
+          },
+          {
+            "x": 3.0,
+            "y": 8.0
+          },
+          {
+            "x": 4.0,
+            "y": 4.0
+          },
+          {
+            "x": 5.0,
+            "y": 5.0
+          },
+          {
+            "x": 7.0,
+            "y": 5.0
+          },
+          {
+            "x": 4.0,
+            "y": 2.0
+          },
+          {
+            "x": 2.0,
+            "y": 3.0
+          }
+        ],
+        "x_label": "연필 수(개)",
+        "x_max": 10.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "지우개 수(개)",
+        "y_max": 10.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:25:57.860987+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "5fb567e0-1b4e-4d33-8888-cb4144f9bfa6",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:25:57.860372+00:00",
           "issues": [],
           "number": 1
         }
@@ -384,7 +1123,7 @@
       ],
       "created_at": "2026-11-11T14:53:40.400263+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.766309+00:00",
       "explanation": "전체적으로 기온이 높은 날일수록 따뜻한 음료 판매량이 적은 경향이 있으므로 음의 상관관계가 있다. 따라서 ①이 옳다.\n②는 음의 상관관계도 상관관계라는 것을 놓쳤다. ③은 두 날만 보고 전체 경향을 판단했다. ④는 기온이 $24$℃인 날의 판매량이 $22$℃인 날보다 많다는 것을 놓쳤다. ⑤는 상관관계가 있다는 사실만으로 기온이 판매량에 영향을 준다고 판단했다. 이 자료만으로는 그 까닭을 알 수 없다.",
       "figure": null,
       "generated_at": "2026-11-11T14:53:39.780193+00:00",
@@ -397,7 +1136,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:53:16.326591+00:00",
@@ -409,6 +1148,158 @@
         },
         {
           "at": "2026-11-11T14:53:39.780099+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T07:03:57.213688+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "body": "다음 산점도는 학생들의 하루 공부 시간과 게임 시간을 나타낸 것이다. 각 점은 한 학생의 자료를 나타낸다.\n\n민수: “공부 시간과 게임 시간이 각각 $2$시간인 학생과 각각 $3$시간인 학생만 보면, 공부 시간이 길수록 게임 시간도 길어. 따라서 전체 자료에는 양의 상관관계가 있어.”\n\n민수의 주장에 대한 판단으로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M3",
+          "no": 1,
+          "text": "옳다. 민수가 살펴본 두 점은 오른쪽 위로 향하기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M2",
+          "no": 2,
+          "text": "옳지 않다. 전체적으로 점들이 오른쪽 아래로 향하므로 상관관계가 없기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M1",
+          "no": 3,
+          "text": "옳지 않다. 공부 시간이 게임 시간을 줄이는 원인이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳다. 두 변량을 모두 시간으로 나타냈기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. 두 점만 보았고, 전체적으로는 음의 상관관계가 있기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T07:00:48.344443+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "민수는 두 점만 보고 판단했다. 전체 점을 보면 오른쪽 아래로 향하므로 음의 상관관계가 있다.\n\n①은 일부 점만 보고 전체를 판단한 것이다. ②처럼 한 변량이 커질 때 다른 변량이 작아지는 경향도 상관관계가 있다. ③처럼 산점도만으로 공부 시간이 게임 시간을 줄이는 원인이라고 말할 수는 없다. ④에서 두 변량의 단위가 같다는 사실은 상관관계를 판단하는 까닭이 될 수 없다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 7.0
+          },
+          {
+            "x": 1.0,
+            "y": 8.0
+          },
+          {
+            "x": 2.0,
+            "y": 2.0
+          },
+          {
+            "x": 2.0,
+            "y": 6.0
+          },
+          {
+            "x": 2.0,
+            "y": 7.0
+          },
+          {
+            "x": 3.0,
+            "y": 3.0
+          },
+          {
+            "x": 3.0,
+            "y": 5.0
+          },
+          {
+            "x": 3.0,
+            "y": 6.0
+          },
+          {
+            "x": 4.0,
+            "y": 4.0
+          },
+          {
+            "x": 4.0,
+            "y": 5.0
+          },
+          {
+            "x": 5.0,
+            "y": 3.0
+          },
+          {
+            "x": 5.0,
+            "y": 4.0
+          },
+          {
+            "x": 6.0,
+            "y": 2.0
+          },
+          {
+            "x": 6.0,
+            "y": 3.0
+          },
+          {
+            "x": 7.0,
+            "y": 1.0
+          },
+          {
+            "x": 7.0,
+            "y": 2.0
+          }
+        ],
+        "x_label": "공부 시간(시간)",
+        "x_max": 8.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "게임 시간(시간)",
+        "y_max": 8.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T07:00:48.155787+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 점만 보고 양의 상관관계가 있다고 판단한 민수의 주장을 전체 산점도와 비교하여 판단하게 했다.",
+      "id": "2bfd6934-3ed6-4fb1-b8fb-5ff0e651ccab",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T07:00:17.028136+00:00",
+          "issues": [
+            "민수가 일부 점만 보고 판단한 오류를 살피지 않아도 보기의 이유들만 참·거짓으로 판별하면 ⑤를 고를 수 있어 오개념 판별 의도와 고난도 조건을 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:00:48.155399+00:00",
           "issues": [],
           "number": 2
         }
@@ -459,7 +1350,7 @@
       ],
       "created_at": "2026-11-11T14:54:05.395487+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.801712+00:00",
       "explanation": "자료 B에서는 대체로 연습 시간이 길수록 퍼즐을 푸는 데 걸린 시간이 짧으므로 음의 상관관계가 있다. 따라서 정답은 ⑤이다.\n\n① 상관관계가 있다는 사실만으로 키가 신발 크기를 크게 하는 원인이라고 할 수는 없다.\n② 한 변량이 커질 때 다른 변량이 작아지는 경향도 상관관계가 있는 경우이다.\n③ 민수와 지수의 자료만 보지 말고 전체 경향을 살펴야 한다.\n④ 민수와 지수의 경우가 있으므로 키가 큰 학생의 신발 크기가 반드시 더 큰 것은 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T14:54:04.860538+00:00",
@@ -472,7 +1363,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:54:04.860452+00:00",
@@ -526,7 +1417,7 @@
       ],
       "created_at": "2026-11-11T14:51:06.97663+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.83074+00:00",
       "explanation": "전체 점들은 오른쪽 아래로 향하는 경향이 있으므로 음의 상관관계가 있다.\n② 한 변량이 커질 때 다른 변량이 작아지는 경향도 상관관계이다. ③ 상관관계가 있다는 사실만으로 기온이 난방비의 원인이라고 단정할 수는 없다. ④ 두 점만이 아니라 전체 점의 경향을 살펴야 한다. ⑤ 전체적으로 오른쪽 아래로 향하는 경향에서 벗어난 점도 있다.",
       "figure": null,
       "generated_at": "2026-11-11T14:51:06.469971+00:00",
@@ -539,7 +1430,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:50:38.973284+00:00",
@@ -558,6 +1449,249 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.598689+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "body": "다음 산점도는 학생들의 일주일 동안 텔레비전 시청 시간과 독서 시간을 나타낸 것이다. 산점도를 보고 말한 내용으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "두 변량 사이에는 음의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M2",
+          "no": 2,
+          "text": "시청 시간이 길수록 독서 시간이 짧아지는 경향이 있으므로 상관관계가 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "두 변량 사이에는 양의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "학생들의 시청 시간이 모두 같다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "학생들의 독서 시간이 모두 같다."
+        }
+      ],
+      "created_at": "2026-11-12T06:26:10.70009+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점들은 전체적으로 오른쪽 아래로 향한다. 따라서 텔레비전 시청 시간이 길수록 독서 시간이 짧아지는 경향이 있으므로 음의 상관관계가 있다. ②처럼 한 변량이 커질 때 다른 변량이 작아지면 상관관계가 없다고 생각하지 않도록 주의한다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 9.0
+          },
+          {
+            "x": 2.0,
+            "y": 8.0
+          },
+          {
+            "x": 2.0,
+            "y": 9.0
+          },
+          {
+            "x": 3.0,
+            "y": 7.0
+          },
+          {
+            "x": 4.0,
+            "y": 6.0
+          },
+          {
+            "x": 5.0,
+            "y": 6.0
+          },
+          {
+            "x": 6.0,
+            "y": 4.0
+          },
+          {
+            "x": 7.0,
+            "y": 3.0
+          },
+          {
+            "x": 8.0,
+            "y": 2.0
+          },
+          {
+            "x": 9.0,
+            "y": 1.0
+          }
+        ],
+        "x_label": "시청 시간(시간)",
+        "x_max": 10.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "독서 시간(시간)",
+        "y_max": 10.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:26:10.652855+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "5cfcf27a-c697-4aa9-802a-780b341322c9",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:25:54.138958+00:00",
+          "issues": [
+            "보기 ③은 (2, 2)와 (8, 8) 두 점만 보면 양의 상관관계가 있다는 참인 설명으로도 읽힌다. 전체 자료에 양의 상관관계가 있다고 주장하는 것인지 모호하여 ①과 ③이 모두 옳을 수 있다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:26:10.652462+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.627312+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-오개념판별",
+      "body": "다음 산점도는 어느 가게에서 조사한 여러 날의 하루 최고 기온과 따뜻한 음료 판매량을 나타낸 것이다. 산점도를 보고 말한 내용으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "기온과 판매량 사이에는 양의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M2",
+          "no": 2,
+          "text": "기온이 높아질 때 판매량이 적어지므로 상관관계가 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "기온과 판매량 사이에는 음의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M1",
+          "no": 4,
+          "text": "기온이 낮아지는 것이 판매량이 많아지는 원인임을 알 수 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "기온이 가장 높은 날에 따뜻한 음료가 가장 많이 팔렸다."
+        }
+      ],
+      "created_at": "2026-11-12T06:26:27.698538+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점들이 전체적으로 오른쪽 아래를 향하므로 기온과 판매량 사이에는 음의 상관관계가 있다. 한 변량이 커질 때 다른 변량이 작아지는 경향도 상관관계이다. 또 산점도만으로 기온이 판매량 변화의 원인이라고 단정할 수 없다. 기온이 가장 높은 날의 판매량은 가장 적다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 10.0,
+            "y": 32.0
+          },
+          {
+            "x": 12.0,
+            "y": 30.0
+          },
+          {
+            "x": 14.0,
+            "y": 28.0
+          },
+          {
+            "x": 16.0,
+            "y": 26.0
+          },
+          {
+            "x": 18.0,
+            "y": 24.0
+          },
+          {
+            "x": 20.0,
+            "y": 22.0
+          },
+          {
+            "x": 22.0,
+            "y": 18.0
+          },
+          {
+            "x": 24.0,
+            "y": 16.0
+          },
+          {
+            "x": 26.0,
+            "y": 14.0
+          }
+        ],
+        "x_label": "최고 기온(℃)",
+        "x_max": 28.0,
+        "x_min": 8.0,
+        "x_step": 2.0,
+        "y_label": "판매량(잔)",
+        "y_max": 36.0,
+        "y_min": 0.0,
+        "y_step": 2.0
+      },
+      "generated_at": "2026-11-12T06:26:27.636337+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8e99c885-7d93-4780-9b4c-cbbb67e45234",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:26:27.636264+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T15:40:41.740974+00:00",
@@ -603,7 +1737,7 @@
       ],
       "created_at": "2026-11-11T15:01:56.679299+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.892459+00:00",
       "explanation": "점들이 오른쪽 위로 향하는 직선 주변에 모여 있으므로 두 변량 사이에는 양의 상관관계가 있다.\n\n④는 상관관계가 있다는 사실만으로 아이스크림 판매량이 물놀이를 한 사람 수의 원인이라고 생각한 것이다. 이 자료만으로는 그 원인을 알 수 없다. 두 변량의 단위가 달라도 상관관계를 말할 수 있으므로 ⑤도 옳지 않다.",
       "figure": null,
       "generated_at": "2026-11-11T15:01:56.200093+00:00",
@@ -616,7 +1750,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T15:01:56.199963+00:00",
@@ -627,6 +1761,124 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T06:51:48.660798+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-이유설명",
+      "body": "다음 산점도는 물이 담긴 컵을 차가운 곳에 두고 시간이 지남에 따라 물의 온도를 측정한 자료를 나타낸 것이다.\n\n민수는 “두 변량 사이에 음의 상관관계가 있다면, 가로축의 값이 커질 때 세로축의 값은 언제나 작아져야 해.”라고 말한다.\n\n두 변량 사이의 상관관계를 말하고, 점들의 전체적인 경향을 근거로 설명하시오. 또 산점도에서 점 두 개를 골라 민수의 말이 옳지 않음을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:26:51.240494+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점들은 전체적으로 오른쪽 아래를 향한다. 따라서 시간이 지날수록 물의 온도는 대체로 낮아지므로 음의 상관관계가 있다. 음의 상관관계도 상관관계의 하나이다.\n\n시간이 $3$분일 때 온도는 $7$℃이고, $4$분일 때 온도는 $8$℃이다. 시간이 지났지만 온도가 높아진 경우도 있으므로 민수의 말은 옳지 않다. 이 두 점만 보고 양의 상관관계라고 판단하지 않고, 점들의 전체적인 경향을 살펴야 한다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 9.0
+          },
+          {
+            "x": 2.0,
+            "y": 8.0
+          },
+          {
+            "x": 3.0,
+            "y": 7.0
+          },
+          {
+            "x": 4.0,
+            "y": 8.0
+          },
+          {
+            "x": 5.0,
+            "y": 6.0
+          },
+          {
+            "x": 6.0,
+            "y": 5.0
+          },
+          {
+            "x": 7.0,
+            "y": 4.0
+          },
+          {
+            "x": 8.0,
+            "y": 3.0
+          },
+          {
+            "x": 9.0,
+            "y": 2.0
+          },
+          {
+            "x": 10.0,
+            "y": 1.0
+          }
+        ],
+        "x_label": "시간(분)",
+        "x_max": 10.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "온도(℃)",
+        "y_max": 10.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:26:51.058704+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "민수의 말이 옳지 않음을 산점도의 점 두 개를 골라 보여 주도록 했다.",
+      "id": "02dc1057-576e-42ca-b0ea-62d4cb5fd919",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 변량 사이에는 음의 상관관계가 있다. 점들이 전체적으로 오른쪽 아래를 향하므로 시간이 지날수록 물의 온도가 대체로 낮아지기 때문이다. 하지만 $3$분일 때는 $7$℃이고 $4$분일 때는 $8$℃이므로 시간이 지날 때 온도가 언제나 낮아지는 것은 아니다. 따라서 민수의 말은 옳지 않다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 1,
+      "rubric": [
+        {
+          "description": "두 변량 사이에 음의 상관관계가 있다고 말한다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-09-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "점들의 전체적인 경향을 보고, 시간이 지날수록 온도가 대체로 낮아진다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-09-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "시간이 지났을 때 온도가 높아지는 두 점을 그림에서 찾아 민수의 말이 옳지 않음을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-09-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:26:28.021716+00:00",
+          "issues": [
+            "채점 기준 1은 남은 물의 양이 더 많은 두 점만 인정한다. 그러나 (3, 7)과 (5, 7)처럼 말린 시간이 다른데 물의 양이 같은 두 점으로도 학생의 주장을 반박할 수 있다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:26:51.058450+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T15:40:41.772436+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수04-09-C2-이유설명",
@@ -634,7 +1886,7 @@
       "choices": [],
       "created_at": "2026-11-11T14:55:45.475937+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.676105+00:00",
       "explanation": "자료 전체를 보면 키가 커질 때 잎 수도 대체로 많아지므로 양의 상관관계가 있다. 하지만 $(14, 6)$과 $(16, 5)$를 보면 키가 커졌는데 잎 수는 적어졌다. 따라서 상관관계가 있어도 한 변량이 커질 때 다른 변량이 항상 커지는 것은 아니다. 이 두 순서쌍만 보고 상관관계가 없다고 판단하면 자료 전체의 경향을 놓치게 된다.",
       "figure": null,
       "generated_at": "2026-11-11T14:55:44.9443+00:00",
@@ -673,7 +1925,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:55:16.334667+00:00",
@@ -699,7 +1951,7 @@
       "choices": [],
       "created_at": "2026-11-11T14:56:18.065556+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.722883+00:00",
       "explanation": "자료에서 거리가 $2\\mathrm{km}$부터 $8\\mathrm{km}$까지 커질 때 시간도 $2$분부터 $8$분까지 커진다. $(1, 9)$는 이 흐름에서 벗어나지만, 자료 전체를 보면 거리가 커질 때 시간이 대체로 커지므로 양의 상관관계가 있다.\n\n거리만 보면 $(1, 9)$가 가장 짧고 $(8, 8)$이 가장 길다. 이 둘만 비교하면 시간이 작아지지만, 자료 전체에서는 양의 상관관계가 나타난다. 따라서 이 자료는 지수의 말이 틀렸음을 보여 준다. 일부 자료만 비교하여 상관관계를 판단하지 않도록 주의한다.",
       "figure": null,
       "generated_at": "2026-11-11T14:56:17.572291+00:00",
@@ -740,7 +1992,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:56:17.572152+00:00",
@@ -751,6 +2003,203 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T06:51:48.693551+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-이유설명",
+      "body": "다음 산점도는 여러 화분에 핀 꽃의 수와 잎의 수를 나타낸 것이다. 점 하나는 화분 하나를 나타낸다.\n\n지수는 꽃의 수가 커질 때 잎의 수가 어떻게 변하는지 살펴보았다. 현우는 잎의 수가 커질 때 꽃의 수가 어떻게 변하는지 살펴보았다.\n\n두 학생은 각각 어떤 상관관계가 있다고 말해야 하는가? 점들의 전체적인 경향을 근거로 설명하시오. 또 두 방법에서 같은 상관관계가 나오는 까닭을 산점도에서 읽은 점 두 개를 이용하여 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:27:22.244931+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점들은 전체적으로 오른쪽 위로 향한다. 따라서 꽃의 수가 커질 때 잎의 수는 대체로 커지고, 잎의 수가 커질 때 꽃의 수도 대체로 커진다. 어느 쪽에서 살펴보아도 양의 상관관계가 있다.\n\n예를 들어 $(1, 2)$와 $(8, 8)$을 비교하면 꽃의 수가 많은 화분이 잎의 수도 많다. 반대로 잎의 수가 많은 화분이 꽃의 수도 많다. 이처럼 살펴보는 순서를 바꾸어도 두 수가 함께 커지는 전체적인 경향은 바뀌지 않는다. 일부 점만 보고 판단하지 않도록 주의한다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 2.0
+          },
+          {
+            "x": 2.0,
+            "y": 3.0
+          },
+          {
+            "x": 3.0,
+            "y": 2.0
+          },
+          {
+            "x": 4.0,
+            "y": 4.0
+          },
+          {
+            "x": 5.0,
+            "y": 5.0
+          },
+          {
+            "x": 6.0,
+            "y": 4.0
+          },
+          {
+            "x": 7.0,
+            "y": 7.0
+          },
+          {
+            "x": 8.0,
+            "y": 8.0
+          }
+        ],
+        "x_label": "꽃의 수(송이)",
+        "x_max": 9.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "잎의 수(장)",
+        "y_max": 9.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:27:22.177939+00:00",
+      "hard_condition": "explanation-c",
+      "hard_condition_reason": "꽃의 수부터 살펴보는 방법과 잎의 수부터 살펴보는 방법이 같은 상관관계를 나타내는 까닭을 비교하여 설명하게 한다.",
+      "id": "d383f92b-c662-47a1-87b4-71bf451588a0",
+      "model": "gpt-6.1-terra",
+      "model_answer": "두 학생 모두 양의 상관관계가 있다고 말해야 한다. 점들이 전체적으로 오른쪽 위로 향하므로 꽃의 수가 커질 때 잎의 수도 대체로 커진다.\n\n예를 들어 $(1, 2)$와 $(8, 8)$을 보면 꽃의 수가 많은 화분이 잎의 수도 많고, 잎의 수가 많은 화분이 꽃의 수도 많다. 이와 같이 어느 수부터 살펴보든 두 수가 함께 커지는 전체적인 경향은 같으므로 같은 상관관계가 나온다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 방법 모두 양의 상관관계를 나타낸다고 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-09-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "꽃의 수가 커질 때 잎의 수가 대체로 커진다는 전체적인 경향을 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-09-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "산점도의 점 두 개를 알맞게 골라 두 방법으로 비교하고, 살펴보는 순서를 바꾸어도 두 수가 함께 커지는 전체적인 경향이 같음을 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-09-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:27:22.177818+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.720252+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-이유설명",
+      "body": "다음 산점도는 컵에 담긴 물의 온도를 시간에 따라 측정하여 나타낸 것이다. 시간과 물의 온도 사이에는 어떤 상관관계가 있는지 쓰고, 그림에 나타난 점을 두 개 이상 이용하여 그 까닭을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:25:42.975124+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점들은 전체적으로 오른쪽 아래를 향한다. 예를 들어 시간이 $1$분일 때 물의 온도는 $90$℃이고, $8$분일 때는 $50$℃이다. 이처럼 시간이 길어질수록 물의 온도가 대체로 낮아지므로 음의 상관관계가 있다. 한 변량이 커질 때 다른 변량이 작아지는 것도 상관관계가 있는 경우이다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 90.0
+          },
+          {
+            "x": 2.0,
+            "y": 80.0
+          },
+          {
+            "x": 3.0,
+            "y": 80.0
+          },
+          {
+            "x": 4.0,
+            "y": 70.0
+          },
+          {
+            "x": 5.0,
+            "y": 70.0
+          },
+          {
+            "x": 6.0,
+            "y": 60.0
+          },
+          {
+            "x": 7.0,
+            "y": 60.0
+          },
+          {
+            "x": 8.0,
+            "y": 50.0
+          }
+        ],
+        "x_label": "시간(분)",
+        "x_max": 9.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "물의 온도(℃)",
+        "y_max": 100.0,
+        "y_min": 0.0,
+        "y_step": 10.0
+      },
+      "generated_at": "2026-11-12T06:25:42.867366+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "3a1e9a5c-ad34-44b0-a3b8-357889445b99",
+      "model": "gpt-6.1-terra",
+      "model_answer": "음의 상관관계가 있다. 예를 들어 시간이 $1$분일 때 물의 온도는 $90$℃이고, $8$분일 때는 $50$℃이다. 이처럼 시간이 길어질수록 물의 온도가 대체로 낮아지기 때문이다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "시간과 물의 온도 사이에 음의 상관관계가 있다고 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-09-M2"
+          ],
+          "required": true
+        },
+        {
+          "description": "그림에서 알맞은 점 두 개 이상을 이용하여 시간이 길어질수록 물의 온도가 대체로 낮아진다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-09-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:25:42.867156+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T15:40:41.82342+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수04-09-C2-이유설명",
@@ -758,7 +2207,7 @@
       "choices": [],
       "created_at": "2026-11-11T14:54:27.071099+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.76134+00:00",
       "explanation": "지난 시간이 길어질수록 물의 온도는 낮아진다. 예를 들어 $1$분일 때 온도는 $70^\\circ\\mathrm{C}$이고, $5$분일 때 온도는 $55^\\circ\\mathrm{C}$이다. 따라서 두 변량 사이에는 음의 상관관계가 있다. 한 변량이 커질 때 다른 변량이 작아지는 경우도 상관관계가 없는 것이 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T14:54:26.555519+00:00",
@@ -797,7 +2246,7 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:54:26.555381+00:00",
@@ -815,7 +2264,7 @@
       "choices": [],
       "created_at": "2026-11-11T14:54:49.099816+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.803518+00:00",
       "explanation": "표에서 키가 큰 학생일수록 양쪽 손끝 사이의 길이도 대체로 길다. 예를 들어 키가 $140\\mathrm{cm}$인 학생의 양쪽 손끝 사이의 길이는 $138\\mathrm{cm}$이고, 키가 $165\\mathrm{cm}$인 학생의 양쪽 손끝 사이의 길이는 $163\\mathrm{cm}$이다. 따라서 두 변량 사이에는 양의 상관관계가 있다.",
       "figure": null,
       "generated_at": "2026-11-11T14:54:48.490005+00:00",
@@ -843,7 +2292,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:54:48.489854+00:00",
@@ -852,6 +2301,259 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.76246+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-이유설명",
+      "body": "다음 산점도는 학생 6명의 키와 발 길이를 나타낸 것이다. 키와 발 길이 사이에는 어떤 상관관계가 있는지 쓰고, 그림의 점을 두 개 이상 이용하여 그 까닭을 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:25:59.7516+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점들은 전체적으로 키가 커질수록 발 길이도 길어지는 모습을 보인다. 따라서 양의 상관관계가 있다. 일부 점만 보면 키가 더 큰 학생의 발 길이가 더 짧을 수도 있지만, 상관관계는 점들의 전체적인 모습을 보고 판단해야 한다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 140.0,
+            "y": 21.0
+          },
+          {
+            "x": 145.0,
+            "y": 22.0
+          },
+          {
+            "x": 150.0,
+            "y": 23.0
+          },
+          {
+            "x": 155.0,
+            "y": 22.0
+          },
+          {
+            "x": 160.0,
+            "y": 24.0
+          },
+          {
+            "x": 165.0,
+            "y": 25.0
+          }
+        ],
+        "x_label": "키(cm)",
+        "x_max": 170.0,
+        "x_min": 135.0,
+        "x_step": 5.0,
+        "y_label": "발 길이(cm)",
+        "y_max": 26.0,
+        "y_min": 20.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:25:59.675781+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "df826187-d9c1-4acb-ab8c-d32193b935ab",
+      "model": "gpt-6.1-terra",
+      "model_answer": "양의 상관관계가 있다. 예를 들어 키가 $140$cm인 학생의 발 길이는 $21$cm이고, 키가 $165$cm인 학생의 발 길이는 $25$cm이다. 그림에서 전체적으로 키가 커질수록 발 길이도 길어지는 모습을 볼 수 있다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "양의 상관관계가 있다고 쓴다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-09-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "그림의 서로 다른 두 점에서 키와 발 길이를 바르게 읽고, 전체적으로 키가 커질수록 발 길이도 길어지는 모습을 근거로 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-09-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:25:59.675363+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.785898+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-정의이해",
+      "body": "다음 산점도는 두 변량 $A$, $B$의 관계를 나타낸 것이다. 이 산점도에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M3",
+          "no": 1,
+          "text": "오른쪽 위로 향하는 점들이 있으므로 양의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "전체적으로 $A$의 값이 커질수록 $B$의 값이 작아지는 경향이 있으므로 음의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M2",
+          "no": 3,
+          "text": "전체적으로 $A$의 값이 커질수록 $B$의 값이 작아지는 경향이 있으므로 상관관계가 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M3",
+          "no": 4,
+          "text": "전체 경향과 다른 점이 있으므로 상관관계가 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$A$의 값이 커지면 $B$의 값이 예외 없이 작아지므로 음의 상관관계가 있다."
+        }
+      ],
+      "created_at": "2026-11-12T06:31:31.795718+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "점 전체를 보면 $A$의 값이 커질수록 $B$의 값이 작아지는 경향이 있으므로 음의 상관관계가 있다. 오른쪽 위로 향하는 일부 점만 보고 양의 상관관계라고 판단해서는 안 된다. $A$가 커질 때 $B$가 작아지는 경향도 상관관계이며, 전체 경향과 다른 점이 있다고 해서 상관관계가 없는 것은 아니다. 또 음의 상관관계가 있어도 모든 점이 예외 없이 그 경향을 따라야 하는 것은 아니다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 8.0
+          },
+          {
+            "x": 1.0,
+            "y": 9.0
+          },
+          {
+            "x": 2.0,
+            "y": 7.0
+          },
+          {
+            "x": 2.0,
+            "y": 8.0
+          },
+          {
+            "x": 3.0,
+            "y": 6.0
+          },
+          {
+            "x": 3.0,
+            "y": 7.0
+          },
+          {
+            "x": 4.0,
+            "y": 5.0
+          },
+          {
+            "x": 4.0,
+            "y": 6.0
+          },
+          {
+            "x": 5.0,
+            "y": 4.0
+          },
+          {
+            "x": 5.0,
+            "y": 5.0
+          },
+          {
+            "x": 6.0,
+            "y": 3.0
+          },
+          {
+            "x": 6.0,
+            "y": 4.0
+          },
+          {
+            "x": 7.0,
+            "y": 2.0
+          },
+          {
+            "x": 7.0,
+            "y": 3.0
+          },
+          {
+            "x": 8.0,
+            "y": 1.0
+          },
+          {
+            "x": 8.0,
+            "y": 2.0
+          },
+          {
+            "x": 9.0,
+            "y": 1.0
+          },
+          {
+            "x": 9.0,
+            "y": 2.0
+          },
+          {
+            "x": 1.0,
+            "y": 2.0
+          },
+          {
+            "x": 2.0,
+            "y": 3.0
+          },
+          {
+            "x": 8.0,
+            "y": 8.0
+          },
+          {
+            "x": 9.0,
+            "y": 9.0
+          }
+        ],
+        "x_label": "변량 A",
+        "x_max": 10.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "변량 B",
+        "y_max": 10.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:31:31.705122+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "전체 경향과 다른 점을 여러 개 섞은 산점도에서 일부 점이 아닌 점 전체의 경향을 살펴 상관관계를 판단해야 한다.",
+      "id": "9d59a146-ae66-44df-9fac-026ccc4eff02",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:31:31.704632+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T15:40:41.885865+00:00",
@@ -897,7 +2599,7 @@
       ],
       "created_at": "2026-11-11T14:48:21.909668+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:30:16.367828+00:00",
       "explanation": "공부 시간이 $3$시간인 학생보다 $4$시간인 학생이 틀린 문제는 더 많다. 하지만 전체적으로 보면 공부 시간이 길수록 틀린 문제 수가 적어지는 경향이 있다. 따라서 음의 상관관계이다.\n\n①과 ③처럼 일부 자료만 보고 전체 경향을 판단해서는 안 된다. ②처럼 한 변량이 커질 때 다른 변량이 작아지는 경우에도 상관관계가 있다. ⑤처럼 두 변량의 값이 모두 양수라는 사실만으로 양의 상관관계라고 할 수는 없다.",
       "figure": null,
       "generated_at": "2026-11-11T14:48:21.409874+00:00",
@@ -910,7 +2612,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:48:21.409724+00:00",
@@ -964,7 +2666,7 @@
       ],
       "created_at": "2026-11-11T15:01:34.506674+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:30:16.40466+00:00",
       "explanation": "라 가게의 가격은 $50$천 원이고 구매한 사람 수는 $85$명이므로 순서쌍은 $(50, 85)$이다. 전체적으로 가격이 클수록 구매한 사람 수가 작아지는 경향이 있으므로 음의 상관관계가 있다.\n\n①은 일부 가게만 비교하고 전체 경향을 살피지 않았다. ②처럼 한 변량이 클수록 다른 변량이 작아지는 경향도 상관관계이다. ③은 전체 경향과 다른 부분이 있다는 이유만으로 상관관계가 없다고 잘못 판단했다. ⑤는 순서쌍의 두 수를 바꾸어 썼다.",
       "figure": null,
       "generated_at": "2026-11-11T15:01:33.993233+00:00",
@@ -977,10 +2679,181 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T15:01:33.993067+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.810582+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-정의이해",
+      "body": "학생들이 같은 퍼즐을 맞추는 연습을 했다. 다음 산점도는 학생별 연습 횟수와 퍼즐을 한 번 맞추는 데 걸린 시간을 나타낸 것이다. 두 변량 사이의 상관관계와 그 까닭으로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M3",
+          "no": 1,
+          "text": "양의 상관관계가 있다. 연습 횟수가 적고 걸린 시간이 짧은 점과 연습 횟수가 많고 걸린 시간이 긴 점이 있기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "음의 상관관계가 있다. 전체적으로 연습 횟수가 많을수록 걸린 시간이 짧아지는 경향이 있기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M2",
+          "no": 3,
+          "text": "상관관계가 없다. 한 변량이 커질 때 다른 변량이 작아지는 경향은 상관관계가 아니기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M3",
+          "no": 4,
+          "text": "상관관계가 없다. 전체와 다른 모습을 보이는 점이 몇 개 있기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "상관관계가 없다. 같은 횟수만큼 연습했어도 걸린 시간이 서로 다른 학생들이 있기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:31:59.984825+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "몇몇 점은 전체와 다른 모습을 보이지만, 전체적으로 보면 연습 횟수가 많을수록 걸린 시간이 짧아지는 경향이 있다. 따라서 음의 상관관계가 있다. 몇 개의 점만 보거나 전체와 다른 점이 있다는 이유로 판단해서는 안 된다. 한 변량이 커질 때 다른 변량이 작아지는 경향도 상관관계이다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 10.0
+          },
+          {
+            "x": 1.0,
+            "y": 11.0
+          },
+          {
+            "x": 1.0,
+            "y": 3.0
+          },
+          {
+            "x": 2.0,
+            "y": 9.0
+          },
+          {
+            "x": 2.0,
+            "y": 10.0
+          },
+          {
+            "x": 3.0,
+            "y": 8.0
+          },
+          {
+            "x": 3.0,
+            "y": 9.0
+          },
+          {
+            "x": 3.0,
+            "y": 2.0
+          },
+          {
+            "x": 4.0,
+            "y": 7.0
+          },
+          {
+            "x": 4.0,
+            "y": 8.0
+          },
+          {
+            "x": 5.0,
+            "y": 6.0
+          },
+          {
+            "x": 5.0,
+            "y": 7.0
+          },
+          {
+            "x": 6.0,
+            "y": 5.0
+          },
+          {
+            "x": 6.0,
+            "y": 6.0
+          },
+          {
+            "x": 7.0,
+            "y": 4.0
+          },
+          {
+            "x": 7.0,
+            "y": 5.0
+          },
+          {
+            "x": 8.0,
+            "y": 3.0
+          },
+          {
+            "x": 8.0,
+            "y": 4.0
+          },
+          {
+            "x": 8.0,
+            "y": 10.0
+          },
+          {
+            "x": 9.0,
+            "y": 2.0
+          },
+          {
+            "x": 9.0,
+            "y": 3.0
+          },
+          {
+            "x": 10.0,
+            "y": 2.0
+          },
+          {
+            "x": 10.0,
+            "y": 9.0
+          }
+        ],
+        "x_label": "연습 횟수(회)",
+        "x_max": 11.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "걸린 시간(분)",
+        "y_max": 12.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:31:59.877182+00:00",
+      "hard_condition": "definition-a",
+      "hard_condition_reason": "전체와 다른 모습을 보이는 점을 여럿 섞었다. 이런 점이 있어도 전체 경향을 보고 상관관계를 판단해야 한다.",
+      "id": "186feec1-859c-4c04-9adc-8b4d9442fd69",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:31:59.877084+00:00",
           "issues": [],
           "number": 1
         }
@@ -1031,7 +2904,7 @@
       ],
       "created_at": "2026-11-11T14:47:05.501897+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:30:16.428016+00:00",
       "explanation": "깊이가 깊어질수록 수온이 대체로 낮아지므로 음의 상관관계가 있다. 따라서 정답은 ③이다. ①처럼 일부 값만 보고 판단하지 않고 전체를 살펴보아야 한다. ②처럼 한 변량이 커질 때 다른 변량이 작아지는 경우에도 상관관계가 있다.",
       "figure": null,
       "generated_at": "2026-11-11T14:47:05.019752+00:00",
@@ -1044,7 +2917,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:47:05.019603+00:00",
@@ -1053,6 +2926,284 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.835972+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-정의이해",
+      "body": "다음 산점도는 어느 집의 여러 날에 대한 바깥 기온과 난방 시간을 나타낸 것이다. 두 변량 사이의 상관관계를 바르게 말한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "양의 상관관계가 있다. 기온이 높을수록 난방 시간이 길어지는 경향이 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "음의 상관관계가 있다. 기온이 높을수록 난방 시간이 짧아지는 경향이 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M2",
+          "no": 3,
+          "text": "상관관계가 없다. 기온이 높을수록 난방 시간이 짧아지기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "양의 상관관계가 있다. 기온이 높을수록 난방 시간이 짧아지는 경향이 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "음의 상관관계가 있다. 기온이 높을수록 난방 시간이 길어지는 경향이 있다."
+        }
+      ],
+      "created_at": "2026-11-12T06:30:35.532953+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점들이 전체적으로 오른쪽 아래로 향한다. 따라서 바깥 기온이 높을수록 난방 시간은 짧아지는 경향이 있으므로 음의 상관관계가 있다. 한 변량이 커질 때 다른 변량이 작아지는 경우에도 상관관계가 있다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 8.0
+          },
+          {
+            "x": 1.0,
+            "y": 9.0
+          },
+          {
+            "x": 2.0,
+            "y": 7.0
+          },
+          {
+            "x": 2.0,
+            "y": 8.0
+          },
+          {
+            "x": 3.0,
+            "y": 6.0
+          },
+          {
+            "x": 3.0,
+            "y": 7.0
+          },
+          {
+            "x": 4.0,
+            "y": 5.0
+          },
+          {
+            "x": 4.0,
+            "y": 6.0
+          },
+          {
+            "x": 5.0,
+            "y": 4.0
+          },
+          {
+            "x": 5.0,
+            "y": 5.0
+          },
+          {
+            "x": 6.0,
+            "y": 3.0
+          },
+          {
+            "x": 6.0,
+            "y": 4.0
+          },
+          {
+            "x": 7.0,
+            "y": 2.0
+          },
+          {
+            "x": 7.0,
+            "y": 3.0
+          },
+          {
+            "x": 8.0,
+            "y": 1.0
+          },
+          {
+            "x": 8.0,
+            "y": 2.0
+          }
+        ],
+        "x_label": "기온(℃)",
+        "x_max": 9.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "난방 시간(시간)",
+        "y_max": 10.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:30:35.482553+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "eba861a3-5633-49c0-9dc3-0488ef356cf3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:30:35.481970+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.862994+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-09-C2-정의이해",
+      "body": "다음 산점도는 여러 학생의 집에서 도서관까지의 거리와 한 달 동안 도서관을 방문한 횟수를 나타낸 것이다. 두 변량 사이의 상관관계를 바르게 말한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "거리가 멀수록 방문 횟수가 많아지는 경향이 있으므로 양의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "거리가 멀수록 방문 횟수가 많아지는 경향이 있으므로 음의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-09-M2",
+          "no": 3,
+          "text": "거리가 멀수록 방문 횟수가 적어지는 경향이 있으므로 상관관계가 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 4,
+          "text": "거리가 멀수록 방문 횟수가 적어지는 경향이 있으므로 음의 상관관계가 있다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "거리가 멀수록 방문 횟수가 적어지는 경향이 있으므로 양의 상관관계가 있다."
+        }
+      ],
+      "created_at": "2026-11-12T06:30:54.66835+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "점들은 전체적으로 오른쪽 아래로 향하고 있다. 집에서 도서관까지의 거리가 멀수록 방문 횟수가 적어지는 경향이 있으므로 음의 상관관계가 있다. 한 변량이 커질 때 다른 변량이 작아지는 경우에도 상관관계가 있음을 알아야 한다.",
+      "figure": {
+        "kind": "scatter",
+        "points": [
+          {
+            "x": 1.0,
+            "y": 9.0
+          },
+          {
+            "x": 1.0,
+            "y": 8.0
+          },
+          {
+            "x": 2.0,
+            "y": 8.0
+          },
+          {
+            "x": 2.0,
+            "y": 7.0
+          },
+          {
+            "x": 3.0,
+            "y": 7.0
+          },
+          {
+            "x": 3.0,
+            "y": 6.0
+          },
+          {
+            "x": 4.0,
+            "y": 6.0
+          },
+          {
+            "x": 4.0,
+            "y": 5.0
+          },
+          {
+            "x": 5.0,
+            "y": 5.0
+          },
+          {
+            "x": 5.0,
+            "y": 4.0
+          },
+          {
+            "x": 6.0,
+            "y": 4.0
+          },
+          {
+            "x": 6.0,
+            "y": 3.0
+          },
+          {
+            "x": 7.0,
+            "y": 3.0
+          },
+          {
+            "x": 8.0,
+            "y": 2.0
+          }
+        ],
+        "x_label": "거리(km)",
+        "x_max": 9.0,
+        "x_min": 0.0,
+        "x_step": 1.0,
+        "y_label": "방문 횟수(회)",
+        "y_max": 10.0,
+        "y_min": 0.0,
+        "y_step": 1.0
+      },
+      "generated_at": "2026-11-12T06:30:54.519301+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "b3f88194-4ba2-483c-a5b8-8a6a40cc1696",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:30:54.519009+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T15:40:41.976064+00:00",
@@ -1098,7 +3249,7 @@
       ],
       "created_at": "2026-11-11T14:47:59.717834+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:30:16.460194+00:00",
       "explanation": "기온이 높을수록 판매량이 대체로 적으므로 음의 상관관계가 있다. 한 변량이 커질 때 다른 변량이 작아져도 상관관계가 있을 수 있다. 또 일부 날의 자료만이 아니라 전체 경향을 살펴야 한다. 이 자료에서 상관관계가 있다고 해서 기온이 판매량에 영향을 준 것이 확실하다고 말할 수는 없다.",
       "figure": null,
       "generated_at": "2026-11-11T14:47:59.187811+00:00",
@@ -1111,7 +3262,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:47:31.203587+00:00",

@@ -1,6 +1,47 @@
 {
   "backlog": [
     {
+      "assessment_item_id": "9수04-08-C2-성질적용",
+      "attempts": [
+        {
+          "at": "2026-11-12T06:23:17.333855+00:00",
+          "issues": [
+            "14cm와 같은 값이 여러 개일 수 있으므로, 상자그림만으로 14cm 이상인 모종의 수를 각 농장의 약 25%, 약 50%로 정할 수 없다. 예를 들어 그림과 일치하면서 가 농장과 나 농장에 각각 30개씩 있는 자료도 가능하므로 어느 농장에 더 많은지 정할 수 없다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:24:19.526737+00:00",
+          "issues": [
+            "사분위수와 같은 값이 여러 개일 수 있어, 상자그림만으로 양 끝값을 포함한 구간의 실제 자료 비율을 정할 수 없다. 예를 들어 A가 0, 10, 10, 10, 12, 16, 16, 16, 16, 18이고 B가 2, 4, 4, 4, 6, 10, 10, 10, 10, 12이면 그림과 일치하지만, B의 중앙값부터 최댓값까지와 A의 16부터 18까지 모두 자료의 50%가 들어 있어 ⑤가 답이다.",
+            "보기 ②: 폭이 같으면 자료의 비율도 같다고 생각하면 B의 해당 구간과 폭이 같은 ②와 ④가 모두 후보여서, M2만으로 ②를 고르게 된다고 할 수 없다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:25:16.617716+00:00",
+          "issues": [
+            "두 모둠의 제3사분위수가 70점이어도 70점인 참가자가 여러 명이면 70점 이상인 비율은 각각 약 25%라고 정해지지 않는다. 같은 상자그림에 대해 A모둠의 비율이 더 높거나 B모둠의 비율이 더 높은 자료를 만들 수 있으므로 ④가 유일한 정답이 아니다.",
+            "application-b에 필요한 상황을 식으로 바꾸는 과정이 없다. 70점이 제3사분위수임을 확인하고 중앙값을 바로 비교하는 일반적인 상자그림 해석 문제이다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:25:17.644395+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T06:59:50.355169+00:00",
+      "variant": 2
+    },
+    {
       "assessment_item_id": "9수04-08-C3-성질적용",
       "attempts": [
         {
@@ -493,7 +534,7 @@
       ],
       "created_at": "2026-11-11T14:48:44.123457+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.42392+00:00",
       "explanation": "A 모둠의 중앙값은 $50$이고, 가운데 약 $50\\%$의 기록이 놓인 구간의 길이는 $70-30=40$이다. 따라서 B 모둠의 중앙값은 $50$보다 크고, 제3사분위수와 제1사분위수의 차는 $40$보다 작아야 한다. 또 B 모둠의 제3사분위수는 $70$이다.\n\n①은 중앙값이 $55$이고 두 사분위수의 차가 $30$이므로 알맞다. ②는 최댓값이 A 모둠보다 크지만 중앙값이 $45$이므로 알맞지 않다. 최댓값 하나만으로 중앙값을 비교해서는 안 된다. ③은 두 사분위수의 차가 $45$이고, ④는 제3사분위수가 $80$이다. ⑤는 중앙값이 A 모둠과 같다.",
       "figure": null,
       "generated_at": "2026-11-11T14:48:43.637242+00:00",
@@ -506,7 +547,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:47:47.564131+00:00",
@@ -521,6 +562,113 @@
           "at": "2026-11-11T14:48:43.637081+00:00",
           "issues": [],
           "number": 2
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.064091+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-성질적용",
+      "body": "다음 상자그림은 두 반 학생들의 하루 독서 시간을 각각 나타낸 것이다. 시간의 단위는 분이다.\n\n두 반 중 중앙값이 더 크고, 가운데 약 $50\\%$의 독서 시간이 차지하는 구간의 폭이 더 좁은 반을 고르려고 한다. 고른 반과 그 구간을 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "A반, $8$분부터 $18$분까지"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "A반, $2$분부터 $20$분까지"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "A반, $8$분부터 $14$분까지"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M3",
+          "no": 4,
+          "text": "B반, $6$분부터 $18$분까지"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "B반, $12$분부터 $24$분까지"
+        }
+      ],
+      "created_at": "2026-11-12T06:22:20.632939+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가운데 약 $50\\%$의 독서 시간이 차지하는 구간은 제1사분위수부터 제3사분위수까지이다. A반은 $8$분부터 $18$분까지이므로 폭이 $10$분이고, B반은 $6$분부터 $18$분까지이므로 폭이 $12$분이다. 중앙값도 A반이 $14$분, B반이 $12$분이므로 답은 ①이다.\n\n④처럼 최댓값만 보고 B반을 고르면 중앙값과 가운데 구간의 폭을 함께 비교하지 못한 것이다.",
+      "figure": {
+        "axis_max": 24.0,
+        "axis_min": 0.0,
+        "axis_step": 2.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "A반",
+            "max": 20.0,
+            "median": 14.0,
+            "min": 2.0,
+            "q1": 8.0,
+            "q3": 18.0
+          },
+          {
+            "label": "B반",
+            "max": 24.0,
+            "median": 12.0,
+            "min": 4.0,
+            "q1": 6.0,
+            "q3": 18.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:22:20.534829+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "가운데 약 50%가 차지하는 구간을 두 사분위수 사이의 구간으로 해석하고, 각 구간의 폭과 중앙값을 비교하여 반을 고르게 한다.",
+      "id": "914d09c0-3145-4ebe-b649-5e8829f582e5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:21:11.998256+00:00",
+          "issues": [
+            "가운데 절반의 범위를 사분위수의 차로 구해 비교하는 일반 문제로, 상황을 식으로 바꾸어 적용하는 고난이도 조건과 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:21:50.937044+00:00",
+          "issues": [
+            "고난도 조건 application-b를 충족하지 않는다. 가운데 약 50%가 제1사분위수부터 제3사분위수까지라는 성질을 바로 적용해 두 상자의 길이를 비교하는 일반적인 문제이다.",
+            "보기 ①: M2에서 나오는 구간이 아니다. 긴 사분위 구간에 자료가 더 많다고 보면 가장 긴 구간인 가반의 70~110분을 고를 수 있지만, 20~110분은 네 구간 전체이다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:22:20.534642+00:00",
+          "issues": [],
+          "number": 3
         }
       ],
       "variant": 1
@@ -569,7 +717,7 @@
       ],
       "created_at": "2026-11-11T14:51:35.365215+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.481479+00:00",
       "explanation": "중앙값은 가가 $12$, 나가 $18$이므로 나가 더 크다. 가운데 약 $50\\%$의 기록이 놓인 구간의 길이는 가가 $18-8=10$, 나가 $22-10=12$이므로 가가 더 좁다.\n\n가는 $18$이 제3사분위수이므로 $18$명보다 많은 날이 $10$일이다. 나는 $18$이 중앙값이므로 $18$명보다 많은 날이 $20$일이다. 따라서 세 번째도 나이다.\n\n①처럼 가의 최댓값만 보고 중앙값도 가가 더 크다고 판단하면 안 된다. ③처럼 $18$부터 최댓값까지의 구간이 가에서 더 길다고 해서 그 구간에 속하는 날이 더 많은 것은 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T14:51:34.535972+00:00",
@@ -582,7 +730,7 @@
       "question_type": "multiple_choice",
       "retry_count": 2,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:49:37.315373+00:00",
@@ -607,6 +755,96 @@
           "at": "2026-11-11T14:51:34.535830+00:00",
           "issues": [],
           "number": 3
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T07:03:57.178741+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-성질적용",
+      "body": "다음 상자그림은 A형 전구 $80$개와 B형 전구 $40$개가 각각 켜져 있던 시간을 나타낸 것이다. 시간의 단위는 시간이다. 각 종류에서 측정한 시간은 모두 서로 다르다.\n\n$70$시간 이상 켜져 있던 전구의 수를 비교한 것으로 가장 알맞은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "A형은 약 $20$개, B형은 약 $10$개이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M2",
+          "no": 2,
+          "text": "A형은 약 $40$개, B형은 약 $20$개이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "A형은 약 $20$개, B형은 약 $20$개이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "A형은 약 $10$개, B형은 약 $20$개이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "A형은 약 $20$개, B형은 약 $40$개이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:59:50.464932+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "A형의 제3사분위수는 $70$시간이므로, $70$시간 이상 켜져 있던 전구는 전체의 약 $25\\%$인 약 $20$개이다. B형의 중앙값은 $70$시간이므로, $70$시간 이상 켜져 있던 전구는 전체의 약 $50\\%$인 약 $20$개이다. 따라서 두 종류의 전구 수는 비슷하다.\n\nA형에서 $70$시간부터 최댓값까지의 구간이 길다고 해서 그 구간에 전구가 더 많이 들어 있는 것은 아니다. 상자그림에서 구간의 길이는 자료가 흩어진 정도를 나타낸다.",
+      "figure": {
+        "axis_max": 100.0,
+        "axis_min": 0.0,
+        "axis_step": 5.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "A형",
+            "max": 100.0,
+            "median": 45.0,
+            "min": 10.0,
+            "q1": 30.0,
+            "q3": 70.0
+          },
+          {
+            "label": "B형",
+            "max": 95.0,
+            "median": 70.0,
+            "min": 15.0,
+            "q1": 45.0,
+            "q3": 80.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:59:50.297836+00:00",
+      "hard_condition": "application-b",
+      "hard_condition_reason": "$70$시간 이상인 전구의 비율을 각 상자그림에서 읽고, 종류별 전구 수에 적용하여 실제 전구 수를 비교해야 한다.",
+      "id": "d48e12d9-cd0b-42b0-82e2-5a5c99678655",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:59:50.297357+00:00",
+          "issues": [],
+          "number": 1
         }
       ],
       "variant": 2
@@ -655,7 +893,7 @@
       ],
       "created_at": "2026-11-11T14:46:15.273578+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.539259+00:00",
       "explanation": "A반의 제3사분위수와 제1사분위수의 차는 $15-5=10$이고, B반은 $17-9=8$이다. 따라서 ③이 옳다.\n\n①은 최댓값이 큰 반의 중앙값도 더 크다고 생각한 것이다. 중앙값은 A반이 $10$, B반이 $12$이다. ②는 두 사분위수의 차를 잘못 비교한 것이다.\n\n④는 제3사분위수부터 최댓값까지의 길이가 더 길면 그 구간에 있는 자료도 더 많다고 생각한 것이다. 각 반의 점수는 $10$개이고 서로 다르므로, 제3사분위수보다 큰 점수는 각 반에 $2$개씩 있다. ⑤에서 중앙값보다 작은 점수는 $5$개이다.",
       "figure": null,
       "generated_at": "2026-11-11T14:46:14.782914+00:00",
@@ -668,10 +906,100 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:46:14.782797+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.098363+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-성질적용",
+      "body": "다음 상자그림은 A반과 B반 학생들의 수학 시험 점수를 나타낸 것이다. 단위는 점이다. 중앙값이 더 큰 반과 제3사분위수에서 제1사분위수를 뺀 값이 더 큰 반을 차례로 바르게 짝 지은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M3",
+          "no": 1,
+          "text": "A반, A반"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "A반, B반"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "B반, A반"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "B반, B반"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "같다, 같다"
+        }
+      ],
+      "created_at": "2026-11-12T06:19:54.723696+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "중앙값은 A반이 $6$점, B반이 $10$점이므로 B반이 더 크다. 제3사분위수에서 제1사분위수를 뺀 값은 A반이 $14-4=10$점, B반이 $12-6=6$점이므로 A반이 더 크다. A반의 최댓값이 더 크다는 것만으로 A반의 중앙값도 더 크다고 판단해서는 안 된다.",
+      "figure": {
+        "axis_max": 20.0,
+        "axis_min": 0.0,
+        "axis_step": 2.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "A반",
+            "max": 18.0,
+            "median": 6.0,
+            "min": 2.0,
+            "q1": 4.0,
+            "q3": 14.0
+          },
+          {
+            "label": "B반",
+            "max": 16.0,
+            "median": 10.0,
+            "min": 0.0,
+            "q1": 6.0,
+            "q3": 12.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:19:54.676551+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "4db6c4cd-091b-4656-8db4-f879c6a01a40",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:19:54.676253+00:00",
           "issues": [],
           "number": 1
         }
@@ -722,7 +1050,7 @@
       ],
       "created_at": "2026-11-11T14:46:46.314549+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.579546+00:00",
       "explanation": "A와 B의 제1사분위수부터 제3사분위수까지의 길이는 각각 $18$cm, $13$cm이다. 따라서 정답은 ③이다.\n\n① A의 제1사분위수는 B보다 작다. ② 최댓값이 더 크다고 중앙값도 더 큰 것은 아니다. 실제로 중앙값은 B가 더 크다. ④ B에서 $28$cm 이상인 식물은 전체의 $25\\%$이다. ⑤ A에서 두 구간에 속하는 식물은 각각 $3$그루이다. 구간의 길이가 더 길다고 그 구간에 속하는 식물이 더 많은 것은 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T14:46:45.787743+00:00",
@@ -735,7 +1063,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:46:45.787646+00:00",
@@ -744,6 +1072,195 @@
         }
       ],
       "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.136224+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-성질적용",
+      "body": "다음 상자그림은 두 사람의 하루 걸음 수를 각각 100일 동안 조사하여 나타낸 것이다. 단위는 천 걸음이다. 각 사람의 100일 동안의 걸음 수는 모두 서로 달랐다.\n\n하루에 8천 걸음 이상 걸은 날의 비율을 가와 나에 대해 차례로 바르게 나타낸 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M2",
+          "no": 1,
+          "text": "가: 약 $50\\%$, 나: 약 $25\\%$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "가: 약 $25\\%$, 나: 약 $25\\%$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "가: 약 $25\\%$, 나: 약 $50\\%$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "가: 약 $50\\%$, 나: 약 $50\\%$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "가: 약 $75\\%$, 나: 약 $50\\%$"
+        }
+      ],
+      "created_at": "2026-11-12T06:20:25.00421+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가의 제3사분위수는 8천 걸음이므로 8천 걸음 이상 걸은 날은 전체의 약 $25\\%$이다. 나의 중앙값은 8천 걸음이므로 8천 걸음 이상 걸은 날은 전체의 약 $50\\%$이다. 따라서 정답은 ③이다.\n\n①처럼 그림에서 8보다 오른쪽인 부분의 길이가 더 긴 가의 비율이 더 크다고 생각하면 안 된다. 상자그림에서 구간의 길이는 자료가 흩어진 정도를 나타낸다.",
+      "figure": {
+        "axis_max": 14.0,
+        "axis_min": 0.0,
+        "axis_step": 1.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "가",
+            "max": 14.0,
+            "median": 4.0,
+            "min": 2.0,
+            "q1": 3.0,
+            "q3": 8.0
+          },
+          {
+            "label": "나",
+            "max": 12.0,
+            "median": 8.0,
+            "min": 2.0,
+            "q1": 6.0,
+            "q3": 10.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:20:24.951693+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "ff860213-71c6-4c45-9cfb-d2e3cf44f48a",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:20:24.951296+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.172615+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-오개념판별",
+      "body": "다음 상자그림은 A반과 B반 학생들이 같은 문제를 푸는 데 걸린 시간을 나타낸 것이다. 각 반의 학생은 $20$명이고, 각 반에서 학생들의 기록은 모두 다르다.\n\n그림을 보고 한 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M2",
+          "no": 1,
+          "text": "A반에서 제1사분위수부터 중앙값까지의 구간이 중앙값부터 제3사분위수까지의 구간보다 길므로, 앞의 구간에 속한 학생이 더 많아."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M2",
+          "no": 2,
+          "text": "제3사분위수부터 최댓값까지의 구간은 A반이 B반보다 길므로, 이 구간에 속한 학생은 A반이 더 많아."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M3",
+          "no": 3,
+          "text": "A반의 최댓값이 B반보다 크므로, A반의 중앙값도 B반보다 커."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "B반의 중앙값이 A반보다 크므로, B반의 최댓값도 A반보다 커."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "제1사분위수부터 제3사분위수까지의 길이는 B반이 더 길므로, 가운데 절반의 기록은 B반이 더 넓게 퍼져 있어."
+        }
+      ],
+      "created_at": "2026-11-12T06:21:52.897707+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정답은 ⑤이다. A반에서 제1사분위수부터 제3사분위수까지의 길이는 $9-4=5$이고, B반에서는 $12-5=7$이다. 따라서 가운데 절반의 기록은 B반이 더 넓게 퍼져 있다.\n\n①과 ②는 구간의 길이가 길면 그 구간에 속한 학생도 더 많다고 잘못 생각한 말이다. 각 반에서 최솟값부터 제1사분위수까지, 제1사분위수부터 중앙값까지, 중앙값부터 제3사분위수까지, 제3사분위수부터 최댓값까지에는 각각 $5$명의 기록이 있다.\n\n③은 최댓값만으로 중앙값까지 비교한 말이다. A반의 최댓값은 더 크지만 중앙값은 더 작다. ④도 중앙값만으로 최댓값을 판단한 말이다. B반의 중앙값은 더 크지만 최댓값은 더 작다.",
+      "figure": {
+        "axis_max": 14.0,
+        "axis_min": 0.0,
+        "axis_step": 1.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "A반",
+            "max": 14.0,
+            "median": 8.0,
+            "min": 2.0,
+            "q1": 4.0,
+            "q3": 9.0
+          },
+          {
+            "label": "B반",
+            "max": 13.0,
+            "median": 10.0,
+            "min": 1.0,
+            "q1": 5.0,
+            "q3": 12.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:21:52.781201+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "다른 학생들의 말을 보고 옳고 그름을 판단하게 했다. 구간의 길이와 학생 수의 관계, 한 값만으로 다른 값을 판단할 수 있는지를 함께 살펴야 한다.",
+      "id": "3f8dcc5b-1dc8-4dc6-bef8-ae967feb3210",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 1,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:21:21.070978+00:00",
+          "issues": [
+            "보기 ②: M3는 최댓값만 보고 B의 분포가 더 높다고 판단하는 오류이지, 그림에서 B의 제3사분위수가 A보다 작게 표시되어 있는데도 더 크다고 판단하는 오류는 아니다.",
+            "보기 ③: M3는 최솟값만 보고 A의 분포가 더 높다고 판단하는 오류이지, 그림에서 A의 중앙값이 B보다 작게 표시되어 있는데도 더 크다고 판단하는 오류는 아니다. 따라서 ②와 ③으로 의도한 M3를 판별하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:21:52.780899+00:00",
+          "issues": [],
+          "number": 2
+        }
+      ],
+      "variant": 1
     },
     {
       "approved_at": "2026-11-11T15:40:40.701501+00:00",
@@ -789,7 +1306,7 @@
       ],
       "created_at": "2026-11-11T14:54:20.644661+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.481434+00:00",
       "explanation": "③이 옳다. 각 모둠의 기록이 $10$개이고 모두 다르므로, A에서 $3$ 이상 $6$ 이하인 기록과 B에서 $7$ 이상 $11$ 이하인 기록은 각각 $3$개이다.\n\n①은 구간이 더 길면 그 구간에 기록이 더 많다고 잘못 생각한 것이다. A에서 $3$ 이상 $6$ 이하인 기록과 $6$ 이상 $10$ 이하인 기록은 각각 $3$개이다.\n\n②와 ④는 최댓값이나 최솟값 하나만으로 두 모둠을 비교한 것이다. B의 최솟값은 A의 최댓값보다 작고, A의 중앙값은 B의 중앙값보다 작다.\n\n⑤에서 A의 상자는 B의 상자보다 짧다. 따라서 가운데 절반의 기록은 A가 B보다 더 좁게 퍼져 있다.",
       "figure": null,
       "generated_at": "2026-11-11T14:54:20.122935+00:00",
@@ -802,7 +1319,7 @@
       "question_type": "multiple_choice",
       "retry_count": 1,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:53:42.930722+00:00",
@@ -819,6 +1336,96 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.226775+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-오개념판별",
+      "body": "다음 상자그림은 가 온실과 나 온실에서 기른 화분의 수확량을 나타낸 것이다. 각 온실의 화분은 $10$개이고, 같은 온실에서 화분별 수확량은 모두 다르다.\n\n그림을 보고 한 학생들의 말 중 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M2",
+          "no": 1,
+          "text": "가 온실에서 제1사분위수 이상 중앙값 이하인 화분이 중앙값 이상 제3사분위수 이하인 화분보다 많아. 앞 구간이 더 길기 때문이야."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M2",
+          "no": 2,
+          "text": "나 온실에서 최솟값 이상 제1사분위수 이하인 화분이 제3사분위수 이상 최댓값 이하인 화분보다 많아. 앞 수염이 더 길기 때문이야."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "제1사분위수 이상 중앙값 이하인 화분의 수는 두 온실이 같아."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M3",
+          "no": 4,
+          "text": "최댓값이 더 큰 가 온실의 중앙값도 나 온실보다 커."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M3",
+          "no": 5,
+          "text": "최댓값이 더 큰 가 온실의 제3사분위수도 나 온실보다 커."
+        }
+      ],
+      "created_at": "2026-11-12T06:22:22.673072+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "각 온실에서 수확량을 작은 것부터 나열하면 제1사분위수는 세 번째 값이고, 중앙값은 다섯 번째 값과 여섯 번째 값 사이에 있다. 따라서 제1사분위수 이상 중앙값 이하인 화분은 각 온실에서 $3$개씩이다. 정답은 ③이다.\n\n①과 ②는 구간이 더 길면 그 구간에 속하는 자료가 더 많다고 잘못 생각한 것이다. 각 구간에 속하는 화분은 $3$개씩이다.\n\n④와 ⑤는 최댓값만 보고 다른 수치도 더 클 것이라고 잘못 생각한 것이다. 그림에서 중앙값과 제3사분위수는 모두 나 온실이 가 온실보다 크다.",
+      "figure": {
+        "axis_max": 20.0,
+        "axis_min": 0.0,
+        "axis_step": 2.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "가 온실",
+            "max": 20.0,
+            "median": 10.0,
+            "min": 2.0,
+            "q1": 4.0,
+            "q3": 12.0
+          },
+          {
+            "label": "나 온실",
+            "max": 18.0,
+            "median": 12.0,
+            "min": 4.0,
+            "q1": 8.0,
+            "q3": 16.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:22:22.598854+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "각 보기에서 한 학생의 말을 제시하고, 상자그림을 바탕으로 옳고 그름을 판단하게 했다.",
+      "id": "1026f0ec-e8cc-4bba-8737-d8644322c582",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:22:22.598139+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T15:40:40.737674+00:00",
@@ -864,7 +1471,7 @@
       ],
       "created_at": "2026-11-11T14:54:59.868931+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.528183+00:00",
       "explanation": "지수의 제1사분위수는 $4$분, 중앙값은 $6$분, 제3사분위수는 $8$분이다. 민수의 중앙값은 $7$분이므로 민수의 중앙값이 더 크다. 최댓값은 지수가 더 크므로 ⑤가 옳다.\n\n① 지수의 기록에서 $2$분 이상 $4$분 이하인 날과 $8$분 이상 $14$분 이하인 날은 각각 $2$일이다. 구간이 더 길다고 기록이 더 많은 것은 아니다.\n\n② 최댓값만으로 중앙값의 크기를 판단할 수 없다. 실제로 중앙값은 민수가 더 크다.\n\n③ 제1사분위수부터 제3사분위수까지의 구간에는 두 사람 모두 기록이 $4$개씩 있다. 구간이 더 길다고 기록이 더 많은 것은 아니다.\n\n④ 지수의 최솟값이 민수보다 크더라도 지수의 모든 기록이 민수의 모든 기록보다 큰 것은 아니다. 지수의 최솟값 $2$분은 민수의 최댓값 $12$분보다 작다.",
       "figure": null,
       "generated_at": "2026-11-11T14:54:59.360017+00:00",
@@ -877,7 +1484,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:54:59.359842+00:00",
@@ -931,7 +1538,7 @@
       ],
       "created_at": "2026-11-11T14:52:07.055798+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.554895+00:00",
       "explanation": "B의 중앙값은 $8$이고 A의 중앙값은 $6$이므로 ①이 옳다.\n\n②에서 A의 제1사분위수부터 중앙값까지와 중앙값부터 제3사분위수까지의 구간에는 자료가 각각 $3$개씩 있다. 구간이 길다고 그 안의 자료가 더 많은 것은 아니다.\n\n③처럼 최댓값 하나만으로 어느 모둠의 자료가 전체적으로 더 높은지 판단할 수는 없다. 이 경우 중앙값은 B가 더 크다.\n\n④에서는 제1사분위수가, ⑤에서는 최솟값이 더 큰 모둠을 잘못 찾았다.",
       "figure": null,
       "generated_at": "2026-11-11T14:52:06.549882+00:00",
@@ -944,7 +1551,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:52:06.549741+00:00",
@@ -953,6 +1560,186 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.2628+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-오개념판별",
+      "body": "다음 상자그림은 가 모둠과 나 모둠 학생들이 하루 동안 독서한 시간을 분 단위로 나타낸 것이다. 각 모둠의 학생은 $20$명이고, 같은 모둠 안에서 독서 시간이 같은 학생은 없다. 그림을 보고 한 말로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M2",
+          "no": 1,
+          "text": "가 모둠에서 중앙값부터 제3사분위수까지의 구간이 더 길므로, 이 구간의 학생 수가 제1사분위수부터 중앙값까지의 구간의 학생 수보다 많다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M3",
+          "no": 2,
+          "text": "가 모둠의 최댓값이 더 크므로, 가 모둠 학생들의 독서 시간은 대체로 나 모둠보다 길다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "독서 시간의 중앙값은 나 모둠이 가 모둠보다 크다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "독서 시간의 제3사분위수는 가 모둠이 나 모둠보다 크다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "최솟값부터 최댓값까지의 길이는 가 모둠이 나 모둠보다 짧다."
+        }
+      ],
+      "created_at": "2026-11-12T06:20:01.817666+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가 모둠의 중앙값은 $6$분이고 나 모둠의 중앙값은 $10$분이므로 ③이 옳다. ①에서 가 모둠의 중앙값부터 제3사분위수까지가 더 길지만, 두 구간에 들어 있는 학생 수는 각각 $5$명으로 같다. 구간이 길다고 학생 수가 더 많은 것은 아니다. ②처럼 최댓값 하나만으로 두 모둠의 독서 시간을 비교할 수는 없다. ④에서 두 모둠의 제3사분위수는 모두 $12$분이다. ⑤에서 최솟값부터 최댓값까지의 길이는 가 모둠이 $16$분, 나 모둠이 $12$분이다.",
+      "figure": {
+        "axis_max": 20.0,
+        "axis_min": 0.0,
+        "axis_step": 2.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "가 모둠",
+            "max": 18.0,
+            "median": 6.0,
+            "min": 2.0,
+            "q1": 4.0,
+            "q3": 12.0
+          },
+          {
+            "label": "나 모둠",
+            "max": 16.0,
+            "median": 10.0,
+            "min": 4.0,
+            "q1": 8.0,
+            "q3": 12.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:20:01.76617+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "a011a47f-6953-4e5a-a107-a7abb274d222",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:20:01.765854+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.304435+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-오개념판별",
+      "body": "다음 상자그림은 두 화단 A, B에서 자라는 식물의 키를 cm 단위로 나타낸 것이다. 각 화단에는 식물이 $10$개씩 있고, 같은 화단에서 키가 같은 식물은 없다. 그림을 보고 한 말로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "키의 최솟값은 A가 B보다 크다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M2",
+          "no": 2,
+          "text": "A에서 제3사분위수부터 최댓값까지의 구간에 속한 식물이 최솟값부터 제1사분위수까지의 구간에 속한 식물보다 많다. 앞의 구간이 더 길기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "키의 중앙값은 B가 A보다 크다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수04-08-M3",
+          "no": 4,
+          "text": "A의 식물은 B의 식물보다 키가 전반적으로 더 크다. A의 최댓값이 B보다 크기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "키의 제3사분위수는 A가 B보다 크다."
+        }
+      ],
+      "created_at": "2026-11-12T06:20:26.13362+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "B의 중앙값은 $16$cm이고 A의 중앙값은 $14$cm이므로 ③이 옳다. ①에서 A의 최솟값은 B보다 작다. ②에서 구간의 길이가 더 길다고 그 구간에 속한 식물이 더 많은 것은 아니다. 두 구간에 속한 식물은 각각 $3$개이다. ④에서 최댓값 하나만으로 어느 화단 식물의 키가 전반적으로 더 큰지 판단할 수 없다. 오히려 중앙값은 B가 더 크다. ⑤에서 A의 제3사분위수는 B보다 작다.",
+      "figure": {
+        "axis_max": 24.0,
+        "axis_min": 8.0,
+        "axis_step": 2.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "화단 A",
+            "max": 24.0,
+            "median": 14.0,
+            "min": 10.0,
+            "q1": 12.0,
+            "q3": 16.0
+          },
+          {
+            "label": "화단 B",
+            "max": 20.0,
+            "median": 16.0,
+            "min": 12.0,
+            "q1": 14.0,
+            "q3": 18.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:20:26.077037+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "13eaff09-9079-4c96-b327-2e963ea3f6e3",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:20:26.076771+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T15:40:40.802067+00:00",
@@ -998,7 +1785,7 @@
       ],
       "created_at": "2026-11-11T14:52:50.911374+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:19:34.58837+00:00",
       "explanation": "A에서 제1사분위수부터 중앙값까지와 중앙값부터 제3사분위수까지에는 각각 식물 $5$그루가 있다. 구간이 더 길다고 그 구간에 속하는 식물이 더 많은 것은 아니다.\n\nA의 최댓값은 B보다 크지만, 최댓값 하나만으로 어느 화단의 식물이 대체로 더 큰지 판단할 수 없다. 중앙값은 B가 A보다 크므로 ③이 옳다.\n\nA에서 중앙값보다 키가 작은 식물과 큰 식물은 각각 $10$그루이다. 또 B의 중앙값 $18$은 A의 제3사분위수 $27$보다 작다.",
       "figure": null,
       "generated_at": "2026-11-11T14:52:50.407518+00:00",
@@ -1011,7 +1798,7 @@
       "question_type": "multiple_choice",
       "retry_count": 0,
       "rubric": [],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:52:50.407376+00:00",
@@ -1022,6 +1809,104 @@
       "variant": 2
     },
     {
+      "approved_at": "2026-11-12T06:51:48.344381+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-이유설명",
+      "body": "다음 상자그림은 가 반과 나 반 학생이 각각 $10$명씩 참여한 기록의 분포를 나타낸 것이다. 기록은 점수가 높을수록 좋다.\n\n민수는 “어느 두 집단이든 최댓값이 더 큰 집단의 중앙값도 반드시 더 크다.”라고 말했다. 그림을 반례로 삼아 민수의 말이 틀린 이유를 설명하시오.\n\n또 중앙값을 기준으로 어느 반의 기록이 대체로 더 높은지 쓰시오. 각 반의 가운데 절반에 해당하는 기록은 어느 반에서 더 좁은 구간에 모여 있는지도 쓰시오. 그림에서 읽은 수를 근거로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:27:35.292768+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "가 반의 최댓값은 $14$이고 나 반의 최댓값은 $12$이다. 하지만 중앙값은 가 반이 $6$, 나 반이 $8$이다. 따라서 최댓값이 더 큰 집단의 중앙값도 반드시 더 크다는 말은 틀리다. 최댓값 하나만으로 기록이 대체로 어느 쪽이 높은지 판단해서는 안 된다.\n\n중앙값을 기준으로 보면 나 반의 기록이 대체로 더 높다. 가 반에서 가운데 절반의 기록은 $3$부터 $9$까지로 구간의 길이가 $6$이다. 나 반에서는 $5$부터 $9$까지로 구간의 길이가 $4$이므로 나 반의 가운데 절반이 더 좁은 구간에 모여 있다. 상자가 길다고 해서 그 구간에 자료가 더 많이 들어 있는 것은 아니다.",
+      "figure": {
+        "axis_max": 15.0,
+        "axis_min": 0.0,
+        "axis_step": 1.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "가 반",
+            "max": 14.0,
+            "median": 6.0,
+            "min": 1.0,
+            "q1": 3.0,
+            "q3": 9.0
+          },
+          {
+            "label": "나 반",
+            "max": 12.0,
+            "median": 8.0,
+            "min": 3.0,
+            "q1": 5.0,
+            "q3": 9.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:27:35.155914+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "최댓값이 더 큰 집단의 중앙값도 반드시 더 크다는 주장에 대해, 본문의 상자그림을 반례로 사용하여 틀린 이유를 설명하게 한다.",
+      "id": "3a19e307-67a8-4c4a-ac87-bcd7430c49f9",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가 반의 최댓값은 $14$로 나 반의 최댓값 $12$보다 크지만, 중앙값은 가 반이 $6$으로 나 반의 $8$보다 작다. 따라서 이 그림은 민수의 말이 틀렸음을 보여 주는 반례이다.\n\n중앙값이 더 큰 나 반의 기록이 대체로 더 높다. 가운데 절반의 기록은 가 반에서 $3$부터 $9$까지, 나 반에서 $5$부터 $9$까지이다. 구간의 길이는 각각 $6$, $4$이므로 나 반의 가운데 절반이 더 좁은 구간에 모여 있다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 2,
+      "rubric": [
+        {
+          "description": "두 반의 최댓값과 중앙값을 각각 읽고, 최댓값의 크기와 중앙값의 크기가 반대 순서임을 들어 민수의 말을 반박한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 반의 중앙값을 근거로 나 반의 기록이 대체로 더 높다고 설명한다.",
+          "no": 2,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 반의 가운데 절반에 해당하는 구간 또는 그 길이를 비교하여 나 반이 더 좁은 구간에 모여 있다고 설명한다.",
+          "no": 3,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-08-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:26:38.052912+00:00",
+          "issues": [
+            "해설은 학생 수가 같으므로 각 상자에 해당하는 학생 수도 같다고 단정한다. 사분위수와 같은 기록이 여러 개 있을 수 있어, 각 상자 구간에 속하는 학생 수는 반드시 같지 않다."
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:27:10.004988+00:00",
+          "issues": [
+            "본문과 그림에 독서 시간의 단위가 없어, 그림의 수치를 모범 답안처럼 분 단위로 해석할 근거가 없다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:27:35.155430+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 1
+    },
+    {
       "approved_at": "2026-11-11T15:40:40.82934+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수04-08-C2-이유설명",
@@ -1029,7 +1914,7 @@
       "choices": [],
       "created_at": "2026-11-11T14:56:35.407239+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:22.969666+00:00",
       "explanation": "중앙값은 B반이 $75$점으로 A반의 $60$점보다 높다. 따라서 B반의 점수가 대체로 더 높다고 볼 수 있다. 가운데 절반의 점수가 있는 구간의 길이는 A반이 $70-50=20$점, B반이 $80-65=15$점이므로 B반이 더 좁다.\n\n표의 다섯 수치에 맞는 실제 점수의 예를 만들면 친구의 말이 틀렸음을 보일 수 있다. A반의 최댓값은 더 크지만 중앙값은 더 작기 때문이다. 최댓값 하나만 보고 어느 반의 점수가 대체로 더 높다고 판단하면 안 된다. 또 점수 구간의 길이가 길다고 해서 그 구간에 점수가 더 많이 들어 있다고 볼 수도 없다.",
       "figure": null,
       "generated_at": "2026-11-11T14:56:34.775244+00:00",
@@ -1077,7 +1962,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:56:34.775158+00:00",
@@ -1095,7 +1980,7 @@
       "choices": [],
       "created_at": "2026-11-11T14:57:12.261783+00:00",
       "difficulty": "hard",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:23.00872+00:00",
       "explanation": "토끼 모둠의 중앙값은 $9$로 다람쥐 모둠의 $7$보다 크다. 제$1$사분위수도 토끼 모둠이 더 크고, 제$3$사분위수는 두 모둠이 같다. 따라서 토끼 모둠의 학생들이 책을 대체로 더 많이 빌렸다. 최댓값이나 최솟값 하나만으로는 어느 모둠이 대체로 더 많이 빌렸는지 판단하기 어렵다.\n\n가운데 절반을 비교하면 다람쥐 모둠은 $4$부터 $10$까지로 구간의 길이가 $6$이고, 토끼 모둠은 $7$부터 $10$까지로 길이가 $3$이다. 따라서 토끼 모둠의 가운데 절반이 더 좁은 구간에 모여 있다. 하지만 전체를 비교하면 다람쥐 모둠은 $2$부터 $14$까지로 길이가 $12$이고, 토끼 모둠은 $1$부터 $18$까지로 길이가 $17$이다. 이 표는 친구의 말이 틀렸음을 보여 주는 반례이다.",
       "figure": null,
       "generated_at": "2026-11-11T14:57:11.738093+00:00",
@@ -1143,10 +2028,88 @@
           "required": false
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:57:11.737931+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.378762+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-이유설명",
+      "body": "다음 상자그림은 두 종류의 식물을 각각 $14$개씩 기른 뒤 잰 키를 나타낸 것이다. 키의 단위는 $\\mathrm{cm}$이다.\n\n소라는 “최댓값과 최솟값의 차가 더 큰 쪽은 가운데 절반의 키도 더 넓은 구간에 모여 있다.”라고 말했다. 이 그림을 반례로 삼아 소라의 말이 틀린 이유를 설명하시오.\n\n또 중앙값을 기준으로 어느 종류의 키가 대체로 더 큰지 쓰고, 그림에서 읽은 수를 근거로 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:27:58.207279+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "A의 최댓값과 최솟값의 차는 $24-2=22$, B의 차는 $22-6=16$이다. 하지만 가운데 절반이 모여 있는 구간의 길이는 A가 $14-10=4$, B가 $18-8=10$이다. 따라서 두 차의 크기만으로 가운데 절반이 어느 쪽에서 더 넓게 퍼져 있는지 판단할 수 없다.\n\n중앙값은 A가 $12$, B가 $16$이므로 B의 키가 대체로 더 크다. 최댓값만 보고 A의 키가 대체로 더 크다고 판단해서는 안 된다.",
+      "figure": {
+        "axis_max": 24.0,
+        "axis_min": 0.0,
+        "axis_step": 2.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "A",
+            "max": 24.0,
+            "median": 12.0,
+            "min": 2.0,
+            "q1": 10.0,
+            "q3": 14.0
+          },
+          {
+            "label": "B",
+            "max": 22.0,
+            "median": 16.0,
+            "min": 6.0,
+            "q1": 8.0,
+            "q3": 18.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:27:58.13829+00:00",
+      "hard_condition": "explanation-b",
+      "hard_condition_reason": "두 상자그림을 반례로 삼아 최댓값과 최솟값의 차와 가운데 절반이 모인 구간의 길이를 비교하도록 했다.",
+      "id": "daf27ad3-16b0-4559-b7b3-1f3b6200ff48",
+      "model": "gpt-6.1-terra",
+      "model_answer": "최댓값과 최솟값의 차는 A가 $22\\,\\mathrm{cm}$, B가 $16\\,\\mathrm{cm}$로 A가 더 크다. 그러나 가운데 절반이 모여 있는 구간의 길이는 A가 $14-10=4\\,\\mathrm{cm}$, B가 $18-8=10\\,\\mathrm{cm}$로 B가 더 크다. 따라서 이 그림은 소라의 말이 틀렸음을 보여 준다.\n\n중앙값은 A가 $12\\,\\mathrm{cm}$, B가 $16\\,\\mathrm{cm}$이므로 B의 키가 대체로 더 크다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "최댓값과 최솟값의 차가 A는 $22\\,\\mathrm{cm}$, B는 $16\\,\\mathrm{cm}$임을 구하여 A가 더 크다고 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "가운데 절반이 모인 구간의 길이가 A는 $4\\,\\mathrm{cm}$, B는 $10\\,\\mathrm{cm}$임을 구하고, 이를 앞의 비교와 연결하여 소라의 말이 틀린 이유를 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [],
+          "required": true
+        },
+        {
+          "description": "두 중앙값이 각각 $12\\,\\mathrm{cm}$와 $16\\,\\mathrm{cm}$임을 근거로 B의 키가 대체로 더 크다고 설명했다.",
+          "no": 3,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수04-08-M3"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:27:58.138128+00:00",
           "issues": [],
           "number": 1
         }
@@ -1161,7 +2124,7 @@
       "choices": [],
       "created_at": "2026-11-11T14:55:25.338094+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:23.071317+00:00",
       "explanation": "B반의 중앙값은 $78$점으로 A반의 $70$점보다 높다. 따라서 중앙값을 기준으로 하면 B반의 점수가 대체로 더 높다.\n\n점수의 가운데 절반이 놓인 범위는 A반이 $60$점부터 $80$점까지로 $20$점이고, B반이 $72$점부터 $84$점까지로 $12$점이다. 따라서 B반의 점수 가운데 절반이 더 좁은 범위에 모여 있다.\n\n최댓값만 보면 A반이 더 높지만, 이것만으로 어느 반의 점수가 대체로 더 높은지 판단할 수는 없다. 또 범위가 더 넓다고 해서 그 안에 점수가 더 많이 들어 있는 것은 아니다.",
       "figure": null,
       "generated_at": "2026-11-11T14:55:24.813338+00:00",
@@ -1193,10 +2156,83 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:55:24.813252+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.404516+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-이유설명",
+      "body": "다음 그림은 A반과 B반 학생들의 점수를 나타낸 상자그림이다. 중앙값을 기준으로 어느 반의 점수가 대체로 더 높은지 설명하시오. 또 가운데 $50\\%$의 점수는 어느 반이 더 좁은 범위에 모여 있는지 설명하시오. 각각 그림에서 읽은 값을 근거로 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:25:43.160734+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "A반과 B반의 중앙값은 각각 $60$점, $70$점이므로 B반의 점수가 대체로 더 높다. 가운데 $50\\%$의 점수가 있는 구간의 길이는 A반이 $20$점, B반이 $10$점이므로 B반이 더 좁은 범위에 모여 있다. 최댓값만 보고 대체로 높은 반을 판단할 수는 없다. 또 상자가 길다고 해서 그 구간에 자료가 더 많이 들어 있는 것은 아니다.",
+      "figure": {
+        "axis_max": 90.0,
+        "axis_min": 30.0,
+        "axis_step": 5.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "A반",
+            "max": 90.0,
+            "median": 60.0,
+            "min": 30.0,
+            "q1": 50.0,
+            "q3": 70.0
+          },
+          {
+            "label": "B반",
+            "max": 85.0,
+            "median": 70.0,
+            "min": 40.0,
+            "q1": 65.0,
+            "q3": 75.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:25:43.100995+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "c8d31b34-47a4-478a-a729-562b1039cca7",
+      "model": "gpt-6.1-terra",
+      "model_answer": "중앙값이 A반은 $60$점, B반은 $70$점이므로 B반의 점수가 대체로 더 높다. 가운데 $50\\%$의 점수가 있는 구간은 A반이 $50$점부터 $70$점까지이고 B반이 $65$점부터 $75$점까지이다. 따라서 B반의 점수가 더 좁은 범위에 모여 있다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 반의 중앙값을 비교하여 B반의 점수가 대체로 더 높다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 반의 제1사분위수와 제3사분위수 사이의 구간 또는 그 길이를 비교하여 B반의 가운데 $50\\%$ 점수가 더 좁은 범위에 모여 있다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-08-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:25:43.100757+00:00",
           "issues": [],
           "number": 1
         }
@@ -1211,7 +2247,7 @@
       "choices": [],
       "created_at": "2026-11-11T14:55:57.577756+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-12T06:25:23.124903+00:00",
       "explanation": "민수의 말은 옳지 않다. 최댓값은 가 온실이 더 크지만, 중앙값은 나 온실이 $29$cm로 가 온실의 $25$cm보다 크다. 따라서 중앙값을 기준으로 보면 나 온실의 토마토 키가 대체로 더 크다. 최댓값 하나만 보고 전체 자료가 대체로 더 크다고 판단할 수는 없다.\n\n지수의 말은 옳다. 가운데 절반이 모인 범위의 길이는 가 온실이 $30-18=12$cm, 나 온실이 $31-22=9$cm이다. 따라서 나 온실의 가운데 절반이 더 좁은 범위에 모여 있다.",
       "figure": null,
       "generated_at": "2026-11-11T14:55:57.059193+00:00",
@@ -1241,10 +2277,83 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-11T14:55:57.059055+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T06:51:48.437127+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수04-08-C2-이유설명",
+      "body": "다음 그림은 두 농장에서 수확한 사과의 무게를 나타낸 상자그림이다. 무게의 단위는 $\\mathrm{g}$이다.\n\n중앙값을 기준으로 볼 때, 어느 농장의 사과가 대체로 더 무거운지 설명하시오. 또 가운데 $50\\%$의 사과 무게가 어느 농장에서 더 좁은 범위에 모여 있는지 설명하시오. 각각 그림에서 읽은 수를 근거로 쓰시오.",
+      "choices": [],
+      "created_at": "2026-11-12T06:26:01.729213+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "가 농장의 중앙값은 $130\\mathrm{g}$이고 나 농장의 중앙값은 $120\\mathrm{g}$이므로, 중앙값을 기준으로 보면 가 농장의 사과가 대체로 더 무겁다. 최댓값만 보고 나 농장의 사과가 대체로 더 무겁다고 판단해서는 안 된다.\n\n가운데 $50\\%$의 무게는 가 농장에서 $120\\mathrm{g}$부터 $140\\mathrm{g}$까지이고, 나 농장에서 $110\\mathrm{g}$부터 $150\\mathrm{g}$까지이다. 따라서 가 농장의 가운데 $50\\%$가 더 좁은 범위에 모여 있다. 상자가 더 길다고 해서 그 안에 자료가 더 많이 들어 있는 것은 아니다.",
+      "figure": {
+        "axis_max": 200.0,
+        "axis_min": 80.0,
+        "axis_step": 10.0,
+        "kind": "boxplot",
+        "series": [
+          {
+            "label": "가 농장",
+            "max": 170.0,
+            "median": 130.0,
+            "min": 100.0,
+            "q1": 120.0,
+            "q3": 140.0
+          },
+          {
+            "label": "나 농장",
+            "max": 190.0,
+            "median": 120.0,
+            "min": 90.0,
+            "q1": 110.0,
+            "q3": 150.0
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:26:01.675032+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "8dd0e604-8262-483f-ad8b-ba8d7ad2a7e5",
+      "model": "gpt-6.1-terra",
+      "model_answer": "가 농장의 중앙값은 $130\\mathrm{g}$, 나 농장의 중앙값은 $120\\mathrm{g}$이므로 가 농장의 사과가 대체로 더 무겁다. 가운데 $50\\%$의 무게가 차지하는 범위의 폭은 가 농장이 $20\\mathrm{g}$, 나 농장이 $40\\mathrm{g}$이므로 가 농장에서 더 좁은 범위에 모여 있다.",
+      "prompt_version": "v9",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "두 농장의 중앙값을 바르게 읽고 비교하여 가 농장의 사과가 대체로 더 무겁다고 설명한다.",
+          "no": 1,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-08-M3"
+          ],
+          "required": true
+        },
+        {
+          "description": "두 농장의 가운데 $50\\%$가 차지하는 범위 또는 그 폭을 바르게 비교하여 가 농장에서 더 좁은 범위에 모여 있다고 설명한다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수04-08-M2"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T06:26:01.674726+00:00",
           "issues": [],
           "number": 1
         }

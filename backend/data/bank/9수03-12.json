@@ -515,7 +515,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T05:54:36.551807+00:00",
       "variant": 2
     },
     {
@@ -547,7 +547,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T05:54:37.053832+00:00",
       "variant": 2
     },
     {
@@ -582,7 +582,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T05:54:37.131986+00:00",
       "variant": 2
     },
     {
@@ -617,7 +617,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T05:54:36.260767+00:00",
       "variant": 2
     },
     {
@@ -1776,6 +1776,192 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:27.51175+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-12-C2-성질적용",
+      "body": "그림의 두 삼각형은 $\\triangle ABC\\sim\\triangle PRQ$이다. 큰 삼각형에서 가장 긴 변의 길이는 가장 짧은 변의 길이보다 $4\\text{ cm}$ 더 길다. $\\triangle ABC$와 $\\triangle PRQ$의 닮음비는?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 1,
+          "text": "$1:1$"
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 2,
+          "text": "$1:2$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$1:3$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-12-M3",
+          "no": 4,
+          "text": "$1:4$"
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "$2:1$"
+        }
+      ],
+      "created_at": "2026-11-12T05:54:36.284798+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "작은 삼각형에서 가장 긴 변은 $\\overline{BC}$이고, 가장 짧은 변은 $\\overline{AC}$이다. 큰 삼각형에서 각각 짝이 되는 변은 $\\overline{RQ}$와 $\\overline{PQ}$이다. 작은 삼각형의 두 변의 길이의 차는 $5-3=2\\text{ cm}$이고, 큰 삼각형에서는 그 차가 $4\\text{ cm}$이다. 따라서 닮음비는 $2:4=1:2$이다.\n④는 $\\overline{PQ}$와 짝이 되는 변을 $\\overline{AC}$가 아닌 $\\overline{AB}$로 잘못 생각하여 고를 수 있다.",
+      "figure": {
+        "angles": [],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "P",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "R",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "Q",
+            "show_name": true,
+            "x": 7.0,
+            "y": 6.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": "5 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": "3 cm",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "P",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "R"
+          },
+          {
+            "dashed": false,
+            "from": "R",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "Q"
+          },
+          {
+            "dashed": false,
+            "from": "Q",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "P"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T05:54:35.59404+00:00",
+      "hard_condition": "application-a",
+      "hard_condition_reason": "큰 삼각형의 가장 긴 변과 가장 짧은 변의 길이 차를 주고, 거꾸로 두 삼각형의 닮음비를 구하게 한다.",
+      "id": "6cd245c5-94fb-4de7-b608-309302db1dd5",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:53:06.963867+00:00",
+          "issues": [
+            "닮음의 기호에 들어갈 꼭짓점의 순서만 구하며, 측정 의도에 명시된 닮음비, 변의 길이 또는 각의 크기를 구하지 않는다.",
+            "보기 ①: 주어진 닮음 기호의 순서를 무시하고 대응변을 짝짓는 M3에서 나오는 보기가 아니다. 문제에는 대응 순서를 나타낸 닮음 기호가 주어지지 않았다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T05:54:01.751333+00:00",
+          "issues": [
+            "그림에 직각이나 AC의 길이가 표시되어 있지 않아 AC=4인 경우를 배제할 수 없다. 이 경우 EF=DE=6이고 ∠A=∠E이므로 ③과 ④가 모두 정답이다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T05:54:35.593624+00:00",
+          "issues": [],
+          "number": 3
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-12T04:14:55.373865+00:00",

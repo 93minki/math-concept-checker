@@ -39,6 +39,42 @@
       "assessment_item_id": "9수03-04-C2-오개념판별",
       "attempts": [
         {
+          "at": "2026-11-12T07:35:43.702684+00:00",
+          "issues": [
+            "M2는 판별하지만, 세 쌍의 대응각이 같으면 합동이라고 생각하는 M1은 판별할 수 없다. ⑤는 세 각의 크기를 알아야 한다는 주장이지 M1의 주장이 아니다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:36:35.054514+00:00",
+          "issues": [
+            "③의 ‘반드시 합동이 아니야’는 ‘반드시 합동인 것은 아니야’로도 해석될 수 있어 ⑤와 함께 옳은 보기로 읽힌다. 해설은 이를 반드시 합동이 아니라는 뜻으로만 해석한다.",
+            "single_correct_answer: false",
+            "conditions_sufficient: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T07:37:39.261717+00:00",
+          "issues": [
+            "보기 ①은 M2를 판별하지만, 세 쌍의 대응각이 같으면 합동이라고 생각하는 M1을 판별할 상황이나 보기가 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T07:37:39.63345+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T07:39:22.577575+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "attempts": [
+        {
           "at": "2026-11-12T03:25:21.479478+00:00",
           "issues": [
             "M1은 판별하지만, 두 변과 끼인각이 아닌 각을 이용하는 M2를 판별할 조건이나 보기가 없다.",
@@ -67,7 +103,7 @@
       "difficulty": "normal",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T05:52:50.497505+00:00",
       "variant": 2
     },
     {
@@ -105,7 +141,7 @@
       "difficulty": "normal",
       "model": "gpt-6.1-terra",
       "prompt_version": "v9",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T05:52:50.599754+00:00",
       "variant": 2
     }
   ],
@@ -2606,6 +2642,408 @@
       "approved_at": null,
       "approved_by": null,
       "assessment_item_id": "9수03-04-C2-오개념판별",
+      "body": "다음 그림에서 $\\overline{AB}=\\overline{DE}$, $\\overline{BC}=\\overline{EF}$, $\\angle BAC=\\angle EDF$이다.\n\n민서는 “두 쌍의 변의 길이와 한 쌍의 각의 크기가 각각 같으므로 두 삼각형은 SAS 합동이다.”라고 말했다. 민서의 말이 옳은지와 그 까닭을 바르게 말한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 1,
+          "text": "옳지 않다. 크기가 같은 두 각은 길이가 같은 것으로 주어진 두 변 사이의 각이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 2,
+          "text": "옳다. 어떤 각이든 두 쌍의 변의 길이와 한 쌍의 각의 크기가 각각 같으면 SAS 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳다. 크기가 같은 두 각이 길이가 같은 것으로 주어진 두 변 사이의 각이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳지 않다. SAS 합동을 쓰려면 세 쌍의 변의 길이가 각각 같아야 하기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳지 않다. SAS 합동을 쓰려면 두 쌍의 각의 크기가 각각 같아야 하기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T06:59:03.058894+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T07:03:58.328123+00:00",
+      "explanation": "정답은 ①이다. 크기가 같은 $\\angle BAC$와 $\\angle EDF$는 길이가 같은 것으로 주어진 두 변 사이의 각이 아니다. 따라서 주어진 것만으로는 SAS 합동이라고 할 수 없다.\n\n②처럼 두 쌍의 변과 한 쌍의 각이 각각 같다는 사실만으로 합동이라고 생각하면 안 된다. SAS 합동에서는 그 각이 길이가 같은 두 변 사이의 각이어야 한다. ③의 두 각은 주어진 두 변 사이의 각이 아니다. ④와 ⑤는 SAS 합동에 필요한 것을 잘못 설명했다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": "45°",
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "E",
+            "label": "45°",
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.941699476,
+            "y": 0.941699476
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 10.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 9.058300524,
+            "y": 3.058300524
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T06:59:02.876718+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민서가 두 변과 그 사이의 각이 아닌 각을 이용하여 SAS 합동이라고 한 말을 판단하게 했다.",
+      "id": "1d4f5611-661c-45a7-aca2-11de7e0a4629",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T06:59:02.875726+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T07:41:06.173622+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "body": "그림에서 같은 표시가 있는 각의 크기는 서로 같다. 같은 수의 눈금이 있는 변의 길이도 서로 같다.\n\n민지는 “두 삼각형은 세 쌍의 각의 크기가 각각 같으므로 합동이야.”라고 말했다. 민지의 말을 판단한 것으로 옳은 것은? 단, 그림에서 표시하지 않은 길이나 각의 크기는 재지 않는다.",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 1,
+          "text": "옳다. 세 쌍의 각의 크기가 각각 같으면 두 삼각형은 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. 두 삼각형은 모양이 같으므로 크기가 달라도 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "틀리다. 세 쌍의 각의 크기가 각각 같아도 두 삼각형의 크기는 다를 수 있다. 이 그림에서 두 삼각형의 변의 길이는 서로 다르다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. 세 쌍의 각의 크기가 각각 같으면 두 삼각형은 언제나 합동이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. 두 삼각형이 합동인지 알려면 반드시 세 변과 세 각을 모두 알아야 한다."
+        }
+      ],
+      "created_at": "2026-11-12T07:39:22.649193+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "민지의 말은 틀리다. 세 쌍의 각의 크기가 각각 같아도 두 삼각형의 크기는 다를 수 있다. 그림에서 $△ABC$의 세 변의 길이는 모두 $3$이고, $△DEF$의 세 변의 길이는 모두 $4$이므로 두 삼각형은 합동이 아니다.\n\n①은 세 쌍의 각의 크기가 각각 같으면 합동이라고 잘못 생각한 것이다. ②는 모양이 같으면 크기가 달라도 합동이라고 잘못 생각한 것이다. 각이 각각 같은 두 삼각형이 합동일 수도 있으므로 ④도 틀리다. ⑤와 달리 세 변과 세 각을 모두 알지 않아도 삼각형의 합동을 판별할 수 있다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "C"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "D",
+            "vertex": "E"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "E",
+            "vertex": "F"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.5,
+            "y": 2.598076
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 4.5,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 8.5,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 6.5,
+            "y": 3.464102
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "3",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T07:39:21.896038+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "세 쌍의 각이 같으면 합동이라는 민지의 주장을 그림과 함께 판단한다. 각 보기에는 옳고 그름과 그 까닭을 함께 제시했다.",
+      "id": "29c04fca-3c8f-4cde-adde-8d6429b7327f",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T07:39:21.895685+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수03-04-C2-오개념판별",
       "body": "다음 그림에서 같은 눈금이 있는 두 선분의 길이는 같다. 점 $C$는 선분 $AD$ 위에 있다. 그림의 각 표시와 길이를 보고, 학생의 두 주장에 대한 설명으로 옳은 것을 고르시오.\n\n학생의 주장\n(가) 두 삼각형의 세 쌍의 각의 크기가 각각 같으면 항상 합동이다.\n(나) 두 삼각형의 두 쌍의 변의 길이가 각각 같고, 끼인각이 아닌 한 쌍의 각의 크기가 같으면 항상 합동이다.",
       "choices": [
         {
@@ -2895,6 +3333,191 @@
       "variant": 2
     },
     {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "body": "다음 그림에서 같은 표시가 있는 변의 길이는 각각 같습니다. 한 학생이 다음과 같이 말했습니다.\n\n“두 삼각형에서 두 변의 길이가 각각 같고 한 각의 크기도 같아. 그러므로 두 삼각형은 반드시 합동이야.”\n\n이 학생의 말에 대한 판단과 그 까닭으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 1,
+          "text": "옳다. 두 변과 한 각이 각각 같으면 그 각이 어느 각이든 두 삼각형은 반드시 합동이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 2,
+          "text": "옳다. 두 쌍의 변의 길이가 각각 같으면 각의 크기와 관계없이 두 삼각형은 반드시 합동이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳지 않다. 크기가 같다고 표시된 각은 길이가 같다고 표시된 두 변의 끼인각이 아니기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "옳지 않다. 합동이라고 판단하려면 세 쌍의 각의 크기가 각각 같다는 표시가 반드시 필요하기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "옳다. 두 쌍의 변의 길이가 각각 같으면 나머지 한 쌍의 변의 길이도 반드시 같기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T05:53:37.087168+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T06:19:30.973491+00:00",
+      "explanation": "정답은 ③입니다. 길이가 같은 것으로 표시된 두 변의 끼인각은 $\\angle BAC$와 $\\angle EDF$입니다. 크기가 같다고 표시된 각은 이 끼인각이 아니므로, 주어진 표시만으로 두 삼각형이 반드시 합동이라고 할 수는 없습니다.\n\n①은 두 변과 끼인각이 아닌 한 각이 각각 같아도 반드시 합동이라고 잘못 생각한 것입니다. ②와 ⑤에서는 두 쌍의 변의 길이가 같다는 것만으로 합동이라고 판단했습니다. ④와 달리 세 쌍의 각에 표시가 없어도 합동이라고 판단할 수 있는 때가 있습니다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "A",
+            "label": "30°",
+            "marks": 0,
+            "right": false,
+            "to": "C",
+            "vertex": "B"
+          },
+          {
+            "from": "D",
+            "label": "30°",
+            "marks": 0,
+            "right": false,
+            "to": "F",
+            "vertex": "E"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 2.208712,
+            "y": 1.275201
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 15.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 9.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 15.791288,
+            "y": 3.920952
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T05:53:36.942677+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 변과 끼인각이 아닌 한 각을 보고 합동이라고 판단한 학생의 말을 제시하고, 그 판단과 까닭을 고르게 했다.",
+      "id": "563c5c97-7c20-4f1f-8827-2af2ef17cc1b",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T05:53:36.941756+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
       "approved_at": "2026-11-11T09:27:01.033618+00:00",
       "approved_by": "master",
       "assessment_item_id": "9수03-04-C2-오개념판별",
@@ -2957,6 +3580,346 @@
           "at": "2026-11-11T09:24:42.717948+00:00",
           "issues": [],
           "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": null,
+      "approved_by": null,
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "body": "그림에서 같은 수의 표시가 있는 각끼리 크기가 같고, 같은 수의 빗금이 있는 변끼리 길이가 같다. 표시되지 않은 길이와 각의 크기는 재지 않는다.\n\n두 학생이 다음과 같이 말했다.\n\nㄱ. 위쪽 두 삼각형은 표시된 세 쌍의 각의 크기가 각각 같으므로 언제나 합동이다.\nㄴ. 아래쪽 두 삼각형은 표시된 두 쌍의 변의 길이와 한 쌍의 각의 크기가 각각 같으므로 언제나 합동이다.\n\n두 학생의 말을 바르게 판단하고, 그 이유를 바르게 설명한 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 1,
+          "text": "ㄱ만 옳다. 세 쌍의 각의 크기가 각각 같으면 언제나 합동이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 2,
+          "text": "ㄴ만 옳다. 표시된 두 쌍의 변의 길이와 한 쌍의 각의 크기가 각각 같으면 언제나 합동이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "ㄱ, ㄴ 모두 옳지 않다. 위쪽에서는 크기가 같은 각이 두 쌍만 표시되어 있기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "ㄱ, ㄴ 모두 옳지 않다. 아래쪽에서 표시되지 않은 나머지 두 변의 길이는 반드시 다르기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "ㄱ, ㄴ 모두 옳지 않다. 위쪽에서는 각만 표시되어 있고, 아래쪽에서는 표시된 각이 표시된 두 변 사이에 있지 않기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T07:23:39.651377+00:00",
+      "difficulty": "hard",
+      "disabled_at": "2026-11-12T07:27:29.759961+00:00",
+      "explanation": "ㄱ, ㄴ의 말은 모두 옳지 않다. 위쪽에서는 세 쌍의 각의 크기가 각각 같아도 삼각형의 크기가 다를 수 있다. 따라서 ㄱ처럼 각만으로 합동이라고 할 수 없다.\n\n아래쪽에서 표시된 각은 표시된 두 변 사이에 있지 않다. 그림처럼 표시된 내용이 모두 맞으면서 합동이 아닌 두 삼각형도 그릴 수 있다. 따라서 ㄴ처럼 두 변과 그 사이에 있지 않은 각만으로 언제나 합동이라고 할 수 없다.\n\n위쪽에는 크기가 같은 각이 세 쌍 표시되어 있다. 또 아래쪽에서 표시된 내용만으로는 나머지 두 변의 길이가 반드시 다르다고 할 수도 없다. 같은 삼각형을 두 개 그려도 표시된 내용이 맞기 때문이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "B",
+            "vertex": "C"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "D",
+            "vertex": "E"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "E",
+            "vertex": "F"
+          },
+          {
+            "from": "H",
+            "label": null,
+            "marks": 2,
+            "right": false,
+            "to": "I",
+            "vertex": "G"
+          },
+          {
+            "from": "K",
+            "label": null,
+            "marks": 2,
+            "right": false,
+            "to": "L",
+            "vertex": "J"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 3.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 1.5,
+            "y": 8.598076
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 7.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 11.0,
+            "y": 6.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 9.0,
+            "y": 9.464102
+          },
+          {
+            "dot": false,
+            "id": "G",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "H",
+            "show_name": true,
+            "x": 5.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "I",
+            "show_name": true,
+            "x": 2.313859,
+            "y": 1.335907
+          },
+          {
+            "dot": false,
+            "id": "J",
+            "show_name": true,
+            "x": 7.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "K",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "L",
+            "show_name": true,
+            "x": 12.186141,
+            "y": 2.99422
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          },
+          {
+            "dashed": false,
+            "from": "G",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "H"
+          },
+          {
+            "dashed": false,
+            "from": "H",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "I"
+          },
+          {
+            "dashed": false,
+            "from": "I",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "G"
+          },
+          {
+            "dashed": false,
+            "from": "J",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "K"
+          },
+          {
+            "dashed": false,
+            "from": "K",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 2,
+            "to": "L"
+          },
+          {
+            "dashed": false,
+            "from": "L",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "J"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T07:23:39.388771+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 학생이 세 쌍의 각과 두 변 및 그 사이에 있지 않은 각을 근거로 한 말을 판단하고, 그 이유까지 고르게 한다.",
+      "id": "a0d25d27-2b99-4b12-a8fd-16dadda999c4",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 2,
+      "rubric": [],
+      "status": "disabled",
+      "validation": [
+        {
+          "at": "2026-11-12T07:21:39.804084+00:00",
+          "issues": [
+            "보기 ②: M2에 해당하지 않는다. M2대로라면 끼인각이 아닌 각이 같아도 합동이라고 판단하여 보기 ①을 고른다. ②는 표시된 각을 끼인각으로 잘못 읽은 주장이다.",
+            "M2는 판별할 수 있지만, 세 쌍의 대응각이 같으면 합동이라고 생각하는 M1은 판별할 수 없다.",
+            "measures_intended_level: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T07:22:42.567765+00:00",
+          "issues": [
+            "보기 ②: M1만으로는 세 쌍의 각만 비교해야 한다는 주장이 나오지 않는다. 주어진 그림에는 한 쌍의 각만 같다고 표시되어 있어, M1을 가진 학생도 민수의 주장을 반박하는 ①을 고를 수 있으므로 M1을 판별하기 어렵다.",
+            "measures_intended_level: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T07:23:39.388339+00:00",
+          "issues": [],
+          "number": 3
         }
       ],
       "variant": 2
@@ -3212,6 +4175,223 @@
         }
       ],
       "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T06:19:27.341998+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-04-C2-오개념판별",
+      "body": "다음 그림에서 같은 표시가 있는 각의 크기는 각각 같다. 그림과 삼각형의 합동에 대한 설명으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M1",
+          "no": 1,
+          "text": "세 쌍의 각의 크기가 각각 같으므로 $\\triangle ABC$와 $\\triangle DEF$는 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수03-04-M2",
+          "no": 2,
+          "text": "두 삼각형에서 두 변의 길이와 그 사이에 있지 않은 각의 크기가 각각 같으면 두 삼각형은 언제나 합동이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "$\\overline{AB}$와 $\\overline{DE}$의 길이가 다르므로 $\\triangle ABC$와 $\\triangle DEF$는 합동이 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "두 삼각형에서 세 변의 길이가 각각 같아도 두 삼각형은 합동이라고 할 수 없다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "두 삼각형에서 두 변의 길이와 그 끼인각의 크기가 각각 같아도 두 삼각형은 합동이라고 할 수 없다."
+        }
+      ],
+      "created_at": "2026-11-12T05:52:50.453801+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "두 삼각형에서 같은 크기의 각끼리 포개려면 $\\overline{AB}$와 $\\overline{DE}$가 포개져야 한다. 그런데 두 변의 길이가 각각 $4$, $6$으로 다르므로 두 삼각형은 합동이 아니다. 따라서 정답은 ③이다.\n① 세 쌍의 각의 크기가 각각 같아도 두 삼각형의 크기가 다를 수 있다. ② 두 변과 그 사이에 있지 않은 각의 크기가 각각 같은 것만으로는 항상 합동이라고 할 수 없다. ④는 SSS, ⑤는 SAS에 의해 합동이다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "B",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "C",
+            "vertex": "A"
+          },
+          {
+            "from": "C",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "A",
+            "vertex": "B"
+          },
+          {
+            "from": "A",
+            "label": null,
+            "marks": 2,
+            "right": false,
+            "to": "B",
+            "vertex": "C"
+          },
+          {
+            "from": "E",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "F",
+            "vertex": "D"
+          },
+          {
+            "from": "F",
+            "label": null,
+            "marks": 1,
+            "right": false,
+            "to": "D",
+            "vertex": "E"
+          },
+          {
+            "from": "D",
+            "label": null,
+            "marks": 2,
+            "right": false,
+            "to": "E",
+            "vertex": "F"
+          }
+        ],
+        "arcs": [],
+        "circles": [],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": false,
+            "id": "A",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "B",
+            "show_name": true,
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "C",
+            "show_name": true,
+            "x": 0.0,
+            "y": 3.0
+          },
+          {
+            "dot": false,
+            "id": "D",
+            "show_name": true,
+            "x": 6.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "E",
+            "show_name": true,
+            "x": 12.0,
+            "y": 0.0
+          },
+          {
+            "dot": false,
+            "id": "F",
+            "show_name": true,
+            "x": 6.0,
+            "y": 4.5
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "4",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "B",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "C"
+          },
+          {
+            "dashed": false,
+            "from": "C",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "D",
+            "label": "6",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "E"
+          },
+          {
+            "dashed": false,
+            "from": "E",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "F"
+          },
+          {
+            "dashed": false,
+            "from": "F",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "D"
+          }
+        ]
+      },
+      "generated_at": "2026-11-12T05:52:49.68864+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "38edf733-4d23-4b6d-a91b-77da6bf8ad6e",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T05:52:49.688537+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
     },
     {
       "approved_at": "2026-11-11T09:27:01.087705+00:00",

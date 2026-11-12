@@ -41,7 +41,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:20:27.638166+00:00",
       "variant": 1
     },
     {
@@ -76,7 +76,46 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:20:27.556484+00:00",
+      "variant": 1
+    },
+    {
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T06:55:46.004289+00:00",
+          "issues": [
+            "보기 1, 3: M1대로 분수 꼴로 쓰인 수만 유리수라고 보면 ㄱ은 틀리고 ㄷ은 옳으므로 ㄷ, ㄹ을 골라야 한다. 해당 보기가 없다.",
+            "다섯 학생의 말이 모두 정의를 직접 확인하는 주장이라, 학생의 주장을 판단한다는 형식 외에 일반적인 분류 문제와 구별되는 생각거리가 없다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:56:14.964959+00:00",
+          "issues": [
+            "보기 ②와 ④: 승인된 M1대로 분수 꼴로 쓰인 수만 유리수라고 보면 정수와 소수 모두 유리수가 아니므로 ‘다, 라’를 고르게 된다. 해당 보기가 없어 M1을 판별하기 어렵다.",
+            "고난이도 조건: 학생의 말이라는 형식을 취했지만, 각 말이 정의나 분류를 그대로 확인하는 주장이라 일반적인 정의 확인 문제와 구별되지 않는다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:56:46.830877+00:00",
+          "issues": [
+            "보기 ②: M1대로라면 -2와 0.4가 모두 유리수가 아니므로, -2를 유리수라고 한 ②를 고르지 않는다.",
+            "학생 이름만 붙인 분류 진술을 판별하는 문제로, 정의를 바로 확인하는 일반적인 옳은 보기 고르기와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:56:47.021365+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T07:20:27.688459+00:00",
       "variant": 1
     },
     {
@@ -114,7 +153,7 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:20:54.019162+00:00",
       "variant": 2
     },
     {
@@ -153,7 +192,47 @@
       "difficulty": "hard",
       "model": "gpt-6.1-terra",
       "prompt_version": "v7",
-      "resolved_at": null,
+      "resolved_at": "2026-11-12T07:20:54.062925+00:00",
+      "variant": 2
+    },
+    {
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "attempts": [
+        {
+          "at": "2026-11-12T06:57:13.875184+00:00",
+          "issues": [
+            "보기 1, 2: M1처럼 분수 꼴로 쓰인 수만 유리수라고 보면 가, 다, 라가 모두 틀려 옳은 학생이 없다. 해당 결과를 고를 보기가 없어 M1을 판별하기 어렵다.",
+            "다섯 학생의 말이 모두 정의를 직접 확인하는 단순한 주장으로, 일반적인 옳은 진술 고르기 문제와 구별되는 사고가 필요하지 않다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 1
+        },
+        {
+          "at": "2026-11-12T06:57:43.608045+00:00",
+          "issues": [
+            "보기 ①과 ④: 승인된 M1대로 정수는 유리수가 아니라고 생각하면 ㄱ과 ㄹ이 모두 틀려 ㄴ, ㄷ을 골라야 하지만 해당 보기가 없다. 두 보기에 붙은 M1과 해설의 진단이 맞지 않는다.",
+            "M1에 해당하는 선택지가 없어 의도한 오개념을 판별하기 어렵다.",
+            "학생의 말 형식을 취했지만 네 문장 모두 정의와 성질을 바로 확인하는 일반적인 참·거짓 판단에 그쳐 고난도 조건 misconception-b를 충족하지 못한다.",
+            "measures_intended_level: false",
+            "meets_hard_condition: false"
+          ],
+          "number": 2
+        },
+        {
+          "at": "2026-11-12T06:58:06.968053+00:00",
+          "issues": [
+            "학생의 말 형식이지만 각 보기의 수 분류를 정의에 바로 대조하면 풀려, 일반적인 정의 확인 문제와 구별되지 않는다.",
+            "meets_hard_condition: false"
+          ],
+          "number": 3
+        }
+      ],
+      "created_at": "2026-11-12T06:58:07.150786+00:00",
+      "difficulty": "hard",
+      "model": "gpt-6.1-terra",
+      "prompt_version": "v9",
+      "resolved_at": "2026-11-12T07:20:54.12015+00:00",
       "variant": 2
     }
   ],
@@ -671,6 +750,140 @@
       "validation": [
         {
           "at": "2026-11-11T07:40:51.048438+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-12T07:27:28.41642+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "body": "민지는 다음과 같이 말했습니다.\n\n“$0$은 양의 정수이므로 유리수야.”\n\n민지의 말에 대한 판단과 그 까닭으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-03-M2",
+          "no": 1,
+          "text": "옳다. $0$은 양의 정수이고 유리수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-03-M1",
+          "no": 2,
+          "text": "틀리다. $0$은 정수이므로 유리수가 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 3,
+          "text": "틀리다. $0$은 정수이자 유리수이지만 양수는 아니다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. $0$은 음의 정수이고 유리수이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. $0$은 정수가 아닌 유리수이다."
+        }
+      ],
+      "created_at": "2026-11-12T07:20:27.619252+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "$0$은 양수도 음수도 아니므로 양의 정수가 아닙니다. 하지만 정수이고, $\\frac{0}{1}$과 같이 분수 꼴로 나타낼 수 있으므로 유리수입니다.\n\n①은 $0$을 양수로 잘못 생각한 것입니다. ②는 정수는 유리수가 아니라고 잘못 생각한 것입니다. ④는 $0$을 음수로, ⑤는 $0$을 정수가 아닌 유리수로 잘못 생각한 것입니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T07:20:27.334157+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "민지의 말을 보고 옳고 그름과 그 까닭을 함께 판단하게 했다. $0$이 유리수라는 말뿐 아니라 양의 정수라는 까닭도 살펴야 한다.",
+      "id": "d511d0d4-48a4-4831-aff3-d5422693f466",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T07:20:27.333723+00:00",
+          "issues": [],
+          "number": 1
+        }
+      ],
+      "variant": 1
+    },
+    {
+      "approved_at": "2026-11-12T07:27:28.557247+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수01-03-C2-오개념판별",
+      "body": "준호는 다음과 같이 말했습니다.\n\n“$-2$는 음의 정수이고 $0$은 정수야. 그러므로 두 수는 모두 유리수가 아니야.”\n\n준호의 말에 대한 판단과 그 까닭으로 옳은 것은?",
+      "choices": [
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-03-M1",
+          "no": 1,
+          "text": "옳다. 정수는 유리수가 아니기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": "9수01-03-M2",
+          "no": 2,
+          "text": "틀리다. $0$은 양수이며 유리수이기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 3,
+          "text": "옳다. $-2$는 음의 정수이고 $0$은 양수도 음수도 아니기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": false,
+          "misconception_id": null,
+          "no": 4,
+          "text": "틀리다. $-2$는 음의 정수이지만 $0$은 정수가 아니기 때문이다."
+        },
+        {
+          "figure": null,
+          "is_correct": true,
+          "misconception_id": null,
+          "no": 5,
+          "text": "틀리다. 정수는 모두 유리수이므로 $-2$와 $0$도 유리수이기 때문이다."
+        }
+      ],
+      "created_at": "2026-11-12T07:20:54.102253+00:00",
+      "difficulty": "hard",
+      "disabled_at": null,
+      "explanation": "정수는 모두 유리수입니다. $-2$와 $0$은 각각 $\\frac{-2}{1}$, $\\frac{0}{1}$과 같이 나타낼 수 있으므로 유리수입니다. 따라서 준호의 말은 틀립니다.\n\n①은 정수가 유리수임을 놓쳤습니다. ②에서 $0$이 유리수인 것은 맞지만, $0$은 양수가 아닙니다. ③은 두 수에 대한 참인 설명만으로 두 수가 유리수가 아니라고 판단했습니다. ④에서 $0$은 정수입니다.",
+      "figure": null,
+      "generated_at": "2026-11-12T07:20:53.739013+00:00",
+      "hard_condition": "misconception-b",
+      "hard_condition_reason": "두 정수가 유리수가 아니라는 준호의 말을 보고, 판단과 그 까닭을 함께 고르게 했다.",
+      "id": "814c0d0e-d015-4d8b-afab-e1ac73763e17",
+      "model": "gpt-6.1-terra",
+      "model_answer": null,
+      "prompt_version": "v9",
+      "question_type": "multiple_choice",
+      "retry_count": 0,
+      "rubric": [],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-12T07:20:53.738790+00:00",
           "issues": [],
           "number": 1
         }
