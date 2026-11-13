@@ -520,8 +520,13 @@ test("보기와 선택한 답의 표를 번호와 함께 표시한다", async ()
   expect(
     result.container.querySelector(".choice .problem-text")?.textContent,
   ).not.toContain("1.");
-  expect(result.container.querySelectorAll(".problem-table")).toHaveLength(3);
-  expect(result.container.querySelectorAll(".figure")).toHaveLength(3);
+  expect(result.container.querySelectorAll(".problem-table")).toHaveLength(1);
+  expect(result.container.querySelectorAll(".figure")).toHaveLength(1);
+  const matching = result.container.querySelector(".report-choice-correct");
+  expect(matching?.querySelector(".visually-hidden")?.textContent).toBe(
+    "내 답 · 정답",
+  );
+  expect(matching?.querySelector(".report-choice-label")).toBeNull();
 });
 
 test("글 보기 전부와 내 답 및 정답을 번호와 내용으로 표시한다", async () => {
@@ -543,24 +548,31 @@ test("글 보기 전부와 내 답 및 정답을 번호와 내용으로 표시�
   expect(choices).toHaveLength(3);
   expect(choices[1].textContent).toContain("내 답");
   expect(choices[2].textContent).toContain("정답");
-  const answers = result.container.querySelectorAll(".answer-choice");
-  expect(answers[0].textContent).toContain("내 답:2둘째 보기");
-  expect(answers[1].textContent).toContain("정답:3셋째 보기");
+  expect(choices[1].classList.contains("report-choice-wrong")).toBe(true);
+  expect(choices[2].classList.contains("report-choice-correct")).toBe(true);
+  expect(choices[0].querySelector(".report-choice-label")).toBeNull();
+  expect(result.container.querySelector(".answer-choice")).toBeNull();
 });
 
 test("완료된 진단은 리포트와 문제별 결과를 표시한다", async () => {
-  mocks.getDiagnosis.mockResolvedValue(completed);
+  mocks.getDiagnosis.mockResolvedValue({
+    ...completed,
+    items: [...completed.items, { ...diagnosis.items[0], id: 3, stage: 2 }],
+  });
   mocks.getReport.mockResolvedValue(report);
   render(<DiagnosisView id="d" />);
   expect(
     await screen.findByRole("heading", { name: "이해도 리포트" }),
   ).toBeTruthy();
+  expect(screen.getByRole("heading", { name: "1번 · 기본 문제" })).toBeTruthy();
+  expect(screen.getByRole("heading", { name: "2번 · 기본 문제" })).toBeTruthy();
+  expect(screen.getByRole("heading", { name: "1번 · 심화 문제" })).toBeTruthy();
   expect(
     await screen.findByText("심화 문제는 아직 준비 중이에요"),
   ).toBeTruthy();
   expect(screen.getByText("등식을 살펴봐요")).toBeTruthy();
   expect(screen.getByText("맞았어요")).toBeTruthy();
-  expect(screen.getByText("풀지 않은 문제")).toBeTruthy();
+  expect(screen.getAllByText("풀지 않은 문제")).toHaveLength(2);
   expect(screen.queryByText(/\d+\s*(점|%)/)).toBeNull();
 });
 

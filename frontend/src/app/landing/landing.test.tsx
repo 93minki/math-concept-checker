@@ -33,9 +33,8 @@ test("랜딩과 머리말은 서비스 소개와 계정 링크를 보여 준다"
   expect(
     within(header).getByRole("link", { name: "회원가입" }).getAttribute("href"),
   ).toBe("/signup");
-  const sample = screen
-    .getByRole("heading", { name: "샘플 리포트" })
-    .closest(".astryx-section") as HTMLElement | null;
+  const sample = screen.getByRole("heading", { name: "샘플 리포트" })
+    .parentElement?.parentElement as HTMLElement | null;
   expect(sample).toBeTruthy();
   expect(
     within(sample!).getByText(
@@ -50,4 +49,30 @@ test("랜딩과 머리말은 서비스 소개와 계정 링크를 보여 준다"
       name: "단원 이해 단계: 기본 이해",
     }),
   ).toBeTruthy();
+});
+
+test("랜딩 구역 순서와 개념 단계 막대를 표시한다", () => {
+  render(<LandingPage />);
+  const headings = screen
+    .getAllByRole("heading", { level: 2 })
+    .map((heading) => heading.textContent);
+  const hero = screen
+    .getByRole("heading", { name: "점수 말고, 개념을 확인해요" })
+    .closest(".astryx-section");
+  expect(
+    hero?.contains(
+      screen.getByRole("heading", { name: "같은 시험, 다르게 보기" }),
+    ),
+  ).toBe(false);
+  expect(headings).toEqual([
+    "같은 시험, 다르게 보기",
+    "샘플 리포트",
+    "이렇게 진단해요",
+    "왜 개념을 확인해야 할까요?",
+  ]);
+  const bars = screen.getAllByRole("progressbar", {
+    name: "등식의 뜻 이해 단계: 깊이 이해",
+  });
+  expect(bars).toHaveLength(2);
+  expect(bars[0].getAttribute("aria-valuemax")).toBe("3");
 });

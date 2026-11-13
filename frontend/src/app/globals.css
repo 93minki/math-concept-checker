@@ -412,27 +412,28 @@ h4:not(.astryx-heading) {
   outline: 2px solid #1559a8;
   outline-offset: 2px;
 }
-.answer-choice {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-.answer-choice .choice-number {
-  margin-top: 0;
-}
-.choice-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  font-size: 0.8rem;
-}
-.choice-tags span {
-  border: 1px solid #888;
-  border-radius: 4px;
-  padding: 0 4px;
-}
 .report-choice {
   cursor: default;
+}
+.problem-sheet .report-choice-correct {
+  border: 2px solid #2e7d32;
+  background: #eef7ee;
+}
+.problem-sheet .report-choice-wrong {
+  border: 2px solid #c62828;
+  background: #fdecec;
+}
+.report-choice-label {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.report-choice-correct .report-choice-label {
+  color: #1b5e20;
+}
+.report-choice-wrong .report-choice-label {
+  color: #b71c1c;
 }
 
 /* Follow the pre-hydration document choice inside Astryx's system-mode wrapper. */

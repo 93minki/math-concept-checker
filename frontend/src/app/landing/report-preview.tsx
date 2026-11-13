@@ -1,45 +1,19 @@
-import { Badge } from "@astryxdesign/core/Badge";
 import { Heading } from "@astryxdesign/core/Heading";
-import { HStack } from "@astryxdesign/core/HStack";
-import { ProgressBar } from "@astryxdesign/core/ProgressBar";
-import { Section } from "@astryxdesign/core/Section";
 import { Text } from "@astryxdesign/core/Text";
 import { VStack } from "@astryxdesign/core/VStack";
-import ReportSummary from "@/app/(protected)/diagnoses/[id]/report-summary";
+import ReportSummary, {
+  StageIndicator,
+} from "@/app/(protected)/diagnoses/[id]/report-summary";
 import type { Report } from "@/lib/diagnosis-api";
 import { concepts } from "./landing-content";
 
 export function ConceptSummary() {
   return (
     <VStack gap={3}>
-      {concepts.map(([name, width, level, color]) => (
+      {concepts.map(([name, level]) => (
         <VStack gap={1} key={name}>
-          <HStack gap={2} hAlign="between" vAlign="center" wrap="wrap">
-            <Text>{name}</Text>
-            <Badge
-              label={level}
-              variant={
-                color === "deep"
-                  ? "success"
-                  : color === "basic"
-                    ? "warning"
-                    : "error"
-              }
-            />
-          </HStack>
-          <ProgressBar
-            label={`${name}: ${level}`}
-            value={width}
-            max={100}
-            variant={
-              color === "deep"
-                ? "success"
-                : color === "basic"
-                  ? "warning"
-                  : "error"
-            }
-            isLabelHidden
-          />
+          <Text>{name}</Text>
+          <StageIndicator name={name} stage={level} />
         </VStack>
       ))}
     </VStack>
@@ -98,17 +72,15 @@ export const sampleReport: Report = {
 
 export default function ReportPreview() {
   return (
-    <Section>
-      <VStack gap={5}>
-        <VStack gap={1}>
-          <Text type="supporting">중1 · 문자의 사용과 식 · 9수02-03</Text>
-          <Heading level={2}>샘플 리포트</Heading>
-          <Text as="p" type="supporting">
-            아래 내용은 리포트가 어떻게 보이는지 알려 주는 예시예요.
-          </Text>
-        </VStack>
-        <ReportSummary report={sampleReport} />
+    <VStack gap={5}>
+      <VStack gap={1}>
+        <Text type="supporting">중1 · 문자의 사용과 식 · 9수02-03</Text>
+        <Heading level={2}>샘플 리포트</Heading>
+        <Text as="p" type="supporting">
+          아래 내용은 리포트가 어떻게 보이는지 알려 주는 예시예요.
+        </Text>
       </VStack>
-    </Section>
+      <ReportSummary report={sampleReport} />
+    </VStack>
   );
 }

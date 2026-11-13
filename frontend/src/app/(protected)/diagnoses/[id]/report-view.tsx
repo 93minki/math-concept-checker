@@ -5,7 +5,6 @@ import { Card } from "@astryxdesign/core/Card";
 import { Heading } from "@astryxdesign/core/Heading";
 import { HStack } from "@astryxdesign/core/HStack";
 import { List, ListItem } from "@astryxdesign/core/List";
-import { Section } from "@astryxdesign/core/Section";
 import { Text } from "@astryxdesign/core/Text";
 import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
@@ -82,12 +81,16 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
       {report && <ReportSummary report={report} />}
       <Heading level={2}>문제별 결과</Heading>
       <VStack gap={4}>
-        {items.map((item) => (
+        {items.map((item, index) => (
           <Card key={item.id}>
             <VStack gap={4}>
               <HStack gap={2} hAlign="between" vAlign="center" wrap="wrap">
                 <Heading level={3}>
-                  {item.stage === 1 ? "기본 문제" : "심화 문제"}
+                  {items
+                    .slice(0, index)
+                    .filter((previous) => previous.stage === item.stage)
+                    .length + 1}
+                  번 · {item.stage === 1 ? "기본 문제" : "심화 문제"}
                 </Heading>
                 {item.result ? (
                   <Badge
@@ -107,107 +110,64 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
                   <div
                     className={`choice-area ${item.choices.some((choice) => choice.figure) ? "choice-grid" : "stack"}`}
                   >
-                    {item.choices.map((choice) => (
-                      <div className="choice report-choice" key={choice.no}>
-                        <ChoiceNumber number={choice.no} />
-                        <div className="choice-content">
-                          <ProblemText text={choice.text} />
-                          {choice.figure && <Figure figure={choice.figure} />}
-                          <div className="choice-tags">
-                            {item.answer?.selected_choice === choice.no && (
-                              <span>내 답</span>
-                            )}
-                            {item.result?.correct_choice === choice.no && (
-                              <span>정답</span>
-                            )}
+                    {item.choices.map((choice) => {
+                      const selected =
+                        item.answer?.selected_choice === choice.no;
+                      const correct = item.result?.correct_choice === choice.no;
+                      const wrong =
+                        selected &&
+                        item.result?.correct_choice != null &&
+                        !correct;
+                      return (
+                        <div
+                          className={`choice report-choice${correct ? " report-choice-correct" : wrong ? " report-choice-wrong" : ""}`}
+                          key={choice.no}
+                        >
+                          <ChoiceNumber number={choice.no} />
+                          <div className="choice-content">
+                            <ProblemText text={choice.text} />
+                            {choice.figure && <Figure figure={choice.figure} />}
                           </div>
+                          {correct && selected ? (
+                            <span className="visually-hidden">
+                              내 답 · 정답
+                            </span>
+                          ) : correct ? (
+                            <span className="report-choice-label">✓ 정답</span>
+                          ) : wrong ? (
+                            <span className="report-choice-label">✗ 내 답</span>
+                          ) : null}
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 )}
               </div>
-              {item.answer?.selected_choice != null ? (
-                <div>
-                  <div className="answer-choice">
-                    <span>내 답:</span>
-                    <ChoiceNumber number={item.answer.selected_choice} />
-                    <ProblemText
-                      text={
-                        item.choices.find(
-                          (c) => c.no === item.answer?.selected_choice,
-                        )?.text ?? ""
-                      }
+              {item.question_type !== "multiple_choice" && (
+                <VStack gap={2}>
+                  <Text type="label">내 답</Text>
+                  <Text as="p">
+                    <MathText
+                      text={item.answer?.written_text || "답하지 않았어요"}
                     />
-                  </div>
-                  {item.choices
-                    .filter(
-                      (c) => c.no === item.answer?.selected_choice && c.figure,
-                    )
-                    .map(
-                      (c) =>
-                        c.figure && (
-                          <div className="problem-sheet" key={c.no}>
-                            <Figure figure={c.figure} />
-                          </div>
-                        ),
-                    )}
-                </div>
-              ) : (
-                <p>
-                  내 답:{" "}
-                  <MathText
-                    text={item.answer?.written_text || "답하지 않았어요"}
-                  />
-                </p>
+                  </Text>
+                </VStack>
               )}
               {item.result && (
                 <>
-                  {item.result.correct_choice != null && (
-                    <div>
-                      <div className="answer-choice">
-                        <span>정답:</span>
-                        <ChoiceNumber number={item.result.correct_choice} />
-                        <ProblemText
-                          text={
-                            item.choices.find(
-                              (c) => c.no === item.result?.correct_choice,
-                            )?.text ?? ""
-                          }
-                        />
-                      </div>
-                      {item.choices
-                        .filter(
-                          (c) =>
-                            c.no === item.result?.correct_choice && c.figure,
-                        )
-                        .map(
-                          (c) =>
-                            c.figure && (
-                              <div className="problem-sheet" key={c.no}>
-                                <Figure figure={c.figure} />
-                              </div>
-                            ),
-                        )}
-                    </div>
-                  )}
-                  <Section variant="muted">
+                  <VStack gap={2}>
+                    <Text type="label">해설</Text>
+                    <Text as="p">
+                      <MathText text={item.result.explanation} />
+                    </Text>
+                  </VStack>
+                  {item.result.model_answer && (
                     <VStack gap={2}>
-                      <Heading level={4}>해설</Heading>
+                      <Text type="label">모범 답안</Text>
                       <Text as="p">
-                        <MathText text={item.result.explanation} />
+                        <MathText text={item.result.model_answer} />
                       </Text>
                     </VStack>
-                  </Section>
-                  {item.result.model_answer && (
-                    <Section>
-                      <VStack gap={2}>
-                        <Heading level={4}>모범 답안</Heading>
-                        <Text as="p">
-                          <MathText text={item.result.model_answer} />
-                        </Text>
-                      </VStack>
-                    </Section>
                   )}
                   {item.result.elements && item.result.elements.length > 0 && (
                     <List
