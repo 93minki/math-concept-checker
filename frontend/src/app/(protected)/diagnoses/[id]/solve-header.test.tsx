@@ -42,5 +42,5 @@ test("이미 답한 문제가 있어도 첫 문제에서는 막대가 1/9이다"
     name: "전체 9문제 중 1번째 문제",
   });
   expect(bar.getAttribute("aria-valuenow")).toBe("1");
-  expect(bar.firstElementChild?.getAttribute("style")).toContain("11.111");
+  expect(bar.getAttribute("aria-valuemax")).toBe("9");
 });

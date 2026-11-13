@@ -1,62 +1,92 @@
+import { Card } from "@astryxdesign/core/Card";
+import { Grid } from "@astryxdesign/core/Grid";
+import { Heading } from "@astryxdesign/core/Heading";
+import { List, ListItem } from "@astryxdesign/core/List";
+import { Section } from "@astryxdesign/core/Section";
+import { Text } from "@astryxdesign/core/Text";
+import { VStack } from "@astryxdesign/core/VStack";
 import ReportPreview, { ConceptSummary } from "./report-preview";
 import { heroDescription, heroTitle, reasons, steps } from "./landing-content";
 
 export default function Landing() {
   return (
-    <main className="landing">
-      <div className="intro-hero">
-        <div className="landing-hero-copy">
-          <h1>{heroTitle}</h1>
-          <p>{heroDescription}</p>
-        </div>
-        <ReportPreview />
-      </div>
-      <section className="landing-section">
-        <h2>같은 시험, 다르게 보기</h2>
-        <div className="landing-comparison">
-          <div>
-            <h3>점수로 보면</h3>
-            <strong className="score">70점</strong>
-            <p>어디서 막혔는지는 알 수 없어요</p>
-          </div>
-          <div>
-            <h3>개념으로 보면</h3>
-            <ConceptSummary />
-          </div>
-        </div>
-      </section>
-      <section className="landing-section">
-        <h2>왜 개념을 확인해야 할까요?</h2>
-        <ol className="landing-reasons">
+    <VStack as="main" className="landing" gap={10}>
+      <Section variant="muted" padding={8}>
+        <VStack gap={3} hAlign="center">
+          <Heading
+            level={1}
+            type="display-2"
+            justify="center"
+            textWrap="balance"
+          >
+            {heroTitle}
+          </Heading>
+          <Text as="p" type="large" justify="center" textWrap="pretty">
+            {heroDescription}
+          </Text>
+        </VStack>
+      </Section>
+
+      <Section variant="transparent" padding={0}>
+        <VStack gap={4}>
+          <Heading level={2}>같은 시험, 다르게 보기</Heading>
+          <Grid columns={{ minWidth: 280, max: 2 }} gap={4}>
+            <Card>
+              <VStack gap={3}>
+                <Heading level={3}>점수로 보면</Heading>
+                <Text type="display-2" weight="bold">
+                  70점
+                </Text>
+                <Text as="p">어디서 막혔는지는 알 수 없어요</Text>
+              </VStack>
+            </Card>
+            <Card>
+              <VStack gap={3}>
+                <Heading level={3}>개념으로 보면</Heading>
+                <ConceptSummary />
+              </VStack>
+            </Card>
+          </Grid>
+        </VStack>
+      </Section>
+
+      <Section variant="transparent" padding={0}>
+        <List
+          listStyle="decimal"
+          hasDividers
+          header={<Heading level={2}>왜 개념을 확인해야 할까요?</Heading>}
+        >
           {reasons.map(([title, description], index) => (
-            <li key={title}>
-              <span className="landing-number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </div>
-            </li>
+            <ListItem
+              key={title}
+              itemKey={index}
+              label={<Heading level={3}>{title}</Heading>}
+              description={<Text as="p">{description}</Text>}
+              align="first-line"
+            />
           ))}
-        </ol>
-      </section>
-      <section className="landing-section">
-        <h2>이렇게 진단해요</h2>
-        <ol className="landing-steps">
+        </List>
+      </Section>
+
+      <Section variant="transparent" padding={0}>
+        <List
+          listStyle="decimal"
+          hasDividers
+          header={<Heading level={2}>이렇게 진단해요</Heading>}
+        >
           {steps.map(([title, description], index) => (
-            <li key={title}>
-              <span className="landing-number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </div>
-            </li>
+            <ListItem
+              key={title}
+              itemKey={index}
+              label={<Heading level={3}>{title}</Heading>}
+              description={<Text as="p">{description}</Text>}
+              align="first-line"
+            />
           ))}
-        </ol>
-      </section>
-    </main>
+        </List>
+      </Section>
+
+      <ReportPreview />
+    </VStack>
   );
 }

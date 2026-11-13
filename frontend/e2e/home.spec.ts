@@ -6,6 +6,14 @@ test("로그아웃 사용자는 /에서 랜딩을 본다", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: "점수 말고, 개념을 확인해요" }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "샘플 리포트" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("progressbar", {
+      name: "단원 이해 단계: 기본 이해",
+    }),
+  ).toBeVisible();
   await page.locator("header").getByRole("link", { name: "로그인" }).click();
   await expect(page).toHaveURL(/\/login$/);
   await expect(

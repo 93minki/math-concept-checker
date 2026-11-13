@@ -437,3 +437,24 @@
 - 원인 분류: 환경·설정
 - 원인: Astryx MoreMenu가 사용하는 브라우저 Popover의 바깥 클릭 닫힘을 jsdom이 구현하지 않음.
 - 해결: 바깥 클릭 닫힘 검사는 실제 브라우저 E2E에 두고, Escape 닫힘은 Vitest에서 유지함.
+
+### 2026-11-13 — 진단 흐름·랜딩 Vitest
+- 작업: Astryx 전환 4-3②, F-06·F-08
+- 증상: 저장 상태 역할 중복 3건, 제출 Dialog 포커스 1건, 저장 재시도 버튼 1건, 샘플 리포트 구역 선택 1건 실패.
+- 원인 분류: 테스트 오류
+- 원인: Astryx ProgressBar가 자체 `role="status"` 영역을 추가하는데 테스트가 이름 없이 status 하나만 찾았고, Section이 `<section>`을 렌더링한다고 가정했다. Dialog의 `data-autofocus`·포커스 복귀는 jsdom에서 동작하지 않았으며, Banner의 자식은 `collapsible={false}` 없이 바로 표시되지 않았다.
+- 해결: 저장 상태에 접근성 이름을 붙여 정확히 찾고, Section은 Astryx 클래스 기준으로 찾는다. 제출 Dialog는 명시적으로 첫 버튼과 트리거에 포커스를 옮기고, 오류 Banner는 자식을 항상 펼쳐 둔다.
+
+### 2026-11-13 — e2e/diagnosis-ui.spec.tsx (수집 단계)
+- 작업: Astryx 전환 4-3②, F-06·F-08
+- 증상: Astryx reset CSS를 읽지 못해 ENOENT가 발생하고 테스트를 수집하지 못함.
+- 원인 분류: 테스트 오류
+- 원인: 패키지 import 경로 `@astryxdesign/core/reset.css`를 실제 파일 경로 `dist/reset.css`로 잘못 추정했으며, 설치된 패키지의 파일은 `src/reset.css`에 있음.
+- 해결: 정적 화면 E2E가 읽는 경로를 `node_modules/@astryxdesign/core/src/reset.css`로 고침.
+
+### 2026-11-13 — e2e/diagnosis-ui.spec.tsx:풀이 머리와 리포트는 화면 너비 안에 표시된다
+- 작업: Astryx 전환 4-3②, F-06·F-08 (Opus 검수)
+- 증상: 버튼 높이 검사 실패. "이전" 버튼 36px (기준 44px 이상).
+- 원인 분류: 코드 오류
+- 원인: Astryx 컨트롤 높이 토큰 기본값이 `--size-element-md` 32px, `--size-element-lg` 36px (`astryx docs tokens/tokens-size`). 우리 터치 기준 44px(`docs/DESIGN.md` "화면", WCAG 2.5.5)보다 낮다. 학습 지도 등 Astryx 버튼을 쓴 모든 화면에 해당.
+- 해결: 테마 `concept`에서 `--size-element-md`·`--size-element-lg`를 44px로(기본·폰 조건 모두), `astryx theme build/add/use`로 다시 생성.

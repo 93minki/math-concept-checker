@@ -1,5 +1,13 @@
 "use client";
-import Link from "next/link";
+import { Banner } from "@astryxdesign/core/Banner";
+import { Button } from "@astryxdesign/core/Button";
+import { Dialog, DialogHeader } from "@astryxdesign/core/Dialog";
+import { Heading } from "@astryxdesign/core/Heading";
+import { HStack } from "@astryxdesign/core/HStack";
+import { Layout, LayoutContent, LayoutFooter } from "@astryxdesign/core/Layout";
+import { Link } from "@astryxdesign/core/Link";
+import { Text } from "@astryxdesign/core/Text";
+import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ProblemText } from "@/components/problem-text";
@@ -50,7 +58,7 @@ export default function DiagnosisView({ id }: { id: string }) {
   const [error, setError] = useState("");
   const [confirm, setConfirm] = useState(false);
   const [busy, setBusy] = useState(false);
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const confirmButtonRef = useRef<HTMLButtonElement>(null);
   const submitButtonRef = useRef<HTMLButtonElement>(null);
   const [stageNotice, setStageNotice] = useState(false);
   const readonly =
@@ -178,44 +186,10 @@ export default function DiagnosisView({ id }: { id: string }) {
     queueMicrotask(() => submitButtonRef.current?.focus());
   }, []);
   useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-    if (confirm) {
-      if (typeof dialog.showModal === "function") {
-        if (!dialog.open) dialog.showModal();
-      } else {
-        dialog.setAttribute("open", "");
-      }
-      const focus = () =>
-        dialog
-          .querySelector<HTMLButtonElement>("[data-submit-confirm]")
-          ?.focus();
-      focus();
-      queueMicrotask(focus);
-    } else if (dialog.open) {
-      if (typeof dialog.close === "function") {
-        dialog.close();
-      } else {
-        dialog.open = false;
-      }
-    }
-  }, [confirm]);
-  useEffect(() => {
     if (!confirm) return;
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-    const dismiss = (event: PointerEvent) => {
-      const rect = dialog.getBoundingClientRect();
-      const inside =
-        event.clientX >= rect.left &&
-        event.clientX <= rect.right &&
-        event.clientY >= rect.top &&
-        event.clientY <= rect.bottom;
-      if (!inside) closeConfirm();
-    };
-    document.addEventListener("pointerdown", dismiss);
-    return () => document.removeEventListener("pointerdown", dismiss);
-  }, [confirm, closeConfirm]);
+    const timer = window.setTimeout(() => confirmButtonRef.current?.focus(), 0);
+    return () => window.clearTimeout(timer);
+  }, [confirm]);
   function update(item: Item, input: AnswerInput) {
     latest.current = { ...latest.current, [item.id]: input };
     setAnswers(latest.current);
@@ -296,21 +270,21 @@ export default function DiagnosisView({ id }: { id: string }) {
           : "답을 고르면 다음 문제로 넘어갈 수 있어요"
       : null;
   return (
-    <div className="stack">
-      <Link className="study-link" href="/">
+    <VStack gap={4}>
+      <Link href="/" isStandalone hasUnderline>
         ← 단원 선택으로
       </Link>
       {error && <Notice role="alert">{error}</Notice>}
-      {!diagnosis && !error && <p>진단을 불러오고 있어요.</p>}
+      {!diagnosis && !error && <Text as="p">진단을 불러오고 있어요.</Text>}
       {diagnosis && (
         <>
-          {readonly && <h1>{diagnosis.unit.name}</h1>}
+          {readonly && <Heading level={1}>{diagnosis.unit.name}</Heading>}
           {diagnosis.status === "aborted" && (
-            <p role="status">
+            <Notice>
               {diagnosis.abort_reason === "expired"
                 ? "기간이 지나 중단된 진단이에요"
                 : "새로 시작해서 중단된 진단이에요"}
-            </p>
+            </Notice>
           )}
           {finished && <ReportView diagnosis={diagnosis} />}
           {stageNotice && !readonly && (
@@ -321,7 +295,7 @@ export default function DiagnosisView({ id }: { id: string }) {
           )}
           {busy && <Notice>채점하고 있어요</Notice>}
           {!readonly && item && answer && (
-            <section className="stack solve-content">
+            <VStack as="section" gap={5}>
               <SolveHeader
                 {...{
                   unit: diagnosis.unit.name,
@@ -329,28 +303,39 @@ export default function DiagnosisView({ id }: { id: string }) {
                   index,
                   total: stageItems.length,
                   status: (
-                    <span
+                    <HStack
+                      as="span"
+                      className="diagnosis-save-status"
+                      gap={0}
                       role="status"
+                      aria-label="답안 저장 상태"
                       aria-live="polite"
-                      className="solve-save-status"
                     >
-                      <span>{saveStatusLabel(states[item.id])}</span>
+                      <Text as="span" type="supporting">
+                        {saveStatusLabel(states[item.id])}
+                      </Text>
                       {states[item.id] === "saved" && (
-                        <span aria-hidden="true"> ✓</span>
+                        <Text as="span" type="supporting" aria-hidden="true">
+                          {" "}
+                          ✓
+                        </Text>
                       )}
-                    </span>
+                    </HStack>
                   ),
                   error: states[item.id] === "error" && (
-                    <div className="save-error" role="alert">
-                      저장하지 못했어요{" "}
-                      <button
-                        className="btn btn-secondary"
-                        disabled={busy}
+                    <Banner
+                      status="error"
+                      title="저장하지 못했어요"
+                      role="alert"
+                      collapsible={false}
+                    >
+                      <Button
+                        label="다시 시도"
+                        variant="secondary"
+                        isDisabled={busy}
                         onClick={() => void save(item.id)}
-                      >
-                        다시 시도
-                      </button>
-                    </div>
+                      />
+                    </Banner>
                   ),
                 }}
               />
@@ -395,7 +380,7 @@ export default function DiagnosisView({ id }: { id: string }) {
                 )}
               </div>
               {item.question_type === "written" && "written_text" in answer && (
-                <>
+                <VStack gap={2}>
                   <label htmlFor="answer">풀이와 답</label>
                   <textarea
                     id="answer"
@@ -406,76 +391,93 @@ export default function DiagnosisView({ id }: { id: string }) {
                       update(item, { written_text: e.target.value })
                     }
                   />
-                  <p>{answer.written_text.length} / 1000자</p>
-                </>
+                  <Text as="p" type="supporting" hasTabularNumbers>
+                    {answer.written_text.length} / 1000자
+                  </Text>
+                </VStack>
               )}
-              <div className="button-row">
-                <button
-                  className="btn btn-secondary"
-                  disabled={index === 0 || busy}
+              <HStack className="diagnosis-actions" gap={3}>
+                <Button
+                  label="이전"
+                  variant="secondary"
+                  width="100%"
+                  size="lg"
+                  isDisabled={index === 0 || busy}
                   onClick={() => void move(index - 1)}
-                >
-                  이전
-                </button>
+                />
                 {isLast ? (
-                  <button
-                    className="btn"
+                  <Button
+                    label="제출하기"
+                    variant="primary"
+                    width="100%"
+                    size="lg"
                     ref={submitButtonRef}
-                    disabled={!canSubmit || busy}
+                    isDisabled={!canSubmit || busy}
                     onClick={() => setConfirm(true)}
-                  >
-                    제출하기
-                  </button>
+                  />
                 ) : (
-                  <button
-                    className="btn"
-                    disabled={!currentAnswered || busy}
+                  <Button
+                    label="다음"
+                    variant="primary"
+                    width="100%"
+                    size="lg"
+                    isDisabled={!currentAnswered || busy}
                     onClick={() => void move(index + 1)}
-                  >
-                    다음
-                  </button>
+                  />
                 )}
-              </div>
+              </HStack>
               {navigationHint && (
-                <p className="navigation-hint">{navigationHint}</p>
+                <Text as="p" type="supporting" justify="end">
+                  {navigationHint}
+                </Text>
               )}
-            </section>
+            </VStack>
           )}
           {!readonly && (
-            <dialog
-              ref={dialogRef}
-              className="submit-dialog"
-              aria-label="제출 확인"
-              onClose={closeConfirm}
-              onCancel={(event) => {
-                event.preventDefault();
-                closeConfirm();
+            <Dialog
+              isOpen={confirm}
+              onOpenChange={(isOpen) => {
+                if (!isOpen) closeConfirm();
               }}
+              purpose="info"
             >
-              <p>답안을 제출할까요? 제출하면 답을 고칠 수 없어요.</p>
-              <div className="button-row">
-                <button
-                  className="btn"
-                  type="button"
-                  data-submit-confirm
-                  disabled={busy}
-                  onClick={() => void submit()}
-                >
-                  제출할게요
-                </button>
-                <button
-                  className="btn btn-secondary"
-                  type="button"
-                  disabled={busy}
-                  onClick={closeConfirm}
-                >
-                  계속 풀기
-                </button>
-              </div>
-            </dialog>
+              <Layout
+                header={<DialogHeader title="제출 확인" />}
+                content={
+                  <LayoutContent>
+                    <Text as="p">
+                      답안을 제출할까요? 제출하면 답을 고칠 수 없어요.
+                    </Text>
+                  </LayoutContent>
+                }
+                footer={
+                  <LayoutFooter>
+                    <HStack gap={2} hAlign="end" wrap="wrap">
+                      <Button
+                        label="제출할게요"
+                        variant="primary"
+                        type="button"
+                        ref={confirmButtonRef}
+                        data-autofocus
+                        isDisabled={busy}
+                        isLoading={busy}
+                        onClick={() => void submit()}
+                      />
+                      <Button
+                        label="계속 풀기"
+                        variant="secondary"
+                        type="button"
+                        isDisabled={busy}
+                        onClick={closeConfirm}
+                      />
+                    </HStack>
+                  </LayoutFooter>
+                }
+              />
+            </Dialog>
           )}
         </>
       )}
-    </div>
+    </VStack>
   );
 }

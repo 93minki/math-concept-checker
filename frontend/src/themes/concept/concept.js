@@ -215,7 +215,9 @@ export const conceptTheme = {
     "--shadow-inset-selected": "inset 0 0 0 2px #25252a50",
     "--shadow-inset-success": "inset 0 0 0 2px #84848930",
     "--shadow-inset-warning": "inset 0 0 0 2px #84848930",
-    "--shadow-inset-error": "inset 0 0 0 2px #84848930"
+    "--shadow-inset-error": "inset 0 0 0 2px #84848930",
+    "--size-element-md": "44px",
+    "--size-element-lg": "44px"
   },
   components: {
     "heading": {
@@ -645,7 +647,9 @@ export const conceptTheme = {
           "tokens": {
             "--font-family-body": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
             "--font-family-heading": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
-            "--font-family-code": "ui-monospace, SFMono-Regular, Menlo, monospace"
+            "--font-family-code": "ui-monospace, SFMono-Regular, Menlo, monospace",
+            "--size-element-md": "44px",
+            "--size-element-lg": "44px"
           }
         }
       }

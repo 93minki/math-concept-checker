@@ -33,8 +33,21 @@ test("랜딩과 머리말은 서비스 소개와 계정 링크를 보여 준다"
   expect(
     within(header).getByRole("link", { name: "회원가입" }).getAttribute("href"),
   ).toBe("/signup");
-  const preview = screen.getByRole("img", { name: "리포트 예시" });
-  expect(within(preview).getByText("깊이 이해")).toBeTruthy();
-  expect(within(preview).getAllByText("기본 이해")).toHaveLength(2);
-  expect(within(preview).getByText("아직 이해 못 함")).toBeTruthy();
+  const sample = screen
+    .getByRole("heading", { name: "샘플 리포트" })
+    .closest(".astryx-section") as HTMLElement | null;
+  expect(sample).toBeTruthy();
+  expect(
+    within(sample!).getByText(
+      "아래 내용은 리포트가 어떻게 보이는지 알려 주는 예시예요.",
+    ),
+  ).toBeTruthy();
+  expect(
+    within(sample!).getByRole("heading", { name: "방정식과 항등식의 구별" }),
+  ).toBeTruthy();
+  expect(
+    within(sample!).getByRole("progressbar", {
+      name: "단원 이해 단계: 기본 이해",
+    }),
+  ).toBeTruthy();
 });

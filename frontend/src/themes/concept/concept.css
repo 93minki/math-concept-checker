@@ -295,6 +295,8 @@
     --shadow-inset-success: inset 0 0 0 2px #84848930;
     --shadow-inset-warning: inset 0 0 0 2px #84848930;
     --shadow-inset-error: inset 0 0 0 2px #84848930;
+    --size-element-md: 44px;
+    --size-element-lg: 44px;
     --color-icon-info: var(--color-text-info);
     --color-icon-success: var(--color-text-success);
     --color-icon-warning: var(--color-text-warning);
@@ -854,6 +856,8 @@
     --font-family-body: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --font-family-heading: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --font-family-code: ui-monospace, SFMono-Regular, Menlo, monospace;
+    --size-element-md: 44px;
+    --size-element-lg: 44px;
   }
   }
 }
