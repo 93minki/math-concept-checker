@@ -1,4 +1,5 @@
 "use client";
+import { CheckboxInput } from "@astryxdesign/core/CheckboxInput";
 
 export function rememberPrivacyConsent() {
   try {
@@ -55,17 +56,13 @@ export default function PrivacyConsent({
           수 없어요.
         </p>
       </div>
-      {/* The whole row is the touch target: the label wraps the checkbox. */}
-      <label className="privacy-consent-check">
-        <input
-          type="checkbox"
-          name="privacy_consent"
-          required
-          checked={checked}
-          onChange={(event) => onChange(event.target.checked)}
-        />
-        개인정보 수집·이용에 동의합니다 (필수)
-      </label>
+      <CheckboxInput
+        label="개인정보 수집·이용에 동의합니다 (필수)"
+        htmlName="privacy_consent"
+        isRequired
+        value={checked}
+        onChange={onChange}
+      />
     </section>
   );
 }

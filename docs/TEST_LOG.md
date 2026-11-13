@@ -402,3 +402,17 @@
 - 원인 분류: (1) 코드 오류 (2) 테스트 오류
 - 원인: (1) Astryx 최상위 `<Theme>`가 `<html data-theme>`를 관리하며(`@astryxdesign/core/dist/theme/Theme.js` `useRootThemeSync`), 처음 그릴 때 `mode="system"`이면 속성을 지운다. 우리 코드가 모드를 그 속성에서 다시 읽어 저장한 선택이 사라졌다. (2) Astryx가 `<html>`에도 `data-astryx-theme`를 붙여 감싸개와 둘이 되었다.
 - 해결: (1) 모드를 `localStorage.theme`에서 읽는다(`storedTheme()`). (2) `<html>`과 `body` 안 감싸개를 따로 검사.
+
+### 2026-11-13 — 인증·랜딩 컴포넌트 Vitest
+- 작업: Astryx 전환 4-2, F-01
+- 증상: `pnpm test`에서 인증·랜딩 테스트 6개 실패. 체크박스 이름에 `Required`가 추가되고, 머리말 landmark가 사라졌으며, 비활성 버튼의 `disabled` 속성이 false로 나타남.
+- 원인 분류: 설계 불일치
+- 원인: Astryx CheckboxInput은 필수 문구를 추가하고, TopNav는 nav만 렌더링하며, Button은 `disabled` 대신 `aria-disabled`를 사용함.
+- 해결: header landmark를 복원하고 중복 필수 표시는 숨김. 테스트와 E2E는 새 체크박스 구조와 aria-disabled 동작을 검증함.
+
+### 2026-11-13 — `astryx doctor --built .next` 테마 검사
+- 작업: Astryx 전환 4-2, F-01
+- 증상: theme-module·theme-local-builds 검사 실패. theme-module-import·theme-fonts 경고.
+- 원인 분류: 환경·설정
+- 원인: 기존 4-1 테마 생성물과 CLI가 기대하는 생성 결과가 일치하지 않으며, CLI는 앱의 별칭 import와 로컬 Pretendard 로딩을 확인하지 못함.
+- 해결: 미해결. 이번 지시의 테마 파일 변경 금지와 외부 글꼴 요청 금지에 따라 유지하고 보고함.

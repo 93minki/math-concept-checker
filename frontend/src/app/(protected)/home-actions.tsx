@@ -1,7 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { TopNav, TopNavHeading, TopNavItem } from "@astryxdesign/core/TopNav";
+import { HStack } from "@astryxdesign/core/HStack";
+import { Button } from "@astryxdesign/core/Button";
+import { Banner } from "@astryxdesign/core/Banner";
 import BrandMark from "@/components/brand-mark";
 import ThemeButton from "@/components/theme-button";
 import { useState } from "react";
@@ -24,19 +27,27 @@ export default function HomeActions() {
   }
 
   return (
-    <header className="home-header">
-      <div className="home-header-inner">
-        <Link className="home-brand" href="/">
-          <BrandMark />
-          수학 개념 체커
-        </Link>
-        <nav className="home-nav" aria-label="주 메뉴">
-          <Link href="/history">지난 기록</Link>
-          <button onClick={signOut}>로그아웃</button>
-          <ThemeButton />
-        </nav>
-      </div>
-      {error && <p role="alert">{error}</p>}
-    </header>
+    <>
+      <header className="astryx-site-header">
+        <TopNav
+          label="주 메뉴"
+          heading={
+            <TopNavHeading
+              logo={<BrandMark />}
+              heading="수학 개념 체커"
+              headingHref="/"
+            />
+          }
+          endContent={
+            <HStack gap={2} vAlign="center">
+              <TopNavItem label="지난 기록" href="/history" />
+              <Button label="로그아웃" variant="ghost" onClick={signOut} />
+              <ThemeButton />
+            </HStack>
+          }
+        />
+      </header>
+      {error && <Banner status="error" title={error} role="alert" />}
+    </>
   );
 }

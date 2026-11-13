@@ -1,5 +1,9 @@
 "use client";
 
+import { Button } from "@astryxdesign/core/Button";
+import { Card } from "@astryxdesign/core/Card";
+import { VStack } from "@astryxdesign/core/VStack";
+import { Banner } from "@astryxdesign/core/Banner";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { publicEnv } from "@/lib/env";
@@ -51,45 +55,51 @@ export default function CompleteSignup() {
   }, [complete]);
 
   return (
-    <main className="auth-card">
-      <h1>가입 마무리</h1>
-      {busy && <p>가입을 마무리하고 있어요.</p>}
-      {needsConsent && (
-        <>
-          <p>가입을 마치려면 개인정보 수집·이용에 동의해 주세요.</p>
-          <PrivacyConsent checked={consent} onChange={setConsent} />
-          <button
-            className="btn"
-            type="button"
-            disabled={!consent}
-            onClick={() => {
-              if (!consent) return;
-              rememberPrivacyConsent();
-              setNeedsConsent(false);
-              setBusy(true);
-              void complete();
-            }}
-          >
-            동의하고 가입 마치기
-          </button>
-        </>
-      )}
-      {error && (
-        <>
-          <p role="alert">가입을 마무리하지 못했어요. 다시 시도해 주세요.</p>
-          <button
-            className="btn"
-            type="button"
-            onClick={() => {
-              setBusy(true);
-              setError(false);
-              void complete();
-            }}
-          >
-            다시 시도
-          </button>
-        </>
-      )}
+    <main className="auth-page">
+      <Card>
+        <VStack gap={4}>
+          <h1>가입 마무리</h1>
+          {busy && <p>가입을 마무리하고 있어요.</p>}
+          {needsConsent && (
+            <>
+              <p>가입을 마치려면 개인정보 수집·이용에 동의해 주세요.</p>
+              <PrivacyConsent checked={consent} onChange={setConsent} />
+              <Button
+                label="동의하고 가입 마치기"
+                variant="primary"
+                type="button"
+                isDisabled={!consent}
+                onClick={() => {
+                  if (!consent) return;
+                  rememberPrivacyConsent();
+                  setNeedsConsent(false);
+                  setBusy(true);
+                  void complete();
+                }}
+              />
+            </>
+          )}
+          {error && (
+            <>
+              <Banner
+                role="alert"
+                status="error"
+                title="가입을 마무리하지 못했어요. 다시 시도해 주세요."
+              />
+              <Button
+                label="다시 시도"
+                variant="primary"
+                type="button"
+                onClick={() => {
+                  setBusy(true);
+                  setError(false);
+                  void complete();
+                }}
+              />
+            </>
+          )}
+        </VStack>
+      </Card>
     </main>
   );
 }

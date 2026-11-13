@@ -105,22 +105,23 @@ body {
   padding: 0 16px 24px;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1:not(.astryx-heading),
+h2:not(.astryx-heading),
+h3:not(.astryx-heading),
+h4:not(.astryx-heading) {
   line-height: 1.3;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+@layer reset {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 :root[data-theme="dark"] {
@@ -133,26 +134,6 @@ a {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
   }
-}
-
-.auth-card {
-  width: min(100%, 420px);
-  display: grid;
-  gap: 16px;
-}
-
-.auth-card form {
-  display: grid;
-  gap: 10px;
-}
-
-.auth-card input,
-.auth-card .btn {
-  width: 100%;
-}
-
-.auth-card p {
-  line-height: 1.5;
 }
 
 .study-page {
@@ -326,59 +307,12 @@ a {
   padding-block: 0.4em;
 }
 
-:focus-visible {
+:focus-visible:not([data-astryx-pressable]):not(.astryx-checkbox-input input) {
   outline: 3px solid var(--primary-ink);
   outline-offset: 2px;
 }
-.auth-card,
 .study-page:not(.home-page) {
   margin-top: 24px;
-}
-.home-header {
-  width: calc(100% + 32px);
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow);
-}
-.home-header-inner {
-  width: min(100% - 32px, var(--content-width));
-  height: 64px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-.home-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.15rem;
-  font-weight: 750;
-  white-space: nowrap;
-}
-.home-nav {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  white-space: nowrap;
-}
-.home-nav a,
-.home-nav button {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  font: inherit;
-  color: var(--text);
-}
-.home-nav button {
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-}
-.home-header > [role="alert"] {
-  width: min(100% - 32px, var(--content-width));
-  margin: auto;
 }
 .home-page {
   width: min(100%, var(--content-width));
@@ -494,14 +428,6 @@ a {
 }
 
 /* Shared controls and feedback outside the problem sheet. */
-.auth-card {
-  padding: 24px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.auth-card input,
 .study-page input:not([type="radio"]),
 .study-page textarea {
   min-height: var(--control-h);
@@ -541,7 +467,7 @@ a {
   color: var(--disabled-text);
   cursor: not-allowed;
 }
-[role="alert"] {
+[role="alert"]:not(:has(.astryx-banner)):not(.astryx-banner *) {
   color: var(--danger);
   background: var(--danger-soft);
   border-radius: var(--radius);
@@ -705,43 +631,10 @@ a {
   }
 }
 
-/* Auth pages carry the wider landing, so the brand lines up with it. */
-.auth-header .home-header-inner {
-  width: min(100% - 32px, 1040px);
-}
-
-.auth-header-actions {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-}
-.auth-header-actions .btn {
-  min-height: 44px;
-  padding: 6px 10px;
-}
-@media (max-width: 400px) {
-  .auth-header .home-header-inner {
-    gap: 6px;
-  }
-  .auth-header .home-brand {
-    font-size: 1rem;
-  }
-  .auth-header-actions .btn {
-    font-size: 0.875rem;
-    padding-inline: 8px;
-  }
-}
-
 .auth-page {
   width: min(100%, 420px);
   margin: 40px auto 0;
 }
-.auth-page .auth-card {
-  width: 100%;
-  margin: 0;
-}
-
 .privacy-consent {
   display: grid;
   gap: 10px;
@@ -767,25 +660,6 @@ a {
 .privacy-consent .privacy-consent-content p {
   line-height: 1.6;
 }
-.privacy-consent-check {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 44px;
-  cursor: pointer;
-}
-.auth-card .privacy-consent-check input {
-  width: 20px;
-  height: 20px;
-  min-height: 0;
-  flex: none;
-  margin: 0;
-  padding: 0;
-  box-shadow: none;
-  accent-color: var(--primary);
-  cursor: pointer;
-}
-
 /* Unit progress */
 .unit-map {
   min-width: 0;
@@ -1001,42 +875,6 @@ a {
     padding: 16px;
   }
 }
-.theme-button {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: var(--text);
-  border: 0;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.theme-button svg {
-  width: 22px;
-  height: 22px;
-}
-@media (max-width: 400px) {
-  .auth-header-actions {
-    gap: 2px;
-  }
-  .auth-header-actions .btn {
-    padding-inline: 5px;
-  }
-  .auth-header .home-header-inner {
-    gap: 2px;
-  }
-  .auth-header .home-brand {
-    font-size: 0.9rem;
-    gap: 4px;
-  }
-  .home-nav {
-    gap: 4px;
-  }
-}
-
 /* Search results: one card, grade subheadings instead of chips. */
 .unit-search-count {
   font-weight: 700;
@@ -1223,4 +1061,38 @@ a {
 /* Follow the pre-hydration document choice inside Astryx's system-mode wrapper. */
 [data-astryx-theme="concept"] {
   color-scheme: inherit;
+}
+
+.auth-form {
+  display: grid;
+  gap: var(--spacing-3);
+}
+.auth-form input {
+  width: 100%;
+  min-height: max(var(--size-element-lg), var(--control-h));
+  padding: var(--spacing-3);
+  font: inherit;
+  color: var(--color-text-primary);
+  background: var(--color-background-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-element);
+}
+
+.astryx-site-header {
+  width: 100%;
+}
+.privacy-consent .astryx-checkbox-input > [data-astryx-pressable] {
+  min-height: var(--control-h);
+}
+.privacy-consent .astryx-checkbox-label > span:last-child {
+  display: none;
+}
+
+.astryx-site-header .astryx-top-nav-item {
+  min-height: var(--control-h);
+}
+
+.astryx-site-header .astryx-button,
+.auth-page .astryx-button {
+  min-height: var(--control-h);
 }

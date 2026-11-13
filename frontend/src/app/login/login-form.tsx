@@ -1,6 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { Button } from "@astryxdesign/core/Button";
+import { Card } from "@astryxdesign/core/Card";
+import { VStack } from "@astryxdesign/core/VStack";
+import { Banner } from "@astryxdesign/core/Banner";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { createClient } from "@/lib/supabase/client";
@@ -49,42 +53,45 @@ export default function LoginForm() {
   }
 
   return (
-    <section className="auth-card" aria-labelledby="login-title">
-      <h1 id="login-title">로그인</h1>
-      {/* method="post": a native submit must never put the password in the URL. */}
-      <form method="post" onSubmit={submit}>
-        <label htmlFor="email">이메일</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          required
-        />
-        <label htmlFor="password">비밀번호</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          autoComplete="current-password"
-          required
-        />
-        <button className="btn" disabled={busy || !hydrated} type="submit">
-          로그인
-        </button>
-      </form>
-      <button
-        className="btn btn-secondary"
-        disabled={busy || !hydrated}
-        onClick={kakao}
-        type="button"
-      >
-        카카오로 시작하기
-      </button>
-      <p>
-        계정이 없나요? <Link href="/signup">회원가입</Link>
-      </p>
-      {error && <p role="alert">{error}</p>}
+    <section className="auth-page" aria-labelledby="login-title">
+      <Card>
+        <VStack gap={4}>
+          <h1 id="login-title">로그인</h1>
+          {/* method="post": a native submit must never put the password in the URL. */}
+          <form className="auth-form" method="post" onSubmit={submit}>
+            <label htmlFor="email">이메일</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+            />
+            <label htmlFor="password">비밀번호</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autoComplete="current-password"
+              required
+            />
+            <button className="btn" disabled={busy || !hydrated} type="submit">
+              로그인
+            </button>
+          </form>
+          <Button
+            label="카카오로 시작하기"
+            variant="secondary"
+            isDisabled={busy || !hydrated}
+            onClick={kakao}
+            width="100%"
+          />
+          <p>
+            계정이 없나요? <Link href="/signup">회원가입</Link>
+          </p>
+          {error && <Banner status="error" title={error} role="alert" />}
+        </VStack>
+      </Card>
     </section>
   );
 }

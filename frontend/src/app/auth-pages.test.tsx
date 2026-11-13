@@ -1,3 +1,4 @@
+import { renderToStaticMarkup } from "react-dom/server";
 import {
   cleanup,
   fireEvent,
@@ -93,7 +94,7 @@ test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async 
   mocks.signUp.mockResolvedValue({ data: { session: null }, error: null });
   const { container } = render(<SignupPage />);
   const consent = screen.getByRole("checkbox", {
-    name: "개인정보 수집·이용에 동의합니다 (필수)",
+    name: /개인정보 수집·이용에 동의합니다 \(필수\)/,
   });
   const submit = screen.getByRole("button", {
     name: "가입하기",
@@ -198,6 +199,27 @@ test.each([
     expect(signup.getAttribute("aria-current")).toBe(
       current === "회원가입" ? "page" : null,
     );
-    expect(screen.queryByRole("navigation")).toBeNull();
+    expect(screen.getByRole("navigation", { name: "주 메뉴" })).toBeTruthy();
   },
 );
+
+test.each([
+  ["로그인", LoginForm],
+  ["회원가입", SignupPage],
+])("%s 서버 HTML의 인증 폼은 안전하다", (_, Component) => {
+  const doc = new DOMParser().parseFromString(
+    renderToStaticMarkup(<Component />),
+    "text/html",
+  );
+  const form = doc.querySelector("form");
+  expect(form?.getAttribute("method")).toBe("post");
+  expect(
+    form?.querySelector<HTMLInputElement>('input[name="email"]')?.required,
+  ).toBe(true);
+  expect(
+    form?.querySelector<HTMLInputElement>('input[name="password"]')?.required,
+  ).toBe(true);
+  expect(
+    form?.querySelector<HTMLButtonElement>('button[type="submit"]')?.disabled,
+  ).toBe(true);
+});

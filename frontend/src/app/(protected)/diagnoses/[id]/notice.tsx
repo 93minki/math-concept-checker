@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, type ReactNode } from "react";
+import { Banner } from "@astryxdesign/core/Banner";
 
 export default function Notice({
   children,
@@ -15,14 +16,18 @@ export default function Notice({
     ref.current?.focus();
   }, []);
   return (
-    <div
-      ref={ref}
-      role={role}
-      aria-label={label}
-      tabIndex={-1}
-      className="unit-card stack"
-    >
-      {children}
+    <div ref={ref} role={role} aria-label={label} tabIndex={-1}>
+      {typeof children === "string" ? (
+        <Banner status={role === "alert" ? "error" : "info"} title={children} />
+      ) : (
+        <Banner
+          status={role === "alert" ? "error" : "info"}
+          title="안내"
+          collapsible={false}
+        >
+          {children}
+        </Banner>
+      )}
     </div>
   );
 }

@@ -75,13 +75,15 @@ test("동의 기록이 없으면 가입 완료 전에 동의를 받는다", asyn
   const button = screen.getByRole("button", {
     name: "동의하고 가입 마치기",
   }) as HTMLButtonElement;
-  expect(button.disabled).toBe(true);
+  expect(button.getAttribute("aria-disabled")).toBe("true");
+  fireEvent.click(button);
+  expect(fetchMock).not.toHaveBeenCalled();
   fireEvent.click(
     screen.getByRole("checkbox", {
-      name: "개인정보 수집·이용에 동의합니다 (필수)",
+      name: /개인정보 수집·이용에 동의합니다 \(필수\)/,
     }),
   );
-  expect(button.disabled).toBe(false);
+  expect(button.getAttribute("aria-disabled")).toBeNull();
   fireEvent.click(button);
   expect(sessionStorage.getItem("privacy-consent")).toBe("agreed");
   await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));

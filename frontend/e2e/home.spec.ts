@@ -35,9 +35,16 @@ for (const route of ["/", "/login", "/signup"]) {
           node instanceof HTMLInputElement &&
           (node.type === "checkbox" || node.type === "radio"),
       );
-      const target = toggle
-        ? control.locator("xpath=ancestor::label[1]")
-        : control;
+      const astryxToggle =
+        toggle &&
+        (await control
+          .locator("xpath=ancestor::*[@data-astryx-pressable][1]")
+          .count()) > 0;
+      const target = astryxToggle
+        ? control.locator("xpath=ancestor::*[@data-astryx-pressable][1]")
+        : toggle
+          ? control.locator("xpath=ancestor::label[1]")
+          : control;
       const box = await target.boundingBox();
       expect(box?.height).toBeGreaterThanOrEqual(44);
     }
@@ -47,9 +54,13 @@ for (const route of ["/", "/login", "/signup"]) {
 test("/signup 동의 체크는 문구를 눌러도 켜진다", async ({ page }) => {
   await page.goto("/signup");
   const consent = page.getByRole("checkbox", {
-    name: "개인정보 수집·이용에 동의합니다 (필수)",
+    name: /개인정보 수집·이용에 동의합니다 \(필수\)/,
   });
   await expect(consent).not.toBeChecked();
+  const touchTarget = consent.locator(
+    "xpath=ancestor::*[@data-astryx-pressable][1]",
+  );
+  expect((await touchTarget.boundingBox())?.height).toBeGreaterThanOrEqual(44);
   await page.getByText("개인정보 수집·이용에 동의합니다 (필수)").click();
   await expect(consent).toBeChecked();
   await expect(page.getByRole("button", { name: "가입하기" })).toBeEnabled();

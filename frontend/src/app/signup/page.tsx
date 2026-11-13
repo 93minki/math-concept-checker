@@ -1,6 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { Card } from "@astryxdesign/core/Card";
+import { VStack } from "@astryxdesign/core/VStack";
+import { Banner } from "@astryxdesign/core/Banner";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { createClient } from "@/lib/supabase/client";
@@ -43,41 +46,43 @@ export default function SignupPage() {
 
   return (
     <main className="auth-page">
-      <div className="auth-card">
-        <h1>회원가입</h1>
-        {/* method="post": a native submit must never put the password in the URL. */}
-        <form method="post" onSubmit={submit}>
-          <label htmlFor="email">이메일</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-          />
-          <label htmlFor="password">비밀번호</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            autoComplete="new-password"
-            required
-            minLength={6}
-          />
-          <PrivacyConsent checked={consent} onChange={setConsent} />
-          <button
-            className="btn"
-            disabled={busy || !hydrated || !consent}
-            type="submit"
-          >
-            가입하기
-          </button>
-        </form>
-        <p>
-          이미 계정이 있나요? <Link href="/login">로그인</Link>
-        </p>
-        {message && <p role="status">{message}</p>}
-      </div>
+      <Card>
+        <VStack gap={4}>
+          <h1>회원가입</h1>
+          {/* method="post": a native submit must never put the password in the URL. */}
+          <form className="auth-form" method="post" onSubmit={submit}>
+            <label htmlFor="email">이메일</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+            />
+            <label htmlFor="password">비밀번호</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autoComplete="new-password"
+              required
+              minLength={6}
+            />
+            <PrivacyConsent checked={consent} onChange={setConsent} />
+            <button
+              className="btn"
+              disabled={busy || !hydrated || !consent}
+              type="submit"
+            >
+              가입하기
+            </button>
+          </form>
+          <p>
+            이미 계정이 있나요? <Link href="/login">로그인</Link>
+          </p>
+          {message && <Banner status="info" title={message} role="status" />}
+        </VStack>
+      </Card>
     </main>
   );
 }
