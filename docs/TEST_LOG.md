@@ -395,3 +395,10 @@
 - 원인 분류: 테스트 오류
 - 원인: 풀이 화면용 라디오 검사를 읽기 전용 결과 화면 검사에도 중복 삽입함.
 - 해결: 라디오와 번호의 접근성 검사는 풀이 화면에서만 하고, 결과 화면은 표·그림 목록과 답안 표시를 확인함.
+
+### 2026-11-13 — e2e/home.spec.ts:테마 선택은 새로고침 뒤에도 유지된다
+- 작업: UI 고도화 4-1 Astryx 기반, 공통
+- 증상: (1) 새로고침 뒤 `<html data-theme>`가 비어 있음. (2) 고친 뒤 `[data-astryx-theme="concept"]` 선택자가 2개 요소에 걸림(strict mode).
+- 원인 분류: (1) 코드 오류 (2) 테스트 오류
+- 원인: (1) Astryx 최상위 `<Theme>`가 `<html data-theme>`를 관리하며(`@astryxdesign/core/dist/theme/Theme.js` `useRootThemeSync`), 처음 그릴 때 `mode="system"`이면 속성을 지운다. 우리 코드가 모드를 그 속성에서 다시 읽어 저장한 선택이 사라졌다. (2) Astryx가 `<html>`에도 `data-astryx-theme`를 붙여 감싸개와 둘이 되었다.
+- 해결: (1) 모드를 `localStorage.theme`에서 읽는다(`storedTheme()`). (2) `<html>`과 `body` 안 감싸개를 따로 검사.

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import AppTheme from "@/components/app-theme";
+import "@astryxdesign/core/reset.css";
+import "@astryxdesign/core/astryx.css";
 import "katex/dist/katex.min.css";
 import "../../public/fonts/pretendard/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
@@ -17,7 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           id="initial-theme"
           strategy="beforeInteractive"
         >{`try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`}</Script>
-        {children}
+        <AppTheme>{children}</AppTheme>
       </body>
     </html>
   );

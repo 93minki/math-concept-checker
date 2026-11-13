@@ -1219,3 +1219,8 @@ a {
 .report-choice {
   cursor: default;
 }
+
+/* Follow the pre-hydration document choice inside Astryx's system-mode wrapper. */
+[data-astryx-theme="concept"] {
+  color-scheme: inherit;
+}

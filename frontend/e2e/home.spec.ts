@@ -114,4 +114,27 @@ test("테마 선택은 새로고침 뒤에도 유지된다", async ({ page }) =>
   expect(["light", "dark"]).toContain(selected);
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("data-theme", selected!);
+  // Astryx's root <Theme> mirrors the mode onto <html>; check both the
+  // document and the theme wrapper inside <body>.
+  await expect(page.locator("html")).toHaveCSS("color-scheme", selected!);
+  await expect(
+    page.locator('body [data-astryx-theme="concept"]').first(),
+  ).toHaveCSS("color-scheme", selected!);
 });
+
+for (const route of ["/", "/login", "/signup"]) {
+  test(`${route}에서 외부 Google 글꼴을 요청하지 않는다`, async ({ page }) => {
+    const requests: string[] = [];
+    page.on("request", (request) => {
+      const url = new URL(request.url());
+      if (
+        url.hostname === "fonts.googleapis.com" ||
+        url.hostname === "fonts.gstatic.com"
+      )
+        requests.push(url.hostname);
+    });
+    await page.goto(route);
+    await page.evaluate(() => document.fonts.ready);
+    expect(requests).toEqual([]);
+  });
+}

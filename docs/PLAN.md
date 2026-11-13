@@ -151,6 +151,11 @@
   - 검사: 프론트엔드 format·lint·typecheck·단위 146·build·E2E 32(3100 포트), 백엔드 182 통과. `test:e2e:dev`는 단계 5. 사용자 화면 확인 전 커밋(사용자 지시 "지금 UI 작업까지는 커밋을 해둬").
   - 사용자 지시 (2026-11-13): 화면 검수는 E2E만 돌리고 스크린샷은 찍지 않는다. 사용자가 직접 볼 경로만 알린다 ("앞으로 E2E만 실행하고 스크린샷은 찍지마"). 위 결정 3의 "캡처를 나란히 보여 준다"보다 우선.
 - 2026-11-13: **사용자 결정: 디자인 시스템 Astryx로 전환.** 범위 "전부 다 Astryx로", 겉모습 "지금 정한 색상 버리고 Astryx 기본 테마 중 하나", 버전 "최신 버전", 충돌 시 "Astryx를 우선". 이 커밋 뒤 계획 수정안을 따로 승인받는다.
+- 2026-11-13: **계획 수정안 승인** ("수정안을 승인할게"). 단계 4를 Astryx 전환(4-1 설치·기반, 4-2 공통 요소, 4-3 모든 화면, 4-4 기존 CSS 정리)으로 바꾼다. 한글은 Pretendard, `astryx init`이 우리 `AGENTS.md`를 덮어쓰지 않게 확인, 버전은 설치 때 최신을 정확히 고정.
+  - **중요 사용자 결정:** "문제 관련된 내용은 Astryx와 무관하게 지금처럼 진행하는게 맞고 이건 중요한 결정이야". 문제 판(흰 판·검은 글씨), 본문 상자, 보기와 원 번호·선택 표시·정렬, KaTeX 수식, 그림, 결과 화면의 문제·보기 표시는 Astryx 컴포넌트·테마를 쓰지 않고 지금 코드·CSS를 유지한다. 단계 5에서 `DESIGN.md`에 옮긴다.
+  - 테마는 사용자가 예시를 보고 고른다.
+- 2026-11-13: **테마 결정: stone 바탕 + neutral 글꼴** (임시 미리보기 앱에서 7개 테마와 섞은 안 2개를 비교 → 사용자 "stone을 베이스로 하면서 neutral을 섞을 순 없을까?" → "stone+neutral글꼴"). stone의 보랏빛 회색·컨트롤 모양을 쓰고, 제목 글꼴을 Montserrat 대신 Figtree(본문과 같음)로. `defineTheme({extends: stone, tokens})` → `astryx theme build`로 빌드한 로컬 테마(Astryx 문서: 런타임 테마는 SSR에서 깜빡임, `astryx docs use-a-theme` "Runtime vs Built").
+- 2026-11-13: **글꼴 결정: 모두 Pretendard** (사용자 "C로 간다 글꼴은 모두 Pretendard로"). stone 테마의 `fonts.css`가 Google Fonts(`fonts.googleapis.com`)에서 Figtree·Montserrat·JetBrains Mono를 받아 오므로 쓰지 않는다. 테마 글꼴 토큰(본문·제목)을 Pretendard로 덮고, 코드 글꼴은 시스템 고정폭. 외부 글꼴 요청이 없어야 한다.
 
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:

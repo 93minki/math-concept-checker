@@ -1,15 +1,25 @@
 "use client";
 import { useSyncExternalStore } from "react";
 
+// The stored choice is the source of truth: Astryx's root <Theme> owns
+// <html data-theme> and clears it while the mode is "system".
+export function storedTheme(): "light" | "dark" | null {
+  try {
+    const value = localStorage.getItem("theme");
+    return value === "light" || value === "dark" ? value : null;
+  } catch {
+    return null;
+  }
+}
 function currentTheme(): "light" | "dark" {
-  const chosen = document.documentElement.dataset.theme;
+  const chosen = storedTheme() ?? document.documentElement.dataset.theme;
   if (chosen === "light" || chosen === "dark") return chosen;
   return typeof window.matchMedia === "function" &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
 }
-function subscribe(notify: () => void) {
+export function subscribeTheme(notify: () => void) {
   const media =
     typeof window.matchMedia === "function"
       ? window.matchMedia("(prefers-color-scheme: dark)")
@@ -31,7 +41,11 @@ function subscribe(notify: () => void) {
   };
 }
 export default function ThemeButton() {
-  const theme = useSyncExternalStore(subscribe, currentTheme, () => "unknown");
+  const theme = useSyncExternalStore(
+    subscribeTheme,
+    currentTheme,
+    () => "unknown",
+  );
   const label =
     theme === "unknown"
       ? "테마 바꾸기"
