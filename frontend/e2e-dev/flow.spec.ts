@@ -13,9 +13,34 @@ async function start(page: Page) {
       response.request().method() === "POST",
   );
   const card = unitCard(page);
+  const columns = await page.locator(".learning-row").evaluateAll((rows) =>
+    rows.map((row) => {
+      const state = row
+        .querySelector(".learning-state")
+        ?.getBoundingClientRect();
+      const actions = row
+        .querySelector(".learning-actions")
+        ?.getBoundingClientRect();
+      if (!state || !actions)
+        throw new Error("단원 행의 상태·동작 열이 없어요");
+      return { state: state.x, actions: actions.x };
+    }),
+  );
+  expect(columns.length).toBeGreaterThan(0);
+  for (const column of columns) {
+    expect(Math.abs(column.state - columns[0].state)).toBeLessThanOrEqual(1);
+    expect(Math.abs(column.actions - columns[0].actions)).toBeLessThanOrEqual(
+      1,
+    );
+  }
   if (await card.getByRole("link", { name: "이어서 풀기" }).isVisible()) {
-    await card.getByLabel(`${unitName} 더보기`).click();
-    await card.getByRole("button", { name: "새로 시작하기" }).click();
+    const more = card.getByRole("button", { name: `${unitName} 더보기` });
+    await more.click();
+    await expect(more).toHaveAttribute("aria-expanded", "true");
+    await page.getByRole("heading", { name: "진단할 단원을 골라요" }).click();
+    await expect(more).toHaveAttribute("aria-expanded", "false");
+    await more.click();
+    await page.getByRole("menuitem", { name: "새로 시작하기" }).click();
   } else {
     await card
       .getByRole("button", { name: /^(진단 시작하기|다시 진단하기)$/ })

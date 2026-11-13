@@ -1,5 +1,9 @@
 "use client";
-import Link from "next/link";
+import { Button } from "@astryxdesign/core/Button";
+import { Card } from "@astryxdesign/core/Card";
+import { TextInput } from "@astryxdesign/core/TextInput";
+import { TabList, Tab } from "@astryxdesign/core/TabList";
+import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
 import LearningMap from "./learning-map";
 import { unitProgress } from "@/lib/unit-progress";
@@ -87,35 +91,35 @@ export default function UnitSelection() {
   return (
     <section className="stack unit-selection">
       <h2>진단할 단원을 골라요</h2>
-      <label htmlFor="unit-search">단원 검색</label>
-      <input
-        id="unit-search"
+      <TextInput
+        label="단원 검색"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={setQuery}
         placeholder="단원 이름을 입력해요"
+        width="100%"
+        size="lg"
       />
       {error && <p role="alert">{error}</p>}
       {!units && !error && <p>단원을 불러오고 있어요.</p>}
       {filtered?.length === 0 && <p>검색 결과가 없어요.</p>}
-      <div className="grade-tabs" role="tablist" aria-label="학년 선택">
+      <TabList
+        value={query.trim() ? "" : grade}
+        onChange={setGrade}
+        role="tablist"
+        aria-label="학년 선택"
+        size="lg"
+      >
         {["중1", "중2", "중3"].map((item) => (
-          <button
-            key={item}
-            role="tab"
-            aria-selected={!query.trim() && grade === item}
-            onClick={() => setGrade(item)}
-          >
-            {item}
-          </button>
+          <Tab key={item} value={item} label={item} />
         ))}
-      </div>
+      </TabList>
       <SearchFrame searching={!!query.trim()} count={displayed.length}>
         {(["중1", "중2", "중3"] as const).map((item) => {
           if (!query.trim() && item !== grade) return null;
           const group = displayed.filter((unit) => unit.grade === item);
           if (!group.length) return null;
           return (
-            <div key={item} className="unit-map-grade">
+            <VStack key={item} gap={3}>
               <LearningMap
                 embedded={!!query.trim()}
                 units={group}
@@ -138,30 +142,30 @@ export default function UnitSelection() {
                         진행 중인 진단이 있어요. 이어서 풀거나 새로 시작할 수
                         있어요.
                       </p>
-                      <Link
-                        className="btn btn-secondary"
+                      <Button
+                        label="이어서 풀기"
+                        variant="secondary"
+                        size="lg"
                         href={`/diagnoses/${conflict.id}`}
-                      >
-                        이어서 풀기
-                      </Link>
-                      <button
-                        className="btn btn-secondary"
-                        disabled={busy}
+                      />
+                      <Button
+                        label="새로 시작하기"
+                        variant="secondary"
+                        size="lg"
+                        isDisabled={busy}
                         onClick={() => void start(conflict.unit, true)}
-                      >
-                        새로 시작하기
-                      </button>
-                      <button
-                        className="btn btn-secondary"
+                      />
+                      <Button
+                        label="취소"
+                        variant="secondary"
+                        size="lg"
                         onClick={() => setConflict(null)}
-                      >
-                        취소
-                      </button>
+                      />
                     </div>
                   )
                 }
               />
-            </div>
+            </VStack>
           );
         })}
       </SearchFrame>
@@ -182,9 +186,13 @@ function SearchFrame({
   if (!searching) return <>{children}</>;
   if (count === 0) return null;
   return (
-    <section className="unit-map" aria-label="검색 결과">
-      <p className="unit-search-count">검색 결과 {count}개</p>
-      {children}
+    <section aria-label="검색 결과">
+      <Card>
+        <VStack gap={4}>
+          <p>검색 결과 {count}개</p>
+          {children}
+        </VStack>
+      </Card>
     </section>
   );
 }

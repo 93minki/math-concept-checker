@@ -6,7 +6,7 @@
  * Core: @astryxdesign/core@0.7.14
  */
 
-import { stoneTheme } from "@astryxdesign/theme-stone/built";
+import { stoneTheme } from '@astryxdesign/theme-stone/built';
 const themeIcons = stoneTheme["icons"];
 /**
  * concept theme — built by `pnpm exec astryx theme build`
@@ -16,7 +16,7 @@ const themeIcons = stoneTheme["icons"];
  *   import './concept.css';
  */
 export const conceptTheme = {
-  name: "concept",
+  name: 'concept',
   __built: true,
   tokens: {
     "--font-size-4xs": "0.3125rem",
@@ -92,10 +92,8 @@ export const conceptTheme = {
     "--_astryx-pre-tempo-duration-slow": "700ms",
     "--_astryx-pre-tempo-duration-slow-max": "935ms",
     "--_astryx-motion-tempo": "1",
-    "--font-family-body":
-      '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
-    "--font-family-heading":
-      '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
+    "--font-family-body": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
+    "--font-family-heading": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
     "--font-family-code": "ui-monospace, SFMono-Regular, Menlo, monospace",
     "--color-syntax-keyword": "light-dark(#635a70, #b0a5c0)",
     "--color-syntax-string": "light-dark(#40675c, #90ba8a)",
@@ -217,476 +215,471 @@ export const conceptTheme = {
     "--shadow-inset-selected": "inset 0 0 0 2px #25252a50",
     "--shadow-inset-success": "inset 0 0 0 2px #84848930",
     "--shadow-inset-warning": "inset 0 0 0 2px #84848930",
-    "--shadow-inset-error": "inset 0 0 0 2px #84848930",
+    "--shadow-inset-error": "inset 0 0 0 2px #84848930"
   },
   components: {
-    heading: {
+    "heading": {
       "level:1": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-heading-1-size)",
-        fontWeight: "var(--text-heading-1-weight)",
-        lineHeight: "var(--text-heading-1-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-heading-1-size)",
+        "fontWeight": "var(--text-heading-1-weight)",
+        "lineHeight": "var(--text-heading-1-leading)"
       },
       "level:2": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-heading-2-size)",
-        fontWeight: "var(--text-heading-2-weight)",
-        lineHeight: "var(--text-heading-2-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-heading-2-size)",
+        "fontWeight": "var(--text-heading-2-weight)",
+        "lineHeight": "var(--text-heading-2-leading)"
       },
       "level:3": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-heading-3-size)",
-        fontWeight: "var(--text-heading-3-weight)",
-        lineHeight: "var(--text-heading-3-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-heading-3-size)",
+        "fontWeight": "var(--text-heading-3-weight)",
+        "lineHeight": "var(--text-heading-3-leading)"
       },
       "level:4": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-heading-4-size)",
-        fontWeight: "var(--text-heading-4-weight)",
-        lineHeight: "var(--text-heading-4-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-heading-4-size)",
+        "fontWeight": "var(--text-heading-4-weight)",
+        "lineHeight": "var(--text-heading-4-leading)"
       },
       "level:5": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-heading-5-size)",
-        fontWeight: "var(--text-heading-5-weight)",
-        lineHeight: "var(--text-heading-5-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-heading-5-size)",
+        "fontWeight": "var(--text-heading-5-weight)",
+        "lineHeight": "var(--text-heading-5-leading)"
       },
       "level:6": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-heading-6-size)",
-        fontWeight: "var(--text-heading-6-weight)",
-        lineHeight: "var(--text-heading-6-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-heading-6-size)",
+        "fontWeight": "var(--text-heading-6-weight)",
+        "lineHeight": "var(--text-heading-6-leading)"
       },
       "type:display-1": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-display-1-size)",
-        lineHeight: "var(--text-display-1-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-display-1-size)",
+        "lineHeight": "var(--text-display-1-leading)"
       },
       "type:display-2": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-display-2-size)",
-        lineHeight: "var(--text-display-2-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-display-2-size)",
+        "lineHeight": "var(--text-display-2-leading)"
       },
       "type:display-3": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-display-3-size)",
-        lineHeight: "var(--text-display-3-leading)",
-      },
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-display-3-size)",
+        "lineHeight": "var(--text-display-3-leading)"
+      }
     },
-    text: {
+    "text": {
       "type:body": {
-        fontFamily: "var(--font-family-body)",
-        fontSize: "var(--text-body-size)",
-        lineHeight: "var(--text-body-leading)",
+        "fontFamily": "var(--font-family-body)",
+        "fontSize": "var(--text-body-size)",
+        "lineHeight": "var(--text-body-leading)"
       },
       "type:large": {
-        fontFamily: "var(--font-family-body)",
-        fontSize: "var(--text-large-size)",
-        lineHeight: "var(--text-large-leading)",
+        "fontFamily": "var(--font-family-body)",
+        "fontSize": "var(--text-large-size)",
+        "lineHeight": "var(--text-large-leading)"
       },
       "type:label": {
-        fontFamily: "var(--font-family-body)",
-        fontSize: "var(--text-label-size)",
-        lineHeight: "var(--text-label-leading)",
+        "fontFamily": "var(--font-family-body)",
+        "fontSize": "var(--text-label-size)",
+        "lineHeight": "var(--text-label-leading)"
       },
       "type:code": {
-        fontFamily: "var(--font-family-code)",
-        fontSize: "var(--text-code-size)",
-        lineHeight: "var(--text-code-leading)",
+        "fontFamily": "var(--font-family-code)",
+        "fontSize": "var(--text-code-size)",
+        "lineHeight": "var(--text-code-leading)"
       },
       "type:supporting": {
-        fontFamily: "var(--font-family-body)",
-        fontSize: "var(--text-supporting-size)",
-        lineHeight: "var(--text-supporting-leading)",
+        "fontFamily": "var(--font-family-body)",
+        "fontSize": "var(--text-supporting-size)",
+        "lineHeight": "var(--text-supporting-leading)"
       },
       "type:display-1": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-display-1-size)",
-        lineHeight: "var(--text-display-1-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-display-1-size)",
+        "lineHeight": "var(--text-display-1-leading)"
       },
       "type:display-2": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-display-2-size)",
-        lineHeight: "var(--text-display-2-leading)",
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-display-2-size)",
+        "lineHeight": "var(--text-display-2-leading)"
       },
       "type:display-3": {
-        fontFamily: "var(--font-family-heading)",
-        fontSize: "var(--text-display-3-size)",
-        lineHeight: "var(--text-display-3-leading)",
-      },
+        "fontFamily": "var(--font-family-heading)",
+        "fontSize": "var(--text-display-3-size)",
+        "lineHeight": "var(--text-display-3-leading)"
+      }
     },
-    button: {
-      base: {
-        borderRadius: "var(--radius-full)",
+    "button": {
+      "base": {
+        "borderRadius": "var(--radius-full)"
       },
       "variant:secondary": {
-        backgroundColor: "transparent",
-        borderWidth: "1.5px",
-        borderStyle: "solid",
-        borderColor: "var(--color-border-emphasized)",
+        "backgroundColor": "transparent",
+        "borderWidth": "1.5px",
+        "borderStyle": "solid",
+        "borderColor": "var(--color-border-emphasized)",
         ":hover": {
-          backgroundColor: "var(--color-neutral)",
-        },
+          "backgroundColor": "var(--color-neutral)"
+        }
       },
       "variant:destructive": {
-        backgroundColor: "var(--color-background-red)",
-        color: "var(--color-text-red)",
-      },
+        "backgroundColor": "var(--color-background-red)",
+        "color": "var(--color-text-red)"
+      }
     },
-    badge: {
+    "badge": {
       "variant:info": {
-        backgroundColor: "var(--color-background-blue)",
-        color: "var(--color-text-blue)",
+        "backgroundColor": "var(--color-background-blue)",
+        "color": "var(--color-text-blue)"
       },
       "variant:neutral": {
-        backgroundColor: "var(--color-background-gray)",
-        color: "var(--color-text-gray)",
+        "backgroundColor": "var(--color-background-gray)",
+        "color": "var(--color-text-gray)"
       },
       "variant:success": {
-        backgroundColor: "var(--color-background-green)",
-        color: "var(--color-text-green)",
+        "backgroundColor": "var(--color-background-green)",
+        "color": "var(--color-text-green)"
       },
       "variant:warning": {
-        backgroundColor: "var(--color-background-yellow)",
-        color: "var(--color-text-yellow)",
+        "backgroundColor": "var(--color-background-yellow)",
+        "color": "var(--color-text-yellow)"
       },
       "variant:error": {
-        backgroundColor: "var(--color-background-red)",
-        color: "var(--color-text-red)",
-      },
+        "backgroundColor": "var(--color-background-red)",
+        "color": "var(--color-text-red)"
+      }
     },
-    banner: {
+    "banner": {
       "status:info": {
         "--color-info-muted": "var(--color-background-blue)",
-        "--color-on-info-muted": "var(--color-text-blue)",
+        "--color-on-info-muted": "var(--color-text-blue)"
       },
       "status:success": {
         "--color-success-muted": "var(--color-background-green)",
-        "--color-on-success-muted": "var(--color-text-green)",
+        "--color-on-success-muted": "var(--color-text-green)"
       },
       "status:warning": {
         "--color-warning-muted": "var(--color-background-yellow)",
-        "--color-on-warning-muted": "var(--color-text-yellow)",
+        "--color-on-warning-muted": "var(--color-text-yellow)"
       },
       "status:error": {
         "--color-error-muted": "var(--color-background-red)",
-        "--color-on-error-muted": "var(--color-text-red)",
-      },
+        "--color-on-error-muted": "var(--color-text-red)"
+      }
     },
     "progress-bar-fill": {
       "variant:accent": {
-        backgroundColor: "light-dark(#d3e4fc, #9aadc7)",
+        "backgroundColor": "light-dark(#d3e4fc, #9aadc7)"
       },
       "variant:success": {
-        backgroundColor: "light-dark(#d2eccf, #90ba8a)",
+        "backgroundColor": "light-dark(#d2eccf, #90ba8a)"
       },
       "variant:warning": {
-        backgroundColor: "light-dark(#f4e1b7, #c2af6e)",
+        "backgroundColor": "light-dark(#f4e1b7, #c2af6e)"
       },
       "variant:error": {
-        backgroundColor: "light-dark(#fbdad4, #c6a29c)",
-      },
+        "backgroundColor": "light-dark(#fbdad4, #c6a29c)"
+      }
     },
     "progress-bar-mark": {
       "placement:fill+variant:accent": {
-        backgroundColor: "var(--color-on-light)",
+        "backgroundColor": "var(--color-on-light)"
       },
       "placement:fill+variant:success": {
-        backgroundColor: "var(--color-on-light)",
+        "backgroundColor": "var(--color-on-light)"
       },
       "placement:fill+variant:warning": {
-        backgroundColor: "var(--color-on-light)",
+        "backgroundColor": "var(--color-on-light)"
       },
       "placement:fill+variant:error": {
-        backgroundColor: "var(--color-on-light)",
-      },
+        "backgroundColor": "var(--color-on-light)"
+      }
     },
     "progress-bar-track": {
-      base: {
-        backgroundColor: "var(--color-skeleton)",
-      },
+      "base": {
+        "backgroundColor": "var(--color-skeleton)"
+      }
     },
-    switch: {
-      base: {
-        "--color-background-gray": "var(--color-skeleton)",
-      },
+    "switch": {
+      "base": {
+        "--color-background-gray": "var(--color-skeleton)"
+      }
     },
     "field-status": {
       "type:success": {
-        backgroundColor: "var(--color-background-green)",
-        color: "var(--color-text-green)",
+        "backgroundColor": "var(--color-background-green)",
+        "color": "var(--color-text-green)"
       },
       "type:warning": {
-        backgroundColor: "var(--color-background-yellow)",
-        color: "var(--color-text-yellow)",
+        "backgroundColor": "var(--color-background-yellow)",
+        "color": "var(--color-text-yellow)"
       },
       "type:error": {
-        backgroundColor: "var(--color-background-red)",
-        color: "var(--color-text-red)",
-      },
+        "backgroundColor": "var(--color-background-red)",
+        "color": "var(--color-text-red)"
+      }
     },
     "text-input": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
-      },
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
+      }
     },
     "text-area": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
-      },
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
+      }
     },
     "number-input": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
-      },
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
+      }
     },
     "date-input": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
-      },
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
+      }
     },
     "time-input": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
-      },
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
+      }
     },
-    selector: {
+    "selector": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
       },
       "variant:secondary": {
         ":not(.astryx-input-group *)": {
-          backgroundColor: "transparent",
-          borderWidth: "1.5px",
-          borderStyle: "solid",
-          borderColor: "var(--color-border-emphasized)",
+          "backgroundColor": "transparent",
+          "borderWidth": "1.5px",
+          "borderStyle": "solid",
+          "borderColor": "var(--color-border-emphasized)"
         },
         ":hover:not([data-disabled], [data-readonly], .astryx-input-group *)": {
-          backgroundColor: "var(--color-neutral)",
-        },
-      },
+          "backgroundColor": "var(--color-neutral)"
+        }
+      }
     },
     "multi-selector": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
       },
       "variant:secondary": {
         ":not(.astryx-input-group *)": {
-          backgroundColor: "transparent",
-          borderWidth: "1.5px",
-          borderStyle: "solid",
-          borderColor: "var(--color-border-emphasized)",
+          "backgroundColor": "transparent",
+          "borderWidth": "1.5px",
+          "borderStyle": "solid",
+          "borderColor": "var(--color-border-emphasized)"
         },
         ":hover:not([data-disabled], [data-readonly], .astryx-input-group *)": {
-          backgroundColor: "var(--color-neutral)",
-        },
-      },
+          "backgroundColor": "var(--color-neutral)"
+        }
+      }
     },
     "complex-selector": {
       "variant:secondary": {
-        backgroundColor: "transparent",
-        borderWidth: "1.5px",
-        borderStyle: "solid",
-        borderColor: "var(--color-border-emphasized)",
-        ':hover:not(:has(> :is(:disabled, [aria-disabled="true"])))': {
-          backgroundColor: "var(--color-neutral)",
-        },
-      },
+        "backgroundColor": "transparent",
+        "borderWidth": "1.5px",
+        "borderStyle": "solid",
+        "borderColor": "var(--color-border-emphasized)",
+        ":hover:not(:has(> :is(:disabled, [aria-disabled=\"true\"])))": {
+          "backgroundColor": "var(--color-neutral)"
+        }
+      }
     },
-    typeahead: {
+    "typeahead": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
-      },
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
+      }
     },
-    tokenizer: {
+    "tokenizer": {
       "status:success": {
         "--color-border-success": "light-dark(#609757, #90ba8a)",
-        "--color-icon-success": "light-dark(#609757, #90ba8a)",
+        "--color-icon-success": "light-dark(#609757, #90ba8a)"
       },
       "status:warning": {
         "--color-border-warning": "light-dark(#a08c36, #c2af6e)",
-        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)",
+        "--color-icon-warning": "light-dark(#a08c36, #c2af6e)"
       },
       "status:error": {
         "--color-border-error": "light-dark(#a98984, #c6a29c)",
-        "--color-icon-error": "light-dark(#a98984, #c6a29c)",
-      },
+        "--color-icon-error": "light-dark(#a98984, #c6a29c)"
+      }
     },
-    card: {
-      base: {
-        padding: "var(--spacing-3)",
-      },
+    "card": {
+      "base": {
+        "padding": "var(--spacing-3)"
+      }
     },
-    section: {
-      base: {
-        padding: "var(--spacing-3)",
-      },
-    },
+    "section": {
+      "base": {
+        "padding": "var(--spacing-3)"
+      }
+    }
   },
   __onDark: {
-    tokens: {
+    "tokens": {
       "color-scheme": "dark",
       "--color-text-primary": "var(--color-on-dark)",
       "--color-icon-primary": "var(--color-on-dark)",
-      "--color-accent": "var(--color-on-dark)",
-    },
+      "--color-accent": "var(--color-on-dark)"
+    }
   },
   __onLight: {
-    tokens: {
+    "tokens": {
       "color-scheme": "light",
       "--color-text-primary": "var(--color-on-light)",
       "--color-icon-primary": "var(--color-on-light)",
-      "--color-accent": "var(--color-on-light)",
-    },
+      "--color-accent": "var(--color-on-light)"
+    }
   },
   __adaptations: {
-    widthBreakpoints: {
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      "2xl": 1536,
+    "widthBreakpoints": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280,
+      "2xl": 1536
     },
-    rules: [
+    "rules": [
       {
-        when: {
-          pointer: "coarse",
-          width: {
-            below: "lg",
-          },
+        "when": {
+          "pointer": "coarse",
+          "width": {
+            "below": "lg"
+          }
         },
-        value: {
-          typography: {
-            scale: {
-              base: 16,
-              ratio: 1.2225,
-            },
-          },
-        },
+        "value": {
+          "typography": {
+            "scale": {
+              "base": 16,
+              "ratio": 1.2225
+            }
+          }
+        }
       },
       {
-        when: {
-          width: {
-            below: "lg",
+        "when": {
+          "width": {
+            "below": "lg"
           },
-          pointer: "coarse",
+          "pointer": "coarse"
         },
-        value: {
-          tokens: {
-            "--font-family-body":
-              '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
-            "--font-family-heading":
-              '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
-            "--font-family-code":
-              "ui-monospace, SFMono-Regular, Menlo, monospace",
-          },
-        },
-      },
-    ],
+        "value": {
+          "tokens": {
+            "--font-family-body": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
+            "--font-family-heading": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
+            "--font-family-code": "ui-monospace, SFMono-Regular, Menlo, monospace"
+          }
+        }
+      }
+    ]
   },
   __axes: {
-    typography: {
-      scale: {
-        base: 14,
-        ratio: 1.25,
+    "typography": {
+      "scale": {
+        "base": 14,
+        "ratio": 1.25
       },
-      body: {
-        family: "Figtree",
-        fallbacks:
-          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+      "body": {
+        "family": "Figtree",
+        "fallbacks": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
       },
-      heading: {
-        family: "Montserrat",
-        fallbacks:
-          '"Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-        weights: {
-          3: "bold",
-          4: "bold",
-        },
+      "heading": {
+        "family": "Montserrat",
+        "fallbacks": "\"Figtree\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+        "weights": {
+          "3": "bold",
+          "4": "bold"
+        }
       },
-      code: {
-        family: "JetBrains Mono",
-        fallbacks: '"SF Mono", Monaco, Consolas, monospace',
-      },
+      "code": {
+        "family": "JetBrains Mono",
+        "fallbacks": "\"SF Mono\", Monaco, Consolas, monospace"
+      }
     },
-    motion: {
-      fast: 125,
-      medium: 300,
-      slow: 700,
-      ratio: 0.75,
-    },
+    "motion": {
+      "fast": 125,
+      "medium": 300,
+      "slow": 700,
+      "ratio": 0.75
+    }
   },
   icons: themeIcons,
 };

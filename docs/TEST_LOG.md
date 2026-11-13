@@ -416,3 +416,24 @@
 - 원인 분류: 환경·설정
 - 원인: 기존 4-1 테마 생성물과 CLI가 기대하는 생성 결과가 일치하지 않으며, CLI는 앱의 별칭 import와 로컬 Pretendard 로딩을 확인하지 못함.
 - 해결: 미해결. 이번 지시의 테마 파일 변경 금지와 외부 글꼴 요청 금지에 따라 유지하고 보고함.
+
+### 2026-11-13 — 학습 지도 및 진단 흐름 Vitest
+- 작업: Astryx 전환 4-3①, F-04
+- 증상: `pnpm test` 16건 실패. 제거한 게이지·길 장식 선택자와 네이티브 disabled 속성 및 버튼 메뉴 역할을 찾음.
+- 원인 분류: 테스트 오류
+- 원인: 기존 화면 장식과 details 메뉴의 DOM 구조를 테스트가 직접 참조했으나 Astryx 컴포넌트는 상태를 `aria-disabled`와 menuitem 역할로 표시함.
+- 해결: 상태 글자·모양, 정복 수, 주 버튼 우선순위, 메뉴의 실제 동작을 검사하도록 변경함.
+
+### 2026-11-13 — Astryx doctor 4-3① 테마 검사
+- 작업: Astryx 전환 4-3①, F-04·F-10
+- 증상: `pnpm exec astryx doctor --built .next`의 theme-module·theme-local-builds 실패, theme-module-import·theme-fonts 경고가 다시 발생함.
+- 원인 분류: 환경·설정
+- 원인 (Opus 확인): Astryx가 만든 생성 파일(`src/astryx-themes.ts`, `src/themes/concept/concept.{js,css,d.ts}`)을 `pnpm format`(Prettier)이 다시 정렬해, doctor가 "생성 결과와 다름"으로 판정. 글꼴 경고는 Google Fonts를 쓰지 않는 결정(2026-11-13) 때문의 의도된 경고.
+- 해결: 생성 파일 4종을 `.prettierignore`에 넣고 `astryx theme build/add/use`로 다시 생성. doctor fail 0.
+
+### 2026-11-13 — learning-map.test.tsx:더보기 메뉴 바깥 클릭
+- 작업: Astryx 전환 4-3①, F-04
+- 증상: jsdom에서 바깥 pointerdown 뒤 메뉴의 `aria-expanded`가 true로 남음.
+- 원인 분류: 환경·설정
+- 원인: Astryx MoreMenu가 사용하는 브라우저 Popover의 바깥 클릭 닫힘을 jsdom이 구현하지 않음.
+- 해결: 바깥 클릭 닫힘 검사는 실제 브라우저 E2E에 두고, Escape 닫힘은 Vitest에서 유지함.

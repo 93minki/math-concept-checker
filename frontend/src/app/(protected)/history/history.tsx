@@ -1,6 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import { Button } from "@astryxdesign/core/Button";
+import { Badge } from "@astryxdesign/core/Badge";
+import { Banner } from "@astryxdesign/core/Banner";
+import { List, ListItem } from "@astryxdesign/core/List";
+import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
@@ -71,55 +75,81 @@ export default function History() {
   }
 
   return (
-    <div className="stack">
-      <Link className="study-link" href="/">
-        ← 단원 선택으로
-      </Link>
+    <VStack gap={4} className="history-view">
+      <Button label="← 단원 선택으로" href="/" variant="ghost" size="lg" />
       <h1>지난 기록</h1>
       {items?.length === 0 && <p>아직 진단 기록이 없어요</p>}
-      {items?.map((item) => (
-        <Link
-          className="unit-card stack"
-          href={`/diagnoses/${encodeURIComponent(item.id)}`}
-          key={item.id}
-        >
-          <strong>
-            {item.unit.grade} · {item.unit.name}
-          </strong>
-          <span>{item.unit.publisher} 기준</span>
-          <time dateTime={item.started_at}>
-            {dateFormat.format(new Date(item.started_at))}
-          </time>
-          <span>{statusText(item)}</span>
-          {(item.status === "stage1" || item.status === "stage2") && (
-            <span>이어서 풀기</span>
-          )}
-        </Link>
-      ))}
+      {items && items.length > 0 && (
+        <List hasDividers>
+          {items.map((item) => (
+            <ListItem
+              key={item.id}
+              href={`/diagnoses/${encodeURIComponent(item.id)}`}
+              label={`${item.unit.grade} · ${item.unit.name}`}
+              description={
+                <VStack gap={1}>
+                  <span>{item.unit.publisher} 기준</span>
+                  <time dateTime={item.started_at}>
+                    시작: {dateFormat.format(new Date(item.started_at))}
+                  </time>
+                  {item.completed_at && (
+                    <time dateTime={item.completed_at}>
+                      완료: {dateFormat.format(new Date(item.completed_at))}
+                    </time>
+                  )}
+                  {item.aborted_at && (
+                    <time dateTime={item.aborted_at}>
+                      중단: {dateFormat.format(new Date(item.aborted_at))}
+                    </time>
+                  )}
+                  {(item.status === "stage1" || item.status === "stage2") && (
+                    <span>이어서 풀기</span>
+                  )}
+                </VStack>
+              }
+              endContent={
+                <Badge
+                  label={statusText(item)}
+                  variant={
+                    item.status === "completed"
+                      ? "success"
+                      : item.status === "aborted"
+                        ? "warning"
+                        : "info"
+                  }
+                />
+              }
+            />
+          ))}
+        </List>
+      )}
       {loading && <p role="status">지난 기록을 불러오고 있어요.</p>}
       {error && (
-        <div role="alert">
-          <p>지난 기록을 불러오지 못했어요.</p>
-          <button
-            className="btn"
-            disabled={loading}
-            onClick={() =>
-              void loadMore(items === null ? undefined : (next ?? undefined))
-            }
-          >
-            다시 시도
-          </button>
-        </div>
+        <Banner
+          role="alert"
+          status="error"
+          title="지난 기록을 불러오지 못했어요."
+          endContent={
+            <Button
+              label="다시 시도"
+              size="lg"
+              isDisabled={loading}
+              onClick={() =>
+                void loadMore(items === null ? undefined : (next ?? undefined))
+              }
+            />
+          }
+        />
       )}
       {next && !error && (
-        <button
-          className="btn btn-secondary"
-          disabled={loading}
+        <Button
+          label="더 보기"
+          variant="secondary"
+          size="lg"
+          isDisabled={loading}
           onClick={() => void loadMore(next)}
-        >
-          더 보기
-        </button>
+        />
       )}
-    </div>
+    </VStack>
   );
 }

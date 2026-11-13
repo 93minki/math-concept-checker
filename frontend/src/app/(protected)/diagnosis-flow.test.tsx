@@ -170,10 +170,10 @@ test("학년과 상태를 표시하고 별칭으로 검색한다", async () => {
   expect(await screen.findByText("동아출판 기준")).toBeTruthy();
   expect(screen.getByText("이 단원은 일부 내용만 진단해요")).toBeTruthy();
   fireEvent.click(screen.getByRole("tab", { name: "중2" }));
-  expect(
-    (screen.getByRole("button", { name: "준비 중" }) as HTMLButtonElement)
-      .disabled,
-  ).toBe(true);
+  const unavailable = screen.getByRole("button", { name: "준비 중" });
+  expect(unavailable.getAttribute("aria-disabled")).toBe("true");
+  fireEvent.click(unavailable);
+  expect(mocks.startDiagnosis).not.toHaveBeenCalled();
   fireEvent.click(screen.getByRole("tab", { name: "중1" }));
   expect(
     screen.getByRole("link", { name: "이어서 풀기" }).getAttribute("href"),
@@ -190,8 +190,10 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
     )
     .mockResolvedValueOnce({ diagnosis_id: "new" });
   render(<UnitSelection />);
-  fireEvent.click(await screen.findByLabelText("문자와 식 더보기"));
-  fireEvent.click(screen.getByRole("button", { name: "새로 시작하기" }));
+  fireEvent.click(
+    await screen.findByRole("button", { name: "문자와 식 더보기" }),
+  );
+  fireEvent.click(screen.getByRole("menuitem", { name: "새로 시작하기" }));
   const dialog = await screen.findByRole("dialog");
   expect(
     screen

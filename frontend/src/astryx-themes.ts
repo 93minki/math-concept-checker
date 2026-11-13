@@ -3,11 +3,11 @@
  * @astryx-theme-record {"themes":{"concept":"./src/themes"},"defaultThemeSlug":"concept"}
  */
 
-import { conceptTheme as _astryxTheme0 } from "./themes/concept/concept.js";
+import {conceptTheme as _astryxTheme0} from "./themes/concept/concept.js";
 import "./themes/concept/concept.css";
 
 export const themes = {
-  concept: _astryxTheme0,
+  "concept": _astryxTheme0,
 } as const;
 export type ThemeSlug = keyof typeof themes;
 

@@ -67,6 +67,32 @@ test("상태와 한국 시각을 표시하고 진단으로 연결한다", async 
   ).toBeTruthy();
 });
 
+test("완료·중단 시각을 한국 시각으로 표시해 같은 단원 기록을 구별한다", async () => {
+  mocks.getHistory.mockResolvedValue({
+    items: [
+      {
+        ...item,
+        id: "finished",
+        status: "completed",
+        completed_at: "2026-11-11T01:35:00Z",
+      },
+      {
+        ...item,
+        id: "aborted",
+        status: "aborted",
+        abort_reason: "expired",
+        aborted_at: "2026-11-11T02:42:00Z",
+      },
+    ],
+    next_before: null,
+  });
+  render(<History />);
+  expect(await screen.findByText(/완료:.*오전 10:35/)).toBeTruthy();
+  expect(screen.getByText(/중단:.*오전 11:42/)).toBeTruthy();
+  expect(screen.getByText("완료")).toBeTruthy();
+  expect(screen.getByText("중단 (기간 만료)")).toBeTruthy();
+});
+
 test("빈 목록에서 단원 선택으로 이동한다", async () => {
   mocks.getHistory.mockResolvedValue({ items: [], next_before: null });
   render(<History />);
