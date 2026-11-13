@@ -458,3 +458,24 @@
 - 원인 분류: 코드 오류
 - 원인: Astryx 컨트롤 높이 토큰 기본값이 `--size-element-md` 32px, `--size-element-lg` 36px (`astryx docs tokens/tokens-size`). 우리 터치 기준 44px(`docs/DESIGN.md` "화면", WCAG 2.5.5)보다 낮다. 학습 지도 등 Astryx 버튼을 쓴 모든 화면에 해당.
 - 해결: 테마 `concept`에서 `--size-element-md`·`--size-element-lg`를 44px로(기본·폰 조건 모두), `astryx theme build/add/use`로 다시 생성.
+
+### 2026-11-13 — e2e-dev/flow.spec.ts:진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는다
+- 작업: UI 고도화 단계 5 (`pnpm test:e2e:dev`)
+- 증상: 학습 지도 열 정렬 검사에서 `.learning-row` 0개 (`expect(columns.length).toBeGreaterThan(0)`).
+- 원인 분류: 테스트 오류
+- 원인: 4-3①에서 추가한 검사가 단원 목록을 불러오기 전(로딩 화면)에 행을 셌다. `test:e2e:dev`에서만 도는 검사라 추가 때 실행되지 않았다.
+- 해결: 대상 단원 행이 보일 때까지 기다린 뒤 잰다.
+
+### 2026-11-13 — e2e-dev/flow.spec.ts 학습 지도 열 정렬 (모바일), 지난 기록 제목
+- 작업: UI 고도화 단계 5 (`pnpm test:e2e:dev`)
+- 증상: (1) 모바일에서 동작 열 x 좌표 차이 2px(기준 1px). (2) `heading "지난 기록"`이 2개에 걸림(strict mode).
+- 원인 분류: 테스트 오류
+- 원인: (1) 사용자 요청으로 모바일 버튼 너비를 글자에 맞춰 버튼 묶음의 왼쪽 끝이 글자 길이에 따라 달라짐. 오른쪽 끝은 맞춰져 있음. (2) 지난 기록 로딩 화면 제목 "지난 기록을 불러오고 있어요."가 부분 일치로 함께 잡힘.
+- 해결: (1) 동작 열은 오른쪽 끝을 비교(상태 열은 왼쪽 끝 그대로). (2) 제목은 `exact: true`.
+
+### 2026-11-13 — e2e-dev/flow.spec.ts 지난 기록 진행 중 항목
+- 작업: UI 고도화 단계 5 (`pnpm test:e2e:dev`)
+- 증상: 진단 링크(`a`) 안에 "진행 중"이 없음.
+- 원인 분류: 테스트 오류
+- 원인: Astryx `ListItem`이 상태 꼬리표(`endContent`)를 링크 밖, 같은 목록 줄에 그린다. 화면에는 같은 줄에 보인다.
+- 해결: 링크가 든 목록 줄(`li`)에서 상태를 확인. 링크 글자("이어서 풀기")와 이동 동작 검사는 그대로.

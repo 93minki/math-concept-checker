@@ -13,6 +13,8 @@ async function start(page: Page) {
       response.request().method() === "POST",
   );
   const card = unitCard(page);
+  // Units load after the page renders (a loading screen shows first).
+  await expect(card).toBeVisible();
   const columns = await page.locator(".learning-row").evaluateAll((rows) =>
     rows.map((row) => {
       const state = row
@@ -23,7 +25,9 @@ async function start(page: Page) {
         ?.getBoundingClientRect();
       if (!state || !actions)
         throw new Error("단원 행의 상태·동작 열이 없어요");
-      return { state: state.x, actions: actions.x };
+      // Buttons share a right edge: on phones they fit their label
+      // (user 2026-11-13), so their left edges differ by text length.
+      return { state: state.x, actions: actions.right };
     }),
   );
   expect(columns.length).toBeGreaterThan(0);
@@ -148,7 +152,9 @@ async function openHistory(page: Page, diagnosisId: string) {
   await expect(link).toBeVisible();
   await link.click();
   await expect(page).toHaveURL(/\/history$/);
-  await expect(page.getByRole("heading", { name: "지난 기록" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "지난 기록", exact: true }),
+  ).toBeVisible();
   const entry = page.locator(`a[href="/diagnoses/${diagnosisId}"]`);
   // Newest first: the diagnosis we just touched is the first card.
   await expect(page.locator('a[href^="/diagnoses/"]').first()).toHaveAttribute(
@@ -251,7 +257,11 @@ test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는
   // F-10: an in-progress diagnosis opens from the list and continues.
   const runningId = diagnosisId(page);
   const running = await openHistory(page, runningId);
-  await expect(running).toContainText("진행 중");
+  // The status badge sits beside the link in the same list row (Astryx
+  // ListItem endContent), so check the row.
+  await expect(running.locator("xpath=ancestor::li[1]")).toContainText(
+    "진행 중",
+  );
   await expect(running).toContainText("이어서 풀기");
   await running.click();
   await expect(page).toHaveURL(new RegExp(`/diagnoses/${runningId}$`));
