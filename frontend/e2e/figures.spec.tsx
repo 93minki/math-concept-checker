@@ -1,3 +1,4 @@
+import { ChoiceNumber } from "../src/components/choice-number";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { expect, test } from "@playwright/test";
@@ -109,13 +110,13 @@ for (const theme of ["light", "dark"] as const) {
             ))}
           </div>
           <fieldset className="choice-grid">
-            <legend>답을 골라요</legend>
+            <legend className="visually-hidden">답을 골라요</legend>
             {[1, 2, 3, 4, 5].map((i) => (
               <label className="choice" key={i}>
                 <input type="radio" name="answer" />
+                <ChoiceNumber number={i} />
                 <div className="choice-content">
                   <ProblemText
-                    prefix={`${i}. `}
                     text={
                       i === 1
                         ? "| 긴 제목 하나 | 긴 제목 둘 | 긴 제목 셋 | 긴 제목 넷 |\n|---|---|---|---|\n| $1$ | $2$ | $3$ | $4$ |"
@@ -144,7 +145,7 @@ for (const theme of ["light", "dark"] as const) {
       "color",
       "rgb(17, 17, 17)",
     );
-    await page.locator(".choice input").first().check();
+    await page.locator(".choice").first().click();
     await expect(page.locator(".choice").first()).toHaveCSS(
       "background-color",
       "rgb(232, 242, 255)",
@@ -248,4 +249,75 @@ test("새 그림의 본문과 보기 크기", async ({ page }, info) => {
       .nth(i)
       .screenshot({ path: `test-results/step4/${size}-${i}-choice.png` });
   }
+});
+
+test("보기 번호와 첫 줄 정렬 및 키보드 선택", async ({ page }) => {
+  const samples = [
+    "일반 보기",
+    "$x+1$ 수식 보기",
+    "두 줄로 나뉘는 보기를 확인합니다.\n다음 줄입니다.",
+  ];
+  const markup = renderToStaticMarkup(
+    <main className="study-page">
+      <div className="problem-sheet">
+        <fieldset className="stack">
+          <legend className="visually-hidden">답을 골라요</legend>
+          {samples.map((text, i) => (
+            <label className="choice" key={text}>
+              <input type="radio" name="aligned" />
+              <ChoiceNumber number={i + 1} />
+              <div className="choice-content">
+                <ProblemText text={text} />
+              </div>
+            </label>
+          ))}
+        </fieldset>
+      </div>
+    </main>,
+  );
+  await page.setContent(
+    `<meta name="viewport" content="width=device-width, initial-scale=1"><style>${readFileSync(resolve("node_modules/katex/dist/katex.min.css"), "utf8") + readFileSync(resolve("src/app/globals.css"), "utf8")}</style>${markup}`,
+  );
+  await expect(page.getByRole("group", { name: "답을 골라요" })).toHaveCount(1);
+  await expect(page.locator("legend")).toHaveCSS("width", "1px");
+  const choices = page.locator(".choice");
+  for (let i = 0; i < samples.length; i++) {
+    const diff = await choices.nth(i).evaluate((choice) => {
+      const circle = choice.querySelector<HTMLElement>(".choice-number");
+      const text = choice.querySelector<HTMLElement>(
+        ".choice-content .problem-text",
+      );
+      if (!circle || !text) throw new Error("보기 요소 없음");
+      const circleRect = circle.getBoundingClientRect();
+      // Measure the first rendered glyph, not the CSS line-height: a KaTeX
+      // line can be taller than the text line (2026-11-13 misalignment).
+      const walker = document.createTreeWalker(text, NodeFilter.SHOW_TEXT, {
+        acceptNode: (node) =>
+          node.textContent?.trim() &&
+          !node.parentElement?.closest(".katex-mathml")
+            ? NodeFilter.FILTER_ACCEPT
+            : NodeFilter.FILTER_REJECT,
+      });
+      const first = walker.nextNode();
+      if (!first) throw new Error("보기 글자 없음");
+      const range = document.createRange();
+      const start = first.textContent!.search(/\S/);
+      range.setStart(first, start);
+      range.setEnd(first, start + 1);
+      const glyph = range.getBoundingClientRect();
+      const firstLineCenter = glyph.top + glyph.height / 2;
+      return Math.abs(circleRect.top + circleRect.height / 2 - firstLineCenter);
+    });
+    expect(diff).toBeLessThanOrEqual(2);
+  }
+  const radios = page.getByRole("radio");
+  const box = await radios.first().boundingBox();
+  expect(box?.width).toBeLessThanOrEqual(1);
+  await radios.first().focus();
+  await page.keyboard.press("ArrowDown");
+  await expect(radios.nth(1)).toBeChecked();
+  await expect(choices.nth(1).locator(".choice-number")).toHaveCSS(
+    "background-color",
+    "rgb(21, 89, 168)",
+  );
 });

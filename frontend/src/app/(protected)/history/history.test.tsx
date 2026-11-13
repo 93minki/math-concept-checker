@@ -110,7 +110,7 @@ test.each([
   await waitFor(() => expect(mocks.push).toHaveBeenCalledWith(path));
 });
 
-test("첫 화면과 진단 화면에 지난 기록 링크가 있다", () => {
+test("진단 화면은 공통 머리말에서 지난 기록으로 이동한다", () => {
   mocks.getDiagnosis.mockReturnValue(new Promise(() => {}));
   render(
     <>
@@ -121,7 +121,8 @@ test("첫 화면과 진단 화면에 지난 기록 링크가 있다", () => {
   expect(
     screen.getByRole("link", { name: "지난 기록" }).getAttribute("href"),
   ).toBe("/history");
+  expect(screen.getAllByRole("link", { name: "지난 기록" })).toHaveLength(1);
   expect(
-    screen.getByRole("link", { name: "지난 기록으로" }).getAttribute("href"),
-  ).toBe("/history");
+    screen.getByRole("link", { name: "← 단원 선택으로" }).getAttribute("href"),
+  ).toBe("/");
 });

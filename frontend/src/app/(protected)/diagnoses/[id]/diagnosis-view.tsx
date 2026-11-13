@@ -18,6 +18,8 @@ import { publicEnv } from "@/lib/env";
 import { createClient } from "@/lib/supabase/client";
 import Notice from "./notice";
 import ReportView from "./report-view";
+import SolveHeader from "./solve-header";
+import { ChoiceNumber } from "@/components/choice-number";
 
 type SaveState = "idle" | "saving" | "saved" | "error";
 const initialAnswer = (item: Item): AnswerInput =>
@@ -31,7 +33,7 @@ const answered = (answer: AnswerInput) =>
 const saveStatusLabel = (state: SaveState | undefined) => {
   if (state === "saving") return "저장 중…";
   if (state === "saved") return "저장됨";
-  return "\u00a0";
+  return "";
 };
 
 export default function DiagnosisView({ id }: { id: string }) {
@@ -293,21 +295,16 @@ export default function DiagnosisView({ id }: { id: string }) {
           ? "답을 쓰면 다음 문제로 넘어갈 수 있어요"
           : "답을 고르면 다음 문제로 넘어갈 수 있어요"
       : null;
-  const statusLineRight =
-    navigationHint ?? (item ? saveStatusLabel(states[item.id]) : "\u00a0");
   return (
     <div className="stack">
       <Link className="study-link" href="/">
         ← 단원 선택으로
       </Link>
-      <Link className="study-link" href="/history">
-        지난 기록으로
-      </Link>
       {error && <Notice role="alert">{error}</Notice>}
       {!diagnosis && !error && <p>진단을 불러오고 있어요.</p>}
       {diagnosis && (
         <>
-          <h1>{diagnosis.unit.name}</h1>
+          {readonly && <h1>{diagnosis.unit.name}</h1>}
           {diagnosis.status === "aborted" && (
             <p role="status">
               {diagnosis.abort_reason === "expired"
@@ -324,63 +321,79 @@ export default function DiagnosisView({ id }: { id: string }) {
           )}
           {busy && <Notice>채점하고 있어요</Notice>}
           {!readonly && item && answer && (
-            <section className="stack">
-              <h2>{stage === 1 ? "기본 문제" : "심화 문제"}</h2>
-              <p>
-                {index + 1} / {stageItems.length}
-              </p>
+            <section className="stack solve-content">
+              <SolveHeader
+                {...{
+                  unit: diagnosis.unit.name,
+                  stage,
+                  index,
+                  total: stageItems.length,
+                  status: (
+                    <span
+                      role="status"
+                      aria-live="polite"
+                      className="solve-save-status"
+                    >
+                      <span>{saveStatusLabel(states[item.id])}</span>
+                      {states[item.id] === "saved" && (
+                        <span aria-hidden="true"> ✓</span>
+                      )}
+                    </span>
+                  ),
+                  error: states[item.id] === "error" && (
+                    <div className="save-error" role="alert">
+                      저장하지 못했어요{" "}
+                      <button
+                        className="btn btn-secondary"
+                        disabled={busy}
+                        onClick={() => void save(item.id)}
+                      >
+                        다시 시도
+                      </button>
+                    </div>
+                  ),
+                }}
+              />
               <div className="problem-sheet stack">
                 <div className="question">
                   <ProblemText text={item.body} />
                   {item.figure && <Figure figure={item.figure} />}
                 </div>
                 {item.question_type === "multiple_choice" && (
-                  <fieldset
-                    className={
-                      item.choices.some((choice) => choice.figure)
-                        ? "choice-grid"
-                        : "stack"
-                    }
-                    disabled={readonly || busy}
-                  >
-                    <legend>답을 골라요</legend>
-                    {item.choices.map((choice) => (
-                      <label key={choice.no} className="choice">
-                        <input
-                          type="radio"
-                          name={`item-${item.id}`}
-                          checked={
-                            "selected_choice" in answer &&
-                            answer.selected_choice === choice.no
-                          }
-                          onChange={() =>
-                            update(item, { selected_choice: choice.no })
-                          }
-                        />
-                        <div className="choice-content">
-                          <ProblemText
-                            prefix={`${choice.no}. `}
-                            text={choice.text}
+                  <div className="choice-area">
+                    <fieldset
+                      className={
+                        item.choices.some((choice) => choice.figure)
+                          ? "choice-grid"
+                          : "stack"
+                      }
+                      disabled={readonly || busy}
+                    >
+                      <legend className="visually-hidden">답을 골라요</legend>
+                      {item.choices.map((choice) => (
+                        <label key={choice.no} className="choice">
+                          <input
+                            type="radio"
+                            name={`item-${item.id}`}
+                            checked={
+                              "selected_choice" in answer &&
+                              answer.selected_choice === choice.no
+                            }
+                            onChange={() =>
+                              update(item, { selected_choice: choice.no })
+                            }
                           />
-                          {choice.figure && <Figure figure={choice.figure} />}
-                        </div>
-                      </label>
-                    ))}
-                  </fieldset>
+                          <ChoiceNumber number={choice.no} />
+                          <div className="choice-content">
+                            <ProblemText text={choice.text} />
+                            {choice.figure && <Figure figure={choice.figure} />}
+                          </div>
+                        </label>
+                      ))}
+                    </fieldset>
+                  </div>
                 )}
               </div>
-              {!readonly && item.question_type === "multiple_choice" && (
-                <div className="save-status-row">
-                  <span aria-hidden="true">{"\u00a0"}</span>
-                  <span
-                    role="status"
-                    aria-live="polite"
-                    className="save-status-label"
-                  >
-                    {statusLineRight}
-                  </span>
-                </div>
-              )}
               {item.question_type === "written" && "written_text" in answer && (
                 <>
                   <label htmlFor="answer">풀이와 답</label>
@@ -393,33 +406,8 @@ export default function DiagnosisView({ id }: { id: string }) {
                       update(item, { written_text: e.target.value })
                     }
                   />
-                  {!readonly ? (
-                    <div className="save-status-row">
-                      <span>{answer.written_text.length} / 1000자</span>
-                      <span
-                        role="status"
-                        aria-live="polite"
-                        className="save-status-label"
-                      >
-                        {statusLineRight}
-                      </span>
-                    </div>
-                  ) : (
-                    <p>{answer.written_text.length} / 1000자</p>
-                  )}
+                  <p>{answer.written_text.length} / 1000자</p>
                 </>
-              )}
-              {!readonly && states[item.id] === "error" && (
-                <div role="alert">
-                  저장하지 못했어요{" "}
-                  <button
-                    className="btn btn-secondary"
-                    disabled={busy}
-                    onClick={() => void save(item.id)}
-                  >
-                    다시 시도
-                  </button>
-                </div>
               )}
               <div className="button-row">
                 <button
@@ -448,6 +436,9 @@ export default function DiagnosisView({ id }: { id: string }) {
                   </button>
                 )}
               </div>
+              {navigationHint && (
+                <p className="navigation-hint">{navigationHint}</p>
+              )}
             </section>
           )}
           {!readonly && (

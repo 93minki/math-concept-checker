@@ -86,7 +86,8 @@ async function solve(page: Page) {
     const radio = page.getByRole("radio").first();
     if (await radio.count()) {
       answerTypes.push("choice");
-      await radio.check();
+      await radio.focus();
+      await radio.press("Space");
     } else {
       answerTypes.push("written");
       await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
@@ -115,8 +116,11 @@ async function submit(page: Page, stage: 1 | 2) {
 }
 
 async function openHistory(page: Page, diagnosisId: string) {
-  const link = page.getByRole("link", { name: "지난 기록으로" });
-  await expect(link).toBeInViewport();
+  // The solve screen dropped its own link; the shared header carries it.
+  const link = page
+    .getByRole("navigation", { name: "주 메뉴" })
+    .getByRole("link", { name: "지난 기록", exact: true });
+  await expect(link).toBeVisible();
   await link.click();
   await expect(page).toHaveURL(/\/history$/);
   await expect(page.getByRole("heading", { name: "지난 기록" })).toBeVisible();
@@ -212,8 +216,10 @@ test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는
     );
     // "다음" stays disabled until the question is answered.
     const radio = page.getByRole("radio").first();
-    if (await radio.count()) await radio.check();
-    else await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
+    if (await radio.count()) {
+      await radio.focus();
+      await radio.press("Space");
+    } else await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
     if (i < first.bodies.length - 1)
       await page.getByRole("button", { name: "다음", exact: true }).click();
   }

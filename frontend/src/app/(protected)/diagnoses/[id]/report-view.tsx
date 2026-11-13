@@ -13,6 +13,7 @@ import {
   type Report,
 } from "@/lib/diagnosis-api";
 import Notice from "./notice";
+import { ChoiceNumber } from "@/components/choice-number";
 
 export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
   const router = useRouter();
@@ -103,18 +104,28 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
         <article className="unit-card stack" key={item.id}>
           <h3>{item.stage === 1 ? "기본 문제" : "심화 문제"}</h3>
           <div className="problem-sheet stack">
-            <ProblemText text={item.body} />
-            {item.figure && <Figure figure={item.figure} />}
-            {item.choices.some((choice) => choice.figure) && (
-              <div className="choice-grid">
+            <div className="question">
+              <ProblemText text={item.body} />
+              {item.figure && <Figure figure={item.figure} />}
+            </div>
+            {item.question_type === "multiple_choice" && (
+              <div
+                className={`choice-area ${item.choices.some((choice) => choice.figure) ? "choice-grid" : "stack"}`}
+              >
                 {item.choices.map((choice) => (
-                  <div className="choice" key={choice.no}>
+                  <div className="choice report-choice" key={choice.no}>
+                    <ChoiceNumber number={choice.no} />
                     <div className="choice-content">
-                      <ProblemText
-                        prefix={`${choice.no}. `}
-                        text={choice.text}
-                      />
+                      <ProblemText text={choice.text} />
                       {choice.figure && <Figure figure={choice.figure} />}
+                      <div className="choice-tags">
+                        {item.answer?.selected_choice === choice.no && (
+                          <span>내 답</span>
+                        )}
+                        {item.result?.correct_choice === choice.no && (
+                          <span>정답</span>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -122,13 +133,31 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
             )}
           </div>
           {item.answer?.selected_choice != null ? (
-            <ProblemText
-              prefix="내 답: "
-              text={
-                item.choices.find((c) => c.no === item.answer?.selected_choice)
-                  ?.text ?? String(item.answer.selected_choice)
-              }
-            />
+            <div>
+              <div className="answer-choice">
+                <span>내 답:</span>
+                <ChoiceNumber number={item.answer.selected_choice} />
+                <ProblemText
+                  text={
+                    item.choices.find(
+                      (c) => c.no === item.answer?.selected_choice,
+                    )?.text ?? ""
+                  }
+                />
+              </div>
+              {item.choices
+                .filter(
+                  (c) => c.no === item.answer?.selected_choice && c.figure,
+                )
+                .map(
+                  (c) =>
+                    c.figure && (
+                      <div className="problem-sheet" key={c.no}>
+                        <Figure figure={c.figure} />
+                      </div>
+                    ),
+                )}
+            </div>
           ) : (
             <p>
               내 답:{" "}
@@ -141,7 +170,31 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
             <>
               <p>{item.result.passed ? "맞았어요" : "틀렸어요"}</p>
               {item.result.correct_choice != null && (
-                <p>정답: {item.result.correct_choice}번</p>
+                <div>
+                  <div className="answer-choice">
+                    <span>정답:</span>
+                    <ChoiceNumber number={item.result.correct_choice} />
+                    <ProblemText
+                      text={
+                        item.choices.find(
+                          (c) => c.no === item.result?.correct_choice,
+                        )?.text ?? ""
+                      }
+                    />
+                  </div>
+                  {item.choices
+                    .filter(
+                      (c) => c.no === item.result?.correct_choice && c.figure,
+                    )
+                    .map(
+                      (c) =>
+                        c.figure && (
+                          <div className="problem-sheet" key={c.no}>
+                            <Figure figure={c.figure} />
+                          </div>
+                        ),
+                    )}
+                </div>
               )}
               <p>
                 해설: <MathText text={item.result.explanation} />
