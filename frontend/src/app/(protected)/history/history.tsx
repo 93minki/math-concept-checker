@@ -5,6 +5,7 @@ import { Badge } from "@astryxdesign/core/Badge";
 import { Banner } from "@astryxdesign/core/Banner";
 import { List, ListItem } from "@astryxdesign/core/List";
 import { VStack } from "@astryxdesign/core/VStack";
+import { Text } from "@astryxdesign/core/Text";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
@@ -84,8 +85,26 @@ export default function History() {
           {items.map((item) => (
             <ListItem
               key={item.id}
-              href={`/diagnoses/${encodeURIComponent(item.id)}`}
-              label={`${item.unit.grade} · ${item.unit.name}`}
+              href={
+                item.status === "aborted" && item.stage1_submitted_at === null
+                  ? undefined
+                  : `/diagnoses/${encodeURIComponent(item.id)}`
+              }
+              isDisabled={
+                item.status === "aborted" && item.stage1_submitted_at === null
+              }
+              label={
+                <Text
+                  color={
+                    item.status === "aborted" &&
+                    item.stage1_submitted_at === null
+                      ? "secondary"
+                      : "primary"
+                  }
+                >
+                  {item.unit.grade} · {item.unit.name}
+                </Text>
+              }
               description={
                 <VStack gap={1}>
                   <span>{item.unit.publisher} 기준</span>

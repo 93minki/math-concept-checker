@@ -99,6 +99,7 @@ class HistoryItem(BaseModel):
     status: Literal["stage1", "stage2", "completed", "aborted"]
     abort_reason: Literal["expired", "restarted"] | None
     started_at: AwareDatetime
+    stage1_submitted_at: datetime | None
     completed_at: datetime | None
     aborted_at: datetime | None
     unit: HistoryUnit

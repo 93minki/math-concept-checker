@@ -122,7 +122,7 @@ class SupabaseDiagnoses:
         query = (
             self.client.table("diagnoses")
             .select(
-                "id,status,abort_reason,started_at,completed_at,aborted_at,unit:display_units(grade,name,publisher)"
+                "id,status,abort_reason,started_at,stage1_submitted_at,completed_at,aborted_at,unit:display_units(grade,name,publisher)"
             )
             .eq("user_id", str(user_id))
         )

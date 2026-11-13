@@ -35,6 +35,7 @@ const item: HistoryItem = {
   status: "stage1",
   abort_reason: null,
   started_at: "2026-11-11T00:30:00Z",
+  stage1_submitted_at: null,
   completed_at: null,
   aborted_at: null,
   unit: { grade: "중1", name: "문자와 식", publisher: "출판사" },
@@ -65,6 +66,49 @@ test("상태와 한국 시각을 표시하고 진단으로 연결한다", async 
       .getAllByRole("link")
       .find((link) => link.getAttribute("href") === "/diagnoses/1"),
   ).toBeTruthy();
+});
+
+test("1단계 중단은 열 수 없고 2단계 중단과 나머지 기록은 열 수 있다", async () => {
+  mocks.getHistory.mockResolvedValue({
+    items: [
+      {
+        ...item,
+        id: "aborted-stage1",
+        status: "aborted",
+        abort_reason: "restarted",
+      },
+      {
+        ...item,
+        id: "aborted-stage2",
+        status: "aborted",
+        abort_reason: "expired",
+        stage1_submitted_at: "2026-11-11T00:50:00Z",
+      },
+      {
+        ...item,
+        id: "completed",
+        status: "completed",
+        stage1_submitted_at: "2026-11-11T00:50:00Z",
+      },
+      { ...item, id: "active" },
+    ],
+    next_before: null,
+  });
+  render(<History />);
+  await screen.findByText("중단 (새로 시작)");
+  const rows = screen.getAllByRole("listitem");
+  expect(
+    rows[0].querySelector("a, button, [role=link], [role=button]"),
+  ).toBeNull();
+  expect(rows[0].textContent).toContain("문자와 식");
+  expect(rows[0].textContent).toContain("중단 (새로 시작)");
+  for (const id of ["aborted-stage2", "completed", "active"]) {
+    expect(
+      screen
+        .getAllByRole("link")
+        .some((link) => link.getAttribute("href") === `/diagnoses/${id}`),
+    ).toBe(true);
+  }
 });
 
 test("완료·중단 시각을 한국 시각으로 표시해 같은 단원 기록을 구별한다", async () => {

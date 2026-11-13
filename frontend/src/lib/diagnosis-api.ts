@@ -77,6 +77,7 @@ export type HistoryItem = {
   status: Diagnosis["status"];
   abort_reason: Diagnosis["abort_reason"];
   started_at: string;
+  stage1_submitted_at: string | null;
   completed_at: string | null;
   aborted_at: string | null;
   unit: Pick<Unit, "grade" | "name" | "publisher">;

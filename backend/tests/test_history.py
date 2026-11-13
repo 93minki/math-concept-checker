@@ -57,6 +57,7 @@ def test_history_api(client: tuple[TestClient, ec.EllipticCurvePrivateKey]) -> N
                     status="completed",
                     abort_reason=None,
                     started_at=now - timedelta(seconds=i // 4),
+                    stage1_submitted_at=now if i % 2 else None,
                     completed_at=now,
                     aborted_at=None,
                     unit=unit,
@@ -74,11 +75,21 @@ def test_history_api(client: tuple[TestClient, ec.EllipticCurvePrivateKey]) -> N
         "status",
         "abort_reason",
         "started_at",
+        "stage1_submitted_at",
         "completed_at",
         "aborted_at",
         "unit",
     }
     assert set(first["items"][0]["unit"]) == {"grade", "name", "publisher"}
+    returned = {row["id"]: row for row in first["items"]}
+    for owner, item in repo.history_rows:
+        if owner == USER_ID and str(item.id) in returned:
+            value = returned[str(item.id)]["stage1_submitted_at"]
+            assert (
+                datetime.fromisoformat(value) if value else None
+            ) == item.stage1_submitted_at
+    assert any(row["stage1_submitted_at"] is None for row in first["items"])
+    assert any(row["stage1_submitted_at"] is not None for row in first["items"])
     for value in ("0", "51", "no"):
         assert (
             tc.get("/diagnoses", headers=headers, params={"limit": value}).status_code
@@ -122,6 +133,9 @@ def test_history_query_filters_user_and_cursor() -> None:
     user = uuid4()
     cursor = HistoryCursor(started_at=datetime.now(UTC), id=uuid4())
     assert SupabaseDiagnoses(client).list_diagnoses(user, 3, cursor) == []
+    client.table.return_value.select.assert_called_once_with(
+        "id,status,abort_reason,started_at,stage1_submitted_at,completed_at,aborted_at,unit:display_units(grade,name,publisher)"
+    )
     client.table.return_value.select.return_value.eq.assert_called_once_with(
         "user_id", str(user)
     )
