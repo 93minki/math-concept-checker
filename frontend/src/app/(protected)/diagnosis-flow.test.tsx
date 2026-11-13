@@ -5,6 +5,7 @@ import {
   render,
   screen,
   waitFor,
+  within,
 } from "@testing-library/react";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
 import UnitSelection from "./unit-selection";
@@ -21,8 +22,11 @@ const mocks = vi.hoisted(() => ({
   push: vi.fn(),
 }));
 vi.mock("next/navigation", () => {
-  const router = { push: mocks.push };
-  return { useRouter: () => router };
+  const router = { push: mocks.push, replace: vi.fn() };
+  return {
+    useRouter: () => router,
+    useSearchParams: () => new URLSearchParams(),
+  };
 });
 vi.mock("@/lib/supabase/client", () => ({
   createClient: () => ({
@@ -52,6 +56,7 @@ const units: Unit[] = [
     aliases: ["문자식"],
     status: "partial",
     in_progress_diagnosis_id: "old",
+    latest_result: null,
   },
   {
     id: 2,
@@ -62,8 +67,43 @@ const units: Unit[] = [
     aliases: [],
     status: "unavailable",
     in_progress_diagnosis_id: null,
+    latest_result: null,
   },
 ];
+const threeGrades: Unit[] = [
+  ...units,
+  { ...units[1], id: 3, grade: "중3", name: "도형과 식", status: "full" },
+];
+test("학년 탭과 검색 및 진행 상태", async () => {
+  mocks.getUnits.mockResolvedValue(threeGrades);
+  render(<UnitSelection />);
+  expect(await screen.findByText("진행 중")).toBeTruthy();
+  expect(screen.getByRole("link", { name: "이어서 풀기" })).toBeTruthy();
+  expect(screen.getAllByRole("tab")).toHaveLength(3);
+  expect(document.querySelector(".grade-chip")).toBeNull();
+  expect(screen.getByText("동아출판 기준")).toBeTruthy();
+  expect(screen.queryByRole("heading", { name: "2. 도형" })).toBeNull();
+  fireEvent.click(screen.getByRole("tab", { name: "중2" }));
+  expect(screen.getByRole("heading", { name: "2. 도형" })).toBeTruthy();
+  expect(screen.queryByRole("heading", { name: "1. 문자와 식" })).toBeNull();
+  fireEvent.change(screen.getByLabelText("단원 검색"), {
+    target: { value: "식" },
+  });
+  expect(screen.getByRole("heading", { name: "1. 문자와 식" })).toBeTruthy();
+  expect(screen.getByRole("heading", { name: "2. 도형과 식" })).toBeTruthy();
+  // One results card: count, grade subheadings, no chips, no tab selected.
+  const results = screen.getByRole("region", { name: "검색 결과" });
+  expect(results.textContent).toContain("검색 결과 2개");
+  expect(
+    [...results.querySelectorAll("h3")].map((node) => node.textContent),
+  ).toEqual(["중1", "중3"]);
+  expect(document.querySelector(".grade-chip")).toBeNull();
+  expect(
+    screen
+      .getAllByRole("tab")
+      .every((tab) => tab.getAttribute("aria-selected") === "false"),
+  ).toBe(true);
+});
 const diagnosis: Diagnosis = {
   id: "d",
   status: "stage1",
@@ -127,19 +167,21 @@ afterEach(() => {
 });
 test("학년과 상태를 표시하고 별칭으로 검색한다", async () => {
   render(<UnitSelection />);
-  expect(await screen.findByText("중1 · 동아출판 기준")).toBeTruthy();
+  expect(await screen.findByText("동아출판 기준")).toBeTruthy();
   expect(screen.getByText("이 단원은 일부 내용만 진단해요")).toBeTruthy();
-  expect(
-    (screen.getByRole("button", { name: "준비 중" }) as HTMLButtonElement)
-      .disabled,
-  ).toBe(true);
+  fireEvent.click(screen.getByRole("tab", { name: "중2" }));
+  const unavailable = screen.getByRole("button", { name: "준비 중" });
+  expect(unavailable.getAttribute("aria-disabled")).toBe("true");
+  fireEvent.click(unavailable);
+  expect(mocks.startDiagnosis).not.toHaveBeenCalled();
+  fireEvent.click(screen.getByRole("tab", { name: "중1" }));
   expect(
     screen.getByRole("link", { name: "이어서 풀기" }).getAttribute("href"),
   ).toBe("/diagnoses/old");
   fireEvent.change(screen.getByLabelText("단원 검색"), {
     target: { value: "문자식" },
   });
-  expect(screen.queryByText("도형")).toBeNull();
+  expect(screen.queryByRole("heading", { name: "2. 도형" })).toBeNull();
 });
 test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async () => {
   mocks.startDiagnosis
@@ -148,7 +190,10 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
     )
     .mockResolvedValueOnce({ diagnosis_id: "new" });
   render(<UnitSelection />);
-  fireEvent.click(await screen.findByRole("button", { name: "진단 시작하기" }));
+  fireEvent.click(
+    await screen.findByRole("button", { name: "문자와 식 더보기" }),
+  );
+  fireEvent.click(screen.getByRole("menuitem", { name: "새로 시작하기" }));
   const dialog = await screen.findByRole("dialog");
   expect(
     screen
@@ -156,7 +201,9 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
       .closest("article")
       ?.contains(dialog),
   ).toBe(true);
-  fireEvent.click(screen.getByRole("button", { name: "새로 시작하기" }));
+  fireEvent.click(
+    within(dialog).getByRole("button", { name: "새로 시작하기" }),
+  );
   await waitFor(() =>
     expect(mocks.startDiagnosis).toHaveBeenCalledWith(1, true),
   );
@@ -165,12 +212,16 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
 test("객관식 저장 상태 줄은 항상 있고 선택하면 저장됨이 보인다", async () => {
   render(<DiagnosisView id="d" />);
   await screen.findByRole("radio", { name: /하나/ });
-  expect(document.querySelector(".save-status-row")).toBeTruthy();
+  expect(
+    screen
+      .getByRole("status", { name: "답안 저장 상태" })
+      .closest(".diagnosis-progress"),
+  ).toBeTruthy();
   fireEvent.click(screen.getByRole("radio", { name: /하나/ }));
   expect(await screen.findByText("저장 중…")).toBeTruthy();
   await waitFor(() => expect(screen.getByText("저장됨")).toBeTruthy());
 });
-test("서술형은 글자 수와 저장 상태가 한 줄에 있다", async () => {
+test("서술형은 글자 수와 위쪽 저장 상태를 표시한다", async () => {
   let finishSave: () => void = () => {};
   render(<DiagnosisView id="d" />);
   fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
@@ -183,7 +234,12 @@ test("서술형은 글자 수와 저장 상태가 한 줄에 있다", async () =
         finishSave = resolve;
       }),
   );
-  expect(count.closest(".save-status-row")).toBeTruthy();
+  expect(count.closest(".problem-sheet")).toBeNull();
+  expect(
+    screen
+      .getByRole("status", { name: "답안 저장 상태" })
+      .closest(".diagnosis-header"),
+  ).toBeTruthy();
   vi.useFakeTimers();
   await act(async () => {
     fireEvent.change(screen.getByLabelText("풀이와 답"), {
@@ -209,32 +265,33 @@ test("제출 확인 모달에서 계속 풀기는 제출하지 않는다", async
     name: "제출 확인",
   }) as HTMLDialogElement;
   expect(modal.open).toBe(true);
-  fireEvent.click(screen.getByRole("button", { name: "계속 풀기" }));
+  const confirm = screen.getByRole("button", { name: "제출할게요" });
+  await waitFor(() => expect(document.activeElement).toBe(confirm));
+  const keepSolving = screen.getByRole("button", { name: "계속 풀기" });
+  fireEvent.click(keepSolving);
   await waitFor(() => expect(modal.open).toBe(false));
+  await waitFor(() =>
+    expect(document.activeElement).toBe(
+      screen.getByRole("button", { name: "제출하기" }),
+    ),
+  );
   expect(mocks.submitStage).not.toHaveBeenCalled();
 });
 test("객관식은 답하기 전에는 다음이 꺼져 있고 안내가 보인다", async () => {
   render(<DiagnosisView id="d" />);
   const next = await screen.findByRole("button", { name: "다음" });
-  expect((next as HTMLButtonElement).disabled).toBe(true);
-  const row = document.querySelector(".save-status-row");
-  expect(row).toBeTruthy();
-  expect(row?.querySelector(".save-status-label")?.textContent).toBe(
-    "답을 고르면 다음 문제로 넘어갈 수 있어요",
-  );
+  expect(next.getAttribute("aria-disabled")).toBe("true");
+  const status = screen.getByRole("status", { name: "답안 저장 상태" });
+  expect(
+    screen.getByText("답을 고르면 다음 문제로 넘어갈 수 있어요")
+      .previousElementSibling?.className,
+  ).toContain("diagnosis-actions");
   fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
   expect(
-    (screen.getByRole("button", { name: "다음" }) as HTMLButtonElement)
-      .disabled,
-  ).toBe(false);
-  expect(row?.querySelector(".save-status-label")?.textContent).toBe(
-    "저장 중…",
-  );
-  await waitFor(() =>
-    expect(row?.querySelector(".save-status-label")?.textContent).toBe(
-      "저장됨",
-    ),
-  );
+    screen.getByRole("button", { name: "다음" }).getAttribute("aria-disabled"),
+  ).toBeNull();
+  expect(status.textContent).toBe("저장 중…");
+  await waitFor(() => expect(status.textContent).toContain("저장됨"));
   expect(
     screen.queryByText("답을 고르면 다음 문제로 넘어갈 수 있어요"),
   ).toBeNull();
@@ -251,24 +308,20 @@ test("서술형은 공백만이면 다음이 꺼지고 글자를 쓰면 켜진�
   render(<DiagnosisView id="d" />);
   await screen.findByText("1 / 2");
   expect(
-    (screen.getByRole("button", { name: "다음" }) as HTMLButtonElement)
-      .disabled,
-  ).toBe(true);
-  const row = document.querySelector(".save-status-row");
-  expect(row?.querySelector(".save-status-label")?.textContent).toBe(
-    "답을 쓰면 다음 문제로 넘어갈 수 있어요",
-  );
+    screen.getByRole("button", { name: "다음" }).getAttribute("aria-disabled"),
+  ).toBe("true");
+  expect(
+    screen.getByText("답을 쓰면 다음 문제로 넘어갈 수 있어요"),
+  ).toBeTruthy();
   const input = screen.getByLabelText("풀이와 답");
   fireEvent.change(input, { target: { value: "   " } });
   expect(
-    (screen.getByRole("button", { name: "다음" }) as HTMLButtonElement)
-      .disabled,
-  ).toBe(true);
+    screen.getByRole("button", { name: "다음" }).getAttribute("aria-disabled"),
+  ).toBe("true");
   fireEvent.change(input, { target: { value: "답" } });
   expect(
-    (screen.getByRole("button", { name: "다음" }) as HTMLButtonElement)
-      .disabled,
-  ).toBe(false);
+    screen.getByRole("button", { name: "다음" }).getAttribute("aria-disabled"),
+  ).toBeNull();
   expect(
     screen.queryByText("답을 쓰면 다음 문제로 넘어갈 수 있어요"),
   ).toBeNull();
@@ -281,14 +334,12 @@ test("마지막 문제는 답하기 전 제출이 꺼지고 안내가 보인다"
   fireEvent.click(screen.getByRole("button", { name: "다음" }));
   await screen.findByText("2 / 2");
   const submit = screen.getByRole("button", { name: "제출하기" });
-  expect((submit as HTMLButtonElement).disabled).toBe(true);
-  expect(document.querySelector(".save-status-label")?.textContent).toBe(
-    "답을 쓰면 제출할 수 있어요",
-  );
+  expect(submit.getAttribute("aria-disabled")).toBe("true");
+  expect(screen.getByText("답을 쓰면 제출할 수 있어요")).toBeTruthy();
   fireEvent.change(screen.getByLabelText("풀이와 답"), {
     target: { value: "둘째" },
   });
-  expect((submit as HTMLButtonElement).disabled).toBe(false);
+  expect(submit.getAttribute("aria-disabled")).toBeNull();
   expect(screen.queryByText("답을 쓰면 제출할 수 있어요")).toBeNull();
 });
 test("첫 문제에는 다음만 있고 마지막 문제에는 제출하기만 있다", async () => {
@@ -315,12 +366,10 @@ test("답을 저장하고 모두 답해야 제출한다", async () => {
   const submit = screen.getByRole("button", { name: "제출하기" });
   const input = screen.getByLabelText("풀이와 답");
   fireEvent.change(input, { target: { value: "  " } });
-  expect((submit as HTMLButtonElement).disabled).toBe(true);
-  expect(document.querySelector(".save-status-label")?.textContent).toBe(
-    "답을 쓰면 제출할 수 있어요",
-  );
+  expect(submit.getAttribute("aria-disabled")).toBe("true");
+  expect(screen.getByText("답을 쓰면 제출할 수 있어요")).toBeTruthy();
   fireEvent.change(input, { target: { value: "답이에요" } });
-  expect((submit as HTMLButtonElement).disabled).toBe(false);
+  expect(submit.getAttribute("aria-disabled")).toBeNull();
   expect(screen.queryByText("답을 쓰면 제출할 수 있어요")).toBeNull();
   mocks.submitStage.mockResolvedValue({
     status: "stage2",
@@ -357,6 +406,11 @@ test("중단된 진단은 수정할 수 없다", async () => {
   expect(await screen.findByText("기간이 지나 중단된 진단이에요")).toBeTruthy();
   expect(screen.queryByRole("radio")).toBeNull();
   expect(mocks.getReport).not.toHaveBeenCalled();
+  // Stage-1 abort: full mascot screen with a way out (user 2026-11-13).
+  expect(document.querySelector(".status-screen .mascot-resting")).toBeTruthy();
+  expect(
+    screen.getByRole("link", { name: "단원 선택으로" }).getAttribute("href"),
+  ).toBe("/");
 });
 test("저장에 실패하면 다시 시도할 수 있다", async () => {
   mocks.saveAnswer
@@ -426,9 +480,13 @@ test("보기와 선택한 답의 표를 번호와 함께 표시한다", async ()
   const { container, unmount } = render(<DiagnosisView id="d" />);
   await screen.findByRole("radio");
   expect(container.querySelector(".choice .problem-table")).toBeTruthy();
+  expect(container.querySelector(".choice .choice-number")?.textContent).toBe(
+    "1",
+  );
+  expect(screen.getByRole("radio", { name: /1/ })).toBeTruthy();
   expect(
     container.querySelector(".choice .problem-text")?.textContent,
-  ).toContain("1.");
+  ).not.toContain("1.");
   unmount();
 
   const figure = {
@@ -457,9 +515,37 @@ test("보기와 선택한 답의 표를 번호와 함께 표시한다", async ()
   await screen.findByText("맞았어요");
   expect(result.container.querySelector(".choice .problem-table")).toBeTruthy();
   expect(
+    result.container.querySelector(".choice .choice-number")?.textContent,
+  ).toBe("1");
+  expect(
     result.container.querySelector(".choice .problem-text")?.textContent,
-  ).toContain("1.");
-  expect(result.container.querySelectorAll(".problem-table")).toHaveLength(2);
+  ).not.toContain("1.");
+  expect(result.container.querySelectorAll(".problem-table")).toHaveLength(3);
+  expect(result.container.querySelectorAll(".figure")).toHaveLength(3);
+});
+
+test("글 보기 전부와 내 답 및 정답을 번호와 내용으로 표시한다", async () => {
+  const item = {
+    ...diagnosis.items[0],
+    choices: [
+      { no: 1, text: "첫 보기", figure: null },
+      { no: 2, text: "둘째 보기", figure: null },
+      { no: 3, text: "셋째 보기", figure: null },
+    ],
+    answer: { selected_choice: 2, written_text: null, updated_at: "now" },
+    result: { passed: false, explanation: "풀이", correct_choice: 3 },
+  };
+  mocks.getDiagnosis.mockResolvedValue({ ...completed, items: [item] });
+  mocks.getReport.mockResolvedValue(report);
+  const result = render(<DiagnosisView id="d" />);
+  await screen.findByText("틀렸어요");
+  const choices = result.container.querySelectorAll(".report-choice");
+  expect(choices).toHaveLength(3);
+  expect(choices[1].textContent).toContain("내 답");
+  expect(choices[2].textContent).toContain("정답");
+  const answers = result.container.querySelectorAll(".answer-choice");
+  expect(answers[0].textContent).toContain("내 답:2둘째 보기");
+  expect(answers[1].textContent).toContain("정답:3셋째 보기");
 });
 
 test("완료된 진단은 리포트와 문제별 결과를 표시한다", async () => {

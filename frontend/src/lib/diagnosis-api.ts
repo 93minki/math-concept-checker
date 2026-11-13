@@ -12,6 +12,11 @@ export type Unit = {
   aliases: string[];
   status: "full" | "partial" | "unavailable";
   in_progress_diagnosis_id: string | null;
+  latest_result: {
+    diagnosis_id: string;
+    unit_stage: string | null;
+    completed_at: string;
+  } | null;
 };
 export type Answer = {
   selected_choice: number | null;
@@ -72,6 +77,7 @@ export type HistoryItem = {
   status: Diagnosis["status"];
   abort_reason: Diagnosis["abort_reason"];
   started_at: string;
+  stage1_submitted_at: string | null;
   completed_at: string | null;
   aborted_at: string | null;
   unit: Pick<Unit, "grade" | "name" | "publisher">;

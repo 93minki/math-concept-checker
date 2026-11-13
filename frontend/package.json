@@ -15,6 +15,9 @@
     "test:e2e:dev": "playwright test -c playwright.dev.config.ts"
   },
   "dependencies": {
+    "@astryxdesign/core": "0.7.14",
+    "@astryxdesign/theme-stone": "0.7.14",
+    "@stylexjs/stylex": "0.19.2",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.119.0",
     "katex": "0.16.47",
@@ -23,6 +26,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@astryxdesign/cli": "0.7.14",
     "@playwright/test": "^1.65.0",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/react": "^16.3.3",

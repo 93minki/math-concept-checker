@@ -337,3 +337,145 @@
 - 원인 분류: 기타 (부동소수점 연산)
 - 원인: 최소 높이를 밑면 폭의 정확히 0.6배로 두어 좌표 뺄셈의 반올림 오차가 경계값을 밑돎
 - 해결: 최소 높이에 작은 여유를 둬 좌표 연산 뒤에도 기준을 넘게 함
+
+### 2026-11-12 — diagnosis-flow.test.tsx:A 학년 제목과 B 탭, 검색 및 진행 상태
+- 작업: UI 고도화 단계 2, F-04
+- 증상: 중2 탭을 누른 뒤 `도형` 텍스트를 찾지 못함.
+- 원인 분류: 테스트 오류
+- 원인: 단원 제목에 번호가 함께 렌더링되는데 이름만 정확히 일치하는 텍스트로 조회함.
+- 해결: 번호를 포함한 접근성 제목으로 조회함.
+
+### 2026-11-12 — frontend/e2e-dev/flow.spec.ts:진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는다
+- 작업: UI 고도화 단계 3 (디자인 기준 B를 모든 화면에 적용), F-04·F-06
+- 증상: "답할 때 이동 줄이 움직이지 않는다" 검사(`documentY`)가 1px 차이로 실패. 1회차 데스크톱 16번째 문제 Expected 777.5 Received 776.5, 2회차 모바일 Expected 936.09375 Received 935.09375. 실행마다 실패하는 화면·문제가 달랐다.
+- 원인 분류: 기타 (글꼴 교체로 인한 줄 높이 변화)
+- 원인: Pretendard 동적 서브셋은 화면에 처음 나온 글자의 조각을 그때 받고(`font-display: swap`), `body`에 `line-height`가 없어 "normal"(글꼴 지표에 따라 달라짐)이었다. 답을 고르는 사이에 조각이 도착하면 대체 글꼴 → Pretendard로 바뀌며 위쪽 줄 높이가 조금 달라져 이동 버튼이 1px 움직였다. 같은 화면에서 문제 12개를 재었을 때는 차이가 없어(조각이 이미 받아진 상태) 간헐적으로만 드러났다. 이 원인은 줄 높이를 고정하자 사라진 것으로 확인했고, 글꼴 도착 시점을 직접 재지는 않았다.
+- 해결: `globals.css`에 `body { line-height: 1.5 }`, 제목 `h1~h4 { line-height: 1.3 }`를 지정(Opus). 이어서 서술형 답 칸 높이(140px)가 공통 입력창 규칙(48px)에 덮인 결함도 함께 고침. 재실행: `pnpm test:e2e:dev`(임시 설정으로 3100·8100 포트) 두 번 연속 3개 모두 통과.
+
+### 2026-11-12 — frontend/e2e/home.spec.ts:/login?login=1 화면은 가로로 넘치지 않는다, /login?login=1 화면은 스크립트 실행 전에도 비밀번호를 주소로 보내지 않는다
+- 작업: UI 고도화 단계 4, 머리말 아이콘·파비콘 추가 (F-01)
+- 증상: 데스크톱·모바일 4건 실패. `locator('main')`, `locator('form')`가 strict mode에서 2개로 잡힘. 직전 실행(아이콘 추가 전)에서는 같은 테스트가 통과했다.
+- 원인 분류: 기타 (임시 시안 장치의 Suspense 대체본)
+- 원인: 단계 2에서 넣은 임시 시안 장치가 루트 레이아웃에서 `<Suspense fallback={children}><VariantProvider>{children}</VariantProvider></Suspense>`로 화면 전체를 감쌌다. `/login?login=1`은 `searchParams`를 기다리는 동적 화면이라 이 경계가 대체본(같은 `children`)을 먼저 보내고 진짜 화면을 숨긴 `<div hidden id="S:0">`로 이어 보냈다(응답 HTML에서 `<main>`·`<dialog>`가 두 벌인 것을 `curl`로 확인). 스크립트가 바꿔 끼우기 전에는 폼과 `id="email"`이 두 벌이다. 이전 실행의 통과·실패는 응답 타이밍에 따라 갈린 것으로 본다.
+- 해결: 쓰는 곳이 없어진 임시 시안 장치(`src/app/variant.tsx`, `variant.test.ts`, `data-variant`, 루트 Suspense)를 지움(Opus). 재실행: 프론트엔드 검사 전부, `pnpm test:e2e` 두 번 연속 26개 통과, `pnpm test:e2e:dev` 3개 통과.
+
+### 2026-11-12 — frontend/e2e-dev/flow.spec.ts:진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는다 (mobile)
+- 작업: UI 고도화, 로그인 전 주소 구조 변경(`/` 랜딩, `/login` 페이지) (F-01)
+- 증상: 모바일 1회 실패(22.2초). 진행 표시 `locator('section p').filter({ hasText: /^\d+\s*\/\s*\d+$/ })`를 5초 안에 찾지 못함 (`toHaveText(/^1\s*\/\s*\d+$/)`). 실패 화면 기록(page snapshot)은 남지 않았다. 데스크톱·접근 권한 테스트는 같은 실행에서 통과.
+- 원인 분류: 기타 (원인 미확인)
+- 원인: 확인하지 못함. 같은 코드로 모바일만 다시 실행해 통과, 전체를 다시 실행해 3개 모두 통과했다. 그 실행 사이에 바꾼 것은 `e2e-dev/helpers.ts`의 `login()`이 여는 주소(`/login?login=1` → `/login`)뿐이며, 새 `/login`은 쿼리를 무시하므로 실패 원인으로 보기 어렵다. 같은 증상이 다시 나면 진행 표시를 기다리는 시점(진단 시작 응답 직후)을 먼저 본다.
+- 해결: 없음 (재실행 통과). 반복되면 원인 조사.
+
+
+### 2026-11-12 — frontend/src/lib/unit-progress.test.ts:깊이 이해를 정복한 뒤 다시 푸는 단원도 정복 수에 포함한다
+- 작업: UI 고도화 첫 화면 진행, F-04·F-08
+- 증상: 정복 수 1을 기대했지만 0으로 계산됨
+- 원인 분류: 요구사항 오해
+- 원인: 재진단 중이면 표시 상태가 진행 중으로 우선되는 함수를 정복 수에도 사용해 최근 완료의 깊이 이해를 누락함
+- 해결: 정복 수는 진행 상태와 독립적으로 최근 완료 결과의 단원 단계를 확인함
+
+
+### 2026-11-12 — frontend/src/app/(protected)/learning-map.test.tsx:상태별 게이지
+- 작업: UI 고도화 학습 지도, F-04·F-08
+- 증상: 기본 이해·다시 도전·빈 게이지에서 채워진 칸 수가 항상 3으로 집계됨
+- 원인 분류: 테스트 오류
+- 원인: 빈 칸에도 React가 빈 class 속성을 출력하는데 테스트가 속성 존재만 확인했음
+- 해결: 실제 채움 색상에 대응하는 상태 클래스만 선택해 갯수를 검사함
+
+### 2026-11-13 — history.test.tsx:첫 화면과 진단 화면에 지난 기록 링크가 있다
+- 작업: UI 고도화 단계 4, F-06
+- 증상: 제거한 `지난 기록으로` 링크를 찾지 못함.
+- 원인 분류: 테스트 오류
+- 원인: 풀이 화면의 중복 링크를 제거하라는 지시 이후에도 테스트가 두 링크를 요구함.
+- 해결: 공통 머리말의 지난 기록 링크와 단원 복귀 링크를 확인하도록 변경.
+
+### 2026-11-13 — diagnosis-flow.test.tsx:보기와 선택한 답의 표를 번호와 함께 표시한다
+- 작업: UI 고도화 단계 4, F-06·F-08
+- 증상: 결과 화면에서 라디오 버튼을 찾지 못함.
+- 원인 분류: 테스트 오류
+- 원인: 풀이 화면용 라디오 검사를 읽기 전용 결과 화면 검사에도 중복 삽입함.
+- 해결: 라디오와 번호의 접근성 검사는 풀이 화면에서만 하고, 결과 화면은 표·그림 목록과 답안 표시를 확인함.
+
+### 2026-11-13 — e2e/home.spec.ts:테마 선택은 새로고침 뒤에도 유지된다
+- 작업: UI 고도화 4-1 Astryx 기반, 공통
+- 증상: (1) 새로고침 뒤 `<html data-theme>`가 비어 있음. (2) 고친 뒤 `[data-astryx-theme="concept"]` 선택자가 2개 요소에 걸림(strict mode).
+- 원인 분류: (1) 코드 오류 (2) 테스트 오류
+- 원인: (1) Astryx 최상위 `<Theme>`가 `<html data-theme>`를 관리하며(`@astryxdesign/core/dist/theme/Theme.js` `useRootThemeSync`), 처음 그릴 때 `mode="system"`이면 속성을 지운다. 우리 코드가 모드를 그 속성에서 다시 읽어 저장한 선택이 사라졌다. (2) Astryx가 `<html>`에도 `data-astryx-theme`를 붙여 감싸개와 둘이 되었다.
+- 해결: (1) 모드를 `localStorage.theme`에서 읽는다(`storedTheme()`). (2) `<html>`과 `body` 안 감싸개를 따로 검사.
+
+### 2026-11-13 — 인증·랜딩 컴포넌트 Vitest
+- 작업: Astryx 전환 4-2, F-01
+- 증상: `pnpm test`에서 인증·랜딩 테스트 6개 실패. 체크박스 이름에 `Required`가 추가되고, 머리말 landmark가 사라졌으며, 비활성 버튼의 `disabled` 속성이 false로 나타남.
+- 원인 분류: 설계 불일치
+- 원인: Astryx CheckboxInput은 필수 문구를 추가하고, TopNav는 nav만 렌더링하며, Button은 `disabled` 대신 `aria-disabled`를 사용함.
+- 해결: header landmark를 복원하고 중복 필수 표시는 숨김. 테스트와 E2E는 새 체크박스 구조와 aria-disabled 동작을 검증함.
+
+### 2026-11-13 — `astryx doctor --built .next` 테마 검사
+- 작업: Astryx 전환 4-2, F-01
+- 증상: theme-module·theme-local-builds 검사 실패. theme-module-import·theme-fonts 경고.
+- 원인 분류: 환경·설정
+- 원인: 기존 4-1 테마 생성물과 CLI가 기대하는 생성 결과가 일치하지 않으며, CLI는 앱의 별칭 import와 로컬 Pretendard 로딩을 확인하지 못함.
+- 해결: 미해결. 이번 지시의 테마 파일 변경 금지와 외부 글꼴 요청 금지에 따라 유지하고 보고함.
+
+### 2026-11-13 — 학습 지도 및 진단 흐름 Vitest
+- 작업: Astryx 전환 4-3①, F-04
+- 증상: `pnpm test` 16건 실패. 제거한 게이지·길 장식 선택자와 네이티브 disabled 속성 및 버튼 메뉴 역할을 찾음.
+- 원인 분류: 테스트 오류
+- 원인: 기존 화면 장식과 details 메뉴의 DOM 구조를 테스트가 직접 참조했으나 Astryx 컴포넌트는 상태를 `aria-disabled`와 menuitem 역할로 표시함.
+- 해결: 상태 글자·모양, 정복 수, 주 버튼 우선순위, 메뉴의 실제 동작을 검사하도록 변경함.
+
+### 2026-11-13 — Astryx doctor 4-3① 테마 검사
+- 작업: Astryx 전환 4-3①, F-04·F-10
+- 증상: `pnpm exec astryx doctor --built .next`의 theme-module·theme-local-builds 실패, theme-module-import·theme-fonts 경고가 다시 발생함.
+- 원인 분류: 환경·설정
+- 원인 (Opus 확인): Astryx가 만든 생성 파일(`src/astryx-themes.ts`, `src/themes/concept/concept.{js,css,d.ts}`)을 `pnpm format`(Prettier)이 다시 정렬해, doctor가 "생성 결과와 다름"으로 판정. 글꼴 경고는 Google Fonts를 쓰지 않는 결정(2026-11-13) 때문의 의도된 경고.
+- 해결: 생성 파일 4종을 `.prettierignore`에 넣고 `astryx theme build/add/use`로 다시 생성. doctor fail 0.
+
+### 2026-11-13 — learning-map.test.tsx:더보기 메뉴 바깥 클릭
+- 작업: Astryx 전환 4-3①, F-04
+- 증상: jsdom에서 바깥 pointerdown 뒤 메뉴의 `aria-expanded`가 true로 남음.
+- 원인 분류: 환경·설정
+- 원인: Astryx MoreMenu가 사용하는 브라우저 Popover의 바깥 클릭 닫힘을 jsdom이 구현하지 않음.
+- 해결: 바깥 클릭 닫힘 검사는 실제 브라우저 E2E에 두고, Escape 닫힘은 Vitest에서 유지함.
+
+### 2026-11-13 — 진단 흐름·랜딩 Vitest
+- 작업: Astryx 전환 4-3②, F-06·F-08
+- 증상: 저장 상태 역할 중복 3건, 제출 Dialog 포커스 1건, 저장 재시도 버튼 1건, 샘플 리포트 구역 선택 1건 실패.
+- 원인 분류: 테스트 오류
+- 원인: Astryx ProgressBar가 자체 `role="status"` 영역을 추가하는데 테스트가 이름 없이 status 하나만 찾았고, Section이 `<section>`을 렌더링한다고 가정했다. Dialog의 `data-autofocus`·포커스 복귀는 jsdom에서 동작하지 않았으며, Banner의 자식은 `collapsible={false}` 없이 바로 표시되지 않았다.
+- 해결: 저장 상태에 접근성 이름을 붙여 정확히 찾고, Section은 Astryx 클래스 기준으로 찾는다. 제출 Dialog는 명시적으로 첫 버튼과 트리거에 포커스를 옮기고, 오류 Banner는 자식을 항상 펼쳐 둔다.
+
+### 2026-11-13 — e2e/diagnosis-ui.spec.tsx (수집 단계)
+- 작업: Astryx 전환 4-3②, F-06·F-08
+- 증상: Astryx reset CSS를 읽지 못해 ENOENT가 발생하고 테스트를 수집하지 못함.
+- 원인 분류: 테스트 오류
+- 원인: 패키지 import 경로 `@astryxdesign/core/reset.css`를 실제 파일 경로 `dist/reset.css`로 잘못 추정했으며, 설치된 패키지의 파일은 `src/reset.css`에 있음.
+- 해결: 정적 화면 E2E가 읽는 경로를 `node_modules/@astryxdesign/core/src/reset.css`로 고침.
+
+### 2026-11-13 — e2e/diagnosis-ui.spec.tsx:풀이 머리와 리포트는 화면 너비 안에 표시된다
+- 작업: Astryx 전환 4-3②, F-06·F-08 (Opus 검수)
+- 증상: 버튼 높이 검사 실패. "이전" 버튼 36px (기준 44px 이상).
+- 원인 분류: 코드 오류
+- 원인: Astryx 컨트롤 높이 토큰 기본값이 `--size-element-md` 32px, `--size-element-lg` 36px (`astryx docs tokens/tokens-size`). 우리 터치 기준 44px(`docs/DESIGN.md` "화면", WCAG 2.5.5)보다 낮다. 학습 지도 등 Astryx 버튼을 쓴 모든 화면에 해당.
+- 해결: 테마 `concept`에서 `--size-element-md`·`--size-element-lg`를 44px로(기본·폰 조건 모두), `astryx theme build/add/use`로 다시 생성.
+
+### 2026-11-13 — e2e-dev/flow.spec.ts:진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는다
+- 작업: UI 고도화 단계 5 (`pnpm test:e2e:dev`)
+- 증상: 학습 지도 열 정렬 검사에서 `.learning-row` 0개 (`expect(columns.length).toBeGreaterThan(0)`).
+- 원인 분류: 테스트 오류
+- 원인: 4-3①에서 추가한 검사가 단원 목록을 불러오기 전(로딩 화면)에 행을 셌다. `test:e2e:dev`에서만 도는 검사라 추가 때 실행되지 않았다.
+- 해결: 대상 단원 행이 보일 때까지 기다린 뒤 잰다.
+
+### 2026-11-13 — e2e-dev/flow.spec.ts 학습 지도 열 정렬 (모바일), 지난 기록 제목
+- 작업: UI 고도화 단계 5 (`pnpm test:e2e:dev`)
+- 증상: (1) 모바일에서 동작 열 x 좌표 차이 2px(기준 1px). (2) `heading "지난 기록"`이 2개에 걸림(strict mode).
+- 원인 분류: 테스트 오류
+- 원인: (1) 사용자 요청으로 모바일 버튼 너비를 글자에 맞춰 버튼 묶음의 왼쪽 끝이 글자 길이에 따라 달라짐. 오른쪽 끝은 맞춰져 있음. (2) 지난 기록 로딩 화면 제목 "지난 기록을 불러오고 있어요."가 부분 일치로 함께 잡힘.
+- 해결: (1) 동작 열은 오른쪽 끝을 비교(상태 열은 왼쪽 끝 그대로). (2) 제목은 `exact: true`.
+
+### 2026-11-13 — e2e-dev/flow.spec.ts 지난 기록 진행 중 항목
+- 작업: UI 고도화 단계 5 (`pnpm test:e2e:dev`)
+- 증상: 진단 링크(`a`) 안에 "진행 중"이 없음.
+- 원인 분류: 테스트 오류
+- 원인: Astryx `ListItem`이 상태 꼬리표(`endContent`)를 링크 밖, 같은 목록 줄에 그린다. 화면에는 같은 줄에 보인다.
+- 해결: 링크가 든 목록 줄(`li`)에서 상태를 확인. 링크 글자("이어서 풀기")와 이동 동작 검사는 그대로.

@@ -1,19 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import { Card } from "@astryxdesign/core/Card";
+import { VStack } from "@astryxdesign/core/VStack";
+import { Banner } from "@astryxdesign/core/Banner";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useHydrated } from "@/lib/use-hydrated";
+import PrivacyConsent, { rememberPrivacyConsent } from "../privacy-consent";
 
 export default function SignupPage() {
   const router = useRouter();
   const hydrated = useHydrated();
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
+  const [consent, setConsent] = useState(false);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (!consent) return;
+    rememberPrivacyConsent();
     setBusy(true);
     setMessage("");
     const form = new FormData(event.currentTarget);
@@ -38,35 +45,44 @@ export default function SignupPage() {
   }
 
   return (
-    <main className="auth-card">
-      <h1>회원가입</h1>
-      {/* method="post": a native submit must never put the password in the URL. */}
-      <form method="post" onSubmit={submit}>
-        <label htmlFor="email">이메일</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          required
-        />
-        <label htmlFor="password">비밀번호</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          autoComplete="new-password"
-          required
-          minLength={6}
-        />
-        <button disabled={busy || !hydrated} type="submit">
-          가입하기
-        </button>
-      </form>
-      <p>
-        이미 계정이 있나요? <Link href="/login">로그인</Link>
-      </p>
-      {message && <p role="status">{message}</p>}
+    <main className="auth-page">
+      <Card>
+        <VStack gap={4}>
+          <h1>회원가입</h1>
+          {/* method="post": a native submit must never put the password in the URL. */}
+          <form className="auth-form" method="post" onSubmit={submit}>
+            <label htmlFor="email">이메일</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+            />
+            <label htmlFor="password">비밀번호</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autoComplete="new-password"
+              required
+              minLength={6}
+            />
+            <PrivacyConsent checked={consent} onChange={setConsent} />
+            <button
+              className="btn"
+              disabled={busy || !hydrated || !consent}
+              type="submit"
+            >
+              가입하기
+            </button>
+          </form>
+          <p>
+            이미 계정이 있나요? <Link href="/login">로그인</Link>
+          </p>
+          {message && <Banner status="info" title={message} role="status" />}
+        </VStack>
+      </Card>
     </main>
   );
 }

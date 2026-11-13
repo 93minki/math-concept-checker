@@ -25,6 +25,8 @@ vi.mock("next/navigation", () => ({
 
 beforeEach(() => {
   vi.clearAllMocks();
+  sessionStorage.clear();
+  sessionStorage.setItem("privacy-consent", "agreed");
   mocks.getSession.mockResolvedValue({
     data: { session: { access_token: "fake-token" } },
   });
@@ -57,4 +59,33 @@ test("실패하면 다시 시도할 수 있다", async () => {
   fireEvent.click(await screen.findByRole("button", { name: "다시 시도" }));
   await waitFor(() => expect(mocks.push).toHaveBeenCalledWith("/"));
   expect(fetchMock).toHaveBeenCalledTimes(2);
+});
+
+test("동의 기록이 없으면 가입 완료 전에 동의를 받는다", async () => {
+  sessionStorage.clear();
+  const fetchMock = vi.fn().mockResolvedValue({ ok: true });
+  vi.stubGlobal("fetch", fetchMock);
+  render(<CompleteSignup />);
+  expect(
+    await screen.findByText(
+      "가입을 마치려면 개인정보 수집·이용에 동의해 주세요.",
+    ),
+  ).toBeTruthy();
+  expect(fetchMock).not.toHaveBeenCalled();
+  const button = screen.getByRole("button", {
+    name: "동의하고 가입 마치기",
+  }) as HTMLButtonElement;
+  expect(button.getAttribute("aria-disabled")).toBe("true");
+  fireEvent.click(button);
+  expect(fetchMock).not.toHaveBeenCalled();
+  fireEvent.click(
+    screen.getByRole("checkbox", {
+      name: /개인정보 수집·이용에 동의합니다 \(필수\)/,
+    }),
+  );
+  expect(button.getAttribute("aria-disabled")).toBeNull();
+  fireEvent.click(button);
+  expect(sessionStorage.getItem("privacy-consent")).toBe("agreed");
+  await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
+  expect(mocks.push).toHaveBeenCalledWith("/");
 });

@@ -17,6 +17,7 @@ from app.diagnoses.schemas import (
     Diagnosis,
     GradingRow,
     Item,
+    LatestResult,
     MisconceptionRow,
     Question,
     QuestionChoice,
@@ -56,6 +57,7 @@ class FakeDiagnoses:
         self.written = False
         self.grade_rows: dict[int, GradingRow] = {}
         self.report_rows: dict[UUID, ReportRow] = {}
+        self.completed_times: dict[UUID, datetime] = {}
 
     def expire(self, user_id: UUID) -> None:
         self.events.append("expire")
@@ -144,6 +146,30 @@ class FakeDiagnoses:
             for d in self.rows.values()
             if d.user_id == user_id and d.status in ("stage1", "stage2")
         ]
+
+    def latest_results(self, user_id: UUID) -> dict[int, LatestResult]:
+        rows = sorted(
+            (
+                d
+                for d in self.rows.values()
+                if d.user_id == user_id
+                and d.status == "completed"
+                and d.id in self.completed_times
+            ),
+            key=lambda d: self.completed_times[d.id],
+            reverse=True,
+        )
+        results: dict[int, LatestResult] = {}
+        for row in rows:
+            if row.display_unit_id not in results:
+                report = self.report_rows.get(row.id)
+                reports = [report] if report else []
+                results[row.display_unit_id] = LatestResult(
+                    diagnosis_id=row.id,
+                    completed_at=self.completed_times[row.id],
+                    unit_stage=reports[0].unit_stage if reports else None,
+                )
+        return results
 
     def start(
         self, user_id: UUID, unit_id: int, restart: bool, ids: list[UUID]
@@ -537,3 +563,55 @@ def test_new_figure_api(
     assert all(
         "is_correct" not in c and "misconception_id" not in c for c in item["choices"]
     )
+
+
+def test_units_latest_results_are_private_and_completed(
+    client: tuple[TestClient, ec.EllipticCurvePrivateKey],
+) -> None:
+    tc, key = client
+    profiles = FakeProfiles()
+    profiles.complete_signup(USER_ID)
+    repo = FakeDiagnoses()
+    app.dependency_overrides[get_profiles] = lambda: profiles
+    app.dependency_overrides[get_diagnoses] = lambda: repo
+
+    def add(
+        user: UUID, unit: int, status: str, seconds: int, stage: str | None = None
+    ) -> UUID:
+        did = uuid4()
+        repo.rows[did] = Diagnosis.model_validate(
+            {
+                "id": did,
+                "user_id": user,
+                "display_unit_id": unit,
+                "status": status,
+                "abort_reason": "restarted" if status == "aborted" else None,
+                "started_at": NOW,
+                "stage1_submitted_at": None,
+            }
+        )
+        repo.completed_times[did] = NOW + timedelta(seconds=seconds)
+        if stage:
+            repo.report_rows[did] = ReportRow(
+                unit_score=0.9,
+                unit_stage=stage,
+                concepts=[],
+                misconception_ids=[],
+                text={},
+                ai_model="test",
+                prompt_version="test",
+            )
+        return did
+
+    add(USER_ID, 1, "completed", 1, "기본 이해")
+    latest = add(USER_ID, 1, "completed", 2, "깊이 이해")
+    add(uuid4(), 1, "completed", 9, "아직 이해 못 함")
+    add(USER_ID, 1, "stage1", 10)
+    add(USER_ID, 1, "aborted", 11)
+    missing = add(USER_ID, 2, "completed", 3)
+    result = tc.get("/units", headers={"Authorization": f"Bearer {token(key)}"}).json()
+    assert result[0]["latest_result"]["diagnosis_id"] == str(latest)
+    assert result[0]["latest_result"]["unit_stage"] == "깊이 이해"
+    assert result[1]["latest_result"]["diagnosis_id"] == str(missing)
+    assert result[1]["latest_result"]["unit_stage"] is None
+    assert result[0]["latest_result"]["completed_at"]

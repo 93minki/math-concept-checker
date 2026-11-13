@@ -1,3 +1,4 @@
+import { renderToStaticMarkup } from "react-dom/server";
 import {
   cleanup,
   fireEvent,
@@ -6,7 +7,9 @@ import {
   waitFor,
 } from "@testing-library/react";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
-import LoginPage from "./login/page";
+import LoginForm from "./login/login-form";
+import LoginLayout from "./login/layout";
+import SignupLayout from "./signup/layout";
 import SignupPage from "./signup/page";
 import HomeActions from "./(protected)/home-actions";
 
@@ -17,23 +20,31 @@ const mocks = vi.hoisted(() => ({
   signOut: vi.fn(),
   push: vi.fn(),
   refresh: vi.fn(),
+  pathname: "/login",
 }));
 
 vi.mock("@/lib/supabase/client", () => ({
   createClient: () => ({ auth: mocks }),
 }));
 vi.mock("next/navigation", () => ({
-  useRouter: () => ({ push: mocks.push, refresh: mocks.refresh }),
+  useRouter: () => ({
+    push: mocks.push,
+    refresh: mocks.refresh,
+    replace: vi.fn(),
+  }),
+  useSearchParams: () => new URLSearchParams(),
+  usePathname: () => mocks.pathname,
 }));
 
 beforeEach(() => {
+  sessionStorage.clear();
   vi.clearAllMocks();
 });
 afterEach(cleanup);
 
 test("로그인 제출과 실패 안내", async () => {
   mocks.signInWithPassword.mockResolvedValue({ error: new Error("internal") });
-  render(<LoginPage />);
+  render(<LoginForm />);
   fireEvent.change(screen.getByLabelText("이메일"), {
     target: { value: "test@example.com" },
   });
@@ -55,7 +66,7 @@ test("로그인 제출과 실패 안내", async () => {
 
 test("로그인에 성공하면 보호된 첫 화면으로 간다", async () => {
   mocks.signInWithPassword.mockResolvedValue({ error: null });
-  render(<LoginPage />);
+  render(<LoginForm />);
   fireEvent.change(screen.getByLabelText("이메일"), {
     target: { value: "test@example.com" },
   });
@@ -69,7 +80,7 @@ test("로그인에 성공하면 보호된 첫 화면으로 간다", async () => 
 
 test("카카오 로그인은 콜백 주소를 전달한다", async () => {
   mocks.signInWithOAuth.mockResolvedValue({ error: null });
-  render(<LoginPage />);
+  render(<LoginForm />);
   fireEvent.click(screen.getByRole("button", { name: "카카오로 시작하기" }));
   await waitFor(() =>
     expect(mocks.signInWithOAuth).toHaveBeenCalledWith({
@@ -81,7 +92,30 @@ test("카카오 로그인은 콜백 주소를 전달한다", async () => {
 
 test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async () => {
   mocks.signUp.mockResolvedValue({ data: { session: null }, error: null });
-  render(<SignupPage />);
+  const { container } = render(<SignupPage />);
+  const consent = screen.getByRole("checkbox", {
+    name: /개인정보 수집·이용에 동의합니다 \(필수\)/,
+  });
+  const submit = screen.getByRole("button", {
+    name: "가입하기",
+  }) as HTMLButtonElement;
+  expect(submit.disabled).toBe(true);
+  expect(consent.closest("form")).toBe(container.querySelector("form"));
+  expect((consent as HTMLInputElement).required).toBe(true);
+  for (const heading of [
+    "받는 정보",
+    "쓰는 목적",
+    "맡기는 곳",
+    "보관과 삭제",
+    "동의를 거부할 수 있어요",
+  ])
+    expect(screen.getByText(heading)).toBeTruthy();
+  expect(
+    screen.getByRole("region", { name: "개인정보 수집·이용 동의 내용" })
+      .textContent,
+  ).toContain("연락처는 서비스 공개 전에 안내할 예정이에요.");
+  fireEvent.click(consent);
+  expect(submit.disabled).toBe(false);
   fireEvent.change(screen.getByLabelText("이메일"), {
     target: { value: "test@example.com" },
   });
@@ -89,6 +123,7 @@ test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async 
     target: { value: "password123" },
   });
   fireEvent.click(screen.getByRole("button", { name: "가입하기" }));
+  expect(sessionStorage.getItem("privacy-consent")).toBe("agreed");
   await waitFor(() =>
     expect(mocks.signUp).toHaveBeenCalledWith({
       email: "test@example.com",
@@ -102,11 +137,11 @@ test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async 
   );
 });
 
-test("로그아웃 성공 시 로그인으로 이동한다", async () => {
+test("로그아웃 성공 시 랜딩으로 이동한다", async () => {
   mocks.signOut.mockResolvedValue({ error: null });
   render(<HomeActions />);
   fireEvent.click(screen.getByRole("button", { name: "로그아웃" }));
-  await waitFor(() => expect(mocks.push).toHaveBeenCalledWith("/login"));
+  await waitFor(() => expect(mocks.push).toHaveBeenCalledWith("/"));
 });
 
 test("로그아웃 실패 시 쉬운 안내를 보여 준다", async () => {
@@ -120,7 +155,7 @@ test("로그아웃 실패 시 쉬운 안내를 보여 준다", async () => {
 });
 
 test.each([
-  ["로그인", () => <LoginPage />],
+  ["로그인", () => <LoginForm />],
   ["회원가입", () => <SignupPage />],
 ])(
   "%s 폼은 POST라서 기본 전송이 일어나도 비밀번호가 주소에 붙지 않는다",
@@ -131,3 +166,60 @@ test.each([
     );
   },
 );
+
+test.each([
+  ["/login", LoginLayout, "로그인"],
+  ["/signup", SignupLayout, "회원가입"],
+  ["/signup/complete", SignupLayout, null],
+] as const)(
+  "%s 인증 머리말의 계정 링크와 현재 페이지 표시",
+  (path, Layout, current) => {
+    mocks.pathname = path;
+    render(
+      <Layout>
+        <div>화면</div>
+      </Layout>,
+    );
+    expect(
+      screen.getByRole("link", { name: "수학 개념 체커" }).getAttribute("href"),
+    ).toBe("/");
+    // The icon is decorative: the link is still named by its text.
+    expect(
+      screen
+        .getByRole("link", { name: "수학 개념 체커" })
+        .querySelector('svg.brand-mark[aria-hidden="true"]'),
+    ).not.toBeNull();
+    const login = screen.getByRole("link", { name: "로그인" });
+    const signup = screen.getByRole("link", { name: "회원가입" });
+    expect(login.getAttribute("href")).toBe("/login");
+    expect(signup.getAttribute("href")).toBe("/signup");
+    expect(login.getAttribute("aria-current")).toBe(
+      current === "로그인" ? "page" : null,
+    );
+    expect(signup.getAttribute("aria-current")).toBe(
+      current === "회원가입" ? "page" : null,
+    );
+    expect(screen.getByRole("navigation", { name: "주 메뉴" })).toBeTruthy();
+  },
+);
+
+test.each([
+  ["로그인", LoginForm],
+  ["회원가입", SignupPage],
+])("%s 서버 HTML의 인증 폼은 안전하다", (_, Component) => {
+  const doc = new DOMParser().parseFromString(
+    renderToStaticMarkup(<Component />),
+    "text/html",
+  );
+  const form = doc.querySelector("form");
+  expect(form?.getAttribute("method")).toBe("post");
+  expect(
+    form?.querySelector<HTMLInputElement>('input[name="email"]')?.required,
+  ).toBe(true);
+  expect(
+    form?.querySelector<HTMLInputElement>('input[name="password"]')?.required,
+  ).toBe(true);
+  expect(
+    form?.querySelector<HTMLButtonElement>('button[type="submit"]')?.disabled,
+  ).toBe(true);
+});

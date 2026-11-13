@@ -1,6 +1,13 @@
 "use client";
-import Link from "next/link";
+import StatusScreen from "@/components/status-screen";
+import { Button } from "@astryxdesign/core/Button";
+import { Card } from "@astryxdesign/core/Card";
+import { TextInput } from "@astryxdesign/core/TextInput";
+import { TabList, Tab } from "@astryxdesign/core/TabList";
+import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
+import LearningMap from "./learning-map";
+import { unitProgress } from "@/lib/unit-progress";
 import { useEffect, useRef, useState } from "react";
 import {
   ApiError,
@@ -12,6 +19,7 @@ import {
 
 export default function UnitSelection() {
   const router = useRouter();
+  const [grade, setGrade] = useState("중1");
   const conflictRef = useRef<HTMLDivElement>(null);
   const [units, setUnits] = useState<Unit[] | null>(null);
   const [query, setQuery] = useState("");
@@ -70,48 +78,71 @@ export default function UnitSelection() {
       name.toLowerCase().includes(query.trim().toLowerCase()),
     ),
   );
+  const displayed =
+    filtered?.filter((unit) => query.trim() || unit.grade === grade) ?? [];
+  const nextUnit =
+    displayed.find((unit) => unitProgress(unit) === "in_progress") ??
+    displayed
+      .filter(
+        (unit) =>
+          ["not_started", "retry"].includes(unitProgress(unit)) &&
+          unit.status !== "unavailable",
+      )
+      .sort((a, b) => a.number - b.number)[0];
   return (
-    <section className="stack">
+    <section className="stack unit-selection">
       <h2>진단할 단원을 골라요</h2>
-      <label htmlFor="unit-search">단원 검색</label>
-      <input
-        id="unit-search"
+      <TextInput
+        label="단원 검색"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={setQuery}
         placeholder="단원 이름을 입력해요"
+        width="100%"
+        size="lg"
       />
       {error && <p role="alert">{error}</p>}
-      {!units && !error && <p>단원을 불러오고 있어요.</p>}
+      {!units && !error && (
+        <StatusScreen
+          mood="thinking"
+          title="단원을 불러오고 있어요."
+          live
+          compact
+        />
+      )}
       {filtered?.length === 0 && <p>검색 결과가 없어요.</p>}
-      {(["중1", "중2", "중3"] as const).map((grade) => {
-        const group = filtered?.filter((unit) => unit.grade === grade) ?? [];
-        return (
-          group.length > 0 && (
-            <section key={grade} className="stack">
-              <h3>{grade}</h3>
-              {group.map((unit) => (
-                <article className="unit-card stack" key={unit.id}>
-                  <h4>
-                    {unit.number}. {unit.name}
-                  </h4>
-                  <p>
-                    {unit.grade} · {unit.publisher} 기준
-                  </p>
-                  {unit.status === "partial" && (
-                    <p>이 단원은 일부 내용만 진단해요</p>
-                  )}
-                  {unit.status === "unavailable" ? (
-                    <button disabled>준비 중</button>
-                  ) : (
-                    <button disabled={busy} onClick={() => void start(unit)}>
-                      진단 시작하기
-                    </button>
-                  )}
-                  {conflict && conflict.unit.id === unit.id && (
+      <TabList
+        value={query.trim() ? "" : grade}
+        onChange={setGrade}
+        role="tablist"
+        aria-label="학년 선택"
+        size="lg"
+      >
+        {["중1", "중2", "중3"].map((item) => (
+          <Tab key={item} value={item} label={item} />
+        ))}
+      </TabList>
+      <SearchFrame searching={!!query.trim()} count={displayed.length}>
+        {(["중1", "중2", "중3"] as const).map((item) => {
+          if (!query.trim() && item !== grade) return null;
+          const group = displayed.filter((unit) => unit.grade === item);
+          if (!group.length) return null;
+          return (
+            <VStack key={item} gap={3}>
+              <LearningMap
+                embedded={!!query.trim()}
+                units={group}
+                allUnits={units ?? []}
+                grade={item}
+                search={!!query.trim()}
+                busy={busy}
+                nextId={nextUnit?.id ?? null}
+                start={(unit) => void start(unit)}
+                conflictNode={(unit) =>
+                  conflict?.unit.id === unit.id && (
                     <div
                       ref={conflictRef}
                       tabIndex={-1}
-                      className="unit-card stack"
+                      className="unit-conflict stack"
                       role="dialog"
                       aria-label="진행 중인 진단"
                     >
@@ -119,35 +150,57 @@ export default function UnitSelection() {
                         진행 중인 진단이 있어요. 이어서 풀거나 새로 시작할 수
                         있어요.
                       </p>
-                      <Link
-                        className="study-link"
+                      <Button
+                        label="이어서 풀기"
+                        variant="secondary"
+                        size="lg"
                         href={`/diagnoses/${conflict.id}`}
-                      >
-                        이어서 풀기
-                      </Link>
-                      <button
-                        disabled={busy}
+                      />
+                      <Button
+                        label="새로 시작하기"
+                        variant="secondary"
+                        size="lg"
+                        isDisabled={busy}
                         onClick={() => void start(conflict.unit, true)}
-                      >
-                        새로 시작하기
-                      </button>
-                      <button onClick={() => setConflict(null)}>취소</button>
+                      />
+                      <Button
+                        label="취소"
+                        variant="secondary"
+                        size="lg"
+                        onClick={() => setConflict(null)}
+                      />
                     </div>
-                  )}
-                  {unit.in_progress_diagnosis_id && (
-                    <Link
-                      className="study-link"
-                      href={`/diagnoses/${unit.in_progress_diagnosis_id}`}
-                    >
-                      이어서 풀기
-                    </Link>
-                  )}
-                </article>
-              ))}
-            </section>
-          )
-        );
-      })}
+                  )
+                }
+              />
+            </VStack>
+          );
+        })}
+      </SearchFrame>
+    </section>
+  );
+}
+
+// While searching, every grade's matches share one card with a count.
+function SearchFrame({
+  searching,
+  count,
+  children,
+}: {
+  searching: boolean;
+  count: number;
+  children: React.ReactNode;
+}) {
+  if (!searching) return <>{children}</>;
+  if (count === 0) return null;
+  return (
+    <section aria-label="검색 결과">
+      <Card>
+        <VStack gap={4}>
+          <p>검색 결과 {count}개</p>
+          {children}
+        </VStack>
+      </Card>
     </section>
   );
 }

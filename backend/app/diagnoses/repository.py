@@ -14,12 +14,14 @@ from app.diagnoses.schemas import (
     AnswerRow,
     Assessment,
     Choice,
+    CompletedDiagnosis,
     Concept,
     Diagnosis,
     GradingRow,
     HistoryCursor,
     HistoryItem,
     Item,
+    LatestResult,
     MisconceptionRow,
     Question,
     QuestionChoice,
@@ -50,6 +52,7 @@ class DiagnosesRepository(Protocol):
     def questions_by_ids(self, ids: list[UUID]) -> list[Question]: ...
     def history(self, user_id: UUID) -> dict[UUID, datetime]: ...
     def in_progress(self, user_id: UUID) -> list[Diagnosis]: ...
+    def latest_results(self, user_id: UUID) -> dict[int, LatestResult]: ...
     def list_diagnoses(
         self, user_id: UUID, limit: int, before: HistoryCursor | None
     ) -> list[HistoryItem]: ...
@@ -119,7 +122,7 @@ class SupabaseDiagnoses:
         query = (
             self.client.table("diagnoses")
             .select(
-                "id,status,abort_reason,started_at,completed_at,aborted_at,unit:display_units(grade,name,publisher)"
+                "id,status,abort_reason,started_at,stage1_submitted_at,completed_at,aborted_at,unit:display_units(grade,name,publisher)"
             )
             .eq("user_id", str(user_id))
         )
@@ -217,6 +220,33 @@ class SupabaseDiagnoses:
             .execute()
             .data
         )
+
+    def latest_results(self, user_id: UUID) -> dict[int, LatestResult]:
+        result: dict[int, LatestResult] = {}
+        offset = 0
+        while True:
+            data = (
+                self.client.table("diagnoses")
+                .select("id,display_unit_id,completed_at,reports(unit_stage)")
+                .eq("user_id", str(user_id))
+                .eq("status", "completed")
+                .order("completed_at", desc=True)
+                .order("id", desc=True)
+                .range(offset, offset + 499)
+                .execute()
+                .data
+            )
+            rows = TypeAdapter(list[CompletedDiagnosis]).validate_python(data)
+            for row in rows:
+                if row.display_unit_id not in result:
+                    result[row.display_unit_id] = LatestResult(
+                        diagnosis_id=row.id,
+                        completed_at=row.completed_at,
+                        unit_stage=row.reports[0].unit_stage if row.reports else None,
+                    )
+            if len(rows) < 500:
+                return result
+            offset += len(rows)
 
     def start(
         self, user_id: UUID, unit_id: int, restart: bool, ids: list[UUID]

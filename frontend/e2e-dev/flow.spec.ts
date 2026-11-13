@@ -12,7 +12,44 @@ async function start(page: Page) {
       response.url().endsWith("/diagnoses") &&
       response.request().method() === "POST",
   );
-  await unitCard(page).getByRole("button", { name: "진단 시작하기" }).click();
+  const card = unitCard(page);
+  // Units load after the page renders (a loading screen shows first).
+  await expect(card).toBeVisible();
+  const columns = await page.locator(".learning-row").evaluateAll((rows) =>
+    rows.map((row) => {
+      const state = row
+        .querySelector(".learning-state")
+        ?.getBoundingClientRect();
+      const actions = row
+        .querySelector(".learning-actions")
+        ?.getBoundingClientRect();
+      if (!state || !actions)
+        throw new Error("단원 행의 상태·동작 열이 없어요");
+      // Buttons share a right edge: on phones they fit their label
+      // (user 2026-11-13), so their left edges differ by text length.
+      return { state: state.x, actions: actions.right };
+    }),
+  );
+  expect(columns.length).toBeGreaterThan(0);
+  for (const column of columns) {
+    expect(Math.abs(column.state - columns[0].state)).toBeLessThanOrEqual(1);
+    expect(Math.abs(column.actions - columns[0].actions)).toBeLessThanOrEqual(
+      1,
+    );
+  }
+  if (await card.getByRole("link", { name: "이어서 풀기" }).isVisible()) {
+    const more = card.getByRole("button", { name: `${unitName} 더보기` });
+    await more.click();
+    await expect(more).toHaveAttribute("aria-expanded", "true");
+    await page.getByRole("heading", { name: "진단할 단원을 골라요" }).click();
+    await expect(more).toHaveAttribute("aria-expanded", "false");
+    await more.click();
+    await page.getByRole("menuitem", { name: "새로 시작하기" }).click();
+  } else {
+    await card
+      .getByRole("button", { name: /^(진단 시작하기|다시 진단하기)$/ })
+      .click();
+  }
   const response = await waiting;
   if (response.status() === 409) {
     const dialog = page.getByRole("dialog", { name: "진행 중인 진단" });
@@ -78,7 +115,8 @@ async function solve(page: Page) {
     const radio = page.getByRole("radio").first();
     if (await radio.count()) {
       answerTypes.push("choice");
-      await radio.check();
+      await radio.focus();
+      await radio.press("Space");
     } else {
       answerTypes.push("written");
       await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
@@ -107,11 +145,16 @@ async function submit(page: Page, stage: 1 | 2) {
 }
 
 async function openHistory(page: Page, diagnosisId: string) {
-  const link = page.getByRole("link", { name: "지난 기록으로" });
-  await expect(link).toBeInViewport();
+  // The solve screen dropped its own link; the shared header carries it.
+  const link = page
+    .getByRole("navigation", { name: "주 메뉴" })
+    .getByRole("link", { name: "지난 기록", exact: true });
+  await expect(link).toBeVisible();
   await link.click();
   await expect(page).toHaveURL(/\/history$/);
-  await expect(page.getByRole("heading", { name: "지난 기록" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "지난 기록", exact: true }),
+  ).toBeVisible();
   const entry = page.locator(`a[href="/diagnoses/${diagnosisId}"]`);
   // Newest first: the diagnosis we just touched is the first card.
   await expect(page.locator('a[href^="/diagnoses/"]').first()).toHaveAttribute(
@@ -204,15 +247,21 @@ test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는
     );
     // "다음" stays disabled until the question is answered.
     const radio = page.getByRole("radio").first();
-    if (await radio.count()) await radio.check();
-    else await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
+    if (await radio.count()) {
+      await radio.focus();
+      await radio.press("Space");
+    } else await page.getByLabel("풀이와 답").fill("풀이와 답이에요");
     if (i < first.bodies.length - 1)
       await page.getByRole("button", { name: "다음", exact: true }).click();
   }
   // F-10: an in-progress diagnosis opens from the list and continues.
   const runningId = diagnosisId(page);
   const running = await openHistory(page, runningId);
-  await expect(running).toContainText("진행 중");
+  // The status badge sits beside the link in the same list row (Astryx
+  // ListItem endContent), so check the row.
+  await expect(running.locator("xpath=ancestor::li[1]")).toContainText(
+    "진행 중",
+  );
   await expect(running).toContainText("이어서 풀기");
   await running.click();
   await expect(page).toHaveURL(new RegExp(`/diagnoses/${runningId}$`));
