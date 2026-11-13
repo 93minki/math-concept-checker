@@ -1,4 +1,3 @@
-import { Badge } from "@astryxdesign/core/Badge";
 import { Card } from "@astryxdesign/core/Card";
 import { Heading } from "@astryxdesign/core/Heading";
 import { HStack } from "@astryxdesign/core/HStack";
@@ -27,41 +26,37 @@ export default function SolveHeader({
   return (
     <VStack className="diagnosis-header" gap={2}>
       <Card>
-        <VStack gap={2}>
+        <VStack gap={3}>
           <HStack
             className="diagnosis-heading"
             gap={3}
             hAlign="between"
-            vAlign="start"
+            vAlign="center"
           >
-            <VStack gap={1}>
-              <Heading
-                className="diagnosis-unit-title"
-                level={1}
-                color="secondary"
-              >
-                {unit}
-              </Heading>
-              <HStack gap={2} vAlign="center" wrap="wrap">
-                <Badge label={`${stage}단계 ·`} variant="info" />
-                <Heading level={2}>
-                  {stage === 1 ? "기본 문제" : "심화 문제"}
-                </Heading>
-              </HStack>
-            </VStack>
+            {/* The unit leads; the stage is a small tag (user 2026-11-13). */}
+            <Heading className="diagnosis-unit-title" level={1}>
+              {unit}
+            </Heading>
             <Text as="p" type="label" hasTabularNumbers textWrap="nowrap">
               {index + 1} / {total}
             </Text>
           </HStack>
-          <HStack className="diagnosis-progress" gap={2} vAlign="center">
+          <div className="diagnosis-stage">
+            <span aria-hidden="true">{stage}단계 · </span>
+            <Heading level={2} display="inline" color="inherit">
+              {stage === 1 ? "기본 문제" : "심화 문제"}
+            </Heading>
+          </div>
+          {/* The status sits in a fixed slot so it never moves the page. */}
+          <div className="diagnosis-progress">
             <ProgressBar
               label={`전체 ${total}문제 중 ${index + 1}번째 문제`}
               value={index + 1}
               max={total}
               isLabelHidden
             />
-            {status}
-          </HStack>
+            <div className="diagnosis-save-slot">{status}</div>
+          </div>
         </VStack>
       </Card>
       {error}

@@ -40,27 +40,35 @@ function view(units: Unit[], nextId: number | null = 1, start = vi.fn()) {
 }
 afterEach(cleanup);
 test.each([
-  [{ latest_result: latest("깊이 이해") }, "정복", "✓"],
-  [{ latest_result: latest("기본 이해") }, "기본 이해", "◐"],
-  [{ latest_result: latest("아직 이해 못 함") }, "다시 도전", "↻"],
-  [{ in_progress_diagnosis_id: "active" }, "진행 중", "●"],
-  [{}, "시작 전", "○"],
-  [{ latest_result: latest(null) }, "완료", "✓"],
-  [{ status: "unavailable" }, "준비 중", "–"],
-] as const)("단원 상태는 모양과 글자로 나타난다", (change, label, symbol) => {
-  const unit = { ...base, ...change };
-  view([unit]);
-  const row = screen.getByRole("article");
-  expect(row.querySelector(".learning-state")?.textContent).toContain(symbol);
-  expect(row.querySelector(".learning-state")?.textContent).toContain(label);
-  expect(within(row).getByRole("heading", { name: "1. 단원" })).toBeTruthy();
-  expect(row.querySelector(".learning-actions .astryx-button")).toBeTruthy();
-  expect(
-    screen
-      .getByRole("progressbar", { name: "중1 정복 진행" })
-      .getAttribute("aria-valuenow"),
-  ).toBe(unit.latest_result?.unit_stage === "깊이 이해" ? "1" : "0");
-});
+  [{ latest_result: latest("깊이 이해") }, "정복", "tag"],
+  [{ latest_result: latest("기본 이해") }, "기본 이해", "tag"],
+  [{ latest_result: latest("아직 이해 못 함") }, "다시 도전", "tag"],
+  [{ in_progress_diagnosis_id: "active" }, "진행 중", "tag"],
+  [{}, "시작 전", "plain"],
+  [{ latest_result: latest(null) }, "완료", "tag"],
+  [{ status: "unavailable" }, "준비 중", "plain"],
+] as const)(
+  "단원 상태는 꼬리표나 흐린 글자로 나타난다",
+  (change, label, shape) => {
+    // Units with a state get a tag, untouched ones plain muted text, so
+    // "진행 중" and "시작 전" differ by shape, not only color (2026-11-13).
+    const unit = { ...base, ...change };
+    view([unit]);
+    const row = screen.getByRole("article");
+    const state = row.querySelector(".learning-state");
+    expect(state?.textContent).toContain(label);
+    expect(!!state?.querySelector(".learning-state-plain")).toBe(
+      shape === "plain",
+    );
+    expect(within(row).getByRole("heading", { name: "1. 단원" })).toBeTruthy();
+    expect(row.querySelector(".learning-actions .astryx-button")).toBeTruthy();
+    expect(
+      screen
+        .getByRole("progressbar", { name: "중1 정복 진행" })
+        .getAttribute("aria-valuenow"),
+    ).toBe(unit.latest_result?.unit_stage === "깊이 이해" ? "1" : "0");
+  },
+);
 test("다음 단원만 주 버튼으로 표시한다", () => {
   view([base, { ...base, id: 2, number: 2 }], 2);
   const buttons = screen.getAllByRole("button", { name: "진단 시작하기" });

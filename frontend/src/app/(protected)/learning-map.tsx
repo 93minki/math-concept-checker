@@ -1,3 +1,4 @@
+import { Badge } from "@astryxdesign/core/Badge";
 import { Button } from "@astryxdesign/core/Button";
 import { Card } from "@astryxdesign/core/Card";
 import { MoreMenu } from "@astryxdesign/core/MoreMenu";
@@ -24,14 +25,16 @@ export type ViewProps = {
   conflictNode: (unit: Unit) => ReactNode;
   embedded?: boolean;
 };
-const symbols: Record<Progress, string> = {
-  conquered: "✓",
-  half: "◐",
-  retry: "↻",
-  in_progress: "●",
-  not_started: "○",
-  unavailable: "–",
-  done_unknown: "✓",
+// Units with a state get a colored tag; untouched ones stay plain muted text,
+// so "진행 중" and "시작 전" no longer look alike (user 2026-11-13).
+const badges: Partial<
+  Record<Progress, "success" | "warning" | "error" | "info" | "neutral">
+> = {
+  conquered: "success",
+  half: "warning",
+  retry: "error",
+  in_progress: "info",
+  done_unknown: "neutral",
 };
 export function Summary({ units, grade }: { units: Unit[]; grade: string }) {
   const { total, conquered } = gradeProgress(units, grade);
@@ -89,8 +92,13 @@ export default function LearningMap(props: ViewProps) {
           {unit.status === "partial" && <p>이 단원은 일부 내용만 진단해요</p>}
         </VStack>
         <p className="learning-state">
-          <span aria-hidden="true">{symbols[state]} </span>
-          {progressLabels[state]}
+          {badges[state] ? (
+            <Badge label={progressLabels[state]} variant={badges[state]} />
+          ) : (
+            <span className="learning-state-plain">
+              {progressLabels[state]}
+            </span>
+          )}
         </p>
         <HStack className="learning-actions">
           <Button

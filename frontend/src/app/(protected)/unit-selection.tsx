@@ -1,4 +1,5 @@
 "use client";
+import StatusScreen from "@/components/status-screen";
 import { Button } from "@astryxdesign/core/Button";
 import { Card } from "@astryxdesign/core/Card";
 import { TextInput } from "@astryxdesign/core/TextInput";
@@ -100,7 +101,14 @@ export default function UnitSelection() {
         size="lg"
       />
       {error && <p role="alert">{error}</p>}
-      {!units && !error && <p>단원을 불러오고 있어요.</p>}
+      {!units && !error && (
+        <StatusScreen
+          mood="thinking"
+          title="단원을 불러오고 있어요."
+          live
+          compact
+        />
+      )}
       {filtered?.length === 0 && <p>검색 결과가 없어요.</p>}
       <TabList
         value={query.trim() ? "" : grade}

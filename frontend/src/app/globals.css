@@ -17,7 +17,7 @@
   --disabled-text: #6e7276;
   --shadow: 0 1px 3px rgba(20, 24, 28, 0.06);
   --radius: 16px;
-  --control-h: 48px;
+  --control-h: var(--size-element-lg, 44px);
   --gap: 16px;
   --base-size: 16px;
   --content-width: 720px;
@@ -368,15 +368,41 @@ h4:not(.astryx-heading) {
   min-width: 0;
 }
 .diagnosis-unit-title {
+  min-width: 0;
+  font-size: var(--text-heading-2-size);
+}
+.diagnosis-stage {
+  align-self: flex-start;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  background: var(--color-background-muted);
+  color: var(--color-text-secondary);
   font-size: var(--text-supporting-size);
-  font-weight: var(--font-weight-normal);
+}
+.diagnosis-stage h2 {
+  font-size: inherit;
+  font-weight: var(--font-weight-semibold);
+}
+/* Progress row: the save status is absolutely placed in a reserved slot,
+   so "저장 중…/저장됨" never shifts the bar or the content below. */
+.diagnosis-progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 1.5em;
+  padding-inline-end: 6em;
 }
 .diagnosis-progress .astryx-progress-bar {
   flex: 1;
   min-width: 0;
 }
-.diagnosis-save-status {
-  flex: 0 0 calc(var(--spacing-10) * 2.2);
+.diagnosis-save-slot {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 5.5em;
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
   white-space: nowrap;
 }
@@ -521,22 +547,20 @@ h4:not(.astryx-heading) {
 .learning-state {
   white-space: nowrap;
 }
+.learning-state-plain {
+  color: var(--color-text-secondary);
+}
 .learning-actions {
   display: grid;
-  grid-template-columns: 8.5rem var(--control-h);
+  grid-template-columns: 8.5rem var(--size-element-lg);
   gap: var(--spacing-2);
   align-items: center;
 }
 .learning-more {
-  min-width: var(--control-h);
+  min-width: var(--size-element-lg);
 }
 .learning-row > [role="dialog"] {
   grid-column: 1 / -1;
-}
-.learning-actions .astryx-button,
-.unit-selection .astryx-tab,
-.unit-selection .astryx-text-input {
-  min-height: var(--control-h);
 }
 @media (max-width: 599px) {
   .learning-row {
@@ -545,13 +569,142 @@ h4:not(.astryx-heading) {
   .learning-info {
     grid-column: 1 / -1;
   }
+  /* Phone: the button fits its label instead of a fixed wide column. */
+  .learning-actions {
+    grid-template-columns: auto var(--size-element-lg);
+  }
 }
 
-.unit-selection .astryx-text-input input {
-  min-height: var(--control-h);
+/* Mascot "개념이" (src/components/mascot.tsx). Theme tokens only, so it
+   follows light and dark mode. */
+.mascot {
+  overflow: visible;
 }
-
-.unit-conflict .astryx-button,
-.history-view .astryx-button {
-  min-height: var(--control-h);
+.mascot-fill-accent {
+  fill: var(--color-accent);
+}
+.mascot-fill-card {
+  fill: var(--color-background-card);
+}
+.mascot-fill-ink {
+  fill: var(--color-text-primary);
+}
+.mascot-line {
+  stroke: var(--color-text-primary);
+  stroke-width: 3;
+}
+.mascot-stroke-ink,
+.mascot-stroke-accent {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.mascot-stroke-ink {
+  stroke: var(--color-text-primary);
+}
+.mascot-stroke-accent {
+  stroke: var(--color-accent);
+}
+.mascot-cheek {
+  fill: var(--color-accent);
+  opacity: 0.18;
+}
+.mascot-shadow {
+  fill: var(--color-text-primary);
+  opacity: 0.08;
+}
+.mascot-dot {
+  fill: var(--color-text-secondary);
+}
+.mascot-body,
+.mascot-pencil,
+.mascot-wave,
+.mascot-dot,
+.mascot-zz path {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mascot-thinking .mascot-pencil {
+    transform-origin: 0% 100%;
+    animation: mascot-tap 0.9s ease-in-out infinite;
+  }
+  .mascot-thinking .mascot-dot {
+    animation: mascot-dot 1.2s ease-in-out infinite;
+  }
+  .mascot-thinking .mascot-dot-2 {
+    animation-delay: 0.2s;
+  }
+  .mascot-thinking .mascot-dot-3 {
+    animation-delay: 0.4s;
+  }
+  .mascot-resting .mascot-body {
+    animation: mascot-breathe 3.2s ease-in-out infinite;
+  }
+  .mascot-resting .mascot-zz path {
+    animation: mascot-float 3.2s ease-in-out infinite;
+  }
+  .mascot-resting .mascot-zz path + path {
+    animation-delay: 0.8s;
+  }
+  .mascot-waving .mascot-wave {
+    transform-origin: 0% 100%;
+    animation: mascot-wave 1.6s ease-in-out infinite;
+  }
+}
+@keyframes mascot-tap {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-12deg);
+  }
+}
+@keyframes mascot-dot {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+@keyframes mascot-breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+@keyframes mascot-float {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+@keyframes mascot-wave {
+  0%,
+  60%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-18deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
 }

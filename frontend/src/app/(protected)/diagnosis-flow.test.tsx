@@ -406,6 +406,11 @@ test("중단된 진단은 수정할 수 없다", async () => {
   expect(await screen.findByText("기간이 지나 중단된 진단이에요")).toBeTruthy();
   expect(screen.queryByRole("radio")).toBeNull();
   expect(mocks.getReport).not.toHaveBeenCalled();
+  // Stage-1 abort: full mascot screen with a way out (user 2026-11-13).
+  expect(document.querySelector(".status-screen .mascot-resting")).toBeTruthy();
+  expect(
+    screen.getByRole("link", { name: "단원 선택으로" }).getAttribute("href"),
+  ).toBe("/");
 });
 test("저장에 실패하면 다시 시도할 수 있다", async () => {
   mocks.saveAnswer

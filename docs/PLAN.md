@@ -157,6 +157,15 @@
 - 2026-11-13: **테마 결정: stone 바탕 + neutral 글꼴** (임시 미리보기 앱에서 7개 테마와 섞은 안 2개를 비교 → 사용자 "stone을 베이스로 하면서 neutral을 섞을 순 없을까?" → "stone+neutral글꼴"). stone의 보랏빛 회색·컨트롤 모양을 쓰고, 제목 글꼴을 Montserrat 대신 Figtree(본문과 같음)로. `defineTheme({extends: stone, tokens})` → `astryx theme build`로 빌드한 로컬 테마(Astryx 문서: 런타임 테마는 SSR에서 깜빡임, `astryx docs use-a-theme` "Runtime vs Built").
 - 2026-11-13: **글꼴 결정: 모두 Pretendard** (사용자 "C로 간다 글꼴은 모두 Pretendard로"). stone 테마의 `fonts.css`가 Google Fonts(`fonts.googleapis.com`)에서 Figtree·Montserrat·JetBrains Mono를 받아 오므로 쓰지 않는다. 테마 글꼴 토큰(본문·제목)을 Pretendard로 덮고, 코드 글꼴은 시스템 고정폭. 외부 글꼴 요청이 없어야 한다.
 
+- 2026-11-13: 4-1~4-3 Astryx 전환 (커밋 deee01e, 518d6d1, 3317664, 2d82f6f, 7cbc7cc, af74900). Codex 한도 소진 뒤 4-3②는 Cursor(GPT-5.6 Sol), 검수·마무리는 Opus. 사용자 지시: Cursor 모델을 낮춤(composer-2.5), "남은 작업은 니가 해"(Opus 직접).
+  - 결정: 지난 기록에 이해 단계 없음("넣을 필요는 없어"). 1단계 도중 중단 기록은 클릭 불가, 2단계 도중 중단은 리포트 유지(F-06 기존 규칙, 사용자 "기존 규칙을 유지하는 방향") → `GET /diagnoses`에 `stage1_submitted_at` 추가(DB 변경 없음).
+  - Opus 검수에서 잡은 것: Astryx 컨트롤 높이 32·36px → 테마에서 44px. 리포트의 "3단계 중 N단계" 숫자 제거(SCORING 5절). 생성 테마 파일을 Prettier가 바꿔 `astryx doctor` 실패 → `.prettierignore`.
+- 2026-11-13: 사용자 화면 확인 후 수정 (Opus 직접).
+  - 데스크톱 글자: stone은 데스크톱 본문 14px·터치 16px → 테마 `typography.scale` `{base: 16, ratio: 1.2225}`로 데스크톱도 16px.
+  - 풀이 머리: 단원 이름을 제목 크기로, "N단계 · 기본/심화 문제"는 작은 꼬리표 하나로. 저장 상태는 진행 막대 줄 오른쪽 고정 칸에 절대 위치(사용자 지적 "저장됨이 보이면서 아래로 밀려") — E2E로 높이·막대 너비 불변 검사, 위치를 풀면 실패함을 확인.
+  - 학습 지도: 상태 있는 단원은 Badge, 시작 전·준비 중은 흐린 글자(사용자 "진행 중이 시작 전이랑 차이가 없어"). 모바일 버튼은 글자 폭(사용자 "이어서 풀기 버튼이 너무 커"), 옛 `--control-h` 48px → 테마 44px.
+  - 캐릭터 "개념이"(`src/components/mascot.tsx`, SVG, 테마 색, 움직임 줄이기 설정 존중) + `StatusScreen`(Astryx EmptyState). 생각 중(로딩·리포트 작성), 쉬는 중(1단계 도중 중단 진단 화면: 이유·안내·단원 선택/지난 기록 버튼), 반가움(지난 기록 없음). 사용자 요청 "서비스를 사용할 수 없거나 로딩 상태에서 다이나믹하게".
+
 ## 인계 (계획을 끝낼 때 작성)
 - 결과:
 - 끝내지 못한 일:

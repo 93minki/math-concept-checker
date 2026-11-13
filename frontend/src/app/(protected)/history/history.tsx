@@ -1,5 +1,6 @@
 "use client";
 
+import StatusScreen from "@/components/status-screen";
 import { Button } from "@astryxdesign/core/Button";
 import { Badge } from "@astryxdesign/core/Badge";
 import { Banner } from "@astryxdesign/core/Banner";
@@ -79,7 +80,14 @@ export default function History() {
     <VStack gap={4} className="history-view">
       <Button label="← 단원 선택으로" href="/" variant="ghost" size="lg" />
       <h1>지난 기록</h1>
-      {items?.length === 0 && <p>아직 진단 기록이 없어요</p>}
+      {items?.length === 0 && (
+        <StatusScreen
+          mood="waving"
+          title="아직 진단 기록이 없어요"
+          description="단원을 골라 첫 진단을 시작해 보세요."
+          actions={<Button label="단원 고르기" href="/" variant="primary" />}
+        />
+      )}
       {items && items.length > 0 && (
         <List hasDividers>
           {items.map((item) => (
@@ -142,7 +150,14 @@ export default function History() {
           ))}
         </List>
       )}
-      {loading && <p role="status">지난 기록을 불러오고 있어요.</p>}
+      {loading && (
+        <StatusScreen
+          mood="thinking"
+          title="지난 기록을 불러오고 있어요."
+          live
+          compact
+        />
+      )}
       {error && (
         <Banner
           role="alert"

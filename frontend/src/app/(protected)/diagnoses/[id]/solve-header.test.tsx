@@ -17,7 +17,10 @@ test.each([
       />
     </section>,
   );
-  expect(screen.getByText(`${stage}단계 ·`)).toBeTruthy();
+  expect(screen.getByText(`${stage}단계 ·`, { exact: false })).toBeTruthy();
+  expect(
+    screen.getByRole("heading", { level: 1, name: "문자의 사용과 식" }),
+  ).toBeTruthy();
   expect(screen.getByRole("heading", { name: label })).toBeTruthy();
   expect(screen.getByText("2 / 9").closest("section")).toBeTruthy();
   expect(

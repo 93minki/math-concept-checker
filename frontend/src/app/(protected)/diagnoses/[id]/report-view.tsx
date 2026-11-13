@@ -22,6 +22,7 @@ import {
   type Report,
 } from "@/lib/diagnosis-api";
 import Notice from "./notice";
+import StatusScreen from "@/components/status-screen";
 import { ChoiceNumber } from "@/components/choice-number";
 import ReportSummary from "./report-summary";
 
@@ -57,7 +58,15 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
   return (
     <VStack as="section" gap={8}>
       <Heading level={2}>이해도 리포트</Heading>
-      {busy && <Notice>리포트를 쓰고 있어요</Notice>}
+      {busy && (
+        <StatusScreen
+          mood="thinking"
+          title="리포트를 쓰고 있어요"
+          description="풀이를 살펴보고 있어요. 잠시만 기다려 주세요."
+          live
+          compact
+        />
+      )}
       {error && (
         <Notice role="alert">
           <VStack gap={2}>

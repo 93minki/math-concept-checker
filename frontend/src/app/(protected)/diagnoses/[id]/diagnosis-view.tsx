@@ -25,6 +25,7 @@ import {
 import { publicEnv } from "@/lib/env";
 import { createClient } from "@/lib/supabase/client";
 import Notice from "./notice";
+import StatusScreen from "@/components/status-screen";
 import ReportView from "./report-view";
 import SolveHeader from "./solve-header";
 import { ChoiceNumber } from "@/components/choice-number";
@@ -275,11 +276,40 @@ export default function DiagnosisView({ id }: { id: string }) {
         ← 단원 선택으로
       </Link>
       {error && <Notice role="alert">{error}</Notice>}
-      {!diagnosis && !error && <Text as="p">진단을 불러오고 있어요.</Text>}
+      {!diagnosis && !error && (
+        <StatusScreen mood="thinking" title="진단을 불러오고 있어요." live />
+      )}
       {diagnosis && (
         <>
           {readonly && <Heading level={1}>{diagnosis.unit.name}</Heading>}
-          {diagnosis.status === "aborted" && (
+          {/* Stopped in stage 1: nothing was graded, so there is no report
+              (F-06). A full mascot screen instead of a one-line notice. */}
+          {diagnosis.status === "aborted" && !finished && (
+            <StatusScreen
+              mood="resting"
+              title={
+                diagnosis.abort_reason === "expired"
+                  ? "기간이 지나 중단된 진단이에요"
+                  : "새로 시작해서 중단된 진단이에요"
+              }
+              description={
+                diagnosis.abort_reason === "expired"
+                  ? "시작하고 3일 안에 제출하지 않아 진단이 멈췄어요. 기본 문제를 제출하기 전에 멈춰서 결과는 없어요. 단원을 다시 골라 새로 시작해 보세요."
+                  : "같은 단원을 새로 시작해서 이 진단은 멈췄어요. 기본 문제를 제출하기 전이라 결과는 없어요. 새 진단은 단원 선택에서 이어서 풀 수 있어요."
+              }
+              actions={
+                <HStack gap={2} wrap="wrap" hAlign="center">
+                  <Button label="단원 선택으로" href="/" variant="primary" />
+                  <Button
+                    label="지난 기록"
+                    href="/history"
+                    variant="secondary"
+                  />
+                </HStack>
+              }
+            />
+          )}
+          {diagnosis.status === "aborted" && finished && (
             <Notice>
               {diagnosis.abort_reason === "expired"
                 ? "기간이 지나 중단된 진단이에요"

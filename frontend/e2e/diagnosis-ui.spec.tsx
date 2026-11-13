@@ -105,6 +105,27 @@ for (const theme of ["light", "dark"] as const) {
         (await buttons.nth(index).boundingBox())?.height,
       ).toBeGreaterThanOrEqual(44);
     }
+    // The save status must not move anything when it appears or changes
+    // (user 2026-11-13: "저장됨" pushed the page down).
+    const statusNode = page.getByRole("status", { name: "답안 저장 상태" });
+    const measure = () =>
+      page.evaluate(() => {
+        const header = document.querySelector(".diagnosis-header");
+        const bar = document.querySelector(
+          ".diagnosis-progress [role='progressbar']",
+        );
+        return {
+          header: header?.getBoundingClientRect().height,
+          bar: bar?.getBoundingClientRect().width,
+        };
+      });
+    for (const text of ["", "저장 중…", "저장됨 ✓"]) {
+      const before = await measure();
+      await statusNode.evaluate((node, value) => {
+        node.textContent = value;
+      }, text);
+      expect(await measure()).toEqual(before);
+    }
     await expect(page.locator(".diagnosis-header")).toHaveCSS(
       "position",
       info.project.name === "mobile" ? "sticky" : "static",
