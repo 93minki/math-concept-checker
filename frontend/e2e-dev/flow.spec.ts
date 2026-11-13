@@ -15,27 +15,15 @@ async function start(page: Page) {
   const card = unitCard(page);
   // Units load after the page renders (a loading screen shows first).
   await expect(card).toBeVisible();
-  const columns = await page.locator(".learning-row").evaluateAll((rows) =>
-    rows.map((row) => {
-      const state = row
-        .querySelector(".learning-state")
-        ?.getBoundingClientRect();
-      const actions = row
-        .querySelector(".learning-actions")
-        ?.getBoundingClientRect();
-      if (!state || !actions)
-        throw new Error("단원 행의 상태·동작 열이 없어요");
-      // Buttons share a right edge: on phones they fit their label
-      // (user 2026-11-13), so their left edges differ by text length.
-      return { state: state.x, actions: actions.right };
-    }),
-  );
-  expect(columns.length).toBeGreaterThan(0);
-  for (const column of columns) {
-    expect(Math.abs(column.state - columns[0].state)).toBeLessThanOrEqual(1);
-    expect(Math.abs(column.actions - columns[0].actions)).toBeLessThanOrEqual(
-      1,
-    );
+  // Each unit keeps a visible node, state and primary action in the path layout.
+  const rows = page.locator(".learning-row");
+  expect(await rows.count()).toBeGreaterThan(0);
+  for (const row of await rows.all()) {
+    await expect(row.locator(".path-node")).toBeVisible();
+    await expect(row.locator(".learning-state")).toBeVisible();
+    await expect(
+      row.locator(".learning-actions > .astryx-button"),
+    ).toBeVisible();
   }
   if (await card.getByRole("link", { name: "이어서 풀기" }).isVisible()) {
     const more = card.getByRole("button", { name: `${unitName} 더보기` });

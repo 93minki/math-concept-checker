@@ -7,6 +7,7 @@ import { TabList, Tab } from "@astryxdesign/core/TabList";
 import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
 import LearningMap from "./learning-map";
+import { usePathVariant, VariantPicker } from "./learning-map-variants/variant";
 import { unitProgress } from "@/lib/unit-progress";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -19,6 +20,7 @@ import {
 
 export default function UnitSelection() {
   const router = useRouter();
+  const variant = usePathVariant();
   const [grade, setGrade] = useState("중1");
   const conflictRef = useRef<HTMLDivElement>(null);
   const [units, setUnits] = useState<Unit[] | null>(null);
@@ -92,6 +94,7 @@ export default function UnitSelection() {
   return (
     <section className="stack unit-selection">
       <h2>진단할 단원을 골라요</h2>
+      <VariantPicker variant={variant} />
       <TextInput
         label="단원 검색"
         value={query}
@@ -129,6 +132,7 @@ export default function UnitSelection() {
           return (
             <VStack key={item} gap={3}>
               <LearningMap
+                variant={variant}
                 embedded={!!query.trim()}
                 units={group}
                 allUnits={units ?? []}

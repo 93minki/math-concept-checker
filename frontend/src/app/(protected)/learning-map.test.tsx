@@ -24,9 +24,15 @@ const latest = (stage: string | null) => ({
   unit_stage: stage,
   completed_at: "2026-01-01",
 });
-function view(units: Unit[], nextId: number | null = 1, start = vi.fn()) {
+function view(
+  units: Unit[],
+  nextId: number | null = 1,
+  start = vi.fn(),
+  variant: "a" | "b" = "a",
+) {
   return render(
     <LearningMap
+      variant={variant}
       units={units}
       allUnits={units}
       grade="중1"
@@ -125,3 +131,72 @@ test("더보기 메뉴는 Escape로 닫힌다", () => {
   fireEvent.keyDown(screen.getByRole("menu"), { key: "Escape" });
   expect(trigger.getAttribute("aria-expanded")).toBe("false");
 });
+
+test.each(["a", "b"] as const)(
+  "시안 %s: 상태 모양과 다음 위치, 주 동작",
+  (variant) => {
+    const start = vi.fn();
+    const units: Unit[] = [
+      { ...base, latest_result: latest("깊이 이해") },
+      {
+        ...base,
+        id: 2,
+        number: 2,
+        name: "둘",
+        latest_result: latest("기본 이해"),
+      },
+      {
+        ...base,
+        id: 3,
+        number: 3,
+        name: "셋",
+        latest_result: latest("아직 이해 못 함"),
+      },
+      {
+        ...base,
+        id: 4,
+        number: 4,
+        name: "넷",
+        in_progress_diagnosis_id: "active",
+      },
+      { ...base, id: 5, number: 5, name: "다섯" },
+      { ...base, id: 6, number: 6, name: "여섯", status: "unavailable" },
+      { ...base, id: 7, number: 7, name: "일곱", latest_result: latest(null) },
+    ];
+    const { container } = view(units, 5, start, variant);
+    const rows = screen.getAllByRole("article");
+    for (const [i, symbol, state] of [
+      [0, "✓", "정복"],
+      [1, "◐", "기본 이해"],
+      [2, "↻", "다시 도전"],
+      [3, "⚡", "진행 중"],
+      [4, "5", "시작 전"],
+      [5, "🔒", "준비 중"],
+      [6, "✓", "완료"],
+    ] as const) {
+      const node = rows[i].querySelector(".path-node")!;
+      expect(node.textContent).toBe(symbol);
+      expect(node.getAttribute("aria-label")).toContain(state);
+      expect(rows[i].querySelector(".learning-state")?.textContent).toContain(
+        state,
+      );
+    }
+    expect(container.querySelectorAll("[data-next]")).toHaveLength(1);
+    expect(within(rows[4]).getByText("다음")).toBeTruthy();
+    fireEvent.click(
+      within(rows[4]).getByRole("button", { name: "진단 시작하기" }),
+    );
+    expect(start).toHaveBeenCalledWith(units[4]);
+    expect(
+      (rows[5].querySelector(".path-node") as HTMLButtonElement).disabled,
+    ).toBe(true);
+    expect(
+      within(rows[5])
+        .getByRole("button", { name: "준비 중" })
+        .getAttribute("aria-disabled"),
+    ).toBe("true");
+    fireEvent.click(within(rows[3]).getByRole("button", { name: "넷 더보기" }));
+    fireEvent.click(screen.getByRole("menuitem", { name: "새로 시작하기" }));
+    expect(start).toHaveBeenCalledWith(units[3]);
+  },
+);

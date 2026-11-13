@@ -93,6 +93,7 @@ test("학년 탭과 검색 및 진행 상태", async () => {
   expect(screen.getByRole("heading", { name: "2. 도형과 식" })).toBeTruthy();
   // One results card: count, grade subheadings, no chips, no tab selected.
   const results = screen.getByRole("region", { name: "검색 결과" });
+  expect(results.querySelector(".path-node")).toBeNull();
   expect(results.textContent).toContain("검색 결과 2개");
   expect(
     [...results.querySelectorAll("h3")].map((node) => node.textContent),
@@ -757,4 +758,28 @@ test("그림 보기는 선택 가능한 2열 배치 영역에 표시한다", asy
   expect((screen.getAllByRole("radio")[0] as HTMLInputElement).checked).toBe(
     true,
   );
+});
+
+test("학습 지도 A/B 선택과 키보드 숨김은 검색 입력을 방해하지 않는다", async () => {
+  window.history.replaceState(null, "", "/?__variant=a");
+  render(<UnitSelection />);
+  await screen.findByRole("heading", { name: "1. 문자와 식" });
+  expect(document.querySelector(".path-list-a")).toBeTruthy();
+  fireEvent.click(screen.getByRole("button", { name: "B 세로 단계 길" }));
+  expect(document.querySelector(".path-list-b")).toBeTruthy();
+  expect(window.location.search).toContain("__variant=b");
+  const input = screen.getByLabelText("단원 검색");
+  fireEvent.keyDown(input, { key: "h" });
+  fireEvent.keyDown(input, { key: "ArrowLeft" });
+  expect(
+    screen.getByRole("complementary", { name: "학습 지도 시안 선택" }),
+  ).toBeTruthy();
+  expect(document.querySelector(".path-list-b")).toBeTruthy();
+  fireEvent.keyDown(window, { key: "h" });
+  expect(
+    screen.queryByRole("complementary", { name: "학습 지도 시안 선택" }),
+  ).toBeNull();
+  fireEvent.keyDown(window, { key: "h" });
+  fireEvent.keyDown(window, { key: "ArrowLeft" });
+  expect(document.querySelector(".path-list-a")).toBeTruthy();
 });
