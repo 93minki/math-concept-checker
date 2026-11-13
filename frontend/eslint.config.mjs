@@ -13,6 +13,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Astryx theme descriptor: the CLI requires a bare static default export
+    // object (user decision 2026-11-13 to exclude this file only).
+    "src/themes/*/*.doc.mjs",
   ]),
   eslintConfigPrettier,
 ]);
