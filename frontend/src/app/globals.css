@@ -1,67 +1,4 @@
-:root {
-  --bg: #eef1f4;
-  --surface: #ffffff;
-  --surface-2: #eef0f3;
-  --border: #dee2e5;
-  --control-border: #83878b;
-  --text: #171b1f;
-  --muted: #5e646a;
-  --primary: #006ebe;
-  --primary-ink: #006ebe;
-  --primary-text: #ffffff;
-  --primary-soft: #e6f2fe;
-  --warn-soft: #fbefd6;
-  --danger: #b02b27;
-  --danger-soft: #fdebe9;
-  --disabled-bg: #e6e8ea;
-  --disabled-text: #6e7276;
-  --shadow: 0 1px 3px rgba(20, 24, 28, 0.06);
-  --radius: 16px;
-  --control-h: var(--size-element-lg, 44px);
-  --gap: 16px;
-  --base-size: 16px;
-  --content-width: 720px;
-}
-:root[data-theme="dark"] {
-  --bg: #14171b;
-  --surface: #1d2125;
-  --surface-2: #25292e;
-  --border: #32363a;
-  --control-border: #6d7277;
-  --text: #e8ebef;
-  --muted: #a5acb2;
-  --primary: #4f6dcc;
-  --primary-ink: #9cb5f8;
-  --primary-text: #ffffff;
-  --primary-soft: #212a44;
-  --warn-soft: #3c2e14;
-  --danger: #fb988d;
-  --danger-soft: #442320;
-  --disabled-bg: #26292d;
-  --disabled-text: #7c8186;
-  --shadow: 0 0 0 1px oklch(1 0 0 / 0.08);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #14171b;
-    --surface: #1d2125;
-    --surface-2: #25292e;
-    --border: #32363a;
-    --control-border: #6d7277;
-    --text: #e8ebef;
-    --muted: #a5acb2;
-    --primary: #4f6dcc;
-    --primary-ink: #9cb5f8;
-    --primary-text: #ffffff;
-    --primary-soft: #212a44;
-    --warn-soft: #3c2e14;
-    --danger: #fb988d;
-    --danger-soft: #442320;
-    --disabled-bg: #26292d;
-    --disabled-text: #7c8186;
-    --shadow: 0 0 0 1px oklch(1 0 0 / 0.08);
-  }
-}
+/* Design tokens come from Astryx (theme "concept", src/themes/concept). */
 
 html {
   height: 100%;
@@ -76,8 +13,8 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--color-text-primary);
+  background: var(--color-background-body);
   font-family:
     "Pretendard Variable",
     Pretendard,
@@ -86,7 +23,7 @@ body {
     "Apple SD Gothic Neo",
     "Malgun Gothic",
     sans-serif;
-  font-size: var(--base-size);
+  font-size: var(--text-body-size);
   /* A fixed number keeps line boxes the same height when a Pretendard subset
      arrives after the fallback font (font-display: swap). */
   line-height: 1.5;
@@ -186,9 +123,9 @@ h4:not(.astryx-heading) {
   background: #fff;
   color: #111;
   color-scheme: light;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  box-shadow: var(--shadow-low);
   padding: 16px;
 }
 .problem-sheet .choice:has(input:checked) {
@@ -259,20 +196,20 @@ h4:not(.astryx-heading) {
 }
 
 :focus-visible:not([data-astryx-pressable]):not(.astryx-checkbox-input input) {
-  outline: 3px solid var(--primary-ink);
+  outline: 3px solid var(--color-accent);
   outline-offset: 2px;
 }
 .study-page:not(.home-page) {
   margin-top: 24px;
 }
 .home-page {
-  width: min(100%, var(--content-width));
+  width: min(100%, 45rem);
   margin: 40px auto 0;
 }
 .unit-conflict {
   padding: 12px;
-  border-radius: var(--radius);
-  background: var(--primary-soft);
+  border-radius: var(--radius-container);
+  background: var(--color-accent-muted);
 }
 @media (max-width: 599px) {
   .home-page {
@@ -283,14 +220,14 @@ h4:not(.astryx-heading) {
 /* Shared controls and feedback outside the problem sheet. */
 .study-page input:not([type="radio"]):not(.astryx-text-input input),
 .study-page textarea {
-  min-height: var(--control-h);
+  min-height: var(--size-element-lg);
   padding: 10px 12px;
   font: inherit;
-  color: var(--text);
-  background: var(--surface);
-  border: 1px solid var(--control-border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  color: var(--color-text-primary);
+  background: var(--color-background-surface);
+  border: 1px solid var(--color-border-emphasized);
+  border-radius: var(--radius-container);
+  box-shadow: var(--shadow-low);
 }
 .study-page textarea {
   min-height: 140px;
@@ -299,26 +236,26 @@ h4:not(.astryx-heading) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: var(--control-h);
+  min-height: var(--size-element-lg);
   padding: 8px 12px;
   font: inherit;
   text-decoration: none;
-  border: 1px solid var(--primary);
-  border-radius: var(--radius);
-  background: var(--primary);
-  color: var(--primary-text);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
   cursor: pointer;
 }
 .btn:disabled {
-  background: var(--disabled-bg);
-  border-color: var(--border);
-  color: var(--disabled-text);
+  background: var(--color-background-muted);
+  border-color: var(--color-border);
+  color: var(--color-text-disabled);
   cursor: not-allowed;
 }
 [role="alert"]:not(:has(.astryx-banner)):not(.astryx-banner *) {
-  color: var(--danger);
-  background: var(--danger-soft);
-  border-radius: var(--radius);
+  color: var(--color-text-error);
+  background: var(--color-error-muted);
+  border-radius: var(--radius-container);
   padding: 12px;
 }
 
@@ -343,8 +280,8 @@ h4:not(.astryx-heading) {
   gap: 10px;
   min-width: 0;
   padding: 12px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
+  background: var(--color-background-muted);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   font-size: 0.875rem;
   line-height: 1.6;
@@ -418,7 +355,11 @@ h4:not(.astryx-heading) {
   }
 }
 .problem-sheet {
-  border-color: color-mix(in srgb, var(--border), var(--muted) 45%);
+  border-color: color-mix(
+    in srgb,
+    var(--color-border),
+    var(--color-text-secondary) 45%
+  );
 }
 .choice-area {
   margin-top: 4px;
@@ -505,7 +446,7 @@ h4:not(.astryx-heading) {
 }
 .auth-form input {
   width: 100%;
-  min-height: max(var(--size-element-lg), var(--control-h));
+  min-height: var(--size-element-lg);
   padding: var(--spacing-3);
   font: inherit;
   color: var(--color-text-primary);
@@ -518,19 +459,19 @@ h4:not(.astryx-heading) {
   width: 100%;
 }
 .privacy-consent .astryx-checkbox-input > [data-astryx-pressable] {
-  min-height: var(--control-h);
+  min-height: var(--size-element-lg);
 }
 .privacy-consent .astryx-checkbox-label > span:last-child {
   display: none;
 }
 
 .astryx-site-header .astryx-top-nav-item {
-  min-height: var(--control-h);
+  min-height: var(--size-element-lg);
 }
 
 .astryx-site-header .astryx-button,
 .auth-page .astryx-button {
-  min-height: var(--control-h);
+  min-height: var(--size-element-lg);
 }
 
 .learning-row {
