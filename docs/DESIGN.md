@@ -13,6 +13,7 @@
 | 데이터베이스 | PostgreSQL (Supabase 내장) | 아래 "데이터베이스 선택" |
 | Supabase 운영 | Supabase 클라우드 | 사용자 결정 (2026-11-09). 셀프 호스팅 이전 경로는 아래 참고 |
 | 수식 렌더링 | KaTeX | 사용자 결정 (2026-11-09). 아래 "수식 렌더링" 시험 결과 |
+| 디자인 시스템 | Astryx (`@astryxdesign/core` 0.7.14, 로컬 테마 `concept`) | 사용자 결정 (2026-11-13). 아래 "디자인 시스템 (Astryx)" |
 
 ### 데이터베이스 선택: PostgreSQL
 - Supabase 프로젝트는 모두 완전한 Postgres 데이터베이스이고, Auth가 이 데이터베이스 위에 만들어져 있다. ([Supabase Database 문서](https://supabase.com/docs/guides/database/overview))
@@ -643,7 +644,7 @@
 
 | 요청 | 하는 일 | 실패 |
 |---|---|---|
-| `GET /units` | 표시 단원 23개: 학년, 번호, 이름, 출판사, 별칭, 상태(전체/일부만/준비 중), 진행 중 진단 ID | — |
+| `GET /units` | 표시 단원 23개: 학년, 번호, 이름, 출판사, 별칭, 상태(전체/일부만/준비 중), 진행 중 진단 ID, `latest_result {diagnosis_id, unit_stage, completed_at} \| null`(내 완료 진단 중 가장 최근, 저장된 `reports.unit_stage`만 읽음. 사용자 허락 2026-11-12, 학습 지도의 정복 표시용) | — |
 | `POST /diagnoses` `{display_unit_id, restart}` | 진단 시작 (1단계 출제) | 409 진행 중 진단 있음 (그 ID를 함께 준다), 422 준비 중 단원 |
 | `GET /diagnoses/{id}` | 진단과 1단계 문제·답안. 문제는 본문, 유형, 보기 번호·내용만 준다. 정답 여부·해설·모범 답안·채점 요소·오개념 연결은 주지 않는다 | 404 (없거나 남의 진단. 남의 진단이 있는지도 알려 주지 않는다) |
 | `PUT /diagnoses/{id}/items/{item_id}/answer` | 답안 저장 (객관식 번호 또는 서술형 글) | 404, 409 제출함·중단됨, 422 형식 오류·1,000자 초과·유형과 다른 답 |
@@ -651,7 +652,8 @@
 
 ### 화면
 - `/` (로그인 후 첫 화면) = 단원 선택 (F-04)
-  - 학년별 묶음으로 보이고, 단원마다 "중1 · 동아출판 기준"을 표시한다
+  - **학습 지도 (사용자 결정 2026-11-12~13):** 학년 탭 + 학년 요약("중1 · 8단원 중 N개 정복" + 진행 막대). 상태는 `src/lib/unit-progress.ts`: 최근 결과 깊이 이해 = 정복, 기본 이해, 아직 이해 못 함 = 다시 도전, 진행 중, 시작 전, 완료(단계 모름), 준비 중. 결과·진행이 있는 상태는 Badge, 시작 전·준비 중은 흐린 글자(색만으로 구분하지 않음). 행마다 [상태][주 버튼][더보기 메뉴] 고정 열, "다음에 할 단원"만 주 버튼 강조, 보조 동작(새로 시작하기·결과 보기)은 더보기 메뉴. 모바일 버튼은 글자 폭. 검색 중에는 카드 하나에 "검색 결과 N개" + 학년 소제목
+  - 단원마다 "동아출판 기준"을 표시한다
   - 이름·별칭 검색
   - 단원 상태 표시 (준비 중은 누를 수 없음)
   - 진행 중이면 "이어서 풀기"를 보인다
@@ -659,9 +661,11 @@
   - 로그아웃 버튼은 그대로 둔다
 - `/diagnoses/[id]` = 풀이 (F-06)
   - 한 화면에 한 문제, 이전·다음, 진행 표시(3/6) (사용자 결정 2026-11-10)
+  - **풀이 머리 (사용자 결정 2026-11-13):** 단원 이름(제목) · "N / M" / 꼬리표 "N단계 · 기본 문제"(제목 이름은 "기본/심화 문제") / 진행 막대 = **지금 위치** (index+1)/전체 + 오른쪽 고정 칸의 저장 상태(절대 위치, 글자가 바뀌어도 화면이 움직이지 않음 — E2E `e2e/diagnosis-ui.spec.tsx`). 모바일에서 머리는 위에 고정. "답을 고르면…" 안내는 이전·다음 버튼 아래
+  - **보기 번호 (사용자 결정 2026-11-13):** 라디오 원 대신 CSS 원 번호(③ 모양, 글꼴 글자 ①은 Pretendard에서 작고 위로 붙어 쓰지 않음), 고르면 채움. 실제 라디오는 시각적으로만 숨겨 키보드 선택 유지. 번호 원 세로 가운데 = 보기 첫 글자 세로 가운데 ±2px (E2E `e2e/figures.spec.tsx`). 번호를 없애지 않는 이유: 승인 객관식 1,311개 중 964개의 해설이 ①②로 보기를 가리킴. 판 안 본문은 테두리 상자, "답을 골라요"는 시각적으로만 숨김
   - 객관식은 고르는 즉시 저장한다
   - 서술형은 입력을 멈추고 1초 뒤, 그리고 화면을 떠나기 전에 저장한다. 1초는 근거 없음
-  - 저장 상태를 표시한다 ("저장했어요" / "저장하지 못했어요, 다시 시도")
+  - 저장 상태를 표시한다 ("저장 중…" / "저장됨" / "저장하지 못했어요" + "다시 시도")
   - 지금 문제에 답하기 전에는 "다음"이 꺼져 있고 "답을 고르면(쓰면) 다음 문제로 넘어갈 수 있어요"를 보인다. "답함" 기준은 제출 조건과 같다 (번호를 골랐거나 공백을 뺀 서술형 답이 1자 이상). "이전"은 언제든 누를 수 있다 (사용자 결정 2026-11-11)
   - 제출 버튼은 그 단계의 마지막 문제에서 "다음" 자리에만 보이고, 모든 문제에 답하면 켜진다. 제출 전에 한 번 확인한다 (사용자 결정 2026-11-11, 수동 확인에서 요청)
   - 제출 후에는 답을 바꿀 수 없고 "제출했어요. 채점 기능은 준비 중이에요"를 보인다
@@ -768,7 +772,7 @@
 - DB 변경 없음. `diagnoses_user_id_idx`를 쓴다.
 
 ### 화면: `/history`
-- 첫 화면(단원 선택) 로그아웃 옆에 "지난 기록" 링크, 진단 화면(`/diagnoses/[id]`)에 "지난 기록으로" 링크.
+- 공통 머리말에 "지난 기록" 링크. 진단 화면의 "지난 기록으로" 링크는 머리말과 겹쳐 뺐다 (2026-11-13).
 - 항목마다 학년·단원 이름, 시작 날짜·시각, 상태를 보인다.
   - 상태: `진행 중`(1·2단계 구분 없음), `완료`, `중단`(기간 만료 / 새로 시작)
   - 시각은 한국 시간(`Asia/Seoul`)으로 고정한다. 근거 없음 (한국 학생 대상 서비스 전제).
@@ -798,6 +802,7 @@
 ### 프론트엔드
 - `@supabase/ssr`로 서버·브라우저 클라이언트 ([Supabase SSR](https://supabase.com/docs/guides/auth/server-side/creating-a-client)). 서버 코드는 `getClaims()`로 확인하고 `getSession()`을 믿지 않는다.
 - 보호 규칙 두 겹
+  - 주소 (사용자 결정 2026-11-12): 로그아웃 `/` = 랜딩(`proxy.ts`가 `/landing`으로 rewrite, 주소는 `/`), `/login` = 로그인 카드, 로그인 `/` = 학습 지도, `/landing` 직접 접근은 `/`로.
   - `src/proxy.ts` (Next.js 16): 로그인 여부만. 응답에 `Cache-Control: private, no-store` (갱신된 세션 쿠키가 공유 캐시로 다른 사용자에게 가지 않게, 같은 문서).
   - `src/app/(protected)/layout.tsx`: 자기 `profiles` 행(RLS)으로 가입 완료 여부 확인, 미완료면 `/signup/complete`.
 
@@ -830,3 +835,20 @@
 ## 서술형 답안 입력
 - 일반 텍스트로 입력받는다. 수식 입력기와 손글씨 사진 업로드는 쓰지 않는다.
   - 근거: 사용자 결정 (2026-11-09)
+
+## 디자인 시스템 (Astryx) (사용자 결정 2026-11-13, `docs/plans/2026-11-13_ui-polish.md`)
+
+- **결정:** 화면 요소는 모두 Astryx 컴포넌트로 만든다 ("적용 범위는 전부 다 Astryx로"). 기존 디자인과 충돌하면 Astryx를 따른다. 패키지는 `@astryxdesign/core`·`@astryxdesign/theme-stone`·`@astryxdesign/cli` 0.7.14, `@stylexjs/stylex` 0.19.2를 정확한 버전으로 고정 (설치 때 pnpm 12가 하루 안 된 0.7.15를 받지 않음). 라이선스 MIT, 저장소 `github.com/meta/astryx`. 문서는 `pnpm exec astryx docs|component|search`로 읽는다(`frontend/AGENTS.md` Astryx 블록).
+- **문제 판은 Astryx 밖 (중요 사용자 결정):** "문제 관련된 내용은 Astryx와 무관하게 지금처럼". `.problem-sheet` 안(본문 상자, 보기·원 번호·선택 표시, KaTeX, 그림)과 결과 화면의 보기·내 답·정답 표시는 직접 만든 마크업·CSS를 유지하고 흰 판·검은 글씨 고정 색을 쓴다. `frontend/AGENTS.md`에도 적었다.
+- **테마 `concept`** (`frontend/src/themes/concept/conceptTheme.ts`): stone을 `extends`하고 아래만 바꾼다. 사용자가 임시 미리보기에서 7개 테마와 섞은 안을 보고 "stone+neutral글꼴"을 고름.
+  - 글꼴: 본문·제목 모두 Pretendard(저장소 `public/fonts/pretendard/`), 코드는 시스템 고정폭. stone의 `fonts.css`는 Google Fonts를 불러오므로 쓰지 않는다 (사용자 결정 "글꼴은 모두 Pretendard", 외부 요청 0개를 E2E로 검사).
+  - 글자 크기: `typography.scale {base: 16, ratio: 1.2225}`. stone은 데스크톱 14px·터치 16px이라 데스크톱 글자가 작았음 (사용자 지적 2026-11-13).
+  - 컨트롤 높이: `--size-element-md/lg` 44px. Astryx 기본 32·36px은 터치 기준 44px(위 "화면", WCAG 2.5.5) 미달.
+  - `astryx theme build` → `theme add concept` → `theme use concept`로 빌드한 테마를 쓴다(런타임 테마는 SSR에서 깜빡임, `astryx docs use-a-theme`). 생성 파일(`src/astryx-themes.ts`, `src/themes/concept/concept.{js,css,d.ts}`)은 손대지 않고 `.prettierignore`에 둔다(Prettier가 바꾸면 `astryx doctor` 실패). 설명 파일 `conceptTheme.doc.mjs`는 CLI가 쓰므로 두고 ESLint 대상에서만 뺀다(사용자 결정).
+- **CSS:** `@astryxdesign/core/reset.css`·`astryx.css`·테마 CSS는 `@layer` 안에 있다. `globals.css`는 layer 밖이라 항상 이기므로 Astryx 컴포넌트를 덮는 태그 전체 규칙을 두지 않는다. `globals.css`의 색·간격·모서리는 Astryx 토큰(`--color-*`, `--radius-*`, `--size-element-*` 등)만 쓴다.
+- **다크·라이트 전환:** 기본은 시스템. 머리말 해·달 버튼이 `localStorage.theme`에 저장하고, `next/script` `beforeInteractive` 스크립트가 그리기 전에 `<html data-theme>`를 설정한다. Astryx 최상위 `<Theme mode>`가 `<html data-theme>`를 관리하므로 모드는 `localStorage`에서 읽는다(`theme-button.tsx` `storedTheme()`).
+- **로그인·가입 폼:** 입력창과 제출 버튼은 기본 HTML 요소로 둔다. Astryx `Button`으로는 스크립트 실행 전 진짜 `disabled`를 보장할 수 없어서다(`AGENTS.md` 4.3). 모양은 Astryx 토큰으로 맞춘다.
+- **리포트 표시** (`report-summary.tsx`): 단원·개념 단계를 Badge(글자) + 3칸 ProgressBar로. 숫자("3단계 중 N단계" 등)는 보이지 않는다(`docs/SCORING.md` 5절). 랜딩의 "샘플 리포트"가 같은 컴포넌트에 `9수02-03` 예시 데이터를 넣어 쓴다.
+- **캐릭터 "개념이"** (`src/components/mascot.tsx`, 사용자 요청 2026-11-13): 수학 개념을 확인하는 학생 모습 SVG, 테마 토큰 색. 생각 중(로딩·리포트 작성), 쉬는 중(1단계 도중 중단된 진단), 반가움(지난 기록 없음). `StatusScreen`(Astryx `EmptyState` icon 칸)으로 제목·설명·다음 행동과 함께 쓴다. `prefers-reduced-motion`이면 멈춘다. 장식이라 화면 읽기에서 숨긴다.
+- **브라우저 지원:** Astryx는 CSS anchor positioning·`light-dark()`·Popover API를 쓴다 (`astryx docs browser-support`). 학생 기기 범위는 `docs/PROGRESS.md` 공개 전 확인 항목.
+
