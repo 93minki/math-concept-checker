@@ -657,3 +657,43 @@ h4:not(.astryx-heading) {
     display: none;
   }
 }
+
+/* Landing hero (variant A, 2026-11-13). The mascot and the mini report
+   sit side by side with a real gap (user: "너무 붙어 있어"). */
+.hero-panel {
+  background: var(--color-accent-muted);
+  border-radius: var(--radius-container);
+  padding: var(--spacing-8);
+}
+.hero-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: var(--spacing-8);
+  min-height: 18rem;
+}
+.hero-visual {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  min-width: 0;
+}
+.hero-visual > svg {
+  flex: 0 0 auto;
+}
+.hero-visual > .astryx-card {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 46rem) {
+  .hero-panel {
+    padding: var(--spacing-4);
+  }
+  .hero-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-visual > svg {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}

@@ -1359,3 +1359,179 @@ test("사각뿔의 높이선과 모서리가 분리되고 꼭짓점 이름이 �
     expect(center.y).toBeLessThanOrEqual((ay + 220) / 2 + 70);
   }
 });
+
+test("접선 그림에서 OP 길이와 선분 사이를 다른 선이나 원이 가로막지 않는다", () => {
+  const figure: Figure = {
+    angles: [
+      {
+        from: "O",
+        label: null,
+        marks: 0,
+        right: true,
+        to: "P",
+        vertex: "A",
+      },
+      {
+        from: "O",
+        label: null,
+        marks: 0,
+        right: true,
+        to: "P",
+        vertex: "B",
+      },
+    ],
+    arcs: [],
+    circles: [
+      {
+        center: "O",
+        dashed: false,
+        points_on: ["A", "B"],
+        radius: 5.0,
+      },
+    ],
+    kind: "geometry",
+    lines: [],
+    points: [
+      {
+        dot: true,
+        id: "O",
+        show_name: true,
+        x: 0.0,
+        y: 0.0,
+      },
+      {
+        dot: true,
+        id: "P",
+        show_name: true,
+        x: 13.0,
+        y: 0.0,
+      },
+      {
+        dot: true,
+        id: "A",
+        show_name: true,
+        x: 1.9230769231,
+        y: 4.6153846154,
+      },
+      {
+        dot: true,
+        id: "B",
+        show_name: true,
+        x: 1.9230769231,
+        y: -4.6153846154,
+      },
+    ],
+    polygons: [],
+    segments: [
+      {
+        dashed: false,
+        from: "O",
+        label: "5",
+        parallel_marks: 0,
+        ticks: 1,
+        to: "A",
+      },
+      {
+        dashed: false,
+        from: "O",
+        label: null,
+        parallel_marks: 0,
+        ticks: 1,
+        to: "B",
+      },
+      {
+        dashed: false,
+        from: "O",
+        label: "13",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "P",
+      },
+      {
+        dashed: false,
+        from: "P",
+        label: null,
+        parallel_marks: 0,
+        ticks: 0,
+        to: "A",
+      },
+      {
+        dashed: false,
+        from: "P",
+        label: null,
+        parallel_marks: 0,
+        ticks: 0,
+        to: "B",
+      },
+    ],
+  };
+  const elements = drawFigure(figure).elements;
+  const point = (name: string) => {
+    const label = elements.find(
+      (element) =>
+        element.text === name && element.attrs["data-point-x"] !== undefined,
+    )!;
+    return {
+      x: Number(label.attrs["data-point-x"]),
+      y: Number(label.attrs["data-point-y"]),
+    };
+  };
+  const label = elements.find((element) => element.text === "13")!;
+  const center = { x: Number(label.attrs.x), y: Number(label.attrs.y) - 6 };
+  const o = point("O"),
+    p = point("P");
+  const dx = p.x - o.x,
+    dy = p.y - o.y;
+  const t = Math.max(
+    0,
+    Math.min(
+      1,
+      ((center.x - o.x) * dx + (center.y - o.y) * dy) / (dx * dx + dy * dy),
+    ),
+  );
+  const path = { x: o.x + t * dx - center.x, y: o.y + t * dy - center.y };
+  const cross = (a: { x: number; y: number }, b: { x: number; y: number }) =>
+    a.x * b.y - a.y * b.x;
+  for (const [from, to] of [
+    ["O", "A"],
+    ["O", "B"],
+    ["P", "A"],
+    ["P", "B"],
+  ]) {
+    const a = point(from),
+      b = point(to);
+    const edge = { x: b.x - a.x, y: b.y - a.y },
+      delta = { x: a.x - center.x, y: a.y - center.y };
+    const d = cross(path, edge);
+    if (Math.abs(d) < 1e-9) continue;
+    const along = cross(delta, edge) / d,
+      across = cross(delta, path) / d;
+    expect(
+      along > 1e-6 && along < 1 - 1e-6 && across >= 0 && across <= 1,
+      `${from}${to}`,
+    ).toBe(false);
+  }
+  const circle = elements.find(
+    (element) => element.tag === "circle" && element.attrs.fill === "none",
+  )!;
+  const cx = Number(circle.attrs.cx),
+    cy = Number(circle.attrs.cy),
+    r = Number(circle.attrs.r);
+  const dist = (q: { x: number; y: number }) => Math.hypot(q.x - cx, q.y - cy);
+  const end = { x: center.x + path.x, y: center.y + path.y };
+  const nearest = Math.max(
+    0,
+    Math.min(
+      1,
+      -((center.x - cx) * path.x + (center.y - cy) * path.y) /
+        (path.x ** 2 + path.y ** 2),
+    ),
+  );
+  const closest = {
+    x: center.x + nearest * path.x,
+    y: center.y + nearest * path.y,
+  };
+  expect(dist(closest) < r && Math.max(dist(center), dist(end)) > r).toBe(
+    false,
+  );
+});

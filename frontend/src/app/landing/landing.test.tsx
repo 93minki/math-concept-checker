@@ -1,11 +1,4 @@
-import {
-  act,
-  cleanup,
-  fireEvent,
-  render,
-  screen,
-  within,
-} from "@testing-library/react";
+import { cleanup, render, screen, within } from "@testing-library/react";
 import { afterEach, expect, test, vi } from "vitest";
 import LandingPage from "./page";
 import LandingLayout from "./layout";
@@ -96,54 +89,23 @@ test("채점표는 맞음 7개와 틀림 3개를 표시한다", () => {
   expect(screen.getAllByText("✗ 틀림")).toHaveLength(3);
 });
 
-test("히어로 A/B와 슬라이드 조작", () => {
-  window.history.replaceState(null, "", "/?__variant=a");
+test("히어로는 문구와 마스코트·미니 리포트를 함께 보인다", () => {
   render(<LandingPage />);
+  const hero = screen
+    .getByRole("heading", { name: "점수 말고, 개념을 확인해요" })
+    .closest(".hero-panel")!;
   expect(
-    screen.getByText("중학교 23개 단원 · 개념별 3단계 리포트"),
+    within(hero as HTMLElement).getByText(
+      "중학교 23개 단원 · 개념별 3단계 리포트",
+    ),
   ).toBeTruthy();
-  fireEvent.click(screen.getByRole("button", { name: "B 넘겨 보는 히어로" }));
-  expect(window.location.search).toContain("__variant=b");
+  expect(hero.querySelector(".mascot-waving")).toBeTruthy();
   expect(
-    screen
-      .getByRole("button", { name: "1번 슬라이드" })
-      .getAttribute("aria-current"),
-  ).toBe("true");
-  vi.useFakeTimers();
-  act(() => vi.advanceTimersByTime(30000));
-  expect(
-    screen
-      .getByRole("button", { name: "1번 슬라이드" })
-      .getAttribute("aria-current"),
-  ).toBe("true");
-  vi.useRealTimers();
-  fireEvent.click(screen.getByRole("button", { name: "다음 슬라이드" }));
-  expect(
-    screen.getByRole("heading", { name: "개념마다 어디까지 이해했는지" }),
+    within(hero as HTMLElement).getByRole("progressbar", {
+      name: "등식의 뜻 예시 이해 단계: 깊이 이해",
+    }),
   ).toBeTruthy();
-  const carousel = screen
-    .getByRole("heading", { name: "개념마다 어디까지 이해했는지" })
-    .closest(".hero-carousel")!;
-  fireEvent.keyDown(carousel, { key: "ArrowRight" });
-  expect(
-    screen.getByRole("heading", { name: "기본 → 심화 → 리포트" }),
-  ).toBeTruthy();
-  expect(
-    screen
-      .getByRole("button", { name: "3번 슬라이드" })
-      .getAttribute("aria-current"),
-  ).toBe("true");
-  fireEvent.click(screen.getByRole("button", { name: "이전 슬라이드" }));
-  expect(
-    screen.getByRole("heading", { name: "개념마다 어디까지 이해했는지" }),
-  ).toBeTruthy();
-  fireEvent.click(screen.getByRole("button", { name: "1번 슬라이드" }));
-  expect(
-    screen.getByRole("heading", { name: "점수 말고, 개념을 확인해요" }),
-  ).toBeTruthy();
-  fireEvent.keyDown(window, { key: "h" });
+  // No variant picker or carousel left behind.
   expect(screen.queryByRole("complementary", { name: "시안 선택" })).toBeNull();
-  fireEvent.keyDown(window, { key: "h" });
-  fireEvent.keyDown(window, { key: "ArrowLeft" });
-  expect(window.location.search).toContain("__variant=a");
+  expect(screen.queryByRole("button", { name: "다음 슬라이드" })).toBeNull();
 });

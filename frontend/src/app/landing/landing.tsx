@@ -4,7 +4,7 @@ import { Heading } from "@astryxdesign/core/Heading";
 import { List, ListItem } from "@astryxdesign/core/List";
 import { Text } from "@astryxdesign/core/Text";
 import { VStack } from "@astryxdesign/core/VStack";
-import Hero from "./variants/hero";
+import Hero from "./hero";
 import ReportPreview, { ConceptSummary } from "./report-preview";
 import { reasons, steps } from "./landing-content";
 

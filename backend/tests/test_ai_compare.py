@@ -29,6 +29,7 @@ from app.ai.schemas import (
     QuestionDraft,
     ReportText,
     Review,
+    RubricElement,
     load_concept,
 )
 from app.ai.scoring import Score, score_choice, score_written
@@ -105,6 +106,40 @@ def test_scoring() -> None:
     )
     assert score_choice(choices, 1).value == 1
     assert score_choice(choices, 2).value == 0
+
+
+@pytest.mark.parametrize(
+    ("points", "met", "passed"),
+    [
+        ([1, 1, 1], [True, True, False], True),
+        ([1, 1, 1], [True, False, False], False),
+        ([1, 2], [False, True], True),
+        ([1, 2], [True, False], False),
+        ([0.1, 0.2], [False, True], True),
+    ],
+)
+def test_written_pass_threshold(
+    points: list[float], met: list[bool], passed: bool
+) -> None:
+    rubric = [
+        RubricElement(
+            no=i,
+            description="",
+            points=point,
+            required=True,
+            related_misconception_ids=[],
+        )
+        for i, point in enumerate(points, 1)
+    ]
+    grading = Grading.model_validate(
+        {
+            "element_results": [
+                {"no": i, "met": value, "reason": ""} for i, value in enumerate(met, 1)
+            ],
+            "detected_misconception_ids": [],
+        }
+    )
+    assert score_written(rubric, grading).passed is passed
 
 
 class RejectingProvider(FakeProvider):

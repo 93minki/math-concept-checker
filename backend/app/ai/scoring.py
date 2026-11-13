@@ -1,5 +1,6 @@
 from collections.abc import Sequence
 from dataclasses import dataclass
+from decimal import Decimal
 
 from app.ai.schemas import Choice, Grading, RubricElement
 
@@ -28,11 +29,10 @@ def score_written(rubric: list[RubricElement], grading: Grading) -> Score:
         or len(actual) != len(expected)
     ):
         raise ValueError("Grading elements do not match rubric")
-    total = sum(element.points for element in rubric)
-    if total <= 0 or any(element.points <= 0 for element in rubric):
+    points = {element.no: Decimal(str(element.points)) for element in rubric}
+    total = sum(points.values())
+    if total <= 0 or any(point <= 0 for point in points.values()):
         raise ValueError("Rubric points must be positive")
     met = {result.no for result in grading.element_results if result.met}
-    return Score(
-        sum(element.points for element in rubric if element.no in met) / total,
-        all(element.no in met for element in rubric if element.required),
-    )
+    met_points = sum(points[no] for no in met)
+    return Score(float(met_points / total), met_points * 3 >= total * 2)
