@@ -80,122 +80,151 @@ export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
       )}
       {report && <ReportSummary report={report} />}
       <Heading level={2}>문제별 결과</Heading>
-      <VStack gap={4}>
-        {items.map((item, index) => (
-          <Card key={item.id}>
-            <VStack gap={4}>
-              <HStack gap={2} hAlign="between" vAlign="center" wrap="wrap">
-                <Heading level={3}>
-                  {items
-                    .slice(0, index)
-                    .filter((previous) => previous.stage === item.stage)
-                    .length + 1}
-                  번 · {item.stage === 1 ? "기본 문제" : "심화 문제"}
-                </Heading>
-                {item.result ? (
-                  <Badge
-                    label={item.result.passed ? "맞았어요" : "틀렸어요"}
-                    variant={item.result.passed ? "success" : "error"}
-                  />
-                ) : (
-                  <Badge label="풀지 않은 문제" variant="neutral" />
-                )}
-              </HStack>
-              <div className="problem-sheet stack">
-                <div className="question">
-                  <ProblemText text={item.body} />
-                  {item.figure && <Figure figure={item.figure} />}
-                </div>
-                {item.question_type === "multiple_choice" && (
-                  <div
-                    className={`choice-area ${item.choices.some((choice) => choice.figure) ? "choice-grid" : "stack"}`}
-                  >
-                    {item.choices.map((choice) => {
-                      const selected =
-                        item.answer?.selected_choice === choice.no;
-                      const correct = item.result?.correct_choice === choice.no;
-                      const wrong =
-                        selected &&
-                        item.result?.correct_choice != null &&
-                        !correct;
-                      return (
-                        <div
-                          className={`choice report-choice${correct ? " report-choice-correct" : wrong ? " report-choice-wrong" : ""}`}
-                          key={choice.no}
-                        >
-                          <ChoiceNumber number={choice.no} />
-                          <div className="choice-content">
-                            <ProblemText text={choice.text} />
-                            {choice.figure && <Figure figure={choice.figure} />}
-                          </div>
-                          {correct && selected ? (
-                            <span className="visually-hidden">
-                              내 답 · 정답
-                            </span>
-                          ) : correct ? (
-                            <span className="report-choice-label">✓ 정답</span>
-                          ) : wrong ? (
-                            <span className="report-choice-label">✗ 내 답</span>
-                          ) : null}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
+      {[1, 2].map((stage) => {
+        const group = items.filter((item) => item.stage === stage);
+        return (
+          group.length > 0 && (
+            <ResultGroup key={stage} items={group} stage={stage} />
+          )
+        );
+      })}
+    </VStack>
+  );
+}
+
+function ResultGroup({
+  items,
+  stage,
+}: {
+  items: Diagnosis["items"];
+  stage: number;
+}) {
+  const [index, setIndex] = useState(0);
+  const item = items[Math.min(index, items.length - 1)];
+  const title = stage === 1 ? "기본 문제" : "심화 문제";
+  return (
+    <VStack as="section" gap={4}>
+      <HStack gap={2} hAlign="between" vAlign="center" wrap="wrap">
+        <Heading level={3}>{title}</Heading>
+        <HStack gap={2} vAlign="center">
+          <Text aria-live="polite" aria-atomic="true">
+            {index + 1} / {items.length}
+          </Text>
+          <Button
+            label="이전 문제"
+            isDisabled={index === 0}
+            onClick={() => setIndex(index - 1)}
+          />
+          <Button
+            label="다음 문제"
+            isDisabled={index >= items.length - 1}
+            onClick={() => setIndex(index + 1)}
+          />
+        </HStack>
+      </HStack>
+      <Card key={item.id}>
+        <VStack gap={4}>
+          <HStack gap={2} hAlign="between" vAlign="center" wrap="wrap">
+            <Heading level={4}>
+              {index + 1}번 · {item.stage === 1 ? "기본 문제" : "심화 문제"}
+            </Heading>
+            {item.result ? (
+              <Badge
+                label={item.result.passed ? "맞았어요" : "틀렸어요"}
+                variant={item.result.passed ? "success" : "error"}
+              />
+            ) : (
+              <Badge label="풀지 않은 문제" variant="neutral" />
+            )}
+          </HStack>
+          <div className="problem-sheet stack">
+            <div className="question">
+              <ProblemText text={item.body} />
+              {item.figure && <Figure figure={item.figure} />}
+            </div>
+            {item.question_type === "multiple_choice" && (
+              <div
+                className={`choice-area ${item.choices.some((choice) => choice.figure) ? "choice-grid" : "stack"}`}
+              >
+                {item.choices.map((choice) => {
+                  const selected = item.answer?.selected_choice === choice.no;
+                  const correct = item.result?.correct_choice === choice.no;
+                  const wrong =
+                    selected && item.result?.correct_choice != null && !correct;
+                  return (
+                    <div
+                      className={`choice report-choice${correct ? " report-choice-correct" : wrong ? " report-choice-wrong" : ""}`}
+                      key={choice.no}
+                    >
+                      <ChoiceNumber number={choice.no} />
+                      <div className="choice-content">
+                        <ProblemText text={choice.text} />
+                        {choice.figure && <Figure figure={choice.figure} />}
+                      </div>
+                      {correct && selected ? (
+                        <span className="visually-hidden">내 답 · 정답</span>
+                      ) : correct ? (
+                        <span className="report-choice-label">✓ 정답</span>
+                      ) : wrong ? (
+                        <span className="report-choice-label">✗ 내 답</span>
+                      ) : null}
+                    </div>
+                  );
+                })}
               </div>
-              {item.question_type !== "multiple_choice" && (
+            )}
+          </div>
+          {item.question_type !== "multiple_choice" && (
+            <VStack gap={2}>
+              <Text type="label">내 답</Text>
+              <Text as="p">
+                <MathText
+                  text={item.answer?.written_text || "답하지 않았어요"}
+                />
+              </Text>
+            </VStack>
+          )}
+          {item.result && (
+            <>
+              <VStack gap={2}>
+                <Text type="label">해설</Text>
+                <Text as="p">
+                  <MathText text={item.result.explanation} />
+                </Text>
+              </VStack>
+              {item.result.model_answer && (
                 <VStack gap={2}>
-                  <Text type="label">내 답</Text>
+                  <Text type="label">모범 답안</Text>
                   <Text as="p">
-                    <MathText
-                      text={item.answer?.written_text || "답하지 않았어요"}
-                    />
+                    <MathText text={item.result.model_answer} />
                   </Text>
                 </VStack>
               )}
-              {item.result && (
-                <>
-                  <VStack gap={2}>
-                    <Text type="label">해설</Text>
-                    <Text as="p">
-                      <MathText text={item.result.explanation} />
-                    </Text>
-                  </VStack>
-                  {item.result.model_answer && (
-                    <VStack gap={2}>
-                      <Text type="label">모범 답안</Text>
-                      <Text as="p">
-                        <MathText text={item.result.model_answer} />
-                      </Text>
-                    </VStack>
-                  )}
-                  {item.result.elements && item.result.elements.length > 0 && (
-                    <List
-                      hasDividers
-                      header={<Heading level={4}>채점 요소</Heading>}
-                    >
-                      {item.result.elements.map((element, index) => (
-                        <ListItem
-                          key={index}
-                          label={<MathText text={element.description} />}
-                          description={<MathText text={element.reason} />}
-                          endContent={
-                            <Badge
-                              label={element.met ? "충족" : "미충족"}
-                              variant={element.met ? "success" : "error"}
-                            />
-                          }
-                          align="first-line"
+              {item.result.elements && item.result.elements.length > 0 && (
+                <List
+                  hasDividers
+                  header={<Heading level={4}>채점 요소</Heading>}
+                >
+                  {item.result.elements.map((element, index) => (
+                    <ListItem
+                      key={index}
+                      label={<MathText text={element.description} />}
+                      description={<MathText text={element.reason} />}
+                      endContent={
+                        <Badge
+                          label={element.met ? "충족" : "미충족"}
+                          variant={element.met ? "success" : "error"}
                         />
-                      ))}
-                    </List>
-                  )}
-                </>
+                      }
+                      align="first-line"
+                    />
+                  ))}
+                </List>
               )}
-            </VStack>
-          </Card>
-        ))}
-      </VStack>
+            </>
+          )}
+        </VStack>
+      </Card>
     </VStack>
   );
 }

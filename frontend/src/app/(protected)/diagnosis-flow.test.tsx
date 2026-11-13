@@ -565,14 +565,43 @@ test("완료된 진단은 리포트와 문제별 결과를 표시한다", async 
     await screen.findByRole("heading", { name: "이해도 리포트" }),
   ).toBeTruthy();
   expect(screen.getByRole("heading", { name: "1번 · 기본 문제" })).toBeTruthy();
-  expect(screen.getByRole("heading", { name: "2번 · 기본 문제" })).toBeTruthy();
+  expect(screen.queryByRole("heading", { name: "2번 · 기본 문제" })).toBeNull();
   expect(screen.getByRole("heading", { name: "1번 · 심화 문제" })).toBeTruthy();
+  const basic = screen
+    .getByRole("heading", { name: "기본 문제" })
+    .closest("section")!;
+  const deep = screen
+    .getByRole("heading", { name: "심화 문제" })
+    .closest("section")!;
+  expect(within(basic).getByText("1 / 2").getAttribute("aria-live")).toBe(
+    "polite",
+  );
+  expect(
+    within(basic)
+      .getByRole("button", { name: "이전 문제" })
+      .getAttribute("aria-disabled"),
+  ).toBe("true");
+  expect(
+    within(deep)
+      .getByRole("button", { name: "다음 문제" })
+      .getAttribute("aria-disabled"),
+  ).toBe("true");
   expect(
     await screen.findByText("심화 문제는 아직 준비 중이에요"),
   ).toBeTruthy();
   expect(screen.getByText("등식을 살펴봐요")).toBeTruthy();
   expect(screen.getByText("맞았어요")).toBeTruthy();
-  expect(screen.getAllByText("풀지 않은 문제")).toHaveLength(2);
+  expect(screen.getByText("풀지 않은 문제")).toBeTruthy();
+  fireEvent.click(within(basic).getByRole("button", { name: "다음 문제" }));
+  expect(within(basic).getByText("2 / 2")).toBeTruthy();
+  expect(screen.getByRole("heading", { name: "2번 · 기본 문제" })).toBeTruthy();
+  expect(
+    within(basic)
+      .getByRole("button", { name: "다음 문제" })
+      .getAttribute("aria-disabled"),
+  ).toBe("true");
+  fireEvent.click(within(basic).getByRole("button", { name: "이전 문제" }));
+  expect(screen.getByRole("heading", { name: "1번 · 기본 문제" })).toBeTruthy();
   expect(screen.queryByText(/\d+\s*(점|%)/)).toBeNull();
 });
 

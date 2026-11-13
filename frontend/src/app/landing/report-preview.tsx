@@ -1,3 +1,6 @@
+import { Badge } from "@astryxdesign/core/Badge";
+import { Card } from "@astryxdesign/core/Card";
+import { HStack } from "@astryxdesign/core/HStack";
 import { Heading } from "@astryxdesign/core/Heading";
 import { Text } from "@astryxdesign/core/Text";
 import { VStack } from "@astryxdesign/core/VStack";
@@ -72,15 +75,18 @@ export const sampleReport: Report = {
 
 export default function ReportPreview() {
   return (
-    <VStack gap={5}>
-      <VStack gap={1}>
-        <Text type="supporting">중1 · 문자의 사용과 식 · 9수02-03</Text>
-        <Heading level={2}>샘플 리포트</Heading>
+    <Card>
+      <VStack gap={5}>
+        <HStack gap={2} vAlign="center" wrap="wrap">
+          <Heading level={2}>샘플 리포트</Heading>
+          <Text type="supporting">중1 · 문자의 사용과 식</Text>
+          <Badge label="예시" variant="neutral" />
+        </HStack>
         <Text as="p" type="supporting">
           아래 내용은 리포트가 어떻게 보이는지 알려 주는 예시예요.
         </Text>
+        <ReportSummary report={sampleReport} nested />
       </VStack>
-      <ReportSummary report={sampleReport} />
-    </VStack>
+    </Card>
   );
 }

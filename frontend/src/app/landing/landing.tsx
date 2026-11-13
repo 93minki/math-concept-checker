@@ -2,30 +2,16 @@ import { Card } from "@astryxdesign/core/Card";
 import { Grid } from "@astryxdesign/core/Grid";
 import { Heading } from "@astryxdesign/core/Heading";
 import { List, ListItem } from "@astryxdesign/core/List";
-import { Section } from "@astryxdesign/core/Section";
 import { Text } from "@astryxdesign/core/Text";
 import { VStack } from "@astryxdesign/core/VStack";
+import Hero from "./variants/hero";
 import ReportPreview, { ConceptSummary } from "./report-preview";
-import { heroDescription, heroTitle, reasons, steps } from "./landing-content";
+import { reasons, steps } from "./landing-content";
 
 export default function Landing() {
   return (
     <VStack as="main" className="landing" gap={10}>
-      <Section variant="muted" padding={8}>
-        <VStack gap={3} hAlign="center">
-          <Heading
-            level={1}
-            type="display-2"
-            justify="center"
-            textWrap="balance"
-          >
-            {heroTitle}
-          </Heading>
-          <Text as="p" type="large" justify="center" textWrap="pretty">
-            {heroDescription}
-          </Text>
-        </VStack>
-      </Section>
+      <Hero />
 
       <VStack gap={4}>
         <Heading level={2}>같은 시험, 다르게 보기</Heading>
@@ -36,7 +22,18 @@ export default function Landing() {
               <Text type="display-2" weight="bold">
                 70점
               </Text>
-              <Text as="p">어디서 막혔는지는 알 수 없어요</Text>
+              <Grid columns={{ minWidth: 52, max: 5 }} gap={2}>
+                {Array.from({ length: 10 }, (_, index) => (
+                  <VStack key={index} gap={1} hAlign="center">
+                    <Text type="supporting">{index + 1}번</Text>
+                    <Text weight="bold">{index < 7 ? "✓ 맞음" : "✗ 틀림"}</Text>
+                  </VStack>
+                ))}
+              </Grid>
+              <Text as="p">
+                몇 번을 틀렸는지는 알아도, 어떤 개념에서 막혔는지는 알 수
+                없어요.
+              </Text>
             </VStack>
           </Card>
           <Card>

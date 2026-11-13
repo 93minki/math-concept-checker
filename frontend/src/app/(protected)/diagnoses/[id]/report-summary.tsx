@@ -61,7 +61,13 @@ export function StageIndicator({
   );
 }
 
-export default function ReportSummary({ report }: { report: Report }) {
+export default function ReportSummary({
+  report,
+  nested = false,
+}: {
+  report: Report;
+  nested?: boolean;
+}) {
   const descriptions: Record<string, string> = {
     "깊이 이해": "이 단원의 개념을 대부분 깊이 이해하고 있어요.",
     "기본 이해":
@@ -72,7 +78,7 @@ export default function ReportSummary({ report }: { report: Report }) {
   return (
     <VStack gap={6}>
       <VStack gap={3}>
-        <Heading level={3}>단원 이해</Heading>
+        <Heading level={nested ? 4 : 3}>단원 이해</Heading>
         <StageIndicator name="단원" stage={report.unit_stage} />
         <Text type="supporting">
           {descriptions[report.unit_stage ?? ""] ??
@@ -81,12 +87,12 @@ export default function ReportSummary({ report }: { report: Report }) {
       </VStack>
 
       <VStack gap={4}>
-        <Heading level={3}>개념별 이해</Heading>
+        <Heading level={nested ? 4 : 3}>개념별 이해</Heading>
         <Grid columns={{ minWidth: 240, max: 2 }} gap={3}>
           {report.concepts.map((concept, index) => (
             <Card key={`${concept.name}-${index}`}>
               <VStack gap={3}>
-                <Heading level={4}>{concept.name}</Heading>
+                <Heading level={nested ? 5 : 4}>{concept.name}</Heading>
                 <StageIndicator
                   name={concept.name}
                   stage={concept.stage}
@@ -102,7 +108,9 @@ export default function ReportSummary({ report }: { report: Report }) {
                   <List
                     density="compact"
                     header={
-                      <Heading level={5}>이렇게 생각했을 수 있어요</Heading>
+                      <Heading level={nested ? 6 : 5}>
+                        이렇게 생각했을 수 있어요
+                      </Heading>
                     }
                   >
                     {concept.misconceptions.map((text, itemIndex) => (
@@ -123,7 +131,7 @@ export default function ReportSummary({ report }: { report: Report }) {
       {report.text.next_steps && (
         <Section variant="muted">
           <VStack gap={2}>
-            <Heading level={3}>다음 학습 방향</Heading>
+            <Heading level={nested ? 4 : 3}>다음 학습 방향</Heading>
             <Text as="p">
               <MathText text={report.text.next_steps} />
             </Text>
@@ -132,7 +140,7 @@ export default function ReportSummary({ report }: { report: Report }) {
       )}
       {report.text.not_understood && (
         <VStack gap={2}>
-          <Heading level={3}>이해하지 못한 부분</Heading>
+          <Heading level={nested ? 4 : 3}>이해하지 못한 부분</Heading>
           <Text as="p">
             <MathText text={report.text.not_understood} />
           </Text>
@@ -140,7 +148,7 @@ export default function ReportSummary({ report }: { report: Report }) {
       )}
       {report.text.misconception_explanations && (
         <VStack gap={2}>
-          <Heading level={3}>헷갈렸을 수 있는 부분</Heading>
+          <Heading level={nested ? 4 : 3}>헷갈렸을 수 있는 부분</Heading>
           <Text as="p">
             <MathText text={report.text.misconception_explanations} />
           </Text>
