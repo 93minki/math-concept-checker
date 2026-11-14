@@ -9,6 +9,14 @@ export function rememberPrivacyConsent() {
   }
 }
 
+// Consent covers one signup; clear it once that signup completes.
+export function clearPrivacyConsent() {
+  try {
+    window.sessionStorage.removeItem("privacy-consent");
+  } catch {
+    // Storage may be unavailable; nothing was stored then.
+  }
+}
 export function hasPrivacyConsent() {
   try {
     return window.sessionStorage.getItem("privacy-consent") === "agreed";
