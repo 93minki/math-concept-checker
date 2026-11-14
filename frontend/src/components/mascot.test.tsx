@@ -5,10 +5,10 @@ import Mascot, { type MascotMood } from "./mascot";
 afterEach(cleanup);
 
 test.each([
-  ["thinking", "gaenyeom-thinking.png"],
-  ["resting", "gaenyeom-resting.png"],
-  ["waving", "gaenyeom-cheer.png"],
-  ["waiting", "gaenyeom-waiting.png"],
+  ["thinking", "gaenyeom-thinking.webp"],
+  ["resting", "gaenyeom-resting.webp"],
+  ["waving", "gaenyeom-cheer.webp"],
+  ["waiting", "gaenyeom-waiting.webp"],
 ] as const)("개념이 %s는 자기 그림을 장식으로 보인다", (mood, file) => {
   const { container } = render(<Mascot mood={mood as MascotMood} />);
   const wrapper = container.querySelector(`.mascot-${mood}`);

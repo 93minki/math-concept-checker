@@ -7,10 +7,10 @@ import Image from "next/image";
  */
 export type MascotMood = "thinking" | "resting" | "waving" | "waiting";
 const pictures: Record<MascotMood, string> = {
-  thinking: "/images/mascot/gaenyeom-thinking.png",
-  resting: "/images/mascot/gaenyeom-resting.png",
-  waving: "/images/mascot/gaenyeom-cheer.png",
-  waiting: "/images/mascot/gaenyeom-waiting.png",
+  thinking: "/images/mascot/gaenyeom-thinking.webp",
+  resting: "/images/mascot/gaenyeom-resting.webp",
+  waving: "/images/mascot/gaenyeom-cheer.webp",
+  waiting: "/images/mascot/gaenyeom-waiting.webp",
 };
 
 export default function Mascot({

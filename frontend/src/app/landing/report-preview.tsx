@@ -86,7 +86,7 @@ export default function ReportPreview() {
         </p>
         <Image
           className="sample-illustration"
-          src="/images/landing/report.png"
+          src="/images/landing/report.webp"
           alt=""
           width={1254}
           height={1254}

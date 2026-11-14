@@ -23,7 +23,7 @@ function LearningMapIllustration() {
       </svg>
       <Image
         className="hero-laptop"
-        src="/images/landing/laptop-learning-map.png"
+        src="/images/landing/laptop-learning-map.webp"
         alt=""
         width={1448}
         height={1086}
@@ -35,7 +35,7 @@ function LearningMapIllustration() {
       </div>
       <Image
         className="hero-books"
-        src="/images/landing/books.png"
+        src="/images/landing/books.webp"
         alt=""
         width={1254}
         height={1254}
