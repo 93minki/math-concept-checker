@@ -597,6 +597,12 @@ h4:not(.astryx-heading) {
   flex-direction: column;
   align-items: stretch;
   width: min(100%, 72rem);
+  /* Same width on every page, centered in the space beside the sidebar. */
+  justify-self: center;
+}
+/* Back link above a page title stays at the start, not stretched. */
+.history-view > :first-child {
+  align-self: flex-start;
 }
 .protected-content > .study-page {
   width: 100%;
@@ -615,13 +621,17 @@ h4:not(.astryx-heading) {
   .protected-header {
     display: none;
   }
+  /* Sticky at top 0 with a full-height box: with top 16px the sidebar sat at
+     y=0 while a page was loading (content shorter than the sidebar, so no
+     room to shift) and jumped to y=16 once it loaded (user 2026-11-14). */
   .study-sidebar {
     position: sticky;
-    top: var(--spacing-4);
+    top: 0;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-6);
-    min-height: calc(100vh - var(--spacing-8));
+    height: 100dvh;
+    overflow-y: auto;
     padding: var(--spacing-4);
     border-right: 1px solid var(--color-border);
   }

@@ -39,6 +39,23 @@ test("사이드바 이동 시 본문과 제목의 가로 위치가 유지된다"
     requiredEnv("E2E_USER_A_PASSWORD"),
   );
   await expect(page.locator(".path-node").first()).toBeVisible();
+  // Record the sidebar box on every frame, including while pages load: a
+  // sticky offset once made it jump 16px during loading (2026-11-14).
+  await page.evaluate(() => {
+    const frames: string[] = [];
+    (window as unknown as { sidebarFrames: string[] }).sidebarFrames = frames;
+    const sample = () => {
+      const box = document
+        .querySelector(".study-sidebar")
+        ?.getBoundingClientRect();
+      if (box)
+        frames.push(
+          [box.x, box.y, box.width, box.height].map(Math.round).join(","),
+        );
+      requestAnimationFrame(sample);
+    };
+    requestAnimationFrame(sample);
+  });
   const initial = await measure(
     page,
     page.getByRole("heading", { name: "진단할 단원을 골라요" }),
@@ -66,6 +83,11 @@ test("사이드바 이동 시 본문과 제목의 가로 위치가 유지된다"
     page,
     page.getByRole("heading", { name: "진단할 단원을 골라요" }),
   );
+  const frames = await page.evaluate(
+    () => (window as unknown as { sidebarFrames: string[] }).sidebarFrames,
+  );
+  expect(frames.length).toBeGreaterThan(0);
+  expect(new Set(frames).size, frames.join(" | ")).toBe(1);
   for (const current of [history, account, returned]) {
     for (const key of Object.keys(initial) as (keyof Geometry)[])
       expect(Math.abs(current[key] - initial[key]), key).toBeLessThanOrEqual(1);
