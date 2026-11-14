@@ -22,6 +22,7 @@ vi.stubGlobal("matchMedia", () => media);
 afterEach(() => {
   cleanup();
   localStorage.clear();
+  document.cookie = "theme=; path=/; max-age=0";
   delete document.documentElement.dataset.theme;
   dark = false;
   vi.restoreAllMocks();
@@ -36,6 +37,7 @@ test("저장된 선택이 없으면 시스템을 따르고 전환하면 저장�
   fireEvent.click(screen.getByRole("button", { name: "라이트 모드로 바꾸기" }));
   expect(document.documentElement.dataset.theme).toBe("light");
   expect(localStorage.getItem("theme")).toBe("light");
+  expect(document.cookie).toContain("theme=light");
   expect(
     screen.getByRole("button", { name: "다크 모드로 바꾸기" }),
   ).toBeTruthy();
@@ -47,6 +49,7 @@ test("저장에 실패해도 화면 테마가 바뀐다", () => {
   render(<ThemeButton />);
   fireEvent.click(screen.getByRole("button", { name: "다크 모드로 바꾸기" }));
   expect(document.documentElement.dataset.theme).toBe("dark");
+  expect(document.cookie).toContain("theme=dark");
   expect(
     screen.getByRole("button", { name: "라이트 모드로 바꾸기" }),
   ).toBeTruthy();

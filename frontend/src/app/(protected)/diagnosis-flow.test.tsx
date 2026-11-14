@@ -76,6 +76,16 @@ const threeGrades: Unit[] = [
   ...units,
   { ...units[1], id: 3, grade: "중3", name: "도형과 식", status: "full" },
 ];
+test("단원을 불러올 때 상태 화면은 학년 탭 뒤에 있다", () => {
+  mocks.getUnits.mockReturnValue(new Promise(() => {}));
+  render(<UnitSelection />);
+  const tabs = screen.getByRole("tablist", { name: "학년 선택" });
+  const loading = screen.getByRole("status");
+  expect(loading.textContent).toContain("단원을 불러오고 있어요");
+  expect(
+    tabs.compareDocumentPosition(loading) & Node.DOCUMENT_POSITION_FOLLOWING,
+  ).toBeTruthy();
+});
 test("학년 탭과 검색 및 진행 상태", async () => {
   mocks.getUnits.mockResolvedValue(threeGrades);
   render(<UnitSelection />);

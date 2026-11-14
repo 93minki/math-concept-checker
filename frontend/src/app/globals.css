@@ -528,6 +528,12 @@ h4:not(.astryx-heading) {
   max-width: 100%;
   height: auto;
 }
+.status-screen[role="status"] {
+  min-height: 60dvh;
+  display: grid;
+  place-content: center;
+  min-width: 0;
+}
 .status-screen .mascot {
   width: min(100%, 60vw);
 }

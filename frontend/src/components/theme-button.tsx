@@ -2,15 +2,33 @@
 import { useSyncExternalStore } from "react";
 import { IconButton } from "@astryxdesign/core/IconButton";
 
-// The stored choice is the source of truth: Astryx's root <Theme> owns
-// <html data-theme> and clears it while the mode is "system".
-export function storedTheme(): "light" | "dark" | null {
+// A valid cookie is shared with the server; localStorage supports older visits.
+export type ThemeChoice = "light" | "dark";
+export function cookieTheme(): ThemeChoice | null {
+  const value = document.cookie
+    .split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith("theme="))
+    ?.slice(6);
+  return value === "light" || value === "dark" ? value : null;
+}
+export function writeThemeCookie(value: ThemeChoice) {
+  document.cookie = `theme=${value}; path=/; max-age=31536000; SameSite=Lax`;
+}
+export function storedTheme(): ThemeChoice | null {
+  const cookie = cookieTheme();
+  if (cookie) return cookie;
   try {
     const value = localStorage.getItem("theme");
     return value === "light" || value === "dark" ? value : null;
   } catch {
     return null;
   }
+}
+export function migrateThemeCookie() {
+  if (cookieTheme()) return;
+  const stored = storedTheme();
+  if (stored) writeThemeCookie(stored);
 }
 function currentTheme(): "light" | "dark" {
   const chosen = storedTheme() ?? document.documentElement.dataset.theme;
@@ -27,9 +45,13 @@ export function subscribeTheme(notify: () => void) {
       : null;
   const onStorage = (event: StorageEvent) => {
     if (event.key !== "theme" && event.key !== null) return;
-    if (event.newValue === "light" || event.newValue === "dark")
+    if (event.newValue === "light" || event.newValue === "dark") {
+      writeThemeCookie(event.newValue);
       document.documentElement.dataset.theme = event.newValue;
-    else delete document.documentElement.dataset.theme;
+    } else {
+      document.cookie = "theme=; path=/; max-age=0; SameSite=Lax";
+      delete document.documentElement.dataset.theme;
+    }
     notify();
   };
   media?.addEventListener("change", notify);
@@ -56,6 +78,7 @@ export default function ThemeButton() {
   function toggle() {
     const next = currentTheme() === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = next;
+    writeThemeCookie(next);
     try {
       localStorage.setItem("theme", next);
     } catch {
