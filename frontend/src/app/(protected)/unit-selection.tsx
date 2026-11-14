@@ -96,33 +96,34 @@ export default function UnitSelection() {
       {/* Grade tabs as a filled segmented bar with each grade's progress
           (user 2026-11-14: the plain tabs looked too thin). The count is
           decorative; the summary under the tabs reads it out. */}
-      <TabList
-        className="grade-tabs"
-        value={query.trim() ? "" : grade}
-        onChange={setGrade}
-        role="tablist"
-        aria-label="학년 선택"
-        size="lg"
-        layout="fill"
-      >
-        {["중1", "중2", "중3"].map((item) => {
-          const { total, conquered } = gradeProgress(units ?? [], item);
-          return (
-            <Tab
-              key={item}
-              value={item}
-              label={item}
-              endContent={
-                units ? (
-                  <span className="grade-tab-count" aria-hidden="true">
-                    {conquered}/{total} 정복
-                  </span>
-                ) : undefined
-              }
-            />
-          );
-        })}
-      </TabList>
+      <div className="grade-tabs">
+        <TabList
+          value={query.trim() ? "" : grade}
+          onChange={setGrade}
+          role="tablist"
+          aria-label="학년 선택"
+          size="lg"
+          layout="fill"
+        >
+          {["중1", "중2", "중3"].map((item) => {
+            const { total, conquered } = gradeProgress(units ?? [], item);
+            return (
+              <Tab
+                key={item}
+                value={item}
+                label={item}
+                endContent={
+                  units ? (
+                    <span className="grade-tab-count" aria-hidden="true">
+                      {conquered}/{total} 정복
+                    </span>
+                  ) : undefined
+                }
+              />
+            );
+          })}
+        </TabList>
+      </div>
       {!units && !error && (
         <StatusScreen
           mood="waiting"
