@@ -362,6 +362,11 @@ Admin = Annotated[AuthUser, Depends(require_admin)]
 Engine = Annotated[RevisionEngine, Depends(get_revision_engine)]
 
 
+@router.get("/admin/me")
+def admin_me(admin: Admin) -> dict[str, bool]:
+    return {"admin": True}
+
+
 class ManualRevision(BaseModel):
     model_config = ConfigDict(extra="forbid")
     payload: Row

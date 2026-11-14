@@ -104,6 +104,7 @@ export const reportQuestion = (
     body: JSON.stringify({ diagnosis_item_id: itemId, kind, description }),
   });
 export const getMyReports = () => request<StudentReport[]>("/question-reports");
+export const getAdminMe = () => request<{ admin: true }>("/admin/me");
 export const getAdminReports = (status?: ReportStatus) =>
   request<AdminGroup[]>(
     `/admin/reports${status ? `?status=${encodeURIComponent(status)}` : ""}`,

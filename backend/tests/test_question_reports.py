@@ -133,6 +133,7 @@ def test_admin_endpoints_reject_non_admin(
     headers = {"Authorization": f"Bearer {token(key)}"}
     q = str(uuid4())
     paths: list[tuple[str, str, dict[str, object] | None]] = [
+        ("GET", "/admin/me", None),
         ("GET", "/admin/reports", None),
         ("GET", f"/admin/questions/{q}", None),
         ("POST", f"/admin/questions/{q}/revisions/ai", None),
@@ -164,6 +165,17 @@ class FakeRevisionEngine:
             "checks": [{"issues": ["오류"]}],
             "ai_cost": "0",
         }
+
+
+def test_admin_me(client: tuple[TestClient, ec.EllipticCurvePrivateKey]) -> None:
+    tc, key = client
+    repo = FakeReports()
+    app.dependency_overrides[get_report_repository] = lambda: repo
+    assert tc.get("/admin/me").status_code == 401
+    headers = {"Authorization": f"Bearer {token(key)}"}
+    assert tc.get("/admin/me", headers=headers).status_code == 403
+    repo.admin = True
+    assert tc.get("/admin/me", headers=headers).json() == {"admin": True}
 
 
 def test_admin_workflow(client: tuple[TestClient, ec.EllipticCurvePrivateKey]) -> None:

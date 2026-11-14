@@ -1,4 +1,5 @@
 import HomeActions from "./home-actions";
+import { AdminProvider, StudentBody } from "./admin-role";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
@@ -21,8 +22,12 @@ export default async function ProtectedLayout({
   if (profile?.signup_status !== "completed") redirect("/signup/complete");
   return (
     <div className="protected-layout">
-      <HomeActions />
-      <div className="protected-content">{children}</div>
+      <AdminProvider>
+        <HomeActions />
+        <div className="protected-content">
+          <StudentBody>{children}</StudentBody>
+        </div>
+      </AdminProvider>
     </div>
   );
 }
