@@ -43,6 +43,17 @@ function open(label: string) {
   return screen.getByRole("region", { name: "단원 내용" });
 }
 afterEach(cleanup);
+test("학습 상태 범례는 첫 단원 노드보다 앞에 있다", () => {
+  const { container } = view([base]);
+  const legend = container.querySelector(".path-legend")!;
+  const firstNode = screen.getByRole("button", { name: "1. 단원, 시작 전" });
+  expect(
+    legend.compareDocumentPosition(firstNode) &
+      Node.DOCUMENT_POSITION_FOLLOWING,
+  ).toBeTruthy();
+  for (const name of ["정복", "진행 중", "기본 이해", "다시 도전", "시작 전"])
+    expect(within(legend as HTMLElement).getByText(name)).toBeTruthy();
+});
 test.each([
   [{ latest_result: latest("깊이 이해") }, "정복", "conquered", "tag"],
   [{ latest_result: latest("기본 이해") }, "기본 이해", "half", "tag"],

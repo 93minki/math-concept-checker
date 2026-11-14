@@ -162,3 +162,22 @@ test("로그아웃 사용자는 내 정보에서 로그인으로 이동한다", 
   await page.goto("/account");
   await expect(page).toHaveURL(/\/login$/);
 });
+
+test("시스템 다크와 라이트 쿠키에서 첫 HTML은 라이트다", async ({
+  browser,
+  baseURL,
+}) => {
+  if (!baseURL) throw new Error("E2E baseURL이 필요해요");
+  const context = await browser.newContext({ baseURL, colorScheme: "dark" });
+  try {
+    await context.addCookies([{ name: "theme", value: "light", url: baseURL }]);
+    const page = await context.newPage();
+    const response = await page.goto("/login");
+    expect(response).not.toBeNull();
+    const html = await response!.text();
+    expect(html.match(/<html\b[^>]*>/i)?.[0]).toMatch(/data-theme="light"/);
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  } finally {
+    await context.close();
+  }
+});

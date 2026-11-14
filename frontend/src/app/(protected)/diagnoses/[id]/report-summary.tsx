@@ -4,7 +4,7 @@ import { Grid } from "@astryxdesign/core/Grid";
 import { Heading } from "@astryxdesign/core/Heading";
 import { HStack } from "@astryxdesign/core/HStack";
 import { List, ListItem } from "@astryxdesign/core/List";
-import { ProgressBar } from "@astryxdesign/core/ProgressBar";
+import StageProgress from "./stage-progress";
 import { Section } from "@astryxdesign/core/Section";
 import { Text } from "@astryxdesign/core/Text";
 import { VStack } from "@astryxdesign/core/VStack";
@@ -50,12 +50,11 @@ export function StageIndicator({
       <HStack gap={2} vAlign="center" wrap="wrap">
         <Badge label={presentation.label} variant={presentation.variant} />
       </HStack>
-      <ProgressBar
-        label={`${name} 이해 단계: ${presentation.label}`}
+      <StageProgress
+        name={name}
+        label={presentation.label}
         value={presentation.value}
-        max={3}
         variant={presentation.variant}
-        isLabelHidden
       />
     </VStack>
   );
@@ -64,9 +63,11 @@ export function StageIndicator({
 export default function ReportSummary({
   report,
   nested = false,
+  preview = false,
 }: {
   report: Report;
   nested?: boolean;
+  preview?: boolean;
 }) {
   const descriptions: Record<string, string> = {
     "깊이 이해": "이 단원의 개념을 대부분 깊이 이해하고 있어요.",
@@ -104,7 +105,7 @@ export default function ReportSummary({
                 {concept.deep_not_measured && (
                   <Text type="supporting">심화 문제는 아직 준비 중이에요</Text>
                 )}
-                {concept.misconceptions.length > 0 && (
+                {!preview && concept.misconceptions.length > 0 && (
                   <List
                     density="compact"
                     header={
@@ -132,13 +133,26 @@ export default function ReportSummary({
         <Section variant="muted">
           <VStack gap={2}>
             <Heading level={nested ? 4 : 3}>다음 학습 방향</Heading>
-            <Text as="p">
-              <MathText text={report.text.next_steps} />
-            </Text>
+            {preview ? (
+              <ul className="preview-next-list">
+                <li>
+                  방정식과 항등식의 차이를 구별하는 부분을 다시 학습해 보세요.
+                </li>
+                <li>등식의 성질을 다양한 문제에 먼저 적용해 보세요.</li>
+                <li>
+                  이해하지 못한 개념을 중심으로 짧게 복습한 뒤, 다시 진단해
+                  보세요.
+                </li>
+              </ul>
+            ) : (
+              <Text as="p">
+                <MathText text={report.text.next_steps} />
+              </Text>
+            )}
           </VStack>
         </Section>
       )}
-      {report.text.not_understood && (
+      {!preview && report.text.not_understood && (
         <VStack gap={2}>
           <Heading level={nested ? 4 : 3}>이해하지 못한 부분</Heading>
           <Text as="p">
@@ -146,7 +160,7 @@ export default function ReportSummary({
           </Text>
         </VStack>
       )}
-      {report.text.misconception_explanations && (
+      {!preview && report.text.misconception_explanations && (
         <VStack gap={2}>
           <Heading level={nested ? 4 : 3}>헷갈렸을 수 있는 부분</Heading>
           <Text as="p">

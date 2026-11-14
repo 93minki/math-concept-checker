@@ -28,7 +28,9 @@ export default function StatusScreen({
       {...(live ? { role: "status", "aria-live": "polite" as const } : {})}
     >
       <EmptyState
-        icon={<Mascot mood={mood} size={compact ? 120 : 160} />}
+        // Larger than before: at 120-160px the mascot looked lost on the page
+        // (user 2026-11-14). CSS scales it down on narrow screens.
+        icon={<Mascot mood={mood} size={compact ? 220 : 260} />}
         title={title}
         description={description}
         actions={actions}

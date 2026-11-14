@@ -2,6 +2,7 @@
 
 html {
   height: 100%;
+  scrollbar-gutter: stable;
 }
 
 html,
@@ -517,138 +518,25 @@ h4:not(.astryx-heading) {
   }
 }
 
-/* Mascot "개념이" (src/components/mascot.tsx). Theme tokens only, so it
-   follows light and dark mode. */
+/* Mascot "개념이" (src/components/mascot.tsx). A static picture, so there is
+   no motion to reduce. */
 .mascot {
-  overflow: visible;
+  display: block;
+  max-width: 100%;
+  line-height: 0;
 }
-.mascot-fill-accent {
-  fill: var(--color-accent);
+.mascot img {
+  max-width: 100%;
+  height: auto;
 }
-.mascot-fill-card {
-  fill: var(--color-background-card);
+.status-screen[role="status"] {
+  min-height: 60dvh;
+  display: grid;
+  place-content: center;
+  min-width: 0;
 }
-.mascot-fill-ink {
-  fill: var(--color-text-primary);
-}
-.mascot-line {
-  stroke: var(--color-text-primary);
-  stroke-width: 3;
-}
-.mascot-stroke-ink,
-.mascot-stroke-accent {
-  fill: none;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.mascot-stroke-ink {
-  stroke: var(--color-text-primary);
-}
-.mascot-stroke-accent {
-  stroke: var(--color-accent);
-}
-.mascot-cheek {
-  fill: var(--color-accent);
-  opacity: 0.18;
-}
-.mascot-shadow {
-  fill: var(--color-text-primary);
-  opacity: 0.08;
-}
-.mascot-dot {
-  fill: var(--color-text-secondary);
-}
-.mascot-body,
-.mascot-pencil,
-.mascot-wave,
-.mascot-dot,
-.mascot-zz path {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .mascot-thinking .mascot-pencil {
-    transform-origin: 0% 100%;
-    animation: mascot-tap 0.9s ease-in-out infinite;
-  }
-  .mascot-thinking .mascot-dot {
-    animation: mascot-dot 1.2s ease-in-out infinite;
-  }
-  .mascot-thinking .mascot-dot-2 {
-    animation-delay: 0.2s;
-  }
-  .mascot-thinking .mascot-dot-3 {
-    animation-delay: 0.4s;
-  }
-  .mascot-resting .mascot-body {
-    animation: mascot-breathe 3.2s ease-in-out infinite;
-  }
-  .mascot-resting .mascot-zz path {
-    animation: mascot-float 3.2s ease-in-out infinite;
-  }
-  .mascot-resting .mascot-zz path + path {
-    animation-delay: 0.8s;
-  }
-  .mascot-waving .mascot-wave {
-    transform-origin: 0% 100%;
-    animation: mascot-wave 1.6s ease-in-out infinite;
-  }
-}
-@keyframes mascot-tap {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-12deg);
-  }
-}
-@keyframes mascot-dot {
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-4px);
-  }
-}
-@keyframes mascot-breathe {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(2px);
-  }
-}
-@keyframes mascot-float {
-  0% {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-}
-@keyframes mascot-wave {
-  0%,
-  60%,
-  100% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(-18deg);
-  }
-  40% {
-    transform: rotate(10deg);
-  }
+.status-screen .mascot {
+  width: min(100%, 60vw);
 }
 
 /* Header nav: icon + text; phones keep only the icon (one line). */
@@ -707,8 +595,18 @@ h4:not(.astryx-heading) {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  width: min(100%, 72rem);
+  /* Same width on every page, centered in the space beside the sidebar. */
+  justify-self: center;
+}
+/* Back link above a page title stays at the start, not stretched. */
+.history-view > :first-child {
+  align-self: flex-start;
+}
+.protected-content > .study-page {
   width: 100%;
+  min-width: 0;
 }
 .study-sidebar {
   display: none;
@@ -723,13 +621,17 @@ h4:not(.astryx-heading) {
   .protected-header {
     display: none;
   }
+  /* Sticky at top 0 with a full-height box: with top 16px the sidebar sat at
+     y=0 while a page was loading (content shorter than the sidebar, so no
+     room to shift) and jumped to y=16 once it loaded (user 2026-11-14). */
   .study-sidebar {
     position: sticky;
-    top: var(--spacing-4);
+    top: 0;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-6);
-    min-height: calc(100vh - var(--spacing-8));
+    height: 100dvh;
+    overflow-y: auto;
     padding: var(--spacing-4);
     border-right: 1px solid var(--color-border);
   }
@@ -763,9 +665,6 @@ h4:not(.astryx-heading) {
     align-items: center;
     gap: var(--spacing-2);
   }
-  .protected-content .home-page {
-    width: min(100%, 75rem);
-  }
 }
 
 .account-page {
@@ -784,4 +683,40 @@ h4:not(.astryx-heading) {
 }
 .account-details dd {
   overflow-wrap: anywhere;
+}
+
+/* Grade tabs on / (user 2026-11-14: "너무 빈약해보여"): a card-like bar,
+   tabs fill it equally; each tab stacks the grade over its progress
+   ("중1" / "0/8 정복"). TabList does not take a className, so the wrapper
+   carries it. */
+.grade-tabs {
+  padding: var(--spacing-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-background-card);
+}
+.grade-tabs .astryx-tab {
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-1);
+  height: auto;
+  min-height: 4.25rem;
+  padding-block: var(--spacing-2);
+  border-radius: var(--radius-element);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.grade-tabs .astryx-tab[aria-selected="true"] {
+  background: var(--color-accent-muted);
+  color: var(--color-text-accent);
+}
+/* The pill already marks the selected tab; Astryx's underline sat below the
+   rounded pill and stuck out past its corners (user 2026-11-14). */
+.grade-tabs .astryx-tab-indicator {
+  display: none;
+}
+.grade-tab-count {
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 500;
 }

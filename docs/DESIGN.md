@@ -867,10 +867,10 @@
   - 컨트롤 높이: `--size-element-md/lg` 44px. Astryx 기본 32·36px은 터치 기준 44px(위 "화면", WCAG 2.5.5) 미달.
   - `astryx theme build` → `theme add concept` → `theme use concept`로 빌드한 테마를 쓴다(런타임 테마는 SSR에서 깜빡임, `astryx docs use-a-theme`). 생성 파일(`src/astryx-themes.ts`, `src/themes/concept/concept.{js,css,d.ts}`)은 손대지 않고 `.prettierignore`에 둔다(Prettier가 바꾸면 `astryx doctor` 실패). 설명 파일 `conceptTheme.doc.mjs`는 CLI가 쓰므로 두고 ESLint 대상에서만 뺀다(사용자 결정).
 - **CSS:** `@astryxdesign/core/reset.css`·`astryx.css`·테마 CSS는 `@layer` 안에 있다. `globals.css`는 layer 밖이라 항상 이기므로 Astryx 컴포넌트를 덮는 태그 전체 규칙을 두지 않는다. `globals.css`의 색·간격·모서리는 Astryx 토큰(`--color-*`, `--radius-*`, `--size-element-*` 등)만 쓴다.
-- **다크·라이트 전환:** 기본은 시스템. 머리말 해·달 버튼이 `localStorage.theme`에 저장하고, `next/script` `beforeInteractive` 스크립트가 그리기 전에 `<html data-theme>`를 설정한다. Astryx 최상위 `<Theme mode>`가 `<html data-theme>`를 관리하므로 모드는 `localStorage`에서 읽는다(`theme-button.tsx` `storedTheme()`).
+- **다크·라이트 전환:** 기본은 시스템. 머리말 해·달 버튼이 `theme` 쿠키(1년, `SameSite=Lax`, 경로 `/`)와 `localStorage.theme`에 저장한다. 서버 루트 레이아웃이 쿠키를 읽어 `<html data-theme>`와 Astryx `<Theme>` 초기 모드에 반영한다. 기존 로컬 저장값은 쿠키가 없을 때 초기 스크립트 또는 마운트에서 옮긴다. `cookies()` 사용으로 루트 레이아웃 아래 페이지가 요청마다 동적 렌더링되며 `proxy.ts`의 `private, no-store`를 유지한다 (사용자 지시 2026-11-14).
 - **로그인·가입 폼:** 입력창과 제출 버튼은 기본 HTML 요소로 둔다. Astryx `Button`으로는 스크립트 실행 전 진짜 `disabled`를 보장할 수 없어서다(`AGENTS.md` 4.3). 모양은 Astryx 토큰으로 맞춘다.
 - **리포트 표시** (`report-summary.tsx`): 단원·개념 단계를 Badge(글자) + 3칸 ProgressBar로. 숫자("3단계 중 N단계" 등)는 보이지 않는다(`docs/SCORING.md` 5절). 랜딩의 "샘플 리포트"가 같은 컴포넌트에 `9수02-03` 예시 데이터를 넣어 쓴다.
-- **캐릭터 "개념이"** (`src/components/mascot.tsx`, 사용자 요청 2026-11-13): 수학 개념을 확인하는 학생 모습 SVG, 테마 토큰 색. 생각 중(로딩·리포트 작성), 쉬는 중(1단계 도중 중단된 진단), 반가움(지난 기록 없음). `StatusScreen`(Astryx `EmptyState` icon 칸)으로 제목·설명·다음 행동과 함께 쓴다. `prefers-reduced-motion`이면 멈춘다. 장식이라 화면 읽기에서 숨긴다.
+- **캐릭터 "개념이"** (`src/components/mascot.tsx`, 사용자 요청 2026-11-13, 그림 교체 2026-11-14): 사용자가 준 3D 그림(투명 WebP, `next/image`, `public/images/mascot/`, 사용자 "GPT가 만들어준게 더 좋아보이니까 저걸로 바꾸고"). 상황별: 기다림 `gaenyeom-waiting`(불러오는 중), 생각 중 `gaenyeom-thinking`(리포트 작성), 쉬는 중 `gaenyeom-resting`(1단계 도중 중단된 진단), 반가움 `gaenyeom-cheer`(지난 기록 없음, 랜딩). `StatusScreen`(Astryx `EmptyState` icon 칸)으로 제목·설명·다음 행동과 함께 쓴다. 움직이지 않는다. 장식이라 화면 읽기에서 숨긴다(`alt=""`, `aria-hidden`). 랜딩 그림은 `public/images/landing/`(노트북·책·리포트, 노트북 화면의 자물쇠는 장식으로 둠 — 사용자 "그냥 냅둬").
 - **브라우저 지원:** Astryx는 CSS anchor positioning·`light-dark()`·Popover API를 쓴다 (`astryx docs browser-support`). 학생 기기 범위는 `docs/PROGRESS.md` 공개 전 확인 항목.
 
 
@@ -882,11 +882,12 @@
 - **그림자** (사용자 지적 2회 "과하다"): 누르는 모양을 위한 아래 두께 그림자는 2px 이하, 다크는 더 옅게. 고른 항목의 빛은 `--color-accent-muted`로 은은하게.
 - **색만으로 뜻을 전하지 않는다** (WCAG 1.4.1): 상태는 색 + 아이콘·글자. 예: 결과 보기 테두리 색 + "✓ 정답"/"✗ 내 답"(문제 판 안, 고정 색), 학습 경로 노드 색 + SVG 아이콘 + `aria-label`.
 - **아이콘**: 이모지를 쓰지 않고 직접 그린 SVG(선 두께 2, `currentColor`, `aria-hidden`)를 쓴다(`home-actions.tsx`, `learning-map.tsx`).
-- **화면 틀** (사용자 결정 2026-11-14): 로그인 뒤 화면은 900px 이상에서 왼쪽 사이드바(브랜드, 학습하기 `/`, 지난 기록 `/history`, 테마 전환, 로그아웃, 현재 페이지 `aria-current="page"`), 900px 미만에서는 머리말. 폰 머리말은 동작마다 아이콘 Button 하나(글자는 숨기고 `label`로 이름). 없는 기능(랭킹, 학습 현황 등)은 메뉴에 넣지 않는다.
+- **화면 틀** (사용자 결정 2026-11-14): 로그인 뒤 화면은 900px 이상에서 왼쪽 사이드바(브랜드, 학습하기 `/`, 지난 기록 `/history`, 테마 전환, 로그아웃, 현재 페이지 `aria-current="page"`), 900px 미만에서는 머리말. 폰 머리말은 동작마다 아이콘 Button 하나(글자는 숨기고 `label`로 이름). 없는 기능(랭킹, 학습 현황 등)은 메뉴에 넣지 않는다. 본문은 모든 페이지가 같은 폭(최대 72rem)으로 사이드바 옆 공간 가운데에 놓이고, `html`은 스크롤바 자리를 늘 비워 둔다(`scrollbar-gutter: stable`). 사이드바는 `sticky; top: 0`, 높이 `100dvh` — `top: 16px`이면 불러오는 중에 16px 튀었다(사용자 지적, `e2e-dev/layout-shift.flow.spec.ts`가 전환 중 모든 프레임을 잰다).
 - **학습 지도** (사용자 결정 2026-11-14, 사용자 시안 그림 기준): 학년 탭 → 진도 요약("중N · M단원 중 K개 정복", 막대, "K / M") → 왼쪽 학습 경로 + 오른쪽 단원 내용(sticky). 900px 미만은 단원 내용이 아래에서 올라오는 시트(닫기 버튼·Escape).
-  - 경로: 점 격자 바탕, 둥근 네모 노드(데스크톱 64px, 폰 56px)를 곡선으로 잇고, 노드 옆에 알약 이름 칩, 아래에 범례.
+  - 학년 탭: 테두리 있는 막대 안에서 같은 폭, 탭마다 학년(크게) 위 / "N/M 정복"(작게, 화면 읽기에서는 숨김) 아래, 고른 학년은 연보라 바탕만(Astryx 밑줄 숨김). Astryx `TabList`는 `className`을 받지 않아 감싼 요소에 클래스를 둔다. 범례는 경로 위. 불러오는 중 개념이는 학년 탭 아래.
+  - 경로: 점 격자 바탕, 둥근 네모 노드(데스크톱 64px, 폰 56px)를 곡선으로 잇고, 노드 옆에 알약 이름 칩, 경로 위에 범례.
   - 노드 상태(`src/lib/unit-progress.ts`): 정복=강조색 채움+체크, 완료=진한 회색+체크, 기본 이해=경고색+반 채운 원, 다시 도전=오류색+회전 화살표, 진행 중=강조색 두꺼운 테두리+▶, 시작 전·준비 중=회색+번호(준비 중은 더 흐리게).
   - **순서 잠금·자물쇠 없음, "다음 단원" 추천 없음**: 단원은 서로 독립된 자가 진단이라 어느 단원이든 언제든 시작한다(사용자 "이전 단원 완료해야 다음 단원을 진행하는 그런 시스템은 아니야"). 개념이는 학습 지도에 두지 않는다.
   - 단원 내용: 아이콘 타일, 제목, 출판사, 상태 Badge, "주요 개념" 칩(`GET /units`의 `concepts`), 큰 주 동작 버튼 + 더보기(결과 보기·새로 시작하기). 열린 더보기 메뉴가 있으면 Escape는 메뉴만 닫는다.
-- **랜딩** (사용자 확정 2026-11-13): 순서는 소개(히어로 A: 문구 + 개념이·리포트 미니 카드, `src/app/landing/hero.tsx`) → 점수와 개념 비교(채점표, 3칸 단계 막대) → 샘플 리포트(한 영역, 머리줄 "샘플 리포트 · 예시") → 진단 방법 → 이유.
+- **랜딩** (사용자 시안 그림 기준 2026-11-14, `docs/plans/2026-11-14_landing.md`): 순서는 머리말(로그인·회원가입·테마) → 히어로(카드 없이 전체 폭 연보라 그라데이션, "점수 말고, 개념을 확인해요", 오른쪽 3D 노트북 그림 + 개념이 + 책) → "같은 시험, 다르게 보기"(점수 70점 + 10문항 칸 / 개념별 막대 + 단계 칩) → 샘플 리포트(연보라 판, 리포트 그림 + 흰 리포트 카드, **퍼센트 없이** 단계 칩·3칸 막대) → 진단 4단계 → 이유 카드 3개 → 진한 보라 그라데이션 띠(흰 글자를 글자 요소에 직접 지정 — Astryx 기본 h2/p 색이 물려받은 색보다 우선함) "지금 시작하기"(요금 정책이 없어 "무료" 문구 금지). 3D 그림은 사용자가 준 PNG를 WebP로 바꿔 둔다(`public/images/landing/`·`mascot/`, `cwebp -q 90 -alpha_q 100`, 화면 표시 크기의 2배로 줄임 — 개념이·책·리포트 640px, 노트북 1200px. 원본 PNG 9.9MB → 348KB, 사용자 결정 2026-11-14. 원본은 저장소에 넣지 않는다), `next/image`.
 - **리포트·결과** (사용자 확정 2026-11-13): 리포트 문장은 한 단으로 쌓고 "다음 학습 방향"을 먼저 강조. 문제별 결과는 기본·심화 묶음마다 한 문제씩 이전/다음 + "n / m", 카드 제목에 번호("3번 · 기본 문제"). 숫자 점수는 보이지 않는다(`docs/SCORING.md` 5절).
