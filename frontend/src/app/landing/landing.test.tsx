@@ -79,8 +79,12 @@ test("랜딩 구역 순서와 개념 단계 막대 및 링크를 표시한다", 
   ).toBe(false);
   expect(within(hero).getByText("중학교 23개 단원")).toBeTruthy();
   expect(within(hero).getByText("개념 3단계 리포트")).toBeTruthy();
-  expect(hero.querySelector(".mascot-waving")).toBeTruthy();
-  expect(hero.querySelector(".laptop-screen")).toBeTruthy();
+  const mascot = hero.querySelector(".mascot-waving");
+  expect(mascot?.getAttribute("aria-hidden")).toBe("true");
+  expect(mascot?.querySelector("img")?.getAttribute("alt")).toBe("");
+  const laptop = hero.querySelector("img.hero-laptop");
+  expect(laptop?.getAttribute("src")).toContain("laptop-learning-map");
+  expect(laptop?.getAttribute("alt")).toBe("");
   expect(
     within(hero)
       .getByRole("link", { name: "개념 진단 시작" })

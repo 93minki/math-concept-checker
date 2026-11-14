@@ -870,7 +870,7 @@
 - **다크·라이트 전환:** 기본은 시스템. 머리말 해·달 버튼이 `localStorage.theme`에 저장하고, `next/script` `beforeInteractive` 스크립트가 그리기 전에 `<html data-theme>`를 설정한다. Astryx 최상위 `<Theme mode>`가 `<html data-theme>`를 관리하므로 모드는 `localStorage`에서 읽는다(`theme-button.tsx` `storedTheme()`).
 - **로그인·가입 폼:** 입력창과 제출 버튼은 기본 HTML 요소로 둔다. Astryx `Button`으로는 스크립트 실행 전 진짜 `disabled`를 보장할 수 없어서다(`AGENTS.md` 4.3). 모양은 Astryx 토큰으로 맞춘다.
 - **리포트 표시** (`report-summary.tsx`): 단원·개념 단계를 Badge(글자) + 3칸 ProgressBar로. 숫자("3단계 중 N단계" 등)는 보이지 않는다(`docs/SCORING.md` 5절). 랜딩의 "샘플 리포트"가 같은 컴포넌트에 `9수02-03` 예시 데이터를 넣어 쓴다.
-- **캐릭터 "개념이"** (`src/components/mascot.tsx`, 사용자 요청 2026-11-13): 수학 개념을 확인하는 학생 모습 SVG, 테마 토큰 색. 생각 중(로딩·리포트 작성), 쉬는 중(1단계 도중 중단된 진단), 반가움(지난 기록 없음). `StatusScreen`(Astryx `EmptyState` icon 칸)으로 제목·설명·다음 행동과 함께 쓴다. `prefers-reduced-motion`이면 멈춘다. 장식이라 화면 읽기에서 숨긴다.
+- **캐릭터 "개념이"** (`src/components/mascot.tsx`, 사용자 요청 2026-11-13, 그림 교체 2026-11-14): 사용자가 준 3D 그림 `public/images/mascot/gaenyeom-cheer.png`(투명 PNG, `next/image`)를 모든 상황(생각 중·쉬는 중·반가움)에 같이 쓴다 — 그림이 하나뿐(사용자 "GPT가 만들어준게 더 좋아보이니까 저걸로 바꾸고"). `StatusScreen`(Astryx `EmptyState` icon 칸)으로 제목·설명·다음 행동과 함께 쓴다. 움직이지 않는다. 장식이라 화면 읽기에서 숨긴다(`alt=""`, `aria-hidden`). 랜딩 그림은 `public/images/landing/`(노트북·책·리포트, 노트북 화면의 자물쇠는 장식으로 둠 — 사용자 "그냥 냅둬").
 - **브라우저 지원:** Astryx는 CSS anchor positioning·`light-dark()`·Popover API를 쓴다 (`astryx docs browser-support`). 학생 기기 범위는 `docs/PROGRESS.md` 공개 전 확인 항목.
 
 

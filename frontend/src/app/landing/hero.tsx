@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@astryxdesign/core/Button";
 import Mascot from "@/components/mascot";
 import LandingIcon from "./landing-icons";
@@ -20,54 +21,26 @@ function LearningMapIllustration() {
           strokeLinecap="round"
         />
       </svg>
-      <div className="laptop">
-        <div className="laptop-screen">
-          <div className="laptop-top">
-            중1 · 8단원 <span />
-          </div>
-          <div className="laptop-content">
-            <div className="laptop-path">
-              <p>
-                <b>▶</b> 1. 소인수분해
-              </p>
-              <p>
-                <b>2</b> 2. 정수와 유리수
-              </p>
-              <p>
-                <b>▶</b> 3. 문자의 사용과 식
-              </p>
-            </div>
-            <div className="laptop-details">
-              <strong>소인수분해</strong>
-              <small>동아출판 기준</small>
-              <small>진행 중</small>
-              <span>이어서 풀기</span>
-            </div>
-          </div>
-        </div>
-        <div className="laptop-base" />
-      </div>
+      <Image
+        className="hero-laptop"
+        src="/images/landing/laptop-learning-map.png"
+        alt=""
+        width={1448}
+        height={1086}
+        sizes="(max-width: 800px) 92vw, 38rem"
+        priority
+      />
       <div className="hero-mascot">
         <Mascot mood="waving" size={160} />
       </div>
-      <svg
+      <Image
         className="hero-books"
-        viewBox="0 0 120 80"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M12 54h92v16H12q-8-8 0-16ZM22 35h83v16H22q-8-8 0-16ZM30 17h77v15H30q-8-7 0-15Z"
-          fill="var(--color-accent-muted)"
-          stroke="var(--color-accent)"
-          strokeWidth="2"
-        />
-        <path
-          d="M20 60h76M28 41h69M37 23h61"
-          stroke="var(--color-accent)"
-          strokeWidth="2"
-        />
-      </svg>
+        src="/images/landing/books.png"
+        alt=""
+        width={1254}
+        height={1254}
+        sizes="(max-width: 800px) 34vw, 8rem"
+      />
     </div>
   );
 }

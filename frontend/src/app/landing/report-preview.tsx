@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "@astryxdesign/core/Badge";
 import { Card } from "@astryxdesign/core/Card";
 import ReportSummary, {
@@ -83,49 +84,14 @@ export default function ReportPreview() {
           실제 리포트처럼, 단원별로 개념 이해 수준과 학습 방향을 한눈에 확인해
           보세요.
         </p>
-        <svg
+        <Image
           className="sample-illustration"
-          viewBox="0 0 160 160"
-          aria-hidden="true"
-          fill="none"
-        >
-          <rect
-            x="18"
-            y="42"
-            width="100"
-            height="112"
-            rx="12"
-            transform="rotate(-18 18 42)"
-            fill="var(--color-accent-muted)"
-            stroke="var(--color-accent)"
-            strokeWidth="2"
-          />
-          <rect
-            x="28"
-            y="29"
-            width="100"
-            height="112"
-            rx="12"
-            transform="rotate(-12 28 29)"
-            fill="var(--color-background-card)"
-            stroke="var(--color-accent)"
-            strokeWidth="2"
-          />
-          <path
-            d="m50 54 49-10M53 65l34-7M62 112v-18m14 15V85m14 20V73"
-            stroke="var(--color-accent)"
-            strokeWidth="7"
-            strokeLinecap="round"
-          />
-          <circle cx="121" cy="39" r="17" fill="var(--color-accent)" />
-          <path
-            d="m113 39 5 5 10-11"
-            stroke="var(--color-on-accent)"
-            strokeWidth="3"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+          src="/images/landing/report.png"
+          alt=""
+          width={1254}
+          height={1254}
+          sizes="13rem"
+        />
       </div>
       <Card>
         <div className="sample-card">
