@@ -7,8 +7,6 @@ import { TabList, Tab } from "@astryxdesign/core/TabList";
 import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
 import LearningMap from "./learning-map";
-import { usePathVariant, VariantPicker } from "./learning-map-variants/variant";
-import { unitProgress } from "@/lib/unit-progress";
 import { useEffect, useRef, useState } from "react";
 import {
   ApiError,
@@ -20,7 +18,6 @@ import {
 
 export default function UnitSelection() {
   const router = useRouter();
-  const variant = usePathVariant();
   const [grade, setGrade] = useState("중1");
   const conflictRef = useRef<HTMLDivElement>(null);
   const [units, setUnits] = useState<Unit[] | null>(null);
@@ -82,19 +79,9 @@ export default function UnitSelection() {
   );
   const displayed =
     filtered?.filter((unit) => query.trim() || unit.grade === grade) ?? [];
-  const nextUnit =
-    displayed.find((unit) => unitProgress(unit) === "in_progress") ??
-    displayed
-      .filter(
-        (unit) =>
-          ["not_started", "retry"].includes(unitProgress(unit)) &&
-          unit.status !== "unavailable",
-      )
-      .sort((a, b) => a.number - b.number)[0];
   return (
     <section className="stack unit-selection">
       <h2>진단할 단원을 골라요</h2>
-      <VariantPicker variant={variant} />
       <TextInput
         label="단원 검색"
         value={query}
@@ -133,14 +120,12 @@ export default function UnitSelection() {
             <VStack key={item} gap={3}>
               <LearningMap
                 key={item}
-                variant={variant}
                 embedded={!!query.trim()}
                 units={group}
                 allUnits={units ?? []}
                 grade={item}
                 search={!!query.trim()}
                 busy={busy}
-                nextId={nextUnit?.id ?? null}
                 start={(unit) => void start(unit)}
                 conflictNode={(unit) =>
                   conflict?.unit.id === unit.id && (

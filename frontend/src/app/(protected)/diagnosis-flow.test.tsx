@@ -77,7 +77,10 @@ const threeGrades: Unit[] = [
 test("학년 탭과 검색 및 진행 상태", async () => {
   mocks.getUnits.mockResolvedValue(threeGrades);
   render(<UnitSelection />);
-  expect(await screen.findByText("진행 중")).toBeTruthy();
+  fireEvent.click(
+    await screen.findByRole("button", { name: "1. 문자와 식, 진행 중" }),
+  );
+  expect(screen.getByText("진행 중")).toBeTruthy();
   expect(screen.getByRole("link", { name: "이어서 풀기" })).toBeTruthy();
   expect(screen.getAllByRole("tab")).toHaveLength(3);
   expect(document.querySelector(".grade-chip")).toBeNull();
@@ -169,7 +172,10 @@ afterEach(() => {
 });
 test("학년과 상태를 표시하고 별칭으로 검색한다", async () => {
   render(<UnitSelection />);
-  expect(await screen.findByText("동아출판 기준")).toBeTruthy();
+  fireEvent.click(
+    await screen.findByRole("button", { name: "1. 문자와 식, 진행 중" }),
+  );
+  expect(screen.getByText("동아출판 기준")).toBeTruthy();
   expect(screen.getByText("이 단원은 일부 내용만 진단해요")).toBeTruthy();
   fireEvent.click(screen.getByRole("tab", { name: "중2" }));
   fireEvent.click(screen.getByRole("button", { name: "2. 도형, 준비 중" }));
@@ -178,6 +184,9 @@ test("학년과 상태를 표시하고 별칭으로 검색한다", async () => {
   fireEvent.click(unavailable);
   expect(mocks.startDiagnosis).not.toHaveBeenCalled();
   fireEvent.click(screen.getByRole("tab", { name: "중1" }));
+  fireEvent.click(
+    screen.getByRole("button", { name: "1. 문자와 식, 진행 중" }),
+  );
   expect(
     screen.getByRole("link", { name: "이어서 풀기" }).getAttribute("href"),
   ).toBe("/diagnoses/old");
@@ -194,14 +203,15 @@ test("진행 중 충돌이면 계속 또는 새로 시작을 고른다", async (
     .mockResolvedValueOnce({ diagnosis_id: "new" });
   render(<UnitSelection />);
   fireEvent.click(
-    await screen.findByRole("button", { name: "문자와 식 더보기" }),
+    await screen.findByRole("button", { name: "1. 문자와 식, 진행 중" }),
   );
+  fireEvent.click(screen.getByRole("button", { name: "문자와 식 더보기" }));
   fireEvent.click(screen.getByRole("menuitem", { name: "새로 시작하기" }));
   const dialog = await screen.findByRole("dialog");
   expect(
     screen
       .getByRole("heading", { name: "1. 문자와 식" })
-      .closest("article")
+      .closest("section")
       ?.contains(dialog),
   ).toBe(true);
   fireEvent.click(
@@ -760,28 +770,4 @@ test("그림 보기는 선택 가능한 2열 배치 영역에 표시한다", asy
   expect((screen.getAllByRole("radio")[0] as HTMLInputElement).checked).toBe(
     true,
   );
-});
-
-test("학습 지도 C/D 선택과 키보드 숨김은 검색 입력을 방해하지 않는다", async () => {
-  window.history.replaceState(null, "", "/?__variant=c");
-  render(<UnitSelection />);
-  await screen.findByRole("heading", { name: "1. 문자와 식" });
-  expect(document.querySelector(".path-list-c")).toBeTruthy();
-  fireEvent.click(screen.getByRole("button", { name: "D 이름 표시" }));
-  expect(document.querySelector(".path-list-d")).toBeTruthy();
-  expect(window.location.search).toContain("__variant=d");
-  const input = screen.getByLabelText("단원 검색");
-  fireEvent.keyDown(input, { key: "h" });
-  fireEvent.keyDown(input, { key: "ArrowLeft" });
-  expect(
-    screen.getByRole("complementary", { name: "학습 지도 시안 선택" }),
-  ).toBeTruthy();
-  expect(document.querySelector(".path-list-d")).toBeTruthy();
-  fireEvent.keyDown(window, { key: "h" });
-  expect(
-    screen.queryByRole("complementary", { name: "학습 지도 시안 선택" }),
-  ).toBeNull();
-  fireEvent.keyDown(window, { key: "h" });
-  fireEvent.keyDown(window, { key: "ArrowLeft" });
-  expect(document.querySelector(".path-list-c")).toBeTruthy();
 });

@@ -1,10 +1,13 @@
 import { expect, test, type Locator, type Page } from "@playwright/test";
 import { login, noHorizontalOverflow, requiredEnv, unitName } from "./helpers";
 
-function unitCard(page: Page) {
-  return page
-    .locator("article")
-    .filter({ has: page.getByRole("button", { name: new RegExp(unitName) }) });
+function unitNode(page: Page) {
+  return page.getByRole("button", {
+    name: new RegExp(`^\\d+\\. ${unitName}, `),
+  });
+}
+function unitPanel(page: Page) {
+  return page.getByRole("region", { name: "단원 내용" });
 }
 async function start(page: Page) {
   const waiting = page.waitForResponse(
@@ -12,9 +15,8 @@ async function start(page: Page) {
       response.url().endsWith("/diagnoses") &&
       response.request().method() === "POST",
   );
-  const card = unitCard(page);
-  // Units load after the page renders (a loading screen shows first).
-  await expect(card).toBeVisible();
+  const node = unitNode(page);
+  await expect(node).toBeVisible();
   const rows = page.locator(".learning-row");
   expect(await rows.count()).toBeGreaterThan(0);
   for (const row of await rows.all()) {
@@ -22,8 +24,9 @@ async function start(page: Page) {
     await expect(node).toBeVisible();
     await expect(node).toHaveAttribute("aria-label", /, .+/);
   }
-  const node = card.locator(".path-node");
-  if ((await node.getAttribute("aria-expanded")) !== "true") await node.click();
+  await node.click();
+  const card = unitPanel(page);
+  await noHorizontalOverflow(page);
   await expect(card.locator(".learning-state")).toBeVisible();
   await expect(
     card.locator(".learning-actions > .astryx-button"),
@@ -32,7 +35,7 @@ async function start(page: Page) {
     const more = card.getByRole("button", { name: `${unitName} 더보기` });
     await more.click();
     await expect(more).toHaveAttribute("aria-expanded", "true");
-    await page.getByRole("heading", { name: "진단할 단원을 골라요" }).click();
+    await page.keyboard.press("Escape");
     await expect(more).toHaveAttribute("aria-expanded", "false");
     await more.click();
     await page.getByRole("menuitem", { name: "새로 시작하기" }).click();
@@ -171,11 +174,9 @@ test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는
   await start(page);
   const first = await solve(page);
   await page.getByRole("link", { name: "← 단원 선택으로" }).click();
-  const resumeCard = unitCard(page);
-  const resumeNode = resumeCard.locator(".path-node");
-  if ((await resumeNode.getAttribute("aria-expanded")) !== "true")
-    await resumeNode.click();
-  await resumeCard.getByRole("link", { name: "이어서 풀기" }).click();
+  await unitNode(page).click();
+  await noHorizontalOverflow(page);
+  await unitPanel(page).getByRole("link", { name: "이어서 풀기" }).click();
   await expect(progress(page)).toHaveText(/^1\s*\/\s*\d+$/);
   for (let i = 0; i < first.answerTypes.length; i++) {
     await noHorizontalOverflow(page);
