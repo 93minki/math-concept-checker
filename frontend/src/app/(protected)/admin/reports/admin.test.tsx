@@ -161,3 +161,42 @@ test("고칠 필요 없는 이유를 편집해 닫고 수정 부분을 표시한
     expect(mock.noIssue).toHaveBeenCalledWith("q", "확인했어요."),
   );
 });
+
+test("상태 탭은 문항 수를 표시하고 해당 상태로 거른다", async () => {
+  const base = {
+    unit: { grade: "중1", number: 1, name: "단원" },
+    assessment_item: { id: "a", name: "항목" },
+    latest_report_at: "2026-01-01",
+    report_count: 1,
+  };
+  const all = [
+    {
+      ...base,
+      question_id: "one",
+      body_summary: "첫 문제",
+      statuses: ["received", "in_review"],
+    },
+    {
+      ...base,
+      question_id: "two",
+      body_summary: "둘째 문제",
+      statuses: ["fixed"],
+    },
+  ];
+  mock.list.mockImplementation(async (status?: string) =>
+    status ? all.filter((row) => row.statuses.includes(status)) : all,
+  );
+  render(<AdminReportsPage />);
+  const allTab = await screen.findByRole("tab", { name: /전체/ });
+  expect(allTab.textContent).toContain("2");
+  const received = screen.getByRole("tab", { name: /접수/ });
+  expect(received.textContent).toContain("1");
+  expect(screen.getByRole("tab", { name: /처리 중/ }).textContent).toContain(
+    "1",
+  );
+  fireEvent.click(received);
+  await waitFor(() => expect(mock.list).toHaveBeenCalledWith("received"));
+  expect(await screen.findByText("첫 문제")).toBeTruthy();
+  expect(screen.queryByText("둘째 문제")).toBeNull();
+  expect(received.getAttribute("aria-selected")).toBe("true");
+});

@@ -5,11 +5,8 @@ import { Dialog, DialogHeader } from "@astryxdesign/core/Dialog";
 import { HStack } from "@astryxdesign/core/HStack";
 import { Layout, LayoutContent, LayoutFooter } from "@astryxdesign/core/Layout";
 import { ApiError } from "@/lib/diagnosis-api";
-import {
-  reportKinds,
-  reportQuestion,
-  type ReportKind,
-} from "@/lib/reports-api";
+import { ReportKindOptions } from "./report-kind-options";
+import { reportQuestion, type ReportKind } from "@/lib/reports-api";
 export function FlagIcon() {
   return (
     <svg
@@ -87,7 +84,7 @@ export default function ReportButton({ itemId }: { itemId: number }) {
           if (!value) close();
         }}
         purpose="form"
-        width={560}
+        width={520}
         maxHeight="85dvh"
       >
         <Layout
@@ -95,31 +92,34 @@ export default function ReportButton({ itemId }: { itemId: number }) {
           content={
             <LayoutContent>
               {success ? (
-                <p role="status">{message}</p>
+                <div className="report-success" role="status">
+                  <svg
+                    aria-hidden="true"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="m8 12 3 3 5-6" />
+                  </svg>
+                  <p>{message}</p>
+                </div>
               ) : (
                 <form
                   id={`report-form-${itemId}`}
                   onSubmit={submit}
                   className="report-form"
                 >
-                  <fieldset>
-                    <legend>어떤 오류인가요?</legend>
-                    {(
-                      Object.entries(reportKinds) as [ReportKind, string][]
-                    ).map(([value, label]) => (
-                      <label key={value}>
-                        <input
-                          type="radio"
-                          name={`kind-${itemId}`}
-                          value={value}
-                          checked={kind === value}
-                          onChange={() => setKind(value)}
-                          required
-                        />
-                        {label}
-                      </label>
-                    ))}
-                  </fieldset>
+                  <ReportKindOptions
+                    itemId={itemId}
+                    kind={kind}
+                    onChange={setKind}
+                  />
                   <label htmlFor={`report-description-${itemId}`}>
                     설명 (선택)
                   </label>
@@ -129,8 +129,12 @@ export default function ReportButton({ itemId }: { itemId: number }) {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                   />
-                  <p>{500 - description.length}자 남음</p>
-                  <p>이름·연락처 같은 개인정보는 쓰지 마세요.</p>
+                  <p className="report-counter">
+                    {500 - description.length}자 남음
+                  </p>
+                  <p className="reports-muted">
+                    이름·연락처 같은 개인정보는 쓰지 마세요.
+                  </p>
                   {message && <p role="alert">{message}</p>}
                 </form>
               )}

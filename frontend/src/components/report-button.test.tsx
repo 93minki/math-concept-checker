@@ -56,3 +56,22 @@ test("중복 신고는 409 안내를 표시한다", async () => {
   fireEvent.submit(screen.getByLabelText("설명 (선택)").closest("form")!);
   expect(await screen.findByText("이미 신고한 문제예요")).toBeTruthy();
 });
+
+test("신고 유형은 포커스 가능한 같은 라디오 그룹이다", () => {
+  render(<ReportButton itemId={7} />);
+  fireEvent.click(screen.getByRole("button", { name: "오류 신고" }));
+  const first = screen.getByRole("radio", {
+    name: "문제 글 오류",
+  }) as HTMLInputElement;
+  const second = screen.getByRole("radio", {
+    name: "보기·정답 오류",
+  }) as HTMLInputElement;
+  expect(first.type).toBe("radio");
+  expect(first.name).toBe(second.name);
+  first.focus();
+  expect(document.activeElement).toBe(first);
+  expect(fireEvent.keyDown(first, { key: "ArrowRight" })).toBe(true);
+  fireEvent.click(second);
+  expect(second.checked).toBe(true);
+  expect(first.checked).toBe(false);
+});

@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Badge } from "@astryxdesign/core/Badge";
-import { Card } from "@astryxdesign/core/Card";
 import StatusScreen from "@/components/status-screen";
 import { authRedirect } from "@/lib/diagnosis-api";
 import {
@@ -30,8 +29,11 @@ export default function ReportsPage() {
     };
   }, [router]);
   return (
-    <main className="study-page reports-page">
-      <h1>내 신고</h1>
+    <main className="study-page reports-page reports-ui">
+      <header className="reports-heading">
+        <h1>내 신고</h1>
+        <p>신고한 문제와 처리 상태를 확인할 수 있어요.</p>
+      </header>
       {error && <p role="alert">{error}</p>}
       {!reports && !error && (
         <StatusScreen
@@ -49,26 +51,28 @@ export default function ReportsPage() {
         />
       )}
       {reports && reports.length > 0 && (
-        <div className="report-list">
+        <div className="reports-rows">
           {reports.map((report) => {
             const item = report.diagnosis_items;
             const unit = item?.diagnoses?.display_units;
             return (
-              <Card key={report.id}>
-                <article className="report-entry">
-                  <div>
-                    <h2>
-                      {unit
-                        ? `${unit.grade} · ${unit.number}. ${unit.name}`
-                        : "단원 정보 없음"}
-                    </h2>
-                    <p>
-                      {item
-                        ? `${item.stage}단계 · ${item.position}번`
-                        : "진단 문항 정보 없음"}{" "}
-                      · {reportKinds[report.kind]}
-                    </p>
-                  </div>
+              <article key={report.id} className="reports-student-row">
+                <div>
+                  <h2>
+                    {unit
+                      ? `${unit.grade} · ${unit.number}. ${unit.name}`
+                      : "단원 정보 없음"}
+                  </h2>
+                  <p>
+                    {item
+                      ? `${item.stage}단계 · ${item.position}번`
+                      : "진단 문항 정보 없음"}{" "}
+                  </p>
+                </div>
+                <div className="reports-chips">
+                  <span className="reports-chip">
+                    {reportKinds[report.kind]}
+                  </span>
                   <Badge
                     label={reportStatuses[report.status]}
                     variant={
@@ -79,16 +83,18 @@ export default function ReportsPage() {
                           : "neutral"
                     }
                   />
-                  <p>
-                    신고 {new Date(report.created_at).toLocaleString("ko-KR")}
-                    {report.resolved_at &&
-                      ` · 처리 ${new Date(report.resolved_at).toLocaleString("ko-KR")}`}
+                </div>
+                <p className="reports-muted">
+                  신고 {new Date(report.created_at).toLocaleString("ko-KR")}
+                  {report.resolved_at &&
+                    ` · 처리 ${new Date(report.resolved_at).toLocaleString("ko-KR")}`}
+                </p>
+                {report.description && (
+                  <p className="report-description reports-clamp">
+                    {report.description}
                   </p>
-                  {report.description && (
-                    <p className="report-description">{report.description}</p>
-                  )}
-                </article>
-              </Card>
+                )}
+              </article>
             );
           })}
         </div>

@@ -36,6 +36,13 @@
 
 ## 기록
 
+### 2026-11-15 — frontend/e2e/report-kind-keyboard.spec.tsx:키보드 선택
+- 작업: 신고 화면 UI, F-12·F-13
+- 증상: 데스크톱과 모바일 Chromium 시작 직후 `bootstrap_check_in ... Permission denied (1100)`으로 종료되어 테스트가 시작되지 않았다.
+- 원인 분류: 환경·설정
+- 원인: 실행 환경이 Chromium의 Mach 포트 등록을 허용하지 않아 브라우저 생성에 실패했다.
+- 해결: 미해결. 브라우저 실행이 가능한 환경에서 키보드·화면 크기 확인을 다시 해야 한다.
+
 ### 2026-11-15 — frontend/e2e:AI 수정안 화면 확인 서버 시작
 - 작업: AI 수정안 최소 수정, F-13
 - 증상: `E2E_PORT=3100 pnpm test:e2e` 서버 시작 중 `listen EPERM: operation not permitted 0.0.0.0:3100` 발생.
