@@ -710,6 +710,11 @@ h4:not(.astryx-heading) {
   background: var(--color-accent-muted);
   color: var(--color-text-accent);
 }
+/* The pill already marks the selected tab; Astryx's underline sat below the
+   rounded pill and stuck out past its corners (user 2026-11-14). */
+.grade-tabs .astryx-tab-indicator {
+  display: none;
+}
 .grade-tab-count {
   color: var(--color-text-secondary);
   font-size: 0.8125rem;
