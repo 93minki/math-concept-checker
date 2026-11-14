@@ -524,6 +524,13 @@ h4:not(.astryx-heading) {
   max-width: 100%;
   line-height: 0;
 }
+.mascot img {
+  max-width: 100%;
+  height: auto;
+}
+.status-screen .mascot {
+  width: min(100%, 60vw);
+}
 
 /* Header nav: icon + text; phones keep only the icon (one line). */
 @media (max-width: 599px) {
