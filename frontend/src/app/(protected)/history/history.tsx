@@ -152,7 +152,7 @@ export default function History() {
       )}
       {loading && (
         <StatusScreen
-          mood="thinking"
+          mood="waiting"
           title="지난 기록을 불러오고 있어요."
           live
           compact

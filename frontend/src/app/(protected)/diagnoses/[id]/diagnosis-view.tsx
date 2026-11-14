@@ -277,7 +277,7 @@ export default function DiagnosisView({ id }: { id: string }) {
       </Link>
       {error && <Notice role="alert">{error}</Notice>}
       {!diagnosis && !error && (
-        <StatusScreen mood="thinking" title="진단을 불러오고 있어요." live />
+        <StatusScreen mood="waiting" title="진단을 불러오고 있어요." live />
       )}
       {diagnosis && (
         <>

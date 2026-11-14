@@ -1,11 +1,17 @@
 import Image from "next/image";
 
 /**
- * "개념이" — the service mascot. One decorative picture for every mood.
+ * "개념이" — the service mascot, one 3D picture per mood (user 2026-11-14).
  * The text beside it carries the meaning, so the picture is hidden from
  * screen readers. The picture does not move.
  */
-export type MascotMood = "thinking" | "resting" | "waving";
+export type MascotMood = "thinking" | "resting" | "waving" | "waiting";
+const pictures: Record<MascotMood, string> = {
+  thinking: "/images/mascot/gaenyeom-thinking.png",
+  resting: "/images/mascot/gaenyeom-resting.png",
+  waving: "/images/mascot/gaenyeom-cheer.png",
+  waiting: "/images/mascot/gaenyeom-waiting.png",
+};
 
 export default function Mascot({
   mood,
@@ -17,7 +23,7 @@ export default function Mascot({
   return (
     <span className={`mascot mascot-${mood}`} aria-hidden="true">
       <Image
-        src="/images/mascot/gaenyeom-cheer.png"
+        src={pictures[mood]}
         alt=""
         width={size}
         height={size}

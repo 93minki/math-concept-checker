@@ -93,7 +93,7 @@ export default function UnitSelection() {
       {error && <p role="alert">{error}</p>}
       {!units && !error && (
         <StatusScreen
-          mood="thinking"
+          mood="waiting"
           title="단원을 불러오고 있어요."
           live
           compact
