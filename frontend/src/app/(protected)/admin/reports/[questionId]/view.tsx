@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@astryxdesign/core/Button";
 import { Badge } from "@astryxdesign/core/Badge";
 import { Dialog, DialogHeader } from "@astryxdesign/core/Dialog";
+import { HStack } from "@astryxdesign/core/HStack";
 import { Layout, LayoutContent, LayoutFooter } from "@astryxdesign/core/Layout";
 import { ProblemText } from "@/components/problem-text";
 import { Figure } from "@/components/figure";
@@ -537,7 +538,7 @@ export default function AdminQuestionView({ id }: { id: string }) {
           if (!open && !busy) setConfirm(null);
         }}
         purpose="form"
-        width={560}
+        width={440}
         maxHeight="85dvh"
       >
         <Layout
@@ -557,27 +558,34 @@ export default function AdminQuestionView({ id }: { id: string }) {
           }
           footer={
             <LayoutFooter>
-              <Button
-                label="취소"
-                onClick={() => setConfirm(null)}
-                isDisabled={busy}
-              />
-              <Button
-                label="확인"
-                onClick={() => {
-                  if (confirm === "ai")
-                    void run(
-                      () => createAIRevision(id),
-                      "AI 수정안을 만들었어요.",
-                    );
-                  else if (confirm)
-                    void run(
-                      () => approveRevision(confirm),
-                      "승인했어요. 백업 파일 내보내기 필요 (app.bank export)",
-                    );
-                }}
-                isDisabled={busy}
-              />
+              {/* Same footer as the other dialogs: gap, right-aligned,
+                  secondary cancel and a primary action (user 2026-11-15). */}
+              <HStack gap={2} hAlign="end">
+                <Button
+                  label="취소"
+                  variant="secondary"
+                  onClick={() => setConfirm(null)}
+                  isDisabled={busy}
+                />
+                <Button
+                  label={confirm === "ai" ? "만들기" : "승인"}
+                  variant="primary"
+                  isLoading={busy}
+                  onClick={() => {
+                    if (confirm === "ai")
+                      void run(
+                        () => createAIRevision(id),
+                        "AI 수정안을 만들었어요.",
+                      );
+                    else if (confirm)
+                      void run(
+                        () => approveRevision(confirm),
+                        "승인했어요. 백업 파일 내보내기 필요 (app.bank export)",
+                      );
+                  }}
+                  isDisabled={busy}
+                />
+              </HStack>
             </LayoutFooter>
           }
         />
