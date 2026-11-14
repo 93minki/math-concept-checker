@@ -7,6 +7,19 @@ function LearningMapIllustration() {
   return (
     <div className="hero-art" aria-hidden="true">
       <div className="hero-art-halo" />
+      <svg
+        className="hero-sparkles"
+        viewBox="0 0 40 40"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M8 17l-3-7M17 11l1-8M25 14l6-6M30 22l7-2"
+          stroke="var(--color-accent)"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+      </svg>
       <div className="laptop">
         <div className="laptop-screen">
           <div className="laptop-top">
@@ -15,7 +28,7 @@ function LearningMapIllustration() {
           <div className="laptop-content">
             <div className="laptop-path">
               <p>
-                <b>✓</b> 1. 소인수분해
+                <b>▶</b> 1. 소인수분해
               </p>
               <p>
                 <b>2</b> 2. 정수와 유리수

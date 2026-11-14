@@ -90,6 +90,17 @@ export default function ReportPreview() {
           fill="none"
         >
           <rect
+            x="18"
+            y="42"
+            width="100"
+            height="112"
+            rx="12"
+            transform="rotate(-18 18 42)"
+            fill="var(--color-accent-muted)"
+            stroke="var(--color-accent)"
+            strokeWidth="2"
+          />
+          <rect
             x="28"
             y="29"
             width="100"

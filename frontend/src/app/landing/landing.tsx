@@ -122,7 +122,9 @@ export default function Landing() {
           href="/signup"
           icon={<LandingIcon name="play" />}
         />
-        <Mascot mood="waving" size={155} />
+        <div className="cta-mascot">
+          <Mascot mood="waving" size={155} />
+        </div>
       </section>
     </main>
   );

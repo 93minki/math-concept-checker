@@ -41,10 +41,27 @@
   min-height: var(--size-element-lg);
 }
 .landing .hero-panel {
+  position: relative;
+  isolation: isolate;
   padding: var(--spacing-8) var(--spacing-10);
-  border-radius: var(--radius-page);
-  background: var(--color-accent-muted);
-  overflow: hidden;
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+}
+.landing .hero-panel::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    110deg,
+    color-mix(in srgb, var(--color-accent) 5%, var(--color-background-surface)),
+    color-mix(in srgb, var(--color-accent) 12%, var(--color-background-surface))
+  );
 }
 .landing .hero-split {
   display: grid;
@@ -124,7 +141,7 @@
   min-height: 22rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .hero-art-halo {
   position: absolute;
@@ -135,16 +152,16 @@
 }
 .laptop {
   position: relative;
-  width: 83%;
+  width: 78%;
   transform: rotate(-2deg);
 }
 .laptop-screen {
   padding: var(--spacing-3);
-  border: var(--spacing-2) solid var(--color-background-inverted);
+  border: var(--spacing-2) solid var(--color-on-light);
   border-radius: var(--radius-page) var(--radius-page) var(--radius-element)
     var(--radius-element);
-  background: var(--color-background-surface);
-  color: var(--color-text-primary);
+  background: var(--color-on-light);
+  color: var(--color-on-dark);
   box-shadow: 0 2px 0 var(--color-border-emphasized);
 }
 .laptop-top {
@@ -152,7 +169,11 @@
   align-items: center;
   gap: var(--spacing-3);
   padding: var(--spacing-2);
-  background: var(--color-background-muted);
+  background: color-mix(
+    in srgb,
+    var(--color-accent) 28%,
+    var(--color-on-light)
+  );
   border-radius: var(--radius-element);
   font-size: 0.65rem;
   font-weight: 700;
@@ -186,8 +207,12 @@
   width: 1.7rem;
   height: 1.7rem;
   border-radius: var(--radius-element);
-  background: var(--color-accent-muted);
-  color: var(--color-text-accent);
+  background: color-mix(
+    in srgb,
+    var(--color-accent) 55%,
+    var(--color-on-light)
+  );
+  color: var(--color-on-dark);
 }
 .laptop-details {
   display: grid;
@@ -196,11 +221,15 @@
   padding: var(--spacing-2);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-element);
-  background: var(--color-background-muted);
+  background: color-mix(
+    in srgb,
+    var(--color-accent) 18%,
+    var(--color-on-light)
+  );
   font-size: 0.65rem;
 }
 .laptop-details small {
-  color: var(--color-text-secondary);
+  color: var(--color-on-dark);
 }
 .laptop-details span {
   padding: var(--spacing-1);
@@ -219,7 +248,14 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 28%;
+  width: 20%;
+}
+.hero-sparkles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .hero-mascot svg {
   width: 100%;
@@ -287,8 +323,10 @@
 .score-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: min(100%, 20rem);
+  justify-self: start;
   gap: var(--spacing-3) var(--spacing-1);
-  text-align: center;
+  text-align: left;
 }
 .score-grid > div {
   display: grid;
@@ -467,8 +505,12 @@
   min-height: 12rem;
   padding: var(--spacing-6) var(--spacing-8);
   border-radius: var(--radius-page);
-  color: var(--color-on-accent);
-  background: var(--color-accent);
+  color: var(--color-on-dark);
+  background: linear-gradient(
+    115deg,
+    color-mix(in srgb, var(--color-accent) 52%, black),
+    color-mix(in srgb, var(--color-accent) 62%, black)
+  );
   overflow: hidden;
 }
 .landing-cta h2 {
@@ -477,9 +519,16 @@
 .landing-cta p {
   margin-top: var(--spacing-2);
 }
-.landing-cta > svg {
+.cta-mascot {
+  display: grid;
+  place-items: center;
   flex: none;
   align-self: flex-end;
+  border-radius: var(--radius-full);
+  background: var(--color-on-dark);
+}
+.cta-mascot svg {
+  display: block;
 }
 @media (max-width: 800px) {
   .landing .hero-panel {
@@ -508,10 +557,12 @@
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-  .landing-cta > svg {
+  .cta-mascot {
+    margin-left: auto;
+  }
+  .cta-mascot svg {
     width: 7rem;
     height: 7rem;
-    margin-left: auto;
   }
 }
 @media (max-width: 599px) {
@@ -589,4 +640,31 @@
 .landing-cta .astryx-button {
   background: var(--color-on-dark);
   color: var(--color-on-light);
+}
+
+/* The landing canvas, cards and sample panel share the same light/dark structure. */
+body:has(.landing) {
+  background: color-mix(
+    in srgb,
+    var(--color-background-body) 35%,
+    var(--color-background-surface)
+  );
+}
+.comparison-grid > .astryx-card,
+.benefit-grid > .astryx-card,
+.sample-section > .astryx-card {
+  background: var(--color-background-card);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 2px
+    color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+}
+.comparison-grid > .comparison-highlight {
+  border-color: var(--color-accent);
+}
+.sample-section {
+  background: color-mix(
+    in srgb,
+    var(--color-accent) 11%,
+    var(--color-background-surface)
+  );
 }
