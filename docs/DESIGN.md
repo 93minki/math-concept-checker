@@ -853,6 +853,45 @@
 - 비밀값 `KAKAO_ADMIN_KEY`(백엔드 `.env`, 서버 전용). 이름만 `.env.sample`.
 - 테스트: 외부 호출(Supabase 관리자, 카카오)은 모두 가짜로 바꾼다. **시험 계정 A·B는 어떤 테스트에서도 지우지 않는다**(사용자 지시 2026-11-14). 실제 탈퇴는 사용자가 별도 계정으로 확인한다.
 
+## 문항 오류 신고와 관리 (F-12, F-13. 사용자 결정 2026-11-14, `docs/PLAN.md`)
+
+### DB (새 마이그레이션)
+| 테이블 | 주요 항목 |
+|---|---|
+| `admins` | `user_id`(`auth.users` 참조, 탈퇴 시 함께 삭제), 지정 시각, 메모. RLS 켬, **정책 없음** — 학생(`authenticated`)은 읽지도 쓰지도 못하고 서버(Secret key)만 읽는다(사용자 결정: 별도 테이블). 첫 관리자는 사용자가 개발 DB에 직접 넣는다 |
+| `question_reports` | `id`, `user_id`(탈퇴 시 삭제), `question_id`, `diagnosis_item_id`(신고한 진단 문항, 진단 삭제 시 null), `kind`(`text`·`choice_answer`·`figure`·`out_of_curriculum`·`other`), `description`(0~500자, 글로만 저장·표시), `status`(`received`·`in_review`·`fixed`·`no_issue`), `resolution_note`, `replacement_question_id`(수정함일 때 새 문제), `created_at`·`resolved_at` |
+| `question_revisions` | 관리자가 만든 수정안: `id`, `question_id`(원래 문제), `source`(`ai`·`manual`), `payload`(문제·보기·채점 요소 JSON — `bank_insert_question`과 같은 형식), `checks`(코드 검사·AI 검사 결과), `status`(`draft`·`passed`·`failed`·`approved`·`discarded`), 만든 관리자·시각, AI 비용 |
+
+- 중복 신고 막기: 부분 유일 인덱스 (`user_id`, `question_id`) where `status in ('received','in_review')` → 처리된 뒤에는 다시 신고할 수 있다.
+- RLS: `question_reports`는 본인 행 읽기 + 본인 행 넣기(상태는 `received`로만, `resolution_note`·`replacement_question_id`·`resolved_at`은 비워야 함). 수정·삭제는 학생에게 없다. 상태 변경은 서버(Secret key)만. `question_revisions`는 RLS 켜고 정책 없음(서버만).
+- 신고는 학생이 **자기 진단에 실제로 나온 문제**만 할 수 있다: 넣을 때 `diagnosis_item_id`가 본인 진단 문항이고 그 문항의 `question_id`와 같은지 확인한다(함수 또는 정책의 `exists`).
+- **수정 승인은 함수 하나(`bank_replace_question`, `service_role`만)로 한 트랜잭션**: ① 기존 문제 `approved → disabled` ② 같은 자리에 수정안 payload를 `validated`로 넣고(기존 `bank_insert_question` 경로) ③ `approved`로 바꾸고 승인자·시각 기록 ④ 수정안 `approved`, 그 문제의 열린 신고를 모두 `fixed` + `replacement_question_id`·`resolved_at`. 이유: 한 자리에 사용 중지가 아닌 문제는 하나라는 부분 유일 인덱스("문제 은행" 절) 때문에 새 문제를 먼저 넣을 수 없고, 중간에 실패하면 자리가 비거나 신고만 바뀌는 일을 막는다.
+- 이미 그 문제로 진단한 기록(`diagnosis_items`·답안·채점·리포트)은 그대로 둔다(사용자 결정). 사용 중지된 문제는 지우지 않으므로 기록이 계속 그 문제를 가리킨다.
+
+### 수정안 만들기와 검사 (백엔드)
+- **AI 수정안:** 기존 `generate_question` 흐름(생성 → 코드 검사 `validate_question` → AI 검사 `review_question`, 최대 3회)을 쓰되, 생성 프롬프트에 "원래 문제 + 신고 내용(유형·설명)"을 붙인 수정 지시를 더한다. 새 프롬프트 파일 `revise_question.md`(다음 프롬프트 버전). 같은 평가 항목·난이도·유형을 유지한다. 결과는 `question_revisions`(`source=ai`)에 저장하고 승인 전까지 문제 은행에 들어가지 않는다. 비용은 수정안 행과 서버 로그에 남긴다.
+- **직접 수정:** 관리자가 원래 문제를 바탕으로 고친 payload를 보내면 코드 검사 + AI 검사(`review_question` 한 번)를 돌려 `passed`·`failed`를 기록한다. `failed`면 승인 버튼이 꺼지고 이유를 보여 준다. 근거: 직접 쓴 문제도 검사를 거친다(`PROGRESS.md` 사용자 결정 2026-11-11·12).
+- 학생 신고 설명은 AI 프롬프트에 **데이터로만** 넣는다(지시문으로 취급하지 말라는 구분 표시, 길이 500자 제한).
+- 수정 승인 뒤 `backend/data/bank/<성취기준>.json` 내보내기 파일과 DB가 달라진다 → 관리자 화면에 "내보내기 필요" 표시만 하고, 내보내기는 기존 `app.bank export`로 개발자가 한다.
+
+### API (모두 로그인 필요)
+| 요청 | 하는 일 | 실패 |
+|---|---|---|
+| `POST /question-reports` `{diagnosis_item_id, kind, description}` | 신고 접수 | 401, 404(남의 진단 문항), 409(처리 전 같은 문항 신고 있음), 422 |
+| `GET /question-reports` | 내 신고 목록(문항 요약·유형·상태·시각), 최근 순 | 401 |
+| `GET /admin/reports?status=` | 문항별로 묶은 신고(신고 수, 최근 신고 시각, 상태) | 401, 403(관리자 아님) |
+| `GET /admin/questions/{id}` | 문제 전체(정답·해설·채점 기준·그림)·신고들·수정안들 | 401, 403, 404 |
+| `POST /admin/questions/{id}/revisions/ai` | AI 수정안 만들기(실제 AI, 관리자가 누를 때만) | 401, 403, 502 |
+| `POST /admin/questions/{id}/revisions` `{payload}` | 직접 수정안 저장 + 검사 | 401, 403, 422 |
+| `POST /admin/revisions/{id}/approve` | `bank_replace_question` 실행 | 401, 403, 409(검사 통과 아님·이미 처리) |
+| `POST /admin/questions/{id}/no-issue` `{note}` | 열린 신고를 `no_issue`로 닫기 | 401, 403 |
+| `POST /admin/questions/{id}/in-review` | 열린 신고를 `in_review`로 | 401, 403 |
+- 관리자 확인은 서버가 요청마다 `admins`를 Secret key로 조회한다. 프론트의 메뉴 숨김은 편의일 뿐이다.
+
+### 화면
+- 학생: 풀이 화면(문제 머리 옆)·문제별 결과의 문제마다 "오류 신고" 버튼 → 대화 상자(유형 라디오 5개, 설명 글상자 500자, "개인정보는 쓰지 마세요" 안내) → "신고가 접수됐어요". 이미 처리 전 신고가 있으면 "이미 신고한 문제예요". 사이드바·폰 머리말 메뉴 순서: 학습하기 / 지난 기록 / 내 신고 / 내 정보. `/reports`: 목록(단원·문항 번호 요약, 유형, 상태 Badge, 신고·처리 시각), 정답·해설은 보이지 않는다.
+- 관리자: `/admin/reports`(관리자가 아니면 `/`로) 목록 → 문항 상세: 왼쪽 학생이 본 문제 판(`.problem-sheet` 재사용) + 정답·해설·채점 기준, 오른쪽 신고 목록과 처리(AI 수정안 / 직접 수정 / 문제 없음). 수정안은 원래 문제와 나란히 보여 주고 검사 결과(통과·실패 이유)를 함께. 사이드바에는 관리자에게만 "신고 관리" 메뉴.
+
 ## 서술형 답안 입력
 - 일반 텍스트로 입력받는다. 수식 입력기와 손글씨 사진 업로드는 쓰지 않는다.
   - 근거: 사용자 결정 (2026-11-09)
