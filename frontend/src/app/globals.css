@@ -249,7 +249,7 @@ h4:not(.astryx-heading) {
 .btn:disabled {
   background: var(--color-background-muted);
   border-color: var(--color-border);
-  color: var(--color-text-disabled);
+  color: var(--color-text-secondary);
   cursor: not-allowed;
 }
 [role="alert"]:not(:has(.astryx-banner)):not(.astryx-banner *) {
