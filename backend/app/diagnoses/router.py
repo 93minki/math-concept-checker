@@ -17,6 +17,7 @@ from app.diagnoses.schemas import (
     HistoryCursor,
     StartInput,
     Unit,
+    UnitResponse,
     UnitStatus,
 )
 from app.diagnoses.selection import select_questions
@@ -92,7 +93,7 @@ def find_unit(repo: DiagnosesRepository, unit_id: int) -> Unit:
     return unit
 
 
-@router.get("/units")
+@router.get("/units", response_model=list[UnitResponse])
 def list_units(user: User, repo: Repo) -> list[dict[str, object]]:
     progress = {d.display_unit_id: d.id for d in repo.in_progress(user.id)}
     results = repo.latest_results(user.id)
@@ -115,6 +116,15 @@ def list_units(user: User, repo: Repo) -> list[dict[str, object]]:
                 {},
                 random.Random(),
             )[0],
+            "concepts": [
+                concept.name
+                for concept in sorted(concepts, key=lambda c: (c.standard_code, c.id))
+                if any(
+                    link.display_unit_id == unit.id
+                    and link.standard_code == concept.standard_code
+                    for link in links
+                )
+            ],
             "in_progress_diagnosis_id": progress.get(unit.id),
             "latest_result": results.get(unit.id),
         }

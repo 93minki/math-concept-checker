@@ -54,6 +54,7 @@ const units: Unit[] = [
     name: "문자와 식",
     publisher: "동아출판",
     aliases: ["문자식"],
+    concepts: ["문자의 뜻", "식의 값"],
     status: "partial",
     in_progress_diagnosis_id: "old",
     latest_result: null,
@@ -65,6 +66,7 @@ const units: Unit[] = [
     name: "도형",
     publisher: "동아출판",
     aliases: [],
+    concepts: [],
     status: "unavailable",
     in_progress_diagnosis_id: null,
     latest_result: null,
@@ -80,7 +82,11 @@ test("학년 탭과 검색 및 진행 상태", async () => {
   fireEvent.click(
     await screen.findByRole("button", { name: "1. 문자와 식, 진행 중" }),
   );
-  expect(screen.getByText("진행 중")).toBeTruthy();
+  expect(
+    within(screen.getByRole("region", { name: "단원 내용" })).getByText(
+      "진행 중",
+    ),
+  ).toBeTruthy();
   expect(screen.getByRole("link", { name: "이어서 풀기" })).toBeTruthy();
   expect(screen.getAllByRole("tab")).toHaveLength(3);
   expect(document.querySelector(".grade-chip")).toBeNull();

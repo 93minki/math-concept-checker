@@ -15,6 +15,7 @@ const base: Unit = {
   name: "단원",
   publisher: "동아출판",
   aliases: [],
+  concepts: ["문자의 뜻", "식의 값"],
   status: "full",
   in_progress_diagnosis_id: null,
   latest_result: null,
@@ -55,7 +56,9 @@ test.each([
   view([unit]);
   const node = screen.getByRole("button", { name: `1. 단원, ${label}` });
   expect(node.getAttribute("data-state")).toBe(stateName);
-  expect(node.querySelector("svg") !== null).toBe(stateName !== "not_started");
+  expect(node.querySelector("svg") !== null).toBe(
+    stateName !== "not_started" && stateName !== "unavailable",
+  );
   expect(node.textContent).not.toMatch(/[⚡🔒]/u);
   const panel = open(`1. 단원, ${label}`);
   const state = panel.querySelector(".learning-state");
@@ -199,4 +202,15 @@ test("모바일 시트는 제목으로 포커스를 옮기고 닫으면 노드�
   } finally {
     vi.unstubAllGlobals();
   }
+});
+
+test("이름 칩을 눌러 선택하고 개념 칩을 확인한다", () => {
+  view([base]);
+  const node = screen.getByRole("button", { name: "1. 단원, 시작 전" });
+  fireEvent.click(node.querySelector(".path-name")!);
+  expect(node.getAttribute("aria-current")).toBe("true");
+  const panel = screen.getByRole("region", { name: "단원 내용" });
+  expect(within(panel).getByText("주요 개념")).toBeTruthy();
+  expect(within(panel).getByText("문자의 뜻")).toBeTruthy();
+  expect(within(panel).getByText("식의 값")).toBeTruthy();
 });

@@ -65,12 +65,6 @@ function StateIcon({ state }: { state: Progress }) {
           <path d="M20 4v7h-7" />
         </>
       )}
-      {state === "unavailable" && (
-        <>
-          <rect x="5" y="10" width="14" height="11" rx="2" />
-          <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" />
-        </>
-      )}
     </svg>
   );
 }
@@ -81,12 +75,17 @@ export function Summary({ units, grade }: { units: Unit[]; grade: string }) {
       <p>
         {grade} · {total}단원 중 {conquered}개 정복
       </p>
-      <ProgressBar
-        label={`${grade} 정복 진행`}
-        value={conquered}
-        max={total}
-        isLabelHidden
-      />
+      <div className="summary-progress">
+        <ProgressBar
+          label={`${grade} 정복 진행`}
+          value={conquered}
+          max={total}
+          isLabelHidden
+        />
+        <span>
+          {conquered} / {total}
+        </span>
+      </div>
     </VStack>
   );
 }
@@ -129,6 +128,21 @@ function Details({
         : "진단 시작하기";
   return (
     <>
+      {!props.search && (
+        <span className="concept-icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 40 40"
+            width="40"
+            height="40"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          >
+            <path d="M5 10h10M10 5v10M25 10h10M5 29h10M10 24h.01M10 34h.01M26 25l8 8m0-8-8 8" />
+          </svg>
+        </span>
+      )}
       <VStack gap={1} className="learning-info">
         {props.search ? (
           <h4>
@@ -149,9 +163,20 @@ function Details({
           <span className="learning-state-plain">{progressLabels[state]}</span>
         )}
       </p>
+      {!props.search && (
+        <div className="concept-section">
+          <h4>주요 개념</h4>
+          <div className="concept-chips">
+            {unit.concepts.map((concept, index) => (
+              <span key={`${index}-${concept}`}>{concept}</span>
+            ))}
+          </div>
+        </div>
+      )}
       <HStack className="learning-actions">
         <Button
           label={label}
+          icon={!props.search ? <StateIcon state="in_progress" /> : undefined}
           variant="primary"
           size="lg"
           width="100%"
@@ -225,36 +250,38 @@ export default function LearningMap(props: ViewProps) {
       </>
     );
   return (
-    <Card>
-      <VStack gap={4}>
+    <VStack gap={4}>
+      <Card>
         <div className="path-summary">
           <Summary units={props.allUnits} grade={props.grade} />
         </div>
-        <div
-          className="path-layout"
-          onKeyDown={(event) => {
-            // An open menu (MoreMenu uses the native popover, which handles
-            // Escape without preventDefault) gets Escape first.
-            const menuOpen =
-              panelRef.current?.querySelector('[aria-expanded="true"]') ??
-              (event.target instanceof Element &&
-                event.target.closest('[role="menu"]'));
-            if (
-              event.key === "Escape" &&
-              !event.defaultPrevented &&
-              !menuOpen &&
-              selected
-            ) {
-              event.stopPropagation();
-              close();
-            }
-          }}
-        >
+      </Card>
+      <div
+        className="path-layout"
+        onKeyDown={(event) => {
+          // An open menu (MoreMenu uses the native popover, which handles
+          // Escape without preventDefault) gets Escape first.
+          const menuOpen =
+            panelRef.current?.querySelector('[aria-expanded="true"]') ??
+            (event.target instanceof Element &&
+              event.target.closest('[role="menu"]'));
+          if (
+            event.key === "Escape" &&
+            !event.defaultPrevented &&
+            !menuOpen &&
+            selected
+          ) {
+            event.stopPropagation();
+            close();
+          }
+        }}
+      >
+        <div className="path-card">
           <div
             className={`path-list${selected ? " has-selection" : ""}`}
             ref={listRef}
           >
-            {props.units.map((unit) => {
+            {props.units.map((unit, index) => {
               const state = unitProgress(unit);
               return (
                 <article
@@ -263,6 +290,22 @@ export default function LearningMap(props: ViewProps) {
                   data-state={state}
                 >
                   <div className="path-node-wrap">
+                    {index < props.units.length - 1 && (
+                      <svg
+                        className={`path-connector${unit.latest_result && props.units[index + 1].latest_result ? " is-complete" : ""}`}
+                        aria-hidden="true"
+                        viewBox="0 0 96 112"
+                      >
+                        <path
+                          className="connector-desktop"
+                          d={`M0 0 C 0 56 ${index % 2 === 0 ? 48 : -48} 56 ${index % 2 === 0 ? 48 : -48} 112`}
+                        />
+                        <path
+                          className="connector-mobile"
+                          d={`M0 0 C 0 56 ${index % 2 === 0 ? 28 : -28} 56 ${index % 2 === 0 ? 28 : -28} 112`}
+                        />
+                      </svg>
+                    )}
                     <button
                       ref={(node) => {
                         if (node) nodeRefs.current.set(unit.id, node);
@@ -276,50 +319,64 @@ export default function LearningMap(props: ViewProps) {
                       aria-controls="unit-details"
                       onClick={() => setSelectedId(unit.id)}
                     >
-                      {state === "not_started" ? (
+                      {state === "not_started" || state === "unavailable" ? (
                         unit.number
                       ) : (
                         <StateIcon state={state} />
                       )}
+                      <span className="path-name" aria-hidden="true">
+                        {unit.number}. {unit.name}
+                      </span>
                     </button>
-                    <p className="path-name" aria-hidden="true">
-                      {unit.number}. {unit.name}
-                    </p>
                   </div>
                 </article>
               );
             })}
           </div>
-          <section
-            id="unit-details"
-            aria-label="단원 내용"
-            ref={panelRef}
-            className={`path-panel${selected ? " is-open" : ""}`}
-          >
-            {selected ? (
-              <>
-                <button
-                  type="button"
-                  className="path-close"
-                  aria-label="닫기"
-                  onClick={close}
-                >
-                  ×
-                </button>
-                <Details
-                  unit={selected}
-                  props={props}
-                  headingRef={headingRef}
-                />
-              </>
-            ) : (
-              <p className="path-placeholder">
-                단원을 누르면 내용이 여기에 보여요
-              </p>
-            )}
-          </section>
+          <div className="path-legend" aria-label="학습 상태 범례">
+            {(
+              [
+                "conquered",
+                "in_progress",
+                "half",
+                "retry",
+                "not_started",
+              ] as const
+            ).map((state) => (
+              <span key={state}>
+                <i className={`legend-node legend-${state}`}>
+                  {state === "not_started" ? "1" : <StateIcon state={state} />}
+                </i>
+                {progressLabels[state]}
+              </span>
+            ))}
+          </div>
         </div>
-      </VStack>
-    </Card>
+        <section
+          id="unit-details"
+          aria-label="단원 내용"
+          ref={panelRef}
+          className={`path-panel${selected ? " is-open" : ""}`}
+        >
+          {selected ? (
+            <>
+              <button
+                type="button"
+                className="path-close"
+                aria-label="닫기"
+                onClick={close}
+              >
+                ×
+              </button>
+              <Details unit={selected} props={props} headingRef={headingRef} />
+            </>
+          ) : (
+            <p className="path-placeholder">
+              단원을 누르면 내용이 여기에 보여요
+            </p>
+          )}
+        </section>
+      </div>
+    </VStack>
   );
 }

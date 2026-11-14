@@ -644,7 +644,7 @@
 
 | 요청 | 하는 일 | 실패 |
 |---|---|---|
-| `GET /units` | 표시 단원 23개: 학년, 번호, 이름, 출판사, 별칭, 상태(전체/일부만/준비 중), 진행 중 진단 ID, `latest_result {diagnosis_id, unit_stage, completed_at} \| null`(내 완료 진단 중 가장 최근, 저장된 `reports.unit_stage`만 읽음. 사용자 허락 2026-11-12, 학습 지도의 정복 표시용) | — |
+| `GET /units` | 표시 단원 23개: 학년, 번호, 이름, 출판사, 별칭, 상태(전체/일부만/준비 중), `concepts: string[]`(연결된 성취기준 코드·개념 ID 순 개념 이름. 사용자 결정 2026-11-14, 학습 지도 주요 개념), 진행 중 진단 ID, `latest_result {diagnosis_id, unit_stage, completed_at} \| null`(내 완료 진단 중 가장 최근, 저장된 `reports.unit_stage`만 읽음. 사용자 허락 2026-11-12, 학습 지도의 정복 표시용) | — |
 | `POST /diagnoses` `{display_unit_id, restart}` | 진단 시작 (1단계 출제) | 409 진행 중 진단 있음 (그 ID를 함께 준다), 422 준비 중 단원 |
 | `GET /diagnoses/{id}` | 진단과 1단계 문제·답안. 문제는 본문, 유형, 보기 번호·내용만 준다. 정답 여부·해설·모범 답안·채점 요소·오개념 연결은 주지 않는다 | 404 (없거나 남의 진단. 남의 진단이 있는지도 알려 주지 않는다) |
 | `PUT /diagnoses/{id}/items/{item_id}/answer` | 답안 저장 (객관식 번호 또는 서술형 글) | 404, 409 제출함·중단됨, 422 형식 오류·1,000자 초과·유형과 다른 답 |

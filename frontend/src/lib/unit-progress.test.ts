@@ -8,6 +8,7 @@ const base: Unit = {
   name: "단원",
   publisher: "출판",
   aliases: [],
+  concepts: [],
   status: "full",
   in_progress_diagnosis_id: null,
   latest_result: null,
