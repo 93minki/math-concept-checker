@@ -832,6 +832,27 @@
 - v3.1.0. `supabase link`는 DB 비밀번호 대신 로그인 토큰으로 임시 접속 역할을 만든다.
 - 원격 적용: `supabase db push --remote` (미리보기 `--dry-run`). 조회는 `supabase db query --remote --read-only`. 에이전트 실행에서 쓰기는 `--yes`가 필요하며, 사용자 승인 후에만 붙인다.
 
+## 내 정보·회원 탈퇴 (F-02. 사용자 결정 2026-11-14, `docs/PLAN.md`)
+
+### 화면 `/account` (로그인 필요, 사이드바·폰 머리말 "내 정보")
+- 가입 방식(이메일·카카오), 이메일, 가입일. 값은 로그인한 사용자 자신의 Supabase 사용자 정보(`getUser`)에서 읽는다.
+- 약관 다시 보기: 가입 때 보인 동의 문구(`frontend/src/app/privacy-consent.tsx`의 내용)를 대화 상자로 다시 보여 준다(체크박스 없이). 근거: 개인정보 보호법 제30조(처리방침 공개). 정식 처리방침은 공개 전 필수 항목(`PROGRESS.md`).
+- 비밀번호 변경(이메일 가입자만, 사용자 선택 (가)): 현재 비밀번호·새 비밀번호·새 비밀번호 확인을 한 폼에 두고, 세 칸이 차고 새 비밀번호 두 칸이 같을 때 "변경"이 켜진다. 제출하면
+  1. 현재 비밀번호로 `signInWithPassword`(자기 이메일)를 불러 맞는지 확인한다. 틀리면 "현재 비밀번호가 맞지 않아요"로 멈춘다.
+  2. 맞으면 `updateUser({ password, current_password })`로 바꾼다.
+  - 1을 두는 이유: Supabase의 "변경 때 현재 비밀번호 요구" 설정은 문서에 있으나 대시보드 위치가 문서에 없고([password-security](https://supabase.com/docs/guides/auth/password-security)), 설정이 꺼져 있으면 `current_password`를 확인하지 않는다(`@supabase/auth-js` 2.119.0 `types.d.ts:434-438`). 설정에 기대지 않고 틀린 비밀번호로 바뀌지 않게 한다. `current_password`도 함께 보내 설정이 켜지면 서버에서 한 번 더 확인된다(supabase-js v2.102.0 이상, [passwords](https://supabase.com/docs/guides/auth/passwords)).
+  - 폼은 `method="post"`, 스크립트 실행 전에는 제출되지 않는다. 비밀번호는 주소·로그·오류 메시지에 넣지 않는다(`AGENTS.md` 4.3). 새 비밀번호 규칙은 가입 화면과 같다.
+- 회원 탈퇴(사용자 결정): 대화 상자 "정말 탈퇴하시겠어요? 탈퇴하면 진단 기록이 모두 사라지고 되돌릴 수 없어요." + 취소·탈퇴. 입력 확인은 하지 않는다. 탈퇴 성공 → 로그아웃(`signOut`) → `/`. 실패 → 대화 상자에 오류, 다시 시도 가능.
+
+### API `DELETE /account` (백엔드, 로그인 필요)
+- 요청에 사용자 ID를 받지 않는다. 토큰의 `sub`만 지운다.
+- 순서
+  1. Supabase 관리자 API로 그 사용자를 읽어 카카오 연결(`identities`의 provider `kakao`)이 있으면 카카오 회원번호로 **카카오 연결 끊기**: `POST https://kapi.kakao.com/v1/user/unlink`, 헤더 `Authorization: KakaoAK {KAKAO_ADMIN_KEY}`, 본문(`application/x-www-form-urlencoded`) `target_id_type=user_id&target_id={회원번호}` ([카카오 로그인 REST API 연결 끊기](https://developers.kakao.com/docs/ko/kakaologin/rest-api)).
+  2. Supabase 관리자 API로 사용자 삭제(Secret key, 서버 전용). `profiles`·진단·답안·채점·리포트는 `on delete cascade`로 함께 지워진다(마이그레이션 `20261110023848`, `20261110220000`, `20261111000000`).
+- 1이 실패하면 2를 하지 않고 502 `{code: "kakao_unlink_failed"}`. 2가 실패하면 502 `{code: "delete_failed"}`(카카오는 이미 끊김. 다시 시도할 때 카카오가 "이 앱에 연결되지 않은 사용자" 오류를 돌려주면 이미 끊긴 것으로 보고 2로 넘어간다. 그 오류 코드는 구현 때 카카오 공식 오류 코드 문서로 확인해 적는다 — 지금은 근거 없음). 성공 204.
+- 비밀값 `KAKAO_ADMIN_KEY`(백엔드 `.env`, 서버 전용). 이름만 `.env.sample`.
+- 테스트: 외부 호출(Supabase 관리자, 카카오)은 모두 가짜로 바꾼다. **시험 계정 A·B는 어떤 테스트에서도 지우지 않는다**(사용자 지시 2026-11-14). 실제 탈퇴는 사용자가 별도 계정으로 확인한다.
+
 ## 서술형 답안 입력
 - 일반 텍스트로 입력받는다. 수식 입력기와 손글씨 사진 업로드는 쓰지 않는다.
   - 근거: 사용자 결정 (2026-11-09)
