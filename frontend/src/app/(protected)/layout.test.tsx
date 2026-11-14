@@ -51,7 +51,14 @@ test.each(["지난 기록 화면", "진단 화면"])(
         .getAttribute("aria-current"),
     ).toBe(mockPath.value === "/history" ? "page" : null);
     expect(sidebar.queryByText("랭킹")).toBeNull();
-    expect(sidebar.queryByText("내 정보")).toBeNull();
+    expect(
+      sidebar.getByRole("link", { name: "내 정보" }).getAttribute("href"),
+    ).toBe("/account");
+    expect(
+      within(container.querySelector(".protected-header") as HTMLElement)
+        .getByRole("link", { name: "내 정보" })
+        .getAttribute("href"),
+    ).toBe("/account");
     // The icon is decorative: the link is still named by its text.
     expect(
       sidebar
@@ -65,3 +72,16 @@ test.each(["지난 기록 화면", "진단 화면"])(
     expect(screen.getByRole("main").textContent).toBe(page);
   },
 );
+
+test("내 정보 메뉴의 현재 페이지 표시", async () => {
+  mockPath.value = "/account";
+  const { container } = render(
+    await ProtectedLayout({ children: <main>내 정보</main> }),
+  );
+  for (const selector of [".study-sidebar", ".protected-header"]) {
+    const nav = within(container.querySelector(selector) as HTMLElement);
+    expect(
+      nav.getByRole("link", { name: "내 정보" }).getAttribute("aria-current"),
+    ).toBe("page");
+  }
+});

@@ -42,6 +42,7 @@ def test_optional_ai_keys_and_presence(
     settings = Settings(
         _env_file=None,
         SUPABASE_URL="https://example.supabase.co",
+        KAKAO_ADMIN_KEY="example-key",
         SUPABASE_SECRET_KEY="sb_secret_fake",
         FRONTEND_ORIGIN="http://localhost:3000",
     )
@@ -125,6 +126,7 @@ def test_missing_keys() -> None:
     settings = Settings(
         _env_file=None,
         SUPABASE_URL="https://example.supabase.co",
+        KAKAO_ADMIN_KEY="example-key",
         SUPABASE_SECRET_KEY="sb_secret_fake",
         FRONTEND_ORIGIN="http://localhost:3000",
     )

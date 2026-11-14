@@ -113,8 +113,11 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
       body && typeof body === "object" && "detail" in body ? body.detail : null;
     throw new ApiError(response.status, detail);
   }
+  if (response.status === 204) return undefined as T;
   return response.json() as Promise<T>;
 }
+export const deleteAccount = () =>
+  request<void>("/account", { method: "DELETE" });
 export const getUnits = () => request<Unit[]>("/units");
 export const getHistory = (limit = 20, before?: string) => {
   const params = new URLSearchParams({ limit: String(limit) });

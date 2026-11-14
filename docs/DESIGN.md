@@ -847,9 +847,9 @@
 ### API `DELETE /account` (백엔드, 로그인 필요)
 - 요청에 사용자 ID를 받지 않는다. 토큰의 `sub`만 지운다.
 - 순서
-  1. Supabase 관리자 API로 그 사용자를 읽어 카카오 연결(`identities`의 provider `kakao`)이 있으면 카카오 회원번호로 **카카오 연결 끊기**: `POST https://kapi.kakao.com/v1/user/unlink`, 헤더 `Authorization: KakaoAK {KAKAO_ADMIN_KEY}`, 본문(`application/x-www-form-urlencoded`) `target_id_type=user_id&target_id={회원번호}` ([카카오 로그인 REST API 연결 끊기](https://developers.kakao.com/docs/ko/kakaologin/rest-api)).
+  1. Supabase 관리자 API로 그 사용자를 읽어 카카오 연결(`identities`의 provider `kakao`)이 있으면 카카오 회원번호로 **카카오 연결 끊기**(Supabase Auth의 `provider_id`는 Python SDK의 `UserIdentity.id`로 전달됨: [Supabase Auth identity 모델](https://github.com/supabase/auth/blob/master/internal/models/identity.go)): `POST https://kapi.kakao.com/v1/user/unlink`, 헤더 `Authorization: KakaoAK {KAKAO_ADMIN_KEY}`, 본문(`application/x-www-form-urlencoded`) `target_id_type=user_id&target_id={회원번호}` ([카카오 로그인 REST API 연결 끊기](https://developers.kakao.com/docs/ko/kakaologin/rest-api)).
   2. Supabase 관리자 API로 사용자 삭제(Secret key, 서버 전용). `profiles`·진단·답안·채점·리포트는 `on delete cascade`로 함께 지워진다(마이그레이션 `20261110023848`, `20261110220000`, `20261111000000`).
-- 1이 실패하면 2를 하지 않고 502 `{code: "kakao_unlink_failed"}`. 2가 실패하면 502 `{code: "delete_failed"}`(카카오는 이미 끊김. 다시 시도할 때 카카오가 "이 앱에 연결되지 않은 사용자" 오류를 돌려주면 이미 끊긴 것으로 보고 2로 넘어간다. 그 오류 코드는 구현 때 카카오 공식 오류 코드 문서로 확인해 적는다 — 지금은 근거 없음). 성공 204.
+- 1이 실패하면 2를 하지 않고 502 `{code: "kakao_unlink_failed"}`. 2가 실패하면 502 `{code: "delete_failed"}`(카카오는 이미 끊김. 다시 시도할 때 카카오가 "이 앱에 연결되지 않은 사용자" 오류를 돌려주면 이미 끊긴 것으로 보고 2로 넘어간다. 카카오 [REST API 오류 코드](https://developers.kakao.com/docs/ko/rest-api/error-code)의 `-101`·HTTP 400만 해당). 성공 204.
 - 비밀값 `KAKAO_ADMIN_KEY`(백엔드 `.env`, 서버 전용). 이름만 `.env.sample`.
 - 테스트: 외부 호출(Supabase 관리자, 카카오)은 모두 가짜로 바꾼다. **시험 계정 A·B는 어떤 테스트에서도 지우지 않는다**(사용자 지시 2026-11-14). 실제 탈퇴는 사용자가 별도 계정으로 확인한다.
 
