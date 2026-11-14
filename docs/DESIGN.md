@@ -853,7 +853,7 @@
 - **브라우저 지원:** Astryx는 CSS anchor positioning·`light-dark()`·Popover API를 쓴다 (`astryx docs browser-support`). 학생 기기 범위는 `docs/PROGRESS.md` 공개 전 확인 항목.
 
 
-### 화면 스타일 기준 (UI 고도화 2차에서 굳힘, `docs/plans/2026-11-13_ui-polish-2.md`)
+### 화면 스타일 기준 (UI 고도화 2차에서 굳힘, `docs/plans/2026-11-14_ui-polish-2.md`)
 다음 화면(F-02 `/account` 등)은 아래 규칙을 그대로 따른다.
 
 - **강조색 보라** (사용자 결정 2026-11-13): 라이트 `#6744c5`(흰 글자 6.54:1), 다크 `#aa9cf7`(어두운 글자 `#101018` 7.94:1). 테마 `concept`의 `--color-accent`·`--color-on-accent`·`--color-text-accent`·`--color-icon-accent`·`--color-accent-muted`로만 쓴다(`src/themes/concept/conceptTheme.ts`). 화면 코드에 색 값을 직접 쓰지 않는다(문제 판 제외).
