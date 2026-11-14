@@ -3,10 +3,10 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import "./path.css";
 
-function snapshot(): "a" | "b" {
-  return new URLSearchParams(window.location.search).get("__variant") === "b"
-    ? "b"
-    : "a";
+function snapshot(): "c" | "d" {
+  return new URLSearchParams(window.location.search).get("__variant") === "d"
+    ? "d"
+    : "c";
 }
 function subscribe(callback: () => void) {
   window.addEventListener("popstate", callback);
@@ -18,10 +18,10 @@ function choose(variant: string) {
   window.history.pushState(null, "", url);
   window.dispatchEvent(new PopStateEvent("popstate"));
 }
-export function usePathVariant(): "a" | "b" {
-  return useSyncExternalStore<"a" | "b">(subscribe, snapshot, () => "a");
+export function usePathVariant(): "c" | "d" {
+  return useSyncExternalStore<"c" | "d">(subscribe, snapshot, () => "c");
 }
-export function VariantPicker({ variant }: { variant: "a" | "b" }) {
+export function VariantPicker({ variant }: { variant: "c" | "d" }) {
   const [hidden, setHidden] = useState(false);
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -42,7 +42,7 @@ export function VariantPicker({ variant }: { variant: "a" | "b" }) {
         (event.key === "ArrowLeft" || event.key === "ArrowRight")
       ) {
         event.preventDefault();
-        choose(event.key === "ArrowLeft" ? "a" : "b");
+        choose(event.key === "ArrowLeft" ? "c" : "d");
       }
     };
     window.addEventListener("keydown", onKey);
@@ -54,17 +54,17 @@ export function VariantPicker({ variant }: { variant: "a" | "b" }) {
       <strong>학습 지도 시안</strong>
       <button
         type="button"
-        aria-pressed={variant === "a"}
-        onClick={() => choose("a")}
+        aria-pressed={variant === "c"}
+        onClick={() => choose("c")}
       >
-        A 지그재그 길
+        C 이름 숨김
       </button>
       <button
         type="button"
-        aria-pressed={variant === "b"}
-        onClick={() => choose("b")}
+        aria-pressed={variant === "d"}
+        onClick={() => choose("d")}
       >
-        B 세로 단계 길
+        D 이름 표시
       </button>
       <small>← → 전환 · H 숨기기</small>
     </aside>

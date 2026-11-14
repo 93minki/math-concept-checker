@@ -84,6 +84,7 @@ test("학년 탭과 검색 및 진행 상태", async () => {
   expect(screen.getByText("동아출판 기준")).toBeTruthy();
   expect(screen.queryByRole("heading", { name: "2. 도형" })).toBeNull();
   fireEvent.click(screen.getByRole("tab", { name: "중2" }));
+  fireEvent.click(screen.getByRole("button", { name: "2. 도형, 준비 중" }));
   expect(screen.getByRole("heading", { name: "2. 도형" })).toBeTruthy();
   expect(screen.queryByRole("heading", { name: "1. 문자와 식" })).toBeNull();
   fireEvent.change(screen.getByLabelText("단원 검색"), {
@@ -171,6 +172,7 @@ test("학년과 상태를 표시하고 별칭으로 검색한다", async () => {
   expect(await screen.findByText("동아출판 기준")).toBeTruthy();
   expect(screen.getByText("이 단원은 일부 내용만 진단해요")).toBeTruthy();
   fireEvent.click(screen.getByRole("tab", { name: "중2" }));
+  fireEvent.click(screen.getByRole("button", { name: "2. 도형, 준비 중" }));
   const unavailable = screen.getByRole("button", { name: "준비 중" });
   expect(unavailable.getAttribute("aria-disabled")).toBe("true");
   fireEvent.click(unavailable);
@@ -760,26 +762,26 @@ test("그림 보기는 선택 가능한 2열 배치 영역에 표시한다", asy
   );
 });
 
-test("학습 지도 A/B 선택과 키보드 숨김은 검색 입력을 방해하지 않는다", async () => {
-  window.history.replaceState(null, "", "/?__variant=a");
+test("학습 지도 C/D 선택과 키보드 숨김은 검색 입력을 방해하지 않는다", async () => {
+  window.history.replaceState(null, "", "/?__variant=c");
   render(<UnitSelection />);
   await screen.findByRole("heading", { name: "1. 문자와 식" });
-  expect(document.querySelector(".path-list-a")).toBeTruthy();
-  fireEvent.click(screen.getByRole("button", { name: "B 세로 단계 길" }));
-  expect(document.querySelector(".path-list-b")).toBeTruthy();
-  expect(window.location.search).toContain("__variant=b");
+  expect(document.querySelector(".path-list-c")).toBeTruthy();
+  fireEvent.click(screen.getByRole("button", { name: "D 이름 표시" }));
+  expect(document.querySelector(".path-list-d")).toBeTruthy();
+  expect(window.location.search).toContain("__variant=d");
   const input = screen.getByLabelText("단원 검색");
   fireEvent.keyDown(input, { key: "h" });
   fireEvent.keyDown(input, { key: "ArrowLeft" });
   expect(
     screen.getByRole("complementary", { name: "학습 지도 시안 선택" }),
   ).toBeTruthy();
-  expect(document.querySelector(".path-list-b")).toBeTruthy();
+  expect(document.querySelector(".path-list-d")).toBeTruthy();
   fireEvent.keyDown(window, { key: "h" });
   expect(
     screen.queryByRole("complementary", { name: "학습 지도 시안 선택" }),
   ).toBeNull();
   fireEvent.keyDown(window, { key: "h" });
   fireEvent.keyDown(window, { key: "ArrowLeft" });
-  expect(document.querySelector(".path-list-a")).toBeTruthy();
+  expect(document.querySelector(".path-list-c")).toBeTruthy();
 });

@@ -28,7 +28,7 @@ function view(
   units: Unit[],
   nextId: number | null = 1,
   start = vi.fn(),
-  variant: "a" | "b" = "a",
+  variant: "c" | "d" = "c",
 ) {
   return render(
     <LearningMap
@@ -77,11 +77,17 @@ test.each([
 );
 test("다음 단원만 주 버튼으로 표시한다", () => {
   view([base, { ...base, id: 2, number: 2 }], 2);
-  const buttons = screen.getAllByRole("button", { name: "진단 시작하기" });
-  expect(buttons.map((button) => button.getAttribute("data-variant"))).toEqual([
-    "secondary",
-    "primary",
-  ]);
+  expect(
+    screen
+      .getByRole("button", { name: "진단 시작하기" })
+      .getAttribute("data-variant"),
+  ).toBe("primary");
+  fireEvent.click(screen.getByRole("button", { name: "1. 단원, 시작 전" }));
+  expect(
+    screen
+      .getByRole("button", { name: "진단 시작하기" })
+      .getAttribute("data-variant"),
+  ).toBe("secondary");
 });
 test.each([
   [
@@ -132,7 +138,7 @@ test("더보기 메뉴는 Escape로 닫힌다", () => {
   expect(trigger.getAttribute("aria-expanded")).toBe("false");
 });
 
-test.each(["a", "b"] as const)(
+test.each(["c", "d"] as const)(
   "시안 %s: 상태 모양과 다음 위치, 주 동작",
   (variant) => {
     const start = vi.fn();
@@ -177,26 +183,52 @@ test.each(["a", "b"] as const)(
       const node = rows[i].querySelector(".path-node")!;
       expect(node.textContent).toBe(symbol);
       expect(node.getAttribute("aria-label")).toContain(state);
+      if (i !== 4) fireEvent.click(node);
       expect(rows[i].querySelector(".learning-state")?.textContent).toContain(
         state,
       );
     }
     expect(container.querySelectorAll("[data-next]")).toHaveLength(1);
     expect(within(rows[4]).getByText("다음")).toBeTruthy();
+    fireEvent.click(rows[4].querySelector(".path-node")!);
     fireEvent.click(
       within(rows[4]).getByRole("button", { name: "진단 시작하기" }),
     );
     expect(start).toHaveBeenCalledWith(units[4]);
+    fireEvent.click(rows[5].querySelector(".path-node")!);
     expect(
       (rows[5].querySelector(".path-node") as HTMLButtonElement).disabled,
-    ).toBe(true);
+    ).toBe(false);
     expect(
       within(rows[5])
         .getByRole("button", { name: "준비 중" })
         .getAttribute("aria-disabled"),
     ).toBe("true");
+    fireEvent.click(rows[3].querySelector(".path-node")!);
     fireEvent.click(within(rows[3]).getByRole("button", { name: "넷 더보기" }));
     fireEvent.click(screen.getByRole("menuitem", { name: "새로 시작하기" }));
     expect(start).toHaveBeenCalledWith(units[3]);
   },
 );
+
+test.each(["c", "d"] as const)("시안 %s: 말풍선 전환과 Escape", (variant) => {
+  view([base, { ...base, id: 2, number: 2, name: "둘" }], 1, vi.fn(), variant);
+  const first = screen.getByRole("button", { name: "1. 단원, 시작 전" });
+  const second = screen.getByRole("button", { name: "2. 둘, 시작 전" });
+  expect(first.getAttribute("aria-expanded")).toBe("true");
+  expect(document.querySelectorAll(".path-name")).toHaveLength(
+    variant === "d" ? 2 : 0,
+  );
+  if (variant === "d")
+    expect(document.querySelectorAll(".path-name")[1].textContent).toBe(
+      "2. 둘",
+    );
+  fireEvent.click(second);
+  expect(first.getAttribute("aria-expanded")).toBe("false");
+  expect(second.getAttribute("aria-expanded")).toBe("true");
+  fireEvent.keyDown(screen.getByRole("heading", { name: "2. 둘" }), {
+    key: "Escape",
+  });
+  expect(second.getAttribute("aria-expanded")).toBe("false");
+  expect(document.activeElement).toBe(second);
+});

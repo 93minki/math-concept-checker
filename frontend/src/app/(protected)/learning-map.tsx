@@ -6,7 +6,7 @@ import { HStack } from "@astryxdesign/core/HStack";
 import { ProgressBar } from "@astryxdesign/core/ProgressBar";
 import { VStack } from "@astryxdesign/core/VStack";
 import Mascot from "@/components/mascot";
-import type { ReactNode } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import type { Unit } from "@/lib/diagnosis-api";
 import {
   gradeProgress,
@@ -25,7 +25,7 @@ export type ViewProps = {
   start: (unit: Unit) => void;
   conflictNode: (unit: Unit) => ReactNode;
   embedded?: boolean;
-  variant?: "a" | "b";
+  variant?: "c" | "d";
 };
 // Units with a state get a colored tag; untouched ones stay plain muted text,
 // so "진행 중" and "시작 전" no longer look alike (user 2026-11-13).
@@ -64,7 +64,9 @@ export function Summary({ units, grade }: { units: Unit[]; grade: string }) {
   );
 }
 export default function LearningMap(props: ViewProps) {
-  const rows = props.units.map((unit, index) => {
+  const [openId, setOpenId] = useState<number | null>(props.nextId);
+  const nodeRefs = useRef(new Map<number, HTMLButtonElement>());
+  const rows = props.units.map((unit) => {
     const state = unitProgress(unit);
     const resume = unit.in_progress_diagnosis_id;
     const actions = [
@@ -96,52 +98,55 @@ export default function LearningMap(props: ViewProps) {
     return (
       <article
         key={unit.id}
-        className={`learning-row${props.search ? "" : ` path-row path-row-${props.variant ?? "a"}`}`}
+        onKeyDown={(event) => {
+          if (
+            event.key === "Escape" &&
+            !event.defaultPrevented &&
+            openId === unit.id &&
+            !props.search
+          ) {
+            event.stopPropagation();
+            setOpenId(null);
+            nodeRefs.current.get(unit.id)?.focus();
+          }
+        }}
+        className={`learning-row${props.search ? "" : ` path-row path-row-${props.variant ?? "c"}`}`}
         data-state={state}
         data-next={(!props.search && unit.id === props.nextId) || undefined}
       >
         {!props.search && (
           <div className="path-node-wrap">
-            {(props.variant ?? "a") === "a" &&
-              index < props.units.length - 1 && (
-                <svg
-                  className="path-connector"
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <line
-                    x1={[30, 48, 66, 48][index % 4]}
-                    y1="0"
-                    x2={[48, 66, 48, 30][index % 4]}
-                    y2="100"
-                    vectorEffect="non-scaling-stroke"
-                  />
-                </svg>
-              )}
-            {resume ? (
-              <a
-                className="path-node"
-                aria-label={`${unit.number}. ${unit.name}, ${progressLabels[state]}`}
-                href={`/diagnoses/${resume}`}
-              >
-                {symbols[state] || unit.number}
-              </a>
-            ) : (
-              <button
-                type="button"
-                className="path-node"
-                aria-label={`${unit.number}. ${unit.name}, ${progressLabels[state]}`}
-                disabled={props.busy || unit.status === "unavailable"}
-                onClick={() => props.start(unit)}
-              >
-                {symbols[state] || unit.number}
-              </button>
+            {unit.id === props.nextId && (
+              <div className="path-next">
+                <span>다음</span>
+                <Mascot mood="waving" size={56} />
+              </div>
+            )}
+            <button
+              ref={(node) => {
+                if (node) nodeRefs.current.set(unit.id, node);
+                else nodeRefs.current.delete(unit.id);
+              }}
+              type="button"
+              className="path-node"
+              aria-label={`${unit.number}. ${unit.name}, ${progressLabels[state]}`}
+              aria-expanded={openId === unit.id}
+              aria-controls={`unit-details-${unit.id}`}
+              onClick={() => setOpenId(openId === unit.id ? null : unit.id)}
+            >
+              {symbols[state] || unit.number}
+            </button>
+            {props.variant === "d" && (
+              <p className="path-name" aria-hidden="true">
+                {unit.number}. {unit.name}
+              </p>
             )}
           </div>
         )}
         <div
-          className={props.search ? "learning-list-details" : "path-details"}
+          id={props.search ? undefined : `unit-details-${unit.id}`}
+          className={props.search ? "learning-list-details" : "path-popover"}
+          hidden={!props.search && openId !== unit.id}
         >
           <VStack gap={1} className="learning-info">
             <h4>
@@ -182,19 +187,8 @@ export default function LearningMap(props: ViewProps) {
               )}
             </HStack>
           </HStack>
-          {!props.search && unit.id === props.nextId && (
-            <div className="path-next">
-              <span>다음</span>
-              {props.variant === "b" && (
-                <p>
-                  {resume ? "여기서 이어서 풀어요" : "여기서 개념을 확인해요"}
-                </p>
-              )}
-              <Mascot mood="waving" size={64} />
-            </div>
-          )}
+          {props.conflictNode(unit)}
         </div>
-        {props.conflictNode(unit)}
       </article>
     );
   });
@@ -208,8 +202,10 @@ export default function LearningMap(props: ViewProps) {
   return (
     <Card>
       <VStack gap={4}>
-        <Summary units={props.allUnits} grade={props.grade} />
-        <div className={`path-list path-list-${props.variant ?? "a"}`}>
+        <div className="path-summary">
+          <Summary units={props.allUnits} grade={props.grade} />
+        </div>
+        <div className={`path-list path-list-${props.variant ?? "c"}`}>
           {rows}
         </div>
       </VStack>

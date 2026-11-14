@@ -4,7 +4,7 @@ import { login, noHorizontalOverflow, requiredEnv, unitName } from "./helpers";
 function unitCard(page: Page) {
   return page
     .locator("article")
-    .filter({ has: page.getByRole("heading", { name: new RegExp(unitName) }) });
+    .filter({ has: page.getByRole("button", { name: new RegExp(unitName) }) });
 }
 async function start(page: Page) {
   const waiting = page.waitForResponse(
@@ -15,16 +15,19 @@ async function start(page: Page) {
   const card = unitCard(page);
   // Units load after the page renders (a loading screen shows first).
   await expect(card).toBeVisible();
-  // Each unit keeps a visible node, state and primary action in the path layout.
   const rows = page.locator(".learning-row");
   expect(await rows.count()).toBeGreaterThan(0);
   for (const row of await rows.all()) {
-    await expect(row.locator(".path-node")).toBeVisible();
-    await expect(row.locator(".learning-state")).toBeVisible();
-    await expect(
-      row.locator(".learning-actions > .astryx-button"),
-    ).toBeVisible();
+    const node = row.locator(".path-node");
+    await expect(node).toBeVisible();
+    await expect(node).toHaveAttribute("aria-label", /, .+/);
   }
+  const node = card.locator(".path-node");
+  if ((await node.getAttribute("aria-expanded")) !== "true") await node.click();
+  await expect(card.locator(".learning-state")).toBeVisible();
+  await expect(
+    card.locator(".learning-actions > .astryx-button"),
+  ).toBeVisible();
   if (await card.getByRole("link", { name: "이어서 풀기" }).isVisible()) {
     const more = card.getByRole("button", { name: `${unitName} 더보기` });
     await more.click();
@@ -168,7 +171,11 @@ test("진단을 이어 풀고 리포트를 확인한 뒤 다른 변형을 받는
   await start(page);
   const first = await solve(page);
   await page.getByRole("link", { name: "← 단원 선택으로" }).click();
-  await unitCard(page).getByRole("link", { name: "이어서 풀기" }).click();
+  const resumeCard = unitCard(page);
+  const resumeNode = resumeCard.locator(".path-node");
+  if ((await resumeNode.getAttribute("aria-expanded")) !== "true")
+    await resumeNode.click();
+  await resumeCard.getByRole("link", { name: "이어서 풀기" }).click();
   await expect(progress(page)).toHaveText(/^1\s*\/\s*\d+$/);
   for (let i = 0; i < first.answerTypes.length; i++) {
     await noHorizontalOverflow(page);

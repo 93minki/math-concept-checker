@@ -132,6 +132,7 @@ export default function UnitSelection() {
           return (
             <VStack key={item} gap={3}>
               <LearningMap
+                key={item}
                 variant={variant}
                 embedded={!!query.trim()}
                 units={group}
