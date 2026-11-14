@@ -320,17 +320,20 @@
   font-size: 2.5rem;
   line-height: 1;
 }
+/* Ten equal tiles across the card: their outer edges line up with the
+   score and the note box below (user 2026-11-14: table looked misaligned). */
 .score-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  width: min(100%, 20rem);
-  justify-self: start;
-  gap: var(--spacing-3) var(--spacing-1);
-  text-align: left;
+  gap: var(--spacing-2);
 }
 .score-grid > div {
   display: grid;
+  justify-items: center;
   gap: var(--spacing-1);
+  padding: var(--spacing-2) 0;
+  border-radius: var(--radius-element);
+  background: var(--color-background-muted);
   font-size: 0.8rem;
 }
 .score-grid small {
@@ -513,11 +516,15 @@
   );
   overflow: hidden;
 }
+/* Set on the text itself: Astryx's base h2/p color beats an inherited one,
+   which left dark text on the purple band in light mode (user 2026-11-14). */
 .landing-cta h2 {
   line-height: 1.2;
+  color: var(--color-on-dark);
 }
 .landing-cta p {
   margin-top: var(--spacing-2);
+  color: var(--color-on-dark);
 }
 .cta-mascot {
   display: grid;
