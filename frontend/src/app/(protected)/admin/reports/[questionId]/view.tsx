@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@astryxdesign/core/Button";
 import { Badge } from "@astryxdesign/core/Badge";
+import { Banner } from "@astryxdesign/core/Banner";
 import { Dialog, DialogHeader } from "@astryxdesign/core/Dialog";
 import { HStack } from "@astryxdesign/core/HStack";
 import { Layout, LayoutContent, LayoutFooter } from "@astryxdesign/core/Layout";
@@ -83,6 +84,13 @@ function Preview({
           </div>
           <div>
             <strong>채점 기준</strong>
+            {question.rubric.length === 0 && (
+              <p className="reports-muted">
+                {question.question_type === "multiple_choice"
+                  ? "객관식 문제라 채점 기준이 없어요"
+                  : "채점 기준이 없어요"}
+              </p>
+            )}
             {question.rubric.map((r) => (
               <p key={r.no}>
                 {r.no}. {r.description} ({r.points}점
@@ -104,7 +112,13 @@ export default function AdminQuestionView({ id }: { id: string }) {
   const [confirm, setConfirm] = useState<"ai" | string | null>(null);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
-  const [busy, setBusy] = useState(false);
+  const [closedByRevisionId, setClosedByRevisionId] = useState<string | null>(
+    null,
+  );
+  const [busyAction, setBusyAction] = useState<
+    "ai" | "manual" | "review" | "no_issue" | "no_change" | "approve" | null
+  >(null);
+  const busy = busyAction !== null;
   const [kind, setKind] = useState<ReportKind | null>(null);
   const [selectedRevisionId, setSelectedRevisionId] = useState<string | null>(
     null,
@@ -115,6 +129,18 @@ export default function AdminQuestionView({ id }: { id: string }) {
   const selectedRevision =
     revisions.find((r) => r.id === selectedRevisionId) ?? revisions[0];
   const previousRevisions = revisions.slice(1);
+  const hasOpen =
+    data?.reports.some(
+      (r) => r.status === "received" || r.status === "in_review",
+    ) ?? false;
+  const lastResolved = (data?.reports as Report[] | undefined)
+    ?.filter((r) => r.status === "fixed" || r.status === "no_issue")
+    .slice()
+    .sort(
+      (a, b) =>
+        (Date.parse(b.resolved_at ?? "") || 0) -
+        (Date.parse(a.resolved_at ?? "") || 0),
+    )[0];
   const fail = useCallback(
     (e: unknown) => {
       if (e instanceof ApiError && e.status === 403) router.replace("/");
@@ -145,27 +171,36 @@ export default function AdminQuestionView({ id }: { id: string }) {
     const timer = window.setTimeout(() => void load(), 0);
     return () => window.clearTimeout(timer);
   }, [load]);
-  async function run(action: () => Promise<unknown>, success: string) {
-    setBusy(true);
+  async function run(
+    action: () => Promise<unknown>,
+    success: string,
+    actionName: NonNullable<typeof busyAction>,
+    revisionId?: string,
+  ) {
+    if (busy) return;
+    setBusyAction(actionName);
     setError("");
     setMessage("");
     try {
       await action();
+      setClosedByRevisionId(
+        actionName === "no_change" ? (revisionId ?? null) : null,
+      );
       setMessage(success);
       setConfirm(null);
       setSelectedRevisionId(null);
       await load();
     } catch (e) {
+      setConfirm(null);
       fail(e);
     } finally {
-      setBusy(false);
+      setBusyAction(null);
     }
   }
   return (
     <main className="study-page admin-stack reports-ui">
       <h1>신고 문항 관리</h1>
-      {error && <p role="alert">{error}</p>}
-      {message && <p role="status">{message}</p>}
+      {!data && error && <Banner status="error" title={error} role="alert" />}
       {data && draft && (
         <>
           <p className="reports-muted">
@@ -191,6 +226,11 @@ export default function AdminQuestionView({ id }: { id: string }) {
               />
             </section>
             <aside className="admin-stack reports-detail-panel">
+              {message && (
+                <Banner status="success" title={message} role="status" />
+              )}
+              {error && <Banner status="error" title={error} role="alert" />}
+              {!hasOpen && <Badge label="처리 완료" variant="success" />}
               <h2>신고 목록</h2>
               <div className="reports-chips" aria-label="신고 유형">
                 {(Object.keys(reportKinds) as ReportKind[]).map((value) => {
@@ -210,180 +250,227 @@ export default function AdminQuestionView({ id }: { id: string }) {
                   ) : null;
                 })}
               </div>
-              <h2>신고 처리</h2>
-              <Button
-                variant={
-                  data.reports.some(
-                    (r) => r.status === "received" || r.status === "in_review",
-                  )
-                    ? "primary"
-                    : "secondary"
-                }
-                label="AI 수정안 만들기"
-                onClick={() => setConfirm("ai")}
-                isDisabled={busy}
-              />
-              <Button label="직접 수정" onClick={() => setEditing(!editing)} />
-              <Button
-                label="처리 중으로"
-                onClick={() =>
-                  void run(() => markInReview(id), "처리 중으로 변경했어요.")
-                }
-                isDisabled={busy}
-              />
-              <label>
-                문제 없음 메모
-                <textarea
-                  value={note}
-                  onChange={(e) => setNote(e.target.value)}
-                />
-              </label>
-              <Button
-                label="문제 없음"
-                onClick={() =>
-                  void run(
-                    () => resolveNoIssue(id, note),
-                    "문제 없음으로 처리했어요.",
-                  )
-                }
-                isDisabled={busy}
-              />
-              {editing && (
-                <section className="admin-editor">
-                  <h2>직접 수정</h2>
-                  <label>
-                    문제 본문
-                    <textarea
-                      value={draft.body}
-                      onChange={(e) =>
-                        setDraft({ ...draft, body: e.target.value })
-                      }
-                    />
-                  </label>
-                  {draft.choices.map((choice, index) => (
-                    <fieldset key={choice.no}>
-                      <legend>보기 {choice.no}</legend>
-                      <label>
-                        내용
-                        <textarea
-                          value={choice.text}
-                          onChange={(e) =>
-                            setDraft({
-                              ...draft,
-                              choices: draft.choices.map((c, i) =>
-                                i === index
-                                  ? { ...c, text: e.target.value }
-                                  : c,
-                              ),
-                            })
-                          }
-                        />
-                      </label>
-                      <label>
-                        <input
-                          type="radio"
-                          name="correct-choice"
-                          checked={choice.is_correct}
-                          onChange={() =>
-                            setDraft({
-                              ...draft,
-                              choices: draft.choices.map((c, i) => ({
-                                ...c,
-                                is_correct: i === index,
-                              })),
-                            })
-                          }
-                        />
-                        정답
-                      </label>
-                    </fieldset>
-                  ))}
-                  <label>
-                    모범 답안
-                    <textarea
-                      value={draft.model_answer ?? ""}
-                      onChange={(e) =>
-                        setDraft({ ...draft, model_answer: e.target.value })
-                      }
-                    />
-                  </label>
-                  <label>
-                    해설
-                    <textarea
-                      value={draft.explanation}
-                      onChange={(e) =>
-                        setDraft({ ...draft, explanation: e.target.value })
-                      }
-                    />
-                  </label>
-                  {draft.rubric.map((r, index) => (
-                    <fieldset key={r.no}>
-                      <legend>채점 요소 {r.no}</legend>
-                      <label>
-                        내용
-                        <textarea
-                          value={r.description}
-                          onChange={(e) =>
-                            setDraft({
-                              ...draft,
-                              rubric: draft.rubric.map((x, i) =>
-                                i === index
-                                  ? { ...x, description: e.target.value }
-                                  : x,
-                              ),
-                            })
-                          }
-                        />
-                      </label>
-                      <label>
-                        점수
-                        <input
-                          type="number"
-                          value={r.points}
-                          onChange={(e) =>
-                            setDraft({
-                              ...draft,
-                              rubric: draft.rubric.map((x, i) =>
-                                i === index
-                                  ? { ...x, points: Number(e.target.value) }
-                                  : x,
-                              ),
-                            })
-                          }
-                        />
-                      </label>
-                      <label>
-                        <input
-                          type="checkbox"
-                          checked={r.required}
-                          onChange={(e) =>
-                            setDraft({
-                              ...draft,
-                              rubric: draft.rubric.map((x, i) =>
-                                i === index
-                                  ? { ...x, required: e.target.checked }
-                                  : x,
-                              ),
-                            })
-                          }
-                        />
-                        필수
-                      </label>
-                    </fieldset>
-                  ))}
+              {hasOpen ? (
+                <>
+                  <h2>신고 처리</h2>
                   <Button
-                    label="수정안 저장"
+                    variant={
+                      data.reports.some(
+                        (r) =>
+                          r.status === "received" || r.status === "in_review",
+                      )
+                        ? "primary"
+                        : "secondary"
+                    }
+                    label="AI 수정안 만들기"
+                    onClick={() => setConfirm("ai")}
+                    isDisabled={busy}
+                    isLoading={busyAction === "ai"}
+                  />
+                  <Button
+                    label="직접 수정"
+                    onClick={() => setEditing(!editing)}
+                    isDisabled={busy}
+                  />
+                  <Button
+                    label="처리 중으로"
+                    isLoading={busyAction === "review"}
                     onClick={() =>
                       void run(
-                        () => createManualRevision(id, draft),
-                        "수정안을 저장했어요.",
+                        () => markInReview(id),
+                        "처리 중으로 변경했어요.",
+                        "review",
                       )
                     }
                     isDisabled={busy}
                   />
+                  <label>
+                    문제 없음 메모
+                    <textarea
+                      value={note}
+                      onChange={(e) => setNote(e.target.value)}
+                    />
+                  </label>
+                  <Button
+                    label="문제 없음"
+                    isLoading={busyAction === "no_issue"}
+                    onClick={() =>
+                      void run(
+                        () => resolveNoIssue(id, note),
+                        "문제 없음으로 닫았어요.",
+                        "no_issue",
+                      )
+                    }
+                    isDisabled={busy}
+                  />
+                  {editing && (
+                    <section className="admin-editor">
+                      <h2>직접 수정</h2>
+                      <label>
+                        문제 본문
+                        <textarea
+                          value={draft.body}
+                          onChange={(e) =>
+                            setDraft({ ...draft, body: e.target.value })
+                          }
+                        />
+                      </label>
+                      {draft.choices.map((choice, index) => (
+                        <fieldset key={choice.no}>
+                          <legend>보기 {choice.no}</legend>
+                          <label>
+                            내용
+                            <textarea
+                              value={choice.text}
+                              onChange={(e) =>
+                                setDraft({
+                                  ...draft,
+                                  choices: draft.choices.map((c, i) =>
+                                    i === index
+                                      ? { ...c, text: e.target.value }
+                                      : c,
+                                  ),
+                                })
+                              }
+                            />
+                          </label>
+                          <label>
+                            <input
+                              type="radio"
+                              name="correct-choice"
+                              checked={choice.is_correct}
+                              onChange={() =>
+                                setDraft({
+                                  ...draft,
+                                  choices: draft.choices.map((c, i) => ({
+                                    ...c,
+                                    is_correct: i === index,
+                                  })),
+                                })
+                              }
+                            />
+                            정답
+                          </label>
+                        </fieldset>
+                      ))}
+                      <label>
+                        모범 답안
+                        <textarea
+                          value={draft.model_answer ?? ""}
+                          onChange={(e) =>
+                            setDraft({ ...draft, model_answer: e.target.value })
+                          }
+                        />
+                      </label>
+                      <label>
+                        해설
+                        <textarea
+                          value={draft.explanation}
+                          onChange={(e) =>
+                            setDraft({ ...draft, explanation: e.target.value })
+                          }
+                        />
+                      </label>
+                      {draft.rubric.map((r, index) => (
+                        <fieldset key={r.no}>
+                          <legend>채점 요소 {r.no}</legend>
+                          <label>
+                            내용
+                            <textarea
+                              value={r.description}
+                              onChange={(e) =>
+                                setDraft({
+                                  ...draft,
+                                  rubric: draft.rubric.map((x, i) =>
+                                    i === index
+                                      ? { ...x, description: e.target.value }
+                                      : x,
+                                  ),
+                                })
+                              }
+                            />
+                          </label>
+                          <label>
+                            점수
+                            <input
+                              type="number"
+                              value={r.points}
+                              onChange={(e) =>
+                                setDraft({
+                                  ...draft,
+                                  rubric: draft.rubric.map((x, i) =>
+                                    i === index
+                                      ? { ...x, points: Number(e.target.value) }
+                                      : x,
+                                  ),
+                                })
+                              }
+                            />
+                          </label>
+                          <label>
+                            <input
+                              type="checkbox"
+                              checked={r.required}
+                              onChange={(e) =>
+                                setDraft({
+                                  ...draft,
+                                  rubric: draft.rubric.map((x, i) =>
+                                    i === index
+                                      ? { ...x, required: e.target.checked }
+                                      : x,
+                                  ),
+                                })
+                              }
+                            />
+                            필수
+                          </label>
+                        </fieldset>
+                      ))}
+                      <Button
+                        label="수정안 저장"
+                        isLoading={busyAction === "manual"}
+                        onClick={() =>
+                          void run(
+                            () => createManualRevision(id, draft),
+                            "수정안을 저장했어요.",
+                            "manual",
+                          )
+                        }
+                        isDisabled={busy}
+                      />
+                    </section>
+                  )}
+                </>
+              ) : (
+                <section className="reports-closed-summary">
+                  <h2>처리 완료</h2>
+                  {lastResolved ? (
+                    <>
+                      <Badge
+                        label={reportStatuses[lastResolved.status]}
+                        variant={
+                          lastResolved.status === "fixed"
+                            ? "success"
+                            : "neutral"
+                        }
+                      />
+                      {lastResolved.resolved_at && (
+                        <p className="reports-muted">
+                          처리{" "}
+                          {new Date(lastResolved.resolved_at).toLocaleString(
+                            "ko-KR",
+                          )}
+                        </p>
+                      )}
+                      <p className="report-description">
+                        처리 메모: {lastResolved.resolution_note || "없음"}
+                      </p>
+                    </>
+                  ) : (
+                    <p className="reports-muted">처리된 신고 내역이 없어요.</p>
+                  )}
                 </section>
               )}
-
               <ReportEntries
                 key={kind ?? "all"}
                 reports={data.reports}
@@ -426,18 +513,27 @@ export default function AdminQuestionView({ id }: { id: string }) {
                               : "AI 판단: 수정"}
                           </p>
                           <p>{check.reason}</p>
-                          {check.decision === "no_change" && (
+                          {check.decision === "no_change" && hasOpen && (
                             <NoChange
                               reason={check.reason}
                               busy={busy}
+                              loading={busyAction === "no_change"}
                               close={(reason) =>
                                 void run(
                                   () => resolveNoIssue(id, reason),
-                                  "문제 없음으로 처리했어요.",
+                                  "문제 없음으로 닫았어요.",
+                                  "no_change",
+                                  revision.id,
                                 )
                               }
                             />
                           )}
+                          {check.decision === "no_change" &&
+                            !hasOpen &&
+                            lastResolved?.status === "no_issue" &&
+                            closedByRevisionId === revision.id && (
+                              <p>이 판단으로 닫았어요</p>
+                            )}
                         </div>
                       ),
                     )}
@@ -475,9 +571,10 @@ export default function AdminQuestionView({ id }: { id: string }) {
                         </div>
                       </div>
                     )}
-                    {revision.status === "passed" && (
+                    {revision.status === "passed" && hasOpen && (
                       <Button
                         label="승인"
+                        isLoading={busyAction === "approve"}
                         onClick={() => setConfirm(revision.id)}
                         isDisabled={busy}
                       />
@@ -576,11 +673,13 @@ export default function AdminQuestionView({ id }: { id: string }) {
                       void run(
                         () => createAIRevision(id),
                         "AI 수정안을 만들었어요.",
+                        "ai",
                       );
                     else if (confirm)
                       void run(
                         () => approveRevision(confirm),
                         "승인했어요. 백업 파일 내보내기 필요 (app.bank export)",
+                        "approve",
                       );
                   }}
                   isDisabled={busy}
@@ -597,10 +696,12 @@ export default function AdminQuestionView({ id }: { id: string }) {
 function NoChange({
   reason,
   busy,
+  loading,
   close,
 }: {
   reason: string;
   busy: boolean;
+  loading: boolean;
   close: (reason: string) => void;
 }) {
   const [note, setNote] = useState(reason);
@@ -612,6 +713,7 @@ function NoChange({
       </label>
       <Button
         label="문제 없음으로 닫기"
+        isLoading={loading}
         onClick={() => close(note)}
         isDisabled={busy}
       />
@@ -644,7 +746,9 @@ function RevisionBadge({ revision }: { revision: Revision }) {
   );
 }
 
-type Report = AdminDetails["reports"][number];
+type Report = AdminDetails["reports"][number] & {
+  resolution_note?: string | null;
+};
 function ReportEntries({
   reports,
   kind,

@@ -35,6 +35,15 @@ beforeEach(() => {
   };
 });
 afterEach(cleanup);
+const openReport = {
+  id: "open",
+  kind: "text",
+  description: "오류 신고",
+  status: "received",
+  created_at: "2026-01-01T00:00:00Z",
+  resolved_at: null,
+  resolution_note: null,
+};
 test("관리자가 아니면 홈으로 이동", async () => {
   mock.list.mockRejectedValue(new ApiError(403));
   render(<AdminReportsPage />);
@@ -61,7 +70,7 @@ test("통과한 수정안만 승인하고 AI 대화 상자 취소는 요청하�
     choices: [],
     rubric: [],
     rubric_links: [],
-    reports: [],
+    reports: [openReport],
     unit: { grade: "중1", number: 1, name: "단원" },
     assessment_item: { id: "a", name: "항목" },
     revisions: [
@@ -124,7 +133,7 @@ test("고칠 필요 없는 이유를 편집해 닫고 수정 부분을 표시한
     choices,
     rubric: [],
     rubric_links: [],
-    reports: [],
+    reports: [openReport],
     unit: null,
     assessment_item: { id: "a", name: "항목" },
     revisions: [
@@ -320,7 +329,7 @@ test("최신 수정안만 비교하고 이전 선택과 승인 기록을 보여 
     choices: [],
     rubric: [],
     rubric_links: [],
-    reports: [],
+    reports: [openReport],
     unit: null,
     assessment_item: { id: "a", name: "항목" },
     revisions,
@@ -338,4 +347,144 @@ test("최신 수정안만 비교하고 이전 선택과 승인 기록을 보여 
   expect(screen.queryByRole("button", { name: "승인" })).toBeNull();
   fireEvent.click(screen.getByRole("button", { name: "최신 수정안으로" }));
   expect(screen.getByText("최신 수정")).toBeTruthy();
+});
+
+test("문제 없음 처리 후 패널 알림과 처리 완료 요약을 표시한다", async () => {
+  const question = {
+    id: "q",
+    assessment_item_id: "a",
+    difficulty: "normal",
+    variant: 1,
+    question_type: "multiple_choice",
+    body: "문제",
+    explanation: "해설",
+    figure: null,
+    model_answer: null,
+    hard_condition: null,
+    hard_condition_reason: null,
+    choices: [],
+    rubric: [],
+  };
+  const revision = {
+    id: "r",
+    source: "ai",
+    status: "discarded",
+    payload: question,
+    checks: [{ decision: "no_change", reason: "오류가 없어요." }],
+  };
+  const base = {
+    question,
+    choices: [],
+    rubric: [],
+    rubric_links: [],
+    unit: null,
+    assessment_item: { id: "a", name: "항목" },
+    revisions: [revision],
+  };
+  const closed = {
+    ...openReport,
+    status: "no_issue",
+    resolved_at: "2026-01-02T03:04:00Z",
+    resolution_note: "확인 후 수정한 메모",
+  };
+  mock.detail
+    .mockReset()
+    .mockResolvedValueOnce({ ...base, reports: [openReport] })
+    .mockResolvedValue({ ...base, reports: [closed] });
+  let finish: () => void = () => {};
+  mock.noIssue.mockImplementation(
+    () =>
+      new Promise<void>((resolve) => {
+        finish = resolve;
+      }),
+  );
+  render(<AdminQuestionView id="q" />);
+  const closeButton = await screen.findByRole("button", {
+    name: "문제 없음으로 닫기",
+  });
+  const revisionNote = screen.getAllByLabelText("문제 없음 메모")[1];
+  fireEvent.change(revisionNote, { target: { value: "확인 후 수정한 메모" } });
+  fireEvent.click(closeButton);
+  expect(
+    screen
+      .getByRole("button", { name: "처리 중으로" })
+      .getAttribute("aria-disabled"),
+  ).toBe("true");
+  finish();
+  await waitFor(() =>
+    expect(screen.getByRole("status").textContent).toContain(
+      "문제 없음으로 닫았어요",
+    ),
+  );
+  expect(screen.getByRole("heading", { name: "처리 완료" })).toBeTruthy();
+  expect(screen.getByText("처리 메모: 확인 후 수정한 메모")).toBeTruthy();
+  expect(screen.getByText(/처리 2026/)).toBeTruthy();
+  expect(screen.queryByRole("button", { name: "AI 수정안 만들기" })).toBeNull();
+  expect(screen.queryByRole("button", { name: "직접 수정" })).toBeNull();
+  expect(
+    screen.queryByRole("button", { name: "문제 없음으로 닫기" }),
+  ).toBeNull();
+  expect(screen.getByText("이 판단으로 닫았어요")).toBeTruthy();
+});
+
+test("닫힌 신고만 있으면 승인과 닫기 버튼이 없고 빈 객관식 채점 기준을 설명한다", async () => {
+  const question = {
+    id: "q",
+    assessment_item_id: "a",
+    difficulty: "normal",
+    variant: 1,
+    question_type: "multiple_choice",
+    body: "문제",
+    explanation: "해설",
+    figure: null,
+    model_answer: null,
+    hard_condition: null,
+    hard_condition_reason: null,
+    choices: [],
+    rubric: [],
+  };
+  const reports = [
+    {
+      ...openReport,
+      status: "fixed",
+      resolved_at: "2026-01-02T00:00:00Z",
+      resolution_note: null,
+    },
+  ];
+  mock.detail.mockReset().mockResolvedValue({
+    question,
+    choices: [],
+    rubric: [],
+    rubric_links: [],
+    reports,
+    unit: null,
+    assessment_item: { id: "a", name: "항목" },
+    revisions: [
+      {
+        id: "pass",
+        source: "ai",
+        status: "passed",
+        payload: question,
+        checks: [],
+      },
+      {
+        id: "nochange",
+        source: "ai",
+        status: "discarded",
+        payload: question,
+        checks: [{ decision: "no_change", reason: "오류 없어요" }],
+      },
+    ],
+  });
+  render(<AdminQuestionView id="q" />);
+  expect(
+    (await screen.findAllByText("객관식 문제라 채점 기준이 없어요")).length,
+  ).toBeGreaterThan(0);
+  expect(screen.queryByRole("button", { name: "승인" })).toBeNull();
+  fireEvent.click(screen.getByText("이전 수정안 1개"));
+  fireEvent.click(screen.getByRole("button", { name: /AI.*수정 없음/ }));
+  expect(
+    screen.queryByRole("button", { name: "문제 없음으로 닫기" }),
+  ).toBeNull();
+  expect(screen.queryByText("이 판단으로 닫았어요")).toBeNull();
 });
