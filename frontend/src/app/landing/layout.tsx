@@ -1,5 +1,5 @@
 import { VStack } from "@astryxdesign/core/VStack";
-import AuthHeader from "../auth-header";
+import LandingHeader from "./landing-header";
 
 export default function LandingLayout({
   children,
@@ -8,7 +8,7 @@ export default function LandingLayout({
 }) {
   return (
     <VStack width="100%" hAlign="center">
-      <AuthHeader />
+      <LandingHeader />
       {children}
     </VStack>
   );

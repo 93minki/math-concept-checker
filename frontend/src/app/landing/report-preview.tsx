@@ -1,9 +1,5 @@
 import { Badge } from "@astryxdesign/core/Badge";
 import { Card } from "@astryxdesign/core/Card";
-import { HStack } from "@astryxdesign/core/HStack";
-import { Heading } from "@astryxdesign/core/Heading";
-import { Text } from "@astryxdesign/core/Text";
-import { VStack } from "@astryxdesign/core/VStack";
 import ReportSummary, {
   StageIndicator,
 } from "@/app/(protected)/diagnoses/[id]/report-summary";
@@ -12,14 +8,14 @@ import { concepts } from "./landing-content";
 
 export function ConceptSummary() {
   return (
-    <VStack gap={3}>
+    <div className="comparison-concepts">
       {concepts.map(([name, level]) => (
-        <VStack gap={1} key={name}>
-          <Text>{name}</Text>
+        <div className="comparison-concept" key={name}>
+          <strong>{name}</strong>
           <StageIndicator name={name} stage={level} />
-        </VStack>
+        </div>
       ))}
-    </VStack>
+    </div>
   );
 }
 
@@ -75,18 +71,72 @@ export const sampleReport: Report = {
 
 export default function ReportPreview() {
   return (
-    <Card>
-      <VStack gap={5}>
-        <HStack gap={2} vAlign="center" wrap="wrap">
-          <Heading level={2}>샘플 리포트</Heading>
-          <Text type="supporting">중1 · 문자의 사용과 식</Text>
-          <Badge label="예시" variant="neutral" />
-        </HStack>
-        <Text as="p" type="supporting">
-          아래 내용은 리포트가 어떻게 보이는지 알려 주는 예시예요.
-        </Text>
-        <ReportSummary report={sampleReport} nested />
-      </VStack>
-    </Card>
+    <section
+      className="sample-section"
+      id="sample-report"
+      aria-labelledby="sample-title"
+    >
+      <div className="sample-intro">
+        <p className="landing-kicker">SAMPLE REPORT</p>
+        <h2 id="sample-title">샘플 리포트</h2>
+        <p>
+          실제 리포트처럼, 단원별로 개념 이해 수준과 학습 방향을 한눈에 확인해
+          보세요.
+        </p>
+        <svg
+          className="sample-illustration"
+          viewBox="0 0 160 160"
+          aria-hidden="true"
+          fill="none"
+        >
+          <rect
+            x="28"
+            y="29"
+            width="100"
+            height="112"
+            rx="12"
+            transform="rotate(-12 28 29)"
+            fill="var(--color-background-card)"
+            stroke="var(--color-accent)"
+            strokeWidth="2"
+          />
+          <path
+            d="m50 54 49-10M53 65l34-7M62 112v-18m14 15V85m14 20V73"
+            stroke="var(--color-accent)"
+            strokeWidth="7"
+            strokeLinecap="round"
+          />
+          <circle cx="121" cy="39" r="17" fill="var(--color-accent)" />
+          <path
+            d="m113 39 5 5 10-11"
+            stroke="var(--color-on-accent)"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+      <Card>
+        <div className="sample-card">
+          <div className="sample-card-head">
+            <h3>단원 리포트</h3>
+            <span>중1 · 문자의 사용과 식</span>
+            <Badge label="예시" variant="neutral" />
+          </div>
+          <div className="sample-report-layout">
+            <div className="sample-summary">
+              <ReportSummary report={sampleReport} nested preview />
+            </div>
+            <aside className="sample-stage">
+              <h4>단원 이해도</h4>
+              <StageIndicator
+                name="단원 요약"
+                stage={sampleReport.unit_stage}
+              />
+            </aside>
+          </div>
+        </div>
+      </Card>
+    </section>
   );
 }
