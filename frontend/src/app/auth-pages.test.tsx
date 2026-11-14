@@ -144,22 +144,14 @@ test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async 
   });
 });
 
-test("회원가입 카카오는 동의 뒤에만 시작하고 동의를 저장한다", async () => {
+test("회원가입 카카오는 동의 체크 없이 시작하고 동의는 가입 완료에서 받는다", async () => {
   mocks.signInWithOAuth.mockResolvedValue({ error: null });
   render(<SignupPage />);
   const kakao = screen.getByRole("button", { name: "카카오로 시작하기" });
-  expect(kakao.getAttribute("aria-disabled")).toBe("true");
-  fireEvent.click(kakao);
-  expect(mocks.signInWithOAuth).not.toHaveBeenCalled();
-  expect(sessionStorage.getItem("privacy-consent")).toBeNull();
-  fireEvent.click(
-    screen.getByRole("checkbox", {
-      name: /개인정보 수집·이용에 동의합니다 \(필수\)/,
-    }),
-  );
   expect(kakao.getAttribute("aria-disabled")).toBeNull();
   fireEvent.click(kakao);
-  expect(sessionStorage.getItem("privacy-consent")).toBe("agreed");
+  // Consent is not stored here, so /signup/complete still asks for it.
+  expect(sessionStorage.getItem("privacy-consent")).toBeNull();
   await waitFor(() =>
     expect(mocks.signInWithOAuth).toHaveBeenCalledWith({
       provider: "kakao",

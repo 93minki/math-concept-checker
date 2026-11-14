@@ -47,9 +47,9 @@ export default function SignupPage() {
     }
   }
 
+  // Kakao asks for consent on /signup/complete, same as the login page
+  // (user 2026-11-14: the button must not wait for the email form's checkbox).
   async function kakao() {
-    if (!consent) return;
-    rememberPrivacyConsent();
     setBusy(true);
     setMessage("");
     setError("");
@@ -70,6 +70,14 @@ export default function SignupPage() {
       <Card>
         <VStack gap={4}>
           <h1>회원가입</h1>
+          <Button
+            label="카카오로 시작하기"
+            variant="secondary"
+            isDisabled={busy || !hydrated}
+            onClick={kakao}
+            width="100%"
+          />
+          <p className="auth-divider">또는 이메일로 가입</p>
           {/* method="post": a native submit must never put the password in the URL. */}
           <form className="auth-form" method="post" onSubmit={submit}>
             <label htmlFor="email">이메일</label>
@@ -98,13 +106,6 @@ export default function SignupPage() {
               가입하기
             </button>
           </form>
-          <Button
-            label="카카오로 시작하기"
-            variant="secondary"
-            isDisabled={busy || !hydrated || !consent}
-            onClick={kakao}
-            width="100%"
-          />
           <p>
             이미 계정이 있나요? <Link href="/login">로그인</Link>
           </p>
