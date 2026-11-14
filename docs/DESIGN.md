@@ -879,13 +879,14 @@
 |---|---|---|
 | `POST /question-reports` `{diagnosis_item_id, kind, description}` | 신고 접수 | 401, 404(남의 진단 문항), 409(처리 전 같은 문항 신고 있음), 422 |
 | `GET /question-reports` | 내 신고 목록(문항 요약·유형·상태·시각), 최근 순 | 401 |
-| `GET /admin/reports?status=` | 문항별로 묶은 신고(신고 수, 최근 신고 시각, 상태) | 401, 403(관리자 아님) |
-| `GET /admin/questions/{id}` | 문제 전체(정답·해설·채점 기준·그림)·신고들·수정안들 | 401, 403, 404 |
+| `GET /admin/reports?status=` | 문항별로 묶은 신고(단원 학년·번호·이름, 평가 항목 ID·이름, 본문 앞 80자, 신고 수·최근 시각·상태) | 401, 403(관리자 아님) |
+| `GET /admin/questions/{id}` | 단원·평가 항목, 문제 전체(정답·해설·채점 기준·그림)·신고들·수정안들 | 401, 403, 404 |
 | `POST /admin/questions/{id}/revisions/ai` | AI 수정안 만들기(실제 AI, 관리자가 누를 때만) | 401, 403, 502 |
 | `POST /admin/questions/{id}/revisions` `{payload}` | 직접 수정안 저장 + 검사 | 401, 403, 422 |
 | `POST /admin/revisions/{id}/approve` | `bank_replace_question` 실행 | 401, 403, 409(검사 통과 아님·이미 처리) |
 | `POST /admin/questions/{id}/no-issue` `{note}` | 열린 신고를 `no_issue`로 닫기 | 401, 403 |
 | `POST /admin/questions/{id}/in-review` | 열린 신고를 `in_review`로 | 401, 403 |
+- 평가 항목 이름은 DB의 개념 이름과 이해 수준을 조합한다(2026-11-15 사용자 요청: 관리자 목록·상세에 단원과 평가 항목 표시). 단원은 평가 항목의 개념 → 성취기준 → 표시 단원 연결로 찾는다.
 - 관리자 확인은 서버가 요청마다 `admins`를 Secret key로 조회한다. 프론트의 메뉴 숨김은 편의일 뿐이다.
 
 ### 화면

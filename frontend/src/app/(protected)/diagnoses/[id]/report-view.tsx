@@ -24,6 +24,7 @@ import Notice from "./notice";
 import StatusScreen from "@/components/status-screen";
 import { ChoiceNumber } from "@/components/choice-number";
 import ReportSummary from "./report-summary";
+import ReportButton from "@/components/report-button";
 
 export default function ReportView({ diagnosis }: { diagnosis: Diagnosis }) {
   const router = useRouter();
@@ -128,14 +129,17 @@ function ResultGroup({
             <Heading level={4}>
               {index + 1}번 · {item.stage === 1 ? "기본 문제" : "심화 문제"}
             </Heading>
-            {item.result ? (
-              <Badge
-                label={item.result.passed ? "맞았어요" : "틀렸어요"}
-                variant={item.result.passed ? "success" : "error"}
-              />
-            ) : (
-              <Badge label="풀지 않은 문제" variant="neutral" />
-            )}
+            <HStack gap={2} vAlign="center" wrap="wrap">
+              <ReportButton key={item.id} itemId={item.id} />
+              {item.result ? (
+                <Badge
+                  label={item.result.passed ? "맞았어요" : "틀렸어요"}
+                  variant={item.result.passed ? "success" : "error"}
+                />
+              ) : (
+                <Badge label="풀지 않은 문제" variant="neutral" />
+              )}
+            </HStack>
           </HStack>
           <div className="problem-sheet stack">
             <div className="question">

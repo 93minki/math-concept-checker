@@ -13,6 +13,7 @@ export type HeaderProps = {
   total: number;
   status: ReactNode;
   error?: ReactNode;
+  action?: ReactNode;
 };
 
 export default function SolveHeader({
@@ -22,6 +23,7 @@ export default function SolveHeader({
   total,
   status,
   error,
+  action,
 }: HeaderProps) {
   return (
     <VStack className="diagnosis-header" gap={2}>
@@ -37,9 +39,12 @@ export default function SolveHeader({
             <Heading className="diagnosis-unit-title" level={1}>
               {unit}
             </Heading>
-            <Text as="p" type="label" hasTabularNumbers textWrap="nowrap">
-              {index + 1} / {total}
-            </Text>
+            <HStack gap={2} vAlign="center" wrap="wrap">
+              {action}
+              <Text as="p" type="label" hasTabularNumbers textWrap="nowrap">
+                {index + 1} / {total}
+              </Text>
+            </HStack>
           </HStack>
           <div className="diagnosis-stage">
             <span aria-hidden="true">{stage}단계 · </span>

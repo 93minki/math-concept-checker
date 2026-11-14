@@ -52,6 +52,11 @@ test.each(["지난 기록 화면", "진단 화면"])(
     ).toBe(mockPath.value === "/history" ? "page" : null);
     expect(sidebar.queryByText("랭킹")).toBeNull();
     expect(
+      within(sidebar.getByRole("navigation", { name: "주 메뉴" }))
+        .getAllByRole("link")
+        .map((link) => link.textContent),
+    ).toEqual(["학습하기", "지난 기록", "내 신고", "내 정보"]);
+    expect(
       sidebar.getByRole("link", { name: "내 정보" }).getAttribute("href"),
     ).toBe("/account");
     expect(

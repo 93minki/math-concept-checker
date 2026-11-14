@@ -94,7 +94,10 @@ export class ApiError extends Error {
   }
 }
 
-async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
+export async function request<T>(
+  path: string,
+  init: RequestInit = {},
+): Promise<T> {
   const {
     data: { session },
   } = await createClient().auth.getSession();

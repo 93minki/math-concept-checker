@@ -720,3 +720,88 @@ h4:not(.astryx-heading) {
   font-size: 0.8125rem;
   font-weight: 500;
 }
+
+.report-form {
+  display: grid;
+  gap: var(--spacing-2);
+}
+.report-form fieldset {
+  display: grid;
+  gap: var(--spacing-2);
+  border: 0;
+}
+.report-form fieldset label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  min-height: var(--size-element-lg);
+}
+.report-form textarea {
+  width: 100%;
+  min-height: 6rem;
+  padding: var(--spacing-3);
+  border: 1px solid var(--color-border-emphasized);
+  border-radius: var(--radius-element);
+  background: var(--color-background-surface);
+  color: var(--color-text-primary);
+}
+.report-list {
+  display: grid;
+  gap: var(--spacing-3);
+}
+.report-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--spacing-2);
+}
+.report-entry h2 {
+  font-size: 1rem;
+}
+.report-entry > p {
+  grid-column: 1 / -1;
+  color: var(--color-text-secondary);
+}
+.report-description {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.admin-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--spacing-4);
+}
+.admin-stack {
+  display: grid;
+  gap: var(--spacing-4);
+  min-width: 0;
+}
+.admin-editor {
+  display: grid;
+  gap: var(--spacing-2);
+}
+.admin-editor textarea,
+.admin-editor input:not([type="radio"]):not([type="checkbox"]) {
+  width: 100%;
+}
+.admin-editor textarea {
+  min-height: 5rem;
+}
+.admin-editor fieldset {
+  display: grid;
+  gap: var(--spacing-2);
+}
+@media (max-width: 899px) {
+  .admin-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.admin-report-row {
+  padding: var(--spacing-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-element);
+  overflow-wrap: anywhere;
+}
+.admin-stack textarea {
+  max-width: 100%;
+}

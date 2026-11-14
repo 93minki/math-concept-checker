@@ -213,3 +213,64 @@ def test_admin_workflow(client: tuple[TestClient, ec.EllipticCurvePrivateKey]) -
     )
     assert ("update", qid, "in_review", None) in repo.events
     assert ("update", qid, "no_issue", "정상") in repo.events
+
+
+def test_repository_enriches_admin_responses_without_leaking_answers_in_list() -> None:
+    from types import SimpleNamespace
+    from typing import cast
+    from unittest.mock import MagicMock
+
+    from supabase import Client
+
+    from app.question_reports import SupabaseReports
+
+    qid = str(uuid4())
+    rows: dict[str, list[dict[str, object]]] = {
+        "question_reports": [
+            {"question_id": qid, "status": "received", "created_at": "2026-01-01"}
+        ],
+        "questions": [
+            {
+                "id": qid,
+                "assessment_item_id": "a",
+                "body": "가" * 90,
+                "explanation": "관리자만",
+            }
+        ],
+        "assessment_items": [
+            {
+                "id": "a",
+                "level": "정의 이해",
+                "concepts": {"name": "문자", "standard_code": "9수02-03"},
+            }
+        ],
+        "display_unit_standards": [
+            {"display_units": {"grade": "중1", "number": 3, "name": "문자의 사용과 식"}}
+        ],
+        "question_choices": [],
+        "rubric_elements": [],
+        "question_revisions": [],
+    }
+    client = MagicMock()
+
+    def table(name: str) -> MagicMock:
+        query = MagicMock()
+        query.select.return_value = query
+        query.eq.return_value = query
+        query.order.return_value = query
+        query.range.return_value = query
+        query.execute.return_value = SimpleNamespace(data=rows[name])
+        return query
+
+    client.table.side_effect = table
+    repo = SupabaseReports(cast(Client, client))
+    result = repo.grouped_reports(None)[0]
+    assert result["unit"] == {"grade": "중1", "number": 3, "name": "문자의 사용과 식"}
+    assert result["assessment_item"] == {"id": "a", "name": "문자 · 정의 이해"}
+    assert result["body_summary"] == "가" * 80
+    assert "explanation" not in result
+    detail = repo.question_details(UUID(qid))
+    assert detail is not None
+    assert detail["unit"] == result["unit"]
+    assert detail["assessment_item"] == result["assessment_item"]
+    assert cast(dict[str, object], detail["question"])["explanation"] == "관리자만"

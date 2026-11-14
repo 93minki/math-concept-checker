@@ -8,13 +8,29 @@ import { Button } from "@astryxdesign/core/Button";
 import { Banner } from "@astryxdesign/core/Banner";
 import BrandMark from "@/components/brand-mark";
 import ThemeButton from "@/components/theme-button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getAdminReports } from "@/lib/reports-api";
+import { FlagIcon } from "@/components/report-button";
 import { createClient } from "@/lib/supabase/client";
 
 export default function HomeActions() {
   const router = useRouter();
   const pathname = usePathname();
   const [error, setError] = useState("");
+  const [admin, setAdmin] = useState(false);
+  useEffect(() => {
+    let active = true;
+    getAdminReports()
+      .then(() => {
+        if (active) setAdmin(true);
+      })
+      .catch(() => {
+        if (active) setAdmin(false);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   async function signOut() {
     setError("");
@@ -48,11 +64,28 @@ export default function HomeActions() {
             지난 기록
           </Link>
           <Link
+            href="/reports"
+            aria-current={pathname === "/reports" ? "page" : undefined}
+          >
+            <FlagIcon />내 신고
+          </Link>
+          <Link
             href="/account"
             aria-current={pathname === "/account" ? "page" : undefined}
           >
             <PersonIcon />내 정보
           </Link>
+          {admin && (
+            <Link
+              href="/admin/reports"
+              aria-current={
+                pathname.startsWith("/admin/reports") ? "page" : undefined
+              }
+            >
+              <FlagIcon />
+              신고 관리
+            </Link>
+          )}
         </nav>
         <div className="sidebar-actions">
           <ThemeButton />
@@ -85,6 +118,15 @@ export default function HomeActions() {
                 icon={<HistoryIcon />}
               >
                 <span className="site-nav-label">지난 기록</span>
+              </Button>
+              <Button
+                label="내 신고"
+                variant="ghost"
+                href="/reports"
+                icon={<FlagIcon />}
+                aria-current={pathname === "/reports" ? "page" : undefined}
+              >
+                <span className="site-nav-label">내 신고</span>
               </Button>
               <Button
                 label="내 정보"

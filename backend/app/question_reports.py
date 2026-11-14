@@ -63,6 +63,35 @@ class SupabaseReports:
             .data
         )
 
+    def _question_context(self, question: Row) -> Row:
+        assessments = cast(
+            list[Row],
+            self.client.table("assessment_items")
+            .select("id,level,concepts(name,standard_code)")
+            .eq("id", str(question["assessment_item_id"]))
+            .execute()
+            .data,
+        )
+        if not assessments:
+            raise ValueError("평가 항목을 찾을 수 없습니다")
+        assessment = assessments[0]
+        concept = cast(Row, assessment["concepts"])
+        links = cast(
+            list[Row],
+            self.client.table("display_unit_standards")
+            .select("display_units(grade,number,name)")
+            .eq("standard_code", str(concept["standard_code"]))
+            .execute()
+            .data,
+        )
+        return {
+            "unit": links[0]["display_units"] if links else None,
+            "assessment_item": {
+                "id": assessment["id"],
+                "name": f"{concept['name']} · {assessment['level']}",
+            },
+        }
+
     def grouped_reports(self, report_status: str | None) -> list[Row]:
         groups: dict[str, Row] = {}
         offset = 0
@@ -91,6 +120,20 @@ class SupabaseReports:
                     statuses.append(str(report["status"]))
             offset += len(page)
             if len(page) < 1000:
+                for group in groups.values():
+                    questions = cast(
+                        list[Row],
+                        self.client.table("questions")
+                        .select("id,assessment_item_id,body")
+                        .eq("id", str(group["question_id"]))
+                        .execute()
+                        .data,
+                    )
+                    if not questions:
+                        raise ValueError("문항을 찾을 수 없습니다")
+                    question = questions[0]
+                    group.update(self._question_context(question))
+                    group["body_summary"] = str(question["body"])[:80]
                 return list(groups.values())
 
     def question_details(self, question_id: UUID) -> Row | None:
@@ -150,6 +193,7 @@ class SupabaseReports:
             .data,
         )
         return {
+            **self._question_context(questions[0]),
             "question": questions[0],
             "choices": choices,
             "rubric": rubric,
