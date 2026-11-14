@@ -7,7 +7,6 @@ import { TabList, Tab } from "@astryxdesign/core/TabList";
 import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
 import LearningMap from "./learning-map";
-import { unitProgress } from "@/lib/unit-progress";
 import { useEffect, useRef, useState } from "react";
 import {
   ApiError,
@@ -80,15 +79,6 @@ export default function UnitSelection() {
   );
   const displayed =
     filtered?.filter((unit) => query.trim() || unit.grade === grade) ?? [];
-  const nextUnit =
-    displayed.find((unit) => unitProgress(unit) === "in_progress") ??
-    displayed
-      .filter(
-        (unit) =>
-          ["not_started", "retry"].includes(unitProgress(unit)) &&
-          unit.status !== "unavailable",
-      )
-      .sort((a, b) => a.number - b.number)[0];
   return (
     <section className="stack unit-selection">
       <h2>진단할 단원을 골라요</h2>
@@ -129,13 +119,13 @@ export default function UnitSelection() {
           return (
             <VStack key={item} gap={3}>
               <LearningMap
+                key={item}
                 embedded={!!query.trim()}
                 units={group}
                 allUnits={units ?? []}
                 grade={item}
                 search={!!query.trim()}
                 busy={busy}
-                nextId={nextUnit?.id ?? null}
                 start={(unit) => void start(unit)}
                 conflictNode={(unit) =>
                   conflict?.unit.id === unit.id && (

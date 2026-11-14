@@ -193,8 +193,8 @@
     --color-syntax-diff-header: transparent;
     --color-syntax-added-marker: light-dark(#354f31, #d5e9d2);
     --color-syntax-removed-marker: light-dark(#603c37, #f7dbd7);
-    --color-accent: light-dark(#25252a, #f0f0f9);
-    --color-accent-muted: light-dark(#25252a14, #f0f0f920);
+    --color-accent: light-dark(#6744c5, #aa9cf7);
+    --color-accent-muted: light-dark(#6744c51f, #aa9cf72e);
     --color-neutral: light-dark(#25252a0f, #f0f0f91a);
     --color-background-surface: light-dark(#ffffff, #1b1b21);
     --color-background-body: light-dark(#f0f0f7, #101018);
@@ -205,10 +205,10 @@
     --color-text-primary: light-dark(#25252a, #f0f0f9);
     --color-text-secondary: light-dark(#5f5f64, #ababb3);
     --color-text-disabled: light-dark(#d4d3dd, #5e5e64);
-    --color-text-accent: light-dark(#25252a, #f0f0f9);
+    --color-text-accent: light-dark(#6744c5, #aa9cf7);
     --color-on-dark: #ffffff;
     --color-on-light: light-dark(#25252a, #25252a);
-    --color-on-accent: light-dark(#ffffff, #25252a);
+    --color-on-accent: light-dark(#ffffff, #101018);
     --color-on-success: light-dark(#ffffff, #1b1b21);
     --color-on-error: light-dark(#ffffff, #1b1b21);
     --color-on-warning: light-dark(#ffffff, #1b1b21);
@@ -223,7 +223,7 @@
     --color-on-success-muted: light-dark(#354f31, #2f412c);
     --color-on-warning-muted: light-dark(#524818, #433b1b);
     --color-on-error-muted: light-dark(#603c37, #50332e);
-    --color-icon-accent: light-dark(#25252a, #f0f0f9);
+    --color-icon-accent: light-dark(#6744c5, #aa9cf7);
     --color-icon-primary: light-dark(#25252a, #f0f0f9);
     --color-icon-secondary: light-dark(#848489, #9d9ea5);
     --color-icon-disabled: light-dark(#d4d3dd, #5e5e64);

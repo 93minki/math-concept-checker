@@ -10,6 +10,7 @@ export type Unit = {
   name: string;
   publisher: string;
   aliases: string[];
+  concepts: string[];
   status: "full" | "partial" | "unavailable";
   in_progress_diagnosis_id: string | null;
   latest_result: {

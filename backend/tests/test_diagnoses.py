@@ -615,3 +615,34 @@ def test_units_latest_results_are_private_and_completed(
     assert result[1]["latest_result"]["diagnosis_id"] == str(missing)
     assert result[1]["latest_result"]["unit_stage"] is None
     assert result[0]["latest_result"]["completed_at"]
+
+
+def test_units_concepts_are_ordered_and_empty(
+    client: tuple[TestClient, ec.EllipticCurvePrivateKey],
+) -> None:
+    tc, key = client
+    profiles = FakeProfiles()
+    profiles.complete_signup(USER_ID)
+
+    class ConceptRepo(FakeDiagnoses):
+        def standards(self) -> list[StandardLink]:
+            return [
+                StandardLink(display_unit_id=1, standard_code="B"),
+                StandardLink(display_unit_id=1, standard_code="A"),
+            ]
+
+        def concepts(self) -> list[Concept]:
+            return [
+                Concept(id="B-C1", standard_code="B", name="셋"),
+                Concept(id="A-C2", standard_code="A", name="둘"),
+                Concept(id="A-C1", standard_code="A", name="하나"),
+                Concept(id="Z-C1", standard_code="Z", name="다른 단원"),
+            ]
+
+    repo = ConceptRepo()
+    app.dependency_overrides[get_profiles] = lambda: profiles
+    app.dependency_overrides[get_diagnoses] = lambda: repo
+    response = tc.get("/units", headers={"Authorization": f"Bearer {token(key)}"})
+    assert response.status_code == 200
+    assert response.json()[0]["concepts"] == ["하나", "둘", "셋"]
+    assert response.json()[1]["concepts"] == []

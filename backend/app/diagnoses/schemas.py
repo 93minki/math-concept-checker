@@ -25,6 +25,13 @@ class LatestResult(BaseModel):
     completed_at: datetime
 
 
+class UnitResponse(Unit):
+    status: UnitStatus
+    in_progress_diagnosis_id: UUID | None
+    latest_result: LatestResult | None
+    concepts: list[str]
+
+
 class CompletedReport(BaseModel):
     unit_stage: str | None
 

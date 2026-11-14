@@ -745,11 +745,13 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
       const [a, b] = segmentLabels.get(element)!;
       const length = Math.hypot(b.x - a.x, b.y - a.y) || 1;
       const normal = { x: -(b.y - a.y) / length, y: (b.x - a.x) / length };
-      candidates = [15, 25, 35, 50, 70, 90].flatMap((distance) =>
-        [1, -1].map((sign) => ({
-          x: (a.x + b.x) / 2 + sign * normal.x * distance,
-          y: (a.y + b.y) / 2 + sign * normal.y * distance + 6,
-        })),
+      candidates = [0.5, 0.3, 0.7].flatMap((fraction) =>
+        [15, 25, 35, 50, 70, 90].flatMap((distance) =>
+          [1, -1].map((sign) => ({
+            x: a.x + (b.x - a.x) * fraction + sign * normal.x * distance,
+            y: a.y + (b.y - a.y) * fraction + sign * normal.y * distance + 6,
+          })),
+        ),
       );
     } else if (angleLimits.has(element)) {
       const limit = angleLimits.get(element)!;
@@ -799,6 +801,7 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
           rect.bottom + 2 > other.top,
       ).length;
       let crosses = strokes.filter(([a, b]) => intersects(a, b, rect)).length;
+      let blocked = 0;
       if (pyramidHeights.has(element)) {
         const center = { x: candidate.x, y: candidate.y - 6 };
         const axisDistance = Math.abs(center.x - 200);
@@ -823,6 +826,39 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
       }
       if (figure.kind === "geometry" && segmentLabels.has(element)) {
         const [ownA, ownB] = segmentLabels.get(element)!;
+        const center = { x: candidate.x, y: candidate.y - 6 };
+        const dx = ownB.x - ownA.x,
+          dy = ownB.y - ownA.y;
+        const length2 = dx * dx + dy * dy;
+        const t = length2
+          ? Math.max(
+              0,
+              Math.min(
+                1,
+                ((center.x - ownA.x) * dx + (center.y - ownA.y) * dy) / length2,
+              ),
+            )
+          : 0;
+        const nearest = { x: ownA.x + t * dx, y: ownA.y + t * dy };
+        const cross = (u: Point, v: Point) => u.x * v.y - u.y * v.x;
+        const path = { x: nearest.x - center.x, y: nearest.y - center.y };
+        for (const [a, b] of strokes) {
+          if (
+            a.x === ownA.x &&
+            a.y === ownA.y &&
+            b.x === ownB.x &&
+            b.y === ownB.y
+          )
+            continue;
+          const edge = { x: b.x - a.x, y: b.y - a.y };
+          const denominator = cross(path, edge);
+          if (Math.abs(denominator) < 1e-9) continue;
+          const delta = { x: a.x - center.x, y: a.y - center.y };
+          const along = cross(delta, edge) / denominator;
+          const across = cross(delta, path) / denominator;
+          if (along > 1e-6 && along < 1 - 1e-6 && across >= 0 && across <= 1)
+            blocked++;
+        }
         const padded = {
           left: rect.left - 10,
           right: rect.right + 10,
@@ -844,6 +880,22 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
           const x = Number(circle.attrs.cx),
             y = Number(circle.attrs.cy),
             r = Number(circle.attrs.r);
+          const fx = center.x - x,
+            fy = center.y - y;
+          const quadratic = path.x * path.x + path.y * path.y;
+          const linear = 2 * (fx * path.x + fy * path.y);
+          const discriminant =
+            linear * linear - 4 * quadratic * (fx * fx + fy * fy - r * r);
+          if (quadratic > 0 && discriminant >= 0) {
+            const root = Math.sqrt(discriminant);
+            if (
+              [
+                (-linear - root) / (2 * quadratic),
+                (-linear + root) / (2 * quadratic),
+              ].some((t) => t > 1e-6 && t < 1 - 1e-6)
+            )
+              blocked++;
+          }
           const nearest = Math.hypot(
             Math.max(rect.left - x, 0, x - rect.right),
             Math.max(rect.top - y, 0, y - rect.bottom),
@@ -860,7 +912,7 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
         candidate.x - original.x,
         candidate.y - original.y,
       );
-      return overlaps * 100000 + crosses * 1000 + distance;
+      return blocked * 10000000 + overlaps * 100000 + crosses * 1000 + distance;
     };
     const chosen = candidates.reduce((best, candidate) =>
       score(candidate) < score(best) ? candidate : best,

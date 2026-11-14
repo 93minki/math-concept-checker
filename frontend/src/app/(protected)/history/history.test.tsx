@@ -18,7 +18,7 @@ const mocks = vi.hoisted(() => ({
 }));
 vi.mock("next/navigation", () => {
   const router = { push: mocks.push, refresh: vi.fn() };
-  return { useRouter: () => router };
+  return { useRouter: () => router, usePathname: () => "/diagnoses/1" };
 });
 vi.mock("@/lib/supabase/client", () => ({
   createClient: () => ({
@@ -189,9 +189,9 @@ test("진단 화면은 공통 머리말에서 지난 기록으로 이동한다",
     </>,
   );
   expect(
-    screen.getByRole("link", { name: "지난 기록" }).getAttribute("href"),
+    screen.getAllByRole("link", { name: "지난 기록" })[0].getAttribute("href"),
   ).toBe("/history");
-  expect(screen.getAllByRole("link", { name: "지난 기록" })).toHaveLength(1);
+  expect(screen.getAllByRole("link", { name: "지난 기록" })).toHaveLength(2);
   expect(
     screen.getByRole("link", { name: "← 단원 선택으로" }).getAttribute("href"),
   ).toBe("/");

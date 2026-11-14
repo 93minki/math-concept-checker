@@ -10,6 +10,19 @@ const fonts = {
 };
 // Touch targets: buttons and inputs at least 44px (docs/DESIGN.md "화면",
 // WCAG 2.2 2.5.5). Astryx core defaults are md 32px, lg 36px.
+// Accent: violet, user decision 2026-11-13. OKLCH 0.50 0.19 290 (light) /
+// 0.74 0.13 290 (dark), the hue of stone's tinted grays. Text on it:
+// white 6.54:1 (light), #101018 7.94:1 (dark). Overriding --color-accent
+// re-points accent-muted/text/icon; --color-on-accent must be set too.
+const pair = (light: string, dark: string): [string, string] => [light, dark];
+const accent = {
+  "--color-accent": pair("#6744c5", "#aa9cf7"),
+  "--color-on-accent": pair("#ffffff", "#101018"),
+  // stone sets these explicitly, so they do not follow --color-accent.
+  "--color-text-accent": pair("#6744c5", "#aa9cf7"),
+  "--color-icon-accent": pair("#6744c5", "#aa9cf7"),
+  "--color-accent-muted": pair("#6744c51f", "#aa9cf72e"),
+};
 const controls = {
   "--size-element-md": "44px",
   "--size-element-lg": "44px",
@@ -37,7 +50,7 @@ export const conceptTheme = defineTheme({
       fallbacks: "SFMono-Regular, Menlo, monospace",
     },
   },
-  tokens: { ...fonts, ...controls },
+  tokens: { ...fonts, ...controls, ...accent },
   adaptations: {
     rules: [
       {

@@ -34,7 +34,7 @@ function stagePresentation(
   return { label: "아직 이해 못 함", value: 1, variant: "error" };
 }
 
-function StageIndicator({
+export function StageIndicator({
   name,
   stage,
   notMeasured,
@@ -61,90 +61,99 @@ function StageIndicator({
   );
 }
 
-export default function ReportSummary({ report }: { report: Report }) {
-  const unit = stagePresentation(report.unit_stage);
+export default function ReportSummary({
+  report,
+  nested = false,
+}: {
+  report: Report;
+  nested?: boolean;
+}) {
+  const descriptions: Record<string, string> = {
+    "깊이 이해": "이 단원의 개념을 대부분 깊이 이해하고 있어요.",
+    "기본 이해":
+      "이 단원의 기본 개념은 이해하고 있어요. 아래에서 더 확인할 개념을 살펴보세요.",
+    "아직 이해 못 함":
+      "이 단원에서 다시 확인할 개념이 있어요. 아래 개념별 결과부터 살펴보세요.",
+  };
   return (
     <VStack gap={6}>
-      <Section variant="muted">
-        <VStack gap={3}>
-          <Heading level={3}>단원 이해</Heading>
-          <StageIndicator name="단원" stage={report.unit_stage} />
-          <Text type="supporting">
-            현재 단원은 {unit.label} 단계로 나타났어요.
-          </Text>
-        </VStack>
-      </Section>
+      <VStack gap={3}>
+        <Heading level={nested ? 4 : 3}>단원 이해</Heading>
+        <StageIndicator name="단원" stage={report.unit_stage} />
+        <Text type="supporting">
+          {descriptions[report.unit_stage ?? ""] ??
+            "이 단원은 아직 측정하지 못했어요."}
+        </Text>
+      </VStack>
 
-      <Section variant="transparent" padding={0}>
-        <VStack gap={4}>
-          <Heading level={3}>개념별 이해</Heading>
-          <Grid columns={{ minWidth: 240, max: 2 }} gap={3}>
-            {report.concepts.map((concept, index) => (
-              <Card key={`${concept.name}-${index}`}>
-                <VStack gap={3}>
-                  <Heading level={4}>{concept.name}</Heading>
-                  <StageIndicator
-                    name={concept.name}
-                    stage={concept.stage}
-                    notMeasured={concept.not_measured}
-                  />
-                  {concept.deep_not_attempted && (
-                    <Text type="supporting">심화 문제는 풀지 않았어요</Text>
-                  )}
-                  {concept.deep_not_measured && (
-                    <Text type="supporting">
-                      심화 문제는 아직 준비 중이에요
-                    </Text>
-                  )}
-                  {concept.misconceptions.length > 0 && (
-                    <List
-                      density="compact"
-                      header={
-                        <Heading level={5}>이렇게 생각했을 수 있어요</Heading>
-                      }
-                    >
-                      {concept.misconceptions.map((text, itemIndex) => (
-                        <ListItem
-                          key={`${concept.name}-${itemIndex}`}
-                          label={<MathText text={text} />}
-                          align="first-line"
-                        />
-                      ))}
-                    </List>
-                  )}
-                </VStack>
-              </Card>
-            ))}
-          </Grid>
-        </VStack>
-      </Section>
+      <VStack gap={4}>
+        <Heading level={nested ? 4 : 3}>개념별 이해</Heading>
+        <Grid columns={{ minWidth: 240, max: 2 }} gap={3}>
+          {report.concepts.map((concept, index) => (
+            <Card key={`${concept.name}-${index}`}>
+              <VStack gap={3}>
+                <Heading level={nested ? 5 : 4}>{concept.name}</Heading>
+                <StageIndicator
+                  name={concept.name}
+                  stage={concept.stage}
+                  notMeasured={concept.not_measured}
+                />
+                {concept.deep_not_attempted && (
+                  <Text type="supporting">심화 문제는 풀지 않았어요</Text>
+                )}
+                {concept.deep_not_measured && (
+                  <Text type="supporting">심화 문제는 아직 준비 중이에요</Text>
+                )}
+                {concept.misconceptions.length > 0 && (
+                  <List
+                    density="compact"
+                    header={
+                      <Heading level={nested ? 6 : 5}>
+                        이렇게 생각했을 수 있어요
+                      </Heading>
+                    }
+                  >
+                    {concept.misconceptions.map((text, itemIndex) => (
+                      <ListItem
+                        key={`${concept.name}-${itemIndex}`}
+                        label={<MathText text={text} />}
+                        align="first-line"
+                      />
+                    ))}
+                  </List>
+                )}
+              </VStack>
+            </Card>
+          ))}
+        </Grid>
+      </VStack>
 
-      <Grid columns={{ minWidth: 240, max: 3 }} gap={3}>
-        <Section>
+      {report.text.next_steps && (
+        <Section variant="muted">
           <VStack gap={2}>
-            <Heading level={3}>이해하지 못한 부분</Heading>
-            <Text as="p">
-              <MathText text={report.text.not_understood} />
-            </Text>
-          </VStack>
-        </Section>
-        <Section>
-          <VStack gap={2}>
-            <Heading level={3}>헷갈렸을 수 있는 부분</Heading>
-            <Text as="p">
-              <MathText text={report.text.misconception_explanations} />
-            </Text>
-          </VStack>
-        </Section>
-        <Section>
-          <VStack gap={2}>
-            <Heading level={3}>다음 학습 방향</Heading>
+            <Heading level={nested ? 4 : 3}>다음 학습 방향</Heading>
             <Text as="p">
               <MathText text={report.text.next_steps} />
             </Text>
           </VStack>
         </Section>
-      </Grid>
+      )}
+      {report.text.not_understood && (
+        <VStack gap={2}>
+          <Heading level={nested ? 4 : 3}>이해하지 못한 부분</Heading>
+          <Text as="p">
+            <MathText text={report.text.not_understood} />
+          </Text>
+        </VStack>
+      )}
+      {report.text.misconception_explanations && (
+        <VStack gap={2}>
+          <Heading level={nested ? 4 : 3}>헷갈렸을 수 있는 부분</Heading>
+          <Text as="p">
+            <MathText text={report.text.misconception_explanations} />
+          </Text>
+        </VStack>
+      )}
     </VStack>
   );
 }

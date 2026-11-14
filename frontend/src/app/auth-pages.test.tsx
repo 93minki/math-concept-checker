@@ -140,14 +140,14 @@ test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async 
 test("로그아웃 성공 시 랜딩으로 이동한다", async () => {
   mocks.signOut.mockResolvedValue({ error: null });
   render(<HomeActions />);
-  fireEvent.click(screen.getByRole("button", { name: "로그아웃" }));
+  fireEvent.click(screen.getAllByRole("button", { name: "로그아웃" })[0]);
   await waitFor(() => expect(mocks.push).toHaveBeenCalledWith("/"));
 });
 
 test("로그아웃 실패 시 쉬운 안내를 보여 준다", async () => {
   mocks.signOut.mockResolvedValue({ error: new Error("internal") });
   render(<HomeActions />);
-  fireEvent.click(screen.getByRole("button", { name: "로그아웃" }));
+  fireEvent.click(screen.getAllByRole("button", { name: "로그아웃" })[0]);
   expect(await screen.findByRole("alert")).toHaveProperty(
     "textContent",
     "로그아웃하지 못했어요. 다시 시도해 주세요.",

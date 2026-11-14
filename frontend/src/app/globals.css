@@ -412,27 +412,28 @@ h4:not(.astryx-heading) {
   outline: 2px solid #1559a8;
   outline-offset: 2px;
 }
-.answer-choice {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-.answer-choice .choice-number {
-  margin-top: 0;
-}
-.choice-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  font-size: 0.8rem;
-}
-.choice-tags span {
-  border: 1px solid #888;
-  border-radius: 4px;
-  padding: 0 4px;
-}
 .report-choice {
   cursor: default;
+}
+.problem-sheet .report-choice-correct {
+  border: 2px solid #2e7d32;
+  background: #eef7ee;
+}
+.problem-sheet .report-choice-wrong {
+  border: 2px solid #c62828;
+  background: #fdecec;
+}
+.report-choice-label {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.report-choice-correct .report-choice-label {
+  color: #1b5e20;
+}
+.report-choice-wrong .report-choice-label {
+  color: #b71c1c;
 }
 
 /* Follow the pre-hydration document choice inside Astryx's system-mode wrapper. */
@@ -647,5 +648,122 @@ h4:not(.astryx-heading) {
   }
   40% {
     transform: rotate(10deg);
+  }
+}
+
+/* Header nav: icon + text; phones keep only the icon (one line). */
+@media (max-width: 599px) {
+  .site-nav-label {
+    display: none;
+  }
+}
+
+/* Landing hero (variant A, 2026-11-13). The mascot and the mini report
+   sit side by side with a real gap (user: "너무 붙어 있어"). */
+.hero-panel {
+  background: var(--color-accent-muted);
+  border-radius: var(--radius-container);
+  padding: var(--spacing-8);
+}
+.hero-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: var(--spacing-8);
+  min-height: 18rem;
+}
+.hero-visual {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  min-width: 0;
+}
+.hero-visual > svg {
+  flex: 0 0 auto;
+}
+.hero-visual > .astryx-card {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 46rem) {
+  .hero-panel {
+    padding: var(--spacing-4);
+  }
+  .hero-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-visual > svg {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+
+/* Protected pages share a desktop sidebar and retain the compact header on phones. */
+.protected-layout {
+  width: 100%;
+  min-width: 0;
+}
+.protected-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.study-sidebar {
+  display: none;
+}
+@media (min-width: 900px) {
+  .protected-layout {
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    align-items: start;
+    gap: var(--spacing-6);
+  }
+  .protected-header {
+    display: none;
+  }
+  .study-sidebar {
+    position: sticky;
+    top: var(--spacing-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    min-height: calc(100vh - var(--spacing-8));
+    padding: var(--spacing-4);
+    border-right: 1px solid var(--color-border);
+  }
+  .sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    min-height: var(--size-element-lg);
+  }
+  .sidebar-nav {
+    display: grid;
+    gap: var(--spacing-2);
+  }
+  .sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    min-height: var(--size-element-lg);
+    padding: var(--spacing-2);
+    border-radius: var(--radius-element);
+  }
+  .sidebar-nav a[aria-current="page"] {
+    color: var(--color-text-accent);
+    background: var(--color-accent-muted);
+    font-weight: 700;
+  }
+  .sidebar-actions {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-2);
+  }
+  .protected-content .home-page {
+    width: min(100%, 75rem);
   }
 }

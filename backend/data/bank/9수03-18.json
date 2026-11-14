@@ -2363,7 +2363,7 @@
       "choices": [],
       "created_at": "2026-11-12T05:58:53.432864+00:00",
       "difficulty": "normal",
-      "disabled_at": null,
+      "disabled_at": "2026-11-13T08:39:25.576775+00:00",
       "explanation": "두 직각삼각형 $OHA$, $OHB$에서 $OA=OB=13$이고 $OH$는 공통이다. 피타고라스 정리를 이용하면 $HA^2=HB^2$이므로 $HA=HB$이다. 따라서 현 $AB$를 이등분하는 점은 $H$이다. 중심에서 현 위의 점을 이은 선분이 모두 현을 이등분하는 것은 아니다. 예를 들어 $ON$은 현을 이등분하지 않는다.",
       "figure": {
         "angles": [
@@ -2500,7 +2500,7 @@
           "required": true
         }
       ],
-      "status": "approved",
+      "status": "disabled",
       "validation": [
         {
           "at": "2026-11-12T05:58:53.047663+00:00",
@@ -2658,6 +2658,169 @@
           "at": "2026-11-12T05:33:59.857953+00:00",
           "issues": [],
           "number": 2
+        }
+      ],
+      "variant": 2
+    },
+    {
+      "approved_at": "2026-11-13T08:39:25.576775+00:00",
+      "approved_by": "master",
+      "assessment_item_id": "9수03-18-C1-이유설명",
+      "body": "다음 그림에서 $H$, $N$은 현 $AB$ 위의 서로 다른 점이고, $OH$는 $AB$에 수직이다. 원의 반지름의 길이는 $13$이고, $AH=5$이다.\n\n$H$와 $N$ 중 현 $AB$를 이등분하는 점을 찾고, 피타고라스 정리를 이용하여 그 이유를 설명하시오.",
+      "choices": [],
+      "created_at": "2026-11-13T08:39:25.576775+00:00",
+      "difficulty": "normal",
+      "disabled_at": null,
+      "explanation": "직각삼각형 $OHA$에서 피타고라스 정리에 의해 $OH^2=13^2-5^2=144$이므로 $OH=12$이다. 직각삼각형 $OHB$에서 $OB=13$(반지름)이므로 $HB^2=13^2-12^2=25$, 즉 $HB=5$이다. $HA=HB$이므로 현 $AB$를 이등분하는 점은 $H$이다. 현 $AB$의 길이는 주어지지 않았으므로 $HB$는 반으로 나누어 구할 수 없고, 피타고라스 정리로 구해야 한다. 중심에서 현 위의 점을 이은 선분이 모두 현을 이등분하는 것은 아니다. 예를 들어 $ON$은 현을 이등분하지 않는다.",
+      "figure": {
+        "angles": [
+          {
+            "from": "O",
+            "label": null,
+            "marks": 0,
+            "right": true,
+            "to": "A",
+            "vertex": "H"
+          }
+        ],
+        "arcs": [],
+        "circles": [
+          {
+            "center": "O",
+            "dashed": false,
+            "points_on": [
+              "A",
+              "B"
+            ],
+            "radius": 13.0
+          }
+        ],
+        "kind": "geometry",
+        "lines": [],
+        "points": [
+          {
+            "dot": true,
+            "id": "O",
+            "show_name": true,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "dot": true,
+            "id": "A",
+            "show_name": true,
+            "x": -5.0,
+            "y": 12.0
+          },
+          {
+            "dot": true,
+            "id": "B",
+            "show_name": true,
+            "x": 5.0,
+            "y": 12.0
+          },
+          {
+            "dot": true,
+            "id": "H",
+            "show_name": true,
+            "x": 0.0,
+            "y": 12.0
+          },
+          {
+            "dot": true,
+            "id": "N",
+            "show_name": true,
+            "x": 3.0,
+            "y": 12.0
+          }
+        ],
+        "polygons": [],
+        "segments": [
+          {
+            "dashed": false,
+            "from": "A",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": "13",
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "A"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 1,
+            "to": "B"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "H"
+          },
+          {
+            "dashed": false,
+            "from": "O",
+            "label": null,
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "N"
+          },
+          {
+            "dashed": false,
+            "from": "A",
+            "label": "5",
+            "parallel_marks": 0,
+            "ticks": 0,
+            "to": "H"
+          }
+        ]
+      },
+      "generated_at": "2026-11-13T08:39:25.576775+00:00",
+      "hard_condition": null,
+      "hard_condition_reason": null,
+      "id": "db4ec04b-e45b-4ec2-95cb-4b8cd43e34f5",
+      "model": "manual",
+      "model_answer": "$H$이다. 직각삼각형 $OHA$에서 피타고라스 정리에 의해 $OH^2=13^2-5^2=144$이므로 $OH=12$이다. 직각삼각형 $OHB$에서 $OB=13$이므로 $HB^2=13^2-12^2=25$, 즉 $HB=5$이다. 따라서 $HA=HB=5$이므로 $H$는 현 $AB$를 이등분한다.",
+      "prompt_version": "manual-2026-11-13",
+      "question_type": "written",
+      "retry_count": 0,
+      "rubric": [
+        {
+          "description": "현 $AB$를 이등분하는 점으로 $H$를 썼다.",
+          "no": 1,
+          "points": 1.0,
+          "related_misconception_ids": [
+            "9수03-18-M1"
+          ],
+          "required": true
+        },
+        {
+          "description": "직각삼각형 $OHA$에서 피타고라스 정리로 $OH=12$를 구하고, 직각삼각형 $OHB$에서 $HB=5$를 구해 $HA=HB$라고 설명했다.",
+          "no": 2,
+          "points": 2.0,
+          "related_misconception_ids": [
+            "9수03-18-M1"
+          ],
+          "required": true
+        }
+      ],
+      "status": "approved",
+      "validation": [
+        {
+          "at": "2026-11-13T08:39:25.576775+00:00",
+          "issues": [],
+          "number": 1
         }
       ],
       "variant": 2
