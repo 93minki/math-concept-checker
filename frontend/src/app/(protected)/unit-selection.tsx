@@ -7,6 +7,7 @@ import { TabList, Tab } from "@astryxdesign/core/TabList";
 import { VStack } from "@astryxdesign/core/VStack";
 import { useRouter } from "next/navigation";
 import LearningMap from "./learning-map";
+import { gradeProgress } from "@/lib/unit-progress";
 import { useEffect, useRef, useState } from "react";
 import {
   ApiError,
@@ -92,16 +93,35 @@ export default function UnitSelection() {
       />
       {error && <p role="alert">{error}</p>}
       {filtered?.length === 0 && <p>검색 결과가 없어요.</p>}
+      {/* Grade tabs as a filled segmented bar with each grade's progress
+          (user 2026-11-14: the plain tabs looked too thin). The count is
+          decorative; the summary under the tabs reads it out. */}
       <TabList
+        className="grade-tabs"
         value={query.trim() ? "" : grade}
         onChange={setGrade}
         role="tablist"
         aria-label="학년 선택"
         size="lg"
+        layout="fill"
       >
-        {["중1", "중2", "중3"].map((item) => (
-          <Tab key={item} value={item} label={item} />
-        ))}
+        {["중1", "중2", "중3"].map((item) => {
+          const { total, conquered } = gradeProgress(units ?? [], item);
+          return (
+            <Tab
+              key={item}
+              value={item}
+              label={item}
+              endContent={
+                units ? (
+                  <span className="grade-tab-count" aria-hidden="true">
+                    {conquered}/{total} 정복
+                  </span>
+                ) : undefined
+              }
+            />
+          );
+        })}
       </TabList>
       {!units && !error && (
         <StatusScreen

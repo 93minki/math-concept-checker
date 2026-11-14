@@ -684,3 +684,30 @@ h4:not(.astryx-heading) {
 .account-details dd {
   overflow-wrap: anywhere;
 }
+
+/* Grade tabs on / (user 2026-11-14: "너무 빈약해보여"): a card-like bar,
+   tabs fill it equally, the selected one is an accent pill. */
+.grade-tabs {
+  padding: var(--spacing-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-background-card);
+}
+.grade-tabs [role="tab"] {
+  border-radius: var(--radius-element);
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+.grade-tabs [role="tab"][aria-selected="true"] {
+  background: var(--color-accent-muted);
+  color: var(--color-text-accent);
+}
+.grade-tab-count {
+  margin-left: var(--spacing-2);
+  padding: 0 var(--spacing-2);
+  border-radius: var(--radius-full);
+  background: var(--color-background-muted);
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}

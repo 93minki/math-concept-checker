@@ -99,6 +99,11 @@ test("학년 탭과 검색 및 진행 상태", async () => {
   ).toBeTruthy();
   expect(screen.getByRole("link", { name: "이어서 풀기" })).toBeTruthy();
   expect(screen.getAllByRole("tab")).toHaveLength(3);
+  // Each grade tab shows its progress; the name stays the grade alone.
+  for (const tab of screen.getAllByRole("tab"))
+    expect(tab.querySelector(".grade-tab-count")?.textContent).toMatch(
+      /^\d+\/\d+ 정복$/,
+    );
   expect(document.querySelector(".grade-chip")).toBeNull();
   expect(screen.getByText("동아출판 기준")).toBeTruthy();
   expect(screen.queryByRole("heading", { name: "2. 도형" })).toBeNull();
