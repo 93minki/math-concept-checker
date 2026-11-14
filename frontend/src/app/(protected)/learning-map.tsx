@@ -277,6 +277,24 @@ export default function LearningMap(props: ViewProps) {
         }}
       >
         <div className="path-card">
+          <div className="path-legend" aria-label="학습 상태 범례">
+            {(
+              [
+                "conquered",
+                "in_progress",
+                "half",
+                "retry",
+                "not_started",
+              ] as const
+            ).map((state) => (
+              <span key={state}>
+                <i className={`legend-node legend-${state}`}>
+                  {state === "not_started" ? "1" : <StateIcon state={state} />}
+                </i>
+                {progressLabels[state]}
+              </span>
+            ))}
+          </div>
           <div
             className={`path-list${selected ? " has-selection" : ""}`}
             ref={listRef}
@@ -332,24 +350,6 @@ export default function LearningMap(props: ViewProps) {
                 </article>
               );
             })}
-          </div>
-          <div className="path-legend" aria-label="학습 상태 범례">
-            {(
-              [
-                "conquered",
-                "in_progress",
-                "half",
-                "retry",
-                "not_started",
-              ] as const
-            ).map((state) => (
-              <span key={state}>
-                <i className={`legend-node legend-${state}`}>
-                  {state === "not_started" ? "1" : <StateIcon state={state} />}
-                </i>
-                {progressLabels[state]}
-              </span>
-            ))}
           </div>
         </div>
         <section

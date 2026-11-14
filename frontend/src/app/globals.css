@@ -2,6 +2,7 @@
 
 html {
   height: 100%;
+  scrollbar-gutter: stable;
 }
 
 html,
@@ -594,8 +595,12 @@ h4:not(.astryx-heading) {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  width: min(100%, 72rem);
+}
+.protected-content > .study-page {
   width: 100%;
+  min-width: 0;
 }
 .study-sidebar {
   display: none;
@@ -649,9 +654,6 @@ h4:not(.astryx-heading) {
     flex-wrap: wrap;
     align-items: center;
     gap: var(--spacing-2);
-  }
-  .protected-content .home-page {
-    width: min(100%, 75rem);
   }
 }
 
