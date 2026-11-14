@@ -84,6 +84,11 @@ test("통과한 수정안만 승인하고 AI 대화 상자 취소는 요청하�
   render(<AdminQuestionView id="q" />);
   await screen.findByText("검사 통과", { exact: false });
   expect(screen.getAllByRole("button", { name: "승인" })).toHaveLength(1);
+  fireEvent.click(screen.getByText("이전 수정안 1개"));
+  fireEvent.click(screen.getByRole("button", { name: /직접.*검사 실패/ }));
+  expect(screen.queryByRole("button", { name: "승인" })).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "최신 수정안으로" }));
+  expect(screen.getAllByRole("button", { name: "승인" })).toHaveLength(1);
   fireEvent.click(screen.getByRole("button", { name: "AI 수정안 만들기" }));
   fireEvent.click(screen.getByRole("button", { name: "취소" }));
   expect(mock.ai).not.toHaveBeenCalled();
@@ -150,9 +155,12 @@ test("고칠 필요 없는 이유를 편집해 닫고 수정 부분을 표시한
   mock.noIssue.mockResolvedValue({});
   render(<AdminQuestionView id="q" />);
   expect(await screen.findByText("AI 판단: 고칠 필요 없음")).toBeTruthy();
+  fireEvent.click(screen.getByText("이전 수정안 1개"));
+  fireEvent.click(screen.getByRole("button", { name: /AI.*검사 통과/ }));
   expect(screen.getByText("본문 바뀜")).toBeTruthy();
   expect(screen.getByText("보기 1 바뀜")).toBeTruthy();
   expect(screen.getByText("해설 바뀜")).toBeTruthy();
+  fireEvent.click(screen.getByRole("button", { name: "최신 수정안으로" }));
   const notes = screen.getAllByLabelText("문제 없음 메모");
   expect((notes[1] as HTMLTextAreaElement).value).toBe("오류가 없어요.");
   fireEvent.change(notes[1], { target: { value: "확인했어요." } });
@@ -199,4 +207,135 @@ test("상태 탭은 문항 수를 표시하고 해당 상태로 거른다", asyn
   expect(await screen.findByText("첫 문제")).toBeTruthy();
   expect(screen.queryByText("둘째 문제")).toBeNull();
   expect(received.getAttribute("aria-selected")).toBe("true");
+});
+
+test("열린 신고를 최신 5개 표시하고 유형·지난 신고·설명을 펼친다", async () => {
+  const question = {
+    id: "q",
+    assessment_item_id: "a",
+    difficulty: "normal",
+    variant: 1,
+    question_type: "written",
+    body: "원문",
+    explanation: "원래 해설",
+    figure: null,
+    model_answer: "답안",
+    hard_condition: null,
+    hard_condition_reason: null,
+    choices: [],
+    rubric: [{ no: 1, description: "기준", points: 1, required: true }],
+  };
+  const reports = Array.from({ length: 7 }, (_, i) => ({
+    id: `r${i}`,
+    kind: i === 0 ? "figure" : "text",
+    description: `설명 ${i} ` + "가".repeat(120),
+    status: i === 6 ? "fixed" : "received",
+    created_at: `2026-01-${String(i + 1).padStart(2, "0")}T00:00:00Z`,
+    resolved_at: null,
+  }));
+  mock.detail.mockResolvedValue({
+    question,
+    choices: [],
+    rubric: question.rubric,
+    rubric_links: [],
+    reports,
+    unit: null,
+    assessment_item: { id: "a", name: "항목" },
+    revisions: [],
+  });
+  render(<AdminQuestionView id="q" />);
+  await screen.findByRole("heading", { name: "원래 문제" });
+  expect(screen.getByText("원래 해설")).toBeTruthy();
+  expect(screen.getByText("모범 답안: 답안")).toBeTruthy();
+  expect(screen.getByText(/1\. 기준/)).toBeTruthy();
+  expect(screen.queryByText("정답·해설·채점 기준")?.tagName).toBe("H3");
+  expect(screen.getByText(/^설명 5 /)).toBeTruthy();
+  expect(screen.queryByText(/^설명 0 /)).toBeNull();
+  expect(screen.queryByText(/^설명 6 /)).toBeNull();
+  const expand = screen.getAllByRole("button", { name: "설명 펼치기" })[0];
+  expect(expand.getAttribute("aria-expanded")).toBe("false");
+  fireEvent.click(expand);
+  expect(
+    screen
+      .getByRole("button", { name: "설명 접기" })
+      .getAttribute("aria-expanded"),
+  ).toBe("true");
+  fireEvent.click(screen.getByRole("button", { name: "더 보기" }));
+  expect(screen.getByText(/^설명 0 /)).toBeTruthy();
+  fireEvent.click(screen.getByRole("button", { name: "지난 신고 1개 보기" }));
+  expect(screen.getByText(/^설명 6 /)).toBeTruthy();
+  const figure = screen.getByRole("button", { name: "그림 오류 1" });
+  fireEvent.click(figure);
+  expect(figure.getAttribute("aria-pressed")).toBe("true");
+  expect(screen.getByText(/^설명 0 /)).toBeTruthy();
+  expect(screen.queryByText(/^설명 5 /)).toBeNull();
+  fireEvent.click(figure);
+  expect(figure.getAttribute("aria-pressed")).toBe("false");
+});
+
+test("최신 수정안만 비교하고 이전 선택과 승인 기록을 보여 준다", async () => {
+  const question = {
+    id: "q",
+    assessment_item_id: "a",
+    difficulty: "normal",
+    variant: 1,
+    question_type: "written",
+    body: "원래",
+    explanation: "해설",
+    figure: null,
+    model_answer: "답",
+    hard_condition: null,
+    hard_condition_reason: null,
+    choices: [],
+    rubric: [],
+  };
+  const revisions = [
+    {
+      id: "old",
+      source: "ai",
+      status: "approved",
+      created_at: "2026-01-01",
+      checks: [],
+      payload: { ...question, body: "옛 수정" },
+    },
+    {
+      id: "new",
+      source: "manual",
+      status: "passed",
+      created_at: "2026-01-03",
+      checks: [],
+      payload: { ...question, body: "최신 수정" },
+    },
+    {
+      id: "middle",
+      source: "ai",
+      status: "failed",
+      created_at: "2026-01-02",
+      checks: [{ number: 1, issues: ["오류"] }],
+      payload: { ...question, body: "중간 수정" },
+    },
+  ];
+  mock.detail.mockResolvedValue({
+    question,
+    choices: [],
+    rubric: [],
+    rubric_links: [],
+    reports: [],
+    unit: null,
+    assessment_item: { id: "a", name: "항목" },
+    revisions,
+  });
+  render(<AdminQuestionView id="q" />);
+  expect(await screen.findByText("최신 수정")).toBeTruthy();
+  expect(screen.queryByText("옛 수정")).toBeNull();
+  expect(screen.queryByText("중간 수정")).toBeNull();
+  expect(screen.getByText("승인됨 — 새 문제로 교체됨")).toBeTruthy();
+  expect(screen.getByRole("button", { name: "승인" })).toBeTruthy();
+  fireEvent.click(screen.getByText("이전 수정안 2개"));
+  fireEvent.click(screen.getByRole("button", { name: /AI.*검사 실패/ }));
+  expect(screen.getByText("중간 수정")).toBeTruthy();
+  expect(screen.queryByText("최신 수정")).toBeNull();
+  expect(screen.queryByRole("button", { name: "승인" })).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "최신 수정안으로" }));
+  expect(screen.getByText("최신 수정")).toBeTruthy();
 });

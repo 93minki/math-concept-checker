@@ -36,6 +36,13 @@
 
 ## 기록
 
+### 2026-11-15 — frontend/e2e:관리자 문항 상세 화면 검사 서버 시작
+- 작업: 관리자 문항 상세 배치, F-13
+- 증상: `E2E_PORT=3100 pnpm test:e2e`가 `listen EPERM: operation not permitted 0.0.0.0:3100`으로 시작하지 못했다.
+- 원인 분류: 환경·설정
+- 원인: 실행 환경이 테스트 서버 포트 바인딩을 허용하지 않아 테스트 본문을 실행하지 못했다.
+- 해결: 미해결. 포트 바인딩이 허용된 환경에서 데스크톱·모바일 화면을 확인해야 한다.
+
 ### 2026-11-15 — frontend/e2e/report-kind-keyboard.spec.tsx:키보드 선택
 - 작업: 신고 화면 UI, F-12·F-13
 - 증상: 데스크톱과 모바일 Chromium 시작 직후 `bootstrap_check_in ... Permission denied (1100)`으로 종료되어 테스트가 시작되지 않았다.

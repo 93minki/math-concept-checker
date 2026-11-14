@@ -20,16 +20,16 @@ import {
   resolveNoIssue,
   type AdminDetails,
   type AdminQuestion,
+  type ReportKind,
+  type Revision,
 } from "@/lib/reports-api";
 
 function Preview({
   question,
   original,
-  collapsible = false,
 }: {
   question: AdminQuestion;
   original?: AdminQuestion;
-  collapsible?: boolean;
 }) {
   return (
     <div className="admin-stack">
@@ -61,25 +61,15 @@ function Preview({
                   })() && <strong>보기 {choice.no} 바뀜</strong>}
                 <ProblemText text={choice.text} />
                 {choice.figure && <Figure figure={choice.figure} />}
-                {choice.is_correct && !collapsible && <strong>정답</strong>}
+                {choice.is_correct && <strong>정답</strong>}
               </div>
             </div>
           ))}
         </div>
       </div>
-      <details className="reports-answer" open={!collapsible}>
-        <summary>정답·해설·채점 기준</summary>
+      <section className="reports-answer">
+        <h3>정답·해설·채점 기준</h3>
         <div className="admin-stack">
-          {collapsible &&
-            question.choices.some((choice) => choice.is_correct) && (
-              <p>
-                정답:{" "}
-                {question.choices
-                  .filter((choice) => choice.is_correct)
-                  .map((choice) => `${choice.no}번`)
-                  .join(", ")}
-              </p>
-            )}
           {question.model_answer && <p>모범 답안: {question.model_answer}</p>}
           <div>
             <strong>
@@ -100,7 +90,7 @@ function Preview({
             ))}
           </div>
         </div>
-      </details>
+      </section>
     </div>
   );
 }
@@ -114,6 +104,16 @@ export default function AdminQuestionView({ id }: { id: string }) {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
+  const [kind, setKind] = useState<ReportKind | null>(null);
+  const [selectedRevisionId, setSelectedRevisionId] = useState<string | null>(
+    null,
+  );
+  const revisions = [...(data?.revisions ?? [])].sort(
+    (a, b) => (Date.parse(b.created_at) || 0) - (Date.parse(a.created_at) || 0),
+  );
+  const selectedRevision =
+    revisions.find((r) => r.id === selectedRevisionId) ?? revisions[0];
+  const previousRevisions = revisions.slice(1);
   const fail = useCallback(
     (e: unknown) => {
       if (e instanceof ApiError && e.status === 403) router.replace("/");
@@ -152,6 +152,7 @@ export default function AdminQuestionView({ id }: { id: string }) {
       await action();
       setMessage(success);
       setConfirm(null);
+      setSelectedRevisionId(null);
       await load();
     } catch (e) {
       fail(e);
@@ -176,7 +177,6 @@ export default function AdminQuestionView({ id }: { id: string }) {
             <section className="admin-stack reports-detail-question">
               <h2>원래 문제</h2>
               <Preview
-                collapsible
                 question={{
                   ...data.question,
                   choices: data.choices,
@@ -191,29 +191,24 @@ export default function AdminQuestionView({ id }: { id: string }) {
             </section>
             <aside className="admin-stack reports-detail-panel">
               <h2>신고 목록</h2>
-              {data.reports.map((report) => (
-                <article className="reports-panel-entry" key={report.id}>
-                  <div className="reports-chips">
-                    <span className="reports-chip">
-                      {reportKinds[report.kind]}
-                    </span>
-                    <Badge
-                      label={reportStatuses[report.status]}
-                      variant={
-                        report.status === "fixed"
-                          ? "success"
-                          : report.status === "in_review"
-                            ? "info"
-                            : "neutral"
-                      }
-                    />
-                  </div>
-                  <p className="report-description">{report.description}</p>
-                  <p className="reports-muted">
-                    {new Date(report.created_at).toLocaleString("ko-KR")}
-                  </p>
-                </article>
-              ))}
+              <div className="reports-chips" aria-label="신고 유형">
+                {(Object.keys(reportKinds) as ReportKind[]).map((value) => {
+                  const count = data.reports.filter(
+                    (r) => r.kind === value,
+                  ).length;
+                  return count ? (
+                    <button
+                      type="button"
+                      className="reports-filter-chip"
+                      key={value}
+                      aria-pressed={kind === value}
+                      onClick={() => setKind(kind === value ? null : value)}
+                    >
+                      {reportKinds[value]} {count}
+                    </button>
+                  ) : null;
+                })}
+              </div>
               <h2>신고 처리</h2>
               <Button
                 variant={
@@ -388,9 +383,19 @@ export default function AdminQuestionView({ id }: { id: string }) {
                 </section>
               )}
 
-              <section className="admin-stack">
-                <h2>수정안 목록</h2>
-                {data.revisions.map((revision) => (
+              <ReportEntries
+                key={kind ?? "all"}
+                reports={data.reports}
+                kind={kind}
+              />
+            </aside>
+            <section className="admin-stack reports-revisions">
+              <h2>수정안 목록</h2>
+              {revisions.some((r) => r.status === "approved") && (
+                <p className="reports-approved">승인됨 — 새 문제로 교체됨</p>
+              )}
+              {selectedRevision &&
+                [selectedRevision].map((revision) => (
                   <article
                     className="admin-stack reports-revision"
                     key={revision.id}
@@ -399,26 +404,7 @@ export default function AdminQuestionView({ id }: { id: string }) {
                       <h3>
                         {revision.source === "ai" ? "AI 수정안" : "직접 수정안"}
                       </h3>
-                      <Badge
-                        label={
-                          revision.status === "passed"
-                            ? "검사 통과"
-                            : revision.status === "failed"
-                              ? "검사 실패"
-                              : revision.status === "discarded"
-                                ? "수정 없음"
-                                : revision.status === "approved"
-                                  ? "승인됨"
-                                  : "임시"
-                        }
-                        variant={
-                          revision.status === "passed"
-                            ? "success"
-                            : revision.status === "failed"
-                              ? "error"
-                              : "neutral"
-                        }
-                      />
+                      <RevisionBadge revision={revision} />
                     </div>
                     {revision.checks.map((check, index) =>
                       "issues" in check ? (
@@ -497,8 +483,51 @@ export default function AdminQuestionView({ id }: { id: string }) {
                     )}
                   </article>
                 ))}
-              </section>
-            </aside>
+              {selectedRevisionId &&
+                selectedRevisionId !== revisions[0]?.id && (
+                  <button
+                    type="button"
+                    className="reports-history-button"
+                    onClick={() => setSelectedRevisionId(null)}
+                  >
+                    최신 수정안으로
+                  </button>
+                )}
+              {previousRevisions.length > 0 && (
+                <details className="reports-revision-history">
+                  <summary>이전 수정안 {previousRevisions.length}개</summary>
+                  <div>
+                    {previousRevisions.map((revision) => (
+                      <button
+                        key={revision.id}
+                        type="button"
+                        className="reports-history-row"
+                        aria-pressed={selectedRevision?.id === revision.id}
+                        onClick={() => setSelectedRevisionId(revision.id)}
+                      >
+                        <span>{revision.source === "ai" ? "AI" : "직접"}</span>
+                        <RevisionBadge revision={revision} />
+                        <time>
+                          {revision.created_at
+                            ? new Date(revision.created_at).toLocaleString(
+                                "ko-KR",
+                              )
+                            : ""}
+                        </time>
+                        {revision.checks.map((check, i) =>
+                          "decision" in check &&
+                          check.decision === "no_change" ? (
+                            <span className="reports-history-reason" key={i}>
+                              {check.reason}
+                            </span>
+                          ) : null,
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </details>
+              )}
+            </section>
           </div>
         </>
       )}
@@ -578,6 +607,128 @@ function NoChange({
         onClick={() => close(note)}
         isDisabled={busy}
       />
+    </div>
+  );
+}
+
+function RevisionBadge({ revision }: { revision: Revision }) {
+  const label =
+    revision.status === "passed"
+      ? "검사 통과"
+      : revision.status === "failed"
+        ? "검사 실패"
+        : revision.status === "discarded"
+          ? "수정 없음"
+          : revision.status === "approved"
+            ? "승인됨"
+            : "임시";
+  return (
+    <Badge
+      label={label}
+      variant={
+        revision.status === "passed"
+          ? "success"
+          : revision.status === "failed"
+            ? "error"
+            : "neutral"
+      }
+    />
+  );
+}
+
+type Report = AdminDetails["reports"][number];
+function ReportEntries({
+  reports,
+  kind,
+}: {
+  reports: Report[];
+  kind: ReportKind | null;
+}) {
+  const [showClosed, setShowClosed] = useState(false);
+  const [openLimit, setOpenLimit] = useState(5);
+  const [closedLimit, setClosedLimit] = useState(5);
+  const [expanded, setExpanded] = useState<string[]>([]);
+  const filtered = reports
+    .filter((r) => !kind || r.kind === kind)
+    .slice()
+    .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at));
+  const open = filtered.filter(
+    (r) => r.status === "received" || r.status === "in_review",
+  );
+  const closed = filtered.filter(
+    (r) => r.status === "fixed" || r.status === "no_issue",
+  );
+  function entries(items: Report[], limit: number) {
+    return items.slice(0, limit).map((report) => (
+      <article className="reports-panel-entry" key={report.id}>
+        <div className="reports-chips">
+          <span className="reports-chip">{reportKinds[report.kind]}</span>
+          <Badge
+            label={reportStatuses[report.status]}
+            variant={
+              report.status === "fixed"
+                ? "success"
+                : report.status === "in_review"
+                  ? "info"
+                  : "neutral"
+            }
+          />
+        </div>
+        {report.description && (
+          <>
+            <p
+              className={`report-description${expanded.includes(report.id) ? "" : " reports-clamp"}`}
+            >
+              {report.description}
+            </p>
+            <button
+              type="button"
+              className="reports-text-toggle"
+              aria-expanded={expanded.includes(report.id)}
+              onClick={() =>
+                setExpanded(
+                  expanded.includes(report.id)
+                    ? expanded.filter((id) => id !== report.id)
+                    : [...expanded, report.id],
+                )
+              }
+            >
+              {expanded.includes(report.id) ? "설명 접기" : "설명 펼치기"}
+            </button>
+          </>
+        )}
+        <time className="reports-muted" dateTime={report.created_at}>
+          {new Date(report.created_at).toLocaleString("ko-KR")}
+        </time>
+      </article>
+    ));
+  }
+  return (
+    <div className="admin-stack reports-entries">
+      <h3>열린 신고 {open.length}개</h3>
+      {entries(open, openLimit)}
+      {open.length > openLimit && (
+        <Button label="더 보기" onClick={() => setOpenLimit(openLimit + 5)} />
+      )}
+      <button
+        type="button"
+        className="reports-history-button"
+        aria-expanded={showClosed}
+        onClick={() => setShowClosed(!showClosed)}
+      >
+        지난 신고 {closed.length}개 보기
+      </button>
+      {showClosed && (
+        <div className="admin-stack">
+          {entries(closed, closedLimit)}
+          {closed.length > closedLimit && (
+            <Button
+              label="지난 신고 더 보기"
+              onClick={() => setClosedLimit(closedLimit + 5)}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 }
