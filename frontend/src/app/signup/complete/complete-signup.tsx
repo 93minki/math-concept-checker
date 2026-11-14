@@ -9,6 +9,7 @@ import { useCallback, useEffect, useState } from "react";
 import { publicEnv } from "@/lib/env";
 import { createClient } from "@/lib/supabase/client";
 import PrivacyConsent, {
+  clearPrivacyConsent,
   hasPrivacyConsent,
   rememberPrivacyConsent,
 } from "../../privacy-consent";
@@ -35,6 +36,7 @@ export default function CompleteSignup() {
         },
       );
       if (!response.ok) throw new Error("Signup incomplete");
+      clearPrivacyConsent();
       push("/");
       refresh();
     } catch {

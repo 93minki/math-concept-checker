@@ -47,6 +47,12 @@ export default function HomeActions() {
             <HistoryIcon />
             지난 기록
           </Link>
+          <Link
+            href="/account"
+            aria-current={pathname === "/account" ? "page" : undefined}
+          >
+            <PersonIcon />내 정보
+          </Link>
         </nav>
         <div className="sidebar-actions">
           <ThemeButton />
@@ -79,6 +85,15 @@ export default function HomeActions() {
                 icon={<HistoryIcon />}
               >
                 <span className="site-nav-label">지난 기록</span>
+              </Button>
+              <Button
+                label="내 정보"
+                variant="ghost"
+                href="/account"
+                icon={<PersonIcon />}
+                aria-current={pathname === "/account" ? "page" : undefined}
+              >
+                <span className="site-nav-label">내 정보</span>
               </Button>
               <Button
                 label="로그아웃"
@@ -153,6 +168,25 @@ function HomeIcon() {
     >
       <path d="m3 10 9-7 9 7v10H3z" />
       <path d="M9 20v-7h6v7" />
+    </svg>
+  );
+}
+
+function PersonIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21a8 8 0 0 1 16 0" />
     </svg>
   );
 }

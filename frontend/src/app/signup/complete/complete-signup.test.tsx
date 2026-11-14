@@ -47,6 +47,9 @@ test("가입 완료 요청에 토큰을 보내고 홈으로 이동한다", async
     ),
   );
   expect(mocks.push).toHaveBeenCalledWith("/");
+  // Consent is used once: a later signup in the same tab must ask again
+  // (user 2026-11-14: a Kakao signup skipped consent on a stale flag).
+  expect(sessionStorage.getItem("privacy-consent")).toBeNull();
 });
 
 test("실패하면 다시 시도할 수 있다", async () => {

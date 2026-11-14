@@ -10,6 +10,7 @@ VALID = {
     "SUPABASE_URL": "https://example.supabase.co",
     "SUPABASE_SECRET_KEY": "sb_secret_test-only",
     "FRONTEND_ORIGIN": "http://localhost:3000",
+    "KAKAO_ADMIN_KEY": "example-key",
 }
 
 

@@ -549,3 +549,10 @@
 - 원인 분류: 테스트 오류
 - 원인: 새 상태 범례와 단원 상세 상태에 같은 텍스트가 있는데 기존 검사가 문서 전체에서 하나만 찾았다.
 - 해결: 상세 패널 안의 상태를 검사하도록 범위를 지정했다.
+
+### 2026-11-14 — frontend/src/app/auth-pages.test.tsx: 회원가입은 확인 메일 콜백을 설정하고 안내한다
+- 작업: 회원가입 카카오 버튼, F-01
+- 증상: `pnpm test`에서 `Found multiple elements with the role "status"`.
+- 원인 분류: 테스트 오류
+- 원인: 가입 화면에 Astryx `Button`(카카오로 시작하기)을 넣자 버튼 안의 빈 `role="status"` 알림 영역과 확인 메일 `Banner`가 둘 다 `status`가 되었다. 기존 검사는 이름 없이 `status`를 하나만 찾았다.
+- 해결: `status`의 접근 이름은 비어 있다. 문구가 같은 `status`만 고르도록 검사를 바꿨다.

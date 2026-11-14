@@ -24,6 +24,7 @@ class Settings(BaseSettings):
 
     supabase_url: HttpUrl = Field(validation_alias="SUPABASE_URL")
     supabase_secret_key: SecretStr = Field(validation_alias="SUPABASE_SECRET_KEY")
+    kakao_admin_key: SecretStr = Field(validation_alias="KAKAO_ADMIN_KEY")
     frontend_origin: str = Field(validation_alias="FRONTEND_ORIGIN")
     ai_mode: Literal["real", "fake"] = Field(default="real", validation_alias="AI_MODE")
     gemini_api_key: SecretStr | None = Field(

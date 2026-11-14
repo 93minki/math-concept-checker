@@ -157,3 +157,8 @@ for (const route of ["/", "/login", "/signup"]) {
     expect(requests).toEqual([]);
   });
 }
+
+test("로그아웃 사용자는 내 정보에서 로그인으로 이동한다", async ({ page }) => {
+  await page.goto("/account");
+  await expect(page).toHaveURL(/\/login$/);
+});

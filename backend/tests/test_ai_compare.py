@@ -49,6 +49,7 @@ def fake_settings(monkeypatch: pytest.MonkeyPatch) -> None:
     settings = Settings(
         _env_file=None,
         SUPABASE_URL="https://example.supabase.co",
+        KAKAO_ADMIN_KEY="example-key",
         SUPABASE_SECRET_KEY="sb_secret_REPLACE_ME",
         FRONTEND_ORIGIN="http://localhost:3000",
     )

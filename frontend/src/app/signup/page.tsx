@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Button } from "@astryxdesign/core/Button";
 import { Card } from "@astryxdesign/core/Card";
 import { VStack } from "@astryxdesign/core/VStack";
 import { Banner } from "@astryxdesign/core/Banner";
@@ -14,6 +15,7 @@ export default function SignupPage() {
   const router = useRouter();
   const hydrated = useHydrated();
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   const [consent, setConsent] = useState(false);
 
@@ -23,6 +25,7 @@ export default function SignupPage() {
     rememberPrivacyConsent();
     setBusy(true);
     setMessage("");
+    setError("");
     const form = new FormData(event.currentTarget);
     try {
       const { data, error } = await createClient().auth.signUp({
@@ -44,11 +47,37 @@ export default function SignupPage() {
     }
   }
 
+  // Kakao asks for consent on /signup/complete, same as the login page
+  // (user 2026-11-14: the button must not wait for the email form's checkbox).
+  async function kakao() {
+    setBusy(true);
+    setMessage("");
+    setError("");
+    try {
+      const { error } = await createClient().auth.signInWithOAuth({
+        provider: "kakao",
+        options: { redirectTo: `${window.location.origin}/auth/callback` },
+      });
+      if (error) throw error;
+    } catch {
+      setError("카카오로 시작하지 못했어요. 다시 시도해 주세요.");
+      setBusy(false);
+    }
+  }
+
   return (
     <main className="auth-page">
       <Card>
         <VStack gap={4}>
           <h1>회원가입</h1>
+          <Button
+            label="카카오로 시작하기"
+            variant="secondary"
+            isDisabled={busy || !hydrated}
+            onClick={kakao}
+            width="100%"
+          />
+          <p className="auth-divider">또는 이메일로 가입</p>
           {/* method="post": a native submit must never put the password in the URL. */}
           <form className="auth-form" method="post" onSubmit={submit}>
             <label htmlFor="email">이메일</label>
@@ -81,6 +110,7 @@ export default function SignupPage() {
             이미 계정이 있나요? <Link href="/login">로그인</Link>
           </p>
           {message && <Banner status="info" title={message} role="status" />}
+          {error && <Banner status="error" title={error} role="alert" />}
         </VStack>
       </Card>
     </main>

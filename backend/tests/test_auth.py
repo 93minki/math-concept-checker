@@ -44,6 +44,7 @@ def client(
     settings = Settings(
         _env_file=None,
         SUPABASE_URL="https://example.supabase.co",
+        KAKAO_ADMIN_KEY="example-key",
         SUPABASE_SECRET_KEY="sb_secret_test-only",
         FRONTEND_ORIGIN=f"{ORIGIN}, {LAN_ORIGIN}/",
     )

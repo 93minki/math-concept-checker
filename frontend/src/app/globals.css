@@ -249,7 +249,7 @@ h4:not(.astryx-heading) {
 .btn:disabled {
   background: var(--color-background-muted);
   border-color: var(--color-border);
-  color: var(--color-text-disabled);
+  color: var(--color-text-secondary);
   cursor: not-allowed;
 }
 [role="alert"]:not(:has(.astryx-banner)):not(.astryx-banner *) {
@@ -441,6 +441,19 @@ h4:not(.astryx-heading) {
   color-scheme: inherit;
 }
 
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--color-border);
+}
 .auth-form {
   display: grid;
   gap: var(--spacing-3);
@@ -766,4 +779,22 @@ h4:not(.astryx-heading) {
   .protected-content .home-page {
     width: min(100%, 75rem);
   }
+}
+
+.account-page {
+  padding-block: var(--spacing-6);
+}
+.account-page > section {
+  margin-top: var(--spacing-3);
+}
+.account-details {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--spacing-2) var(--spacing-5);
+}
+.account-details dt {
+  color: var(--color-text-secondary);
+}
+.account-details dd {
+  overflow-wrap: anywhere;
 }
