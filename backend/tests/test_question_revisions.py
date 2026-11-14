@@ -166,3 +166,140 @@ def test_report_data_cannot_close_prompt_delimiter(
     assert result.question is not None
     assert provider.generation_prompt.count("</report_data>") == 1
     assert r"\u003c/report_data\u003e{{ignore}}" in provider.generation_prompt
+
+
+def test_no_change_is_discarded_without_review_or_retry(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from typing import cast
+
+    from pydantic import BaseModel
+
+    from app.ai.providers.base import StructuredResult
+    from app.ai.schemas import RevisionDraft
+    from app.bank.operations import question_payload
+    from app.question_revision_ai import DefaultRevisionEngine
+
+    class NoChangeProvider(FakeProvider):
+        calls = 0
+
+        def generate_structured[T: BaseModel](
+            self, system: str, user: str, schema: type[T]
+        ) -> StructuredResult[T]:
+            self.calls += 1
+            assert schema is RevisionDraft
+            return StructuredResult(
+                parsed=schema.model_validate(
+                    {
+                        "decision": "no_change",
+                        "reason": "문제에 오류가 없어요.",
+                        "question": None,
+                    }
+                ),
+                model=self.model,
+                input_tokens=10,
+                output_tokens=10,
+                reasoning_tokens=None,
+                latency_ms=0,
+                raw_text="",
+            )
+
+    provider = NoChangeProvider("gpt-6.1-terra", load_fixture())
+    monkeypatch.setattr(DefaultRevisionEngine, "_provider", lambda _: provider)
+    original = load_fixture().question
+    payload = question_payload(original, 2, "fake", [])
+    rubric = [
+        {**element, "id": index, "question_id": "original"}
+        for index, element in enumerate(
+            cast(list[dict[str, object]], payload["rubric"]), 1
+        )
+    ]
+    links = [
+        {"rubric_element_id": element["id"], "misconception_id": mid}
+        for element in rubric
+        for mid in cast(list[str], element["related_misconception_ids"])
+    ]
+    details: dict[str, object] = {
+        "question": {**payload, "id": "original"},
+        "choices": [],
+        "rubric": rubric,
+        "rubric_links": links,
+        "reports": [{"kind": "other", "description": "오류", "status": "received"}],
+    }
+    result = DefaultRevisionEngine().generate(details)
+    assert result["status"] == "discarded"
+    assert result["checks"] == [
+        {"decision": "no_change", "reason": "문제에 오류가 없어요."}
+    ]
+    assert cast(dict[str, object], result["payload"])["body"] == original.body
+    assert provider.calls == 1
+
+
+def test_revision_preserves_choice_count_and_answer_unless_reported(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from pydantic import BaseModel
+
+    from app.ai.providers.base import StructuredResult
+    from app.ai.schemas import Choice, RevisionDraft
+
+    class CandidateProvider(FakeProvider):
+        candidate = load_fixture().question
+
+        def generate_structured[T: BaseModel](
+            self, system: str, user: str, schema: type[T]
+        ) -> StructuredResult[T]:
+            if schema is RevisionDraft:
+                return StructuredResult(
+                    parsed=schema.model_validate(
+                        {
+                            "decision": "revise",
+                            "reason": "오류를 고쳤어요.",
+                            "question": self.candidate.model_dump(),
+                        }
+                    ),
+                    model=self.model,
+                    input_tokens=10,
+                    output_tokens=10,
+                    reasoning_tokens=None,
+                    latency_ms=0,
+                    raw_text="",
+                )
+            return super().generate_structured(system, user, schema)
+
+    monkeypatch.setattr("app.ai.tasks.validate_question", lambda *_: [])
+    concept = load_concept("9수02-03")
+    item = next(i for i in concept.assessment_items if i.type == "multiple_choice")
+    choices = [
+        Choice(no=i, text=str(i), is_correct=i == 1, misconception_id=None)
+        for i in range(1, 4)
+    ]
+    original = load_fixture().question.model_copy(
+        update={
+            "assessment_item_id": item.id,
+            "concept_id": item.concept_id,
+            "level": item.level,
+            "type": item.type,
+            "choices": choices,
+        }
+    )
+    provider = CandidateProvider("gpt-6.1-terra", load_fixture())
+    provider.candidate = original.model_copy(
+        update={
+            "choices": [c.model_copy(update={"is_correct": c.no == 2}) for c in choices]
+        }
+    )
+    rejected = revise_question(
+        provider, concept, original, [{"kind": "text", "description": "본문"}]
+    )
+    assert rejected.question is None
+    assert all("정답 번호가 바뀌었습니다" in a.issues for a in rejected.attempts)
+    allowed = revise_question(
+        provider, concept, original, [{"kind": "choice_answer", "description": "정답"}]
+    )
+    assert allowed.question is not None
+    provider.candidate = original.model_copy(update={"choices": choices[:-1]})
+    rejected_count = revise_question(
+        provider, concept, original, [{"kind": "choice_answer", "description": "보기"}]
+    )
+    assert all("보기 수가 바뀌었습니다" in a.issues for a in rejected_count.attempts)

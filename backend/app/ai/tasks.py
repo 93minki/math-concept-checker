@@ -23,6 +23,7 @@ from app.ai.schemas import (
     ReportInput,
     ReportText,
     Review,
+    RevisionDraft,
     RubricElement,
     load_concept,
 )
@@ -55,6 +56,8 @@ class GenerationOutcome:
     difficulty: str
     question: Question | None
     attempts: list[Attempt]
+    decision: str = "revise"
+    reason: str = ""
 
     @property
     def excluded(self) -> bool:
@@ -233,6 +236,7 @@ def generate_question(
         raise ValueError("Invalid assessment item, difficulty, or attempt count")
     context = _context(concept, item, difficulty, avoid_bodies)
     attempts: list[Attempt] = []
+    decision, reason = "revise", ""
     for number in range(1, max_attempts + 1):
         prompt = load_prompt("generate_question", context)
         if revision is not None:
@@ -261,16 +265,41 @@ def generate_question(
                 template.system,
                 "".join(replacements.get(piece, piece) for piece in pieces),
             )
+        draft: QuestionDraft | None
         try:
-            generated, entry = _invoke(
-                provider, prompt, QuestionDraft, hooks, "generate", item_id, number
-            )
+            if revision is None:
+                generated, entry = _invoke(
+                    provider, prompt, QuestionDraft, hooks, "generate", item_id, number
+                )
+                draft = generated.parsed
+            else:
+                revised, entry = _invoke(
+                    provider, prompt, RevisionDraft, hooks, "generate", item_id, number
+                )
+                decision, reason = revised.parsed.decision, revised.parsed.reason
+                if decision == "no_change":
+                    _record(hooks, entry, [])
+                    return GenerationOutcome(
+                        item_id,
+                        item.concept_id,
+                        item.level,
+                        difficulty,
+                        None,
+                        attempts,
+                        decision,
+                        reason,
+                    )
+                draft = revised.parsed.question
+                if draft is None:
+                    errors = ["수정할 문제를 받지 못했습니다"]
+                    _record(hooks, entry, errors)
+                    attempts.append(Attempt(number, errors))
+                    continue
         except BudgetExceeded:
             raise
         except Exception as exc:
             attempts.append(Attempt(number, [f"generate: {type(exc).__name__}"]))
             continue
-        draft = generated.parsed
         question = Question(
             assessment_item_id=item.id,
             concept_id=item.concept_id,
@@ -296,6 +325,16 @@ def generate_question(
         entry["assembled_question"] = question.model_dump()
         checks = validate_question(question, concept)
         errors = [f"{issue.code}: {issue.message}" for issue in checks]
+        if revision is not None:
+            original, reports = revision
+            if len(original.choices) != len(question.choices):
+                errors.append("보기 수가 바뀌었습니다")
+            original_correct = {c.no for c in original.choices if c.is_correct}
+            candidate_correct = {c.no for c in question.choices if c.is_correct}
+            if original_correct != candidate_correct and not any(
+                r.get("kind") == "choice_answer" for r in reports
+            ):
+                errors.append("정답 번호가 바뀌었습니다")
         _record(hooks, entry, errors)
         if errors:
             attempts.append(Attempt(number, errors))
@@ -331,10 +370,24 @@ def generate_question(
         attempts.append(Attempt(number, review_errors))
         if not review_errors:
             return GenerationOutcome(
-                item_id, item.concept_id, item.level, difficulty, question, attempts
+                item_id,
+                item.concept_id,
+                item.level,
+                difficulty,
+                question,
+                attempts,
+                decision,
+                reason,
             )
     return GenerationOutcome(
-        item_id, item.concept_id, item.level, difficulty, None, attempts
+        item_id,
+        item.concept_id,
+        item.level,
+        difficulty,
+        None,
+        attempts,
+        decision,
+        reason,
     )
 
 

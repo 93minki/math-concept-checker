@@ -392,6 +392,12 @@ class QuestionDraft(BaseModel):
     hard_condition_reason: str | None
 
 
+class RevisionDraft(BaseModel):
+    decision: Literal["revise", "no_change"]
+    reason: str
+    question: QuestionDraft | None
+
+
 class Review(BaseModel):
     single_correct_answer: bool
     conditions_sufficient: bool

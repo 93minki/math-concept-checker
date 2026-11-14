@@ -13,6 +13,7 @@ const mock = vi.hoisted(() => ({
   list: vi.fn(),
   detail: vi.fn(),
   ai: vi.fn(),
+  noIssue: vi.fn(),
   router: { push: vi.fn(), replace: vi.fn() },
 }));
 vi.mock("next/navigation", () => ({ useRouter: () => mock.router }));
@@ -21,6 +22,7 @@ vi.mock("@/lib/reports-api", async (importOriginal) => ({
   getAdminReports: mock.list,
   getAdminQuestion: mock.detail,
   createAIRevision: mock.ai,
+  resolveNoIssue: mock.noIssue,
 }));
 vi.mock("@/lib/supabase/client", () => ({ createClient: vi.fn() }));
 beforeEach(() => {
@@ -85,4 +87,77 @@ test("통과한 수정안만 승인하고 AI 대화 상자 취소는 요청하�
   fireEvent.click(screen.getByRole("button", { name: "AI 수정안 만들기" }));
   fireEvent.click(screen.getByRole("button", { name: "취소" }));
   expect(mock.ai).not.toHaveBeenCalled();
+});
+
+test("고칠 필요 없는 이유를 편집해 닫고 수정 부분을 표시한다", async () => {
+  const choices = [
+    {
+      no: 1,
+      text: "원래 보기",
+      is_correct: true,
+      misconception_id: null,
+      figure: null,
+    },
+  ];
+  const question = {
+    id: "q",
+    assessment_item_id: "a",
+    difficulty: "normal",
+    variant: 1,
+    question_type: "multiple_choice",
+    body: "원래 본문",
+    explanation: "원래 해설",
+    figure: null,
+    model_answer: null,
+    hard_condition: null,
+    hard_condition_reason: null,
+    choices,
+    rubric: [],
+  };
+  mock.detail.mockResolvedValue({
+    question,
+    choices,
+    rubric: [],
+    rubric_links: [],
+    reports: [],
+    unit: null,
+    assessment_item: { id: "a", name: "항목" },
+    revisions: [
+      {
+        id: "none",
+        source: "ai",
+        status: "discarded",
+        payload: question,
+        checks: [{ decision: "no_change", reason: "오류가 없어요." }],
+      },
+      {
+        id: "changed",
+        source: "ai",
+        status: "passed",
+        payload: {
+          ...question,
+          body: "새 본문",
+          explanation: "새 해설",
+          choices: [{ ...choices[0], text: "새 보기" }],
+        },
+        checks: [
+          { decision: "revise", reason: "오류 수정" },
+          { number: 1, issues: [] },
+        ],
+      },
+    ],
+  });
+  mock.noIssue.mockResolvedValue({});
+  render(<AdminQuestionView id="q" />);
+  expect(await screen.findByText("AI 판단: 고칠 필요 없음")).toBeTruthy();
+  expect(screen.getByText("본문 바뀜")).toBeTruthy();
+  expect(screen.getByText("보기 1 바뀜")).toBeTruthy();
+  expect(screen.getByText("해설 바뀜")).toBeTruthy();
+  const notes = screen.getAllByLabelText("문제 없음 메모");
+  expect((notes[1] as HTMLTextAreaElement).value).toBe("오류가 없어요.");
+  fireEvent.change(notes[1], { target: { value: "확인했어요." } });
+  fireEvent.click(screen.getByRole("button", { name: "문제 없음으로 닫기" }));
+  await waitFor(() =>
+    expect(mock.noIssue).toHaveBeenCalledWith("q", "확인했어요."),
+  );
 });

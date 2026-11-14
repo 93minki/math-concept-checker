@@ -36,6 +36,13 @@
 
 ## 기록
 
+### 2026-11-15 — frontend/e2e:AI 수정안 화면 확인 서버 시작
+- 작업: AI 수정안 최소 수정, F-13
+- 증상: `E2E_PORT=3100 pnpm test:e2e` 서버 시작 중 `listen EPERM: operation not permitted 0.0.0.0:3100` 발생.
+- 원인 분류: 환경·설정
+- 원인: 실행 환경이 포트 바인딩을 거부하여 테스트 본문을 실행하지 못했다.
+- 해결: 미해결. 포트 바인딩이 허용되는 환경에서 다시 확인해야 한다.
+
 ### 2026-11-15 — frontend/e2e:서버 시작
 - 작업: 문항 오류 신고, F-12·F-13
 - 증상: `E2E_PORT=3100 pnpm test:e2e`에서 `listen EPERM: operation not permitted 0.0.0.0:3100`으로 서버가 시작되지 않았다.

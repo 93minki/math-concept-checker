@@ -77,7 +77,10 @@ export type Revision = {
   source: "ai" | "manual";
   status: "draft" | "passed" | "failed" | "approved" | "discarded";
   payload: AdminQuestion;
-  checks: { number: number; issues: string[] }[];
+  checks: (
+    | { number: number; issues: string[] }
+    | { decision: "revise" | "no_change"; reason: string }
+  )[];
   ai_cost: number | string;
   created_at: string;
 };

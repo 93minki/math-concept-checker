@@ -22,6 +22,7 @@ from app.ai.schemas import (
     ReportInput,
     ReportText,
     Review,
+    RevisionDraft,
     load_concept,
 )
 from app.ai.tasks import (
@@ -87,7 +88,16 @@ class FakeProvider:
     def generate_structured[T: BaseModel](
         self, system: str, user: str, schema: type[T]
     ) -> StructuredResult[T]:
-        if schema is QuestionDraft:
+        if schema is RevisionDraft:
+            draft = self.generate_structured(system, user, QuestionDraft).parsed
+            parsed = schema.model_validate(
+                {
+                    "decision": "revise",
+                    "reason": "신고한 부분을 수정했어요.",
+                    "question": draft.model_dump(),
+                }
+            )
+        elif schema is QuestionDraft:
             item_id = user.split("평가 항목 ID: ", 1)[1].splitlines()[0]
             difficulty = user.split("난이도: ", 1)[1].splitlines()[0]
             item = next(

@@ -21,11 +21,20 @@ import {
   type AdminQuestion,
 } from "@/lib/reports-api";
 
-function Preview({ question }: { question: AdminQuestion }) {
+function Preview({
+  question,
+  original,
+}: {
+  question: AdminQuestion;
+  original?: AdminQuestion;
+}) {
   return (
     <div className="admin-stack">
       <div className="problem-sheet stack">
         <div className="question">
+          {original && question.body !== original.body && (
+            <strong>본문 바뀜</strong>
+          )}
           <ProblemText text={question.body} />
           {question.figure && <Figure figure={question.figure} />}
         </div>
@@ -34,6 +43,19 @@ function Preview({ question }: { question: AdminQuestion }) {
             <div className="choice" key={choice.no}>
               <ChoiceNumber number={choice.no} />
               <div className="choice-content">
+                {original &&
+                  (() => {
+                    const before = original.choices.find(
+                      (c) => c.no === choice.no,
+                    );
+                    return (
+                      !before ||
+                      before.text !== choice.text ||
+                      before.is_correct !== choice.is_correct ||
+                      JSON.stringify(before.figure) !==
+                        JSON.stringify(choice.figure)
+                    );
+                  })() && <strong>보기 {choice.no} 바뀜</strong>}
                 <ProblemText text={choice.text} />
                 {choice.figure && <Figure figure={choice.figure} />}
                 {choice.is_correct && <strong>정답</strong>}
@@ -44,7 +66,12 @@ function Preview({ question }: { question: AdminQuestion }) {
       </div>
       {question.model_answer && <p>모범 답안: {question.model_answer}</p>}
       <div>
-        <strong>해설</strong>
+        <strong>
+          해설
+          {original && question.explanation !== original.explanation
+            ? " 바뀜"
+            : ""}
+        </strong>
         <ProblemText text={question.explanation} />
       </div>
       <div>
@@ -331,36 +358,74 @@ export default function AdminQuestionView({ id }: { id: string }) {
                       ? "검사 실패"
                       : revision.status}
                 </h3>
-                {revision.checks.map((check, index) => (
-                  <div key={index}>
-                    <p>
-                      검사 {check.number}:{" "}
-                      {check.issues.length ? "실패" : "통과"}
-                    </p>
-                    {check.issues.map((issue, i) => (
-                      <p key={i}>{issue}</p>
-                    ))}
+                {revision.checks.map((check, index) =>
+                  "issues" in check ? (
+                    <div key={index}>
+                      <p>
+                        검사 {check.number}:{" "}
+                        {check.issues.length ? "실패" : "통과"}
+                      </p>
+                      {check.issues.map((issue, i) => (
+                        <p key={i}>{issue}</p>
+                      ))}
+                    </div>
+                  ) : (
+                    <div key={index}>
+                      <p>
+                        {check.decision === "no_change"
+                          ? "AI 판단: 고칠 필요 없음"
+                          : "AI 판단: 수정"}
+                      </p>
+                      <p>{check.reason}</p>
+                      {check.decision === "no_change" && (
+                        <NoChange
+                          reason={check.reason}
+                          busy={busy}
+                          close={(reason) =>
+                            void run(
+                              () => resolveNoIssue(id, reason),
+                              "문제 없음으로 처리했어요.",
+                            )
+                          }
+                        />
+                      )}
+                    </div>
+                  ),
+                )}
+                {revision.checks.some(
+                  (check) =>
+                    "decision" in check && check.decision === "no_change",
+                ) ? null : (
+                  <div className="admin-columns">
+                    <div>
+                      <h4>원래 문제</h4>
+                      <Preview
+                        question={{
+                          ...data.question,
+                          choices: data.choices,
+                          rubric: data.rubric.map((r) => ({
+                            ...r,
+                            related_misconception_ids: [],
+                          })),
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <h4>수정안</h4>
+                      <Preview
+                        question={revision.payload}
+                        original={{
+                          ...data.question,
+                          choices: data.choices,
+                          rubric: data.rubric.map((r) => ({
+                            ...r,
+                            related_misconception_ids: [],
+                          })),
+                        }}
+                      />
+                    </div>
                   </div>
-                ))}
-                <div className="admin-columns">
-                  <div>
-                    <h4>원래 문제</h4>
-                    <Preview
-                      question={{
-                        ...data.question,
-                        choices: data.choices,
-                        rubric: data.rubric.map((r) => ({
-                          ...r,
-                          related_misconception_ids: [],
-                        })),
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <h4>수정안</h4>
-                    <Preview question={revision.payload} />
-                  </div>
-                </div>
+                )}
                 {revision.status === "passed" && (
                   <Button
                     label="승인"
@@ -425,5 +490,30 @@ export default function AdminQuestionView({ id }: { id: string }) {
         />
       </Dialog>
     </main>
+  );
+}
+
+function NoChange({
+  reason,
+  busy,
+  close,
+}: {
+  reason: string;
+  busy: boolean;
+  close: (reason: string) => void;
+}) {
+  const [note, setNote] = useState(reason);
+  return (
+    <div className="admin-stack">
+      <label>
+        문제 없음 메모
+        <textarea value={note} onChange={(e) => setNote(e.target.value)} />
+      </label>
+      <Button
+        label="문제 없음으로 닫기"
+        onClick={() => close(note)}
+        isDisabled={busy}
+      />
+    </div>
   );
 }

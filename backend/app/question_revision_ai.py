@@ -110,6 +110,10 @@ class DefaultRevisionEngine:
         provider = self._provider()
         result = revise_question(provider, concept, original, reports, hooks=hooks)
         attempts = [cast(Row, asdict(item)) for item in result.attempts]
+        checks: list[Row] = [
+            {"decision": result.decision, "reason": result.reason},
+            *attempts,
+        ]
         payload = question_payload(
             result.question or original,
             int(str(row["variant"])),
@@ -119,8 +123,12 @@ class DefaultRevisionEngine:
         payload["prompt_version"] = "v10"
         return {
             "payload": payload,
-            "checks": attempts,
-            "status": "passed" if result.question else "failed",
+            "checks": checks,
+            "status": "discarded"
+            if result.decision == "no_change"
+            else "passed"
+            if result.question
+            else "failed",
             "ai_cost": str(hooks.total),
         }
 
