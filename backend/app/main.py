@@ -11,6 +11,7 @@ from app.account import router as account_router
 from app.auth import AuthUser, get_current_user
 from app.diagnoses.router import router as diagnoses_router
 from app.profiles import ProfilesRepository, get_profiles
+from app.question_reports import router as question_reports_router
 from app.settings import get_settings
 
 
@@ -58,6 +59,7 @@ app = FastAPI(lifespan=lifespan)
 app.add_middleware(ConfiguredCORSMiddleware)
 app.include_router(diagnoses_router)
 app.include_router(account_router)
+app.include_router(question_reports_router)
 
 
 @app.get("/health")

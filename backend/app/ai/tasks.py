@@ -226,6 +226,7 @@ def generate_question(
     avoid_bodies: Sequence[str] = (),
     max_attempts: int = 3,
     hooks: CallHooks | None = None,
+    revision: tuple[Question, list[dict[str, str]]] | None = None,
 ) -> GenerationOutcome:
     item = next((item for item in concept.assessment_items if item.id == item_id), None)
     if item is None or difficulty not in ("normal", "hard") or max_attempts < 1:
@@ -234,6 +235,32 @@ def generate_question(
     attempts: list[Attempt] = []
     for number in range(1, max_attempts + 1):
         prompt = load_prompt("generate_question", context)
+        if revision is not None:
+            original, reports = revision
+            template = load_prompt(
+                "revise_question",
+                {
+                    "base_system": prompt.system,
+                    "base_user": prompt.user,
+                    "original_question": "REVISION_ORIGINAL_JSON_MARKER",
+                    "report_data": "REVISION_REPORT_JSON_MARKER",
+                },
+                version="v10",
+            )
+            replacements = {
+                "REVISION_ORIGINAL_JSON_MARKER": _prompt_data(
+                    original.model_dump(by_alias=True)
+                ),
+                "REVISION_REPORT_JSON_MARKER": _prompt_data(reports),
+            }
+            pieces = re.split(
+                r"(REVISION_(?:ORIGINAL|REPORT)_JSON_MARKER)", template.user
+            )
+            prompt = Prompt(
+                template.version,
+                template.system,
+                "".join(replacements.get(piece, piece) for piece in pieces),
+            )
         try:
             generated, entry = _invoke(
                 provider, prompt, QuestionDraft, hooks, "generate", item_id, number
@@ -309,6 +336,117 @@ def generate_question(
     return GenerationOutcome(
         item_id, item.concept_id, item.level, difficulty, None, attempts
     )
+
+
+def _prompt_data(data: object) -> str:
+    # Keep valid JSON while preventing user text from closing the data delimiter.
+    return (
+        json.dumps(data, ensure_ascii=False)
+        .replace("<", "\\u003c")
+        .replace(">", "\\u003e")
+        .replace("&", "\\u0026")
+    )
+
+
+def revise_question(
+    provider: StructuredProvider,
+    concept: ConceptData,
+    original: Question,
+    reports: list[dict[str, str]],
+    *,
+    hooks: CallHooks | None = None,
+) -> GenerationOutcome:
+    if any(len(report.get("description", "")) > 500 for report in reports):
+        raise ValueError("Report description exceeds 500 characters")
+    item = next(
+        (i for i in concept.assessment_items if i.id == original.assessment_item_id),
+        None,
+    )
+    if (
+        item is None
+        or item.concept_id != original.concept_id
+        or item.level != original.level
+        or item.type != original.type
+    ):
+        raise ValueError("Original question does not match the assessment item")
+    return generate_question(
+        provider,
+        concept,
+        item.id,
+        original.difficulty,
+        hooks=hooks,
+        revision=(original, reports),
+        max_attempts=3,
+    )
+
+
+def validate_revision(
+    provider: StructuredProvider,
+    concept: ConceptData,
+    original: Question,
+    candidate: Question,
+    *,
+    hooks: CallHooks | None = None,
+) -> list[str]:
+    item = next(
+        (i for i in concept.assessment_items if i.id == original.assessment_item_id),
+        None,
+    )
+    if (
+        item is None
+        or (
+            candidate.assessment_item_id,
+            candidate.concept_id,
+            candidate.level,
+            candidate.type,
+            candidate.difficulty,
+        )
+        != (
+            original.assessment_item_id,
+            original.concept_id,
+            original.level,
+            original.type,
+            original.difficulty,
+        )
+        or (item.concept_id, item.level, item.type)
+        != (original.concept_id, original.level, original.type)
+    ):
+        return ["평가 항목, 개념, 유형과 난이도를 유지해야 합니다"]
+    issues = [
+        f"{issue.code}: {issue.message}"
+        for issue in validate_question(candidate, concept)
+    ]
+    if issues:
+        return issues
+    context = _context(concept, item, original.difficulty)
+    prompt = load_prompt(
+        "review_question",
+        {
+            **context,
+            "question_json": candidate.model_dump_json(by_alias=True),
+            "declared_hard_condition": _declared_hard_condition(candidate),
+        },
+    )
+    try:
+        reviewed, entry = _invoke(
+            provider, prompt, Review, hooks, "review", original.assessment_item_id, 1
+        )
+    except BudgetExceeded:
+        raise
+    except Exception as exc:
+        return [f"review: {type(exc).__name__}"]
+    review = reviewed.parsed
+    issues = list(review.issues)
+    for field_name in (
+        "single_correct_answer",
+        "conditions_sufficient",
+        "measures_intended_level",
+        "meets_hard_condition",
+    ):
+        if not getattr(review, field_name):
+            issues.append(f"{field_name}: false")
+    _record(hooks, entry, issues)
+    return issues
 
 
 def grade_written(
