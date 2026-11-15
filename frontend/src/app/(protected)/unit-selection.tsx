@@ -1,6 +1,9 @@
 "use client";
 import StatusScreen from "@/components/status-screen";
 import { Button } from "@astryxdesign/core/Button";
+import { Dialog, DialogHeader } from "@astryxdesign/core/Dialog";
+import { HStack } from "@astryxdesign/core/HStack";
+import { Layout, LayoutContent, LayoutFooter } from "@astryxdesign/core/Layout";
 import { Card } from "@astryxdesign/core/Card";
 import { TextInput } from "@astryxdesign/core/TextInput";
 import { TabList, Tab } from "@astryxdesign/core/TabList";
@@ -13,6 +16,9 @@ import {
   ApiError,
   authRedirect,
   getUnits,
+  getQuota,
+  quotaMessage,
+  type Quota,
   startDiagnosis,
   type Unit,
 } from "@/lib/diagnosis-api";
@@ -25,11 +31,24 @@ export default function UnitSelection() {
   const [query, setQuery] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [quota, setQuota] = useState<Quota | null>(null);
+  const [pendingStart, setPendingStart] = useState<{
+    unit: Unit;
+    restart: boolean;
+  } | null>(null);
   const [conflict, setConflict] = useState<{ unit: Unit; id: string } | null>(
     null,
   );
   useEffect(() => {
     let active = true;
+    getQuota()
+      .then((data) => {
+        if (active) setQuota(data);
+      })
+      .catch((e) => {
+        if (active && !authRedirect(e, router.push))
+          setError("남은 횟수를 불러오지 못했어요. 새로고침해 주세요.");
+      });
     getUnits()
       .then((data) => {
         if (active) setUnits(data);
@@ -49,6 +68,11 @@ export default function UnitSelection() {
     if (typeof node.scrollIntoView === "function")
       node.scrollIntoView({ block: "nearest" });
   }, [conflict]);
+  function requestStart(unit: Unit, restart = false) {
+    if (quota && !quota.unlimited && quota.remaining === 0)
+      setPendingStart({ unit, restart });
+    else void start(unit, restart);
+  }
   async function start(unit: Unit, restart = false) {
     setBusy(true);
     setError("");
@@ -147,7 +171,8 @@ export default function UnitSelection() {
                 grade={item}
                 search={!!query.trim()}
                 busy={busy}
-                start={(unit) => void start(unit)}
+                quota={quota}
+                start={(unit) => requestStart(unit)}
                 conflictNode={(unit) =>
                   conflict?.unit.id === unit.id && (
                     <div
@@ -172,7 +197,7 @@ export default function UnitSelection() {
                         variant="secondary"
                         size="lg"
                         isDisabled={busy}
-                        onClick={() => void start(conflict.unit, true)}
+                        onClick={() => requestStart(conflict.unit, true)}
                       />
                       <Button
                         label="취소"
@@ -188,6 +213,45 @@ export default function UnitSelection() {
           );
         })}
       </SearchFrame>
+      <Dialog
+        isOpen={pendingStart !== null}
+        onOpenChange={(open) => {
+          if (!open) setPendingStart(null);
+        }}
+        purpose="info"
+        width={520}
+      >
+        <Layout
+          header={<DialogHeader title="오늘 남은 횟수" />}
+          content={
+            <LayoutContent>
+              <p>{quotaMessage(quota?.limit ?? 3)}</p>
+            </LayoutContent>
+          }
+          footer={
+            <LayoutFooter>
+              <HStack gap={2} hAlign="end">
+                <Button
+                  label="취소"
+                  variant="secondary"
+                  onClick={() => setPendingStart(null)}
+                />
+                <Button
+                  label="계속 시작"
+                  variant="primary"
+                  onClick={() => {
+                    if (pendingStart) {
+                      const next = pendingStart;
+                      setPendingStart(null);
+                      void start(next.unit, next.restart);
+                    }
+                  }}
+                />
+              </HStack>
+            </LayoutFooter>
+          }
+        />
+      </Dialog>
     </section>
   );
 }

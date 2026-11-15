@@ -507,3 +507,219 @@ def test_answer_changed_during_aborted_report_returns_conflict(
 )
 def test_student_description_drops_required_label(raw: str, shown: str) -> None:
     assert student_description(raw) == shown
+
+
+def test_daily_limit_blocks_fourth_before_ai_and_allows_start(
+    setup: tuple[TestClient, dict[str, str], RichRepo, TrackingAI],
+) -> None:
+    tc, headers, repo, ai = setup
+    repo.written = True
+    repo.has_hard = False
+    for count in range(3):
+        did, item_id = start(tc, headers)
+        assert (
+            tc.put(
+                f"/diagnoses/{did}/items/{item_id}/answer",
+                headers=headers,
+                json={"written_text": "풀이"},
+            ).status_code
+            == 200
+        )
+        assert (
+            tc.post(f"/diagnoses/{did}/stages/1/submit", headers=headers).status_code
+            == 200
+        )
+        assert tc.get("/diagnoses/quota", headers=headers).json()["used"] == count + 1
+    did, item_id = start(tc, headers)
+    tc.put(
+        f"/diagnoses/{did}/items/{item_id}/answer",
+        headers=headers,
+        json={"written_text": "풀이"},
+    )
+    before = ai.grade_calls
+    response = tc.post(f"/diagnoses/{did}/stages/1/submit", headers=headers)
+    assert response.status_code == 429
+    assert response.json()["detail"]["code"] == "daily_limit"
+    assert response.json()["detail"]["used"] == 3
+    assert ai.grade_calls == before
+    assert repo.rows[UUID(did)].stage1_submitted_at is None
+
+
+def test_quota_exemption_failure_and_rpc_race(
+    setup: tuple[TestClient, dict[str, str], RichRepo, TrackingAI],
+) -> None:
+    tc, headers, repo, ai = setup
+    repo.written = True
+    did, item = start(tc, headers)
+    tc.put(
+        f"/diagnoses/{did}/items/{item}/answer",
+        headers=headers,
+        json={"written_text": "풀이"},
+    )
+    ai.fail_grade = True
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/1/submit", headers=headers).status_code == 503
+    )
+    assert tc.get("/diagnoses/quota", headers=headers).json()["used"] == 0
+    ai.fail_grade = False
+    repo.force_daily_limit = True
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/1/submit", headers=headers).status_code == 429
+    )
+    repo.force_daily_limit = False
+    original = repo.rows[UUID(did)]
+    for _ in range(4):
+        past = original.model_copy(
+            update={
+                "id": uuid4(),
+                "status": "completed",
+                "stage1_submitted_at": datetime.now(UTC),
+            }
+        )
+        repo.rows[past.id] = past
+    repo.exempt = True
+    assert tc.get("/diagnoses/quota", headers=headers).json() == {
+        "limit": None,
+        "used": None,
+        "remaining": None,
+        "unlimited": True,
+        "resets_at": None,
+    }
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/1/submit", headers=headers).status_code == 200
+    )
+    assert repo.last_daily_limit is None
+
+
+def test_quota_korean_midnight_and_user_isolation() -> None:
+    from typing import cast
+    from zoneinfo import ZoneInfo
+
+    from app.diagnoses.repository import DiagnosesRepository
+    from app.diagnoses.router import quota_data
+    from app.diagnoses.schemas import Diagnosis
+
+    repo = RichRepo()
+    tz = ZoneInfo("Asia/Seoul")
+    for owner, stamp in [
+        (USER_ID, datetime(2026, 11, 14, 23, 59, tzinfo=tz)),
+        (USER_ID, datetime(2026, 11, 15, 0, 0, tzinfo=tz)),
+        (uuid4(), datetime(2026, 11, 15, 0, 0, tzinfo=tz)),
+    ]:
+        row = Diagnosis(
+            id=uuid4(),
+            user_id=owner,
+            display_unit_id=1,
+            status="completed",
+            abort_reason=None,
+            started_at=stamp,
+            stage1_submitted_at=stamp,
+        )
+        repo.rows[row.id] = row
+    result = quota_data(
+        cast(DiagnosesRepository, repo),
+        USER_ID,
+        3,
+        datetime(2026, 11, 15, 1, tzinfo=tz),
+    )
+    assert result == {
+        "limit": 3,
+        "used": 1,
+        "remaining": 2,
+        "unlimited": False,
+        "resets_at": "2026-11-16T00:00:00+09:00",
+    }
+
+
+def test_stop_stage2_grades_answered_items_and_rejects_invalid(
+    setup: tuple[TestClient, dict[str, str], RichRepo, TrackingAI],
+) -> None:
+    tc, headers, repo, ai = setup
+    repo.written = True
+    did, item_id = start(tc, headers)
+    assert tc.get("/diagnoses/quota").status_code == 401
+    assert tc.post(f"/diagnoses/{did}/stages/2/stop").status_code == 401
+    assert (
+        tc.post(f"/diagnoses/{uuid4()}/stages/2/stop", headers=headers).status_code
+        == 404
+    )
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/2/stop", headers=headers).json()["detail"][
+            "code"
+        ]
+        == "not_in_stage2"
+    )
+    tc.put(
+        f"/diagnoses/{did}/items/{item_id}/answer",
+        headers=headers,
+        json={"written_text": "기본"},
+    )
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/1/submit", headers=headers).status_code == 200
+    )
+    hard = repo.items(USER_ID, UUID(did))[-1].id
+    tc.put(
+        f"/diagnoses/{did}/items/{hard}/answer",
+        headers=headers,
+        json={"written_text": "심화"},
+    )
+    assert tc.post(f"/diagnoses/{did}/stages/2/stop", headers=headers).json() == {
+        "status": "aborted"
+    }
+    assert repo.rows[UUID(did)].abort_reason == "stopped"
+    assert tc.get(f"/diagnoses/{did}/report", headers=headers).status_code == 200
+    assert hard in repo.grade_rows
+    assert ai.report_calls == 1
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/2/stop", headers=headers).status_code == 409
+    )
+
+
+def test_stage2_submit_and_report_allowed_when_quota_exhausted(
+    setup: tuple[TestClient, dict[str, str], RichRepo, TrackingAI],
+) -> None:
+    tc, headers, repo, ai = setup
+    repo.written = True
+    did, item_id = start(tc, headers)
+    tc.put(
+        f"/diagnoses/{did}/items/{item_id}/answer",
+        headers=headers,
+        json={"written_text": "기본"},
+    )
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/1/submit", headers=headers).status_code == 200
+    )
+    original = repo.rows[UUID(did)]
+    for _ in range(2):
+        other = original.model_copy(update={"id": uuid4(), "status": "completed"})
+        repo.rows[other.id] = other
+    assert tc.get("/diagnoses/quota", headers=headers).json()["remaining"] == 0
+    hard = repo.items(USER_ID, UUID(did))[-1].id
+    tc.put(
+        f"/diagnoses/{did}/items/{hard}/answer",
+        headers=headers,
+        json={"written_text": "심화"},
+    )
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/2/submit", headers=headers).status_code == 200
+    )
+    assert tc.get(f"/diagnoses/{did}/report", headers=headers).status_code == 200
+    assert ai.report_calls == 1
+
+
+def test_stop_rejects_other_users_and_completed_diagnoses(
+    setup: tuple[TestClient, dict[str, str], RichRepo, TrackingAI],
+) -> None:
+    tc, headers, repo, _ = setup
+    did, _ = start(tc, headers)
+    target = repo.rows[UUID(did)]
+    target.user_id = uuid4()
+    target.status = "stage2"
+    assert (
+        tc.post(f"/diagnoses/{did}/stages/2/stop", headers=headers).status_code == 404
+    )
+    target.user_id = USER_ID
+    target.status = "completed"
+    response = tc.post(f"/diagnoses/{did}/stages/2/stop", headers=headers)
+    assert response.status_code == 409
+    assert response.json()["detail"]["code"] == "not_in_stage2"

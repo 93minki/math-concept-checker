@@ -67,7 +67,7 @@ export type Item = {
 export type Diagnosis = {
   id: string;
   status: "stage1" | "stage2" | "completed" | "aborted";
-  abort_reason: "expired" | "restarted" | null;
+  abort_reason: "expired" | "restarted" | "stopped" | null;
   started_at: string;
   stage1_submitted_at: string | null;
   unit: Pick<Unit, "id" | "grade" | "name" | "publisher" | "status">;
@@ -121,6 +121,31 @@ export async function request<T>(
 }
 export const deleteAccount = () =>
   request<void>("/account", { method: "DELETE" });
+export type Quota = {
+  limit: number | null;
+  used: number | null;
+  remaining: number | null;
+  unlimited: boolean;
+  resets_at: string | null;
+};
+export const getQuota = () => request<Quota>("/diagnoses/quota");
+export const stopStage2 = (id: string) =>
+  request<{ status: "aborted" }>(
+    `/diagnoses/${encodeURIComponent(id)}/stages/2/stop`,
+    { method: "POST" },
+  );
+export const quotaMessage = (limit: number) =>
+  `오늘 채점 ${limit}번을 모두 썼어요. 지금 풀어 두면 내일 0시부터 제출할 수 있어요.`;
+export function isDailyLimit(error: unknown): error is ApiError {
+  return (
+    error instanceof ApiError &&
+    error.status === 429 &&
+    !!error.detail &&
+    typeof error.detail === "object" &&
+    "code" in error.detail &&
+    error.detail.code === "daily_limit"
+  );
+}
 export const getUnits = () => request<Unit[]>("/units");
 export const getHistory = (limit = 20, before?: string) => {
   const params = new URLSearchParams({ limit: String(limit) });

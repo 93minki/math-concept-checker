@@ -14,6 +14,8 @@ import { ApiError, type Diagnosis, type Unit } from "@/lib/diagnosis-api";
 
 const mocks = vi.hoisted(() => ({
   getUnits: vi.fn(),
+  getQuota: vi.fn(),
+  stopStage2: vi.fn(),
   startDiagnosis: vi.fn(),
   getDiagnosis: vi.fn(),
   saveAnswer: vi.fn(),
@@ -169,6 +171,13 @@ const closeDialog = dialogProto.close;
 beforeEach(() => {
   vi.resetAllMocks();
   mocks.getUnits.mockResolvedValue(units);
+  mocks.getQuota.mockResolvedValue({
+    limit: 3,
+    used: 0,
+    remaining: 3,
+    unlimited: false,
+    resets_at: "2026-11-16T00:00:00+09:00",
+  });
   mocks.getDiagnosis.mockResolvedValue(diagnosis);
   mocks.saveAnswer.mockResolvedValue({});
   dialogProto.showModal = function (this: HTMLDialogElement) {
@@ -791,4 +800,139 @@ test("그림 보기는 선택 가능한 2열 배치 영역에 표시한다", asy
   expect((screen.getAllByRole("radio")[0] as HTMLInputElement).checked).toBe(
     true,
   );
+});
+
+test("남은 횟수를 표시하고 제외 계정에는 숨긴다", async () => {
+  mocks.getQuota.mockResolvedValue({
+    limit: 3,
+    used: 1,
+    remaining: 2,
+    unlimited: false,
+    resets_at: null,
+  });
+  mocks.getUnits.mockResolvedValue(units);
+  const { unmount } = render(<UnitSelection />);
+  expect(await screen.findByText("오늘 남은 개념 체크 2/3")).toBeTruthy();
+  unmount();
+  mocks.getQuota.mockResolvedValue({
+    limit: null,
+    used: null,
+    remaining: null,
+    unlimited: true,
+    resets_at: null,
+  });
+  render(<UnitSelection />);
+  await screen.findByRole("button", { name: "1. 문자와 식, 진행 중" });
+  expect(screen.queryByText(/오늘 남은 개념 체크/)).toBeNull();
+});
+
+test("한도를 쓴 날 단원 시작 전에 안내하고 계속 시작할 수 있다", async () => {
+  mocks.getQuota.mockResolvedValue({
+    limit: 3,
+    used: 3,
+    remaining: 0,
+    unlimited: false,
+    resets_at: null,
+  });
+  mocks.getUnits.mockResolvedValue([
+    { ...units[0], in_progress_diagnosis_id: null },
+  ]);
+  mocks.startDiagnosis.mockResolvedValue({ diagnosis_id: "new" });
+  render(<UnitSelection />);
+  fireEvent.click(
+    await screen.findByRole("button", { name: "1. 문자와 식, 시작 전" }),
+  );
+  fireEvent.click(screen.getByRole("button", { name: "진단 시작하기" }));
+  const dialog = screen.getByRole("dialog", { name: "오늘 남은 횟수" });
+  expect(within(dialog).getByText(/오늘 채점 3번을 모두 썼어요/)).toBeTruthy();
+  expect(mocks.startDiagnosis).not.toHaveBeenCalled();
+  fireEvent.click(within(dialog).getByRole("button", { name: "계속 시작" }));
+  await waitFor(() =>
+    expect(mocks.startDiagnosis).toHaveBeenCalledWith(1, false),
+  );
+});
+
+async function openSubmission() {
+  fireEvent.click(await screen.findByRole("radio", { name: /하나/ }));
+  fireEvent.click(await screen.findByRole("button", { name: "다음" }));
+  fireEvent.change(await screen.findByLabelText("풀이와 답"), {
+    target: { value: "답" },
+  });
+  fireEvent.click(screen.getByRole("button", { name: "제출하기" }));
+  return screen.getByRole("dialog", { name: "제출 확인" });
+}
+test("1단계 제출 안내에 남은 횟수를 표시하고 0이면 제출을 막는다", async () => {
+  mocks.getQuota.mockResolvedValue({
+    limit: 3,
+    used: 3,
+    remaining: 0,
+    unlimited: false,
+    resets_at: null,
+  });
+  render(<DiagnosisView id="d" />);
+  const dialog = await openSubmission();
+  expect(within(dialog).getByText(/오늘 채점 3번을 모두 썼어요/)).toBeTruthy();
+  expect(
+    within(dialog)
+      .getByRole("button", { name: "제출할게요" })
+      .getAttribute("aria-disabled"),
+  ).toBe("true");
+  expect(mocks.submitStage).not.toHaveBeenCalled();
+});
+test("1단계 제출 확인에 남은 횟수를 보이고 서버 429에도 답을 유지한다", async () => {
+  mocks.getQuota.mockResolvedValue({
+    limit: 3,
+    used: 1,
+    remaining: 2,
+    unlimited: false,
+    resets_at: null,
+  });
+  mocks.submitStage.mockRejectedValue(
+    new ApiError(429, {
+      code: "daily_limit",
+      limit: 3,
+      used: 3,
+      resets_at: "2026-11-16",
+    }),
+  );
+  render(<DiagnosisView id="d" />);
+  const dialog = await openSubmission();
+  expect(within(dialog).getByText(/남은 횟수 2/)).toBeTruthy();
+  fireEvent.click(within(dialog).getByRole("button", { name: "제출할게요" }));
+  await waitFor(() =>
+    expect(
+      screen
+        .getAllByText(/오늘 채점 3번을 모두 썼어요/)
+        .some((node) => node.closest('[role="alert"]')),
+    ).toBe(true),
+  );
+  expect(
+    (screen.getByLabelText("풀이와 답") as HTMLTextAreaElement).value,
+  ).toBe("답");
+});
+test("2단계에서 확인 후 직접 끝내고 리포트로 이동한다", async () => {
+  const second = {
+    ...diagnosis,
+    status: "stage2" as const,
+    stage1_submitted_at: "now",
+    items: [{ ...diagnosis.items[0], id: 3, stage: 2, answer: null }],
+  };
+  mocks.getDiagnosis.mockResolvedValueOnce(second).mockResolvedValue({
+    ...second,
+    status: "aborted",
+    abort_reason: "stopped",
+  });
+  mocks.stopStage2.mockResolvedValue({ status: "aborted" });
+  mocks.getReport.mockResolvedValue(report);
+  render(<DiagnosisView id="d" />);
+  fireEvent.click(
+    await screen.findByRole("button", { name: "여기까지 하고 리포트 보기" }),
+  );
+  const dialog = screen.getByRole("dialog", { name: "여기까지 하고 끝내기" });
+  expect(
+    within(dialog).getByText(/남은 심화 문제는 풀지 않은 것으로 처리돼요/),
+  ).toBeTruthy();
+  fireEvent.click(within(dialog).getByRole("button", { name: "리포트 보기" }));
+  await waitFor(() => expect(mocks.stopStage2).toHaveBeenCalledWith("d"));
+  expect(await screen.findByText("직접 끝냄 · 리포트를 확인해요")).toBeTruthy();
 });

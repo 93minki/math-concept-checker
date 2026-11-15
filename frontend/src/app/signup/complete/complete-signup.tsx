@@ -27,7 +27,6 @@ export default function CompleteSignup() {
         data: { session },
       } = await createClient().auth.getSession();
       if (!session) throw new Error("No session");
-      // F-11: 연령 확인·보호자 동의 단계는 여기(백엔드 check_signup_requirements)에 들어간다.
       const response = await fetch(
         `${publicEnv.NEXT_PUBLIC_API_BASE_URL}/signup/complete`,
         {

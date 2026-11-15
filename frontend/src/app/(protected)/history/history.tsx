@@ -27,6 +27,7 @@ const dateFormat = new Intl.DateTimeFormat("ko-KR", {
 function statusText(item: HistoryItem) {
   if (item.status === "completed") return "완료";
   if (item.status === "aborted") {
+    if (item.abort_reason === "stopped") return "중단 (직접 끝냄)";
     return item.abort_reason === "expired"
       ? "중단 (기간 만료)"
       : "중단 (새로 시작)";

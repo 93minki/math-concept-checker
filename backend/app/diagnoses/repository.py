@@ -5,6 +5,7 @@ from uuid import UUID
 
 from fastapi import Depends
 from postgrest.exceptions import APIError
+from postgrest.types import CountMethod
 from pydantic import TypeAdapter
 from supabase import Client
 
@@ -44,6 +45,9 @@ class AnswerConflict(Exception):
 
 class DiagnosesRepository(Protocol):
     def expire(self, user_id: UUID) -> None: ...
+    def is_limit_exempt(self, user_id: UUID) -> bool: ...
+    def count_submissions(self, user_id: UUID, since: datetime) -> int: ...
+    def stop_stage2(self, user_id: UUID, diagnosis_id: UUID) -> str: ...
     def units(self) -> list[Unit]: ...
     def standards(self) -> list[StandardLink]: ...
     def concepts(self) -> list[Concept]: ...
@@ -78,6 +82,7 @@ class DiagnosesRepository(Protocol):
         stage: int,
         gradings: list[dict[str, object]],
         question_ids: list[UUID],
+        daily_limit: int | None = None,
     ) -> str: ...
     def create_report(
         self,
@@ -112,6 +117,36 @@ class SupabaseDiagnoses:
             if len(rows) < 500:
                 return result
             offset += len(rows)
+
+    def is_limit_exempt(self, user_id: UUID) -> bool:
+        return bool(
+            self.client.table("diagnosis_limit_exempt")
+            .select("user_id")
+            .eq("user_id", str(user_id))
+            .limit(1)
+            .execute()
+            .data
+        )
+
+    def count_submissions(self, user_id: UUID, since: datetime) -> int:
+        response = (
+            self.client.table("diagnoses")
+            .select("id", count=CountMethod.exact)
+            .eq("user_id", str(user_id))
+            .gte("stage1_submitted_at", since.isoformat())
+            .limit(1)
+            .execute()
+        )
+        if response.count is None:
+            raise RuntimeError("Diagnosis count missing")
+        return response.count
+
+    def stop_stage2(self, user_id: UUID, diagnosis_id: UUID) -> str:
+        response = self.client.rpc(
+            "diagnosis_stop_stage2",
+            {"p_user_id": str(user_id), "p_diagnosis_id": str(diagnosis_id)},
+        ).execute()
+        return TypeAdapter(str).validate_python(response.data)
 
     def expire(self, user_id: UUID) -> None:
         self.client.rpc("diagnosis_expire", {"p_user_id": str(user_id)}).execute()
@@ -419,6 +454,7 @@ class SupabaseDiagnoses:
         stage: int,
         gradings: list[dict[str, object]],
         question_ids: list[UUID],
+        daily_limit: int | None = None,
     ) -> str:
         params: dict[str, object] = {
             "p_user_id": str(user_id),
@@ -427,6 +463,7 @@ class SupabaseDiagnoses:
         }
         if stage == 1:
             params["p_stage2_question_ids"] = [str(q) for q in question_ids]
+            params["p_daily_limit"] = daily_limit
         response = self.client.rpc(f"diagnosis_submit_stage{stage}", params).execute()
         return TypeAdapter(str).validate_python(response.data)
 

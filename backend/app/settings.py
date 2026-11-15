@@ -26,6 +26,9 @@ class Settings(BaseSettings):
     supabase_secret_key: SecretStr = Field(validation_alias="SUPABASE_SECRET_KEY")
     kakao_admin_key: SecretStr = Field(validation_alias="KAKAO_ADMIN_KEY")
     frontend_origin: str = Field(validation_alias="FRONTEND_ORIGIN")
+    daily_diagnosis_limit: int = Field(
+        default=3, ge=1, validation_alias="DAILY_DIAGNOSIS_LIMIT"
+    )
     ai_mode: Literal["real", "fake"] = Field(default="real", validation_alias="AI_MODE")
     gemini_api_key: SecretStr | None = Field(
         default=None, validation_alias="GEMINI_API_KEY"
