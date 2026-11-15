@@ -102,8 +102,61 @@ export default function UnitSelection() {
       name.toLowerCase().includes(query.trim().toLowerCase()),
     ),
   );
+  const searching = !!query.trim();
   const displayed =
-    filtered?.filter((unit) => query.trim() || unit.grade === grade) ?? [];
+    filtered?.filter((unit) => searching || unit.grade === grade) ?? [];
+  const grades = ["중1", "중2", "중3"] as const;
+  function unitsFor(item: (typeof grades)[number]) {
+    return (filtered ?? []).filter((unit) => unit.grade === item);
+  }
+  function gradeMap(item: (typeof grades)[number], group: Unit[]) {
+    return (
+      <LearningMap
+        embedded={searching}
+        units={group}
+        allUnits={units ?? []}
+        grade={item}
+        search={searching}
+        busy={busy}
+        quota={quota}
+        start={(unit) => requestStart(unit)}
+        conflictNode={(unit) =>
+          conflict?.unit.id === unit.id && (
+            <div
+              ref={conflictRef}
+              tabIndex={-1}
+              className="unit-conflict stack"
+              role="dialog"
+              aria-label="진행 중인 진단"
+            >
+              <p>
+                진행 중인 진단이 있어요. 이어서 풀거나 새로 시작할 수 있어요.
+              </p>
+              <Button
+                label="이어서 풀기"
+                variant="secondary"
+                size="lg"
+                href={`/diagnoses/${conflict.id}`}
+              />
+              <Button
+                label="새로 시작하기"
+                variant="secondary"
+                size="lg"
+                isDisabled={busy}
+                onClick={() => requestStart(conflict.unit, true)}
+              />
+              <Button
+                label="취소"
+                variant="secondary"
+                size="lg"
+                onClick={() => setConflict(null)}
+              />
+            </div>
+          )
+        }
+      />
+    );
+  }
   return (
     <section className="stack unit-selection">
       <h2>진단할 단원을 골라요</h2>
@@ -122,20 +175,22 @@ export default function UnitSelection() {
           decorative; the summary under the tabs reads it out. */}
       <div className="grade-tabs">
         <TabList
-          value={query.trim() ? "" : grade}
+          value={searching ? "" : grade}
           onChange={setGrade}
           role="tablist"
           aria-label="학년 선택"
           size="lg"
           layout="fill"
         >
-          {["중1", "중2", "중3"].map((item) => {
+          {grades.map((item) => {
             const { total, conquered } = gradeProgress(units ?? [], item);
             return (
               <Tab
                 key={item}
+                id={`grade-tab-${item}`}
                 value={item}
                 label={item}
+                panelId={`grade-panel-${item}`}
                 endContent={
                   units ? (
                     <span className="grade-tab-count" aria-hidden="true">
@@ -156,62 +211,36 @@ export default function UnitSelection() {
           compact
         />
       )}
-      <SearchFrame searching={!!query.trim()} count={displayed.length}>
-        {(["중1", "중2", "중3"] as const).map((item) => {
-          if (!query.trim() && item !== grade) return null;
-          const group = displayed.filter((unit) => unit.grade === item);
-          if (!group.length) return null;
-          return (
-            <VStack key={item} gap={3}>
-              <LearningMap
-                key={item}
-                embedded={!!query.trim()}
-                units={group}
-                allUnits={units ?? []}
-                grade={item}
-                search={!!query.trim()}
-                busy={busy}
-                quota={quota}
-                start={(unit) => requestStart(unit)}
-                conflictNode={(unit) =>
-                  conflict?.unit.id === unit.id && (
-                    <div
-                      ref={conflictRef}
-                      tabIndex={-1}
-                      className="unit-conflict stack"
-                      role="dialog"
-                      aria-label="진행 중인 진단"
-                    >
-                      <p>
-                        진행 중인 진단이 있어요. 이어서 풀거나 새로 시작할 수
-                        있어요.
-                      </p>
-                      <Button
-                        label="이어서 풀기"
-                        variant="secondary"
-                        size="lg"
-                        href={`/diagnoses/${conflict.id}`}
-                      />
-                      <Button
-                        label="새로 시작하기"
-                        variant="secondary"
-                        size="lg"
-                        isDisabled={busy}
-                        onClick={() => requestStart(conflict.unit, true)}
-                      />
-                      <Button
-                        label="취소"
-                        variant="secondary"
-                        size="lg"
-                        onClick={() => setConflict(null)}
-                      />
-                    </div>
-                  )
-                }
-              />
-            </VStack>
-          );
-        })}
+      <SearchFrame searching={searching} count={displayed.length}>
+        {searching ? (
+          grades.map((item) => {
+            const group = unitsFor(item);
+            if (!group.length) return null;
+            return (
+              <VStack key={item} gap={3}>
+                {gradeMap(item, group)}
+              </VStack>
+            );
+          })
+        ) : (
+          <div>
+            {grades.map((item) => {
+              const group = unitsFor(item);
+              return (
+                <VStack
+                  key={item}
+                  id={`grade-panel-${item}`}
+                  role="tabpanel"
+                  aria-labelledby={`grade-tab-${item}`}
+                  hidden={item !== grade}
+                  gap={3}
+                >
+                  {item === grade && group.length > 0 && gradeMap(item, group)}
+                </VStack>
+              );
+            })}
+          </div>
+        )}
       </SearchFrame>
       <Dialog
         isOpen={pendingStart !== null}

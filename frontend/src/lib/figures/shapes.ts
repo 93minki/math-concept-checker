@@ -81,6 +81,8 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
   const elements: Element[] = [];
   const pointAnchors = new Map<Element, Point>();
   const vertexCenters = new Map<Element, Point>();
+  const inferredTriangleCenters = new Map<Element, Point>();
+  const inferredTriangles = new Map<Element, Point[]>();
   const angleLimits = new Map<Element, { center: Point; radius: number }>();
   const segmentLabels = new Map<Element, [Point, Point]>();
   const pyramidHeights = new Set<Element>();
@@ -326,6 +328,50 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
         });
       }
     }
+    // Separate closed triangles drawn with segments have independent centers;
+    // the global hull includes the gap and cannot describe either triangle.
+    const neighbours = new Map<string, Set<string>>();
+    for (const segment of f.segments) {
+      if (!neighbours.has(segment.from))
+        neighbours.set(segment.from, new Set());
+      if (!neighbours.has(segment.to)) neighbours.set(segment.to, new Set());
+      neighbours.get(segment.from)!.add(segment.to);
+      neighbours.get(segment.to)!.add(segment.from);
+    }
+    const triangles: string[][] = [];
+    const seen = new Set<string>();
+    for (const id of neighbours.keys()) {
+      if (seen.has(id)) continue;
+      const component: string[] = [],
+        pending = [id];
+      while (pending.length) {
+        const node = pending.pop()!;
+        if (seen.has(node)) continue;
+        seen.add(node);
+        component.push(node);
+        for (const next of neighbours.get(node) ?? [])
+          if (!seen.has(next)) pending.push(next);
+      }
+      if (
+        component.length === 3 &&
+        component.every((node) => neighbours.get(node)?.size === 2)
+      )
+        triangles.push(component);
+    }
+    const triangleCenters = new Map<string, Point>();
+    const triangleVertices = new Map<string, Point[]>();
+    if (triangles.length > 1)
+      for (const triangle of triangles) {
+        const pts = triangle.map(get);
+        const center = {
+          x: pts.reduce((sum, p) => sum + p.x, 0) / 3,
+          y: pts.reduce((sum, p) => sum + p.y, 0) / 3,
+        };
+        for (const id of triangle) {
+          triangleCenters.set(id, center);
+          triangleVertices.set(id, pts);
+        }
+      }
     for (const p of f.points) {
       const at = get(p.id);
       if (p.dot) add("circle", { cx: at.x, cy: at.y, r: 3, fill: "#222" });
@@ -347,6 +393,14 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
           : hullIds.has(p.id)
             ? hullCenter
             : null;
+        const inferred = triangleCenters.get(p.id);
+        if (!polygon && inferred) {
+          inferredTriangleCenters.set(elements[elements.length - 1], inferred);
+          inferredTriangles.set(
+            elements[elements.length - 1],
+            triangleVertices.get(p.id)!,
+          );
+        }
         if (center) vertexCenters.set(elements[elements.length - 1], center);
         elements[elements.length - 1].attrs["data-point-x"] = at.x;
         elements[elements.length - 1].attrs["data-point-y"] = at.y;
@@ -642,7 +696,9 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
   const boxes: { left: number; right: number; top: number; bottom: number }[] =
     [];
   for (const element of textElements) {
-    const width = Array.from(element.text!).length * 12;
+    const width =
+      Array.from(element.text!).length *
+      (inferredTriangles.has(element) ? 15 : 12);
     const anchor = element.attrs.textAnchor;
     const original = { x: Number(element.attrs.x), y: Number(element.attrs.y) };
     const point = pointAnchors.get(element);
@@ -658,8 +714,8 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
       right:
         position.x +
         (anchor === "middle" ? width / 2 : anchor === "end" ? 0 : width),
-      top: position.y - 16,
-      bottom: position.y + 4,
+      top: position.y - (inferredTriangles.has(element) ? 19 : 16),
+      bottom: position.y + (inferredTriangles.has(element) ? 6 : 4),
     });
     const intersects = (a: Point, b: Point, rect: ReturnType<typeof box>) => {
       let low = 0,
@@ -914,9 +970,55 @@ export function drawShape(figure: Geometry | Solid | Net): Drawing {
       );
       return blocked * 10000000 + overlaps * 100000 + crosses * 1000 + distance;
     };
-    const chosen = candidates.reduce((best, candidate) =>
+    let chosen = candidates.reduce((best, candidate) =>
       score(candidate) < score(best) ? candidate : best,
     );
+    const local = inferredTriangleCenters.get(element);
+    const triangle = inferredTriangles.get(element);
+    const position = { x: chosen.x, y: chosen.y - 6 };
+    const crossSide = (a: Point, b: Point, p: Point) =>
+      (b.x - a.x) * (p.y - a.y) - (b.y - a.y) * (p.x - a.x);
+    const sides = triangle?.map((p, i) =>
+      crossSide(p, triangle[(i + 1) % triangle.length], position),
+    );
+    const insideTriangle =
+      sides && (sides.every((v) => v > 0) || sides.every((v) => v < 0));
+    if (point && local && insideTriangle) {
+      const outward = Math.atan2(point.y - local.y, point.x - local.x);
+      const safe = [0, -0.35, 0.35].flatMap((offset) =>
+        [24, 36, 52, 70, 90].map((distance) => ({
+          x: point.x + Math.cos(outward + offset) * (distance + width / 2),
+          y: point.y + Math.sin(outward + offset) * distance + 6,
+        })),
+      );
+      const future = textElements
+        .slice(textElements.indexOf(element) + 1)
+        .filter((other) => inferredTriangles.has(other))
+        .map((other) => {
+          const x = Number(other.attrs.x),
+            y = Number(other.attrs.y);
+          const w = Array.from(other.text!).length * 15;
+          return {
+            left: x - w / 2,
+            right: x + w / 2,
+            top: y - 19,
+            bottom: y + 6,
+          };
+        });
+      const free = safe.filter((candidate) => {
+        const rect = box(candidate);
+        return [...boxes, ...future].every(
+          (other) =>
+            rect.left >= other.right + 2 ||
+            rect.right + 2 <= other.left ||
+            rect.top >= other.bottom + 2 ||
+            rect.bottom + 2 <= other.top,
+        );
+      });
+      chosen = (free.length ? free : safe).reduce((best, candidate) =>
+        score(candidate) < score(best) ? candidate : best,
+      );
+    }
     element.attrs.x = chosen.x;
     element.attrs.y = chosen.y;
     boxes.push(box(chosen));

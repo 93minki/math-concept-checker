@@ -210,10 +210,10 @@ def start_diagnosis(body: StartInput, user: User, repo: Repo) -> dict[str, UUID]
     if result.result == "unit_not_found":
         raise HTTPException(status_code=404, detail="Unit not found")
     if result.result == "in_progress":
-        raise HTTPException(
-            status_code=409,
-            detail={"code": "in_progress", "diagnosis_id": str(result.diagnosis_id)},
-        )
+        detail: dict[str, str] = {"code": "in_progress"}
+        if result.diagnosis_id is not None:
+            detail["diagnosis_id"] = str(result.diagnosis_id)
+        raise HTTPException(status_code=409, detail=detail)
     if result.diagnosis_id is None:
         raise RuntimeError("Diagnosis start returned no ID")
     return {"diagnosis_id": result.diagnosis_id}

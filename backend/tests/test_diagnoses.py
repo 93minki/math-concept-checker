@@ -697,3 +697,73 @@ def test_quota_query_scopes_user_and_korean_day() -> None:
     query.eq.return_value.gte.assert_called_once_with(
         "stage1_submitted_at", start.isoformat()
     )
+
+
+def test_concurrent_start_conflict_and_other_database_errors(
+    client: tuple[TestClient, ec.EllipticCurvePrivateKey],
+    monkeypatch: object,
+) -> None:
+    from types import SimpleNamespace
+    from typing import cast
+    from unittest.mock import MagicMock
+
+    from postgrest.exceptions import APIError
+    from supabase import Client
+
+    from app.diagnoses.repository import SupabaseDiagnoses
+
+    tc, key = client
+    profiles = FakeProfiles()
+    profiles.complete_signup(USER_ID)
+    repo = FakeDiagnoses()
+    app.dependency_overrides[get_profiles] = lambda: profiles
+    app.dependency_overrides[get_diagnoses] = lambda: repo
+    existing = uuid4()
+    database = MagicMock()
+    rows = database.table.return_value.select.return_value
+    query = rows.eq.return_value.eq.return_value.in_.return_value.limit.return_value
+    query.execute.return_value = SimpleNamespace(data=[{"id": str(existing)}])
+    dbrepo = SupabaseDiagnoses(cast(Client, database))
+    database.rpc.return_value.execute.side_effect = APIError(
+        {
+            "code": "23505",
+            "message": 'duplicate key violates constraint "diagnoses_one_in_progress"',
+        }
+    )
+    from pytest import MonkeyPatch
+
+    cast(MonkeyPatch, monkeypatch).setattr(repo, "start", dbrepo.start)
+    headers = {"Authorization": f"Bearer {token(key)}"}
+    response = tc.post("/diagnoses", headers=headers, json={"display_unit_id": 1})
+    assert response.status_code == 409
+    assert response.json()["detail"] == {
+        "code": "in_progress",
+        "diagnosis_id": str(existing),
+    }
+    database.table.return_value.select.return_value.eq.assert_called_with(
+        "user_id", str(USER_ID)
+    )
+    query.execute.return_value = SimpleNamespace(data=[])
+    response = tc.post("/diagnoses", headers=headers, json={"display_unit_id": 1})
+    assert response.status_code == 409
+    assert response.json()["detail"] == {"code": "in_progress"}
+    database.rpc.return_value.execute.side_effect = APIError(
+        {"code": "23505", "message": "another_constraint"}
+    )
+    with TestClient(app, raise_server_exceptions=False) as errors:
+        assert (
+            errors.post(
+                "/diagnoses", headers=headers, json={"display_unit_id": 1}
+            ).status_code
+            == 500
+        )
+    database.rpc.return_value.execute.side_effect = APIError(
+        {"code": "XX000", "message": "database error"}
+    )
+    with TestClient(app, raise_server_exceptions=False) as errors:
+        assert (
+            errors.post(
+                "/diagnoses", headers=headers, json={"display_unit_id": 1}
+            ).status_code
+            == 500
+        )

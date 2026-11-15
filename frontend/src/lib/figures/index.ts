@@ -327,6 +327,7 @@ export function drawFigure(figure: Figure): Drawing {
     const yticks = ticks(f.y_min, f.y_max, f.y_tick_step ?? f.tick_step);
     const xlabels = numericLabels(xticks, x, true);
     const ylabels = numericLabels(yticks, y, false);
+    const tickTexts: Element[] = [];
     if (inside(0, f.y_min, f.y_max)) {
       axis(left, y(0), right, y(0));
       xticks.forEach((v) => {
@@ -336,8 +337,10 @@ export function drawFigure(figure: Figure): Drawing {
           v !== 0 &&
           xlabels.includes(v) &&
           (v > 0 || x(0) - x(v) >= 27 + String(v).length * 6)
-        )
+        ) {
           text(x(v), y(0) + 30, v);
+          tickTexts.push(elements[elements.length - 1]);
+        }
       });
     }
     if (inside(0, f.x_min, f.x_max)) {
@@ -349,8 +352,10 @@ export function drawFigure(figure: Figure): Drawing {
           v !== 0 &&
           ylabels.includes(v) &&
           !(y(v) > y(0) && y(v) - y(0) < 45)
-        )
+        ) {
           text(x(0) - 12, y(v) + 5, v, "end");
+          tickTexts.push(elements[elements.length - 1]);
+        }
       });
     }
     if (inside(0, f.x_min, f.x_max) && inside(0, f.y_min, f.y_max))
@@ -427,12 +432,59 @@ export function drawFigure(figure: Figure): Drawing {
         previous = current;
       }
     });
+    const pointStart = elements.length;
     f.points.forEach((p) => {
       if (inside(p.x, f.x_min, f.x_max) && inside(p.y, f.y_min, f.y_max)) {
         circle(x(p.x), y(p.y), true, 3);
         dotLabel(x(p.x), y(p.y), p.label);
       }
     });
+    // Suppress only tick numbers whose estimated boxes collide with a point
+    // or its name; keep every point, axis and remaining scale label intact.
+    const box = (e: Element) => {
+      if (e.tag === "circle") {
+        const cx = Number(e.attrs.cx),
+          cy = Number(e.attrs.cy),
+          r = Number(e.attrs.r);
+        return { left: cx - r, right: cx + r, top: cy - r, bottom: cy + r };
+      }
+      const tx = Number(e.attrs.x),
+        ty = Number(e.attrs.y),
+        fontSize = Number(e.attrs.fontSize),
+        width = Array.from(e.text ?? "").reduce(
+          (sum, char) =>
+            sum +
+            fontSize * (char === "-" ? 0.33 : /\d/.test(char) ? 0.56 : 0.75),
+          0,
+        );
+      const anchor = e.attrs.textAnchor;
+      return {
+        left:
+          tx - (anchor === "end" ? width : anchor === "middle" ? width / 2 : 0),
+        right:
+          tx +
+          (anchor === "start" ? width : anchor === "middle" ? width / 2 : 0),
+        top: ty - fontSize * 0.9,
+        bottom: ty + fontSize * 0.25,
+      };
+    };
+    const points = elements
+      .slice(pointStart)
+      .filter((e) => e.tag === "circle" || e.tag === "text")
+      .map(box);
+    for (const tick of tickTexts) {
+      const t = box(tick);
+      if (
+        points.some(
+          (p) =>
+            t.left < p.right &&
+            t.right > p.left &&
+            t.top < p.bottom &&
+            t.bottom > p.top,
+        )
+      )
+        elements.splice(elements.indexOf(tick), 1);
+    }
   } else if (figure.kind === "boxplot") {
     const f = figure;
     if (!(f.axis_max > f.axis_min)) return { viewBox: "0 0 400 260", elements };

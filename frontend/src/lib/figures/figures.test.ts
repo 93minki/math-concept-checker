@@ -1535,3 +1535,583 @@ test("접선 그림에서 OP 길이와 선분 사이를 다른 선이나 원이 
     false,
   );
 });
+
+const regressionPlane: Figure = {
+  graphs: [],
+  kind: "coordinate_plane",
+  points: [
+    { label: "A", x: -1.0, y: -3.0 },
+    { label: "B", x: -3.0, y: -1.0 },
+    { label: "C", x: -1.0, y: 2.0 },
+    { label: "D", x: 2.0, y: -1.0 },
+    { label: "E", x: 0.0, y: -2.0 },
+  ],
+  show_tick_labels: true,
+  tick_step: 1.0,
+  x_label: "x",
+  x_max: 4.0,
+  x_min: -4.0,
+  y_label: "y",
+  y_max: 4.0,
+  y_min: -4.0,
+  y_tick_step: null,
+};
+const regressionTriangles: Figure = {
+  angles: [
+    { from: "B", label: null, marks: 1, right: false, to: "C", vertex: "A" },
+    { from: "C", label: null, marks: 1, right: false, to: "A", vertex: "B" },
+    { from: "A", label: null, marks: 1, right: false, to: "B", vertex: "C" },
+    { from: "E", label: null, marks: 1, right: false, to: "F", vertex: "D" },
+    { from: "F", label: null, marks: 1, right: false, to: "D", vertex: "E" },
+    { from: "D", label: null, marks: 1, right: false, to: "E", vertex: "F" },
+  ],
+  arcs: [],
+  circles: [],
+  kind: "geometry",
+  lines: [],
+  points: [
+    { dot: false, id: "A", show_name: true, x: 0.0, y: 0.0 },
+    { dot: false, id: "B", show_name: true, x: 3.0, y: 0.0 },
+    { dot: false, id: "C", show_name: true, x: 1.5, y: 2.598076 },
+    { dot: false, id: "D", show_name: true, x: 4.5, y: 0.0 },
+    { dot: false, id: "E", show_name: true, x: 8.5, y: 0.0 },
+    { dot: false, id: "F", show_name: true, x: 6.5, y: 3.464102 },
+  ],
+  polygons: [],
+  segments: [
+    {
+      dashed: false,
+      from: "A",
+      label: "3",
+      parallel_marks: 0,
+      ticks: 1,
+      to: "B",
+    },
+    {
+      dashed: false,
+      from: "B",
+      label: null,
+      parallel_marks: 0,
+      ticks: 1,
+      to: "C",
+    },
+    {
+      dashed: false,
+      from: "C",
+      label: null,
+      parallel_marks: 0,
+      ticks: 1,
+      to: "A",
+    },
+    {
+      dashed: false,
+      from: "D",
+      label: "4",
+      parallel_marks: 0,
+      ticks: 2,
+      to: "E",
+    },
+    {
+      dashed: false,
+      from: "E",
+      label: null,
+      parallel_marks: 0,
+      ticks: 2,
+      to: "F",
+    },
+    {
+      dashed: false,
+      from: "F",
+      label: null,
+      parallel_marks: 0,
+      ticks: 2,
+      to: "D",
+    },
+  ],
+};
+
+test("축 눈금 숫자가 점과 점 이름을 가리지 않는다", () => {
+  const { elements } = drawFigure(regressionPlane);
+  const texts = elements.filter((e) => e.tag === "text");
+  const box = (e: (typeof elements)[number]) => {
+    const x = Number(e.attrs.x),
+      y = Number(e.attrs.y),
+      w = Array.from(e.text ?? "").reduce(
+        (sum, char) =>
+          sum +
+          Number(e.attrs.fontSize) *
+            (char === "-" ? 0.33 : /\d/.test(char) ? 0.56 : 0.75),
+        0,
+      ),
+      anchor = e.attrs.textAnchor;
+    return {
+      l: x - (anchor === "end" ? w : anchor === "middle" ? w / 2 : 0),
+      r: x + (anchor === "start" ? w : anchor === "middle" ? w / 2 : 0),
+      t: y - Number(e.attrs.fontSize) * 0.9,
+      b: y + Number(e.attrs.fontSize) * 0.25,
+    };
+  };
+  const ticks = texts.filter((e) => /^-?\d+$/.test(e.text ?? ""));
+  const names = texts.filter((e) =>
+    ["A", "B", "C", "D", "E"].includes(e.text ?? ""),
+  );
+  expect(names).toHaveLength(5);
+  for (const tick of ticks) {
+    const a = box(tick);
+    for (const name of names) {
+      const b = box(name);
+      expect(a.l < b.r && a.r > b.l && a.t < b.b && a.b > b.t).toBe(false);
+    }
+    for (const point of elements.filter(
+      (e) => e.tag === "circle" && e.attrs.r === 3,
+    )) {
+      const x = Number(point.attrs.cx),
+        y = Number(point.attrs.cy);
+      expect(a.l < x + 3 && a.r > x - 3 && a.t < y + 3 && a.b > y - 3).toBe(
+        false,
+      );
+    }
+  }
+});
+
+test("분리된 두 삼각형의 꼭짓점 이름은 각각의 바깥쪽에 있다", () => {
+  const elements = drawFigure(regressionTriangles).elements;
+  const labels = elements.filter(
+    (e) => e.tag === "text" && /^[A-F]$/.test(e.text ?? ""),
+  );
+  expect(labels).toHaveLength(6);
+  const lines = elements
+    .filter((e) => e.tag === "polyline")
+    .flatMap((e) => {
+      const points = String(e.attrs.points)
+        .split(" ")
+        .map((v) => v.split(",").map(Number));
+      return points.slice(1).map((p, i) => [points[i], p]);
+    });
+  for (const label of labels) {
+    const x = Number(label.attrs.x),
+      y = Number(label.attrs.y);
+    const r = { left: x - 6, right: x + 6, top: y - 16, bottom: y + 4 };
+    for (const other of elements.filter(
+      (e) => e.tag === "text" && e !== label && !!e.text,
+    )) {
+      const ox = Number(other.attrs.x),
+        oy = Number(other.attrs.y),
+        w = Array.from(other.text!).length * 6;
+      expect(
+        r.left < ox + w &&
+          r.right > ox - w &&
+          r.top < oy + 4 &&
+          r.bottom > oy - 16,
+        label.text,
+      ).toBe(false);
+    }
+    for (const [a, b] of lines) {
+      let low = 0,
+        high = 1;
+      for (const [origin, delta, min, max] of [
+        [a[0], b[0] - a[0], r.left, r.right],
+        [a[1], b[1] - a[1], r.top, r.bottom],
+      ]) {
+        if (Math.abs(delta) < 1e-9) {
+          if (origin < min || origin > max) low = 2;
+          continue;
+        }
+        const first = (min - origin) / delta,
+          last = (max - origin) / delta;
+        low = Math.max(low, Math.min(first, last));
+        high = Math.min(high, Math.max(first, last));
+      }
+      expect(low > high, `${label.text} 선 교차`).toBe(true);
+    }
+  }
+
+  const anchor = (label: (typeof labels)[number]) => ({
+    x: Number(label.attrs["data-point-x"]),
+    y: Number(label.attrs["data-point-y"]),
+  });
+  for (const group of [
+    ["A", "B", "C"],
+    ["D", "E", "F"],
+  ]) {
+    const vertices = group.map((name) =>
+      anchor(labels.find((e) => e.text === name)!),
+    );
+    const cross = (
+      a: { x: number; y: number },
+      b: { x: number; y: number },
+      p: { x: number; y: number },
+    ) => (b.x - a.x) * (p.y - a.y) - (b.y - a.y) * (p.x - a.x);
+    for (const name of group) {
+      const label = labels.find((e) => e.text === name)!;
+      const p = { x: Number(label.attrs.x), y: Number(label.attrs.y) - 6 };
+      const sides = vertices.map((a, i) => cross(a, vertices[(i + 1) % 3], p));
+      expect(sides.every((v) => v > 0) || sides.every((v) => v < 0), name).toBe(
+        false,
+      );
+    }
+  }
+});
+
+const nearbyTriangleCases: Figure[] = [
+  {
+    angles: [
+      { from: "B", label: null, marks: 0, right: true, to: "C", vertex: "A" },
+      { from: "C", label: null, marks: 1, right: false, to: "A", vertex: "B" },
+      { from: "A", label: null, marks: 2, right: false, to: "B", vertex: "C" },
+      { from: "E", label: null, marks: 0, right: true, to: "F", vertex: "D" },
+      { from: "F", label: null, marks: 1, right: false, to: "D", vertex: "E" },
+      { from: "D", label: null, marks: 2, right: false, to: "E", vertex: "F" },
+    ],
+    arcs: [],
+    circles: [],
+    kind: "geometry",
+    lines: [],
+    points: [
+      { dot: false, id: "A", show_name: true, x: 0.0, y: 0.0 },
+      { dot: false, id: "B", show_name: true, x: 4.0, y: 0.0 },
+      { dot: false, id: "C", show_name: true, x: 0.0, y: 3.0 },
+      { dot: false, id: "D", show_name: true, x: 6.0, y: 0.0 },
+      { dot: false, id: "E", show_name: true, x: 12.0, y: 0.0 },
+      { dot: false, id: "F", show_name: true, x: 6.0, y: 4.5 },
+    ],
+    polygons: [],
+    segments: [
+      {
+        dashed: false,
+        from: "A",
+        label: "4",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "B",
+      },
+      {
+        dashed: false,
+        from: "B",
+        label: null,
+        parallel_marks: 0,
+        ticks: 0,
+        to: "C",
+      },
+      {
+        dashed: false,
+        from: "C",
+        label: null,
+        parallel_marks: 0,
+        ticks: 0,
+        to: "A",
+      },
+      {
+        dashed: false,
+        from: "D",
+        label: "6",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "E",
+      },
+      {
+        dashed: false,
+        from: "E",
+        label: null,
+        parallel_marks: 0,
+        ticks: 0,
+        to: "F",
+      },
+      {
+        dashed: false,
+        from: "F",
+        label: null,
+        parallel_marks: 0,
+        ticks: 0,
+        to: "D",
+      },
+    ],
+  },
+  {
+    angles: [
+      { from: "B", label: null, marks: 0, right: true, to: "C", vertex: "A" },
+      { from: "A", label: null, marks: 1, right: false, to: "C", vertex: "B" },
+      { from: "A", label: null, marks: 2, right: false, to: "B", vertex: "C" },
+      { from: "E", label: null, marks: 0, right: true, to: "F", vertex: "D" },
+      { from: "D", label: null, marks: 1, right: false, to: "F", vertex: "E" },
+      { from: "D", label: null, marks: 2, right: false, to: "E", vertex: "F" },
+    ],
+    arcs: [],
+    circles: [],
+    kind: "geometry",
+    lines: [],
+    points: [
+      { dot: false, id: "A", show_name: true, x: 0.0, y: 0.0 },
+      { dot: false, id: "B", show_name: true, x: 4.0, y: 0.0 },
+      { dot: false, id: "C", show_name: true, x: 0.0, y: 3.0 },
+      { dot: false, id: "D", show_name: true, x: 7.0, y: 0.0 },
+      { dot: false, id: "E", show_name: true, x: 15.0, y: 0.0 },
+      { dot: false, id: "F", show_name: true, x: 7.0, y: 6.0 },
+    ],
+    polygons: [],
+    segments: [
+      {
+        dashed: false,
+        from: "A",
+        label: "4",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "B",
+      },
+      {
+        dashed: false,
+        from: "B",
+        label: "5",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "C",
+      },
+      {
+        dashed: false,
+        from: "C",
+        label: "3",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "A",
+      },
+      {
+        dashed: false,
+        from: "D",
+        label: "8",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "E",
+      },
+      {
+        dashed: false,
+        from: "E",
+        label: "10",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "F",
+      },
+      {
+        dashed: false,
+        from: "F",
+        label: "6",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "D",
+      },
+    ],
+  },
+  {
+    angles: [],
+    arcs: [],
+    circles: [],
+    kind: "geometry",
+    lines: [],
+    points: [
+      { dot: false, id: "A", show_name: true, x: 0.0, y: 0.0 },
+      { dot: false, id: "B", show_name: true, x: 4.0, y: 0.0 },
+      { dot: false, id: "C", show_name: true, x: 0.0, y: 3.0 },
+      { dot: false, id: "D", show_name: true, x: 7.0, y: 0.0 },
+      { dot: false, id: "E", show_name: true, x: 15.0, y: 0.0 },
+      { dot: false, id: "F", show_name: true, x: 7.0, y: 6.0 },
+    ],
+    polygons: [],
+    segments: [
+      {
+        dashed: false,
+        from: "A",
+        label: "4",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "B",
+      },
+      {
+        dashed: false,
+        from: "A",
+        label: "3",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "C",
+      },
+      {
+        dashed: false,
+        from: "B",
+        label: "5",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "C",
+      },
+      {
+        dashed: false,
+        from: "D",
+        label: "8",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "E",
+      },
+      {
+        dashed: false,
+        from: "D",
+        label: "6",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "F",
+      },
+      {
+        dashed: false,
+        from: "E",
+        label: "10",
+        parallel_marks: 0,
+        ticks: 0,
+        to: "F",
+      },
+    ],
+  },
+];
+const preservedTickCases: Figure[] = [
+  {
+    graphs: [{ a: 1.0, label: null, p: -2.0, q: -3.0, type: "quadratic" }],
+    kind: "coordinate_plane",
+    points: [{ label: "A", x: -2.0, y: -3.0 }],
+    show_tick_labels: true,
+    tick_step: 1.0,
+    x_label: "x",
+    x_max: 2.0,
+    x_min: -5.0,
+    y_label: "y",
+    y_max: 6.0,
+    y_min: -4.0,
+    y_tick_step: 1.0,
+  },
+  {
+    graphs: [{ a: -2.0, label: null, p: -1.0, q: 2.0, type: "quadratic" }],
+    kind: "coordinate_plane",
+    points: [
+      { label: null, x: -1.0, y: 2.0 },
+      { label: null, x: 0.0, y: 0.0 },
+    ],
+    show_tick_labels: true,
+    tick_step: 1.0,
+    x_label: "x",
+    x_max: 5.0,
+    x_min: -5.0,
+    y_label: "y",
+    y_max: 5.0,
+    y_min: -5.0,
+    y_tick_step: null,
+  },
+  {
+    graphs: [{ a: -1.0, label: null, p: -1.0, q: 2.0, type: "quadratic" }],
+    kind: "coordinate_plane",
+    points: [
+      { label: null, x: -1.0, y: 2.0 },
+      { label: null, x: 0.0, y: 1.0 },
+    ],
+    show_tick_labels: true,
+    tick_step: 1.0,
+    x_label: "x",
+    x_max: 5.0,
+    x_min: -5.0,
+    y_label: "y",
+    y_max: 5.0,
+    y_min: -5.0,
+    y_tick_step: null,
+  },
+  {
+    graphs: [{ a: 1.0, label: null, p: -1.0, q: 2.0, type: "quadratic" }],
+    kind: "coordinate_plane",
+    points: [
+      { label: null, x: -1.0, y: 2.0 },
+      { label: null, x: 0.0, y: 3.0 },
+    ],
+    show_tick_labels: true,
+    tick_step: 1.0,
+    x_label: "x",
+    x_max: 5.0,
+    x_min: -5.0,
+    y_label: "y",
+    y_max: 5.0,
+    y_min: -5.0,
+    y_tick_step: null,
+  },
+  {
+    graphs: [{ a: -0.5, label: null, p: -1.0, q: 2.0, type: "quadratic" }],
+    kind: "coordinate_plane",
+    points: [
+      { label: null, x: -1.0, y: 2.0 },
+      { label: null, x: 1.0, y: 0.0 },
+    ],
+    show_tick_labels: true,
+    tick_step: 1.0,
+    x_label: "x",
+    x_max: 5.0,
+    x_min: -5.0,
+    y_label: "y",
+    y_max: 5.0,
+    y_min: -5.0,
+    y_tick_step: null,
+  },
+];
+
+const measuredTextBox = (
+  e: ReturnType<typeof drawFigure>["elements"][number],
+) => {
+  const x = Number(e.attrs.x),
+    y = Number(e.attrs.y),
+    fontSize = Number(e.attrs.fontSize);
+  const width = Array.from(e.text ?? "").reduce(
+    (sum, char) =>
+      sum + fontSize * (char === "-" ? 0.33 : /\d/.test(char) ? 0.56 : 0.75),
+    0,
+  );
+  const anchor = e.attrs.textAnchor;
+  return {
+    left: x - (anchor === "end" ? width : anchor === "middle" ? width / 2 : 0),
+    right:
+      x + (anchor === "start" ? width : anchor === "middle" ? width / 2 : 0),
+    top: y - fontSize * 0.9,
+    bottom: y + fontSize * 0.25,
+  };
+};
+const boxesOverlap = (
+  a: ReturnType<typeof measuredTextBox>,
+  b: ReturnType<typeof measuredTextBox>,
+) =>
+  a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+
+test("가까운 두 삼각형에서 B와 D의 이름 상자가 겹치지 않는다", () => {
+  for (const figure of nearbyTriangleCases) {
+    const texts = drawFigure(figure).elements.filter((e) => e.tag === "text");
+    const b = texts.find((e) => e.text === "B"),
+      d = texts.find((e) => e.text === "D");
+    expect(b).toBeDefined();
+    expect(d).toBeDefined();
+    expect(boxesOverlap(measuredTextBox(b!), measuredTextBox(d!))).toBe(false);
+  }
+});
+
+test("좌표평면에서 C와 y축 눈금 2가 겹치지 않는다", () => {
+  const texts = drawFigure(regressionPlane).elements.filter(
+    (e) => e.tag === "text",
+  );
+  const c = texts.find((e) => e.text === "C");
+  const tick = texts.find(
+    (e) => e.text === "2" && e.attrs.textAnchor === "end",
+  );
+  expect(c).toBeDefined();
+  if (tick)
+    expect(boxesOverlap(measuredTextBox(c!), measuredTextBox(tick))).toBe(
+      false,
+    );
+});
+
+test("점과 겹치지 않는 y축 눈금은 남긴다", () => {
+  for (const [i, figure] of preservedTickCases.entries()) {
+    const texts = drawFigure(figure).elements.filter((e) => e.tag === "text");
+    expect(
+      texts.some(
+        (e) =>
+          e.text === (i === 0 ? "-2" : "2") && e.attrs.textAnchor === "end",
+      ),
+    ).toBe(true);
+  }
+});
