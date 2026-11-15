@@ -125,3 +125,11 @@ def test_check_command_reports_only_key_names(
 
     assert check_settings.main() == 1
     assert capsys.readouterr().out == "Invalid settings: SUPABASE_SECRET_KEY\n"
+
+
+def test_daily_limit_requires_positive_integer(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("DAILY_DIAGNOSIS_LIMIT", "0")
+    with pytest.raises(ValidationError):
+        Settings(_env_file=None)
+    monkeypatch.setenv("DAILY_DIAGNOSIS_LIMIT", "4")
+    assert Settings(_env_file=None).daily_diagnosis_limit == 4

@@ -16,6 +16,11 @@ import {
   ApiError,
   authRedirect,
   getDiagnosis,
+  getQuota,
+  stopStage2,
+  isDailyLimit,
+  quotaMessage,
+  type Quota,
   saveAnswer,
   submitStage,
   type AnswerInput,
@@ -59,6 +64,8 @@ export default function DiagnosisView({ id }: { id: string }) {
   const [states, setStates] = useState<Record<number, SaveState>>({});
   const [error, setError] = useState("");
   const [confirm, setConfirm] = useState(false);
+  const [stopConfirm, setStopConfirm] = useState(false);
+  const [quota, setQuota] = useState<Quota | null>(null);
   const [busy, setBusy] = useState(false);
   const confirmButtonRef = useRef<HTMLButtonElement>(null);
   const submitButtonRef = useRef<HTMLButtonElement>(null);
@@ -100,6 +107,14 @@ export default function DiagnosisView({ id }: { id: string }) {
       .auth.getSession()
       .then(({ data }) => {
         token.current = data.session?.access_token ?? null;
+      });
+    getQuota()
+      .then((data) => {
+        if (active) setQuota(data);
+      })
+      .catch((e) => {
+        if (active && !authRedirect(e, router.push))
+          setError("남은 횟수를 불러오지 못했어요. 새로고침해 주세요.");
       });
     getDiagnosis(id)
       .then((data) => {
@@ -208,6 +223,16 @@ export default function DiagnosisView({ id }: { id: string }) {
     if (!readonly && current) await save(current.id);
     setIndex(next);
   }
+  function openConfirm() {
+    setConfirm(true);
+    if (stage === 1)
+      void getQuota()
+        .then(setQuota)
+        .catch((e) => {
+          if (!authRedirect(e, router.push))
+            setError("남은 횟수를 불러오지 못했어요. 새로고침해 주세요.");
+        });
+  }
   async function submit() {
     if (!diagnosis) return;
     setBusy(true);
@@ -226,10 +251,25 @@ export default function DiagnosisView({ id }: { id: string }) {
       const updated = await getDiagnosis(id);
       applyDiagnosis(updated);
       if (result.status === "stage2") setStageNotice(true);
+      if (stage === 1)
+        void getQuota()
+          .then(setQuota)
+          .catch(() => {});
     } catch (e) {
       setConfirm(false);
       if (authRedirect(e, router.push)) return;
-      if (
+      if (isDailyLimit(e)) {
+        const info = e.detail as { limit?: number };
+        const limit = info.limit ?? quota?.limit ?? 3;
+        setQuota({
+          limit,
+          used: limit,
+          remaining: 0,
+          unlimited: false,
+          resets_at: null,
+        });
+        setError(quotaMessage(limit));
+      } else if (
         e instanceof ApiError &&
         e.status === 409 &&
         e.detail &&
@@ -247,6 +287,29 @@ export default function DiagnosisView({ id }: { id: string }) {
       } else if (e instanceof ApiError && e.status === 503)
         setError("채점을 하지 못했어요. 잠시 후 다시 제출해 주세요");
       else setError("제출하지 못했어요. 다시 시도해 주세요.");
+    } finally {
+      setBusy(false);
+    }
+  }
+  async function stop() {
+    setBusy(true);
+    setError("");
+    try {
+      const results = await Promise.all(
+        stageItems.map((item) => save(item.id)),
+      );
+      if (results.some((result) => !result)) {
+        setError("답안을 저장하지 못했어요. 다시 시도해 주세요.");
+        setStopConfirm(false);
+        return;
+      }
+      await stopStage2(id);
+      setStopConfirm(false);
+      applyDiagnosis(await getDiagnosis(id));
+    } catch (e) {
+      setStopConfirm(false);
+      if (!authRedirect(e, router.push))
+        setError("진단을 끝내지 못했어요. 다시 시도해 주세요.");
     } finally {
       setBusy(false);
     }
@@ -312,9 +375,11 @@ export default function DiagnosisView({ id }: { id: string }) {
           )}
           {diagnosis.status === "aborted" && finished && (
             <Notice>
-              {diagnosis.abort_reason === "expired"
-                ? "기간이 지나 중단된 진단이에요"
-                : "새로 시작해서 중단된 진단이에요"}
+              {diagnosis.abort_reason === "stopped"
+                ? "직접 끝냄 · 리포트를 확인해요"
+                : diagnosis.abort_reason === "expired"
+                  ? "기간이 지나 중단된 진단이에요"
+                  : "새로 시작해서 중단된 진단이에요"}
             </Notice>
           )}
           {finished && <ReportView diagnosis={diagnosis} />}
@@ -445,7 +510,7 @@ export default function DiagnosisView({ id }: { id: string }) {
                     size="lg"
                     ref={submitButtonRef}
                     isDisabled={!canSubmit || busy}
-                    onClick={() => setConfirm(true)}
+                    onClick={openConfirm}
                   />
                 ) : (
                   <Button
@@ -458,12 +523,61 @@ export default function DiagnosisView({ id }: { id: string }) {
                   />
                 )}
               </HStack>
+              {stage === 2 && (
+                <Button
+                  label="여기까지 하고 리포트 보기"
+                  variant="secondary"
+                  size="lg"
+                  isDisabled={busy}
+                  onClick={() => setStopConfirm(true)}
+                />
+              )}
               {navigationHint && (
                 <Text as="p" type="supporting" justify="end">
                   {navigationHint}
                 </Text>
               )}
             </VStack>
+          )}
+          {!readonly && stage === 2 && (
+            <Dialog
+              isOpen={stopConfirm}
+              onOpenChange={(open) => {
+                if (!open && !busy) setStopConfirm(false);
+              }}
+              purpose="info"
+              width={520}
+            >
+              <Layout
+                header={<DialogHeader title="여기까지 하고 끝내기" />}
+                content={
+                  <LayoutContent>
+                    <Text as="p">
+                      남은 심화 문제는 풀지 않은 것으로 처리돼요.
+                    </Text>
+                  </LayoutContent>
+                }
+                footer={
+                  <LayoutFooter>
+                    <HStack gap={2} hAlign="end">
+                      <Button
+                        label="취소"
+                        variant="secondary"
+                        isDisabled={busy}
+                        onClick={() => setStopConfirm(false)}
+                      />
+                      <Button
+                        label="리포트 보기"
+                        variant="primary"
+                        isDisabled={busy}
+                        isLoading={busy}
+                        onClick={() => void stop()}
+                      />
+                    </HStack>
+                  </LayoutFooter>
+                }
+              />
+            </Dialog>
           )}
           {!readonly && (
             <Dialog
@@ -480,6 +594,13 @@ export default function DiagnosisView({ id }: { id: string }) {
                     <Text as="p">
                       답안을 제출할까요? 제출하면 답을 고칠 수 없어요.
                     </Text>
+                    {stage === 1 && quota && !quota.unlimited && (
+                      <Text as="p">
+                        {quota.remaining === 0
+                          ? quotaMessage(quota.limit ?? 3)
+                          : `제출하면 오늘 남은 채점이 1번 줄어요 (남은 횟수 ${quota.remaining})`}
+                      </Text>
+                    )}
                   </LayoutContent>
                 }
                 footer={
@@ -491,7 +612,13 @@ export default function DiagnosisView({ id }: { id: string }) {
                         type="button"
                         ref={confirmButtonRef}
                         data-autofocus
-                        isDisabled={busy}
+                        isDisabled={
+                          busy ||
+                          (stage === 1 &&
+                            !!quota &&
+                            !quota.unlimited &&
+                            quota.remaining === 0)
+                        }
                         isLoading={busy}
                         onClick={() => void submit()}
                       />

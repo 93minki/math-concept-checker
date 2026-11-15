@@ -2,8 +2,10 @@ import base64
 import binascii
 import logging
 import random
+from datetime import datetime, time, timedelta
 from typing import Annotated
 from uuid import UUID
+from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import ValidationError
@@ -32,6 +34,7 @@ from app.diagnoses.service import (
     result_data,
 )
 from app.profiles import ProfilesRepository, get_profiles
+from app.settings import Settings, get_settings
 
 router = APIRouter()
 # Failures are logged with the diagnosis ID only; answer text never goes to logs.
@@ -59,6 +62,44 @@ def request_repository(
 User = Annotated[AuthUser, Depends(completed_user)]
 Repo = Annotated[DiagnosesRepository, Depends(request_repository)]
 AI = Annotated[DiagnosisAI, Depends(get_ai)]
+SettingsDep = Annotated[Settings, Depends(get_settings)]
+
+
+def quota_data(
+    repo: DiagnosesRepository, user_id: UUID, limit: int, now: datetime | None = None
+) -> dict[str, object]:
+    if repo.is_limit_exempt(user_id):
+        return {
+            "limit": None,
+            "used": None,
+            "remaining": None,
+            "unlimited": True,
+            "resets_at": None,
+        }
+    current = (now or datetime.now(ZoneInfo("Asia/Seoul"))).astimezone(
+        ZoneInfo("Asia/Seoul")
+    )
+    start = datetime.combine(current.date(), time.min, tzinfo=ZoneInfo("Asia/Seoul"))
+    used = repo.count_submissions(user_id, start)
+    return {
+        "limit": limit,
+        "used": used,
+        "remaining": max(0, limit - used),
+        "unlimited": False,
+        "resets_at": (start + timedelta(days=1)).isoformat(),
+    }
+
+
+def reject_quota(quota: dict[str, object]) -> None:
+    raise HTTPException(
+        status_code=429,
+        detail={
+            "code": "daily_limit",
+            "limit": quota["limit"],
+            "used": quota["used"],
+            "resets_at": quota["resets_at"],
+        },
+    )
 
 
 def selection(
@@ -178,6 +219,11 @@ def start_diagnosis(body: StartInput, user: User, repo: Repo) -> dict[str, UUID]
     return {"diagnosis_id": result.diagnosis_id}
 
 
+@router.get("/diagnoses/quota")
+def get_quota(user: User, repo: Repo, settings: SettingsDep) -> dict[str, object]:
+    return quota_data(repo, user.id, settings.daily_diagnosis_limit)
+
+
 @router.get("/diagnoses/{diagnosis_id}")
 def get_diagnosis(diagnosis_id: UUID, user: User, repo: Repo) -> dict[str, object]:
     diagnosis = find_diagnosis(repo, user.id, diagnosis_id)
@@ -287,12 +333,20 @@ def _submit(
     repo: DiagnosesRepository,
     ai: DiagnosisAI,
     stage: int,
+    settings: Settings,
 ) -> dict[str, object]:
     diagnosis = find_diagnosis(repo, user.id, diagnosis_id)
     if diagnosis.status != f"stage{stage}":
         raise HTTPException(status_code=409, detail={"code": "not_in_progress"})
     if stage == 1 and diagnosis.stage1_submitted_at is not None:
         raise HTTPException(status_code=409, detail={"code": "already_submitted"})
+    quota = (
+        quota_data(repo, user.id, settings.daily_diagnosis_limit)
+        if stage == 1
+        else None
+    )
+    if quota is not None and quota["remaining"] == 0:
+        reject_quota(quota)
     items = [i for i in repo.items(user.id, diagnosis_id) if i.stage == stage]
     answers = {
         a.diagnosis_item_id: a for a in repo.answers(user.id, [i.id for i in items])
@@ -307,8 +361,17 @@ def _submit(
         raise HTTPException(status_code=503, detail={"code": "grading_failed"}) from exc
     selected = pick_hard(repo, user.id, items, gradings) if stage == 1 else []
     code = repo.submit_stage(
-        user.id, diagnosis_id, stage, payload(gradings, answer_versions), selected
+        user.id,
+        diagnosis_id,
+        stage,
+        payload(gradings, answer_versions),
+        selected,
+        settings.daily_diagnosis_limit
+        if quota is not None and not quota["unlimited"]
+        else None,
     )
+    if code == "daily_limit":
+        reject_quota(quota_data(repo, user.id, settings.daily_diagnosis_limit))
     if code == "not_found":
         raise HTTPException(status_code=404, detail={"code": code})
     if code != "submitted":
@@ -323,16 +386,26 @@ def _submit(
 
 @router.post("/diagnoses/{diagnosis_id}/stages/1/submit")
 def submit_stage1(
-    diagnosis_id: UUID, user: User, repo: Repo, ai: AI
+    diagnosis_id: UUID, user: User, repo: Repo, ai: AI, settings: SettingsDep
 ) -> dict[str, object]:
-    return _submit(diagnosis_id, user, repo, ai, 1)
+    return _submit(diagnosis_id, user, repo, ai, 1, settings)
 
 
 @router.post("/diagnoses/{diagnosis_id}/stages/2/submit")
 def submit_stage2(
-    diagnosis_id: UUID, user: User, repo: Repo, ai: AI
+    diagnosis_id: UUID, user: User, repo: Repo, ai: AI, settings: SettingsDep
 ) -> dict[str, object]:
-    return _submit(diagnosis_id, user, repo, ai, 2)
+    return _submit(diagnosis_id, user, repo, ai, 2, settings)
+
+
+@router.post("/diagnoses/{diagnosis_id}/stages/2/stop")
+def stop_stage2(diagnosis_id: UUID, user: User, repo: Repo) -> dict[str, str]:
+    code = repo.stop_stage2(user.id, diagnosis_id)
+    if code == "not_found":
+        raise HTTPException(status_code=404, detail={"code": code})
+    if code != "ok":
+        raise HTTPException(status_code=409, detail={"code": code})
+    return {"status": "aborted"}
 
 
 @router.get("/diagnoses/{diagnosis_id}/report")

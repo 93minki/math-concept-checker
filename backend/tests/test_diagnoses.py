@@ -58,6 +58,30 @@ class FakeDiagnoses:
         self.grade_rows: dict[int, GradingRow] = {}
         self.report_rows: dict[UUID, ReportRow] = {}
         self.completed_times: dict[UUID, datetime] = {}
+        self.exempt = False
+        self.force_daily_limit = False
+        self.last_daily_limit: int | None = None
+
+    def is_limit_exempt(self, user_id: UUID) -> bool:
+        return self.exempt
+
+    def count_submissions(self, user_id: UUID, since: datetime) -> int:
+        return sum(
+            d.user_id == user_id
+            and d.stage1_submitted_at is not None
+            and d.stage1_submitted_at >= since
+            for d in self.rows.values()
+        )
+
+    def stop_stage2(self, user_id: UUID, diagnosis_id: UUID) -> str:
+        d = self.diagnosis(user_id, diagnosis_id)
+        if d is None:
+            return "not_found"
+        if d.status != "stage2":
+            return "not_in_stage2"
+        d.status = "aborted"
+        d.abort_reason = "stopped"
+        return "ok"
 
     def expire(self, user_id: UUID) -> None:
         self.events.append("expire")
@@ -288,7 +312,11 @@ class FakeDiagnoses:
         stage: int,
         gradings: list[dict[str, object]],
         question_ids: list[UUID],
+        daily_limit: int | None = None,
     ) -> str:
+        self.last_daily_limit = daily_limit
+        if stage == 1 and self.force_daily_limit:
+            return "daily_limit"
         self.events.append("submit")
         d = self.diagnosis(user_id, diagnosis_id)
         if d is None:
@@ -646,3 +674,26 @@ def test_units_concepts_are_ordered_and_empty(
     assert response.status_code == 200
     assert response.json()[0]["concepts"] == ["하나", "둘", "셋"]
     assert response.json()[1]["concepts"] == []
+
+
+def test_quota_query_scopes_user_and_korean_day() -> None:
+    from types import SimpleNamespace
+    from typing import cast
+    from unittest.mock import MagicMock
+
+    from supabase import Client
+
+    from app.diagnoses.repository import SupabaseDiagnoses
+
+    client = MagicMock()
+    query = client.table.return_value.select.return_value
+    query.eq.return_value.gte.return_value.limit.return_value.execute.return_value = (
+        SimpleNamespace(count=2)
+    )
+    start = datetime.fromisoformat("2026-11-15T00:00:00+09:00")
+    repo = SupabaseDiagnoses(cast(Client, client))
+    assert repo.count_submissions(USER_ID, start) == 2
+    query.eq.assert_called_once_with("user_id", str(USER_ID))
+    query.eq.return_value.gte.assert_called_once_with(
+        "stage1_submitted_at", start.isoformat()
+    )

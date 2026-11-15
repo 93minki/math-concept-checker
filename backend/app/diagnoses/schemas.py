@@ -84,7 +84,7 @@ class Diagnosis(BaseModel):
     user_id: UUID
     display_unit_id: int
     status: Literal["stage1", "stage2", "completed", "aborted"]
-    abort_reason: Literal["expired", "restarted"] | None
+    abort_reason: Literal["expired", "restarted", "stopped"] | None
     started_at: datetime
     stage1_submitted_at: datetime | None
     stage2_submitted_at: datetime | None = None
@@ -104,7 +104,7 @@ class HistoryUnit(BaseModel):
 class HistoryItem(BaseModel):
     id: UUID
     status: Literal["stage1", "stage2", "completed", "aborted"]
-    abort_reason: Literal["expired", "restarted"] | None
+    abort_reason: Literal["expired", "restarted", "stopped"] | None
     started_at: AwareDatetime
     stage1_submitted_at: datetime | None
     completed_at: datetime | None

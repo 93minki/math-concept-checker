@@ -6,7 +6,7 @@ import { HStack } from "@astryxdesign/core/HStack";
 import { ProgressBar } from "@astryxdesign/core/ProgressBar";
 import { VStack } from "@astryxdesign/core/VStack";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import type { Unit } from "@/lib/diagnosis-api";
+import type { Quota, Unit } from "@/lib/diagnosis-api";
 import {
   gradeProgress,
   progressLabels,
@@ -24,6 +24,7 @@ export type ViewProps = {
   start: (unit: Unit) => void;
   conflictNode: (unit: Unit) => ReactNode;
   embedded?: boolean;
+  quota?: Quota | null;
 };
 const badges: Partial<
   Record<Progress, "success" | "warning" | "error" | "info" | "neutral">
@@ -68,13 +69,26 @@ function StateIcon({ state }: { state: Progress }) {
     </svg>
   );
 }
-export function Summary({ units, grade }: { units: Unit[]; grade: string }) {
+export function Summary({
+  units,
+  grade,
+  quota,
+}: {
+  units: Unit[];
+  grade: string;
+  quota?: Quota | null;
+}) {
   const { total, conquered } = gradeProgress(units, grade);
   return (
     <VStack gap={2}>
       <p>
         {grade} · {total}단원 중 {conquered}개 정복
       </p>
+      {quota && !quota.unlimited && (
+        <p>
+          오늘 남은 개념 체크 {quota.remaining}/{quota.limit}
+        </p>
+      )}
       <div className="summary-progress">
         <ProgressBar
           label={`${grade} 정복 진행`}
@@ -253,7 +267,11 @@ export default function LearningMap(props: ViewProps) {
     <VStack gap={4}>
       <Card>
         <div className="path-summary">
-          <Summary units={props.allUnits} grade={props.grade} />
+          <Summary
+            units={props.allUnits}
+            grade={props.grade}
+            quota={props.quota}
+          />
         </div>
       </Card>
       <div

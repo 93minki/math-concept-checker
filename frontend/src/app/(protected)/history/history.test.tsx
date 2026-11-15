@@ -14,6 +14,7 @@ import History from "./history";
 const mocks = vi.hoisted(() => ({
   getHistory: vi.fn(),
   getDiagnosis: vi.fn(),
+  getQuota: vi.fn(),
   push: vi.fn(),
 }));
 vi.mock("next/navigation", () => {
@@ -40,7 +41,16 @@ const item: HistoryItem = {
   aborted_at: null,
   unit: { grade: "중1", name: "문자와 식", publisher: "출판사" },
 };
-beforeEach(() => vi.resetAllMocks());
+beforeEach(() => {
+  vi.resetAllMocks();
+  mocks.getQuota.mockResolvedValue({
+    limit: 3,
+    used: 0,
+    remaining: 3,
+    unlimited: false,
+    resets_at: null,
+  });
+});
 afterEach(cleanup);
 
 test("상태와 한국 시각을 표시하고 진단으로 연결한다", async () => {
@@ -195,4 +205,21 @@ test("진단 화면은 공통 머리말에서 지난 기록으로 이동한다",
   expect(
     screen.getByRole("link", { name: "← 단원 선택으로" }).getAttribute("href"),
   ).toBe("/");
+});
+
+test("직접 끝낸 진단의 중단 사유를 표시한다", async () => {
+  mocks.getHistory.mockResolvedValue({
+    items: [
+      {
+        ...item,
+        status: "aborted",
+        abort_reason: "stopped",
+        stage1_submitted_at: "2026-11-11T00:35:00Z",
+        aborted_at: "2026-11-11T00:40:00Z",
+      },
+    ],
+    next_before: null,
+  });
+  render(<History />);
+  expect(await screen.findByText("중단 (직접 끝냄)")).toBeTruthy();
 });
