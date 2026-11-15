@@ -286,15 +286,34 @@ class SupabaseDiagnoses:
     def start(
         self, user_id: UUID, unit_id: int, restart: bool, ids: list[UUID]
     ) -> StartResult:
-        response = self.client.rpc(
-            "diagnosis_start",
-            {
-                "p_user_id": str(user_id),
-                "p_display_unit_id": unit_id,
-                "p_restart": restart,
-                "p_question_ids": [str(i) for i in ids],
-            },
-        ).execute()
+        try:
+            response = self.client.rpc(
+                "diagnosis_start",
+                {
+                    "p_user_id": str(user_id),
+                    "p_display_unit_id": unit_id,
+                    "p_restart": restart,
+                    "p_question_ids": [str(i) for i in ids],
+                },
+            ).execute()
+        except APIError as exc:
+            if exc.code != "23505" or "diagnoses_one_in_progress" not in str(
+                exc.message
+            ):
+                raise
+            rows = TypeAdapter(list[dict[str, UUID]]).validate_python(
+                self.client.table("diagnoses")
+                .select("id")
+                .eq("user_id", str(user_id))
+                .eq("display_unit_id", unit_id)
+                .in_("status", ["stage1", "stage2"])
+                .limit(1)
+                .execute()
+                .data
+            )
+            return StartResult(
+                result="in_progress", diagnosis_id=rows[0]["id"] if rows else None
+            )
         return StartResult.model_validate(response.data)
 
     def diagnosis(self, user_id: UUID, diagnosis_id: UUID) -> Diagnosis | None:

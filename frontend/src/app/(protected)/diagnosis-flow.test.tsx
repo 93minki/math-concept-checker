@@ -131,6 +131,34 @@ test("학년 탭과 검색 및 진행 상태", async () => {
       .getAllByRole("tab")
       .every((tab) => tab.getAttribute("aria-selected") === "false"),
   ).toBe(true);
+  expect(results.querySelector('[role="tabpanel"]')).toBeNull();
+});
+test("학년 탭은 단원 영역을 가리키고 패널 경고를 내지 않는다", async () => {
+  const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+  mocks.getUnits.mockResolvedValue(threeGrades);
+  try {
+    render(<UnitSelection />);
+    await screen.findByRole("button", { name: "1. 문자와 식, 진행 중" });
+    for (const grade of ["중1", "중2", "중3"]) {
+      const tab = screen.getByRole("tab", { name: grade });
+      const panelId = tab.getAttribute("aria-controls");
+      expect(panelId).toBeTruthy();
+      const panel = document.getElementById(panelId ?? "");
+      expect(panel).toBeTruthy();
+      expect(panel?.getAttribute("role")).toBe("tabpanel");
+      expect(panel?.getAttribute("aria-labelledby")).toBe(tab.id);
+    }
+    expect(
+      warn.mock.calls.some((call) =>
+        call.some(
+          (part) =>
+            typeof part === "string" && part.includes("controls nothing"),
+        ),
+      ),
+    ).toBe(false);
+  } finally {
+    warn.mockRestore();
+  }
 });
 const diagnosis: Diagnosis = {
   id: "d",

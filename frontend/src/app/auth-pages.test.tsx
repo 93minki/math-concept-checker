@@ -113,7 +113,7 @@ test("회원가입은 확인 메일 콜백을 설정하고 안내한다", async 
   expect(
     screen.getByRole("region", { name: "개인정보 수집·이용 동의 내용" })
       .textContent,
-  ).toContain("연락처는 서비스 공개 전에 안내할 예정이에요.");
+  ).toContain("언제든 내 정보 → 회원 탈퇴에서 직접 삭제할 수 있어요.");
   fireEvent.click(consent);
   expect(submit.disabled).toBe(false);
   fireEvent.change(screen.getByLabelText("이메일"), {
