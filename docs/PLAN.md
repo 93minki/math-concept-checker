@@ -55,6 +55,7 @@
 - 배포 주소에서 로그인·진단·리포트 동작을 사용자가 확인.
 
 ## 진행 메모
+- 2026-11-15: 단계 5 서버 배포(사용자). 두 컨테이너 healthy, 터널 길 2개 추가. 사용자 확인: 이메일 로그인·진단·리포트·신고(학생·관리자) 동작. 카카오 로그인 뒤 `https://0.0.0.0:3000/...`로 가는 문제 → 콜백 상대 주소로 수정. 느림: 이 PC에서 잰 값 — `/cdn-cgi/trace`가 `colo=LAX`(한국 요청이 LA 데이터센터로 감), 연결 0.14초, `/health`(아무 일 없는 응답)도 첫 바이트 1.3초, 포트폴리오 `93minki.dev`도 1.5초. 같은 Cloudflare의 1.1.1.1 연결은 0.01초.
 - 2026-11-15: 단계 2~4 완료(Codex 작성, Opus 검수·실행). 이 PC에서 이미지 빌드(web 427MB, api 335MB), `compose.local.yaml`로 3200·8200 healthy, `/health`·`/login` 200, CORS 확인, `scripts/check-image-secrets.sh` 통과(일부러 심은 비밀값 이름·문자열은 잡음), 컨테이너 대상 `test:e2e:dev` 11 통과. 고친 것: `.dockerignore`의 `e2e` 제외로 빌드 타입 검사 실패 → 제외 해제. `compose.local.yaml`에 `AI_MODE=fake`.
 - 2026-11-15: 단계 1 설계(`DESIGN.md` "Docker 배포") 사용자 확인. 서버 맥북에 `mk-portfolio_default` 네트워크 있음, Supabase Redirect URLs에 배포 주소 추가 완료(사용자).
 - 2026-11-15: 초안 작성, 사용자 승인("이슈 생성하고 브랜치 만들고 설계시작해라"). 서버 맥북에 환경 변수 파일(`frontend/.env.local`, `backend/.env`) 사용자가 추가.

@@ -949,7 +949,7 @@
 - Supabase: Authentication → URL Configuration → Redirect URLs에 `https://math-concept.93minki.dev/**` 추가(카카오 로그인 뒤 돌아올 주소, 코드 `emailRedirectTo`·OAuth `redirectTo`가 `window.location.origin` 기준). Site URL은 개발용 그대로.
 - 카카오 개발자 콘솔: 바꿀 것 없음(예상). 카카오 로그인은 Supabase가 REST API 키로 처리하고, 카카오가 돌려보내는 곳은 우리 주소가 아니라 Supabase 콜백(REST API 키의 "로그인 리다이렉트 URI"에 이미 등록됨)이다. 우리 앱은 카카오 JavaScript SDK를 쓰지 않으므로 사이트 도메인 등록이 필요 없다(2026-11-15 콘솔 화면 확인: 새 콘솔은 플랫폼 정보를 키별로 등록). 5단계에서 배포 주소로 카카오 로그인을 해 실제로 확인한다.
 - Cloudflare: 터널 `mk-portfolio` → Routes → 길 2개(위 "구성").
-- 확인할 위험: `/auth/callback`은 `request.url` 기준으로 되돌려 보낸다(`frontend/src/app/auth/callback/route.ts`). 터널 → 컨테이너 구간은 `http`라서, 바깥 주소(`https://math-concept.93minki.dev`)로 제대로 돌아가는지 이 PC 확인(4단계)과 배포 주소(5단계)에서 직접 확인한다. 틀리면 그때 원인을 찾아 고친다(근거 없이 미리 고치지 않음).
+- 터널 뒤에서는 standalone 서버의 `request.url`이 바깥 주소가 아니라 바인드 주소(`0.0.0.0:3000`)다(2026-11-15 배포에서 확인). 그래서 Route Handler의 리디렉션은 상대 주소 `Location`으로 보낸다(`frontend/src/app/auth/callback/route.ts`). `proxy.ts`의 리디렉션은 Next.js가 상대 주소로 내보내 영향 없음(배포 주소에서 `Location: /login` 확인).
 - 이메일 가입 인증 메일은 Supabase 기본 메일 한도(시간당 2통, 팀원 주소만) 때문에 외부 주소로 가지 않는다 → 배포 주소에서는 카카오와 기존 계정으로 확인한다. SMTP는 M4(사용자 결정).
 
 ## 서술형 답안 입력
