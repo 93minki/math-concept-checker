@@ -68,6 +68,7 @@
 - 제한은 서버에서 막는다. 화면의 버튼 끔은 안내일 뿐이다(`AGENTS.md` 4.3).
 
 ## 진행 메모
+- 2026-11-15: 단계 2~4 구현(Codex, 지시서 `.agent-tasks/brief-daily-limit.md`), Opus 검수. 로컬 Postgres 17 시험(`experiments/scratch/daily-limit-local-test.sql`): 3번째까지 submitted·4번째 daily_limit(기록 안 됨), null 한도 무제한, 다른 사용자·전날 23:59(KST) 제출은 안 셈, 동시 제출 2개 중 하나는 잠금을 기다린 뒤 daily_limit(기록 3), stop: 2단계→aborted/stopped·완료 진단 not_in_stage2·남의 진단 not_found, 학생 역할은 제외 테이블 읽기·쓰기·두 함수 실행 거부. 검사: 백엔드 ruff·mypy·pytest 216, 프론트 포맷·린트·타입·Vitest 205·빌드, Playwright 56(`E2E_PORT=3100`). 남은 것: 원격 적용(사용자), 시험 계정 제외 등록, `test:e2e:dev`, 화면 확인.
 - 2026-11-15: 사용자 승인("너 제안대로 가자"): 2단계 직접 끝내기 버튼 추가, 다 쓴 날 시작은 막지 않고 안내.
 - 2026-11-15: 초안 작성. 사용자 "실제 AI 채점 실행 횟수로 처리하자" → 세는 기준을 진단 시작에서 1단계 제출로 바꿈.
 
