@@ -9,12 +9,16 @@ import { Banner } from "@astryxdesign/core/Banner";
 import BrandMark from "@/components/brand-mark";
 import ThemeButton from "@/components/theme-button";
 import { useState } from "react";
+import { FlagIcon } from "@/components/report-button";
 import { createClient } from "@/lib/supabase/client";
+import { useAdminRole } from "./admin-role";
 
 export default function HomeActions() {
   const router = useRouter();
   const pathname = usePathname();
   const [error, setError] = useState("");
+  const admin = useAdminRole() === "admin";
+  const home = admin ? "/admin/reports" : "/";
 
   async function signOut() {
     setError("");
@@ -31,22 +35,47 @@ export default function HomeActions() {
   return (
     <>
       <aside className="study-sidebar">
-        <Link href="/" className="sidebar-brand">
+        <Link href={home} className="sidebar-brand">
           <BrandMark />
           <strong>수학 개념 체커</strong>
         </Link>
         <nav aria-label="주 메뉴" className="sidebar-nav">
-          <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>
-            <HomeIcon />
-            학습하기
-          </Link>
-          <Link
-            href="/history"
-            aria-current={pathname.startsWith("/history") ? "page" : undefined}
-          >
-            <HistoryIcon />
-            지난 기록
-          </Link>
+          {admin ? (
+            <Link
+              href="/admin/reports"
+              aria-current={
+                pathname.startsWith("/admin/reports") ? "page" : undefined
+              }
+            >
+              <FlagIcon />
+              신고 관리
+            </Link>
+          ) : (
+            <>
+              <Link
+                href="/"
+                aria-current={pathname === "/" ? "page" : undefined}
+              >
+                <HomeIcon />
+                학습하기
+              </Link>
+              <Link
+                href="/history"
+                aria-current={
+                  pathname.startsWith("/history") ? "page" : undefined
+                }
+              >
+                <HistoryIcon />
+                지난 기록
+              </Link>
+              <Link
+                href="/reports"
+                aria-current={pathname === "/reports" ? "page" : undefined}
+              >
+                <FlagIcon />내 신고
+              </Link>
+            </>
+          )}
           <Link
             href="/account"
             aria-current={pathname === "/account" ? "page" : undefined}
@@ -71,21 +100,46 @@ export default function HomeActions() {
             <TopNavHeading
               logo={<BrandMark />}
               heading="수학 개념 체커"
-              headingHref="/"
+              headingHref={home}
             />
           }
           endContent={
             <HStack gap={2} vAlign="center">
               {/* One button per action: icon + text; phones hide the text
                   (the label stays the accessible name), one header line. */}
-              <Button
-                label="지난 기록"
-                variant="ghost"
-                href="/history"
-                icon={<HistoryIcon />}
-              >
-                <span className="site-nav-label">지난 기록</span>
-              </Button>
+              {admin ? (
+                <Button
+                  label="신고 관리"
+                  variant="ghost"
+                  href="/admin/reports"
+                  icon={<FlagIcon />}
+                  aria-current={
+                    pathname.startsWith("/admin/reports") ? "page" : undefined
+                  }
+                >
+                  <span className="site-nav-label">신고 관리</span>
+                </Button>
+              ) : (
+                <>
+                  <Button
+                    label="지난 기록"
+                    variant="ghost"
+                    href="/history"
+                    icon={<HistoryIcon />}
+                  >
+                    <span className="site-nav-label">지난 기록</span>
+                  </Button>
+                  <Button
+                    label="내 신고"
+                    variant="ghost"
+                    href="/reports"
+                    icon={<FlagIcon />}
+                    aria-current={pathname === "/reports" ? "page" : undefined}
+                  >
+                    <span className="site-nav-label">내 신고</span>
+                  </Button>
+                </>
+              )}
               <Button
                 label="내 정보"
                 variant="ghost"

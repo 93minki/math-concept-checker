@@ -181,3 +181,12 @@ test("시스템 다크와 라이트 쿠키에서 첫 HTML은 라이트다", asyn
     await context.close();
   }
 });
+
+for (const route of ["/reports", "/admin/reports"]) {
+  test(`로그아웃 사용자는 ${route}에서 로그인으로 이동한다`, async ({
+    page,
+  }) => {
+    await page.goto(route);
+    await expect(page).toHaveURL(/\/login$/);
+  });
+}

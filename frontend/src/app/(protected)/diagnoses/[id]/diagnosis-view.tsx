@@ -29,6 +29,7 @@ import StatusScreen from "@/components/status-screen";
 import ReportView from "./report-view";
 import SolveHeader from "./solve-header";
 import { ChoiceNumber } from "@/components/choice-number";
+import ReportButton from "@/components/report-button";
 
 type SaveState = "idle" | "saving" | "saved" | "error";
 const initialAnswer = (item: Item): AnswerInput =>
@@ -332,6 +333,7 @@ export default function DiagnosisView({ id }: { id: string }) {
                   stage,
                   index,
                   total: stageItems.length,
+                  action: <ReportButton key={item.id} itemId={item.id} />,
                   status: (
                     <HStack
                       as="span"

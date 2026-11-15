@@ -67,6 +67,12 @@ test("사이드바 이동 시 본문과 제목의 가로 위치가 유지된다"
     page,
     page.getByRole("heading", { name: "지난 기록", exact: true }),
   );
+  await sidebar.getByRole("link", { name: "내 신고" }).click();
+  await expect(page).toHaveURL(/\/reports$/);
+  const reports = await measure(
+    page,
+    page.getByRole("heading", { name: "내 신고", exact: true }),
+  );
   await sidebar.getByRole("link", { name: "내 정보" }).click();
   await expect(page).toHaveURL(/\/account$/);
   await expect(
@@ -88,7 +94,7 @@ test("사이드바 이동 시 본문과 제목의 가로 위치가 유지된다"
   );
   expect(frames.length).toBeGreaterThan(0);
   expect(new Set(frames).size, frames.join(" | ")).toBe(1);
-  for (const current of [history, account, returned]) {
+  for (const current of [history, reports, account, returned]) {
     for (const key of Object.keys(initial) as (keyof Geometry)[])
       expect(Math.abs(current[key] - initial[key]), key).toBeLessThanOrEqual(1);
   }
