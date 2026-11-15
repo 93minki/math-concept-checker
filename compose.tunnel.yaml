@@ -1,0 +1,11 @@
+services:
+  math-concept-api:
+    networks:
+      - tunnel
+  math-concept-web:
+    networks:
+      - tunnel
+networks:
+  tunnel:
+    external: true
+    name: ${TUNNEL_NETWORK:-mk-portfolio_default}

@@ -36,6 +36,13 @@
 
 ## 기록
 
+### 2026-11-15 — frontend/Dockerfile:RUN pnpm build (이미지 빌드)
+- 작업: Docker 배포 단계 3
+- 증상: 이미지 안 `next build` 타입 검사에서 `Cannot find module './e2e/secret-canary'`, `'../../../e2e/shape-fixtures'`.
+- 원인 분류: 설정 오류
+- 원인: `frontend/.dockerignore`가 `e2e`·`e2e-dev`를 빼서 빌드 문맥에 없었는데, `next build`는 `tsconfig` 전체(`playwright.config.ts`, `src/lib/figures/figures.test.ts`)를 타입 검사하고 이 파일들이 `e2e/`를 불러온다.
+- 해결: `.dockerignore`에서 `e2e`·`e2e-dev`를 뺐다(빌드 단계에만 있고 실행 이미지에는 복사되지 않음).
+
 ### 2026-11-15 — frontend/e2e/manual-choice-keyboard.spec.tsx:직접 수정 정답 선택
 - 작업: 직접 수정 모달, F-13
 - 증상: 데스크톱·모바일 Chromium 시작 시 `bootstrap_check_in ... Permission denied (1100)`으로 종료됐다.

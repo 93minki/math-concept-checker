@@ -924,10 +924,10 @@
 | `backend/.dockerignore` | `.env*`, `.venv`(uv 가이드 권장), `tests/`, 캐시(`__pycache__`, `.mypy_cache`, `.ruff_cache`, `.pytest_cache`), `data/bank`, `data/eval` |
 | `frontend/Dockerfile` | 3단계 `node:24-slim`. 의존성(`pnpm install --frozen-lockfile`, pnpm은 `package.json`의 `packageManager`와 같은 12.18.0을 `npm i -g`로 — 이 PC에서 corepack이 멈춘 일이 있어 쓰지 않음) → 빌드(`next build`, `NEXT_PUBLIC_*` 3개를 빌드 인자로) → 실행(`.next/standalone` + `public` + `.next/static` 복사, `node server.js`, `HOSTNAME=0.0.0.0`, `PORT=3000`). 근거: Next.js `output` 문서(`frontend/node_modules/next/dist/docs/01-app/03-api-reference/05-config/01-next-config-js/output.md` "Automatically Copying Traced Files": standalone은 `public`·`.next/static`을 직접 복사해야 하고, `PORT`·`HOSTNAME`으로 듣는 주소를 정한다) |
 | `frontend/next.config.ts` | `output: "standalone"` 추가. `next dev`·`next start`·테스트에는 영향 없음(5.2로 확인) |
-| `frontend/.dockerignore` | `.env*`, `node_modules`, `.next`, `e2e`, `e2e-dev`, `playwright-report`, `test-results`, `*.tsbuildinfo` |
+| `frontend/.dockerignore` | `.env*`, `node_modules`, `.next`, `playwright-report`, `test-results`, `*.tsbuildinfo`. `e2e`는 빼지 않는다: `next build`가 `tsconfig` 전체를 타입 검사하는데 `playwright.config.ts`·`figures.test.ts`가 `e2e/` 파일을 불러온다(2026-11-15 이미지 빌드 실패, `TEST_LOG.md`). 실행 단계에는 standalone 결과물만 복사하므로 이미지에 남지 않는다 |
 | `compose.yaml` (저장소 맨 위) | 프로젝트 이름 `math-concept`, 서비스 `math-concept-web`·`math-concept-api`. 백엔드 실행 환경 변수는 `env_file: backend/.env`(파일은 서버에 사용자가 만든 것, 이미지에 들어가지 않음). 프론트 빌드 인자는 `${NEXT_PUBLIC_...}` 치환으로, 값은 실행할 때 `--env-file frontend/.env.local`로 읽는다. 상태 확인: 백엔드 `/health`, 프론트 `/login`(실행 단계에 curl이 없으므로 `python`·`node`로 요청). `restart: unless-stopped`. 컨테이너는 root가 아닌 사용자로 실행 |
 | `compose.tunnel.yaml` | 서버용 덧붙임: 두 서비스를 외부 네트워크 `${TUNNEL_NETWORK:-mk-portfolio_default}`에 붙인다 |
-| `compose.local.yaml` | 이 PC 확인용 덧붙임: `127.0.0.1:3200`·`127.0.0.1:8200`으로만 연다(사용자 개발 서버 3000·8000, `test:e2e:dev` 3100·8100과 겹치지 않음), `FRONTEND_ORIGIN=http://localhost:3200` |
+| `compose.local.yaml` | 이 PC 확인용 덧붙임: `127.0.0.1:3200`·`127.0.0.1:8200`으로만 연다(사용자 개발 서버 3000·8000, `test:e2e:dev` 3100·8100과 겹치지 않음), `FRONTEND_ORIGIN=http://localhost:3200`, `AI_MODE=fake`(이 PC에서 컨테이너 대상으로 `test:e2e:dev`를 돌리므로 실제 AI를 부르지 않게, `AGENTS.md` 5.4). 가짜 AI 중 관리자 AI 수정안은 `data/eval/` 고정 응답을 읽는데 이미지에 넣지 않으므로 컨테이너에서는 동작하지 않는다(진단 채점·리포트의 가짜 AI는 동작) |
 
 ### 환경 변수
 | 값 | 어디서 | 언제 |
