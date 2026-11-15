@@ -5,7 +5,7 @@
 - 상태: 완료
 - 이슈: #45 (https://github.com/93minki/math-concept-checker/issues/45)
 - 브랜치: plan/2026-11-14_question-reports
-- PR: (계획을 끝낼 때 링크)
+- PR: #46 (https://github.com/93minki/math-concept-checker/pull/46)
 - 마일스톤: M4 학생 공개 준비 — 근거: 실제 학생이 쓰기 전에 문제 오류를 받고 고칠 통로가 필요하다
 
 ## 목표
