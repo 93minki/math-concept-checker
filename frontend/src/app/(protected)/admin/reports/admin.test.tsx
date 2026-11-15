@@ -5,6 +5,7 @@ import {
   render,
   screen,
   waitFor,
+  within,
 } from "@testing-library/react";
 import AdminReportsPage from "./page";
 import AdminQuestionView from "./[questionId]/view";
@@ -14,6 +15,7 @@ const mock = vi.hoisted(() => ({
   detail: vi.fn(),
   ai: vi.fn(),
   noIssue: vi.fn(),
+  manual: vi.fn(),
   router: { push: vi.fn(), replace: vi.fn() },
 }));
 vi.mock("next/navigation", () => ({ useRouter: () => mock.router }));
@@ -23,6 +25,7 @@ vi.mock("@/lib/reports-api", async (importOriginal) => ({
   getAdminQuestion: mock.detail,
   createAIRevision: mock.ai,
   resolveNoIssue: mock.noIssue,
+  createManualRevision: mock.manual,
 }));
 vi.mock("@/lib/supabase/client", () => ({ createClient: vi.fn() }));
 beforeEach(() => {
@@ -487,4 +490,191 @@ test("닫힌 신고만 있으면 승인과 닫기 버튼이 없고 빈 객관식
     screen.queryByRole("button", { name: "문제 없음으로 닫기" }),
   ).toBeNull();
   expect(screen.queryByText("이 판단으로 닫았어요")).toBeNull();
+});
+
+const manualQuestion = {
+  id: "q",
+  assessment_item_id: "a",
+  difficulty: "normal",
+  variant: 1,
+  question_type: "multiple_choice",
+  body: "원래 문제",
+  explanation: "원래 해설",
+  figure: null,
+  model_answer: null,
+  hard_condition: null,
+  hard_condition_reason: null,
+};
+const manualChoices = [
+  {
+    no: 1,
+    text: "첫 보기",
+    is_correct: true,
+    misconception_id: null,
+    figure: null,
+  },
+  {
+    no: 2,
+    text: "둘째 보기",
+    is_correct: false,
+    misconception_id: "9수02-03-M1",
+    figure: null,
+  },
+];
+function setupManual() {
+  mock.detail.mockReset().mockResolvedValue({
+    question: manualQuestion,
+    choices: manualChoices,
+    rubric: [],
+    rubric_links: [],
+    reports: [openReport],
+    unit: null,
+    assessment_item: { id: "a", name: "항목" },
+    revisions: [],
+  });
+}
+
+test("직접 수정은 모달에서 초안을 유지하고 저장 후 닫는다", async () => {
+  setupManual();
+  mock.manual.mockResolvedValue({});
+  render(<AdminQuestionView id="q" />);
+  fireEvent.click(await screen.findByRole("button", { name: "직접 수정" }));
+  let dialog = screen.getByRole("dialog", { name: "직접 수정" });
+  expect(within(dialog).getByText(/저장하면 자동 검사를 거쳐/)).toBeTruthy();
+  expect(within(dialog).queryByLabelText("모범 답안")).toBeNull();
+  fireEvent.change(within(dialog).getByLabelText("문제 본문"), {
+    target: { value: "고친 문제" },
+  });
+  fireEvent.change(within(dialog).getByLabelText("보기 2 내용"), {
+    target: { value: "고친 보기" },
+  });
+  fireEvent.click(within(dialog).getByRole("button", { name: "취소" }));
+  expect(screen.queryByRole("dialog", { name: "직접 수정" })).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "직접 수정" }));
+  dialog = screen.getByRole("dialog", { name: "직접 수정" });
+  expect(
+    (within(dialog).getByLabelText("문제 본문") as HTMLTextAreaElement).value,
+  ).toBe("고친 문제");
+  fireEvent.click(within(dialog).getByRole("radio", { name: "보기 2 정답" }));
+  fireEvent.click(within(dialog).getByRole("button", { name: "수정안 저장" }));
+  await waitFor(() =>
+    expect(mock.manual).toHaveBeenCalledWith("q", {
+      ...manualQuestion,
+      body: "고친 문제",
+      choices: [
+        { ...manualChoices[0], is_correct: false },
+        { ...manualChoices[1], text: "고친 보기", is_correct: true },
+      ],
+      rubric: [],
+    }),
+  );
+  await waitFor(() =>
+    expect(screen.queryByRole("dialog", { name: "직접 수정" })).toBeNull(),
+  );
+  expect(
+    screen.getByText("수정안을 저장했어요.").closest('[role="status"]'),
+  ).not.toBeNull();
+});
+
+test("직접 수정 저장에 실패하면 모달 안에 오류를 표시한다", async () => {
+  setupManual();
+  mock.manual.mockRejectedValue(new Error("오류"));
+  render(<AdminQuestionView id="q" />);
+  fireEvent.click(await screen.findByRole("button", { name: "직접 수정" }));
+  const dialog = screen.getByRole("dialog", { name: "직접 수정" });
+  fireEvent.click(within(dialog).getByRole("button", { name: "수정안 저장" }));
+  expect((await within(dialog).findByRole("alert")).textContent).toContain(
+    "수정안을 저장하지 못했어요",
+  );
+  expect(screen.getByRole("dialog", { name: "직접 수정" })).toBeTruthy();
+});
+
+test("직접 수정 라디오는 같은 키보드 선택 그룹을 유지한다", async () => {
+  setupManual();
+  render(<AdminQuestionView id="q" />);
+  fireEvent.click(await screen.findByRole("button", { name: "직접 수정" }));
+  const dialog = screen.getByRole("dialog", { name: "직접 수정" });
+  const first = within(dialog).getByRole("radio", {
+    name: "보기 1 정답",
+  }) as HTMLInputElement;
+  const second = within(dialog).getByRole("radio", {
+    name: "보기 2 정답",
+  }) as HTMLInputElement;
+  first.focus();
+  expect(document.activeElement).toBe(first);
+  expect(first.name).toBe(second.name);
+  expect(fireEvent.keyDown(first, { key: "ArrowRight" })).toBe(true);
+  fireEvent.click(second);
+  expect(second.checked).toBe(true);
+  expect(first.checked).toBe(false);
+});
+
+test("서술형일 때만 모범 답안과 채점 요소 입력을 표시한다", async () => {
+  mock.detail.mockReset().mockResolvedValue({
+    question: {
+      ...manualQuestion,
+      question_type: "written",
+      model_answer: "답",
+    },
+    choices: [],
+    rubric: [{ id: 1, no: 1, description: "기준", points: 2, required: true }],
+    rubric_links: [],
+    reports: [openReport],
+    unit: null,
+    assessment_item: { id: "a", name: "항목" },
+    revisions: [],
+  });
+  render(<AdminQuestionView id="q" />);
+  fireEvent.click(await screen.findByRole("button", { name: "직접 수정" }));
+  const dialog = screen.getByRole("dialog", { name: "직접 수정" });
+  expect(within(dialog).getByLabelText("모범 답안")).toBeTruthy();
+  expect(within(dialog).getByLabelText("채점 요소 1 내용")).toBeTruthy();
+  expect(within(dialog).getByLabelText("채점 요소 1 점수")).toBeTruthy();
+  expect(within(dialog).getByLabelText("채점 요소 1 필수")).toBeTruthy();
+});
+
+test("저장 중에는 대화 상자를 닫지 못하고 완료 뒤 닫힌다", async () => {
+  setupManual();
+  let finish: () => void = () => {};
+  mock.manual.mockImplementation(
+    () =>
+      new Promise<void>((resolve) => {
+        finish = resolve;
+      }),
+  );
+  render(<AdminQuestionView id="q" />);
+  fireEvent.click(await screen.findByRole("button", { name: "직접 수정" }));
+  const dialog = screen.getByRole("dialog", { name: "직접 수정" });
+  fireEvent.click(within(dialog).getByRole("button", { name: "수정안 저장" }));
+  expect(
+    within(dialog)
+      .getByRole("button", { name: "취소" })
+      .getAttribute("aria-disabled"),
+  ).toBe("true");
+  fireEvent(dialog, new Event("cancel", { bubbles: false, cancelable: true }));
+  expect(screen.getByRole("dialog", { name: "직접 수정" })).toBeTruthy();
+  finish();
+  await waitFor(() =>
+    expect(screen.queryByRole("dialog", { name: "직접 수정" })).toBeNull(),
+  );
+});
+
+test("Escape로 닫은 직접 수정 대화 상자를 다시 열면 초안이 남는다", async () => {
+  setupManual();
+  render(<AdminQuestionView id="q" />);
+  fireEvent.click(await screen.findByRole("button", { name: "직접 수정" }));
+  const dialog = screen.getByRole("dialog", { name: "직접 수정" });
+  fireEvent.change(within(dialog).getByLabelText("문제 본문"), {
+    target: { value: "유지할 초안" },
+  });
+  fireEvent(dialog, new Event("cancel", { bubbles: false, cancelable: true }));
+  expect(screen.queryByRole("dialog", { name: "직접 수정" })).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "직접 수정" }));
+  expect(
+    (
+      within(screen.getByRole("dialog", { name: "직접 수정" })).getByLabelText(
+        "문제 본문",
+      ) as HTMLTextAreaElement
+    ).value,
+  ).toBe("유지할 초안");
 });

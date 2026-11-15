@@ -36,6 +36,27 @@
 
 ## 기록
 
+### 2026-11-15 — frontend/e2e/manual-choice-keyboard.spec.tsx:직접 수정 정답 선택
+- 작업: 직접 수정 모달, F-13
+- 증상: 데스크톱·모바일 Chromium 시작 시 `bootstrap_check_in ... Permission denied (1100)`으로 종료됐다.
+- 원인 분류: 환경·설정
+- 원인: 실행 환경이 Chromium Mach 포트 등록을 거부하여 키보드 테스트가 시작되지 않았다.
+- 해결: Opus가 로컬에서 `E2E_PORT=3100 pnpm test:e2e`로 다시 실행해 통과(54개). 위임 실행 환경의 제약이다.
+
+### 2026-11-15 — frontend/src/app/(protected)/admin/reports/admin.test.tsx:모달 저장 후 알림
+- 작업: 직접 수정 모달, F-13
+- 증상: 저장 성공 검사에서 `status` 역할 요소가 둘 이상 검색됐다.
+- 원인 분류: 테스트 오류
+- 원인: Astryx 대화 상자의 보조 라이브 영역과 성공 배너가 동시에 `status` 역할을 가져 역할만으로는 성공 배너가 특정되지 않았다.
+- 해결: 성공 문구가 포함된 요소의 상위 `status`를 확인해 같은 알림 조건을 검사한다.
+
+### 2026-11-15 — frontend/src/app/(protected)/admin/reports/admin.test.tsx:직접 수정 모달
+- 작업: 직접 수정 모달, F-13
+- 증상: 기존 해설 조회와 저장 성공 알림 검사에서 동일한 텍스트·status 요소가 여러 개 검색됐다.
+- 원인 분류: 설계 불일치
+- 원인: 닫힌 직접 수정 대화 상자의 입력과 보조 상태 영역을 계속 DOM에 렌더링해 기존 화면 및 알림과 중복됐다.
+- 해결: 대화 상자는 열려 있을 때만 렌더링하고 초안은 부모 상태에 유지한다.
+
 ### 2026-11-15 — frontend/e2e:관리자 신고 처리 완료 화면 서버 시작
 - 작업: 관리자 처리 완료 상태, F-13
 - 증상: `E2E_PORT=3100 pnpm test:e2e` 서버 시작 중 `listen EPERM: operation not permitted 0.0.0.0:3100` 발생.

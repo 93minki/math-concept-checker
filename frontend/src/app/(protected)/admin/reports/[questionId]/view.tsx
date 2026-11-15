@@ -108,6 +108,7 @@ export default function AdminQuestionView({ id }: { id: string }) {
   const [data, setData] = useState<AdminDetails | null>(null);
   const [draft, setDraft] = useState<AdminQuestion | null>(null);
   const [editing, setEditing] = useState(false);
+  const [manualError, setManualError] = useState("");
   const [note, setNote] = useState("");
   const [confirm, setConfirm] = useState<"ai" | string | null>(null);
   const [error, setError] = useState("");
@@ -181,8 +182,10 @@ export default function AdminQuestionView({ id }: { id: string }) {
     setBusyAction(actionName);
     setError("");
     setMessage("");
+    if (actionName === "manual") setManualError("");
     try {
       await action();
+      if (actionName === "manual") setEditing(false);
       setClosedByRevisionId(
         actionName === "no_change" ? (revisionId ?? null) : null,
       );
@@ -192,7 +195,12 @@ export default function AdminQuestionView({ id }: { id: string }) {
       await load();
     } catch (e) {
       setConfirm(null);
-      fail(e);
+      if (
+        actionName === "manual" &&
+        !(e instanceof ApiError && (e.status === 401 || e.status === 403))
+      )
+        setManualError("수정안을 저장하지 못했어요. 다시 시도해 주세요.");
+      else fail(e);
     } finally {
       setBusyAction(null);
     }
@@ -269,7 +277,10 @@ export default function AdminQuestionView({ id }: { id: string }) {
                   />
                   <Button
                     label="직접 수정"
-                    onClick={() => setEditing(!editing)}
+                    onClick={() => {
+                      setManualError("");
+                      setEditing(true);
+                    }}
                     isDisabled={busy}
                   />
                   <Button
@@ -303,143 +314,6 @@ export default function AdminQuestionView({ id }: { id: string }) {
                     }
                     isDisabled={busy}
                   />
-                  {editing && (
-                    <section className="admin-editor">
-                      <h2>직접 수정</h2>
-                      <label>
-                        문제 본문
-                        <textarea
-                          value={draft.body}
-                          onChange={(e) =>
-                            setDraft({ ...draft, body: e.target.value })
-                          }
-                        />
-                      </label>
-                      {draft.choices.map((choice, index) => (
-                        <fieldset key={choice.no}>
-                          <legend>보기 {choice.no}</legend>
-                          <label>
-                            내용
-                            <textarea
-                              value={choice.text}
-                              onChange={(e) =>
-                                setDraft({
-                                  ...draft,
-                                  choices: draft.choices.map((c, i) =>
-                                    i === index
-                                      ? { ...c, text: e.target.value }
-                                      : c,
-                                  ),
-                                })
-                              }
-                            />
-                          </label>
-                          <label>
-                            <input
-                              type="radio"
-                              name="correct-choice"
-                              checked={choice.is_correct}
-                              onChange={() =>
-                                setDraft({
-                                  ...draft,
-                                  choices: draft.choices.map((c, i) => ({
-                                    ...c,
-                                    is_correct: i === index,
-                                  })),
-                                })
-                              }
-                            />
-                            정답
-                          </label>
-                        </fieldset>
-                      ))}
-                      <label>
-                        모범 답안
-                        <textarea
-                          value={draft.model_answer ?? ""}
-                          onChange={(e) =>
-                            setDraft({ ...draft, model_answer: e.target.value })
-                          }
-                        />
-                      </label>
-                      <label>
-                        해설
-                        <textarea
-                          value={draft.explanation}
-                          onChange={(e) =>
-                            setDraft({ ...draft, explanation: e.target.value })
-                          }
-                        />
-                      </label>
-                      {draft.rubric.map((r, index) => (
-                        <fieldset key={r.no}>
-                          <legend>채점 요소 {r.no}</legend>
-                          <label>
-                            내용
-                            <textarea
-                              value={r.description}
-                              onChange={(e) =>
-                                setDraft({
-                                  ...draft,
-                                  rubric: draft.rubric.map((x, i) =>
-                                    i === index
-                                      ? { ...x, description: e.target.value }
-                                      : x,
-                                  ),
-                                })
-                              }
-                            />
-                          </label>
-                          <label>
-                            점수
-                            <input
-                              type="number"
-                              value={r.points}
-                              onChange={(e) =>
-                                setDraft({
-                                  ...draft,
-                                  rubric: draft.rubric.map((x, i) =>
-                                    i === index
-                                      ? { ...x, points: Number(e.target.value) }
-                                      : x,
-                                  ),
-                                })
-                              }
-                            />
-                          </label>
-                          <label>
-                            <input
-                              type="checkbox"
-                              checked={r.required}
-                              onChange={(e) =>
-                                setDraft({
-                                  ...draft,
-                                  rubric: draft.rubric.map((x, i) =>
-                                    i === index
-                                      ? { ...x, required: e.target.checked }
-                                      : x,
-                                  ),
-                                })
-                              }
-                            />
-                            필수
-                          </label>
-                        </fieldset>
-                      ))}
-                      <Button
-                        label="수정안 저장"
-                        isLoading={busyAction === "manual"}
-                        onClick={() =>
-                          void run(
-                            () => createManualRevision(id, draft),
-                            "수정안을 저장했어요.",
-                            "manual",
-                          )
-                        }
-                        isDisabled={busy}
-                      />
-                    </section>
-                  )}
                 </>
               ) : (
                 <section className="reports-closed-summary">
@@ -628,6 +502,157 @@ export default function AdminQuestionView({ id }: { id: string }) {
             </section>
           </div>
         </>
+      )}
+      {editing && (
+        <Dialog
+          isOpen={editing}
+          onOpenChange={(open) => {
+            if (!busy) setEditing(open);
+          }}
+          purpose="form"
+          width={760}
+          maxHeight="90dvh"
+        >
+          <Layout
+            header={<DialogHeader title="직접 수정" />}
+            content={
+              <LayoutContent>
+                {draft && (
+                  <div className="admin-editor">
+                    <p className="reports-muted">
+                      저장하면 자동 검사를 거쳐 수정안 목록에 추가돼요. 원래
+                      문제는 승인 전까지 바뀌지 않아요.
+                    </p>
+                    {manualError && (
+                      <Banner status="error" title={manualError} role="alert" />
+                    )}
+                    <label className="admin-editor-field">
+                      문제 본문
+                      <textarea
+                        value={draft.body}
+                        onChange={(e) =>
+                          setDraft({ ...draft, body: e.target.value })
+                        }
+                      />
+                    </label>
+                    <ManualChoices draft={draft} onChange={setDraft} />
+                    {draft.question_type === "written" && (
+                      <label className="admin-editor-field">
+                        모범 답안
+                        <textarea
+                          value={draft.model_answer ?? ""}
+                          onChange={(e) =>
+                            setDraft({ ...draft, model_answer: e.target.value })
+                          }
+                        />
+                      </label>
+                    )}
+                    <label className="admin-editor-field">
+                      해설
+                      <textarea
+                        value={draft.explanation}
+                        onChange={(e) =>
+                          setDraft({ ...draft, explanation: e.target.value })
+                        }
+                      />
+                    </label>
+                    {draft.rubric.length > 0 && (
+                      <fieldset className="admin-editor-group">
+                        <legend>채점 기준</legend>
+                        <div className="admin-editor-rows">
+                          {draft.rubric.map((r, index) => (
+                            <div className="admin-editor-rubric" key={r.no}>
+                              <textarea
+                                aria-label={`채점 요소 ${r.no} 내용`}
+                                rows={2}
+                                value={r.description}
+                                onChange={(e) =>
+                                  setDraft({
+                                    ...draft,
+                                    rubric: draft.rubric.map((x, i) =>
+                                      i === index
+                                        ? { ...x, description: e.target.value }
+                                        : x,
+                                    ),
+                                  })
+                                }
+                              />
+                              <label className="admin-editor-points">
+                                점수
+                                <input
+                                  aria-label={`채점 요소 ${r.no} 점수`}
+                                  type="number"
+                                  value={r.points}
+                                  onChange={(e) =>
+                                    setDraft({
+                                      ...draft,
+                                      rubric: draft.rubric.map((x, i) =>
+                                        i === index
+                                          ? {
+                                              ...x,
+                                              points: Number(e.target.value),
+                                            }
+                                          : x,
+                                      ),
+                                    })
+                                  }
+                                />
+                              </label>
+                              <label className="admin-editor-toggle">
+                                <input
+                                  type="checkbox"
+                                  aria-label={`채점 요소 ${r.no} 필수`}
+                                  checked={r.required}
+                                  onChange={(e) =>
+                                    setDraft({
+                                      ...draft,
+                                      rubric: draft.rubric.map((x, i) =>
+                                        i === index
+                                          ? { ...x, required: e.target.checked }
+                                          : x,
+                                      ),
+                                    })
+                                  }
+                                />
+                                필수
+                              </label>
+                            </div>
+                          ))}
+                        </div>
+                      </fieldset>
+                    )}
+                  </div>
+                )}
+              </LayoutContent>
+            }
+            footer={
+              <LayoutFooter>
+                <HStack gap={2} hAlign="end">
+                  <Button
+                    label="취소"
+                    variant="secondary"
+                    onClick={() => setEditing(false)}
+                    isDisabled={busy}
+                  />
+                  <Button
+                    label="수정안 저장"
+                    variant="primary"
+                    isLoading={busyAction === "manual"}
+                    isDisabled={busy || !draft}
+                    onClick={() => {
+                      if (draft)
+                        void run(
+                          () => createManualRevision(id, draft),
+                          "수정안을 저장했어요.",
+                          "manual",
+                        );
+                    }}
+                  />
+                </HStack>
+              </LayoutFooter>
+            }
+          />
+        </Dialog>
       )}
       <Dialog
         isOpen={confirm !== null}
@@ -843,4 +868,59 @@ function ReportEntries({
       )}
     </div>
   );
+}
+
+export function ManualChoices({
+  draft,
+  onChange,
+}: {
+  draft: AdminQuestion;
+  onChange: (draft: AdminQuestion) => void;
+}) {
+  return draft.choices.length > 0 ? (
+    <fieldset className="admin-editor-group">
+      <legend>보기</legend>
+      <div className="admin-editor-rows">
+        {draft.choices.map((choice, index) => (
+          <div
+            className={`admin-editor-choice${choice.is_correct ? " is-correct" : ""}`}
+            key={choice.no}
+          >
+            <ChoiceNumber number={choice.no} />
+            <textarea
+              aria-label={`보기 ${choice.no} 내용`}
+              rows={2}
+              value={choice.text}
+              onChange={(e) =>
+                onChange({
+                  ...draft,
+                  choices: draft.choices.map((c, i) =>
+                    i === index ? { ...c, text: e.target.value } : c,
+                  ),
+                })
+              }
+            />
+            <label className="admin-editor-toggle">
+              <input
+                type="radio"
+                name="correct-choice"
+                aria-label={`보기 ${choice.no} 정답`}
+                checked={choice.is_correct}
+                onChange={() =>
+                  onChange({
+                    ...draft,
+                    choices: draft.choices.map((c, i) => ({
+                      ...c,
+                      is_correct: i === index,
+                    })),
+                  })
+                }
+              />
+              정답
+            </label>
+          </div>
+        ))}
+      </div>
+    </fieldset>
+  ) : null;
 }

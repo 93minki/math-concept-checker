@@ -966,24 +966,57 @@ h4:not(.astryx-heading) {
 }
 .admin-editor {
   display: grid;
-  gap: var(--spacing-3);
-  padding-top: var(--spacing-3);
-  border-top: 1px solid var(--color-border);
+  gap: var(--spacing-6);
+  min-width: 0;
 }
-.admin-editor label,
 .reports-detail-panel label {
   display: grid;
   gap: var(--spacing-2);
 }
-.admin-editor fieldset {
+.admin-editor-field {
   display: grid;
   gap: var(--spacing-2);
-  padding: var(--spacing-3);
-  border: 1px solid var(--color-border);
+  font-weight: 600;
+  min-width: 0;
+}
+.admin-editor-group {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.admin-editor-group legend {
+  font-weight: 600;
+  padding: 0 0 var(--spacing-3);
+}
+.admin-editor-rows {
+  display: grid;
+  gap: var(--spacing-2);
+  min-width: 0;
+}
+.admin-editor-choice,
+.admin-editor-rubric {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--spacing-3);
+  min-width: 0;
+  padding: var(--spacing-2);
   border-radius: var(--radius-element);
 }
+.admin-editor-choice.is-correct {
+  background: var(--color-accent-muted);
+}
+.admin-editor-choice .choice-number {
+  color: var(--color-text-primary);
+  background: var(--color-background-surface);
+  border-color: var(--color-border-emphasized);
+}
+.admin-editor-rubric {
+  grid-template-columns: minmax(0, 1fr) 5rem auto;
+}
 .admin-editor textarea,
-.admin-editor input:not([type="radio"]):not([type="checkbox"]),
+.admin-editor input[type="number"],
 .reports-detail-panel textarea,
 .report-form textarea {
   width: 100%;
@@ -997,10 +1030,34 @@ h4:not(.astryx-heading) {
   color: var(--color-text-primary);
   box-shadow: none;
 }
-.admin-editor textarea,
+.admin-editor-field textarea,
 .reports-detail-panel textarea,
 .report-form textarea {
   min-height: 6rem;
+}
+.admin-editor-choice textarea,
+.admin-editor-rubric textarea {
+  min-height: 3.5rem;
+  resize: vertical;
+}
+.admin-editor-points {
+  display: grid;
+  gap: var(--spacing-1);
+  font-size: 0.875rem;
+}
+.admin-editor-toggle {
+  display: flex;
+  align-items: center;
+  min-height: var(--size-element-lg);
+  gap: var(--spacing-1);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.admin-editor-toggle input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: var(--color-accent);
 }
 .report-form {
   display: grid;
@@ -1082,21 +1139,12 @@ h4:not(.astryx-heading) {
   }
 }
 
-.study-page .report-kind-option input,
-.admin-editor label input[type="radio"],
-.admin-editor label input[type="checkbox"] {
+.study-page .report-kind-option input {
   min-height: 0;
   padding: 0;
   width: 1.125rem;
   height: 1.125rem;
   flex: none;
-}
-.admin-editor label:has(input[type="radio"]),
-.admin-editor label:has(input[type="checkbox"]) {
-  display: flex;
-  align-items: center;
-  min-height: var(--size-element-lg);
-  gap: var(--spacing-2);
 }
 
 @container (max-width: 40rem) {
