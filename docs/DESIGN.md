@@ -519,7 +519,7 @@
 | `display_unit_id` | 표시 단원 |
 | `standard_codes` | 시작할 때 단원에 연결된 성취기준 코드 목록 (text[]). F-09 "선택한 단원과 그에 연결된 성취기준 코드"를 당시 그대로 남긴다. 연결표가 나중에 바뀌어도 기록은 그대로다 |
 | `status` | `stage1`(1단계 진행) / `stage2`(2단계 진행) / `completed`(완료) / `aborted`(중단) |
-| `abort_reason` | `expired`(기간 만료) / `restarted`(새로 시작). 중단일 때만 |
+| `abort_reason` | `expired`(기간 만료) / `restarted`(새로 시작) / `stopped`(2단계에서 학생이 직접 끝냄, F-06·F-14 계획 2026-11-15). 중단일 때만 |
 | `started_at` | 시작 시각 |
 | `stage1_submitted_at`, `stage2_submitted_at` | 단계별 제출 시각 |
 | `completed_at`, `aborted_at` | 완료·중단 시각 |
@@ -728,6 +728,7 @@
 |---|---|---|
 | `POST /diagnoses/{id}/stages/1/submit` | 채점 → 2단계 출제 또는 완료(+리포트 시도) → `{status: 'stage2' \| 'completed'}` | 기존 코드 + **503 `grading_failed`** (AI 실패, 아무것도 기록되지 않음) |
 | `POST /diagnoses/{id}/stages/2/submit` | 2단계 채점 → 완료 → 리포트 시도 → `{status: 'completed'}` | 404, 409, 503 |
+| `POST /diagnoses/{id}/stages/2/stop` | 2단계에서 직접 끝내기: 중단(`stopped`)으로 바꾼다. 리포트는 `GET .../report`가 2단계 도중 중단 규칙으로 만든다 (2026-11-15) | 404, 409 `not_in_stage2` |
 | `GET /diagnoses/{id}` | 지금처럼 하되, 2단계 문제를 포함한다. 진단이 끝났으면(완료, 또는 2단계에서 중단) 문제마다 결과를 붙인다: 맞음/틀림·통과, 객관식 정답 번호, 해설, 서술형 모범 답안과 요소별 충족 이유 | — |
 | `GET /diagnoses/{id}/report` | 있으면 돌려주고, 없으면 만든다 (2단계 도중 중단 채점 포함) | 404, 409 `no_report`(1단계 도중 중단·진행 중), 503 `report_failed` |
 
@@ -853,6 +854,36 @@
 - 1이 실패하면 2를 하지 않고 502 `{code: "kakao_unlink_failed"}`. 2가 실패하면 502 `{code: "delete_failed"}`(카카오는 이미 끊김. 다시 시도할 때 카카오가 "이 앱에 연결되지 않은 사용자" 오류를 돌려주면 이미 끊긴 것으로 보고 2로 넘어간다. 카카오 [REST API 오류 코드](https://developers.kakao.com/docs/ko/rest-api/error-code)의 `-101`·HTTP 400만 해당). 성공 204.
 - 비밀값 `KAKAO_ADMIN_KEY`(백엔드 `.env`, 서버 전용). 이름만 `.env.sample`.
 - 테스트: 외부 호출(Supabase 관리자, 카카오)은 모두 가짜로 바꾼다. **시험 계정 A·B는 어떤 테스트에서도 지우지 않는다**(사용자 지시 2026-11-14). 실제 탈퇴는 사용자가 별도 계정으로 확인한다.
+
+## 하루 개념 체크 횟수 제한 (F-14. 사용자 결정 2026-11-15, `docs/PLAN.md`)
+
+### 세는 방법
+- 1번 = 진단 하나의 1단계 제출(첫 AI 채점). 오늘 = 한국 시간(Asia/Seoul) 0시부터. 오늘 쓴 횟수 = 내 진단 중 `stage1_submitted_at`이 오늘 0시 이후인 것의 수. 새 저장 공간 없이 `diagnoses`만 센다.
+  - AI 채점이 실패한 제출은 아무것도 기록되지 않으므로(진단 API 결정 2026-11-10) 저절로 세지 않는다.
+  - 2단계 제출·리포트는 세지 않고 막지도 않는다(1단계를 채점한 진단이 리포트 없이 끝나지 않게).
+- 한도: 백엔드 환경 변수 `DAILY_DIAGNOSIS_LIMIT`(기본 3, 1 이상 정수).
+
+### DB (새 마이그레이션)
+| 테이블 | 주요 항목 |
+|---|---|
+| `diagnosis_limit_exempt` | `user_id`(`auth.users` 참조, 탈퇴 시 함께 삭제), 지정 시각, 메모. RLS 켬, **정책 없음** — 학생은 읽지도 쓰지도 못하고 서버(Secret key)만 읽는다. `admins`와 같은 방식(사용자 결정 2026-11-14 "별도 테이블"을 따름). 넣고 빼기는 사용자가 SQL 편집기에서 한다. 관리자도 자동 제외가 아니다 |
+
+- `diagnosis_submit_stage1`에 인자 `p_daily_limit int`(제외 계정이면 null)를 더한다. 함수 안에서 사용자별 트랜잭션 잠금(`pg_advisory_xact_lock`, 사용자 ID 해시) 뒤 오늘 횟수를 다시 세어 한도 이상이면 `'daily_limit'`을 돌려주고 아무것도 기록하지 않는다. 같은 사람이 여러 탭에서 동시에 제출해도 기록이 한도를 넘지 않게 한다. 근거: [PostgreSQL Advisory Lock Functions](https://www.postgresql.org/docs/17/functions-admin.html#FUNCTIONS-ADVISORY-LOCKS) — 트랜잭션 수준 잠금은 트랜잭션이 끝나면 풀린다.
+- `diagnosis_abort_reason`에 `stopped`를 더하고, 함수 `diagnosis_stop_stage2(p_user_id, p_diagnosis_id)`(`service_role`만): 내 진단이고 `stage2`일 때만 `aborted`·`stopped`·`aborted_at`으로 바꾼다. 리포트는 기존 "2단계 도중 중단" 경로(`GET /diagnoses/{id}/report`)가 만든다.
+
+### API
+| 요청 | 하는 일 | 실패 |
+|---|---|---|
+| `GET /diagnoses/quota` | `{limit, used, remaining, unlimited, resets_at}` (제외 계정이면 `unlimited: true`, 나머지는 null) | 401 |
+| `POST /diagnoses/{id}/stages/1/submit` | 제외 계정이 아니면 **AI를 부르기 전에** 오늘 횟수를 세어 한도 이상이면 거부. DB 함수가 `daily_limit`을 돌려줘도 같은 응답 | 기존 + **429 `daily_limit`** `{limit, used, resets_at}` |
+
+- 제외 여부는 요청마다 `diagnosis_limit_exempt`를 Secret key로 조회한다(관리자 확인과 같은 방식).
+- 진단 시작(`POST /diagnoses`)·답 저장은 막지 않는다(사용자 승인 2026-11-15).
+
+### 화면
+- 학습 지도 진도 요약 띠: "오늘 남은 개념 체크 N/3". 제외 계정은 보이지 않는다. 0이면 단원 시작 전에 "오늘 채점 3번을 모두 썼어요. 지금 풀어 두면 내일 0시부터 제출할 수 있어요."를 알리고 시작은 그대로 된다.
+- 1단계 제출 확인 창: "제출하면 오늘 남은 채점이 1번 줄어요 (남은 횟수 N)". 0이면 제출 버튼을 끄고 위 문장. 서버 429도 같은 문장을 보이고 답은 그대로 남는다.
+- 2단계 화면: "여기까지 하고 리포트 보기" → 확인 창 "남은 심화 문제는 풀지 않은 것으로 처리돼요" → `stages/2/stop` → 리포트. 지난 기록·진단 화면의 중단 문구는 `stopped`를 "직접 끝냄"으로 보인다.
 
 ## 문항 오류 신고와 관리 (F-12, F-13. 사용자 결정 2026-11-14, `docs/PLAN.md`)
 
