@@ -494,13 +494,13 @@
   - 문제·보기·채점 요소는 함수 `bank_insert_question`으로 한 트랜잭션에 저장한다 (`service_role`만 실행)
 - 확인: 로컬 Postgres 17 컨테이너에서 위 규칙과 학생 역할 접근 거부를 시험했고, 개발 프로젝트에 적용한 뒤 권한을 다시 조회했다 (`docs/plans/2026-11-10_question-bank.md`).
 
-### 사용자 (F-01, F-11 자리)
+### 사용자 (F-01)
 | 테이블 | 주요 항목 |
 |---|---|
 | `profiles` | ID(= `auth.users` ID), 가입 상태, 가입 완료 시각 |
 
 - `auth.users`를 참조하는 `profiles` 테이블: [Supabase User Management](https://supabase.com/docs/guides/auth/managing-user-data)
-- 가입 상태: 지금은 가입 즉시 "완료". F-11 구현 때 "보호자 동의 대기"를 추가한다.
+- 가입 상태: 가입 즉시 "완료". F-11은 삭제되어(사용자 결정 2026-11-15) 다른 상태를 더할 계획은 없다.
 - 이메일 등은 Supabase Auth에만 두고 중복 저장하지 않는다 (`AGENTS.md` 4.3).
 
 ### 진단 기록 (F-04 ~ F-06, F-09. 사용자 승인 2026-11-10)
@@ -639,7 +639,7 @@
 - 이유: 문제 은행이 약 2,100문제로 늘 예정인데, 지금은 요청마다 전체를 본문까지 읽는다 (`docs/PROGRESS.md` 나중에 볼 점). 응답과 동작은 바꾸지 않는다.
 
 ### 진단 API (백엔드, 모두 로그인 필요)
-- 로그인했어도 가입 완료(`profiles.signup_status = completed`)가 아니면 403이다. 지금 화면은 `(protected)/layout.tsx`가 막지만, F-11 자리를 API에서도 지키기 위해 넣는다. 근거 없음.
+- 로그인했어도 가입 완료(`profiles.signup_status = completed`)가 아니면 403이다. 지금 화면은 `(protected)/layout.tsx`가 막지만, 가입 완료 단계를 거치지 않은 계정을 API에서도 막기 위해 둔다. 근거 없음.
 - 모든 요청은 먼저 그 사용자의 만료된 진단을 중단으로 바꾼다 (사용자 결정 2026-11-10).
 
 | 요청 | 하는 일 | 실패 |
@@ -797,7 +797,8 @@
 
 ### 흐름
 - 가입·로그인: 이메일 + 비밀번호, 카카오 (Supabase Auth). 두 방식 모두 `/auth/callback` → `/signup/complete` → 백엔드 `POST /signup/complete`를 거친다.
-- **F-11 자리**: 백엔드 `backend/app/profiles.py`의 `check_signup_requirements` (가입 완료 직전 호출, 지금은 그대로 통과). 연령 확인·보호자 동의는 여기에 넣는다.
+- 가입 완료 직전 검사: 백엔드 `backend/app/profiles.py`의 `check_signup_requirements` (그대로 통과). F-11용으로 만든 자리였으나 F-11은 삭제됐다(사용자 결정 2026-11-15).
+- **이메일 주소 확인 끔** (사용자 결정 2026-11-15, F-01): Supabase 대시보드 Authentication → Providers(Sign In / Providers) → Email의 "Confirm email"을 끈다. 개발 프로젝트와 앞으로 만들 운영 프로젝트 모두 같다. 근거: [Supabase Password-based Auth](https://supabase.com/docs/guides/auth/passwords) "Change this setting on the Auth Providers page for hosted projects", 호스팅 프로젝트는 기본값이 켜짐. 끄면 가입 메일을 보내지 않으므로 기본 메일 한도(시간당 2통)와 SMTP가 필요 없다. 프론트 `frontend/src/app/signup/page.tsx`는 `signUp` 결과에 세션이 있으면 바로 `/signup/complete`로 간다(세션이 바로 오는지는 공식 문서에 적혀 있지 않아 설정 뒤 배포 주소에서 가입해 확인).
 
 ### 프론트엔드
 - `@supabase/ssr`로 서버·브라우저 클라이언트 ([Supabase SSR](https://supabase.com/docs/guides/auth/server-side/creating-a-client)). 서버 코드는 `getClaims()`로 확인하고 `getSession()`을 믿지 않는다.
@@ -950,7 +951,7 @@
 - 카카오 개발자 콘솔: 바꿀 것 없음(예상). 카카오 로그인은 Supabase가 REST API 키로 처리하고, 카카오가 돌려보내는 곳은 우리 주소가 아니라 Supabase 콜백(REST API 키의 "로그인 리다이렉트 URI"에 이미 등록됨)이다. 우리 앱은 카카오 JavaScript SDK를 쓰지 않으므로 사이트 도메인 등록이 필요 없다(2026-11-15 콘솔 화면 확인: 새 콘솔은 플랫폼 정보를 키별로 등록). 5단계에서 배포 주소로 카카오 로그인을 해 실제로 확인한다.
 - Cloudflare: 터널 `mk-portfolio` → Routes → 길 2개(위 "구성").
 - 터널 뒤에서는 standalone 서버의 `request.url`이 바깥 주소가 아니라 바인드 주소(`0.0.0.0:3000`)다(2026-11-15 배포에서 확인). 그래서 Route Handler의 리디렉션은 상대 주소 `Location`으로 보낸다(`frontend/src/app/auth/callback/route.ts`). `proxy.ts`의 리디렉션은 Next.js가 상대 주소로 내보내 영향 없음(배포 주소에서 `Location: /login` 확인).
-- 이메일 가입 인증 메일은 Supabase 기본 메일 한도(시간당 2통, 팀원 주소만) 때문에 외부 주소로 가지 않는다 → 배포 주소에서는 카카오와 기존 계정으로 확인한다. SMTP는 M4(사용자 결정).
+- 이메일 가입은 주소 확인 없이 가입된다(위 "이메일 주소 확인 끔"). 인증 메일·SMTP는 쓰지 않는다.
 
 ## 서술형 답안 입력
 - 일반 텍스트로 입력받는다. 수식 입력기와 손글씨 사진 업로드는 쓰지 않는다.
