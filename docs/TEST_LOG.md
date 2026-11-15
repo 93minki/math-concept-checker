@@ -36,6 +36,20 @@
 
 ## 기록
 
+### 2026-11-15 — 배포 주소 카카오 로그인 (사용자 수동 확인)
+- 작업: Docker 배포 단계 5
+- 증상: 카카오 로그인 뒤 `https://0.0.0.0:3000/signup/complete`로 이동해 `ERR_SSL_PROTOCOL_ERROR`.
+- 원인 분류: 설계 불일치
+- 원인: `/auth/callback`이 `new URL(path, request.url)`로 절대 주소를 만들었는데, standalone 서버는 터널 뒤에서 `request.url`에 자기 바인드 주소(`HOSTNAME=0.0.0.0`, 3000)를 넣는다(배포 주소에서 `Location: https://0.0.0.0:3000/login?error=callback` 확인). `proxy.ts`의 리디렉션은 Next.js가 같은 출처라 상대 주소(`/login`)로 내보내 문제가 없었다.
+- 해결: 콜백은 상대 주소로 `Location`을 보낸다(RFC 9110 10.2.2). 0.0.0.0 요청 단위 테스트 추가, 로컬 컨테이너에서 `Location: /login?error=callback` 확인.
+
+### 2026-11-15 — frontend/Dockerfile:RUN pnpm build (이미지 빌드)
+- 작업: Docker 배포 단계 3
+- 증상: 이미지 안 `next build` 타입 검사에서 `Cannot find module './e2e/secret-canary'`, `'../../../e2e/shape-fixtures'`.
+- 원인 분류: 설정 오류
+- 원인: `frontend/.dockerignore`가 `e2e`·`e2e-dev`를 빼서 빌드 문맥에 없었는데, `next build`는 `tsconfig` 전체(`playwright.config.ts`, `src/lib/figures/figures.test.ts`)를 타입 검사하고 이 파일들이 `e2e/`를 불러온다.
+- 해결: `.dockerignore`에서 `e2e`·`e2e-dev`를 뺐다(빌드 단계에만 있고 실행 이미지에는 복사되지 않음).
+
 ### 2026-11-15 — frontend/e2e/manual-choice-keyboard.spec.tsx:직접 수정 정답 선택
 - 작업: 직접 수정 모달, F-13
 - 증상: 데스크톱·모바일 Chromium 시작 시 `bootstrap_check_in ... Permission denied (1100)`으로 종료됐다.

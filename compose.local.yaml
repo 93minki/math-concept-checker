@@ -1,0 +1,11 @@
+services:
+  math-concept-api:
+    ports:
+      - "127.0.0.1:8200:8000"
+    environment:
+      FRONTEND_ORIGIN: http://localhost:3200
+      # Local checks run e2e-dev against these containers; never the real AI (AGENTS.md 5.4).
+      AI_MODE: fake
+  math-concept-web:
+    ports:
+      - "127.0.0.1:3200:3000"
