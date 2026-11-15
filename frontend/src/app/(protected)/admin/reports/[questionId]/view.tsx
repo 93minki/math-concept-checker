@@ -564,7 +564,7 @@ export default function AdminQuestionView({ id }: { id: string }) {
                             <div className="admin-editor-rubric" key={r.no}>
                               <textarea
                                 aria-label={`채점 요소 ${r.no} 내용`}
-                                rows={2}
+                                rows={1}
                                 value={r.description}
                                 onChange={(e) =>
                                   setDraft({
@@ -889,7 +889,7 @@ export function ManualChoices({
             <ChoiceNumber number={choice.no} />
             <textarea
               aria-label={`보기 ${choice.no} 내용`}
-              rows={2}
+              rows={1}
               value={choice.text}
               onChange={(e) =>
                 onChange({
