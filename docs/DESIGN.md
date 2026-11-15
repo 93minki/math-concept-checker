@@ -899,6 +899,59 @@
 - 직접 수정은 넓은 대화 상자(760px, 내용만 스크롤)로 연다(사용자 2026-11-15 "별도의 모달로 띄우는게 낫지 않을까?"). 보기·채점 요소는 한 줄 행(번호 · 한 줄 높이에서 글에 따라 늘어나는 글상자 · 정답 라디오 / 내용 · 점수 · 필수), 정답 행만 연한 강조. 저장 성공이면 닫고 패널 알림, 실패면 열어 둔 채 안에 오류. 닫아도 초안은 남는다. 확인 대화 상자 푸터는 `HStack gap={2} hAlign="end"`(취소 secondary, 실행 primary).
 - 신고 대화 상자(학생): 520px, 유형은 라디오 의미를 지킨 선택 칩 5개(방향키 이동), 남은 글자 수, 보낸 뒤 대화 상자 안에 체크 아이콘 + 문장.
 
+## Docker 배포 (사용자 결정 2026-11-15, `docs/PLAN.md`)
+
+우리 앱(프론트 Next.js, 백엔드 FastAPI)만 Docker로 띄운다. Supabase는 클라우드 그대로다(`AGENTS.md` 4.1). 학생 공개 전(M4 전)에는 개발 Supabase 프로젝트를 쓴다(사용자 결정).
+
+### 구성
+```
+서버 맥북 (Docker, arm64)
+├─ compose 프로젝트 mk-portfolio (사용자의 포트폴리오, 바꾸지 않음)
+│   ├─ app          ← 93minki.dev
+│   └─ cloudflared  ← 대시보드 관리 터널 "mk-portfolio"
+└─ compose 프로젝트 math-concept (이 저장소)
+    ├─ math-concept-web  (Next.js, 컨테이너 포트 3000) ← https://math-concept.93minki.dev
+    └─ math-concept-api  (FastAPI, 컨테이너 포트 8000) ← https://math-concept-api.93minki.dev
+```
+- 터널은 compose 네트워크 안의 서비스 이름으로 닿는다(기존 길 `93minki.dev → http://app:3000`, 사용자 확인 2026-11-15). 그래서 우리 두 서비스를 포트폴리오 compose의 네트워크(외부 네트워크, 기본 이름 `mk-portfolio_default` — 서버에서 `docker network ls`로 확인, 다르면 `TUNNEL_NETWORK`로 바꾼다)에 붙이고, Cloudflare 대시보드 터널 Routes에 길 두 개를 더한다: `math-concept.93minki.dev → http://math-concept-web:3000`, `math-concept-api.93minki.dev → http://math-concept-api:8000`. 서비스 이름을 `app`과 겹치지 않게 지어 포트폴리오와 섞이지 않는다. 컨테이너마다 포트 공간이 따로라 포트폴리오의 3000과 충돌하지 않고, 서버에서는 호스트 포트를 열지 않는다.
+- 브라우저가 백엔드를 직접 부르므로(`NEXT_PUBLIC_API_BASE_URL`) 주소가 둘이다. 백엔드는 쿠키 없이 토큰만 받으므로 CORS(`FRONTEND_ORIGIN=https://math-concept.93minki.dev`)만 맞추면 된다("인증 (F-01)" 백엔드).
+- 이미지는 서버 맥북에서 저장소를 받아 직접 빌드한다(이미지 저장소 없음). 두 맥북 모두 arm64(터널 replica `linux_arm64`, 사용자 화면)라 따로 다중 아키텍처 빌드를 하지 않는다.
+
+### 파일
+| 파일 | 내용 |
+|---|---|
+| `backend/Dockerfile` | 2단계. 빌드 단계 `python:3.13-slim` + uv(`COPY --from=ghcr.io/astral-sh/uv:0.10.11`, 개발 PC와 같은 버전으로 고정)로 `uv.lock`대로 설치: 의존성 먼저(`uv sync --frozen --no-install-project --no-dev`), 그다음 프로젝트(`uv sync --locked --no-dev`), `UV_COMPILE_BYTECODE=1`·`UV_LINK_MODE=copy`·캐시 마운트. 실행 단계 `python:3.13-slim`에 `.venv`와 실행에 필요한 것만(`app/`, `prompts/`, `data/curriculum/`, `data/concepts/`) 복사 — 실행 단계에 uv 없음. 근거: [uv Docker 가이드](https://docs.astral.sh/uv/guides/integration/docker/)(중간 층, 다단계 빌드, 버전 고정 권장). 런타임에 읽는 파일은 코드 확인: `app/ai/prompts.py:5`, `app/ai/terms.py:6`, `app/ai/schemas.py:344`. `data/bank/`·`data/eval/`은 개발자 명령·시험용이라 넣지 않는다. 실행: `uvicorn app.main:app --host 0.0.0.0 --port 8000`(`--reload` 없음) |
+| `backend/.dockerignore` | `.env*`, `.venv`(uv 가이드 권장), `tests/`, 캐시(`__pycache__`, `.mypy_cache`, `.ruff_cache`, `.pytest_cache`), `data/bank`, `data/eval` |
+| `frontend/Dockerfile` | 3단계 `node:24-slim`. 의존성(`pnpm install --frozen-lockfile`, pnpm은 `package.json`의 `packageManager`와 같은 12.18.0을 `npm i -g`로 — 이 PC에서 corepack이 멈춘 일이 있어 쓰지 않음) → 빌드(`next build`, `NEXT_PUBLIC_*` 3개를 빌드 인자로) → 실행(`.next/standalone` + `public` + `.next/static` 복사, `node server.js`, `HOSTNAME=0.0.0.0`, `PORT=3000`). 근거: Next.js `output` 문서(`frontend/node_modules/next/dist/docs/01-app/03-api-reference/05-config/01-next-config-js/output.md` "Automatically Copying Traced Files": standalone은 `public`·`.next/static`을 직접 복사해야 하고, `PORT`·`HOSTNAME`으로 듣는 주소를 정한다) |
+| `frontend/next.config.ts` | `output: "standalone"` 추가. `next dev`·`next start`·테스트에는 영향 없음(5.2로 확인) |
+| `frontend/.dockerignore` | `.env*`, `node_modules`, `.next`, `e2e`, `e2e-dev`, `playwright-report`, `test-results`, `*.tsbuildinfo` |
+| `compose.yaml` (저장소 맨 위) | 프로젝트 이름 `math-concept`, 서비스 `math-concept-web`·`math-concept-api`. 백엔드 실행 환경 변수는 `env_file: backend/.env`(파일은 서버에 사용자가 만든 것, 이미지에 들어가지 않음). 프론트 빌드 인자는 `${NEXT_PUBLIC_...}` 치환으로, 값은 실행할 때 `--env-file frontend/.env.local`로 읽는다. 상태 확인: 백엔드 `/health`, 프론트 `/login`(실행 단계에 curl이 없으므로 `python`·`node`로 요청). `restart: unless-stopped`. 컨테이너는 root가 아닌 사용자로 실행 |
+| `compose.tunnel.yaml` | 서버용 덧붙임: 두 서비스를 외부 네트워크 `${TUNNEL_NETWORK:-mk-portfolio_default}`에 붙인다 |
+| `compose.local.yaml` | 이 PC 확인용 덧붙임: `127.0.0.1:3200`·`127.0.0.1:8200`으로만 연다(사용자 개발 서버 3000·8000, `test:e2e:dev` 3100·8100과 겹치지 않음), `FRONTEND_ORIGIN=http://localhost:3200` |
+
+### 환경 변수
+| 값 | 어디서 | 언제 |
+|---|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `NEXT_PUBLIC_API_BASE_URL` | `frontend/.env.local` → compose 빌드 인자 | **빌드 때** 자바스크립트에 박힌다(Next.js 환경 변수 문서 158~166줄). 브라우저 공개 값이라 이미지에 있어도 된다(`AGENTS.md` 4.3). 값을 바꾸면 다시 빌드한다(사용자 결정 3: 환경마다 이미지) |
+| `SUPABASE_URL`, `SUPABASE_SECRET_KEY`, `KAKAO_ADMIN_KEY`, `OPENAI_API_KEY`, `FRONTEND_ORIGIN` | `backend/.env` → `env_file` | **실행 때**만. 이미지·빌드 인자에 넣지 않는다 |
+
+서버 맥북의 값: `NEXT_PUBLIC_API_BASE_URL=https://math-concept-api.93minki.dev`, `FRONTEND_ORIGIN=https://math-concept.93minki.dev`(끝 `/` 없음), 나머지는 개발 PC와 같은 개발 프로젝트 값. `DEV_ALLOWED_ORIGINS`·`.env.e2e`는 서버에 두지 않는다(사용자 2026-11-15 추가 완료).
+
+### 실행 명령
+- 서버: `docker compose --env-file frontend/.env.local -f compose.yaml -f compose.tunnel.yaml up -d --build`
+- 이 PC 확인: `NEXT_PUBLIC_API_BASE_URL=http://localhost:8200 docker compose --env-file frontend/.env.local -f compose.yaml -f compose.local.yaml up -d --build` (셸 변수가 `--env-file`보다 우선한다), 끝나면 `down`.
+- 업데이트: 서버에서 `git pull` 뒤 같은 명령. 바뀐 이미지만 다시 만든다.
+
+### 비밀값 검사
+- 이미지 안에 `.env`로 시작하는 파일이 없고, 비밀값 형태 문자열(`sb_secret_`, `eyJ`로 시작하는 긴 문자열)이 없으며, 이미지 설정(`docker image inspect`의 `Env`)과 빌드 기록(`docker history`)에 `NEXT_PUBLIC_`이 아닌 키 이름(`SECRET`, `ADMIN_KEY`, `API_KEY`)이 없는지 스크립트(`scripts/check-image-secrets.sh`)로 확인한다. 근거: `AGENTS.md` 4.1 "이미지 안에 비밀값을 넣지 않는다".
+
+### 배포 주소 설정 (사용자가 대시보드에서)
+- Supabase: Authentication → URL Configuration → Redirect URLs에 `https://math-concept.93minki.dev/**` 추가(카카오 로그인 뒤 돌아올 주소, 코드 `emailRedirectTo`·OAuth `redirectTo`가 `window.location.origin` 기준). Site URL은 개발용 그대로.
+- 카카오 개발자 콘솔: 플랫폼 Web 사이트 도메인에 `https://math-concept.93minki.dev`. Redirect URI는 Supabase 콜백 주소라 바꾸지 않는다(5단계에서 실제로 확인).
+- Cloudflare: 터널 `mk-portfolio` → Routes → 길 2개(위 "구성").
+- 확인할 위험: `/auth/callback`은 `request.url` 기준으로 되돌려 보낸다(`frontend/src/app/auth/callback/route.ts`). 터널 → 컨테이너 구간은 `http`라서, 바깥 주소(`https://math-concept.93minki.dev`)로 제대로 돌아가는지 이 PC 확인(4단계)과 배포 주소(5단계)에서 직접 확인한다. 틀리면 그때 원인을 찾아 고친다(근거 없이 미리 고치지 않음).
+- 이메일 가입 인증 메일은 Supabase 기본 메일 한도(시간당 2통, 팀원 주소만) 때문에 외부 주소로 가지 않는다 → 배포 주소에서는 카카오와 기존 계정으로 확인한다. SMTP는 M4(사용자 결정).
+
 ## 서술형 답안 입력
 - 일반 텍스트로 입력받는다. 수식 입력기와 손글씨 사진 업로드는 쓰지 않는다.
   - 근거: 사용자 결정 (2026-11-09)
